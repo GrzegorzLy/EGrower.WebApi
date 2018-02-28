@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Egrower.Infrastructure.Factories.MailKit;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EGrower.WebApi.Controllers
@@ -13,7 +14,9 @@ namespace EGrower.WebApi.Controllers
         [HttpGet]
         public IEnumerable<string> Get()
         {
-            return new string[] { "value1", "value2" };
+
+            Pop3.DownloadMessages();
+            return new string[] { "test", "value2" };
         }
 
         // GET api/values/5
