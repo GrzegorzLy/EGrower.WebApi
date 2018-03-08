@@ -1,0 +1,873 @@
+Delivered-To: dragonet.c17@gmail.com
+Received: by 10.107.19.16 with SMTP id b16csp4317410ioj;
+        Wed, 15 Nov 2017 12:18:12 -0800 (PST)
+X-Google-Smtp-Source: AGs4zMaHx5mIqNzAzq4cwIbVjb7qcWVKYFyDqrZ7UjK6BuZ0pYQf9PeOglMKiN8o+JESQ4vLgyxp
+X-Received: by 10.36.69.222 with SMTP id c91mr22579809itd.125.1510777092073;
+        Wed, 15 Nov 2017 12:18:12 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1510777092; cv=none;
+        d=google.com; s=arc-20160816;
+        b=i93TDy6p1+0ueSRwsBpEtE5CFFqrGZeaqwndYhnSbvpYgr+CxHydzxYcBrs4c99Mh5
+         434/E2jsWXIK0KIeJDY9mleiZH5M5mtJJ3d4TZWDMQOa3Zc6h0mQhHF+1U8GJitsnvkP
+         Jp4M9ObkanKkdGRHx7LtYH6IT2SO+Ix7nz1vIYVBNpjdMBjFpEHeUp7qAaA62hGrt4Om
+         WYENviYNb6a+2Mz+b/t6tiIp8xnSduphVvHBXQGjjwpMYIFj1BYWG2FCE/WYc41hW/hC
+         LB6mSMkrrdHjCb+qYNO45A1p1e93YZRtbHP7nq0oFrMNNHrXuJaUvdMta7qu2ggbxr12
+         F05A==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=feedback-id:message-id:list-id:reply-to:mime-version:date:subject
+         :to:from:domainkey-signature:dkim-signature
+         :arc-authentication-results;
+        bh=fHCKpwTZEpURoRBMIM0a3SUlZxuyuclY+ccTyzKo0ks=;
+        b=brCeTeAdwpBO+DdidmUNqvBZp35ZTuBT6BW0cyD8edh2ZwNENPgMJjMmtUZCbYksjZ
+         3wC+Wqc8YbjFtl5eA6kFyBLsygyQpy07PWxg8VtXD83Qfn9mEOzX1Jk3urXoyUFgJkyu
+         rkORGXwhm4vt0sUFTT8KumUl9jXjD3lgGj+cBTwOQpIFnlA0ZyR0eyfEgn5zCPx2mgtK
+         AFpil6UA/oOubCR0f2Bf57vCY61csD+KcXEuzrlQd356sv02UzBpf/G6S7cBxhZrZPfo
+         3iFAZEeJ3rY63qc47vAzkl+Kw1bbAQNb6joNtwrRwnivNAGBpdOmHbg05v3sUcc6iHN1
+         wxLQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@email.microsoftemail.com header.s=102420140131 header.b=W7jSH+jj;
+       spf=pass (google.com: domain of bounce-866153_html-1275061275-5311961-228974-1223@bounce.e-mail.microsoft.com designates 66.231.92.214 as permitted sender) smtp.mailfrom=bounce-866153_HTML-1275061275-5311961-228974-1223@bounce.e-mail.microsoft.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=microsoft.com
+Return-Path: <bounce-866153_HTML-1275061275-5311961-228974-1223@bounce.e-mail.microsoft.com>
+Received: from mta28.email.microsoftemail.com (mta28.email.microsoftemail.com. [66.231.92.214])
+        by mx.google.com with ESMTPS id b15si11095177iti.114.2017.11.15.12.18.11
+        for <dragonet.c17@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 15 Nov 2017 12:18:12 -0800 (PST)
+Received-SPF: pass (google.com: domain of bounce-866153_html-1275061275-5311961-228974-1223@bounce.e-mail.microsoft.com designates 66.231.92.214 as permitted sender) client-ip=66.231.92.214;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@email.microsoftemail.com header.s=102420140131 header.b=W7jSH+jj;
+       spf=pass (google.com: domain of bounce-866153_html-1275061275-5311961-228974-1223@bounce.e-mail.microsoft.com designates 66.231.92.214 as permitted sender) smtp.mailfrom=bounce-866153_HTML-1275061275-5311961-228974-1223@bounce.e-mail.microsoft.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=microsoft.com
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=102420140131; d=email.microsoftemail.com;
+ h=From:To:Subject:Date:MIME-Version:Reply-To:List-ID:Message-ID:Content-Type;
+ bh=FjQw6PnaXETQjh6UMrOvrmGI02k=;
+ b=W7jSH+jje5+h47usIq37HTFArldU4VPEG0dumMbj6WxqlDfsRR92scmk6uSQIhL3ZwKMoh4FipMA
+   vfoEDpZNkUUaSUek++G/YinZ0AD9vmwXX3V90Bh3ShTLlvcSxKoZ6QHVpfAtkodr45qihNNAqCsS
+   exMsyQiJC9T59qYnN4c=
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=200608; d=e-mail.microsoft.com;
+ b=WQfubqjnao9XNuYcsNOrhn87LWSn7Dekii4n9vDzU1RMKL3HAH8R4eCPZ1RSVnIVRsCdscrz58yi
+   1poA3RfIxyz9GBwtr79DUk4nBAwci6uNoXZgv8VS+DgP/4UPqalkpjWEdoC45geDQKZbrpJ1rC7b
+   8ypGX3GGW5T0uroYiSw=;
+Received: by mta28.email.microsoftemail.com id h1igg6163hsd for <dragonet.c17@gmail.com>; Wed, 15 Nov 2017 14:08:43 -0600 (envelope-from <bounce-866153_HTML-1275061275-5311961-228974-1223@bounce.e-mail.microsoft.com>)
+From: "Visual Studio Dev Essentials" <vs_dev_essentials@e-mail.microsoft.com>
+To: <dragonet.c17@gmail.com>
+Subject: New benefits and updates for November
+Date: Wed, 15 Nov 2017 14:08:43 -0600
+MIME-Version: 1.0
+Reply-To: "Microsoft" <reply-fe95117374650d7b74-866153_HTML-1275061275-228974-1223@email.microsoftemail.com>
+List-ID: <228974_5311961.xt.local>
+X-CSA-Complaints: whitelistcomplaints@eco.de
+x-job: 228974_5311961
+Message-ID: <ad897ff0-0f8b-4f88-9908-f23bf1137b42@xtinmta4188.xt.local>
+Feedback-ID: 228974:5311961:66.231.92.214:sfmktgcld
+Content-Type: multipart/alternative;
+	boundary="XsgWPDFlfMib=_?:"
+
+This is a multi-part message in MIME format.
+
+--XsgWPDFlfMib=_?:
+Content-Type: text/plain;
+	charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+
+http://microsoft.com/?wt.mc_id=AID642794_EML_5311961 
+
+https://www.visualstudio.com/?wt.mc_id=AID642794_EML_5311961 
+
+Visual Studio Dev Essentials News
+
+ 
+
+
+New benefits
+
+ 
+
+ DataCamp | Are you ready for AI?
+
+Start creating intelligent apps today with Visual Studio, Azure services in the AI Microsoft platform. Learn all about the Microsoft AI platform and start infusing intelligence into your app with 
+
+https://aischool.microsoft.com/learning-paths?wt.mc_id=AID642794_EML_5311961 
+AI School. Then, go deeper on data science, mastering R and Python, with a 
+2-month subscription for DataCamp. Finally, get to work with 
+
+https://aka.ms/vstoolsforai?wt.mc_id=AID642794_EML_5311961 
+Visual Studio Tools for AI extension to develop, experiment and deploy your custom models right inside your favorite IDE.
+
+https://my.visualstudio.com/benefits?wt.mc_id=AID642794_EML_5311961 
+Get started with DataCamp >
+
+ 
+
+ 
+
+ LinkedIn Learning | Upskill yourself
+
+LinkedIn Learning unlocks the power of LinkedIn by giving you access to the people, insights, and skills you need to advance your career. Now, with 
+your 3-month complementary subscription to LinkedIn Learning, you can find the right people that can connect you to new opportunities, get access to exclusive insights, and stand out from the crowd by building skills with expert-led courses.
+
+https://my.visualstudio.com/benefits?wt.mc_id=AID642794_EML_5311961 
+Get started with LinkedIn Learning >
+
+ 
+
+ 
+
+Tech Spotlight
+
+ 
+
+ Easily integrate data in your apps 
+
+Data, AI and Cloud are transforming businesses. As developers, you’ll be on point to build these new intelligent, data-driven applications. Check out these new tools and services that will make it easier
+
+•
+
+https://www.microsoft.com/en-us/sql-server/sql-server-downloads?wt.mc_id=AID642794_EML_5311961 
+Download SQL Operations Studio. A new free, light-weight, cross-platform data operations tool for SQL everywhere - SQL Server, Azure SQL Database, and Azure SQL Data Warehouse.
+
+•
+
+Try Azure database services for 
+https://azure.microsoft.com/en-us/services/postgresql/?wt.mc_id=AID642794_EML_5311961 
+PostgreSQL  and 
+https://azure.microsoft.com/en-us/services/mysql/?wt.mc_id=AID642794_EML_5311961 
+MySQL  Provision a database in minutes and scale on the fly
+
+•
+
+Try new Azure Cosmos DB 
+https://aka.ms/cosmosdb-cassandra-info?wt.mc_id=AID642794_EML_5311961 
+API for Cassandra (preview) 
+
+ 
+
+https://aka.ms/dataforintelligentapps?wt.mc_id=AID642794_EML_5311961 
+See it all in action here! >
+
+ 
+
+ CI/CD for iOS, Android, UWP, and macOS
+
+Check out the new 
+https://www.visualstudio.com/vs/mobile-center?utm_source=VSSubscriptionsNewsNov2017&wt.mc_id=AID642794_EML_5311961 
+Visual Studio App Center! Ship higher-quality apps faster and with more confidence. Automate the lifecycle of your iOS, Android, Windows, and macOS apps. Connect your repo and within minutes build in the cloud, test on thousands of real devices, distribute to beta testers and app stores, and monitor real-world usage with crash and analytics data. All in one place.
+
+https://appcenter.ms/signup?utm_source=VSSubscriptionsNewsNov2017?wt.mc_id=AID642794_EML_5311961 
+Get started with Visual Studio App Center >
+
+Microsoft Connect(); 2017Keynotes and technical sessions available
+
+https://www.microsoft.com/en-us/connectevent/?ocid=AID657138_QSG_EML_197687 
+Watch on-demand now  >
+
+For you, from us:
+
+Free Azure account + $200 credit
+
+Start building your next great idea in the cloud with $200 in Azure credit for 30 days. Keep going with free access to virtual machines, SQL database, and more popular app development services for the next 12 months!
+
+https://my.visualstudio.com/benefits?wt.mc_id=AID642794_EML_5311961 
+Activate Azure now >
+
+Quick links- 
+https://my.visualstudio.com/?wt.mc_id=AID642794_EML_5311961 
+MY portal - 
+https://blogs.msdn.microsoft.com/devops/?wt.mc_id=AID642794_EML_5311961 
+DevOps blog - 
+https://azure.microsoft.com/en-us/community/newsletter/2017/october/?wt.mc_id=AID642794_EML_5311961 
+Azure newsletter 
+
+http://microsoft.com/?wt.mc_id=AID642794_EML_5311961 
+
+This mail was sent to you as part of your Visual Studio Dev Essentials membership. If you wish to opt out of this program, please go to your 
+https://my.visualstudio.com/subscriptions?wt.mc_id=AID642794_EML_5311961 
+subscriptions page and click on the “Leave program” link.
+
+This message from Microsoft is an important part of a program, service, or product that you or your company purchased or participate in.
+
+Microsoft respects your privacy. Please read our 
+https://go.microsoft.com/fwlink/?LinkId=521839 
+Privacy Statement.
+
+Microsoft Corporation
+One Microsoft Way
+
+Redmond, WA 98052
+
+USA
+
+ 
+
+
+
+
+
+--XsgWPDFlfMib=_?:
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+
+  <!-- Load css via grunt template -->
+  
+
+  <style>
+
+    /* MSO 9 FIX */
+    table {border-collapse: collapse;}
+
+    /* Windows Phone 8 Fix
+    ** http://mattstow.com/responsive-design-in-ie10-on-windows-phone-8.html
+    */
+
+    @-ms-viewport {
+      width: device-width;
+    }
+
+    /* Responsive Styles */
+
+    /*@media only screen and (max-device-width: 480px) {*/
+    @media only screen and (max-width: 700px) {
+      .column {
+        max-width: calc(100% - 20px) !important;
+        text-align: center;
+      }
+      .section-a .column {
+        max-width: none !important;
+      }
+      .section-a .column img {
+        max-width: none !important;
+      }
+    }
+    @media only screen and (max-width: 700px) {
+      /* MEDIA QUERY HACKS */
+      .for-desktop {
+          overflow: hidden !important;
+          float: left !important;
+          display: none !important;
+          line-height: 0 !important;
+          max-height: 0 !important;
+      }
+      .for-mobile {
+          overflow: visible !important;
+          float: none !important;
+          display: table-row !important;
+          line-height: 100% !important;
+          max-height: none !important;
+      }
+    }
+
+  </style>
+
+
+
+</head>
+
+<body data-env="PROD" style="Margin: 0; padding: 0; min-width: 100%; background-color: #DEDEDE;"><style type="text/css">
+div.preheader 
+{ display: none !important; } 
+</style>
+<div class="preheader" style="font-size: 1px; display: none !important;">LinkedIn Learning, DataCamp, Visual Studio App Center and more</div>
+  <!-- Wrapper/Container Table: Use a wrapper table to control the width and the background color consistently of your email. Use this approach instead of setting attributes on the body tag. -->
+
+  <center class="wrapper" style="width: 100%; table-layout: fixed; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+    <div class="webkit" style="max-width: 600px;">
+      <!--[if (mso)]>
+      <table cellpadding="0" cellspacing="0" border="0" width="600" align="center">
+      <tr>
+      <td>
+      <![endif]-->
+      <!--[if (IE)]>
+      <table cellpadding="0" cellspacing="0" border="0" width="600" align="center">
+      <tr>
+      <td>
+      <![endif]-->
+            <table cellpadding="0" cellspacing="0" border="0" class="outer" width="600" align="center" style="border-spacing: 0; font-family: sans-serif; color: #262626; border-collapse: collapse; Margin: 0 auto; width: 100%; max-width: 600px; background-color: #fff;">
+
+
+<!-- BEGIN: HEADER SECTION -->
+              <tr>
+                <td class="two-column section-header" style="padding: 20px 30px; text-align: center; font-size: 0; background-color: #fff;">
+                  <!--[if (mso)]>
+                  <table width="100%">
+                  <tr>
+                  <td width="50%" valign="top">
+                  <![endif]-->
+                  <!--[if (IE)]>
+                  <table width="100%">
+                  <tr>
+                  <td width="50%" valign="top">
+                  <![endif]-->
+                  <div class="column" style="background-color: #fff; width: 50%; max-width: 280px; display: inline-block; vertical-align: middle;">
+                    <table width="100%" style="border-spacing: 0; font-family: sans-serif; color: #262626; border-collapse: collapse; background-color: #fff;">
+                      <tr style="background-color: #fff;">
+                        <td class="inner" style="background-color: #fff; padding: 0;">
+                          <table class="contents" style="border-spacing: 0; font-family: sans-serif; color: #262626; border-collapse: collapse; width: 100%; background-color: #fff; font-size: 14px; text-align: left;">
+                            <tr style="background-color: #fff;">
+                              <td class="logo-ms" style="padding: 0; background-color: #fff;">
+                                <a href="https://click.email.microsoftemail.com/?qs=5bf62b13d3601bc0d6eb6d000605fd7d0cd2cf437208db1ac2b90181133fd837ba6c3c11ce98850700c19b180c9df54b4836c0f2f9bb137e" style="color: #ee6a56; text-decoration: underline; background-color: #fff;"><img src="https://image.email.microsoftemail.com/lib/febf16727d6d0379/m/2/microsoft-logo-2x_347900.png" width="94" alt="Microsoft" style="border: 0; -ms-interpolation-mode: bicubic; display: block; outline: none; text-decoration: none; padding: 0; background-color: #fff; max-width: 280px; height: auto; width: 94px;"/></a>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                  <!--[if (mso)]>
+                  </td><td width="50%" valign="top">
+                  <![endif]-->
+                  <!--[if (IE)]>
+                  </td><td width="50%" valign="top">
+                  <![endif]-->
+                  <div class="column" style="background-color: #fff; width: 50%; max-width: 280px; display: inline-block; vertical-align: top;">
+                    <table width="100%" style="border-spacing: 0; font-family: sans-serif; color: #262626; border-collapse: collapse; background-color: #fff;">
+                      <tr style="background-color: #fff;">
+                        <td class="inner" style="background-color: #fff; padding: 0;">
+                          <table class="contents" style="border-spacing: 0; font-family: sans-serif; color: #262626; border-collapse: collapse; width: 100%; background-color: #fff; font-size: 14px; text-align: left;">
+                            <tr style="background-color: #fff;">
+                              <td class="logo-vs" style="padding: 0; background-color: #fff;">
+                                <a href="https://click.email.microsoftemail.com/?qs=5bf62b13d3601bc024ca0f007bd6b0614ddd9f2d035de3ccc8bc9e4698b37e296bfc86e39bc328939311ec4fe8c2e9732d0cedc57d1835e2" style="color: #ee6a56; text-decoration: underline; background-color: #fff; "><img src="https://image.email.microsoftemail.com/lib/febf16727d6d0379/m/2/visual-studio-logo-2x_347900.png" align="right" width="92" alt="Visual Studio" style="border: 0; -ms-interpolation-mode: bicubic; display: block; outline: none; text-decoration: none; padding: 4px 0; background-color: #fff; max-width: 280px; height: auto; width: 92px;"/></a>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                  <!--[if (mso)]>
+                  </td>
+                  </tr>
+                  </table>
+                  <![endif]-->
+                  <!--[if (IE)]>
+                  </td>
+                  </tr>
+                  </table>
+                  <![endif]-->
+                </td>
+              </tr>
+<!-- END: HEADER SECTION -->
+
+<!-- BEGIN: SECTION A -->
+              <tr>
+                <td class="two-column section-a" style="padding: 20px 30px; text-align: center; font-size: 0; background-color: #F0F0F0;">
+                  <!--[if (mso)]>
+                  <table width="100%">
+                  <tr>
+                  <td width="50%" valign="top">
+                  <![endif]-->
+                  <!--[if (IE)]>
+                  <table width="100%">
+                  <tr>
+                  <td width="50%" valign="top">
+                  <![endif]-->
+                  <div class="column" style="background-color: #F0F0F0; width: 100%; max-width: 270px; display: inline-block; vertical-align: top;">
+                    <table width="100%" style="border-spacing: 0; font-family: sans-serif; color: #262626; border-collapse: collapse; background-color: #F0F0F0;">
+                      <tr style="background-color: #F0F0F0;">
+                      <td class="inner contents" style="width: 100%; background-color: #F0F0F0; padding: 20px 0; font-size: 14px; text-align: left;">
+                        <p class="h1" style="Margin: 0; background-color: #F0F0F0; font-size: 40px; font-weight: 100; Margin-bottom: 0; font-family: 'Segoe UI', Helvetica, Arial, sans-serif; mso-line-height-rule: exactly; line-height: 48px; color: #505050; text-align: left;">Visual Studio Dev Essentials News</p>
+                      </td>
+                    </tr>
+                    </table>
+                  </div>
+                  <!--[if (mso)]>
+                  </td><td width="50%" valign="top">
+                  <![endif]-->
+                  <!--[if (IE)]>
+                  </td><td width="50%" valign="top">
+                  <![endif]-->
+                  <div class="column" style="background-color: #F0F0F0; width: 100%; max-width: 270px; display: inline-block; vertical-align: top;">
+                    <table width="100%" style="border-spacing: 0; font-family: sans-serif; color: #262626; border-collapse: collapse; background-color: #F0F0F0;">
+                      <tr style="background-color: #F0F0F0;">
+                        <td class="inner" style="background-color: #F0F0F0; padding: 20px 0;">
+                          <table class="contents" style="border-spacing: 0; font-family: sans-serif; color: #262626; border-collapse: collapse; width: 100%; background-color: #F0F0F0; font-size: 14px; text-align: left;">
+                            <tr style="background-color: #F0F0F0;">
+                              <td align="center" style="padding: 0; background-color: #F0F0F0;">
+                                <img src="https://image.email.microsoftemail.com/lib/febf16727d6d0379/m/2/visual-studio-2x_347900.png" align="center" width="215" alt="Visual Studio" style="border: 0; -ms-interpolation-mode: bicubic; display: block; outline: none; text-decoration: none; padding: 0; background-color: #F0F0F0; height: auto; width: 100%; max-width: 215px;"/>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                  <!--[if (mso)]>
+                  </td>
+                  </tr>
+                  </table>
+                  <![endif]-->
+                  <!--[if (IE)]>
+                  </td>
+                  </tr>
+                  </table>
+                  <![endif]-->
+                </td>
+              </tr>
+<!-- END: SECTION A -->
+
+
+
+<!-- BEGIN: SECTION B -->
+              <!-- END: SECTION B -->
+
+
+
+                <!-- BEGIN: SECTION - FULL WIDTH BANNER IMAGE -->
+                <!-- END: SECTION - FULL WIDTH BANNER IMAGE -->
+
+
+   	
+    	<!-- BEGIN: SECTION 1 -->
+       
+
+              <!-- BEGIN: SUBSECTION - SECTION HEADER 1 -->
+              <tr>
+          <td class="one-column section-c" style="padding: 0px 30px 0px 30px; background-color: #fff;">
+            <table cellpadding="0" cellspacing="0" border="0" width="100%" style="border-spacing: 0; font-family: sans-serif; color: #262626; border-collapse: collapse; background-color: #fff;">
+             <tr style="background-color: #fff;">
+                <td class="inner contents" style="width: 100%; background-color: #fff; padding: 0; text-align: left;">&nbsp;
+                                  </td>
+              </tr>
+
+               <tr style="background-color: #fff;">
+                <td class="inner contents" style="width: 100%; background-color: #fff; padding: 0; text-align: left;">
+                <p class="h1" style="Margin: 0; background-color: #fff; font-size: 26px; font-weight: 300; Margin-bottom: 26px; font-family: 'Segoe UI', Helvetica, Arial, sans-serif; mso-line-height-rule: exactly; line-height: 31px; color: #5C2D91; text-align: left;">New benefits</p>
+                </td>
+              </tr>
+              <tr style="background-color: #fff;">
+                <td class="inner contents" style="width: 100%; background-color: #fff; padding: 0; text-align: left;">
+                  <p class="hr top" style="Margin: 0; background-color: #fff; font-size: 14px; Margin-bottom: 20px; border-top: 1px solid #DEDEDE;">&nbsp;</p>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+<tr>
+          <td class="one-column section-c" style="padding: 0px 30px 0px; background-color: #fff;">
+            <table cellpadding="0" cellspacing="0" border="0" width="100%" style="border-spacing: 0; font-family: sans-serif; color: #262626; border-collapse: collapse; background-color: #fff;">
+              <tr style="background-color: #fff;">
+                <td class="inner contents" style="width: 100%; background-color: #fff; padding: 0; text-align: left;">
+                  <p class="h2" style="Margin: 0; background-color: #fff; Margin-bottom: 10px; Margin-top: 0px; font-weight: 300; font-size: 20px; mso-line-height-rule: exactly; line-height: 24px; color: #5C2D91; text-align: left; font-family: 'Segoe UI', Helvetica, Arial, sans-serif;"><img src="https://image.email.microsoftemail.com/lib/febf16727d6d0379/m/2/ECD0003930_de_icon2.JPG" align="left"/>&nbsp;DataCamp | Are you ready for AI?</p>
+                </td>
+              </tr>
+              <tr style="background-color: #fff;">
+                <td class="inner contents" style="width: 100%; background-color: #fff; padding: 0; text-align: left;">
+                  <p class="body" style="Margin: 0; background-color: #fff; font-size: 14px; Margin-bottom: 16px; font-family: 'Segoe UI', Helvetica, Arial, sans-serif; font-weight: 300; mso-line-height-rule: exactly; line-height: 18px; color: #505050; text-align: left;">Start creating intelligent apps today with Visual Studio, Azure services in the AI Microsoft platform. Learn all about the Microsoft AI platform and start infusing intelligence into your app with 
+					<a style="color:#505050" href="https://click.email.microsoftemail.com/?qs=5bf62b13d3601bc0a05cca61f1c6ba41113a06b92ff28f195ad47e723900d467e39aec904d3e3579ff524294ba187163dfa8e4cd9301acdc"><strong>AI School</strong></a>. Then, go deeper on data science, mastering R and Python, with a 
+					<strong>2-month subscription for DataCamp</strong>. Finally, get to work with 
+					<a style="color:#505050" href="https://click.email.microsoftemail.com/?qs=5bf62b13d3601bc036feefc78e89b8cb9cf24c1806db88c627b73bfdd442ba2cf6d8374bc3736013e56aa5f6ed7f9f7a702fda8ae721ef24"><strong>Visual Studio Tools for AI extension</strong></a> to develop, experiment and deploy your custom models right inside your favorite IDE.</p>
+                </td>
+              </tr>
+              <tr style="background-color: #fff;">
+                <td class="inner contents" style="width: 100%; background-color: #fff; padding: 0; text-align: left;">
+                  <p class="body-link" style="Margin: 0; background-color: #fff; font-size: 14px; Margin-bottom: 16px; font-family: 'Segoe UI', Helvetica, Arial, sans-serif; font-weight: 600; mso-line-height-rule: exactly; line-height: 18px; color: #5C2D91; text-align: left;"><a href="https://click.email.microsoftemail.com/?qs=5bf62b13d3601bc0d0cc073a43870499f7f5764794d59a378e5de18e6ac100dba5fb1a5c4e8dc666237923225e73984834bbd0a9121a8e86" style="background-color: #fff; color: #5C2D91; text-decoration: none;"><span style="background-color: #fff; color: #5C2D91;">Get started with DataCamp&nbsp;&gt;</span></a></p>
+                </td>
+              </tr>
+              <tr style="background-color: #fff;">
+                <td class="inner contents" style="width: 100%; background-color: #fff; padding: 0; text-align: left;">&nbsp;
+                  <p class="hr top" style="Margin: 0; background-color: #fff; font-size: 14px; border-top: 1px solid #DEDEDE;">&nbsp;</p>
+                </td>
+              </tr>
+
+            </table>
+          </td>
+        </tr>
+<tr>
+          <td class="one-column section-c" style="padding: 0px 30px 0px; background-color: #fff;">
+            <table cellpadding="0" cellspacing="0" border="0" width="100%" style="border-spacing: 0; font-family: sans-serif; color: #262626; border-collapse: collapse; background-color: #fff;">
+              <tr style="background-color: #fff;">
+                <td class="inner contents" style="width: 100%; background-color: #fff; padding: 0; text-align: left;">
+                  <p class="h2" style="Margin: 0; background-color: #fff; Margin-bottom: 10px; Margin-top: 0px; font-weight: 300; font-size: 20px; mso-line-height-rule: exactly; line-height: 24px; color: #5C2D91; text-align: left; font-family: 'Segoe UI', Helvetica, Arial, sans-serif;"><img src="https://image.email.microsoftemail.com/lib/febf16727d6d0379/m/2/ECD0003930_de_icon2.JPG" align="left"/>&nbsp;LinkedIn Learning | Upskill yourself</p>
+                </td>
+              </tr>
+              <tr style="background-color: #fff;">
+                <td class="inner contents" style="width: 100%; background-color: #fff; padding: 0; text-align: left;">
+                  <p class="body" style="Margin: 0; background-color: #fff; font-size: 14px; Margin-bottom: 16px; font-family: 'Segoe UI', Helvetica, Arial, sans-serif; font-weight: 300; mso-line-height-rule: exactly; line-height: 18px; color: #505050; text-align: left;">LinkedIn Learning unlocks the power of LinkedIn by giving you access to the people, insights, and skills you need to advance your career. Now, with 
+					<strong>your 3-month complementary subscription to LinkedIn Learning</strong>, you can find the right people that can connect you to new opportunities, get access to exclusive insights, and stand out from the crowd by building skills with expert-led courses.</p>
+                </td>
+              </tr>
+              <tr style="background-color: #fff;">
+                <td class="inner contents" style="width: 100%; background-color: #fff; padding: 0; text-align: left;">
+                  <p class="body-link" style="Margin: 0; background-color: #fff; font-size: 14px; Margin-bottom: 16px; font-family: 'Segoe UI', Helvetica, Arial, sans-serif; font-weight: 600; mso-line-height-rule: exactly; line-height: 18px; color: #5C2D91; text-align: left;"><a href="https://click.email.microsoftemail.com/?qs=5bf62b13d3601bc0d0cc073a43870499f7f5764794d59a378e5de18e6ac100dba5fb1a5c4e8dc666237923225e73984834bbd0a9121a8e86" style="background-color: #fff; color: #5C2D91; text-decoration: none;"><span style="background-color: #fff; color: #5C2D91;">Get started with LinkedIn Learning&nbsp;&gt;</span></a></p>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+
+              <tr>
+          <td class="one-column section-c" style="padding: 0px 30px 0px 30px; background-color: #fff;">
+            <table cellpadding="0" cellspacing="0" border="0" width="100%" style="border-spacing: 0; font-family: sans-serif; color: #262626; border-collapse: collapse; background-color: #fff;">
+             <tr style="background-color: #fff;">
+                <td class="inner contents" style="width: 100%; background-color: #fff; padding: 0; text-align: left;">&nbsp;
+                  <p class="hr top" style="Margin: 0; background-color: #fff; font-size: 14px; border-top: 1px solid #DEDEDE;">&nbsp;</p>
+                </td>
+              </tr>
+
+               <tr style="background-color: #fff;">
+                <td class="inner contents" style="width: 100%; background-color: #fff; padding: 0; text-align: left;">
+                <p class="h1" style="Margin: 0; background-color: #fff; font-size: 26px; font-weight: 300; Margin-bottom: 26px; font-family: 'Segoe UI', Helvetica, Arial, sans-serif; mso-line-height-rule: exactly; line-height: 31px; color: #5C2D91; text-align: left;">Tech Spotlight</p>
+                </td>
+              </tr>
+              <tr style="background-color: #fff;">
+                <td class="inner contents" style="width: 100%; background-color: #fff; padding: 0; text-align: left;">
+                  <p class="hr top" style="Margin: 0; background-color: #fff; font-size: 14px; Margin-bottom: 20px; border-top: 1px solid #DEDEDE;">&nbsp;</p>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td class="one-column section-c" style="padding: 0px 30px 30px; background-color: #fff; height: 108px;">
+            <table cellpadding="0" cellspacing="0" border="0" width="100%" style="border-spacing: 0; font-family: sans-serif; color: #262626; border-collapse: collapse; background-color: #fff;">
+              <tr style="background-color: #fff;">
+                <td class="inner contents" style="width: 100%; background-color: #fff; padding: 0; text-align: left;">
+                  <p class="h2" style="Margin: 0; background-color: #fff; Margin-bottom: 10px; Margin-top: 0px; font-weight: 300; font-size: 20px; mso-line-height-rule: exactly; line-height: 24px; color: #5C2D91; text-align: left; font-family: 'Segoe UI', Helvetica, Arial, sans-serif;"><img src="https://image.email.microsoftemail.com/lib/febf16727d6d0379/m/2/ECD0003930_de_icon1.JPG" align="left"/>&nbsp;Easily integrate data in your apps </p>
+                </td>
+              </tr>
+              <tr style="background-color: #fff;">
+                <td class="inner contents" style="width: 100%; background-color: #fff; padding: 0; text-align: left;">
+                  <p class="body" style="Margin: 0; background-color: #fff; font-size: 14px; Margin-bottom: 16px; font-family: 'Segoe UI', Helvetica, Arial, sans-serif; font-weight: 300; mso-line-height-rule: exactly; line-height: 18px; color: #505050; text-align: left;">Data, AI and Cloud are transforming businesses. As developers, you’ll be on point to build these new intelligent, data-driven applications. Check out these new tools and services that will make it easier</p>
+                </td>
+              </tr>
+              <tr style="background-color: #fff;">
+                <td class="inner contents list" style="width: 100%; background-color: #fff; padding: 0; text-align: left;">
+                  <table cellpadding="0" cellspacing="0" border="0" width="100%" style="border-spacing: 0; font-family: sans-serif; color: #262626; border-collapse: collapse; background-color: #fff;">
+                    <tr style="background-color: #fff;">
+                      <td valign="top" class="inner contents bullet-column" width="5%" style="background-color: #fff; padding: 0; text-align: left; min-width: 20px; width: 5%;">
+                        <p class="body bullet" style="Margin: 0; background-color: #fff; Margin-bottom: 10px; font-size: 14px; font-family: 'Segoe UI', Helvetica, Arial, sans-serif; font-weight: 300; mso-line-height-rule: exactly; line-height: 18px; color: #505050; text-align: left;">•</p>
+                      </td>
+                      <td class="inner contents body-column" width="95%" style="width: 100%; background-color: #fff; padding: 0; text-align: left;">
+                        <p class="body" style="Margin: 0; background-color: #fff; Margin-bottom: 10px; font-size: 14px; font-family: 'Segoe UI', Helvetica, Arial, sans-serif; font-weight: 300; mso-line-height-rule: exactly; line-height: 18px; color: #505050; text-align: left;"><a style="color:#505050" href="https://click.email.microsoftemail.com/?qs=5bf62b13d3601bc0307b6200b94ce7ee61c68e462b1c6d4f109f619609798e4cada7f5d62c415f56be578761f1a304ea15ed951d7a197c5f"><strong style="background-color: #fff; color: #505050; font-weight: 600;">Download SQL Operations Studio.</strong></a> A new free, light-weight, cross-platform data operations tool for SQL everywhere - SQL Server, Azure SQL Database, and Azure SQL Data Warehouse.</p>
+                      </td>
+                    </tr>
+                    <tr style="background-color: #fff;">
+                      <td valign="top" class="inner contents bullet-column" width="5%" style="background-color: #fff; padding: 0; text-align: left; min-width: 20px; width: 5%;">
+                        <p class="body bullet" style="Margin: 0; background-color: #fff; Margin-bottom: 10px; font-size: 14px; font-family: 'Segoe UI', Helvetica, Arial, sans-serif; font-weight: 300; mso-line-height-rule: exactly; line-height: 18px; color: #505050; text-align: left;">•</p>
+                      </td>
+                      <td class="inner contents body-column" width="95%" style="width: 100%; background-color: #fff; padding: 0; text-align: left;">
+                         <p class="body" style="Margin: 0; background-color: #fff; Margin-bottom: 10px; font-size: 14px; font-family: 'Segoe UI', Helvetica, Arial, sans-serif; font-weight: 300; mso-line-height-rule: exactly; line-height: 18px; color: #505050; text-align: left;"><strong style="background-color: #fff; color: #505050; font-weight: 600;">Try Azure database services for <a href="https://click.email.microsoftemail.com/?qs=5bf62b13d3601bc0fb505aac0abeee814a651328e9a15bfdabaeebcaae1ea9a1ec54f55e41fd710af5ea71f590b7215699b2a52bd8f53500" style="color:#505050">PostgreSQL</a> and <a style="color:#505050" href="https://click.email.microsoftemail.com/?qs=5bf62b13d3601bc0ddb31e12dbfacca28a607642dc172d553f995fe60296772102ed3880c48243840b2418ae565357e659101e26659fb752">MySQL</a></strong> Provision a database in minutes and scale on the fly</p>
+                      </td>
+                    </tr>
+                    <tr style="background-color: #fff;">
+                      <td valign="top" class="inner contents bullet-column" width="5%" style="background-color: #fff; padding: 0; text-align: left; min-width: 20px; width: 5%;">
+                        <p class="body bullet" style="Margin: 0; background-color: #fff; Margin-bottom: 10px; font-size: 14px; font-family: 'Segoe UI', Helvetica, Arial, sans-serif; font-weight: 300; mso-line-height-rule: exactly; line-height: 18px; color: #505050; text-align: left;">•</p>
+                      </td>
+                      <td class="inner contents body-column" width="95%" style="width: 100%; background-color: #fff; padding: 0; text-align: left;">
+                        <p class="body" style="Margin: 0; background-color: #fff; Margin-bottom: 10px; font-size: 14px; font-family: 'Segoe UI', Helvetica, Arial, sans-serif; font-weight: 300; mso-line-height-rule: exactly; line-height: 18px; color: #505050; text-align: left;"><strong style="background-color: #fff; color: #505050; font-weight: 600;">Try new Azure Cosmos DB <a style="color:#505050" href="https://click.email.microsoftemail.com/?qs=5bf62b13d3601bc0f01a223a4e60a9fc64d7776c6dfb26324b97e0ce12cd72def3b55e29eca94352c888e698f38c89d1785a9a27540695dd">API for Cassandra</a></strong>                          (preview) </p>
+                      </td>
+                    </tr>
+                                      </table>
+                </td>
+              </tr>
+              <tr><td>&nbsp;</td></tr>
+
+              <tr style="background-color: #fff;">
+                <td class="inner contents" style="width: 100%; background-color: #fff; padding: 0; text-align: left;">
+                  <p class="body-link" style="Margin: 0; background-color: #fff; font-size: 14px; Margin-bottom: 16px; font-family: 'Segoe UI', Helvetica, Arial, sans-serif; font-weight: 600; mso-line-height-rule: exactly; line-height: 18px; color: #5C2D91; text-align: left;"><a href="https://click.email.microsoftemail.com/?qs=5bf62b13d3601bc096455b33e04cf81a015f6a614c74ef16126ceb913fcfddef845513d2ffee8b1e0a757b9de386ef31e28604152c6104fb" style="background-color: #fff; color: #5C2D91; text-decoration: none;"><span style="background-color: #fff; color: #5C2D91;">See it all in action here!&nbsp;&gt;</span></a></p>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+
+         <tr>
+          <td class="one-column section-c" style="padding: 0px 30px 0px 30px; background-color: #fff;">
+            <table cellpadding="0" cellspacing="0" border="0" width="100%" style="border-spacing: 0; font-family: sans-serif; color: #262626; border-collapse: collapse; background-color: #fff;">
+             <tr style="background-color: #fff;">
+                <td class="inner contents" style="width: 100%; background-color: #fff; padding: 0; text-align: left;">
+                  <p class="hr top" style="Margin: 0; background-color: #fff; font-size: 14px; Margin-bottom: 20px; border-top: 1px solid #DEDEDE;">&nbsp;</p>
+                </td>
+              </tr>
+
+                                         </table>
+          </td>
+        </tr>
+              
+              <!-- END: SUBSECTION - SECTION HEADER 1 -->
+
+              <!-- BEGIN: SUBSECTION - BODY CONTENT PLAIN -->
+        <tr>
+          <td class="one-column section-c" style="padding: 0px 30px 30px; background-color: #fff;">
+            <table cellpadding="0" cellspacing="0" border="0" width="100%" style="border-spacing: 0; font-family: sans-serif; color: #262626; border-collapse: collapse; background-color: #fff;">
+              <tr style="background-color: #fff;">
+                <td class="inner contents" style="width: 100%; background-color: #fff; padding: 0; text-align: left;">
+                  <p class="h2" style="Margin: 0; background-color: #fff; Margin-bottom: 10px; Margin-top: 0px; font-weight: 300; font-size: 20px; mso-line-height-rule: exactly; line-height: 24px; color: #5C2D91; text-align: left; font-family: 'Segoe UI', Helvetica, Arial, sans-serif;"><img src="https://image.email.microsoftemail.com/lib/febf16727d6d0379/m/2/ECD0003930_de_icon1.JPG" align="left"/>&nbsp;CI/CD for iOS, Android, UWP, and macOS</p>
+                </td>
+              </tr>
+              <tr style="background-color: #fff;">
+                <td class="inner contents" style="width: 100%; background-color: #fff; padding: 0; text-align: left;">
+                  <p class="body" style="Margin: 0; background-color: #fff; font-size: 14px; Margin-bottom: 16px; font-family: 'Segoe UI', Helvetica, Arial, sans-serif; font-weight: 300; mso-line-height-rule: exactly; line-height: 18px; color: #505050; text-align: left;">Check out the new <a href="https://click.email.microsoftemail.com/?qs=5bf62b13d3601bc02aa650fb7bb97ca4b2ea6b2cf8f36df6c5090d5f887a5b01a7ae6ce18a24c3e44d2ee06c714eb487f1e7a3f00d96d000" style="color:#505050;"><strong>Visual Studio App Center!</strong></a> Ship higher-quality apps faster and with more confidence. Automate the lifecycle of your iOS, Android, Windows, and macOS apps. Connect your repo and within minutes build in the cloud, test on thousands of real devices, distribute to beta testers and app stores, and monitor real-world usage with crash and analytics data. All in one place.</p>
+                </td>
+              </tr>
+              <tr style="background-color: #fff;">
+                <td class="inner contents" style="width: 100%; background-color: #fff; padding: 0; text-align: left;">
+                  <p class="body-link" style="Margin: 0; background-color: #fff; font-size: 14px; Margin-bottom: 16px; font-family: 'Segoe UI', Helvetica, Arial, sans-serif; font-weight: 600; mso-line-height-rule: exactly; line-height: 18px; color: #5C2D91; text-align: left;"><a href="https://click.email.microsoftemail.com/?qs=5bf62b13d3601bc064a2f315567a4b4aa5ee615ced3a8b88943a9fbc2c848be90b7ff9d5e6925a3a0aadc1904080e88fa04b6ee36665efe8" style="background-color: #fff; color: #5C2D91; text-decoration: none;"><span style="background-color: #fff; color: #5C2D91;">Get started with Visual Studio App Center&nbsp;&gt;</span></a></p>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+       
+
+                
+
+          
+              <!-- END: SUBSECTION - BODY CONTENT PLAIN -->
+
+        <!-- END: SECTION C - CONTENT WITH LEADIN -->   
+        
+        
+
+        <!-- BEGIN: SECTION D - CONTENT LIST -->
+                <!-- END: SECTION D - CONTENT LIST -->
+
+
+
+
+        <!-- BEGIN: SECTION - DIVIDER ONLY -->
+                <!-- END: SECTION - DIVIDER ONLY -->
+        
+     
+           
+
+<!-- BEGIN: SECTION - TEXT LEFT / IMAGE RIGHT -->
+                <!-- END: SECTION - TEXT LEFT / IMAGE RIGHT -->
+        
+        
+        <!-- BEGIN: SECTION - DIVIDER ONLY -->
+                <!-- END: SECTION - DIVIDER ONLY -->
+        
+        
+        <!-- BEGIN: SECTION - IMAGE LEFT / TEXT RIGHT -->
+                <!-- END: SECTION - IMAGE LEFT / TEXT RIGHT -->
+  
+              
+        
+        <!-- BEGIN: SECTION - SECTION HEADER: LEARN & DO -->
+       	        
+                <!-- END: SECTION - SECTION HEADER: LEARN & DO -->
+        
+        
+        
+        <!-- BEGIN: SECTION C - CONTENT WITHOUT LEADIN -->
+                <!-- END: SECTION C - CONTENT WITHOUT LEADIN -->
+
+        <!-- BEGIN: SECTION - SECTION HEADER: PARTNER SPOTLIGHT -->
+       	        
+                <!-- END: SECTION - SECTION HEADER: PARTNER SPOTLIGHT -->
+       
+        
+        <!-- BEGIN: SECTION C - CONTENT WITHOUT LEADIN -->
+                <!-- END: SECTION C - CONTENT WITHOUT LEADIN -->
+
+       
+        <!-- BEGIN: SECTION - SECTION HEADER: TECH SPOTLIGHT -->
+       	        
+                <!-- END: SECTION - SECTION HEADER: TECH SPOTLIGHT -->
+        
+        
+        
+        <!-- BEGIN: SECTION C - CONTENT WITHOUT LEADIN -->
+                <!-- END: SECTION C - CONTENT WITHOUT LEADIN -->
+
+
+
+
+
+<!-- BEGIN: SECTION E - DARK -->
+              <tr>
+                <td class="one-column section-e dark" style="padding: 40px 30px; background-color: #5C2D91;">
+                  <table cellpadding="0" cellspacing="0" border="0" width="100%" style="border-spacing: 0; font-family: sans-serif; color: #262626; border-collapse: collapse; background-color: #5C2D91;">
+                    <tr style="background-color: #5C2D91;">
+                      <td class="inner contents" style="width: 100%; text-align: left; background-color: #5C2D91; padding: 0;">
+                        <p class="h1" style="Margin: 0; background-color: #5C2D91; font-size: 26px; font-weight: 300; Margin-bottom: 26px; font-family: 'Segoe UI', Helvetica, Arial, sans-serif; mso-line-height-rule: exactly; line-height: 31px; color: #fff; text-align: center;">Microsoft Connect(); 2017<br/>
+                        <span style="font-size:19px;">Keynotes and technical sessions available</span></p>
+                      </td>
+                    </tr>
+                    <tr style="background-color: #5C2D91;">
+                      <td class="inner contents button" style="width: 100%; text-align: left; background-color: #5C2D91; padding: 0; padding-bottom: 0;">
+                        <table cellpadding="0" cellspacing="0" border="0" align="center" style="border-spacing: 0; font-family: sans-serif; color: #262626; border-collapse: collapse; background-color: #5C2D91;">
+                          <tr style="background-color: #5C2D91;">
+                            <td class="inner contents button-wrapper" style="width: 100%; text-align: left; padding: 7px 15px; background-color: #D83B01;">
+                              <p class="button-text" style="Margin: 0; font-size: 14px; background-color: #5C2D91; Margin-bottom: 2px; background: #D83B01;"><a href="https://click.email.microsoftemail.com/?qs=5bf62b13d3601bc0c775f861a7617afb3a1e951a8a9b1d8e59215857a9a0008762921a8937fde05698337afad4995fa8468c23742a2e5488" style="background-color: #5C2D91; color: #fff; text-decoration: none; font-family: 'Segoe UI', Helvetica, Arial, sans-serif; font-weight: 300; font-size: 14px; mso-line-height-rule: exactly; line-height: 18px; background: #D83B01; text-align: center;"><span class="button-text" style="background-color: #5C2D91; Margin-bottom: 0; background: #D83B01; color: #fff;">Watch on-demand now &nbsp;&gt;</span></a></p>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+<!-- END: SECTION E - DARK -->
+
+<!-- BEGIN: SECTION E - LIGHT -->
+              <!-- END: SECTION E - LIGHT -->
+
+<!-- BEGIN: FEATURE CONTENT ONE COLUMN B -->
+              <tr>
+                <td class="one-column section-feature-content-one-column-b" style="padding: 30px 30px 40px; background-color: #F0F0F0;">
+                  <table cellpadding="0" cellspacing="0" border="0" width="100%" style="border-spacing: 0; font-family: sans-serif; color: #262626; border-collapse: collapse; background-color: #F0F0F0;">
+                    <tr style="background-color: #F0F0F0;">
+                      <td class="inner contents" style="width: 100%; background-color: #F0F0F0; padding: 0; text-align: left;">
+                        <p class="h1" style="Margin: 0; background-color: #F0F0F0; font-weight: 100; Margin-bottom: 20px; font-size: 28px; mso-line-height-rule: exactly; line-height: 33px; color: #505050; text-align: center; font-family: 'Segoe UI', Helvetica, Arial, sans-serif;">For you, from us:</p>
+                      </td>
+                    </tr>
+                    <tr style="background-color: #F0F0F0;">
+                      <td class="inner contents" style="width: 100%; background-color: #F0F0F0; padding: 0; text-align: left;">
+                        <table cellpadding="0" cellspacing="0" border="0" width="290" align="center" style="border-spacing: 0; font-family: sans-serif; color: #262626; border-collapse: collapse; background-color: #F0F0F0;">
+                          <tr style="background-color: #F0F0F0;">
+                            <td class="inner contents" style="width: 100%; background-color: #F0F0F0; text-align: left; padding: 0;"><img src="https://image.email.microsoftemail.com/lib/febf16727d6d0379/m/2/de_nurture_img.jpg" width="290" alt="Developer Screenshot" style="border: 0; -ms-interpolation-mode: bicubic; display: block; outline: none; text-decoration: none; padding: 0; background-color: #F0F0F0; max-width: 580px;"/>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                    <tr style="background-color: #F0F0F0;">
+                      <td class="inner contents" style="width: 100%; background-color: #F0F0F0; padding: 0; text-align: left;">
+                        <p class="h2" style="Margin: 0; background-color: #F0F0F0; Margin-bottom: 10px; Margin-top: 12px; font-weight: 300; font-size: 20px; mso-line-height-rule: exactly; line-height: 24px; color: #5C2D91; text-align: center; font-family: 'Segoe UI', Helvetica, Arial, sans-serif;">Free Azure account + $200 credit</p>
+                      </td>
+                    </tr>
+                    <tr style="background-color: #F0F0F0;">
+                      <td class="inner contents" style="width: 100%; background-color: #F0F0F0; padding: 0; text-align: left;">
+                        <p class="body" style="Margin: 0; background-color: #F0F0F0; font-size: 14px; Margin-bottom: 20px; font-family: 'Segoe UI', Helvetica, Arial, sans-serif; font-weight: 300; mso-line-height-rule: exactly; line-height: 18px; color: #505050; text-align: center;">Start building your next great idea in the cloud with $200 in Azure credit for 30 days. Keep going with free access to virtual machines, SQL database, and more popular app development services for the next 12 months!</p>
+                      </td>
+                    </tr>
+                    <tr style="background-color: #F0F0F0;">
+                      <td class="inner contents button" style="width: 100%; background-color: #F0F0F0; padding: 0; text-align: left; padding-bottom: 0;">
+                        <table cellpadding="0" cellspacing="0" border="0" align="center" style="border-spacing: 0; font-family: sans-serif; color: #262626; border-collapse: collapse; background-color: #F0F0F0;">
+                          <tr style="background-color: #F0F0F0;">
+                            <td class="inner contents button-wrapper" style="width: 100%; text-align: left; padding: 7px 15px; background-color: #D83B01;">
+                              <p class="button-text" style="Margin: 0; background-color: #F0F0F0; font-size: 14px; Margin-bottom: 2px; background: #D83B01;"><a href="https://click.email.microsoftemail.com/?qs=5bf62b13d3601bc00ad39874320db0befccbaaa7d7a0694ec7951a7503ab3ddd844a7d17d047ccca8f9925ebe0f03ce59748ecfce430a8ca"  style="background-color: #F0F0F0; color: #fff; text-decoration: none; font-family: 'Segoe UI', Helvetica, Arial, sans-serif; font-weight: 300; font-size: 14px; mso-line-height-rule: exactly; line-height: 18px; background: #D83B01; text-align: center;"><span class="button-text" style="background-color: #F0F0F0; Margin-bottom: 0; background: #D83B01; color: #fff;">Activate Azure now  &nbsp;&gt;</span></a></p>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td style="padding: 40px 30px; background-color: #5C2D91;">
+                  <table cellpadding="0" cellspacing="0" border="0" width="100%" style="border-spacing: 0; font-family: sans-serif; color: #262626; border-collapse: collapse; background-color: #5C2D91;">
+                    <tr style="background-color: #5C2D91;">
+                      <td class="inner contents" style="width: 100%; text-align: left; background-color: #5C2D91; padding: 0;">
+                        <span class="h1" style="Margin: 0; font-size: 26px; font-weight: 300; Margin-bottom: 26px; font-family: 'Segoe UI', Helvetica, Arial, sans-serif; mso-line-height-rule: exactly; line-height: 25px; color: #fff; text-align: left; padding-bottom:10px">Quick links</span><br/><br/><span style="font-size:16px; color:white; border-left:#5C2D91 solid 10px; line-height:25px">&bull;&nbsp;<a href="https://click.email.microsoftemail.com/?qs=5bf62b13d3601bc035d0ec49f99a280296d15f323a06934675356ee40f01080477098252725c01978e97e8cf8cb1ca28d1ccea6fdad4ebb2" style="color: #fff;">MY portal</a><br/></span>
+                        <span style="font-size:16px; color:white; border-left:#5C2D91 solid 10px; line-height:25px">&bull;&nbsp;<a href="https://click.email.microsoftemail.com/?qs=5bf62b13d3601bc0f8442544ed6022dd8d651f3d9d519f199ff36405d3b8d04f05bb344251f0b8646e54070c0de8880431f337f5d1ee81a9" style="color: #fff;">DevOps blog</a><br/></span><span style="font-size:16px; color:white; border-left:#5C2D91 solid 10px; line-height:25px">&bull;&nbsp;<a href="https://click.email.microsoftemail.com/?qs=5bf62b13d3601bc0a42affdbc44e793a973b6af9aa457003735ad42214c03c454fe642d051799c91310dc27beb110aec3db4b5246edd5007" style="color: #fff;">Azure newsletter</a></span>
+                      </td>
+                    </tr>
+                    
+                  </table>
+                </td>
+              </tr>
+
+<!-- END: FEATURE CONTENT ONE COLUMN B -->
+
+<!-- BEGIN: FOOTER -->
+              <tr>
+                <td class="one-column section-footer" style="padding: 0 20px 10px; background-color: #fff; border-top: 1px solid #DEDEDE; text-align: left;">
+                  <!--[if (mso)]>
+                  <table width="100%">
+                  <tr>
+                  <td width="100%" valign="top">
+                  <![endif]-->
+                  <!--[if (IE)]>
+                  <table width="100%">
+                  <tr>
+                  <td width="100%" valign="top">
+                  <![endif]-->
+                  <div class="column" style="background-color: #fff;">
+                    <table width="100%" style="border-spacing: 0; font-family: sans-serif; color: #262626; border-collapse: collapse; background-color: #fff;">
+                      <tr style="background-color: #fff;">
+                        <td class="inner" style="background-color: #fff; padding: 10px;">
+                          <table class="contents" style="border-spacing: 0; font-family: sans-serif; color: #262626; border-collapse: collapse; width: 100%; background-color: #fff; text-align: left;">
+                            <tr style="background-color: #fff;">
+                              <td class="inner contents" style="width: 100%; background-color: #fff; text-align: left; padding: 10px 0 20px;">
+                                <table cellpadding="0" cellspacing="0" border="0" width="94" align="left" style="border-spacing: 0; font-family: sans-serif; color: #262626; border-collapse: collapse; background-color: #fff;">
+                                  <tr style="background-color: #fff;">
+                                    <td class="logo-ms" style="padding: 0; background-color: #fff;">
+                                      <a href="https://click.email.microsoftemail.com/?qs=5bf62b13d3601bc0d6eb6d000605fd7d0cd2cf437208db1ac2b90181133fd837ba6c3c11ce98850700c19b180c9df54b4836c0f2f9bb137e" style="color: #ee6a56; text-decoration: underline; background-color: #fff;"><img src="https://image.email.microsoftemail.com/lib/febf16727d6d0379/m/2/microsoft-logo-2x_347900.png" width="94" alt="Microsoft" style="border: 0; -ms-interpolation-mode: bicubic; display: block; outline: none; text-decoration: none; padding: 0; background-color: #fff;"/></a>
+                                    </td>
+                                  </tr>
+                                </table>
+                              </td>
+                            </tr>
+                            <tr style="background-color: #fff;">
+                              <td style="padding: 0; background-color: #fff;">
+                                <p class="body" style="Margin: 0; background-color: #fff; font-size: 10px; Margin-bottom: 14px; font-family: 'Segoe UI', Helvetica, Arial, sans-serif; font-weight: 300; mso-line-height-rule: exactly; line-height: 13px; color: #505050;">This mail was sent to you as part of your Visual Studio Dev Essentials membership. If you wish to opt out of this program, please go to your <a href="https://click.email.microsoftemail.com/?qs=5bf62b13d3601bc0aee6744755b49e4963b3b49f634825036757a3227264c2fbabb4618439f8c5c4da28794e7db21895d62545bc47ec86f2" style="text-decoration: underline; background-color: #fff; color: #505050;"><span style="background-color: #fff; color: #505050;">subscriptions</span></a> page and click on the “Leave program” link.</p>
+                               <p class="body" style="Margin: 0; background-color: #fff; font-size: 10px; Margin-bottom: 14px; font-family: 'Segoe UI', Helvetica, Arial, sans-serif; font-weight: 300; mso-line-height-rule: exactly; line-height: 13px; color: #505050;">This message from Microsoft is an important part of a program, service, or product that you or your company purchased or participate in.</p>
+                                <p class="body" style="Margin: 0; background-color: #fff; font-size: 10px; Margin-bottom: 14px; font-family: 'Segoe UI', Helvetica, Arial, sans-serif; font-weight: 300; mso-line-height-rule: exactly; line-height: 13px; color: #505050;">Microsoft respects your privacy. Please read our <a href="https://click.email.microsoftemail.com/?qs=5bf62b13d3601bc0a261b6e933c883400583d37c73582de6e0ad1110fb371cd5b715c2f76a395490bccf9ca8cba5910212134ab08a26d8b9" style="text-decoration: underline; background-color: #fff; color: #505050;"><span style="background-color: #fff; color: #505050;">Privacy Statement</span></a>.</p>
+                              <p class="body discreet" style="Margin: 0; background-color: #fff; font-size: 10px; font-family: 'Segoe UI', Helvetica, Arial, sans-serif; font-weight: 300; mso-line-height-rule: exactly; line-height: 13px; Margin-bottom: 0; color: #505050; text-decoration: none;">Microsoft Corporation
+One Microsoft Way<br>
+Redmond, WA 98052<br>
+USA<br></p>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                  <!--[if (mso)]>
+                  </td>
+                  </tr>
+                  </table>
+                  <![endif]-->
+                  <!--[if (IE)]>
+                  </td>
+                  </tr>
+                  </table>
+                  <![endif]-->
+                </td>
+              </tr>
+<!-- END: FOOTER -->
+
+<!-- BEGIN: SPACER SECTION -->
+              <tr>
+                <td class="align-left pre-section" style="padding: 0; text-align: left;">
+                  <p style="Margin: 0;">&nbsp;</p>
+                </td>
+              </tr>
+<!-- BEGIN: SPACER SECTION -->
+
+
+
+            </table>
+      <!--[if (mso)]>
+      </td>
+      </tr>
+      </table>
+      <![endif]-->
+      <!--[if (IE)]>
+      </td>
+      </tr>
+      </table>
+      <![endif]-->
+    </div>
+  </center>
+  <img src="https://click.email.microsoftemail.com/open.aspx?ffcb10-fe95117374650d7b74-fdf61571746201797011757d-febf16727d6d0379-fec21c767365017e-fdfb15727261047b74167770-ff3715727767" width="1" height="1">
+
+<img src="https://pixel.app.returnpath.net/pixel.gif?r=893cc0aefecbd38c1ba41b6afd204ead7e536cb7" width="1" height="1" />
+<img src="https://pixel.monitor1.returnpath.net/pixel.gif?r=893cc0aefecbd38c1ba41b6afd204ead7e536cb7" width="1" height="1" />
+
+
+</body>
+
+</html>
+
+
+--XsgWPDFlfMib=_?:--
+

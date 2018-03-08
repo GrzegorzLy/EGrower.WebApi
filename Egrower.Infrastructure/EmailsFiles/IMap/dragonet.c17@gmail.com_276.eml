@@ -1,0 +1,1098 @@
+Delivered-To: dragonet.c17@gmail.com
+Received: by 10.107.47.154 with SMTP id v26csp1171842iov;
+        Wed, 12 Jul 2017 11:33:16 -0700 (PDT)
+X-Received: by 10.237.38.131 with SMTP id q3mr4716960qtd.132.1499884396036;
+        Wed, 12 Jul 2017 11:33:16 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1499884395; cv=none;
+        d=google.com; s=arc-20160816;
+        b=gGBcJj6XHjaSdNLSEUYf9Q+9u8qDq8imemy6pEGM94rStqQDGwRx7WWXftheYaP4n6
+         0CHPjOAUOuQ4XKlwPkBjY2TNmGL4ES3whCBNAEj9KgJeKBKOrli0mwUsFBBbX50M8RRc
+         dKgfGH3aF7SQa/yYck7SH/mlw4hWbSaj3/ch39tgbjCXPxRL99W+r8mFaoNvG/NmCrDE
+         TrJzNHYYZUm6JUBKdrxK5hy1HES+kWJGxt1M4Cx8oBpLwUkQni8iGuHkw+hQmmsmtbEE
+         mHlzAps4+ItCt7kC/DJZJGGrCCw0LbZPHrnSCkLY9NxIhw7fPYFaOAfjiexSNnXOpipq
+         HiDg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=content-transfer-encoding:mime-version:message-id:subject:reply-to
+         :from:to:date:dkim-signature:arc-authentication-results;
+        bh=fNGrMmixwVt6j+HbmdfmB34fkieWLpVneW5HI1iFywA=;
+        b=thOK0pNcbRM4yF/xPg0SvTjHhytWCt12kYSjbuGLRSzaWHM+l/cQYxm2j5uSdhkt4h
+         srmog0Tdf+v2HRJ9S2DoNOVGxJtqGj+8sw9TCB+SHbABS0z3BNrI4B6YcbHeOQZQXbLU
+         PEF+31ij0QE2YYjVKG+jbN3SJLnlYyNtdpPtdDv6G/ikKqBi0iMoOSfSRbckkL3gYM7V
+         fiUan59CNCg/0VuzOHCCZXMGom2oHghLO3nymDznZHRS7QliWb8/8CaqYfcnqDmT3ItX
+         hDMMEkBeI1pahItBcQkNrjQpgOjYaTeSnz6+qPW9gINCutMiGXxAUaqn4FcCaGvwCWLN
+         BbdA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@avature.net header.b=tnrFBr3J;
+       spf=pass (google.com: domain of bounces-cm0xp5j03ydzlvjcw4a0oj2fh5x6sayz@accenture.avature.net designates 209.137.158.207 as permitted sender) smtp.mailfrom=bounces-CM0xP5J03ydZLvJCw4a0oj2fH5x6SAyz@accenture.avature.net
+Return-Path: <bounces-CM0xP5J03ydZLvJCw4a0oj2fH5x6SAyz@accenture.avature.net>
+Received: from mail-crm-rr02-1.avature.net (mail-crm-th07-lg-df01.avature.net. [209.137.158.207])
+        by mx.google.com with ESMTPS id d188si2952908qkc.170.2017.07.12.11.33.14
+        for <dragonet.c17@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 12 Jul 2017 11:33:15 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounces-cm0xp5j03ydzlvjcw4a0oj2fh5x6sayz@accenture.avature.net designates 209.137.158.207 as permitted sender) client-ip=209.137.158.207;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@avature.net header.b=tnrFBr3J;
+       spf=pass (google.com: domain of bounces-cm0xp5j03ydzlvjcw4a0oj2fh5x6sayz@accenture.avature.net designates 209.137.158.207 as permitted sender) smtp.mailfrom=bounces-CM0xP5J03ydZLvJCw4a0oj2fH5x6SAyz@accenture.avature.net
+Received: from localhost.localdomain (mail-th07-crm-sg01.xcade.net [172.17.3.184])
+	by mail-crm-rr02-1.avature.net (Postfix) with ESMTP id 684B5A0170
+	for <dragonet.c17@gmail.com>; Wed, 12 Jul 2017 18:33:13 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=simple/relaxed; d=avature.net;
+	s=dkim.instances; t=1499884393;
+	bh=fNGrMmixwVt6j+HbmdfmB34fkieWLpVneW5HI1iFywA=;
+	h=Date:To:From:Reply-To:Subject;
+	b=tnrFBr3JcUZf8AwrMRLRS9MAjSOrhXFKYIV5HckyXqC+oWEQo5E0qkDbvRG56RRvw
+	 EC7DTJc1ZbRVaoG4TkgOCRNdGTq1y78NYdODzhcOKCp143r17The/IUNz1SZbB9gjP
+	 m7RpuJgW+aKaOkSYa0MBOckM/0QEcxbhdKxqYQuQ=
+Date: Wed, 12 Jul 2017 18:33:13 +0000
+To: dragonet.c17@gmail.com
+From: Accenture Recruiting Team <noreply.talentconnection@recruiting.accenture.com>
+Reply-To: Accenture Recruiting Team <noreply.talentconnection@recruiting.accenture.com>
+Subject: Stay In Touch with Accenture!
+Message-ID: <CM0xP5J03ydZLvJCw4a0oj2fH5x6SAyz@accenture.avature.net>
+X-Priority: 3
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Content-Type: multipart/alternative;
+ boundary="=_77b5ed1d59aa559663ff7ce6a71f2ff4"; charset=UTF-8
+
+--=_77b5ed1d59aa559663ff7ce6a71f2ff4
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=UTF-8
+
+Stay In Touch with Accenture!
+
+	Dear Karol,=20
+
+	Accenture is committed to attracting, developing and retaining the best ta=
+lent for our business, which is why we created the Accenture Talent Connect=
+ion. The Accenture Talent Connection allows exceptional professionals who a=
+re interested in Accenture to learn more about what we do, how we do it, an=
+d what makes us different.=20
+
+	We=E2=80=99re looking to grow our network, and we invite you to join us. R=
+egistering is easy, and provides a great opportunity to learn about the cha=
+llenging and rewarding opportunities offered by Accenture. Whether you are =
+a prospective candidate, a past applicant, an experienced hire looking for =
+a change, or a graduate looking to jumpstart your career, we want to know=
+=2E=20
+
+	 [1] =20
+
+	Sincerely,
+ The Accenture Team
+
+ This invitation for the Accenture Talent Connection is not an offer of emp=
+loyment.   =20
+
+How do I sign up?
+
+	The Accenture Talent Connection is easy to join.=20
+
+	[2]  > JOIN NOW=20
+
+	(You will be taken to a sign-up page where you can indicate your interests=
+=2E Once you sign up, you will start to receive notifications about events,=
+ networking opportunities and job openings.)  =20
+
+  	Stay Connected 	[3]  	[4]  	[5]  	[6] =20
+
+  	[7]  > LEARN MORE ABOUT ACCENTURE CAREERS 	[8]  > VISIT OUR BLOG=20
+
+	This is a promotional message from Accenture that may contain research, an=
+alysis or marketing information. Accenture would like to continue using you=
+r e-mail address to inform you about services we deliver relevant to your i=
+ndustry. If you do not wish to receive such messages, either from all Accen=
+ture, or regarding news and notifications from this group, [9] you may unsu=
+bscribe here.=20
+ Accenture may keep your contact details and track patterns of use regardin=
+g such messages. To do this we use cookies, web beacons and similar technol=
+ogy to tell us whether you open, read or delete these messages as well as l=
+ogging what pages you view and what content you download from our websites=
+=2E This is explained in our Privacy Statement and by clicking on links in =
+our emails or responding you are agreeing to this. Your data may be transfe=
+rred internationally throughout Accenture's worldwide organization. Accentu=
+re will keep your information secure and will only use it in accordance wit=
+h our global policies and applicable data privacy laws.=20
+ You have a right to access your information and to correct it at any time =
+by contacting us. Please review our [10] Privacy Statement for further deta=
+ils on how we use your information.=20
+ Accenture, Digital Marketing, 161 N. Clark St., Chicago, IL 60601 USA=20
+ =C2=A9 Accenture All Rights Reserved =20
+
+=20
+
+References
+
+	Visible links
+	1. https://accenture.avature.net/mailRedir.php?u=3D1&code=3DCM0xP5J03ydZLv=
+JCw4a0oj2fH5x6SAyz&link=3D2&transformedUrl=3D023eeb65c536d69a378cfc78abf5eb=
+26aaeae4679ccc77dec19a9b7244adf5a0
+	2. https://accenture.avature.net/mailRedir.php?u=3D1&code=3DCM0xP5J03ydZLv=
+JCw4a0oj2fH5x6SAyz&link=3D2&transformedUrl=3D023eeb65c536d69a378cfc78abf5eb=
+26aaeae4679ccc77dec19a9b7244adf5a0
+	3. https://accenture.avature.net/mailRedir.php?u=3D1&code=3DCM0xP5J03ydZLv=
+JCw4a0oj2fH5x6SAyz&link=3D412&transformedUrl=3D64e5f9b610726a5a1d7a7d475dc2=
+dd33b8530c26b785db1a55f19f9ac266db1e
+	4. https://accenture.avature.net/mailRedir.php?u=3D1&code=3DCM0xP5J03ydZLv=
+JCw4a0oj2fH5x6SAyz&link=3D413&transformedUrl=3Dd06e34b10027972da4f01061195a=
+629a3b51cd2a966317e8eec5e2a7f1d94d53
+	5. https://accenture.avature.net/mailRedir.php?u=3D1&code=3DCM0xP5J03ydZLv=
+JCw4a0oj2fH5x6SAyz&link=3D414&transformedUrl=3D341672bfa9780425db2fba06c044=
+431bb7b087538c4cedc6dfb9208dff4b07db
+	6. https://accenture.avature.net/mailRedir.php?u=3D1&code=3DCM0xP5J03ydZLv=
+JCw4a0oj2fH5x6SAyz&link=3D415&transformedUrl=3D63fb09ebb65991aaf957019a3829=
+0425721e9a574122193e2e36a3205befafcd
+	7. https://accenture.avature.net/mailRedir.php?u=3D1&code=3DCM0xP5J03ydZLv=
+JCw4a0oj2fH5x6SAyz&link=3D416&transformedUrl=3Dfc8f87c389fcdf77c35bdb82ac65=
+5d880d91b9ff49f84a3d1ccf80b9e07b6e41
+	8. https://accenture.avature.net/mailRedir.php?u=3D1&code=3DCM0xP5J03ydZLv=
+JCw4a0oj2fH5x6SAyz&link=3D417&transformedUrl=3Dfc8f87c389fcdf77c35bdb82ac65=
+5d880d91b9ff49f84a3d1ccf80b9e07b6e41
+	9. https://accenture.avature.net/mailRedir.php?u=3D1&code=3DCM0xP5J03ydZLv=
+JCw4a0oj2fH5x6SAyz&link=3D418&transformedUrl=3D606165b6a0e43f427adaaebbeffb=
+f834a6734eeed7ce14e359a5822963bbdd48
+	10. https://accenture.avature.net/mailRedir.php?u=3D1&code=3DCM0xP5J03ydZL=
+vJCw4a0oj2fH5x6SAyz&link=3D419&transformedUrl=3Df2d45f823288198c09be89ee5d3=
+f5cc1cd3af12edb43149bb88a34e8c6cee251
+
+--=_77b5ed1d59aa559663ff7ce6a71f2ff4
+Content-Type: multipart/related;
+ boundary="=_be19f78074f8b5c2e47ff7a27be95c86"
+
+--=_be19f78074f8b5c2e47ff7a27be95c86
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=UTF-8
+
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8">
+<meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1=
+=2E0">
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge,chrome=3D1">
+<meta name=3D"format-detection" content=3D"telephone=3Dno">=20
+
+<style type=3D"text/css">
+   =20
+    body,#bodyTable, #bodyCell, #bodyCell{height:100% !important; margin:0;=
+ padding:0; width:100% !important;font-family:Helvetica, Arial, "Lucida Gra=
+nde", sans-serif;}
+    table{border-collapse:collapse;}
+    table[id=3DbodyTable] {width:100%!important;margin:auto;max-width:600px=
+!important;color:#7A7A7A;font-weight:normal;}
+    img, a img{border:0; outline:none; text-decoration:none;height:auto; }
+    a {text-decoration:none !important;border-bottom: 1px solid;}
+    h1, h2, h3, h4, h5, h6{color:#5F5F5F; font-weight:normal; font-family:H=
+elvetica; font-size:20px;  text-align:Left; letter-spacing:normal;margin-to=
+p:0;margin-right:0;margin-bottom:10px;margin-left:0;padding-top:0;padding-b=
+ottom:0;padding-left:0;padding-right:0;}
+   =20
+    .ReadMsgBody{width:100%;} .ExternalClass{width:100%;}=20
+    .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass f=
+ont, .ExternalClass td, .ExternalClass div{}=20
+    table, td{mso-table-lspace:0pt; mso-table-rspace:0pt;}=20
+    #outlook a{padding:0;}=20
+    img{-ms-interpolation-mode: bicubic;display:block;outline:none; text-de=
+coration:none;}=20
+    body, table, td, p, a, li, blockquote{-ms-text-size-adjust:100%; -webki=
+t-text-size-adjust:100%; font-weight:normal!important;}=20
+    .ExternalClass td[class=3D"ecxflexibleContainerBox"] h3 {padding-top: 1=
+0px !important;}=20
+
+   =20
+
+   =20
+    h1{display:block;font-size:26px;font-style:normal;font-weight:normal;}
+    h2{display:block;font-size:20px;font-style:normal;font-weight:normal;}
+    h3{display:block;font-size:17px;font-style:normal;font-weight:normal;}
+    h4{display:block;font-size:18px;font-style:italic;font-weight:normal;}
+    .flexibleImage{height:auto;}
+    .linkRemoveBorder{border-bottom:0 !important;}
+    table[class=3DflexibleContainerCellDivider] {padding-bottom:0 !importan=
+t;padding-top:0 !important;}
+   =20
+    span[class=3Dios-color-hack] a {color:#275100!important;text-decoration=
+:none!important;}=20
+    span[class=3Dios-color-hack2] a {color:#205478!important;text-decoratio=
+n:none!important;}
+    span[class=3Dios-color-hack3] a {color:#8B8B8B!important;text-decoratio=
+n:none!important;}
+   =20
+    .a[href^=3D"tel"], a[href^=3D"sms"] {text-decoration:none!important;col=
+or:#606060!important;pointer-events:none!important;cursor:default!important=
+;}
+    .mobile_link a[href^=3D"tel"], .mobile_link a[href^=3D"sms"] {text-deco=
+ration:none!important;color:#606060!important;pointer-events:auto!important=
+;cursor:default!important;}
+   =20
+    @media only screen and (max-width: 480px){
+       =20
+        body{width:100% !important; min-width:100% !important;}=20
+
+       =20
+       =20
+       =20
+        table[id=3D"emailBody"],
+        table[class=3D"flexibleContainer"],
+        td[class=3D"flexibleContainerCell"] {width:100% !important;}
+        td[class=3D"flexibleContainerBox"], td[class=3D"flexibleContainerBo=
+x"] table {display: block;width: 100%;text-align: left;}
+       =20
+        td[class=3D"imageContent"] img {height:auto !important; width:100% =
+!important; max-width:100% !important; }
+        img[class=3D"flexibleImage"]{height:auto !important; width:100% !im=
+portant;max-width:100% !important;}
+        img[class=3D"flexibleImageSmall"]{height:auto !important; width:aut=
+o !important;}
+        td[class=3D"imageHeader"] img {height:auto !important; width:60% !i=
+mportant; max-width:60% !important; }
+       =20
+        table[class=3D"flexibleContainerBoxNext"]{padding-top: 10px !import=
+ant;}
+    }
+
+   =20
+
+    @media only screen and (-webkit-device-pixel-ratio:.75){
+   =20
+    }
+
+    @media only screen and (-webkit-device-pixel-ratio:1){
+   =20
+    }
+
+    @media only screen and (-webkit-device-pixel-ratio:1.5){
+   =20
+    }
+   =20
+
+   =20
+    @media only screen and (min-device-width : 320px) and (max-device-width=
+:568px) {
+
+    }
+   =20
+</style>
+
+
+
+
+
+
+
+<center>
+    <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" height=3D"100%"=
+ width=3D"100%" id=3D"bodyTable" bgcolor=3D"#dbdad8" style=3D"max-width: 10=
+0%; width: 100%; min-width: 100%; table-layout: fixed;">
+        <tbody><tr>
+            <td align=3D"center" valign=3D"top" id=3D"bodyCell" style=3D"pa=
+dding: 20px;">
+
+               =20
+               =20
+                <table bgcolor=3D"#FFFFFF" border=3D"0" cellpadding=3D"0" c=
+ellspacing=3D"0" width=3D"600" id=3D"emailBody">
+                   =20
+                    <tbody><tr>
+                        <td align=3D"center" valign=3D"top">
+                           =20
+                            <table border=3D"0" cellpadding=3D"0" cellspaci=
+ng=3D"0" width=3D"100%">
+                                <tbody><tr>
+                                    <td align=3D"center" valign=3D"top">
+                                       =20
+                                        <table border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0" width=3D"600" class=3D"flexibleContainer">
+                                            <tbody><tr>
+                                                <td align=3D"center" valign=
+=3D"top" width=3D"600" class=3D"flexibleContainerCell" bgcolor=3D"#6688bb">
+                                                   =20
+                                                    <table border=3D"0" cel=
+lpadding=3D"0" cellspacing=3D"0" width=3D"100%">
+                                                        <tbody><tr>
+                                                            <td valign=3D"t=
+op" class=3D"imageContent">
+                                                                <img src=3D=
+"cid:149988439059666b6607c85101597210" width=3D"600" class=3D"flexibleImage=
+" alt=3D"Email header" title=3D"Email header" style=3D"max-width: 600px; wi=
+dth: 100%; display: block;">
+                                                            </td>
+                                                        </tr>
+                                                    </tbody></table>
+
+                                                   =20
+
+                                                </td>
+                                            </tr>
+                                        </tbody></table>
+                                       =20
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                           =20
+                        </td>
+                    </tr>
+                   =20
+
+                   =20
+                    <tr>
+                        <td align=3D"center" valign=3D"top">
+                           =20
+                            <table border=3D"0" cellpadding=3D"0" cellspaci=
+ng=3D"0" width=3D"100%">
+                                <tbody><tr>
+                                    <td align=3D"center" valign=3D"top">
+                                       =20
+                                        <table border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0" width=3D"600" class=3D"flexibleContainer">
+                                           =20
+                                            <tbody><tr>
+                                                <td align=3D"center" valign=
+=3D"top" width=3D"600" bgcolor=3D"#f2f2f2" class=3D"flexibleContainerCell" =
+style=3D"padding: 20px;">
+                                                    <table border=3D"0" cel=
+lpadding=3D"0" cellspacing=3D"0" width=3D"100%">
+                                                        <tbody><tr>
+                                                            <td align=3D"ce=
+nter" valign=3D"top" bgcolor=3D"#FFFFFF" style=3D"padding: 5% 16%; border: =
+1px solid rgb(217, 217, 217);">
+
+                                                               =20
+                                                                <table bord=
+er=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%">
+                                                                    <tbody>=
+<tr>
+                                                                        <td=
+ valign=3D"top" class=3D"textContent">
+                                                                           =
+ <h3 style=3D"font-family: Helvetica, Arial, sans-serif; font-size: 1.5em; =
+font-weight: normal; text-align: left; color: rgb(0, 0, 0); margin-bottom: =
+3px; margin-top: 0px;">Stay In Touch with Accenture!</h3>
+                                                                           =
+ <div align=3D"left" style=3D"font-family: Helvetica, Arial, sans-serif; fo=
+nt-size: 0.8em; font-weight: normal; color: rgb(0, 0, 0);">
+                                                                           =
+ <p style=3D"text-align: left;">Dear Karol,</p>
+
+                                                                           =
+ <p style=3D"text-align: left; margin-bottom: 20px;">Accenture is committed=
+ to attracting, developing and retaining the best talent for our business, =
+which is why we created the Accenture Talent Connection. The Accenture Tale=
+nt Connection allows exceptional professionals who are interested in Accent=
+ure to learn more about what we do, how we do it, and what makes us differe=
+nt.</p>
+
+                                                                           =
+ <p style=3D"text-align: left; margin-bottom: 20px;">We=E2=80=99re looking =
+to grow our network, and we invite you to join us. Registering is easy, and=
+ provides a great opportunity to learn about the challenging and rewarding =
+opportunities offered by Accenture. Whether you are a prospective candidate=
+, a past applicant, an experienced hire looking for a change, or a graduate=
+ looking to jumpstart your career, we want to know.</p>
+
+                                                                           =
+    <div align=3D"left"> <p style=3D"text-align: left; margin-bottom: 20px;=
+"> <a href=3D"https://accenture.avature.net/mailRedir.php?u=3D1&amp;code=3D=
+CM0xP5J03ydZLvJCw4a0oj2fH5x6SAyz&amp;link=3D2&amp;transformedUrl=3D023eeb65=
+c536d69a378cfc78abf5eb26aaeae4679ccc77dec19a9b7244adf5a0" target=3D"_blank"=
+ style=3D"border: 0px; text-decoration: none;"><img src=3D"cid:149988439059=
+666b6607d2d641804449"></a></p></div>
+
+                                                                           =
+ <p style=3D"text-align: left;">Sincerely,<br>
+                                                                           =
+ <strong>The Accenture Team</strong><br><br>
+                                                                           =
+ <span style=3D"font-size: 0.7em;">This invitation for the Accenture Talent=
+ Connection is not an offer of employment.</span>
+                                                                           =
+</p>
+
+                                                                           =
+ </div>
+
+                                                                        </t=
+d>
+                                                                    </tr>
+
+                                                                </tbody></t=
+able>
+                                                               =20
+                                                            </td>
+                                                        </tr>
+
+                                                    </tbody></table>
+                                                </td>
+                                            </tr>
+                                           =20
+                                            <tr>
+                                                <td align=3D"center" valign=
+=3D"top" width=3D"600" bgcolor=3D"#f2f2f2" class=3D"flexibleContainerCell" =
+style=3D"padding: 0px 20px 20px;">
+                                                    <table border=3D"0" cel=
+lpadding=3D"0" cellspacing=3D"0" width=3D"100%">
+                                                        <tbody><tr>
+                                                            <td align=3D"ce=
+nter" valign=3D"top" bgcolor=3D"#FFFFFF" style=3D"padding: 5% 16%; border: =
+1px solid rgb(217, 217, 217);">
+
+                                                               =20
+                                                                <table bord=
+er=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%">
+                                                                    <tbody>=
+<tr>
+                                                                        <td=
+ valign=3D"top" class=3D"textContent">
+                                                                           =
+ <h3 style=3D"font-family: Helvetica, Arial, sans-serif; font-size: 1.5em; =
+font-weight: normal; text-align: left; color: rgb(102, 136, 187); margin-bo=
+ttom: 3px; margin-top: 0px;">How do I sign up?</h3>
+                                                                           =
+ <div align=3D"left" style=3D"font-family: Helvetica, Arial, sans-serif; fo=
+nt-size: 12px; font-weight: normal; color: rgb(0, 0, 0);">
+                                                                           =
+     <p style=3D"text-align: left; margin-bottom: 20px;">The Accenture Tale=
+nt Connection is easy to join.</p>
+
+                                                                           =
+      <p style=3D"text-align: left; margin-bottom: 20px;"><a href=3D"https:=
+//accenture.avature.net/mailRedir.php?u=3D1&amp;code=3DCM0xP5J03ydZLvJCw4a0=
+oj2fH5x6SAyz&amp;link=3D2&amp;transformedUrl=3D023eeb65c536d69a378cfc78abf5=
+eb26aaeae4679ccc77dec19a9b7244adf5a0" target=3D"_blank" style=3D"font-size:=
+ 0.9em; font-weight: bold; color: rgb(102, 136, 187); border: 0px; display:=
+ inline-block; text-decoration: none;"> &gt; JOIN NOW</a></p>
+
+                                                                           =
+     <p style=3D"text-align: left; margin-bottom: 20px;">(You will be taken=
+ to a sign-up page where you can indicate your interests. Once you sign up,=
+ you will start to receive notifications about events, networking opportuni=
+ties and job openings.)</p>
+                                                                           =
+ </div>
+                                                                        </t=
+d>
+                                                                    </tr>
+
+                                                                </tbody></t=
+able>
+                                                               =20
+                                                            </td>
+                                                        </tr>
+                                                    </tbody></table>
+                                                </td>
+                                            </tr>
+
+                                           =20
+                                            <tr>
+                                                <td align=3D"center" valign=
+=3D"top" width=3D"600" bgcolor=3D"#f2f2f2" class=3D"flexibleContainerCell" =
+style=3D"padding: 0px 20px 20px;">
+                                                    <img src=3D"cid:1499884=
+39059666b6607dca083928644">
+                                                </td>
+                                            </tr>
+                                        </tbody></table>
+                                       =20
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                           =20
+                        </td>
+                    </tr>
+                   =20
+                   =20
+                    <tr>
+                        <td align=3D"center" valign=3D"top">
+                           =20
+                            <table border=3D"0" cellpadding=3D"0" cellspaci=
+ng=3D"0" width=3D"100%">
+                                <tbody><tr>
+                                    <td align=3D"center" valign=3D"top">
+                                       =20
+                                        <table border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0" width=3D"600" class=3D"flexibleContainer">
+                                            <tbody><tr>
+                                                <td align=3D"center" valign=
+=3D"top" width=3D"600" bgcolor=3D"#dbdad8" class=3D"flexibleContainerCell" =
+style=3D"padding: 4px 20px;"> &nbsp;
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align=3D"center" valign=
+=3D"top" width=3D"600" class=3D"flexibleContainerCell" style=3D"padding: 20=
+px;">
+                                                    <table border=3D"0" cel=
+lpadding=3D"0" cellspacing=3D"0" width=3D"100%">
+                                                        <tbody><tr>
+                                                            <td align=3D"le=
+ft" valign=3D"top">
+
+                                                               =20
+                                                                <table cell=
+padding=3D"5" cellspacing=3D"0" border=3D"0" align=3D"center">
+                                                                    <tbody>=
+<tr>
+                                                                        <td=
+>Stay Connected</td>
+                                                                        <td=
+><a href=3D"https://accenture.avature.net/mailRedir.php?u=3D1&amp;code=3DCM=
+0xP5J03ydZLvJCw4a0oj2fH5x6SAyz&amp;link=3D412&amp;transformedUrl=3D64e5f9b6=
+10726a5a1d7a7d475dc2dd33b8530c26b785db1a55f19f9ac266db1e" target=3D"_blank"=
+ style=3D"text-decoration: none;"><img src=3D"cid:149988439059666b6607e6252=
+5002878" alt=3D"Linkedin" border=3D"0"></a></td>
+                                                                        <td=
+><a href=3D"https://accenture.avature.net/mailRedir.php?u=3D1&amp;code=3DCM=
+0xP5J03ydZLvJCw4a0oj2fH5x6SAyz&amp;link=3D413&amp;transformedUrl=3Dd06e34b1=
+0027972da4f01061195a629a3b51cd2a966317e8eec5e2a7f1d94d53" target=3D"_blank"=
+ style=3D"text-decoration: none;"><img src=3D"cid:149988439059666b6607efa05=
+5614761" alt=3D" facebook" border=3D"0"></a></td>
+                                                                        <td=
+><a href=3D"https://accenture.avature.net/mailRedir.php?u=3D1&amp;code=3DCM=
+0xP5J03ydZLvJCw4a0oj2fH5x6SAyz&amp;link=3D414&amp;transformedUrl=3D341672bf=
+a9780425db2fba06c044431bb7b087538c4cedc6dfb9208dff4b07db" target=3D"_blank"=
+ style=3D"text-decoration: none;"><img src=3D"cid:149988439059666b6607f9163=
+0333513" alt=3D"Twitter" border=3D"0"></a></td>
+                                                                        <td=
+><a href=3D"https://accenture.avature.net/mailRedir.php?u=3D1&amp;code=3DCM=
+0xP5J03ydZLvJCw4a0oj2fH5x6SAyz&amp;link=3D415&amp;transformedUrl=3D63fb09eb=
+b65991aaf957019a38290425721e9a574122193e2e36a3205befafcd" target=3D"_blank"=
+ style=3D"text-decoration: none;"><img src=3D"cid:149988439059666b660802908=
+9816316" alt=3D"You Tube" border=3D"0"></a></td>
+                                                                    </tr>
+                                                                </tbody></t=
+able>
+
+                                                               =20
+
+                                                            </td>
+                                                        </tr>
+                                                    </tbody></table>
+                                                </td>
+                                            </tr>
+                                        </tbody></table>
+                                       =20
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                           =20
+                        </td>
+                    </tr>
+                   =20
+                   =20
+                    <tr>
+                        <td align=3D"center" valign=3D"top">
+                           =20
+                            <table border=3D"0" cellpadding=3D"0" cellspaci=
+ng=3D"0" width=3D"100%">
+                                <tbody><tr>
+                                    <td align=3D"center" valign=3D"top">
+                                       =20
+                                        <table border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0" width=3D"600" class=3D"flexibleContainer">
+                                            <tbody><tr>
+                                                <td align=3D"center" valign=
+=3D"top" width=3D"600" class=3D"flexibleContainerCell">
+                                                   =20
+                                                    <table border=3D"0" cel=
+lpadding=3D"20" cellspacing=3D"0" width=3D"100%">
+                                                        <tbody><tr>
+                                                            <td align=3D"ce=
+nter" class=3D"textContent" bgcolor=3D"#cccccc">
+                                                                <table widt=
+h=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" align=3D"center=
+">
+                                                                    <tbody>=
+<tr>
+                                                                        <td=
+ class=3D"flexibleContainerBox" style=3D"padding: 0px 20px 0px 40px;"><a hr=
+ef=3D"https://accenture.avature.net/mailRedir.php?u=3D1&amp;code=3DCM0xP5J0=
+3ydZLvJCw4a0oj2fH5x6SAyz&amp;link=3D416&amp;transformedUrl=3Dfc8f87c389fcdf=
+77c35bdb82ac655d880d91b9ff49f84a3d1ccf80b9e07b6e41" target=3D"_blank" style=
+=3D"font-family: Helvetica, Arial, sans-serif; font-size: 0.7em; color: rgb=
+(102, 136, 187); border: 0px; display: inline-block; text-decoration: none;=
+"> &gt; LEARN MORE ABOUT ACCENTURE CAREERS</a></td>
+                                                                        <td=
+ class=3D"flexibleContainerBox" style=3D"padding: 0px 40px 0px 20px;"><a hr=
+ef=3D"https://accenture.avature.net/mailRedir.php?u=3D1&amp;code=3DCM0xP5J0=
+3ydZLvJCw4a0oj2fH5x6SAyz&amp;link=3D417&amp;transformedUrl=3Dfc8f87c389fcdf=
+77c35bdb82ac655d880d91b9ff49f84a3d1ccf80b9e07b6e41" target=3D"_blank" style=
+=3D"font-family: Helvetica, Arial, sans-serif; font-size: 0.7em; color: rgb=
+(102, 136, 187); border: 0px; display: inline-block; text-decoration: none;=
+"> &gt; VISIT OUR BLOG</a></td>
+                                                                    </tr>
+                                                                </tbody></t=
+able>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td bgcolor=3D"=
+#dbdad8" style=3D"padding: 15px;">
+                                                                <p style=3D=
+"font-family: Helvetica, Arial, sans-serif; font-size: 0.7em; text-align: l=
+eft; color: rgb(124, 124, 124); display: inline-block; margin-bottom: 20px;=
+">This is a promotional message from Accenture that may contain research, a=
+nalysis or marketing information. Accenture would like to continue using yo=
+ur e-mail address to inform you about services we deliver relevant to your =
+industry. If you do not wish to receive such messages, either from all Acce=
+nture, or regarding news and notifications from this group, <a href=3D"http=
+s://accenture.avature.net/mailRedir.php?u=3D1&amp;code=3DCM0xP5J03ydZLvJCw4=
+a0oj2fH5x6SAyz&amp;link=3D418&amp;transformedUrl=3D606165b6a0e43f427adaaebb=
+effbf834a6734eeed7ce14e359a5822963bbdd48" target=3D"_blank" style=3D"font-w=
+eight: bold; color: rgb(102, 136, 187); border: 0px; display: inline-block;=
+ text-decoration: none;">you may unsubscribe here</a>. <br>
+
+Accenture may keep your contact details and track patterns of use regarding=
+ such messages. To do this we use cookies, web beacons and similar technolo=
+gy to tell us whether you open, read or delete these messages as well as lo=
+gging what pages you view and what content you download from our websites=
+=2E This is explained in our Privacy Statement and by clicking on links in =
+our emails or responding you are agreeing to this. Your data may be transfe=
+rred internationally throughout Accenture's worldwide organization. Accentu=
+re will keep your information secure and will only use it in accordance wit=
+h our global policies and applicable data privacy laws. <br>
+
+You have a right to access your information and to correct it at any time b=
+y contacting us. Please review our <a href=3D"https://accenture.avature.net=
+/mailRedir.php?u=3D1&amp;code=3DCM0xP5J03ydZLvJCw4a0oj2fH5x6SAyz&amp;link=
+=3D419&amp;transformedUrl=3Df2d45f823288198c09be89ee5d3f5cc1cd3af12edb43149=
+bb88a34e8c6cee251" target=3D"_blank" style=3D"font-weight: bold; color: rgb=
+(102, 136, 187); border: 0px; display: inline-block; text-decoration: none;=
+">Privacy Statement</a> for further details on how we use your information=
+=2E <br>
+
+Accenture, Digital Marketing, 161 N. Clark St., Chicago, IL 60601 USA <br>
+
+=C2=A9 Accenture All Rights Reserved</p>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody></table>
+                                                   =20
+                                                </td>
+                                            </tr>
+                                        </tbody></table>
+                                       =20
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                           =20
+                        </td>
+                    </tr>
+                   =20
+                </tbody></table>
+               =20
+            </td>
+        </tr>
+    </tbody></table>
+</center><img width=3D"1" height=3D"1" src=3D"https://accenture.avature.net=
+/mailPix/CM0xP5J03ydZLvJCw4a0oj2fH5x6SAyz">
+--=_be19f78074f8b5c2e47ff7a27be95c86
+Content-Transfer-Encoding: base64
+Content-ID: <149988439059666b6607c85101597210>
+Content-Type: image/png; charset=binary;
+ name=header-image-Wctsf3QI.png
+Content-Disposition: inline;
+ filename=header-image-Wctsf3QI.png;
+ size=8247
+
+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
+--=_be19f78074f8b5c2e47ff7a27be95c86
+Content-Transfer-Encoding: base64
+Content-ID: <149988439059666b6607d2d641804449>
+Content-Type: image/png; charset=binary;
+ name=join-now-iqeVwXwT.png
+Content-Disposition: inline;
+ filename=join-now-iqeVwXwT.png;
+ size=1044
+
+iVBORw0KGgoAAAANSUhEUgAAAFoAAAAbCAIAAAEEyT8KAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
+jwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAOpSURBVEhL7VfPa+pAEH5/rQcvufTiwYuXCBGk
+SD146INiwR4ED4JCEmyQIBWxoiVYIRRtxRZFFjVGksC+2ST+2FSj7ftBX0n5KLvZmZ3Pb2cnkx+h
+OH8UHzE6u36KJvlRRR6YVkdfhuLiuN30GvnjuNGpFhUnvHAlwjR82QNm+YmVTW8t/HAS2aPw7CIx
+hSkM5DkGjYSraoiTYQpKReL8ZqlbkGJlpJqrtdff4fIZfMEttHbjImmPuVoo2dL6ilqAk+cvlFUJ
+We5SshWtLEBjxwWw3QLPh52ChPGCLfSdLeChswUAmdhdgrHS1PSF8xzwbeT8I/gPeEiQKlAVsLmI
+JkW2+IyUFhw4XESSNqYVBhtO3px8x7QGlRoMIIs8XmxzFeXAuGGYUOL4WG0Zg+k2EMERHkx+mnFS
+E668jjc8oFhFitOLdG3Lg5RRXtPfgIfXK84b82EXcpK7u89XDZWkrgdBftAIeNAIeNAIeNA4yOPn
+K4aKydYXcrkR4qqqic/ivIBIUaJLp21PV1jaS8STHthA53NLWjURoyfXawdHeBgmaZ4IuMZIqLo8
+9CV0AfDa3+UBXRf0CA4Pj9e9Tsy0/oP2qoRSD/I1aRw9+ACPQXnLA/47JdxdpSu9x+usiBLpdikj
+Csg4fzQYZ4nGHh6J9iqTrkDnDWO2NqsThSVVx+C/ywM6YehqHBeHBwzAi5wL7QUiaRMSnsmPNXPm
+utD48nn6jxHwoBHw+JII5KAQyEEhkIPCx+SICDNs/8FnHul4CCpsedidGM5zA6F6pQndElniavBu
+Jt9+ME62OibGkz67+ZrkZGgZ4MXsTh0cMTsQyw40rtc2lKCzwPoosd4kfPWM8CKfcac++ER2SNAd
+uXKkFdW0OkVp14C5GSG8FC5Frxz68lYYIRPlMnYrdkiOQ2a+scLXI2hqsmnyMHzZH8/Ht30DQtsC
+ybkJRs27tVh++C05IuUZ1oebQ3BBfoB9Vu/kIN1aqt3RjU6x6iPHXrMjseJSpm9pjy0mXs2+GNCG
+hjO9kT7NpHimMDX0t/Mk7XgAJ8pRYYu93I1zMlL2FcTeZodaru4aMzdDyMzSvuxwmlf4DbkXCymK
+MDksx3sz/1gwTXcHJmTWG0LP9l0TE8oKtRUZ1KRzygcnZ0eqUeov7Vu7Uptt+GhZL9n3Ge3cZ6Gx
+v3ZsfieBGKstwN5PDgKP2eFYjnF9ibHVya/3TD2oYDfpRbc2R/CJy/KdEchBIZCDQiDHDuL8L3Y9
+0Syz3e+zAAAAAElFTkSuQmCC
+--=_be19f78074f8b5c2e47ff7a27be95c86
+Content-Transfer-Encoding: base64
+Content-ID: <149988439059666b6607dca083928644>
+Content-Type: image/png; charset=binary;
+ name=slogan-bottom-NZM_TjTk.png
+Content-Disposition: inline;
+ filename=slogan-bottom-NZM_TjTk.png;
+ size=2106
+
+iVBORw0KGgoAAAANSUhEUgAAALEAAAAaCAYAAAD48r3oAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJ
+bWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdp
+bj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6
+eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0
+NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJo
+dHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlw
+dGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAv
+IiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RS
+ZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpD
+cmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNl
+SUQ9InhtcC5paWQ6NjdFMTE3MUVBNjcxMTFFNDlFQjc5QTE3MDNBNURCMzIiIHhtcE1NOkRvY3Vt
+ZW50SUQ9InhtcC5kaWQ6NjdFMTE3MUZBNjcxMTFFNDlFQjc5QTE3MDNBNURCMzIiPiA8eG1wTU06
+RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo2N0UxMTcxQ0E2NzExMUU0OUVC
+NzlBMTcwM0E1REIzMiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo2N0UxMTcxREE2NzExMUU0
+OUVCNzlBMTcwM0E1REIzMiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1w
+bWV0YT4gPD94cGFja2V0IGVuZD0iciI/PogvBA4AAASuSURBVHja7FyNcesgDKa9LMAbgRX8RiAj
+5I3gN4I7QjJCMkIzQjJCPUI8QjxCXn0nXb5HEQb/tG6K7rgmsQEhCemT4LpSShXvTauP1FDL9PNI
+k120763+Dgyf3ttNaNf3VmWd/jiypP/Td2B2BZ/P1HAhXdvS33XWbbI3Mwv2ZNbR97cm9sQ+j1uA
+Vy6zXUZTJ7fLgqPYlnT6EJ74ued550UOoJhM8V7OLJi/h4KIzxHvcHJnsm1mWjomDmE7FVGpKNS9
+0lFPgLcK8mhdhnykvzh+63kfn2nqryGajOGX+WFZ1B6ZFICFeeNbJ++QKgFFYFypYsA8HSP0oz3R
+1DrOqumJLoWjj9BcGI1C8nX1ZkBv59icIoSJNWG7m7NgH/5zKxuXERBk76mSlMCrDazD0rtXAdel
+8iu9fyNsGVvpuQWwad+4Lk7Vzlw2oeIgtSow15tHH0UP3o6Vr6s3t99+jBFvgHlpIAPGUtGCNX3m
+xeoBeO1Gcxcw3hX4sT3rYAG8OgnpEH4vIAMDSr56eGHPuIc+FppP2W+gXAtrrAJGfALD2EZCPQ18
+oPFbD4bHuV7VvdRq6buU9JUgxw3Muw/0cfV2or6lIOOgEcfsUMljVokePiRoybvsezzPCQT4Juz6
+VH4tGIu02baBZ1Vg80ubxsIz6fdUubp0i6xO+KKwBh6MIENfJYv7aKHPxWPkVYw3XgUwkaHGdeI/
+Hhy0gXerANyIpU0AQ+0iy3ydkP4KWCqV304eawH/1SOqNsxHG1gTY9ja8/uR5DE3GconUBeMydl7
+N46OdoLsa8DVZ2GutSBjE2vEB49g8LCj2yW/nUk1hJG+xDDWEytBCLzJ+kLnUeg/hN+5jt4x8dsO
+kN1nGDDKM5bGJPP1UFmvIphaAygvIdNHY3qasL4aqoTEGHHdYzhj+C0gQpkJjPhlgEF+9n2GoYaJ
+VRcV6XxmK7FxSaVU3+PAY2oFa1p7qZZRK1+6AXOVYfNZ63qOfM934NEMxL1jDWooDeGXS1kc8jus
+/Ys8+XoCXh7tFLSE6sKB4OcTtdnuaTwnGk/rKKJ1YMBUO98EwtMYw0nll6NPQwo5wBhTbCj7QAas
+YbO/eJJr/ZVGrCERqgUcU07EZMjINhOMn8qvhaS3FZ6N4UOrx7nHgPfSd54coPgqI+aqhCYlHjxZ
+cgtZtp7AyHi8yrPL25Hjp/Ir3RvZqLhynwmMy4quvtAjT4nxG2FcPuyYA7Z0rVg5D6ywszrF++rE
+DYWOPfQ/qP9rqE1C5tnCeHwSxbXUo/p4F2GIoFP4PUJSx/ca2IDrgHc5g0xb+m4cJ7BT97rpCfho
+oPrxMpPxHmkdrzRvM7ISwbI9q/up3g4ijY6sLKVAF4swRTqxu9KzKsJjFep+HJly4ifRBsbDe7mx
+dyfUhPzykffN4afvzq3b7xZ47yLI342KU93xLTx6rxLmkmTtG/fV+d0m6E3iA68WzBLFDHiYqek0
+A+Ox/A69I1wk8Mv3GGZLggSPZmaygUweYo+lsygypZbYlkB4Vt9m1WVashH7yl+cLKgZk51MmSYj
+BuxvhIEvI5PETA9OqwXy9ALJgaGyDZe98j9zyfSB/gkwAG1oBtZpPUtXAAAAAElFTkSuQmCC
+--=_be19f78074f8b5c2e47ff7a27be95c86
+Content-Transfer-Encoding: base64
+Content-ID: <149988439059666b6607e62525002878>
+Content-Type: image/png; charset=binary;
+ name=ico-linkedin-bcEE7BVc.png
+Content-Disposition: inline;
+ filename=ico-linkedin-bcEE7BVc.png;
+ size=1936
+
+iVBORw0KGgoAAAANSUhEUgAAAB8AAAAfCAYAAAAfrhY5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJ
+bWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdp
+bj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6
+eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0
+NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJo
+dHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlw
+dGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAv
+IiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RS
+ZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpD
+cmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNl
+SUQ9InhtcC5paWQ6OUI4ODQ4QTJBNjcyMTFFNDlEODQ4NDZGNThBNTFCOEIiIHhtcE1NOkRvY3Vt
+ZW50SUQ9InhtcC5kaWQ6OUI4ODQ4QTNBNjcyMTFFNDlEODQ4NDZGNThBNTFCOEIiPiA8eG1wTU06
+RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5Qjg4NDhBMEE2NzIxMUU0OUQ4
+NDg0NkY1OEE1MUI4QiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5Qjg4NDhBMUE2NzIxMUU0
+OUQ4NDg0NkY1OEE1MUI4QiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1w
+bWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pp9zmGsAAAQESURBVHjaxFdZaFNZGP5umjRJm65WrTKM
+S11wascNlxEVBkUdQUVcEUZBYV70QfDBwQdBfHADEReK4INvnRmVcUFEqdXpQ6u4FrVulFp13Gvb
+2CZtmiZ+/83N7c1tUpNelx8+knPOvfc75z/f+f//KCi9hCRtEDGfmEmM0OAhOognRD1xlbhAPE7m
+g0oS5EK2nlhFOJOc6GniGHGqt4dsvYzlEUeISmJtCsRii4l/NfKiVMmnEveJP2DNZBK1xLJkyedq
+ezdI7wmFrUwgnThObPgc+ThNMBxRgGAIaPIBbdRUsy/Slv6+2SFiubHDbvjvJq7orc4uIBzGtjnF
+mNQ/CzfeebGjui7Sn2br6wT+IYYRT83kIq5cvdXix7rpI7F98jC1uWhoAZo7gjj430Ogn8fKNpwk
+JhndPpH4PeaRYBfGc8VGm1LIuXWFLGpQ5VphJN/a45FMJ47WPEOHRhbg74GbjCMZ6fgCti0aZMTV
+TT2GZV+b25CR58H4Ag9qGlvR9v4jUEBvtHdG9l5Xi4Me4Ylobe/2jEzSla7qJoFNtpsVqBs/kpab
+CZ8/gKq6tzwwdtjzPQgGgnA40uB2RzzgoPobZVK0X0YWYni2C95AF8pffIBf+nMz6F9bvEmsEfJf
+45JTcLPGDMaZ335GWHURRVFRi1PEynklKJ05Wu1/0uLDknM12D9jFJYUDdBff+MLYFPlI/x1p4Gx
+MiMewwQhHxKXPBSC226Dh6uMmvqf7s7mb7S/OC8Tt1ZNQz+nPeb1gXR72fwSPOTk7jS8B7LdZobB
+toSxV1HQaYpsqviohXaD4p1sC3EjJ1VNV5tt/dgfqNZg3Nwh082xKt3KV81YeOI6vNzjuVOLcGHB
+OH1siIf5yOmI7LkSEx2dsnKfVfItV+vgfetl8MnCxdsNuCb/NctxcH1pJO0p+oCQ11klf8cToe6p
+6IA6qff69bEwEh61FiFvsEru1GN9WE08DsVmIE9or+SpKqvkitJ7O4HVCvnf+D5WJuQviYpvTPyC
+KI9uzs544TXLEGDEchliwbSaL0fHYC7Z81BID05Ds1z62Igcd7xKaJcxn5cTl2NCLbOaJJMdN5/q
+XVVvWoDCHFT83xTT/7yVlY7EetlslxN7mQ1/YuQTq//oj5zzbiE8J0rNpXOhKDAmq0n2MhwbyIo8
+hHxQCHWXMHbLeZbVSxJhSNWjmnhPxrtXP424Zq5kXkvBQpyJul190Vy1yEdlJSbXG90Og9tNBeiW
+KHG8AvIssfEriWwfsedzpfNhYvUXJv6T2JzspaGMKImpZvtmcmGYTexO9bp0T1O/3NOqUyR9oK20
+uLcYoqRwS51OLNUuFj8S+dptRIq5Ru2k3NV0cz6ZD34SYAAnKTg7K0JhpAAAAABJRU5ErkJggg==
+--=_be19f78074f8b5c2e47ff7a27be95c86
+Content-Transfer-Encoding: base64
+Content-ID: <149988439059666b6607efa055614761>
+Content-Type: image/png; charset=binary;
+ name=ico-facebook-EAETkGBz.png
+Content-Disposition: inline;
+ filename=ico-facebook-EAETkGBz.png;
+ size=1833
+
+iVBORw0KGgoAAAANSUhEUgAAAB8AAAAfCAYAAAAfrhY5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJ
+bWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdp
+bj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6
+eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0
+NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJo
+dHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlw
+dGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAv
+IiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RS
+ZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpD
+cmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNl
+SUQ9InhtcC5paWQ6QjAyMjFBNEFBNjcyMTFFNDg1QUNFRkI3NUZCM0VERjYiIHhtcE1NOkRvY3Vt
+ZW50SUQ9InhtcC5kaWQ6QjAyMjFBNEJBNjcyMTFFNDg1QUNFRkI3NUZCM0VERjYiPiA8eG1wTU06
+RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpCMDIyMUE0OEE2NzIxMUU0ODVB
+Q0VGQjc1RkIzRURGNiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpCMDIyMUE0OUE2NzIxMUU0
+ODVBQ0VGQjc1RkIzRURGNiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1w
+bWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqzjU0kAAAOdSURBVHjaxJdbSJRBFMfP9+3Ny26mqaho
+UvkQiEVpRRcpKaSXLpBdMCoiikKCQKIb9VjWg/RQRAQRBYpFZAWFIRVRWb1aCqXm3dTWXHXdm7vb
+f7793PY+I4Ge5ae7813+c86cOTMjbdh/hwQtE2wFxSBPxQgc4Af4CT6BBvBd5IVagXuY2BGwDxgi
+XDeBVLAWlKttT8E9UB/rxXKMa8ngNngHDkURjmY7wBNVfMlMxdeAb+AY/Z+xTrSAMlHxUnXsMnlv
+9nqJPPjj8aiwhnDTg0eggjfmy9WEiWqSRKSRZeofHifrpJN0WtnXSKxdosw0E8n4HaEjN8CQ2pEw
+8XjwluetDOGOnhFavSybtpUspYxUo9IZZpYJO12/30STDhfF6SPm8kOwCHSGirPkmh9bWKLu/lFa
+VZBNddV7ld+hxsSdTnc0cWaPQWHgmK8EB3heO/BSLcJ87XRpRGFBY1p7Aj0/L/LUnzEbFeZn0eLs
+lKD2L8191NI+RNPDbDBwy8clNgRaNdS7RMTdbg8lGHRBbaPjdjp6sZ7aus2UlpJIORlJFA9xlv0x
+LB8UsbDv5pZBjUyuKTe1d5qps280WHzMTj0DFt8weH154fUKhf8g87yEd9fEpINSkxPp3IlNlJcT
+HPKUpHi6cHwjOV1upYMN79uUacY6zLEVTDyXO9YWG+XnpdPlU1vCrs0zGqjy8Hrl+/CIlWpfNNO8
+RFRiDdfzLDlW7f1XWUgolO2Y/xNWp4jXytrBPE/i3aXXacnumKIuzHGWTOkLjP5rLLEGzRNK51o7
+fisVTxKbhQYJ67mZDR3Xcw9R76CFioty6UFVWdCQ7DxZo/w3JuhJI+a1kqvsznZ+1JHB+Djgvcvl
+CVlcvEpUbHYXuREFWRIuPhYm3sVfvXwvTYRncSEFREJ7QrxOuabXaaKtbJFsgIl/pLmxFiZeN0fi
+tUy8H7yeZeFe0DidmldmWbwqcEltBG9mSbgH3Ardw5Xznpqa8igZHVSmUNvZ7OKsYoHGFjJP6E7m
+F9gOnkV7yoQ6PjJqo1cf2vxtVptTETboRY4AdAZ89k/TCCeWCnWzF3FptWF/Nmi2+tvYpjEj1YTK
+JvG8rwaVvBPLTTACasLCjs2ETquhrDRT2I6WI3wWXBU9NNSCgmi7WbZhCCRWIQGbIwnzjktf1Y0G
+O6c1zTCjW9UQ58eqISJZcldlnbrXYweLhepKyE4jbsBWxgHQDJ6DlyI9/CvAAMQsIncWe78OAAAA
+AElFTkSuQmCC
+--=_be19f78074f8b5c2e47ff7a27be95c86
+Content-Transfer-Encoding: base64
+Content-ID: <149988439059666b6607f91630333513>
+Content-Type: image/png; charset=binary;
+ name=ico-twitter-BPf91nrx.png
+Content-Disposition: inline;
+ filename=ico-twitter-BPf91nrx.png;
+ size=2082
+
+iVBORw0KGgoAAAANSUhEUgAAAB8AAAAfCAYAAAAfrhY5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJ
+bWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdp
+bj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6
+eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0
+NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJo
+dHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlw
+dGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAv
+IiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RS
+ZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpD
+cmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNl
+SUQ9InhtcC5paWQ6QkQ4REI2RTRBNjcyMTFFNDkxNDVFQkFDQjVFQzdGOUMiIHhtcE1NOkRvY3Vt
+ZW50SUQ9InhtcC5kaWQ6QkQ4REI2RTVBNjcyMTFFNDkxNDVFQkFDQjVFQzdGOUMiPiA8eG1wTU06
+RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpCRDhEQjZFMkE2NzIxMUU0OTE0
+NUVCQUNCNUVDN0Y5QyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpCRDhEQjZFM0E2NzIxMUU0
+OTE0NUVCQUNCNUVDN0Y5QyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1w
+bWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pn8II2AAAASWSURBVHjatFdbaFxVFF0z986dZzIzaTQz
+SUmDLX0Yq7UIFUXFtrb9qIq2wSKi0IoI6oeoqD+iP74+BEER8acfSjU+qxQplRKrthasCk0btA1N
+MGnSPJ00mffDtU/uwORmHnfSumExw7nn7HX2Pnvvs49jffcgbEqU2EHcQawyESBSxDniAvErcZj4
+245Chw1yIdtH7CHcNjd6kNhPfFNtkrPKtzDxIXGMeKwOYpH7ia9N8pX1km8izhBP4MpENnGW2G2X
+fJt5dlFcHTGIz4mnapHfZAbM/yHvEV2VyL1Ez1I15woFZPMFFKpP6yY6ypFLcIVUCjiALJVlqEz+
+VxKdq1O5AvpnMhhL5DCVyuMC/08mc3BynfzG0nnOW6DkS2uqbSROFQc1zk1Q6QwX+l1OBHQHLbMS
+OzBOwkQ2jyc7g9ja5oOP83qn0/jgTAy/j6Wwvd2HJo+G46MJBFwLTvgh8UKR/AtiV/HLxXgWe9c0
+4s6oF11HRhFyOxH16cqtRUlkC/iXm/tkSwu2Lfct2NgELe4ZTqCzycBrp6Zw4lISDSQvcYBk0g1O
+09W7ShdP032rggZ2rvDj060R5PLAnxMpRa6ZCobmsnj55vAiYpFmWrt7ZUBZfX3YgMu5yHOdxC26
+NQLVWSjL8vOJ2uHHmtByWjCJQ4NxzGXkKByMCeCeMsRFESfFOal3Kq2OL+rTrMH4qNbS9ezz/LPe
+uniaCx5Z3ag2oiy5LoDbIx4egQavPu/CBzkW8enl6za/7+25hK/OzWId3Z9bnAYZWbnCOrqMZH3T
+GRU4+9Y2wmP6WmJAICLWuDRH1bzSuMOwX0M6XzYBW53lau/5WAYvbAjh3nZ/uR0raTSc8NYglyMy
+Ks8JC3nQOtpAxUcZre0NOvy6Y0lF5zzzXc476Kp4d7nlS9w62kZXHRmK45XfJhekVz3yA9dLynoq
+bz4t5P3WUaFr9ev4qG8G756OYSSeq5u8u39WBWqh8t5jQr6om5AF4i2NIbuh2a3SpB45ODCHn1jV
+WrxV140I+fFyXyTCk4y2V+n6wdmsbWKp5c/8Mo5raLWzericFfLPrAVGPCUXRistPjmWRMfHA3j8
+xzEMz2Vr3GzAA4dHMM7yKuW4RrgcEPKLxNFSBW5uWXJdKtRqltnNbV5spPslvSr6kHGx/dAwjo0k
+sC5kqBuxigxJTBbL0xvEZvkjV+lMpoCdHQ3Yw/q8NmTUdPX+vy7j9T+mlGduXObmXVAzQ960dq9i
+/d3idrFYUuQuVrNN13qU1WGPE42MQtEr5zpwOaNqwc+jgiTCzNqI5earIP+YDUW+lDwi3lMdhjQT
+eXFlFrP0QjOJ5Yby60JeUGMTqlHIIWhoJJ0PLpsl4VbipOoJSgZHifuIb0WJKGtjrosnUhyQUhnj
+VSsXhnQwsqHSm8om8YtF4nIN5HfE09aCY3An0olIUxFk0IkHpJOps/a9Q7xdq3V+n3j4KneuLxHP
+2X00HDDv+J4rJJUHwxbirXqfS70S/eY77USdpH2mpZ2lNWQpD8Wi3Gb2evKwaCeazNeI3DqTZqac
+NuPmezsK/xNgAKaeqJfQX6FLAAAAAElFTkSuQmCC
+--=_be19f78074f8b5c2e47ff7a27be95c86
+Content-Transfer-Encoding: base64
+Content-ID: <149988439059666b6608029089816316>
+Content-Type: image/png; charset=binary;
+ name=ico-youtube-u1zLGXV3.png
+Content-Disposition: inline;
+ filename=ico-youtube-u1zLGXV3.png;
+ size=2247
+
+iVBORw0KGgoAAAANSUhEUgAAAB8AAAAfCAYAAAAfrhY5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJ
+bWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdp
+bj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6
+eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0
+NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJo
+dHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlw
+dGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAv
+IiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RS
+ZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpD
+cmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNl
+SUQ9InhtcC5paWQ6Q0U1MTNGQjRBNjcyMTFFNDg1MzZGQURDQjQwNjcyMjQiIHhtcE1NOkRvY3Vt
+ZW50SUQ9InhtcC5kaWQ6Q0U1MTNGQjVBNjcyMTFFNDg1MzZGQURDQjQwNjcyMjQiPiA8eG1wTU06
+RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpDRTUxM0ZCMkE2NzIxMUU0ODUz
+NkZBRENCNDA2NzIyNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpDRTUxM0ZCM0E2NzIxMUU0
+ODUzNkZBRENCNDA2NzIyNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1w
+bWV0YT4gPD94cGFja2V0IGVuZD0iciI/PuByyWMAAAU7SURBVHjarFdvTFVlGP+9lwsKpCIICiaB
+oB8qY9WtFtmaSytX6Qen1ci2zP5pq0ybVluaugWy+pIfbKtWtmlIzCKmZY00l4Mt+9KGqQEhCigi
+//8KvP2e855zudx7gKP2br97zz33fc/z9/c8z1HDgbvgcaUSjxEPEtk2biL6ibNELVFB/ESc8fJA
+5UG4CHuBeJqY5FHR74kvie+uV/h0Ip94Cde/RImNRPW1CL+POGi5Ojoa6OgAzp8HsrKAxkaeUkBG
+BjAw4EUB2ZRHfBv+h89l8yN27FKtX5cvAwsWQO3cCXR2QOXlQb26Drh0CRge9iI8higm1k8kPMdO
+mBC9qXgfc+q114GHFgEf7AByc4F/aoC6OqC7G2hqAq5cMV4RZWNi3JTYTawcy+2xRAORMOqIWFd/
+DupEJeD3W0J0YQHU408AM2ZAb9sK9cBCoL2dWTIduqsL+PmIdT3GyiT+lQt/yM1PIwTLioqi5X1A
+KXPnLeZOZQVU4B7g2dVGe3E/w4LTp4Fbb2dunAO+3jue8BLi7lC3i/mrXbdqTZVo0RE7GmdI4Tlz
+GJwfmUIM5bx5QDNd3UI0NYzndoTIWhUq/N1xU2bqVBNXhkDX10P39poQOExg8qOX3pH74qmJ1/uO
+cHH1inG3Stx9PoPJk4HEJPMdFw9MmWL2zJ4NpKcDV68ab42/biMCvvAMHNP1PttJInT/PkCSbMkS
+6KJvgBpm/qqngDtIlrY2L8JlPScJt8i99ikDiaHQCBr63oDhd524vse4uOQgdPrNwBefk3ZdhpaD
+tP7iRWDmTKO0ez24U6j2Oy9yXbNceDt/vqFSQgI0FVFpacC0adC1tZZCKmMuNIuPFfv+Purrs87q
+P0+SGZUjCkR6o0Ysz3K1WsppTg5U2SHzGyavglvGuB51b9NG6L1fmVLs0jvE8l6JZESMq6tZWCqM
+lZvfhkq/BZrxVLsKgfh4s088U8KSvfZFkwvhi57SC3MNM2Jjw//tkSzqiTg0OMiMTgRSki1Xgi7W
+uz8x/HYEyyKv9Z497oKtEkahSUmGAS4Nx+fa7iRB5CA5jcy5UPkFwOLFUFveAQ4fMoWmrIxU4yyR
+nQ39Mi3/tdw4bcd26OXLaBJtiosLhsxltYvwOte/fDw0ybbowgWTNJ2d0MUHgL9PGYr190MlJ7NB
+sPiUlgIHiqCk2ZDz+qNCU+nECO2a7Y0i/ISnscApNLNmcXiixamppqKRBXhlndVk0NpKWrbwPq32
+R48kr/uqEuFF7oUl+BFZbESgU0aHhgzN5D4FaTYhtWw5lBQdaUgWx10V2O+z22h5BNXEVY5ssbCt
+1QiQovPbMZ5qMG6V77PMgQ62VLZTFQhAs+br4mKTiEODbtaTx/jFaSwfjo43b3f3jIxJUsszMk0C
+Rfmhjx6zig+SEqEF0t3SWNufXwNddQrY8AbU0qU2c4bchOeHDxPlo0otrVHbtgNvboCn2h8qoKfb
+NJ3jx6FXrjD54Q+ODqQQpOoMR21NS3VuSsPeFHyAFIWTf0BJO01JMd2L2R3ykNFhckYuKxf4m/1f
+v8dOPdBvWvJIeX3UdnvE9PokUWpdSa+WDtXcbNolK50VY6e1hrtyaNjkiRQUUhINpGdsnGHHyJS7
+mdg13ui83h72jADJVkk4eYBcOxaENgplf8h+UcwppxbHg/s+tmf4Cef2Z4h9+P/WFqLAy9xucZDg
+VIijNyi0injYTbDXd7U1xFri/msQSr7hM9vVN/Si6Kxce9aTF4t0Yb/9NkIio0VqNfEX8QNx2MsD
+/xNgAOmx1RxuBy5kAAAAAElFTkSuQmCC
+--=_be19f78074f8b5c2e47ff7a27be95c86--
+
+--=_77b5ed1d59aa559663ff7ce6a71f2ff4--
+
+

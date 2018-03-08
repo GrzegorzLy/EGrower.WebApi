@@ -1,0 +1,2863 @@
+Delivered-To: dragonet.c17@gmail.com
+Received: by 10.107.33.79 with SMTP id h76csp140964ioh;
+        Wed, 6 Sep 2017 16:57:00 -0700 (PDT)
+X-Google-Smtp-Source: ADKCNb4nnHiyGW6lZ/9aMlOdNsciV9LDg34gXKOLGu4sFVu6F3vByuvf1HsCu1gR9QDs29oFKs/t
+X-Received: by 10.99.42.203 with SMTP id q194mr816010pgq.443.1504742219952;
+        Wed, 06 Sep 2017 16:56:59 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1504742219; cv=none;
+        d=google.com; s=arc-20160816;
+        b=m/4RUjyPGw71m5a3JYuauA+DP6G//W101JTAvLxTk65Jg72A10rPfgnMVmvqyXTFT4
+         52ttYj2RW/DF+iDs900dmtV79zFzt7xfbKi45QhRrTU6On/62aFSBWtWB0ImGlA/5DGJ
+         aLfH2FqQ5Dd4hlZSam8Y64FTcGpbCeWDxuYZZB94NPav6lKh6ZEfKNAqm01tzTkW0eCI
+         /YkWcNREvB1xDIrMQ/z67OVPqeIPe5IyEPOQhUEX156agrMyCRp4HQcQvwnjlxb1tsjf
+         pMShq0+x9vQxFSrZoIkPwF1Ojj1U7dJZ0PK7BtN5bbYeeh4U7CocsSg7GCur1EOPOPGe
+         jBzQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=list-unsubscribe:mime-version:subject:message-id:to:reply-to:from
+         :date:dkim-signature:dkim-signature:arc-authentication-results;
+        bh=pWJlm1krvc3p6D/bc6mODFcDpc4rZLigQzpbCzACxNY=;
+        b=um9aGQPr37er478xKkIbtCYPlkYmaw+dciSqPz0WwhH9jRYnwKRn+YRPsw2e+mg3zq
+         oiY+r7rJU21RMsyKemyE2p2TsWzptVDnlv4E8ljZztUkU0ZWmo4TMNT33UdA6ut75x4a
+         6tnyip/oEJ2Ot38f8JhjiESNBglKx4zprj/Y9danIMFaPghz/xF+CcNeYbPwnNyanInX
+         h7qeHKlaHNoyemA0QUR9adHvSjpMPVvuV1s5hHPczBWqpx6oFoeFt7FidXV9DcbafnTB
+         Ttg6dnYchSfVSKGcsJVcScim9vwNqfBrQ8W7dABG24iJzkg74tosKRb8m3TM0k3qgvXF
+         v2fw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@pluralsight.com header.s=m1 header.b=eTU6cuY2;
+       dkim=pass header.i=@mktdns.com header.s=m1 header.b=KK87Fd1x;
+       spf=pass (google.com: domain of 306-dup-745.0.176872.0.0.17469.9.6801855@smtp.pluralsight.com designates 199.15.215.12 as permitted sender) smtp.mailfrom=306-DUP-745.0.176872.0.0.17469.9.6801855@smtp.pluralsight.com
+Return-Path: <306-DUP-745.0.176872.0.0.17469.9.6801855@smtp.pluralsight.com>
+Received: from smtp.pluralsight.com (smtp.pluralsight.com. [199.15.215.12])
+        by mx.google.com with ESMTPS id i189si749741pge.813.2017.09.06.16.56.59
+        for <dragonet.c17@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 06 Sep 2017 16:56:59 -0700 (PDT)
+Received-SPF: pass (google.com: domain of 306-dup-745.0.176872.0.0.17469.9.6801855@smtp.pluralsight.com designates 199.15.215.12 as permitted sender) client-ip=199.15.215.12;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@pluralsight.com header.s=m1 header.b=eTU6cuY2;
+       dkim=pass header.i=@mktdns.com header.s=m1 header.b=KK87Fd1x;
+       spf=pass (google.com: domain of 306-dup-745.0.176872.0.0.17469.9.6801855@smtp.pluralsight.com designates 199.15.215.12 as permitted sender) smtp.mailfrom=306-DUP-745.0.176872.0.0.17469.9.6801855@smtp.pluralsight.com
+Return-Path: <no-reply@pluralsight.com>
+X-MSFBL: ZHJhZ29uZXQuYzE3QGdtYWlsLmNvbUBkdnAtMTk5LTE1LTIxNS0xMkBiZy1zamQt
+	OTlAMzA2LURVUC03NDU6NTY1NTU6MTM3NTU6NjY2MTM6MDoxNzQ2OTo5OjE3Njg3
+	Mjo2ODAxODU1
+Received: from [10.0.87.249] ([10.0.87.249:43521] helo=sjmas01.marketo.org)
+	by sjmta16.marketo.org (envelope-from <no-reply@pluralsight.com>)
+	(ecelerity 3.6.8.47404 r(Core:3.6.8.0)) with ESMTP
+	id 0C/F1-15617-83B80B95; Wed, 06 Sep 2017 18:56:40 -0500
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; t=1504742200;
+	s=m1; d=pluralsight.com; i=@pluralsight.com;
+	h=Date:From:To:Subject:MIME-Version:Content-Type;
+	bh=pWJlm1krvc3p6D/bc6mODFcDpc4rZLigQzpbCzACxNY=;
+	b=eTU6cuY2Ka50+kUbLhGfdlOrnULfX5wpWfNtZWJT2YxLH1pDw+Pt+xoTlkAguTTW
+	KodjFoqF6Qpd0wjptx0BXJBEVa+jHa+gh4At6pevdKcn1W/GbziBSJ1vUCri2NK6HN4
+	SFY4CUAxLsPDr9LA6O17DELUA6Hbb4ej4XBrVAD8=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; t=1504742200;
+	s=m1; d=mktdns.com; i=@mktdns.com;
+	h=Date:From:To:Subject:MIME-Version:Content-Type;
+	bh=pWJlm1krvc3p6D/bc6mODFcDpc4rZLigQzpbCzACxNY=;
+	b=KK87Fd1xTjQSFiAEEavC1w8OhY9yZkJzgGPHFaY43OeDvJgkd+wzu1toiDyUxc7H
+	VATrve4IuSBRAxRQeal4Vkat90+wGz331vcntEIuL1135UoJdmwUZVoFLvCdfn4zdDF
+	djmKe/U2tHtq01j1FXLfaIyHFkXOxcwffFotOptU=
+Date: Wed, 6 Sep 2017 18:56:40 -0500 (CDT)
+From: Pluralsight <no-reply@pluralsight.com>
+Reply-To: no-reply@pluralsight.com
+To: dragonet.c17@gmail.com
+Message-ID: <1731118173.87924513.1504742200194.JavaMail.root@sjmas01.marketo.org>
+Subject: New from Pluralsight: Fresh courses + rate your HTML5 skills
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_87924512_1931905538.1504742200194"
+X-PVIQ: mkto-306DUP745-000001-000000-176872
+X-Binding: bg-sjd-99
+X-MarketoID: 306-DUP-745:56555:13755:66613:0:17469:9:176872:6801855
+X-MktArchive: false
+List-Unsubscribe: <mailto:OZDGQYTFGI4E2Z32KJQTGYKINNMUW2KPIFIT2PI.176872.17469.9@unsub-sj.mktomail.com>
+X-Mailfrom: 306-DUP-745.0.176872.0.0.17469.9.6801855@smtp.pluralsight.com
+X-MSYS-API: {"options":{"open_tracking":false,"click_tracking":false}}
+X-MktMailDKIM: true
+
+------=_Part_87924512_1931905538.1504742200194
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<http://track.pluralsight.com/dc/JYWY0TlT8MJDYEoI81rBxOnTOO88FqBDDYRDr8jL7C=
+c=3D/HD0011x0NlztlPs0vcU00ih>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <http://track.pluralsight.com/FctUv00jA1D0l1lx000PhNs>
+
+
+with Raspberry Pi + Python=20
+
+
+
+
+
+Tired of using lackluster calendar alerts to remember your biggest events? =
+Find out how to build a countdown clock using Raspberry Pi and Python, and =
+then count down the minutes till your next event=E2=80=94like, say, Plurals=
+ight LIVE. (So convenient!)
+
+
+
+
+
+
+The clock is ticking <http://track.pluralsight.com/FctUv00jA1D0l1lx000PhNs>=
+ <http://track.pluralsight.com/Xhv0lBU0N100Plstx01cDk0>
+
+
+
+
+
+ <http://track.pluralsight.com/K00xsDU00vll1Chtl1cN0P0>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <http://track.pluralsight.com/E1h0D0l5UOt0N0xP1l0sv0c>
+
+
+
+
+
+
+
+
+
+
+
+Pluralsight LIVE + Comic Con
+
+
+
+
+
+
+Don't miss your chance to rub elbows with heroes in tech and on the silver =
+screen. For a limited time, when you register for Pluralsight LIVE, you'll =
+receive a free pass to Salt Lake Comic Con. Hurry=E2=80=94this deal will be=
+ gone in a Flash!
+
+
+Register now >> <http://track.pluralsight.com/E1h0D0l5UOt0N0xP1l0sv0c>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+NEW for developers
+
+
+
+FREE COURSE THIS WEEK
+
+
+
+
+
+
+
+ <http://track.pluralsight.com/R00vstcUxh0010l0DoPlFN1>
+
+
+
+
+CCSLP: Secure Software Concepts By Kevin Henry
+
+
+
+
+
+
+
+Intermediate
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <http://track.pluralsight.com/MN1P0x0tDlsch00Gv0lU0p1>
+
+
+
+
+Building Your First Mobile Application with Xamarin.Forms and Visual Studio=
+ 2017 By Jesse Liberty
+
+
+
+
+
+
+
+Beginner
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <http://track.pluralsight.com/qcPD0h0tvH0Nsl11U0lq00x>
+
+
+
+
+Java Microservices with Spring Cloud: Coordinating Services By Richard Sero=
+ter
+
+
+
+
+
+
+
+Intermediate
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <http://track.pluralsight.com/urN000tUsv0h1I01llxDPc0>
+
+
+
+
+Play by Play: Visual Studio 2017 and C# 7 By Kathleen Dollard and Jim Chris=
+topher=20
+
+
+
+
+
+
+
+Intermediate
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <http://track.pluralsight.com/jxJU0c1vD00st1lNPhs0l00>
+
+
+
+
+Advanced Defensive Programming Techniques By Zoran Horvat
+
+
+
+
+
+
+
+Intermediate
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <http://track.pluralsight.com/a0110v0cxD0t00KPtUNlslh>
+
+
+
+
+Cloud Patterns and Architecture for Microsoft Azure Developers By Simon All=
+ardice
+
+
+
+
+
+
+
+Advanced
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+View all new dev courses <http://track.pluralsight.com/I0c0uDt0vslLNh1x0l0U=
+P01>
+
+
+
+
+
+
+
+=20
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Featured path for developers
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <http://track.pluralsight.com/b0001hUvlDv0PlcM010xtsN>
+
+
+
+
+C++
+
+
+9 Courses=20
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Measure your skill and start the path <http://track.pluralsight.com/b0001hU=
+vlDv0PlcM010xtsN>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Join Pluralsight to learn the latest technology skills
+
+
+
+
+
+
+
+Sign up now <http://track.pluralsight.com/eN1twP01000UDl0xscNvl0h>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <http://track.pluralsight.com/rs0x0P1l1UOvtNDcl00x0h0>
+
+
+
+NEW for IT professionals
+
+
+
+
+
+
+
+ <http://track.pluralsight.com/CUl00P0yv0lD0Nht1x1cP0s>
+
+
+
+
+Managing SharePoint 2016 Search By Mark Ingram
+
+
+
+
+
+
+
+Intermediate
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <http://track.pluralsight.com/GcU0Pl10tQszD0hv0010lNx>
+
+
+
+
+Providing Troubleshooting Support for Windows Users By Mike Halsey
+
+
+
+
+
+
+
+Beginner
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <http://track.pluralsight.com/WD0cRNUsv0A1Phl00x1tl00>
+
+
+
+
+Google Cloud Platform Fundamentals By Howard Dierking
+
+
+
+
+
+
+
+Beginner
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <http://track.pluralsight.com/f00lh1v0tB00cU1xDNPSl0s>
+
+
+
+
+Getting Started with Azure Automation By Thomas Rayner
+
+
+
+
+
+
+
+Beginner
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <http://track.pluralsight.com/Q0lP0tU0DC1vx0Nch10Tsl0>
+
+
+
+
+Introducing System Center 2016 - Operations Manager (SCOM) By Greg Shields
+
+
+
+
+
+
+
+Intermediate
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+View all new IT courses <http://track.pluralsight.com/iUlD0NUclDv00h001tx1P=
+0s>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Featured path for IT professionals
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <http://track.pluralsight.com/yclDtxlN0h0vPUE1sV00010>
+
+
+
+
+Configuring Windows Devices (70-697)
+
+
+6 Courses=20
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Start the certification path <http://track.pluralsight.com/yclDtxlN0h0vPUE1=
+sV00010>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <http://track.pluralsight.com/c0s11xlD0vNU0chPW0tFl00>
+
+
+
+NEW for creative professionals
+
+
+
+
+
+
+
+ <http://track.pluralsight.com/DDGs10X0PUt00l0cvN1l0hx>
+
+
+
+
+Maya Rigging Fundamentals By Peter Gend
+
+
+
+
+
+
+
+Beginner
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <http://track.pluralsight.com/WD0cYNUsv0H1Phl00x1tl00>
+
+
+
+
+Visual Design: Best Practices for Refining Designs By Kerri Augenstein
+
+
+
+
+
+
+
+Intermediate
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <http://track.pluralsight.com/Xhv0lZU0N100Plstx01cDI0>
+
+
+
+
+Illustrator CC Creating a T-shirt Design By Justin Seeley
+
+
+
+
+
+
+
+Advanced
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <http://track.pluralsight.com/VtU0001hlc0P100DvsxlJN0>
+
+
+
+
+Affinity Designer Fundamentals By Greg Warner
+
+
+
+
+
+
+
+Beginner
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <http://track.pluralsight.com/Q0lP0tU0DK1vx0Nch101sl0>
+
+
+
+
+Houdini: Stereoscopic Fundamentals By Andrew Kennedy
+
+
+
+
+
+
+
+Intermediate
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+View all new creative courses <http://track.pluralsight.com/CUl0020Lv0lD0Nh=
+t1x1cP0s>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Featured path for creative professionals
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <http://track.pluralsight.com/Xhv0l3U0N100Plstx01cDM0>
+
+
+
+
+Game Environment Modeling
+
+
+8 Courses=20
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Measure your skill and start the path <http://track.pluralsight.com/Xhv0l3U=
+0N100Plstx01cDM0>
+<http://track.pluralsight.com/dc/JYWY0TlT8MJDYEoI81rBxOnTOO88FqBDDYRDr8jL7C=
+c=3D/HD0011x0NlztlPs0vcU00ih>
+
+
+Pluralsight, LLC 182 N. Union Ave. Farmington, UT 84025
+
+
+
+
+
+
+
+ <http://track.pluralsight.com/dc/M5yi0yZ-UZCCxV3bfEu0anbONeUjOd18p_VSSggcg=
+n0DrbpjHMEHkIJurPN3o6x7/HD0011x0NlztlPs0vcU00ih>
+ <http://track.pluralsight.com/dc/MYFzQrvu5rPS8PETBnVMsRusr34Y1lr0HdZtfs82X=
+3v9rFnWXM6_VHgQDeQ1wjEu/HD0011x0NlztlPs0vcU00ih>
+ <http://track.pluralsight.com/dc/mEXRm9OBeNs3Y1bS8bbzxSIJ8iuvrVEtSkOtQ-B3b=
+vA=3D/HD0011x0NlztlPs0vcU00ih>
+ <http://track.pluralsight.com/dc/fG5-PlwEnZR-IoSdwCtjIpTVr9AsJHNwc_srhy7U9=
+rVQYJ5-L-XVAJU3uI-ICH5l/HD0011x0NlztlPs0vcU00ih>
+ <http://track.pluralsight.com/dc/M9Y3nowLDCcEv8uSbJAkaXTGHqV_YEzxUjtWE9O_N=
+efBZ08YC8PHjcsXU2E01rGh/HD0011x0NlztlPs0vcU00ih>
+
+
+
+
+
+
+
+Copyright=C2=A9 2017 Pluralsight LLC.
+
+All logos and trademarks are the properties of their respective owners.
+
+
+
+This email was sent to dragonet.c17@gmail.com <http://track.pluralsight.com=
+/dc/1pDQu0mqE2rkhpZT-8gq22t_e8hlmX3JHlD628UL3nY=3D/HD0011x0NlztlPs0vcU00ih>
+
+Unsubscribe <[[https://get.pluralsight.com/UnsubscribePage.html?mkt_unsubsc=
+ribe=3D1&mkt_tok=3DeyJpIjoiWVdRelpqSXhaakF3WmpoaSIsInQiOiJlWmk2S21kMTRLOFFz=
+Z3RvQmM5YUcyY1hNckR4Zk10NWFTRU9UZ2tLUmNKYnVQY1E1WU1RZEgvSTkwWWVDZTNVVmpUWWt=
+YTnc4bURwOS95azloaHBkT3dkSkpJVUJDUHhtQ3ZRaEU1QXlTckdKcXdla29YU080emlTM3B6Q3=
+B2cCJ9/]]> | Manage your preferences <http://track.pluralsight.com/dc/jXnNg=
+ZX0R5Skt2btW6cf1ZC-rp3W1ClrQyb8joQdufid5Pzoibv5JJHzdhivwCdrLGSROPMb33CSgJ5s=
+rQVOZw=3D=3D/HD0011x0NlztlPs0vcU00ih>
+
+------=_Part_87924512_1931905538.1504742200194
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html xmlns=3D"=E2=80=9Chttp://www.w3.org/1999/xhtml=E2=80=9D" xmlns:v=3D"=
+=E2=80=9Curn:schemas-microsoft-com:vml=E2=80=9D" xmlns:o=3D"=E2=80=9Curn:sc=
+hemas-microsoft-com:office:office=E2=80=9D" >
+<head>
+<meta charset=3D"utf-8">
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge"><!--[if gte mso =
+9]><xml>
+  <o:OfficeDocumentSettings>
+    <o:AllowPNG/>
+    <o:PixelsPerInch>96</o:PixelsPerInch>
+  </o:OfficeDocumentSettings>
+</xml><![endif]-->
+<title>PLURALSIGHT</title>
+
+<style type=3D"text/css">
+/* CLIENT-SPECIFIC STYLES */
+img{-ms-interpolation-mode: bicubic;}=20
+/* Force IE to smoothly render resized images. */
+#outlook a{padding:0;}=20
+/* Force Outlook 2007 and up to provide a "view in browser" message. */
+table{mso-table-lspace:0pt;mso-table-rspace:0pt;}=20
+/* Remove spacing between tables in Outlook 2007 and up. */
+.ReadMsgBody{width:100%;}=20
+.ExternalClass{width:100%;}=20
+/* Force Outlook.com to display emails at full width. */
+p, a, li, td, blockquote{mso-line-height-rule:exactly;}=20
+/* Force Outlook to render line heights as they're originally set. */
+a[href^=3D"tel"], a[href^=3D"sms"]{color:inherit;cursor:default; text-decor=
+ation:none;}=20
+/* Force mobile devices to inherit declared link styles. */
+p, a, li, td, body, table, blockquote{-ms-text-size-adjust:100%;-webkit-tex=
+t-size-adjust:100%;}=20
+/* Prevent Windows- and Webkit-based mobile platforms from changing declare=
+d text sizes. */
+.ExternalClass, .ExternalClass p, .ExternalClass td, .ExternalClass div, .E=
+xternalClass span, .ExternalClass font{line-height:100%;}
+/* Force Outlook.com to display line heights normally. */
+
+a{color:#F26921;text-decoration:none;}
+
+
+img[class=3D"colorBar"]{
+        width:100% !important;
+        height: 11px !important;
+        display:block;
+}
+
+@media only screen and (max-width:650px){
+        table[class=3D"bodyTable"]{
+                width:94% !important;
+                padding-top:20px !important;
+                padding-right:3% !important;
+                padding-bottom:20px !important;
+                padding-left:3% !important;
+        }
+        table[class=3D"button"]{
+                width:100%;
+        }
+        *[class=3D"removePad"]{
+                padding-top:0px !important;
+                padding-right:0px !important;
+                padding-bottom:0px !important;
+                padding-left:0px !important;
+        }
+        *[class=3D"fullWidth"]{
+                width:100%;
+                padding-top:20px !important;
+                padding-right:0 !important;
+                padding-bottom:20px !important;
+                padding-left:0 !important;
+                border: 0px !important;
+        }
+        *[class=3D"fullWidth-lessPad"]{
+                width:100%;
+                padding-top:5px !important;
+                padding-right:0 !important;
+                padding-bottom:5px !important;
+                padding-left:0 !important;
+                border: 0px !important;
+        }
+        td[class=3D"addPad"]{
+                padding-top:5px !important;
+                padding-right:10px; !important;
+                padding-bottom:5px !important;
+                padding-left:10px; !important;
+        }
+        *[class=3D"left"]{
+                text-align:left !important;
+        }
+        *[class=3D"removeBorder"]{
+                border: 0px !important;
+        }
+        img{
+                max-width:100%;
+                height:auto;
+                margin: 0 auto;
+        }
+        td[class=3D"hide"]{
+                display:none !important;
+                max-width:0px !important;
+                max-height:0px !important;
+        }
+        td[class=3D"colorBar"],
+        table[class=3D"colorBar"]{
+                width:100%;
+        }
+        span[class=3D"lineBreak"] {
+      display:block !important;
+      }
+}
+</style>
+<!--[if mso]>
+<style type=3D=E2=80=9Dtext/css=E2=80=9D>
+td{
+font-family: Arial, sans-serif !important;
+}
+</style>
+<![endif]-->
+</head>
+<body bgcolor=3D"#FFFFFF" style=3D"background:#ffffff; padding:0px; margin:=
+0px; " ><!--Color Bar-->
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" alig=
+n=3D"center" ><tr ><td valign=3D"top" class=3D"hide">
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tr>
+<td bgcolor=3D"#ED4D38" height=3D"11" style=3D"line-height:1px;font-size:1p=
+x;">&nbsp;</td>
+</tr>
+</table>
+</td>
+<td class=3D"colorBar" valign=3D"top" align=3D"center" width=3D"577" ><tabl=
+e width=3D"577" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"c=
+enter" style=3D"table-layout:fixed; " class=3D"colorBar" ><tr ><td valign=
+=3D"top" align=3D"center" style=3D"line-height:0px; font-size:0px; " ><div =
+class=3D"mktEditable" id=3D"line" ><img src=3D"https://pluralsight-assets.s=
+3.amazonaws.com/Newsletters/monthly1/line1.jpg" width=3D"577" height=3D"11"=
+ alt=3D"" style=3D"display:block;" border=3D"0" class=3D"em_full_img"></div=
+>
+</td>
+</tr>
+</table>
+</td>
+<td valign=3D"top" class=3D"hide">
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tr>
+<td bgcolor=3D"#E71978" height=3D"11" style=3D"line-height:1px;font-size:1p=
+x;">&nbsp;</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<!--End Color Bar-->
+<div class=3D"mktEditable" id=3D"body_content" ><!--White Logo and Title-->
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" styl=
+e=3D"background: #FFFFFF; mso-padding-alt: 0px 0px 0px 0px;">
+<tbody>
+<tr>
+<td><!--Body Table-->
+<table class=3D"bodyTable" width=3D"577" border=3D"0" cellspacing=3D"0" cel=
+lpadding=3D"0" align=3D"center" style=3D"margin-left: auto; margin-right: a=
+uto;">
+<!--Logo-->
+<tbody>
+<tr>
+<td class=3D"fullWidth" align=3D"center" style=3D"text-align: center; paddi=
+ng-top: 40px; padding-bottom: 20px;"><a href=3D
+"http://track.pluralsight.com/dc/JYWY0TlT8MJDYEoI81rBxOnTOO88FqBDDYRDr8jL7C=
+c=3D/HD0011x0NlztlPs0vcU00ih" target=3D"_blank"
+><img src=3D"http://pluralsight-assets.s3.amazonaws.com/logos/PS_Logo_White=
+Background_NEW.png" width=3D"147" height=3D"32" alt=3D"PLURALSIGHT" style=
+=3D"display: block; margin-right: auto; margin-left: auto;" border=3D"0" />=
+</a></td>
+</tr>
+<!--End Logo-->
+</tbody>
+</table>
+<!--End Body Table--></td>
+</tr>
+</tbody>
+</table>
+<!--End White Logo and Title--><!--Lede-->
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" styl=
+e=3D"background: #fff; mso-padding-alt: 0px 0px 0px 0px;">
+<tbody>
+<tr>
+<td><!--Body Table-->
+<table class=3D"bodyTable" width=3D"650" border=3D"0" cellspacing=3D"0" cel=
+lpadding=3D"0" align=3D"center" style=3D"margin-left: auto; margin-right: a=
+uto;">
+<tbody>
+<tr>
+<td style=3D"padding-top: 20px; padding-bottom: 40px;">
+<table class=3D"fullWidth" width=3D"100%" border=3D"0" cellspacing=3D"0" ce=
+llpadding=3D"0" align=3D"center">
+<tbody>
+<tr>
+<td>
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td style=3D"padding-bottom: 20px;"><a href=3D
+"http://track.pluralsight.com/FctUv00jA1D0l1lx000PhNs" target=3D"_blank"
+><img src=3D"http://pluralsight-assets.s3.amazonaws.com/newsletter/090517/2=
+115-16_CourseWeeklyNewsletter_Sep6_af_header.jpg" border=3D"0" style=3D"dis=
+play: block; margin-left: auto; margin-right: auto;" constrain=3D"true" ima=
+gepreview=3D"false" width=3D"700" height=3D"207" /></a></td>
+</tr>
+<tr>
+<td style=3D"font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; c=
+olor: #404041; font-size: 32px; padding-top: 10px; padding-bottom: 10px; fo=
+nt-weight: 300; text-align: center;"><span style=3D"color: #404041;">with R=
+aspberry Pi + Python&nbsp;</span></td>
+</tr>
+<tr>
+<td style=3D"font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; c=
+olor: #404041; font-size: 16px; text-align: center;"></td>
+</tr>
+<tr>
+<td style=3D"font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; c=
+olor: #404041; font-size: 14px; padding-top: 10px; padding-bottom: 20px; fo=
+nt-weight: 300; line-height: 24px; text-align: center;">Tired of using lack=
+luster calendar alerts to remember your biggest events? Find out how to bui=
+ld a countdown clock using Raspberry Pi and Python, and then count down the=
+ minutes till your next=20
+event&mdash;like, say, Pluralsight LIVE.
+ (So convenient!)</td>
+</tr>
+<tr>
+<td style=3D"text-align: left; font-family: 'Helvetica Neue', Helvetica, Ar=
+ial, sans-serif; color: #404041; font-size: 14px; padding-top: 10px; paddin=
+g-bottom: 10px;"><!--Button-->
+<table class=3D"button" align=3D"center" width=3D"250" border=3D"0" cellspa=
+cing=3D"10" cellpadding=3D"0" style=3D"border-top-right-radius: 5px; border=
+-bottom-right-radius: 5px; border-bottom-left-radius: 5px; border-top-left-=
+radius: 5px; margin-right: auto; margin-left: auto; border: 1px solid #e800=
+88;">
+<tbody>
+<tr>
+<td style=3D"font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; f=
+ont-size: 14px; color: #e80088; text-align: center;"><span style=3D"color: =
+#ec008c;"><a href=3D
+"http://track.pluralsight.com/FctUv00jA1D0l1lx000PhNs" target=3D"_blank" st=
+yle=3D"color: #ec008c;"
+>The clock is ticking</a><a href=3D
+"http://track.pluralsight.com/Xhv0lBU0N100Plstx01cDk0" target=3D"_blank" st=
+yle=3D"color: #ec008c;"
+></a></span></td>
+</tr>
+</tbody>
+</table>
+<br /> <a href=3D
+"http://track.pluralsight.com/K00xsDU00vll1Chtl1cN0P0" target=3D"_blank"
+><!--End Button--></a></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<!--End Body Table--></td>
+</tr>
+</tbody>
+</table>
+<!--Body Table-->
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" styl=
+e=3D"background: #000; mso-padding-alt: 0px 0px 0px 0px;">
+<tbody>
+<tr>
+<td><!--Body Table-->
+<table class=3D"bodyTable" width=3D"650" border=3D"0" cellspacing=3D"0" cel=
+lpadding=3D"0" align=3D"center" style=3D"margin-left: auto; margin-right: a=
+uto;">
+<tbody>
+<tr height=3D"1px" style=3D"background-color: #404041;">
+<td height=3D"1px"></td>
+</tr>
+<tr>
+<td style=3D"padding-top: 40px; padding-bottom: 40px;"><!--Left Column-->
+<table class=3D"fullWidth" width=3D"197" border=3D"0" cellspacing=3D"0" cel=
+lpadding=3D"0" align=3D"left" height=3D"120">
+<tbody>
+<tr>
+<td><a href=3D
+"http://track.pluralsight.com/n0Dl0mD01xNv0PU0tc01hls" target=3D"_blank"
+><img src=3D"http://pluralsight-assets.s3.amazonaws.com/newsletter/090517/2=
+115-16_CourseWeeklyNewsletter_Sep6_af_HTML5.jpg" width=3D"100" style=3D"dis=
+play: block; padding-left: 10px; float: inherit;" border=3D"0" alt=3D"Free =
+Course" constrain=3D"true" imagepreview=3D"false" height=3D"141" /></a></td=
+>
+</tr>
+</tbody>
+</table>
+<!--End Left Column--><!--Right Column-->
+<table class=3D"fullWidth" width=3D"65%" border=3D"0" cellspacing=3D"0" cel=
+lpadding=3D"0" align=3D"right">
+<tbody>
+<tr>
+<td>
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td style=3D"font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; c=
+olor: #404041; font-size: 22px; padding-top: 25px; padding-bottom: 5px; fon=
+t-weight: 300;"><span style=3D"font-size: 26px;"><span style=3D"color: #fff=
+fff; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">Know HTM=
+L5? Prove it.</span></span></td>
+</tr>
+<tr>
+<td style=3D"font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; c=
+olor: #404041; font-size: 16px; padding-top: 0px; padding-bottom: 5px; font=
+-weight: 300;"><br /></td>
+</tr>
+<tr>
+<td style=3D"font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; c=
+olor: #404041; font-size: 14px; padding-top: 10px; padding-bottom: 20px; fo=
+nt-weight: 300; line-height: 20px;"><span style=3D"color: #404041; font-fam=
+ily: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; font-=
+weight: 300;"><strong style=3D"color: #ffffff; font-family: 'Helvetica Neue=
+', Helvetica, Arial,=20
+sans-serif; font-size: 14px; font-weight: 300;">See where your current HTML=
+5 skills stand with our assessment.
+ In just 5 minutes, you can get an accurate read on your skills and see how=
+ you compare to your peers.</strong><br /></span><br /><strong><a href=3D
+"http://track.pluralsight.com/n0Dl0mD01xNv0PU0tc01hls" target=3D"_blank" st=
+yle=3D"color: #ec008c;"
+><span color=3D"#ec008c" face=3D"Helvetica Neue, Helvetica, Arial, sans-ser=
+if" style=3D"color: #ec008c; font-family: 'Helvetica Neue', Helvetica, Aria=
+l, sans-serif;"><span=20
+style=3D"font-size: 14px;">Know&nbsp;</span><span style=3D"font-size: 14px;=
+">your</span><span style=3D"font-size: 14px;">&nbsp;skills&nbsp;&gt;&gt;</s=
+pan></span></a></strong><br /></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<!--End Right Column--></td>
+</tr>
+</tbody>
+</table>
+<!--End Body Table--></td>
+</tr>
+</tbody>
+</table>
+<!--End Free Course-->
+<table class=3D"bodyTable" width=3D"650" border=3D"0" cellspacing=3D"0" cel=
+lpadding=3D"0" align=3D"center" style=3D"margin-left: auto; margin-right: a=
+uto;">
+<tbody>
+<tr>
+<td class=3D"fullWidth-lessPad" style=3D"padding-top: 0px; padding-bottom: =
+60px;">
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<!--Image-->
+<tbody>
+<tr>
+<td style=3D"padding-bottom: 20px;"><a href=3D
+"http://track.pluralsight.com/Lxs1PU00c1nl0DEtl0v0h0N" target=3D"_blank"
+><br /> <img src=3D"http://pluralsight-assets.s3.amazonaws.com/newsletter/i=
+mages/12-09_dev.jpg" width=3D"650" border=3D"0" style=3D"display: block;" c=
+onstrain=3D"true" imagepreview=3D"false" /></a></td>
+</tr>
+<!--/Image--><!--Section Title-->
+<tr>
+<td style=3D"font-family: Helvetica, Arial, sans-serif; font-size: 16px; li=
+ne-height: 19px; color: #231f20; padding-bottom: 15px;"><strong>NEW</strong=
+> for developers</td>
+</tr>
+<!--/Section Title--><!--Additional Class--><!--/Section Title--><!--Free C=
+ourse Title-->
+<tr>
+<td bgcolor=3D"#0E9BBD" style=3D"font-family: Helvetica, Arial, sans-serif;=
+ font-size: 13px; line-height: 16px; color: #ffffff; font-weight: bold; pad=
+ding: 10px;">FREE COURSE THIS&nbsp;WEEK</td>
+</tr>
+<!--/Free Course Title--><!--Free Course Info-->
+<tr>
+<td style=3D"padding-top: 15px; padding-bottom: 15px; border-bottom-color: =
+#0E9BBD; border-bottom-width: 10px; border-bottom-style: solid;">
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td class=3D"addPad" valign=3D"top" width=3D"20" style=3D"padding-right: 10=
+px;"><a href=3D
+"http://track.pluralsight.com/R00vstcUxh0010l0DoPlFN1" target=3D"_blank" st=
+yle=3D"text-decoration: none;"
+><img src=3D"http://pluralsight-assets.s3.amazonaws.com/newsletter/072016/i=
+con_1.png" width=3D"20" height=3D"20" alt=3D"" border=3D"0" style=3D"displa=
+y: block;" /></a></td>
+<td><!--Left Column-->
+<table class=3D"fullWidth-lessPad" width=3D"78%" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" align=3D"left">
+<tbody>
+<tr>
+<td style=3D"font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; f=
+ont-size: 14px; line-height: 20px; color: #231f20;"><span style=3D"font-fam=
+ily: Arial; font-size: 13px; line-height: 18px; white-space: pre-wrap;">CCS=
+LP: Secure Software Concepts</span>&nbsp;<span style=3D"font-size: 10px; co=
+lor: #868686;">By&nbsp;Kevin Henry</span></td>
+</tr>
+</tbody>
+</table>
+<!--End Left Column--><!--Right Column-->
+<table class=3D"fullWidth-lessPad" width=3D"18%" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" align=3D"right">
+<tbody>
+<tr>
+<td class=3D"left" style=3D"text-align: right; font-family: Helvetica, Aria=
+l, sans-serif; font-size: 10px; line-height: 20px; color: #868686;">Interme=
+diate</td>
+</tr>
+</tbody>
+</table>
+<!--End Right Column--></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<!--/Free Course Info--><!--Additional Class-->
+<tr>
+<td style=3D"padding-top: 10px; padding-bottom: 10px; border-bottom-color: =
+#d2d4d4; border-bottom-width: 1px; border-bottom-style: solid;">
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td class=3D"addPad" valign=3D"top" width=3D"20" style=3D"padding-right: 10=
+px;"><a href=3D
+"http://track.pluralsight.com/MN1P0x0tDlsch00Gv0lU0p1" target=3D"_blank" st=
+yle=3D"text-decoration: none;"
+><img src=3D"http://pluralsight-assets.s3.amazonaws.com/newsletter/072016/i=
+con_2.png" width=3D"20" height=3D"20" alt=3D"" border=3D"0" style=3D"displa=
+y: block;" /></a></td>
+<td><!--Left Column-->
+<table class=3D"fullWidth-lessPad" width=3D"78%" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" align=3D"left">
+<tbody>
+<tr>
+<td><span color=3D"#231F20" face=3D"Helvetica Neue, Helvetica, Arial, sans-=
+serif" style=3D"color: #231f20; font-family: 'Helvetica Neue', Helvetica, A=
+rial, sans-serif;"><span style=3D"font-size: 14px; line-height: 20px;">Buil=
+ding Your First Mobile Application with Xamarin.Forms and Visual Studio 201=
+7&nbsp;</span></span><span style=3D"font-size: 10px; color: #868686;">By&nb=
+sp;Jesse Liberty</span></td>
+</tr>
+</tbody>
+</table>
+<!--End Left Column--><!--Right Column-->
+<table class=3D"fullWidth-lessPad" width=3D"18%" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" align=3D"right">
+<tbody>
+<tr>
+<td class=3D"left" style=3D"text-align: right; font-family: Helvetica, Aria=
+l, sans-serif; font-size: 10px; line-height: 20px; color: #868686;">Beginne=
+r</td>
+</tr>
+</tbody>
+</table>
+<!--End Right Column--></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<!--/Additional Class--><!--Additional Class-->
+<tr>
+<td style=3D"padding-top: 10px; padding-bottom: 10px; border-bottom-color: =
+#d2d4d4; border-bottom-width: 1px; border-bottom-style: solid;">
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td class=3D"addPad" valign=3D"top" width=3D"20" style=3D"padding-right: 10=
+px;"><a href=3D
+"http://track.pluralsight.com/qcPD0h0tvH0Nsl11U0lq00x" target=3D"_blank" st=
+yle=3D"text-decoration: none;"
+><img src=3D"http://pluralsight-assets.s3.amazonaws.com/newsletter/072016/i=
+con_2.png" width=3D"20" height=3D"20" alt=3D"" border=3D"0" style=3D"displa=
+y: block;" /></a></td>
+<td><!--Left Column-->
+<table class=3D"fullWidth-lessPad" width=3D"78%" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" align=3D"left">
+<tbody>
+<tr>
+<td style=3D"font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; f=
+ont-size: 14px; line-height: 20px; color: #231f20;"><span style=3D"color: #=
+231f20; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-s=
+ize: 14px;">Java Microservices with Spring Cloud: Coordinating Services</sp=
+an> <span style=3D"font-size: 10px; color: #868686;">By&nbsp;Richard Serote=
+r</span></td>
+</tr>
+</tbody>
+</table>
+<!--End Left Column--><!--Right Column-->
+<table class=3D"fullWidth-lessPad" width=3D"18%" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" align=3D"right">
+<tbody>
+<tr>
+<td class=3D"left" style=3D"text-align: right; font-family: Helvetica, Aria=
+l, sans-serif; font-size: 10px; line-height: 20px; color: #868686;">Interme=
+diate</td>
+</tr>
+</tbody>
+</table>
+<!--End Right Column--></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<!--/Additional Class--><!--Additional Class-->
+<tr>
+<td style=3D"padding-top: 10px; padding-bottom: 10px; border-bottom-color: =
+#d2d4d4; border-bottom-width: 1px; border-bottom-style: solid;">
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td class=3D"addPad" valign=3D"top" width=3D"20" style=3D"padding-right: 10=
+px;"><a href=3D
+"http://track.pluralsight.com/urN000tUsv0h1I01llxDPc0" target=3D"_blank" st=
+yle=3D"text-decoration: none;"
+><img src=3D"http://pluralsight-assets.s3.amazonaws.com/newsletter/072016/i=
+con_2.png" width=3D"20" height=3D"20" alt=3D"" border=3D"0" style=3D"displa=
+y: block;" /></a></td>
+<td><!--Left Column-->
+<table class=3D"fullWidth-lessPad" width=3D"78%" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" align=3D"left">
+<tbody>
+<tr>
+<td style=3D"font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; f=
+ont-size: 14px; line-height: 20px; color: #231f20;"><span color=3D"#231F20"=
+ face=3D"Helvetica Neue, Helvetica, Arial, sans-serif" style=3D"color: #231=
+f20; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;"><span st=
+yle=3D"font-size: 14px;">Play&nbsp;by Play: Visual Studio 2017 and C# 7</sp=
+an></span><span style=3D"font-size:=20
+10px; color: #868686;">&nbsp;By&nbsp;Kathleen Dollard and Jim Christopher&n=
+bsp;</span></td>
+</tr>
+</tbody>
+</table>
+<!--End Left Column--><!--Right Column-->
+<table class=3D"fullWidth-lessPad" width=3D"18%" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" align=3D"right">
+<tbody>
+<tr>
+<td class=3D"left" style=3D"text-align: right; font-family: Helvetica, Aria=
+l, sans-serif; font-size: 10px; line-height: 20px; color: #868686;">Interme=
+diate</td>
+</tr>
+</tbody>
+</table>
+<!--End Right Column--></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<!--/Additional Class--><!--Additional Class-->
+<tr>
+<td style=3D"padding-top: 10px; padding-bottom: 10px; border-bottom-color: =
+#d2d4d4; border-bottom-width: 1px; border-bottom-style: solid;">
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td class=3D"addPad" valign=3D"top" width=3D"20" style=3D"padding-right: 10=
+px;"><a href=3D
+"http://track.pluralsight.com/jxJU0c1vD00st1lNPhs0l00" target=3D"_blank" st=
+yle=3D"text-decoration: none;"
+><img src=3D"http://pluralsight-assets.s3.amazonaws.com/newsletter/072016/i=
+con_2.png" width=3D"20" height=3D"20" alt=3D"" border=3D"0" style=3D"displa=
+y: block;" /></a></td>
+<td><!--Left Column-->
+<table class=3D"fullWidth-lessPad" width=3D"78%" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" align=3D"left">
+<tbody>
+<tr>
+<td style=3D"font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; f=
+ont-size: 14px; line-height: 20px; color: #231f20;">Advanced Defensive Prog=
+ramming Techniques&nbsp;<span style=3D"font-size: 10px; color: #868686;">By=
+ Zoran Horvat</span></td>
+</tr>
+</tbody>
+</table>
+<!--End Left Column--><!--Right Column-->
+<table class=3D"fullWidth-lessPad" width=3D"18%" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" align=3D"right">
+<tbody>
+<tr>
+<td class=3D"left" style=3D"text-align: right; font-family: Helvetica, Aria=
+l, sans-serif; font-size: 10px; line-height: 20px; color: #868686;">Interme=
+diate</td>
+</tr>
+</tbody>
+</table>
+<!--End Right Column--></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<!--/Additional Class--><!--Additional Class-->
+<tr>
+<td style=3D"padding-top: 10px; padding-bottom: 10px;">
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td class=3D"addPad" valign=3D"top" width=3D"20" style=3D"padding-right: 10=
+px;"><a href=3D
+"http://track.pluralsight.com/a0110v0cxD0t00KPtUNlslh" target=3D"_blank" st=
+yle=3D"text-decoration: none;"
+><img src=3D"http://pluralsight-assets.s3.amazonaws.com/newsletter/072016/i=
+con_2.png" width=3D"20" height=3D"20" alt=3D"" border=3D"0" style=3D"displa=
+y: block;" /></a></td>
+<td><!--Left Column-->
+<table class=3D"fullWidth-lessPad" width=3D"78%" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" align=3D"left">
+<tbody>
+<tr>
+<td style=3D"font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; f=
+ont-size: 14px; line-height: 20px; color: #231f20;">Cloud Patterns and Arch=
+itecture for Microsoft Azure Developers<span style=3D"font-size: 10px; colo=
+r: #868686;">&nbsp;By Simon Allardice</span></td>
+</tr>
+</tbody>
+</table>
+<!--End Left Column--><!--Right Column-->
+<table class=3D"fullWidth-lessPad" width=3D"18%" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" align=3D"right">
+<tbody>
+<tr>
+<td class=3D"left" style=3D"text-align: right; font-family: Helvetica, Aria=
+l, sans-serif; font-size: 10px; line-height: 20px; color: #868686;">Advance=
+d</td>
+</tr>
+</tbody>
+</table>
+<!--End Right Column--></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<!--/Additional Class--><!--Button Row-->
+<tr>
+<td style=3D"padding-top: 35px;"><!--Button-->
+<table class=3D"button" border=3D"0" cellspacing=3D"0" cellpadding=3D"10" s=
+tyle=3D"border-top-right-radius: 3px; border-bottom-right-radius: 3px; bord=
+er-bottom-left-radius: 3px; border-top-left-radius: 3px; margin-right: auto=
+; margin-left: auto; border: 2px solid #30a9c5;" align=3D"center">
+<tbody>
+<tr>
+<td style=3D"min-width: 150px; font-family: 'Helvetica Neue', Helvetica, Ar=
+ial, sans-serif; font-size: 11px; color: #0e9bbd; text-align: center; font-=
+weight: bold; padding-right: 20px; padding-left: 20px;"><a href=3D
+"http://track.pluralsight.com/I0c0uDt0vslLNh1x0l0UP01" style=3D"color: #0e9=
+bbd; text-decoration: none;" target=3D"_blank"
+>View all new dev courses</a></td>
+</tr>
+</tbody>
+</table>
+<!--End Button--></td>
+</tr>
+<!--/Button Row-->
+</tbody>
+</table>
+&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<!--End Body Table--><!--/Featured Paths for Dev--><!--Featured Paths for D=
+ev-->
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" styl=
+e=3D"background: #ffffff; mso-padding-alt: 0px 0px 0px 0px;">
+<tbody>
+<tr>
+<td><!--Body Table-->
+<table class=3D"bodyTable" width=3D"650" border=3D"0" cellspacing=3D"0" cel=
+lpadding=3D"0" align=3D"center" style=3D"margin-left: auto; margin-right: a=
+uto;">
+<tbody>
+<tr>
+<td class=3D"fullWidth-lessPad" style=3D"padding-top: 0px; padding-bottom: =
+40px;">
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<!--Section Title-->
+<tbody>
+<tr>
+<td style=3D"font-family: Helvetica, Arial, sans-serif; font-size: 18px; li=
+ne-height: 22px; color: #231f20; padding-bottom: 15px; padding-left: 11px; =
+text-align: justify;"><br /> Featured path for developers</td>
+</tr>
+<!--/Section Title--><!--Path-->
+<tr>
+<td style=3D"padding-bottom: 10px;">
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" bgco=
+lor=3D"#404042" style=3D"background-color: #404042;">
+<tbody>
+<tr>
+<td class=3D"hide" width=3D"8"><br /></td>
+<td>
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td class=3D"addPad" style=3D"padding: 12px 12px 16px 12px;"><!--Left-->
+<table class=3D"fullWidth-lessPad" width=3D"53%" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" align=3D"left">
+<tbody>
+<tr>
+<td width=3D"50" align=3D"center"><a href=3D
+"http://track.pluralsight.com/b0001hUvlDv0PlcM010xtsN" target=3D"_blank"
+><img src=3D"http://pluralsight-assets.s3.amazonaws.com/PathTiles/PathIcons=
+/paths_C%2B%2B.png" width=3D"34" style=3D"display: block; margin-right: aut=
+o; margin-left: auto;" border=3D"0" alt=3D"ASP.NET" constrain=3D"true" imag=
+epreview=3D"false" /></a></td>
+<td style=3D"padding-left: 12px;"><!--Path Info-->
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td style=3D"font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; f=
+ont-size: 14px; color: #ffffff; text-align: left;"><span style=3D"font-size=
+: 11pt; font-family: Arial; color: #ffffff; background-color: transparent; =
+font-weight: 400; font-variant: normal; text-decoration: none; vertical-ali=
+gn: baseline; white-space: pre-wrap;">C++</span></td>
+</tr>
+<tr>
+<td style=3D"font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; f=
+ont-size: 12px; color: #858585; padding-top: 5px; text-align: left;"><span =
+style=3D"color: #ffffff; font-family: 'Helvetica Neue', Helvetica, Arial, s=
+ans-serif; font-size: 12px; background-color: #404042;">9 Courses&nbsp;</sp=
+an></td>
+</tr>
+</tbody>
+</table>
+<!--/Path Info--></td>
+</tr>
+</tbody>
+</table>
+<!--/Left--><!--Right-->
+<table class=3D"fullWidth-lessPad" width=3D"43%" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" align=3D"right">
+<tbody>
+<tr>
+<td align=3D"right" style=3D"font-family: 'Helvetica Neue', Helvetica, Aria=
+l, sans-serif; font-size: 11px; color: #ffffff;"><!--Button-->
+<table class=3D"button" border=3D"0" cellspacing=3D"0" cellpadding=3D"7" st=
+yle=3D"border-top-right-radius: 3px; border-bottom-right-radius: 3px; borde=
+r-bottom-left-radius: 3px; border-top-left-radius: 3px;" bgcolor=3D"#F06522=
+">
+<tbody>
+<tr>
+<td style=3D"min-width: 150px; font-family: 'Helvetica Neue', Helvetica, Ar=
+ial, sans-serif; font-size: 11px; color: #ffffff; text-align: center; font-=
+weight: normal; padding-right: 12px; padding-left: 12px;"><a href=3D
+"http://track.pluralsight.com/b0001hUvlDv0PlcM010xtsN" style=3D"color: #fff=
+fff; text-decoration: none;" target=3D"_blank"
+>Measure your skill and start the path</a></td>
+</tr>
+</tbody>
+</table>
+<!--End Button--></td>
+</tr>
+</tbody>
+</table>
+<!--/Right--></td>
+</tr>
+</tbody>
+</table>
+</td>
+<td class=3D"hide" width=3D"8"><br /></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<!--/Path-->
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<!--End Body Table-->
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" styl=
+e=3D"background: #231f20; mso-padding-alt: 0px 0px 0px 0px;">
+<tbody>
+<tr>
+<td><!--Body Table-->
+<table class=3D"bodyTable" width=3D"588" border=3D"0" cellspacing=3D"0" cel=
+lpadding=3D"0" align=3D"center" style=3D"margin-left: auto; margin-right: a=
+uto;">
+<tbody>
+<tr>
+<td class=3D"fullWidth-lessPad" style=3D"padding-top: 5px; padding-bottom: =
+1px;">
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<!--Section Title-->
+<tbody>
+<tr>
+<td style=3D"font-family: Helvetica, Arial, sans-serif; font-size: 16px; li=
+ne-height: 19px; color: #ffffff; padding-bottom: 15px; padding-top: 50px; t=
+ext-align: center;">Join Pluralsight to learn the latest technology skills<=
+/td>
+</tr>
+<!--/Section Title-->
+<tr>
+<td style=3D"padding-top: 5px;"><!--Button-->
+<table class=3D"button" border=3D"0" cellspacing=3D"0" cellpadding=3D"10" s=
+tyle=3D"border-top-right-radius: 3px; border-bottom-right-radius: 3px; bord=
+er-bottom-left-radius: 3px; border-top-left-radius: 3px; margin-right: auto=
+; margin-left: auto; border: 2px solid #ec008c;" align=3D"center">
+<tbody>
+<tr>
+<td style=3D"min-width: 125px; font-family: 'Helvetica Neue', Helvetica, Ar=
+ial, sans-serif; font-size: 11px; color: #ec008c; text-align: center; font-=
+weight: bold; padding-right: 20px; padding-left: 20px;"><a href=3D
+"http://track.pluralsight.com/eN1twP01000UDl0xscNvl0h" style=3D"color: #ec0=
+08c; text-decoration: none;" target=3D"_blank"
+>Sign up now</a></td>
+</tr>
+</tbody>
+</table>
+<br /> <br /> <br /> <!--End Button--></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<!--End Body Table--></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<!--/Featured Paths for Dev--><!--Recommendations--><br /> <!--End Recommen=
+dations--><!--Featured for IT2-->
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" styl=
+e=3D"background: #ffffff; mso-padding-alt: 0px 0px 0px 0px;">
+<tbody>
+<tr>
+<td><!--Body Table-->
+<table class=3D"bodyTable" width=3D"650" border=3D"0" cellspacing=3D"0" cel=
+lpadding=3D"0" align=3D"center" style=3D"margin-left: auto; margin-right: a=
+uto;">
+<tbody>
+<tr>
+<td class=3D"fullWidth-lessPad" style=3D"padding-top: 0px; padding-bottom: =
+60px;">
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<!--Image-->
+<tbody>
+<tr>
+<td style=3D"padding-bottom: 20px;"><a href=3D
+"http://track.pluralsight.com/rs0x0P1l1UOvtNDcl00x0h0" target=3D"_blank"
+><img src=3D"http://pluralsight-assets.s3.amazonaws.com/newsletter/images/1=
+-13_IT.jpg" width=3D"650" border=3D"0" style=3D"display: block;" constrain=
+=3D"true" imagepreview=3D"false" /></a></td>
+</tr>
+<!--/Image--><!--Section Title-->
+<tr>
+<td style=3D"font-family: Helvetica, Arial, sans-serif; font-size: 16px; li=
+ne-height: 19px; color: #231f20; padding-bottom: 15px;"><strong>NEW</strong=
+> for IT professionals</td>
+</tr>
+<!--/Section Title--><!--Additional Class-->
+<tr>
+<td style=3D"padding-top: 10px; padding-bottom: 10px; border-bottom-color: =
+#d2d4d4; border-bottom-width: 1px; border-bottom-style: solid;">
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td class=3D"addPad" valign=3D"top" width=3D"20" style=3D"padding-right: 10=
+px;"><a href=3D
+"http://track.pluralsight.com/CUl00P0yv0lD0Nht1x1cP0s" target=3D"_blank" st=
+yle=3D"text-decoration: none;"
+><img src=3D"http://pluralsight-assets.s3.amazonaws.com/newsletter/072016/i=
+con_2.png" width=3D"20" height=3D"20" alt=3D"" border=3D"0" style=3D"displa=
+y: block;" /></a></td>
+<td><!--Left Column-->
+<table class=3D"fullWidth-lessPad" width=3D"80%" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" align=3D"left">
+<tbody>
+<tr>
+<td style=3D"font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; f=
+ont-size: 14px; line-height: 20px; color: #231f20;">Managing SharePoint 201=
+6 Search&nbsp;<span style=3D"font-size: 10px; color: #868686;">By&nbsp;Mark=
+ Ingram</span></td>
+</tr>
+</tbody>
+</table>
+<!--End Left Column--><!--Right Column-->
+<table class=3D"fullWidth-lessPad" width=3D"18%" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" align=3D"right">
+<tbody>
+<tr>
+<td class=3D"left" style=3D"text-align: right; font-family: Helvetica, Aria=
+l, sans-serif; font-size: 10px; line-height: 20px; color: #868686;">Interme=
+diate</td>
+</tr>
+</tbody>
+</table>
+<!--End Right Column--></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<!--/Additional Class--><!--Additional Class-->
+<tr>
+<td style=3D"padding-top: 10px; padding-bottom: 10px; border-bottom-color: =
+#d2d4d4; border-bottom-width: 1px; border-bottom-style: solid;">
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td class=3D"addPad" valign=3D"top" width=3D"20" style=3D"padding-right: 10=
+px;"><a href=3D
+"http://track.pluralsight.com/GcU0Pl10tQszD0hv0010lNx" target=3D"_blank" st=
+yle=3D"text-decoration: none;"
+><img src=3D"http://pluralsight-assets.s3.amazonaws.com/newsletter/072016/i=
+con_2.png" width=3D"20" height=3D"20" alt=3D"" border=3D"0" style=3D"displa=
+y: block;" /></a></td>
+<td><!--Left Column-->
+<table class=3D"fullWidth-lessPad" width=3D"78%" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" align=3D"left">
+<tbody>
+<tr>
+<td style=3D"font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; f=
+ont-size: 14px; line-height: 20px; color: #231f20;">Providing Troubleshooti=
+ng Support for Windows Users<span style=3D"font-size: 10px; color: #868686;=
+">&nbsp;By&nbsp;Mike Halsey</span></td>
+</tr>
+</tbody>
+</table>
+<!--End Left Column--><!--Right Column-->
+<table class=3D"fullWidth-lessPad" width=3D"18%" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" align=3D"right">
+<tbody>
+<tr>
+<td class=3D"left" style=3D"text-align: right; font-family: Helvetica, Aria=
+l, sans-serif; font-size: 10px; line-height: 20px; color: #868686;">Beginne=
+r</td>
+</tr>
+</tbody>
+</table>
+<!--End Right Column--></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<!--/Additional Class--><!--Additional Class-->
+<tr>
+<td style=3D"padding-top: 10px; padding-bottom: 10px; border-bottom-color: =
+#d2d4d4; border-bottom-width: 1px; border-bottom-style: solid;">
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td class=3D"addPad" valign=3D"top" width=3D"20" style=3D"padding-right: 10=
+px;"><a href=3D
+"http://track.pluralsight.com/WD0cRNUsv0A1Phl00x1tl00" target=3D"_blank" st=
+yle=3D"text-decoration: none;"
+><img src=3D"http://pluralsight-assets.s3.amazonaws.com/newsletter/072016/i=
+con_2.png" width=3D"20" height=3D"20" alt=3D"" border=3D"0" style=3D"displa=
+y: block;" /></a></td>
+<td><!--Left Column-->
+<table class=3D"fullWidth-lessPad" width=3D"78%" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" align=3D"left">
+<tbody>
+<tr>
+<td style=3D"font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; f=
+ont-size: 14px; line-height: 20px; color: #231f20;">Google Cloud Platform F=
+undamentals<span style=3D"font-size: 10px; color: #868686;">&nbsp;By&nbsp;H=
+oward Dierking</span></td>
+</tr>
+</tbody>
+</table>
+<!--End Left Column--><!--Right Column-->
+<table class=3D"fullWidth-lessPad" width=3D"18%" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" align=3D"right">
+<tbody>
+<tr>
+<td class=3D"left" style=3D"text-align: right; font-family: Helvetica, Aria=
+l, sans-serif; font-size: 10px; line-height: 20px; color: #868686;"><span c=
+lass=3D"left" style=3D"text-align: right; font-family: Helvetica, Arial, sa=
+ns-serif; font-size: 10px; line-height: 20px; color: #868686;">Beginner</sp=
+an></td>
+</tr>
+</tbody>
+</table>
+<!--End Right Column--></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<!--/Additional Class--><!--Additional Class-->
+<tr>
+<td style=3D"padding-top: 10px; padding-bottom: 10px; border-bottom-color: =
+#d2d4d4; border-bottom-width: 1px; border-bottom-style: solid;">
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td class=3D"addPad" valign=3D"top" width=3D"20" style=3D"padding-right: 10=
+px;"><a href=3D
+"http://track.pluralsight.com/f00lh1v0tB00cU1xDNPSl0s" target=3D"_blank" st=
+yle=3D"text-decoration: none;"
+><img src=3D"http://pluralsight-assets.s3.amazonaws.com/newsletter/072016/i=
+con_2.png" width=3D"20" height=3D"20" alt=3D"" border=3D"0" style=3D"displa=
+y: block;" /></a></td>
+<td><!--Left Column-->
+<table class=3D"fullWidth-lessPad" width=3D"78%" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" align=3D"left">
+<tbody>
+<tr>
+<td style=3D"font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; f=
+ont-size: 14px; line-height: 20px; color: #231f20;">Getting Started with Az=
+ure Automation<span style=3D"font-size: 10px; color: #868686;">&nbsp;By&nbs=
+p;Thomas Rayner</span></td>
+</tr>
+</tbody>
+</table>
+<!--End Left Column--><!--Right Column-->
+<table class=3D"fullWidth-lessPad" width=3D"18%" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" align=3D"right">
+<tbody>
+<tr>
+<td class=3D"left" style=3D"text-align: right; font-family: Helvetica, Aria=
+l, sans-serif; font-size: 10px; line-height: 20px; color: #868686;"><span c=
+lass=3D"left" style=3D"text-align: right; font-family: Helvetica, Arial, sa=
+ns-serif; font-size: 10px; line-height: 20px; color: #868686;">Beginner</sp=
+an></td>
+</tr>
+</tbody>
+</table>
+<!--End Right Column--></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<!--/Additional Class--><!--Additional Class-->
+<tr>
+<td style=3D"padding-top: 10px; padding-bottom: 10px;">
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td class=3D"addPad" valign=3D"top" width=3D"20" style=3D"padding-right: 10=
+px;"><a href=3D
+"http://track.pluralsight.com/Q0lP0tU0DC1vx0Nch10Tsl0" target=3D"_blank" st=
+yle=3D"text-decoration: none;"
+><img src=3D"http://pluralsight-assets.s3.amazonaws.com/newsletter/072016/i=
+con_2.png" width=3D"20" height=3D"20" alt=3D"" border=3D"0" style=3D"displa=
+y: block;" /></a></td>
+<td><!--Left Column-->
+<table class=3D"fullWidth-lessPad" width=3D"78%" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" align=3D"left">
+<tbody>
+<tr>
+<td style=3D"font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; f=
+ont-size: 14px; line-height: 20px; color: #231f20;">Introducing System Cent=
+er 2016 - Operations Manager (SCOM)&nbsp;<span style=3D"font-size: 10px; co=
+lor: #868686;">By&nbsp;Greg Shields</span></td>
+</tr>
+</tbody>
+</table>
+<!--End Left Column--><!--Right Column-->
+<table class=3D"fullWidth-lessPad" width=3D"18%" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" align=3D"right">
+<tbody>
+<tr>
+<td class=3D"left" style=3D"text-align: right; font-family: Helvetica, Aria=
+l, sans-serif; font-size: 10px; line-height: 20px; color: #868686;"><span c=
+lass=3D"left" style=3D"text-align: right; font-family: Helvetica, Arial, sa=
+ns-serif; font-size: 10px; line-height: 20px; color: #868686;">Intermediate=
+</span></td>
+</tr>
+</tbody>
+</table>
+<!--End Right Column--></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<!--/Additional Class--><!--Button Row-->
+<tr>
+<td style=3D"padding-top: 35px;"><!--Button-->
+<table class=3D"button" border=3D"0" cellspacing=3D"0" cellpadding=3D"10" s=
+tyle=3D"border-top-right-radius: 3px; border-bottom-right-radius: 3px; bord=
+er-bottom-left-radius: 3px; border-top-left-radius: 3px; margin-right: auto=
+; margin-left: auto; border: 2px solid #f5b41e;" align=3D"center">
+<tbody>
+<tr>
+<td style=3D"min-width: 150px; font-family: 'Helvetica Neue', Helvetica, Ar=
+ial, sans-serif; font-size: 11px; color: #0e9bbd; text-align: center; font-=
+weight: bold; padding-right: 20px; padding-left: 20px;"><a href=3D
+"http://track.pluralsight.com/iUlD0NUclDv00h001tx1P0s" style=3D"color: #f5b=
+41e; text-decoration: none;" target=3D"_blank"
+>View all new IT courses</a></td>
+</tr>
+</tbody>
+</table>
+<!--End Button--></td>
+</tr>
+<!--/Button Row-->
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<!--End Body Table--></td>
+</tr>
+</tbody>
+</table>
+<!--/Featured for IT2--><!--Featured Paths for Dev-->
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" styl=
+e=3D"background: #ffffff; mso-padding-alt: 0px 0px 0px 0px;">
+<tbody>
+<tr>
+<td><!--Body Table-->
+<table class=3D"bodyTable" width=3D"650" border=3D"0" cellspacing=3D"0" cel=
+lpadding=3D"0" align=3D"center" style=3D"margin-left: auto; margin-right: a=
+uto;">
+<tbody>
+<tr>
+<td class=3D"fullWidth-lessPad" style=3D"padding-top: 0px; padding-bottom: =
+40px;">
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<!--Section Title-->
+<tbody>
+<tr>
+<td style=3D"font-family: Helvetica, Arial, sans-serif; font-size: 18px; li=
+ne-height: 22px; color: #231f20; padding-bottom: 15px; padding-left: 11px;"=
+><br /> Featured path for&nbsp;IT professionals</td>
+</tr>
+<!--/Section Title--><!--Path-->
+<tr>
+<td style=3D"padding-bottom: 10px;">
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" bgco=
+lor=3D"#404042" style=3D"background-color: #404042;">
+<tbody>
+<tr>
+<td class=3D"hide" width=3D"8"><br /></td>
+<td>
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td class=3D"addPad" style=3D"padding: 12px 12px 16px 12px;"><!--Left-->
+<table class=3D"fullWidth-lessPad" width=3D"53%" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" align=3D"left">
+<tbody>
+<tr>
+<td width=3D"50" align=3D"center"><a href=3D
+"http://track.pluralsight.com/yclDtxlN0h0vPUE1sV00010" target=3D"_blank"
+><img src=3D"http://pluralsight-assets.s3.amazonaws.com/PathTiles/PathIcons=
+/paths_Microsoft.png" width=3D"34" style=3D"display: block; margin-right: a=
+uto; margin-left: auto;" border=3D"0" alt=3D"Fundamentals of IT Operations"=
+ constrain=3D"true" imagepreview=3D"false" /></a></td>
+<td style=3D"padding-left: 12px;"><!--Path Info-->
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td style=3D"font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; f=
+ont-size: 14px; color: #ffffff; text-align: left;"><span style=3D"font-size=
+: 12px; font-family: Arial; color: #ffffff; background-color: transparent; =
+font-weight: 400; font-variant: normal; text-decoration: none; vertical-ali=
+gn: baseline; white-space: pre-wrap;">Configuring Windows Devices (70-697)<=
+/span></td>
+</tr>
+<tr>
+<td style=3D"font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; f=
+ont-size: 12px; color: #858585; padding-top: 5px; text-align: left;"><span =
+style=3D"color: #ffffff; font-family: 'Helvetica Neue', Helvetica, Arial, s=
+ans-serif; font-size: 12px; background-color: #404042;">6 Courses&nbsp;</sp=
+an></td>
+</tr>
+</tbody>
+</table>
+<!--/Path Info--></td>
+</tr>
+</tbody>
+</table>
+<!--/Left--><!--Right-->
+<table class=3D"fullWidth-lessPad" width=3D"43%" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" align=3D"right">
+<tbody>
+<tr>
+<td align=3D"right" style=3D"font-family: 'Helvetica Neue', Helvetica, Aria=
+l, sans-serif; font-size: 11px; color: #ffffff;"><!--Button-->
+<table class=3D"button" border=3D"0" cellspacing=3D"0" cellpadding=3D"7" st=
+yle=3D"border-top-right-radius: 3px; border-bottom-right-radius: 3px; borde=
+r-bottom-left-radius: 3px; border-top-left-radius: 3px;" bgcolor=3D"#F06522=
+">
+<tbody>
+<tr>
+<td style=3D"min-width: 150px; font-family: 'Helvetica Neue', Helvetica, Ar=
+ial, sans-serif; font-size: 11px; color: #ffffff; text-align: center; font-=
+weight: normal; padding-right: 12px; padding-left: 12px;"><a href=3D
+"http://track.pluralsight.com/yclDtxlN0h0vPUE1sV00010" style=3D"color: #fff=
+fff; text-decoration: none;" target=3D"_blank"
+>Start the certification path</a></td>
+</tr>
+</tbody>
+</table>
+<!--End Button--></td>
+</tr>
+</tbody>
+</table>
+<!--/Right--></td>
+</tr>
+</tbody>
+</table>
+</td>
+<td class=3D"hide" width=3D"8"><br /></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<!--/Path-->
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<!--End Body Table--></td>
+</tr>
+</tbody>
+</table>
+<!--/Featured Paths for Dev--><!--/Featured for IT Professionals--><!--Feat=
+ured for Creative-->
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" styl=
+e=3D"background: #ffffff; mso-padding-alt: 0px 0px 0px 0px;">
+<tbody>
+<tr>
+<td><!--Body Table-->
+<table class=3D"bodyTable" width=3D"650" border=3D"0" cellspacing=3D"0" cel=
+lpadding=3D"0" align=3D"center" style=3D"margin-left: auto; margin-right: a=
+uto;">
+<tbody>
+<tr>
+<td class=3D"fullWidth-lessPad" style=3D"padding-top: 0px; padding-bottom: =
+40px;">
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<!--Image-->
+<tbody>
+<tr>
+<td style=3D"padding-bottom: 20px;"><a href=3D
+"http://track.pluralsight.com/c0s11xlD0vNU0chPW0tFl00" target=3D"_blank"
+><img src=3D"http://pluralsight-assets.s3.amazonaws.com/newsletter/images/1=
+2-09_creative.jpg" width=3D"650" border=3D"0" style=3D"display: block;" con=
+strain=3D"true" imagepreview=3D"false" /></a></td>
+</tr>
+<!--/Image--><!--Section Title-->
+<tr>
+<td style=3D"font-family: Helvetica, Arial, sans-serif; font-size: 16px; li=
+ne-height: 19px; color: #231f20; padding-bottom: 15px;"><strong>NEW</strong=
+> for creative professionals</td>
+</tr>
+<!--/Section Title--><!--Additional Class-->
+<tr>
+<td style=3D"padding-top: 10px; padding-bottom: 10px; border-bottom-color: =
+#d2d4d4; border-bottom-width: 1px; border-bottom-style: solid;">
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td class=3D"addPad" valign=3D"top" width=3D"20" style=3D"padding-right: 10=
+px;"><a href=3D
+"http://track.pluralsight.com/DDGs10X0PUt00l0cvN1l0hx" target=3D"_blank" st=
+yle=3D"text-decoration: none;"
+><img src=3D"http://pluralsight-assets.s3.amazonaws.com/newsletter/072016/i=
+con_2.png" width=3D"20" height=3D"20" alt=3D"" border=3D"0" style=3D"displa=
+y: block;" /></a></td>
+<td><!--Left Column-->
+<table class=3D"fullWidth-lessPad" width=3D"78%" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" align=3D"left">
+<tbody>
+<tr>
+<td style=3D"font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; f=
+ont-size: 14px; line-height: 20px; color: #231f20;">Maya Rigging Fundamenta=
+ls<span style=3D"font-size: 10px; color: #868686;">&nbsp;By&nbsp;Peter Gend=
+</span></td>
+</tr>
+</tbody>
+</table>
+<!--End Left Column--><!--Right Column-->
+<table class=3D"fullWidth-lessPad" width=3D"18%" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" align=3D"right">
+<tbody>
+<tr>
+<td class=3D"left" style=3D"text-align: right; font-family: Helvetica, Aria=
+l, sans-serif; font-size: 10px; line-height: 20px; color: #868686;">Beginne=
+r</td>
+</tr>
+</tbody>
+</table>
+<!--End Right Column--></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<!--/Additional Class--><!--Additional Class-->
+<tr>
+<td style=3D"padding-top: 10px; padding-bottom: 10px; border-bottom-color: =
+#d2d4d4; border-bottom-width: 1px; border-bottom-style: solid;">
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td class=3D"addPad" valign=3D"top" width=3D"20" style=3D"padding-right: 10=
+px;"><a href=3D
+"http://track.pluralsight.com/WD0cYNUsv0H1Phl00x1tl00" target=3D"_blank" st=
+yle=3D"text-decoration: none;"
+><img src=3D"http://pluralsight-assets.s3.amazonaws.com/newsletter/072016/i=
+con_2.png" width=3D"20" height=3D"20" alt=3D"" border=3D"0" style=3D"displa=
+y: block;" /></a></td>
+<td><!--Left Column-->
+<table class=3D"fullWidth-lessPad" width=3D"78%" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" align=3D"left">
+<tbody>
+<tr>
+<td style=3D"font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; f=
+ont-size: 14px; line-height: 20px; color: #231f20;">Visual Design: Best Pra=
+ctices for Refining Designs&nbsp;<span style=3D"font-size: 10px; color: #86=
+8686;">By&nbsp;Kerri Augenstein</span></td>
+</tr>
+</tbody>
+</table>
+<!--End Left Column--><!--Right Column-->
+<table class=3D"fullWidth-lessPad" width=3D"18%" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" align=3D"right">
+<tbody>
+<tr>
+<td class=3D"left" style=3D"text-align: right; font-family: Helvetica, Aria=
+l, sans-serif; font-size: 10px; line-height: 20px; color: #868686;">Interme=
+diate</td>
+</tr>
+</tbody>
+</table>
+<!--End Right Column--></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<!--/Additional Class--><!--Additional Class-->
+<tr>
+<td style=3D"padding-top: 10px; padding-bottom: 10px; border-bottom-color: =
+#d2d4d4; border-bottom-width: 1px; border-bottom-style: solid;">
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td class=3D"addPad" valign=3D"top" width=3D"20" style=3D"padding-right: 10=
+px;"><a href=3D
+"http://track.pluralsight.com/Xhv0lZU0N100Plstx01cDI0" target=3D"_blank" st=
+yle=3D"text-decoration: none;"
+><img src=3D"http://pluralsight-assets.s3.amazonaws.com/newsletter/072016/i=
+con_2.png" width=3D"20" height=3D"20" alt=3D"" border=3D"0" style=3D"displa=
+y: block;" /></a></td>
+<td><!--Left Column-->
+<table class=3D"fullWidth-lessPad" width=3D"78%" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" align=3D"left">
+<tbody>
+<tr>
+<td style=3D"font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; f=
+ont-size: 14px; line-height: 20px; color: #231f20;"><span style=3D"color: #=
+231f20; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-s=
+ize: 14px;">Illustrator CC Creating a T-shirt Design</span><span face=3D"Ar=
+ial" style=3D"font-family: Arial;"><span style=3D"font-size: 15px; white-sp=
+ace:=20
+pre-wrap;">&nbsp;</span></span><span style=3D"font-size: 10px; color: #8686=
+86;">By&nbsp;Justin Seeley</span></td>
+</tr>
+</tbody>
+</table>
+<!--End Left Column--><!--Right Column-->
+<table class=3D"fullWidth-lessPad" width=3D"18%" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" align=3D"right">
+<tbody>
+<tr>
+<td class=3D"left" style=3D"text-align: right; font-family: Helvetica, Aria=
+l, sans-serif; font-size: 10px; line-height: 20px; color: #868686;">Advance=
+d</td>
+</tr>
+</tbody>
+</table>
+<!--End Right Column--></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<!--/Additional Class--><!--Additional Class-->
+<tr>
+<td style=3D"padding-top: 10px; padding-bottom: 10px; border-bottom-color: =
+#d2d4d4; border-bottom-width: 1px; border-bottom-style: solid;">
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td class=3D"addPad" valign=3D"top" width=3D"20" style=3D"padding-right: 10=
+px;"><a href=3D
+"http://track.pluralsight.com/VtU0001hlc0P100DvsxlJN0" target=3D"_blank" st=
+yle=3D"text-decoration: none;"
+><img src=3D"http://pluralsight-assets.s3.amazonaws.com/newsletter/072016/i=
+con_2.png" width=3D"20" height=3D"20" alt=3D"" border=3D"0" style=3D"displa=
+y: block;" /></a></td>
+<td><!--Left Column-->
+<table class=3D"fullWidth-lessPad" width=3D"78%" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" align=3D"left">
+<tbody>
+<tr>
+<td style=3D"font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; f=
+ont-size: 14px; line-height: 20px; color: #231f20;">Affinity Designer Funda=
+mentals&nbsp;<span style=3D"font-size: 10px; color: #868686;">By&nbsp;Greg =
+Warner</span></td>
+</tr>
+</tbody>
+</table>
+<!--End Left Column--><!--Right Column-->
+<table class=3D"fullWidth-lessPad" width=3D"18%" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" align=3D"right">
+<tbody>
+<tr>
+<td class=3D"left" style=3D"text-align: right; font-family: Helvetica, Aria=
+l, sans-serif; font-size: 10px; line-height: 20px; color: #868686;">Beginne=
+r</td>
+</tr>
+</tbody>
+</table>
+<!--End Right Column--></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<!--/Additional Class--><!--Additional Class-->
+<tr>
+<td style=3D"padding-top: 10px; padding-bottom: 10px;">
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td class=3D"addPad" valign=3D"top" width=3D"20" style=3D"padding-right: 10=
+px;"><a href=3D
+"http://track.pluralsight.com/Q0lP0tU0DK1vx0Nch101sl0" target=3D"_blank" st=
+yle=3D"text-decoration: none;"
+><img src=3D"http://pluralsight-assets.s3.amazonaws.com/newsletter/072016/i=
+con_2.png" width=3D"20" height=3D"20" alt=3D"" border=3D"0" style=3D"displa=
+y: block;" /></a></td>
+<td><!--Left Column-->
+<table class=3D"fullWidth-lessPad" width=3D"78%" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" align=3D"left">
+<tbody>
+<tr>
+<td style=3D"font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; f=
+ont-size: 14px; line-height: 20px; color: #231f20;">Houdini: Stereoscopic F=
+undamentals&nbsp;<span style=3D"font-size: 10px; color: #868686;">By&nbsp;A=
+ndrew Kennedy</span></td>
+</tr>
+</tbody>
+</table>
+<!--End Left Column--><!--Right Column-->
+<table class=3D"fullWidth-lessPad" width=3D"18%" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" align=3D"right">
+<tbody>
+<tr>
+<td class=3D"left" style=3D"text-align: right; font-family: Helvetica, Aria=
+l, sans-serif; font-size: 10px; line-height: 20px; color: #868686;">Interme=
+diate</td>
+</tr>
+</tbody>
+</table>
+<!--End Right Column--></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<!--/Additional Class--><!--Button Row-->
+<tr>
+<td style=3D"padding-top: 35px;"><!--Button-->
+<table class=3D"button" border=3D"0" cellspacing=3D"0" cellpadding=3D"10" s=
+tyle=3D"border-top-right-radius: 3px; border-bottom-right-radius: 3px; bord=
+er-bottom-left-radius: 3px; border-top-left-radius: 3px; margin-right: auto=
+; margin-left: auto; border: 2px solid #D92328;" align=3D"center">
+<tbody>
+<tr>
+<td style=3D"min-width: 150px; font-family: 'Helvetica Neue', Helvetica, Ar=
+ial, sans-serif; font-size: 11px; color: #d92328; text-align: center; font-=
+weight: bold; padding-right: 20px; padding-left: 20px;"><a href=3D
+"http://track.pluralsight.com/CUl0020Lv0lD0Nht1x1cP0s" style=3D"color: #d92=
+328; text-decoration: none;" target=3D"_blank"
+>View all new creative courses</a></td>
+</tr>
+</tbody>
+</table>
+<!--End Button--></td>
+</tr>
+<!--/Button Row-->
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<!--End Body Table--></td>
+</tr>
+</tbody>
+</table>
+<!--/Featured for Creative--><!--Featured Paths for Creative-->
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" styl=
+e=3D"background: #ffffff; mso-padding-alt: 0px 0px 0px 0px;">
+<tbody>
+<tr>
+<td><!--Body Table-->
+<table class=3D"bodyTable" width=3D"650" border=3D"0" cellspacing=3D"0" cel=
+lpadding=3D"0" align=3D"center" style=3D"margin-left: auto; margin-right: a=
+uto;">
+<tbody>
+<tr>
+<td class=3D"fullWidth-lessPad" style=3D"padding-top: 0px; padding-bottom: =
+40px;">
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<!--Section Title-->
+<tbody>
+<tr>
+<td style=3D"font-family: Helvetica, Arial, sans-serif; font-size: 18px; li=
+ne-height: 22px; color: #231f20; padding-bottom: 15px; padding-left: 11px;"=
+><br /> Featured path for creative professionals</td>
+</tr>
+<!--/Section Title--><!--Path-->
+<tr>
+<td style=3D"padding-bottom: 10px;">
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" bgco=
+lor=3D"#404042" style=3D"background-color: #404042;">
+<tbody>
+<tr>
+<td class=3D"hide" width=3D"8"><br /></td>
+<td>
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td class=3D"addPad" style=3D"padding: 12px 12px 16px 12px;"><!--Left-->
+<table class=3D"fullWidth-lessPad" width=3D"53%" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" align=3D"left">
+<tbody>
+<tr>
+<td width=3D"50" align=3D"center"><a href=3D
+"http://track.pluralsight.com/Xhv0l3U0N100Plstx01cDM0" target=3D"_blank"
+><img src=3D"http://pluralsight-assets.s3.amazonaws.com/PathTiles/PathIcons=
+/paths_GameEnvironment.png" width=3D"34" style=3D"display: block; margin-ri=
+ght: auto; margin-left: auto;" border=3D"0" alt=3D"zBrush" constrain=3D"tru=
+e" imagepreview=3D"false" /></a></td>
+<td style=3D"padding-left: 12px;"><!--Path Info-->
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td style=3D"font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; f=
+ont-size: 14px; color: #ffffff; text-align: left;"><span style=3D"font-size=
+: 11px; font-family: Arial; color: #ffffff; background-color: transparent; =
+font-weight: 400; font-variant: normal; text-decoration: none; vertical-ali=
+gn: baseline; white-space: pre-wrap;">Game Environment Modeling</span></td>
+</tr>
+<tr>
+<td style=3D"font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; f=
+ont-size: 12px; color: #858585; padding-top: 5px; text-align: left;"><span =
+style=3D"color: #ffffff; font-family: 'Helvetica Neue', Helvetica, Arial, s=
+ans-serif; font-size: 12px; background-color: #404042;">8 Courses&nbsp;</sp=
+an></td>
+</tr>
+</tbody>
+</table>
+<!--/Path Info--></td>
+</tr>
+</tbody>
+</table>
+<!--/Left--><!--Right-->
+<table class=3D"fullWidth-lessPad" width=3D"43%" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" align=3D"right">
+<tbody>
+<tr>
+<td align=3D"right" style=3D"font-family: 'Helvetica Neue', Helvetica, Aria=
+l, sans-serif; font-size: 11px; color: #ffffff;"><!--Button-->
+<table class=3D"button" border=3D"0" cellspacing=3D"0" cellpadding=3D"7" st=
+yle=3D"border-top-right-radius: 3px; border-bottom-right-radius: 3px; borde=
+r-bottom-left-radius: 3px; border-top-left-radius: 3px;" bgcolor=3D"#F06522=
+">
+<tbody>
+<tr>
+<td style=3D"min-width: 150px; font-family: 'Helvetica Neue', Helvetica, Ar=
+ial, sans-serif; font-size: 11px; color: #ffffff; text-align: center; font-=
+weight: normal; padding-right: 12px; padding-left: 12px;"><a href=3D
+"http://track.pluralsight.com/Xhv0l3U0N100Plstx01cDM0" style=3D"color: #fff=
+fff; text-decoration: none;" target=3D"_blank"
+>Measure your skill and start the path</a></td>
+</tr>
+</tbody>
+</table>
+<!--End Button--></td>
+</tr>
+</tbody>
+</table>
+<!--/Right--></td>
+</tr>
+</tbody>
+</table>
+</td>
+<td class=3D"hide" width=3D"8"><br /></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<!--/Path-->
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<!--End Body Table--></td>
+</tr>
+</tbody>
+</table>
+<!--/Featured Paths for Creative--><!--Upcoming Events-->
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" styl=
+e=3D"background: #ffffff; mso-padding-alt: 0px 0px 0px 0px;">
+</table>
+<!--End Upcoming Events-->
+</div>
+<!--Footer-->
+<table bgcolor=3D"#000000" width=3D"100%" border=3D"0" cellspacing=3D"0" ce=
+llpadding=3D"0" style=3D"mso-padding-alt:0px 0px 0px 0px; " ><tr ><td ><!--=
+Body Table-->
+<table class=3D"bodyTable" width=3D"577" border=3D"0" cellspacing=3D"0" cel=
+lpadding=3D"0" align=3D"center" style=3D"margin-left:auto; margin-right:aut=
+o; " ><!--Footer-->
+<tr ><td ><div class=3D"mktEditable" id=3D"email_footer_snippet" ><table ce=
+llpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" ><tbody ><tr =
+><td class=3D"stack" bgcolor=3D"#000000" style=3D"font-family:Arial, Helvet=
+ica, sans-serif; font-size:12px; line-height:14px; color:#888888; padding:5=
+0px; " ><div class=3D"mktEditable" id=3D"footer" ><p style=3D"line-height: =
+100%; margin-top: 0px; margin-bottom: 0px;"><a href=3D
+"http://track.pluralsight.com/dc/JYWY0TlT8MJDYEoI81rBxOnTOO88FqBDDYRDr8jL7C=
+c=3D/HD0011x0NlztlPs0vcU00ih" target=3D"_blank"
+><img src=3D"http://pluralsight-assets.s3.amazonaws.com/transactional/templ=
+ate/ps-logo-with-icon-horiz-white-line.png" width=3D"195" height=3D"45" bor=
+der=3D"0" style=3D"display: block;" alt=3D"Pluralsight"></a></p>
+<br>
+Pluralsight, LLC 182 N. Union Ave. Farmington, UT 84025<br>
+<br>
+<!--Social-->
+<table width=3D"192" border=3D"0" cellpadding=3D"7" cellspacing=3D"0">
+<tbody>
+<tr>
+<td width=3D"11"><a href=3D
+"http://track.pluralsight.com/dc/M5yi0yZ-UZCCxV3bfEu0anbONeUjOd18p_VSSggcgn=
+0DrbpjHMEHkIJurPN3o6x7/HD0011x0NlztlPs0vcU00ih" target=3D"_blank"
+><img src=3D"http://pluralsight-assets.s3.amazonaws.com/template_images/fac=
+ebook_white.png" width=3D"11" height=3D"20" alt=3D"facebook" style=3D"displ=
+ay: block;" border=3D"0"></a></td>
+<td width=3D"20"><a href=3D
+"http://track.pluralsight.com/dc/MYFzQrvu5rPS8PETBnVMsRusr34Y1lr0HdZtfs82X3=
+v9rFnWXM6_VHgQDeQ1wjEu/HD0011x0NlztlPs0vcU00ih" target=3D"_blank"
+><img src=3D"http://pluralsight-assets.s3.amazonaws.com/template_images/ins=
+tagram_white.png" width=3D"20" height=3D"19" alt=3D"instagram" style=3D"dis=
+play: block;" border=3D"0"></a></td>
+<td width=3D"24"><a href=3D
+"http://track.pluralsight.com/dc/mEXRm9OBeNs3Y1bS8bbzxSIJ8iuvrVEtSkOtQ-B3bv=
+A=3D/HD0011x0NlztlPs0vcU00ih" target=3D"_blank"
+><img src=3D"http://pluralsight-assets.s3.amazonaws.com/template_images/twi=
+tter_white.png" width=3D"24" height=3D"19" alt=3D"twitter" style=3D"display=
+: block;" border=3D"0"></a></td>
+<td width=3D"20"><a href=3D
+"http://track.pluralsight.com/dc/fG5-PlwEnZR-IoSdwCtjIpTVr9AsJHNwc_srhy7U9r=
+VQYJ5-L-XVAJU3uI-ICH5l/HD0011x0NlztlPs0vcU00ih" target=3D"_blank"
+><img src=3D"http://pluralsight-assets.s3.amazonaws.com/template_images/lin=
+kedin_white.png" width=3D"20" height=3D"19" alt=3D"Linked in" style=3D"disp=
+lay: block;" border=3D"0"></a></td>
+<td width=3D"19"><a href=3D
+"http://track.pluralsight.com/dc/M9Y3nowLDCcEv8uSbJAkaXTGHqV_YEzxUjtWE9O_Ne=
+fBZ08YC8PHjcsXU2E01rGh/HD0011x0NlztlPs0vcU00ih" target=3D"_blank"
+><img src=3D"http://pluralsight-assets.s3.amazonaws.com/template_images/you=
+_tube_white.png" width=3D"17" height=3D"21" alt=3D"YouTube" style=3D"displa=
+y: block;" border=3D"0" constrain=3D"true" imagepreview=3D"false"></a></td>
+</tr>
+</tbody>
+</table>
+<!--End Social--><br>
+<br>
+Copyright&copy; 2017 Pluralsight LLC.<br>
+All logos and trademarks are the properties of their respective owners.<br>
+<br>
+This email was sent to <a href=3D
+"http://track.pluralsight.com/dc/1pDQu0mqE2rkhpZT-8gq22t_e8hlmX3JHlD628UL3n=
+Y=3D/HD0011x0NlztlPs0vcU00ih" style=3D"color: #207fc2; text-decoration: non=
+e;"
+>dragonet.c17@gmail.com</a><br>
+<a href=3D"https://get.pluralsight.com/UnsubscribePage.html?mkt_unsubscribe=
+=3D1&mkt_tok=3DeyJpIjoiWVdRelpqSXhaakF3WmpoaSIsInQiOiJlWmk2S21kMTRLOFFzZ3Rv=
+QmM5YUcyY1hNckR4Zk10NWFTRU9UZ2tLUmNKYnVQY1E1WU1RZEgvSTkwWWVDZTNVVmpUWWtYTnc=
+4bURwOS95azloaHBkT3dkSkpJVUJDUHhtQ3ZRaEU1QXlTckdKcXdla29YU080emlTM3B6Q3B2cC=
+J9/" target=3D"_blank" style=3D"color: #888888; text-decoration: none;">Uns=
+ubscribe</a> | <a href=3D
+"http://track.pluralsight.com/dc/jXnNgZX0R5Skt2btW6cf1ZC-rp3W1ClrQyb8joQduf=
+id5Pzoibv5JJHzdhivwCdrLGSROPMb33CSgJ5srQVOZw=3D=3D/HD0011x0NlztlPs0vcU00ih"=
+ target=3D"_blank" style=3D"color: #888888; text-decoration: none;"
+>Manage your preferences</a></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+<!--End Footer--></table>
+<!--End Body Table--></td>
+</tr>
+</table>
+<!--End Footer--><a href=3D
+"http://track.pluralsight.com/K00xsDU00vlN14htl1cN0P0"
+></a>
+<img src=3D"http://track.pluralsight.com/trk?t=3D1&mid=3DMzA2LURVUC03NDU6NT=
+Y1NTU6MTM3NTU6NjY2MTM6MDoxNzQ2OTo5OjE3Njg3Mjo2ODAxODU1OmRyYWdvbmV0LmMxN0Bnb=
+WFpbC5jb20%3D" width=3D"1" height=3D"1" style=3D"display:none !important;" =
+alt=3D"" />
+</body>
+</html>
+------=_Part_87924512_1931905538.1504742200194--

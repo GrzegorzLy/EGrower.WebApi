@@ -1,0 +1,92 @@
+Delivered-To: dragonet.c17@gmail.com
+Received: by 10.107.41.196 with SMTP id p187csp1575433iop;
+        Mon, 30 Jan 2017 12:39:07 -0800 (PST)
+X-Received: by 10.157.4.141 with SMTP id 13mr12710243otm.243.1485808747247;
+        Mon, 30 Jan 2017 12:39:07 -0800 (PST)
+Return-Path: <account-security-noreply@account.microsoft.com>
+Received: from BAY004-OMC4S13.hotmail.com (bay004-omc4s13.hotmail.com. [65.54.190.215])
+        by mx.google.com with ESMTPS id f7si5894150oig.101.2017.01.30.12.39.06
+        for <dragonet.c17@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-SHA bits=128/128);
+        Mon, 30 Jan 2017 12:39:07 -0800 (PST)
+Received-SPF: pass (google.com: domain of account-security-noreply@account.microsoft.com designates 65.54.190.215 as permitted sender) client-ip=65.54.190.215;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of account-security-noreply@account.microsoft.com designates 65.54.190.215 as permitted sender) smtp.mailfrom=account-security-noreply@account.microsoft.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=account.microsoft.com
+Received: from CY1SCH030011858 ([65.54.190.201]) by BAY004-OMC4S13.hotmail.com over TLS secured channel with Microsoft SMTPSVC(7.5.7601.23008);
+	 Mon, 30 Jan 2017 12:38:08 -0800
+Message-ID: <CY1SCH03001185840BDE10877B02323C5A78A4B0@phx.gbl>
+X-Message-Routing: sKFde7CS5BHygFZaC4gFZWeHmOM+Rjf1iOmv8meDbQqeD+9kHFgbAflrz5UYy6v/Ov/vRliTx0hzi7ScTgwYCoH5DCiiQUM8LTQ9D9XONBdU2i+PKQ9mLjvytznfvkia5+NPlLp1RItXktHLlrVeWbcYFHQ==
+Return-Path: account-security-noreply@account.microsoft.com
+From: =?windows-1250?b?WmVzcPOz?= kont Microsoft
+	<account-security-noreply@account.microsoft.com>
+To: dragonet.c17@gmail.com
+Date: Mon, 30 Jan 2017 12:38:07 -0800
+Subject: Kod =?windows-1250?q?zabezpiecze=F1?= konta Microsoft
+X-Priority: 3
+X-MSAPipeline: MessageDispatcher
+Message-ID: <I8EGUMHYE0U4.Y1LR3XFHA2IU@CY1SCH030011858>
+X-MSAMetaData: 
+ =?us-ascii?q?DZSj3md*WmZd52WYoc4YlTJzIiBJ!nFNqYLfgukf!QjnX0c7OWHwhBnHADCXt?=
+ =?us-ascii?q?KQCyXjArQamFiBZDYNDN*rc3tZpp6X0ZhWtr59JNhfg*UQm0gynHFkPySIbXP?=
+ =?us-ascii?q?yxjiXWwA$$?=
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="=-36tnB08shtvl2CDHyxHfGQ=="
+X-OriginalArrivalTime: 30 Jan 2017 20:38:08.0181 (UTC) FILETIME=[C3E05650:01D27B38]
+
+--=-36tnB08shtvl2CDHyxHfGQ==
+Content-Type: text/plain; charset=windows-1250
+Content-Transfer-Encoding: 8bit
+
+U¿yj nastêpuj¹cego kodu zabezpieczaj¹cego do konta Microsoft dr*****.
+
+Kod zabezpieczaj¹cy: 1100880
+
+
+                Jeœli nie rozpoznajesz konta Microsoft dr*****, mo¿esz klikn¹æ adres https://account.live.com/dp?ft=DcNGY3v5R8DfUXThxiIhHDJgEs5vmehjOmWOMYlp0meiAP3MTBfp*kUPJxjfyOd03U9GLbVlb!LNssPY!vqA9j650MaZ07uZHdNgX3zFRJeoe6d0zA57ydxT23aYILR6V7ICCv5038eWYBAJMy752t0ymeZArE1pIrcTN2PA6j4RUTwI4aaTZU0WIWDnISPJok09QOu5TkX!vfB0KChr9q1bmdXDpVvJ17bc3lyCJWoDTL2c3UGRfQ6UXNjkhKCRGar68n3KNs*bwaNaaxzHUK8lN91z6D56nwJ901LTp16T, aby usun¹æ swój adres e-mail z tego konta.
+            
+
+Dziêkujemy!
+Zespó³ kont Microsoft 
+--=-36tnB08shtvl2CDHyxHfGQ==
+Content-Type: text/html; charset=windows-1250
+Content-Transfer-Encoding: 8bit
+
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr"> 
+<head>
+<style type="text/css">
+ .link:link, .link:active, .link:visited {
+       color:#2672ec !important;
+       text-decoration:none !important;
+ }
+
+ .link:hover {
+       color:#4284ee !important;
+       text-decoration:none !important;
+ }
+</style>
+<title></title>
+</head>
+<body>
+<table dir="ltr">
+      <tr><td id="i1" style="padding:0; font-family:'Segoe UI Semibold', 'Segoe UI Bold', 'Segoe UI', 'Helvetica Neue Medium', Arial, sans-serif; font-size:17px; color:#707070;">Konto Microsoft</td></tr>
+      <tr><td id="i2" style="padding:0; font-family:'Segoe UI Light', 'Segoe UI', 'Helvetica Neue Medium', Arial, sans-serif; font-size:41px; color:#2672ec;">Kod zabezpieczeñ</td></tr>
+      <tr><td id="i3" style="padding:0; padding-top:25px; font-family:'Segoe UI', Tahoma, Verdana, Arial, sans-serif; font-size:14px; color:#2a2a2a;">
+                
+                U¿yj poni¿szego kodu zabezpieczaj¹cego dla konta Microsoft <a dir="ltr" id="iAccount" class="link" style="color:#2672ec; text-decoration:none" href="mailto:dr*****">dr*****</a>.
+            </td></tr>
+      <tr><td id="i4" style="padding:0; padding-top:25px; font-family:'Segoe UI', Tahoma, Verdana, Arial, sans-serif; font-size:14px; color:#2a2a2a;">
+                
+                Kod zabezpieczaj¹cy: <span style="font-family:'Segoe UI Bold', 'Segoe UI Semibold', 'Segoe UI', 'Helvetica Neue Medium', Arial, sans-serif; font-size:14px; font-weight:bold; color:#2a2a2a;">1100880</span>
+            </td></tr>
+      <tr><td id="i5" style="padding:0; padding-top:25px; font-family:'Segoe UI', Tahoma, Verdana, Arial, sans-serif; font-size:14px; color:#2a2a2a;">
+                
+                Jeœli nie rozpoznajesz konta Microsoft <a dir="ltr" id="iAccount" class="link" style="color:#2672ec; text-decoration:none" href="mailto:dr*****">dr*****</a>, mo¿esz <a id="iLink2" class="link" style="color:#2672ec; text-decoration:none" href="https://account.live.com/dp?ft=DcNGY3v5R8DfUXThxiIhHDJgEs5vmehjOmWOMYlp0meiAP3MTBfp*kUPJxjfyOd03U9GLbVlb!LNssPY!vqA9j650MaZ07uZHdNgX3zFRJeoe6d0zA57ydxT23aYILR6V7ICCv5038eWYBAJMy752t0ymeZArE1pIrcTN2PA6j4RUTwI4aaTZU0WIWDnISPJok09QOu5TkX!vfB0KChr9q1bmdXDpVvJ17bc3lyCJWoDTL2c3UGRfQ6UXNjkhKCRGar68n3KNs*bwaNaaxzHUK8lN91z6D56nwJ901LTp16T">klikn¹æ tutaj</a>, aby usun¹æ swój adres e-mail z tego konta.
+            </td></tr>
+      <tr><td id="i6" style="padding:0; padding-top:25px; font-family:'Segoe UI', Tahoma, Verdana, Arial, sans-serif; font-size:14px; color:#2a2a2a;">Dziêkujemy!</td></tr>
+      <tr><td id="i7" style="padding:0; font-family:'Segoe UI', Tahoma, Verdana, Arial, sans-serif; font-size:14px; color:#2a2a2a;">Zespó³ kont Microsoft</td></tr>
+</table>
+</body>
+</html>
+--=-36tnB08shtvl2CDHyxHfGQ==--

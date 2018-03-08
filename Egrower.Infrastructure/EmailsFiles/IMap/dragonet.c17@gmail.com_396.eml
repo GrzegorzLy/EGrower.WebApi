@@ -1,0 +1,21 @@
+MIME-Version: 1.0
+Received: by 10.12.182.8 with HTTP; Mon, 5 Mar 2018 08:48:48 -0800 (PST)
+Date: Mon, 5 Mar 2018 17:48:48 +0100
+Delivered-To: dragonet.c17@gmail.com
+Message-ID: <CANh3=VtCxCoKg4DDSPVaEA+wQ53tWkoSXcgVSDXMCk=BnhV5bw@mail.gmail.com>
+Subject: Test
+From: Karol C <dragonet.c17@gmail.com>
+To: dragonet.c17@gmail.com
+Content-Type: multipart/alternative; boundary="94eb2c0e76f8a17f260566ad19eb"
+
+--94eb2c0e76f8a17f260566ad19eb
+Content-Type: text/plain; charset="UTF-8"
+
+Testing
+
+--94eb2c0e76f8a17f260566ad19eb
+Content-Type: text/html; charset="UTF-8"
+
+<div dir="ltr">Testing<div><br></div></div>
+
+--94eb2c0e76f8a17f260566ad19eb--

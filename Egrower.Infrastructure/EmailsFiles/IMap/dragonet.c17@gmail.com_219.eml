@@ -1,0 +1,752 @@
+Delivered-To: dragonet.c17@gmail.com
+Received: by 10.107.4.78 with SMTP id 75csp8975278ioe;
+        Tue, 3 Jan 2017 17:09:35 -0800 (PST)
+X-Received: by 10.107.170.133 with SMTP id g5mr21070969ioj.148.1483492175201;
+        Tue, 03 Jan 2017 17:09:35 -0800 (PST)
+Return-Path: <bounce-866153_HTML-1275061275-4780239-10017488-379@bounce.e-mail.microsoft.com>
+Received: from mta28.email.microsoftemail.com (mta28.email.microsoftemail.com. [66.231.92.214])
+        by mx.google.com with ESMTPS id m3si25698017ioo.158.2017.01.03.17.09.35
+        for <dragonet.c17@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 03 Jan 2017 17:09:35 -0800 (PST)
+Received-SPF: pass (google.com: domain of bounce-866153_html-1275061275-4780239-10017488-379@bounce.e-mail.microsoft.com designates 66.231.92.214 as permitted sender) client-ip=66.231.92.214;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@email.microsoftemail.com;
+       spf=pass (google.com: domain of bounce-866153_html-1275061275-4780239-10017488-379@bounce.e-mail.microsoft.com designates 66.231.92.214 as permitted sender) smtp.mailfrom=bounce-866153_HTML-1275061275-4780239-10017488-379@bounce.e-mail.microsoft.com;
+       dmarc=pass (p=NONE dis=NONE) header.from=e-mail.microsoft.com
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=102420140131; d=email.microsoftemail.com;
+ h=From:To:Subject:Date:MIME-Version:Reply-To:List-ID:Message-ID:Content-Type;
+ bh=Hx/pEAEUwHfi6R5HDI0eAYF7+DM=;
+ b=QUQ/T5e7wZ2fkwI6lihtKohiNgw6MM1TeQGrqMEhauSfmWRcT5xXQ95/1oFTGEPOFcZB5kQ1T04L
+   5w0yZuJGsOGjkdRkD0ATLSWbVfLJWVIcljrgqrciicHpCFcCg8wSEm5mCvjbrpxUCcgTXmjcQyKf
+   yHHica6RQUIZa2XVOhY=
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=200608; d=e-mail.microsoft.com;
+ b=pTSy2NI7kuzyKU+JiLZt6uHCBxbsrJsElOm2oCIsOspEhQ/OPAG3S8R59lFjYxam/HdnYqPw3m4c
+   EHQrv8L75YX4iC10PTT+Ns/ztdcqu8tAymiUtl+jg1q9g7zxr/X0FGY1gGoXiHnoD5Q3Bvv4jfX0
+   OJOl9jVBlvTsG3JHmbc=;
+Received: by mta28.email.microsoftemail.com id hdh5ku163hsb for <dragonet.c17@gmail.com>; Tue, 3 Jan 2017 19:09:34 -0600 (envelope-from <bounce-866153_HTML-1275061275-4780239-10017488-379@bounce.e-mail.microsoft.com>)
+From: "Azure Team" <AzureTeam@e-mail.microsoft.com>
+To: <dragonet.c17@gmail.com>
+Subject: Improvements to Azure meter names in detailed usage downloads, APIs, and invoices
+Date: Tue, 03 Jan 2017 19:09:34 -0600
+MIME-Version: 1.0
+Reply-To: "Azure Team" <reply-fe8e10777d64067e7c-866153_HTML-1275061275-10017488-379@email.microsoftemail.com>
+List-ID: <10017488_4780239.xt.local>
+X-CSA-Complaints: whitelistcomplaints@eco.de
+x-job: 10017488_4780239
+Message-ID: <7e320974-3b77-43c7-bf6e-360a88e042a2@xtinmta177.xt.local>
+Feedback-ID: 10017488:4780239:66.231.92.214:sfmktgcld
+Content-Type: multipart/alternative;
+	boundary="LNk04iWZXpAP=_?:"
+
+This is a multi-part message in MIME format.
+
+--LNk04iWZXpAP=_?:
+Content-Type: text/plain;
+	charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+
+Improvements to Azure meter names in detailed usage downloads, APIs, and invoices 
+Having trouble viewing this email? 
+https://view.email.microsoftemail.com/?j=fe8e10777d64067e7c&m=fe621570756503797d1c&ls=fdf61571746201797011757d&l=fec21c767365017e&s=fdfb15727261047b74167770&jb=ff5c17777c&ju= 
+View as a webpage .
+
+ 
+ 
+  
+ 
+Effective the week of April 3, 2017, we’ll introduce improved standardized names for our meter attributes that you’ll find much easier to use and understand.
+
+ 
+ 
+
+
+Based on customer feedback, we are rolling out improved standardized names for Azure meter attributes effective the week of April 3, 2017. These changes will make it easier for you to manage Azure resources and create a consistent taxonomy between feature pages on the 
+https://azure.microsoft.com/en-us/?WT.mc_id=azurebg_email_Trans_33675_1289_Meter_Name_Standardization_MOSP 
+Azure website , detailed usage data downloaded from the management portal or APIs, and invoices. These changes will not impact the meter’s usage data, price, or unique identifier (reported as the Meter ID or Resource GUID). You may need to adjust your reports to accommodate the new naming.
+<br><br>
+The following table includes illustrative examples of the improved meter names. (The alternative names for the meter attributes are shown in parentheses for your reference.)
+
+
+
+
+
+Meter Name Format Meter ID (Resource GUID) Meter Category (Name) Meter Sub-category (Type) Meter Name (Resource) Unit Meter Region (Region) 
+ 
+Old Convention
+ 
+a149966f-73b4-4e1d-b335-d2a572b1e6bd
+ 
+Data Services
+ 
+SQL Database
+ 
+Standard S0 Database Days
+ 
+Days
+ 
+
+ 
+ 
+New Convention
+ 
+No change to Meter ID
+ 
+SQL Database
+ 
+Standard
+ 
+S0 SQL DB
+ 
+1 Day
+ 
+
+ 
+ 
+Old Convention
+ 
+30ab1dae-8172-4b24-aa5b-3666d3f0fde1
+ 
+Storage
+ 
+Geo Redundant
+ 
+Standard IO – Table/ Queue (GB)
+ 
+GB
+ 
+
+ 
+ 
+New Convention
+ 
+No change to Meter ID
+ 
+Storage
+ 
+Tables and Queues
+ 
+GR Storage
+ 
+1 GB
+ 
+
+ 
+ 
+Old Convention
+ 
+2005544f-659d-49c9-9094-8e0aea1be3a5
+ 
+Virtual Machines
+ 
+A1 VM (Windows)
+ 
+Compute Hours
+ 
+Hours
+ 
+US Central
+ 
+ 
+New Convention
+ 
+No change to Meter ID
+ 
+Virtual Machines
+ 
+Standard A Series
+ 
+A1 Windows VM
+ 
+1 Hour
+ 
+US Central
+ 
+ 
+Old Convention
+ 
+6c5c3140-e894-4ecf-aacc-60137b0bc93b
+ 
+Networking
+ 
+
+ 
+Data Transfer Out (GB)
+ 
+GB
+ 
+Gov (US)
+ 
+ 
+New Convention
+ 
+No change to Meter ID
+ 
+Bandwidth
+ 
+
+ 
+Data Transfer Out
+ 
+1 GB
+ 
+US Gov
+ 
+
+
+
+
+
+https://go.microsoft.com/fwlink/?linkid=836939&WT.mc_id=azurebg_email_Trans_33675_1289_Meter_Name_Standardization_MOSP 
+Download  a detailed spreadsheet containing all meters and their before/after attribute values. This list will be refreshed each month until the change is implemented in production, so please check back regularly for updates prior to the week of April 3, 2017. If you need to continue to report using the old names, please use the mappings in this file.
+<br><br>
+To navigate this transition, we’ve also compiled 
+https://azure.microsoft.com/en-us/support/meter-rename/update-reports/?WT.mc_id=azurebg_email_Trans_33675_1289_Meter_Name_Standardization_MOSP 
+instructions  to help you update any reports that rely on the meter attribute names. If you have further questions concerning the 
+https://azure.microsoft.com/support/meter-rename/?WT.mc_id=azurebg_email_Trans_33675_1289_Meter_Name_Standardization_MOSP 
+meter attribute naming changes , please contact 
+https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade?WT.mc_id=azurebg_email_Trans_33675_1289_Meter_Name_Standardization_MOSP 
+Azure Support .
+<br><br>
+Thank you for your continued use of Azure. We hope these improvements allow you to better analyze and report on your Azure use.
+
+
+
+
+
+
+
+Thank you, 
+
+Your Azure Team
+
+
+ 
+  
+
+
+
+
+
+
+ 
+
+This message from Microsoft is an important part of a program, service, or product that you or your company purchased or participates in. Microsoft respects your privacy. Please read our 
+http://www.microsoft.com/privacystatement/en-us/OnlineServices/Default.aspx 
+Privacy Statement .
+
+
+ 
+One Microsoft Way, Redmond, WA 98052 USA
+
+ 
+  
+
+ 
+ 
+
+
+
+
+--LNk04iWZXpAP=_?:
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=600, user-scalable=no" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Improvements to Azure meter names in detailed usage downloads, APIs, and invoices</title>
+<style>
+	* {-webkit-text-size-adjust: none}
+
+	body {margin:0; padding:0;}
+	table, table td { border-collapse:collapse; mso-table-lspace:0; mso-table-rspace:0; margin:0; padding:0; }
+
+	@media only screen and (max-width: 480px) {
+
+		*[class].wrapper {
+			width:320px!important;
+			min-width: 0 !important;
+		}
+
+		*[class].container288 {
+			width:288px!important;
+		}
+
+		/* Hide from mobile */
+		*[class*="mobileHidden"] { display:none !important; }
+
+		/* Custom */
+		*[class="fullWidth"] { width:100% !important; }
+
+		td[class="block"] { width:100% !important; display:block !important; }
+		td[class="block2"] { width:100% !important; display:block !important; border-top:none !important; padding:5px 0 20px 0 !important; }
+		td[class="block3"] { width:100% !important; display:block !important; border-bottom:none !important; padding:10px 0 !important; }
+
+		img[class="photo"] { width:100% !important; height:auto !important; }
+
+		td[class="mobileGutter"] { width: 15px !important; }
+	}
+</style>
+</head>
+<body><style type="text/css">
+div.preheader 
+{ display: none !important; } 
+</style>
+<div class="preheader" style="font-size: 1px; display: none !important;">Standardized meter names to be introduced the week of April 3, 2017.</div>
+<!--<img src="http://image.email.microsoftemail.com/lib/fe621570756503797d1c/m/2/33601_AzureTransTemplate_Spacer.gif" width="600" height="1" style="min-width:600px;display:block;" class="mobileHidden">-->
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+	<tr>
+		<td valign="top" align="right" width="50%" style="background-color:#f5f5f5;">&nbsp;</td>
+		<td valign="top" style="background-color:#f5f5f5;">
+
+<!-- PREHEADER-->
+<table width="600" cellpadding="0" cellspacing="0" border="0" style="min-width:600px;" class="wrapper">
+	<tr>
+		<td width="600" align="right" style="background-color:#f5f5f5; color:#3f4042; font-family:'Segoe UI',Arial,sans-serif; font-size:10px; font-weight:bold; padding:24px 0 3px;">
+			Having trouble viewing this email? <a href="https://click.email.microsoftemail.com/?qs=f543ad221f78a0bbb8ce6e8bdd1ace893e4ead9c93672383f80b1b79bde2139e15e22d0eeba1c66f43df3cecb4db41f6" title="View as a webpage"  style="color:#3da5dd; text-decoration:none;">View as a webpage</a>.
+		</td>
+	</tr>
+</table>
+<!-- /PREHEADER -->
+
+<!-- HEADER -->
+<table width="600" cellpadding="0" cellspacing="0" border="0" class="wrapper">
+	<tr>
+		<td width="1" style="background:#000000; line-height:1px;"></td>
+		<td width="25" style="background:#ffffff; border-top:1px solid #000000;" class="mobileGutter">&nbsp;</td>
+		<td width="288" style="background:#ffffff; line-height:1px; border-top:1px solid #000000;">
+			<table cellpadding="0" cellspacing="0" border="0">
+				<tr>
+					<td width="74" style="background:#ffffff; padding:20px 0;">
+						<img src="https://image.email.microsoftemail.com/lib/fe621570756503797d1c/m/2/MS_logo_cmyk_grey_updated.png" alt="Microsoft" width="73" height="17" border="0" style="display:block;">
+					</td>
+				</tr>
+			</table>
+		</td>
+		<td width="285" style="background:#ffffff; line-height:1px; border-top:1px solid #000000;" class="mobileGutter">&nbsp;</td>
+		<td width="1" style="background:#000000; line-height:1px;"></td>
+	</tr>
+	<tr>
+		<td width="1" style="background:#000000; line-height:1px;"></td>
+		<td width="25" style="background:#ffffff;" class="mobileGutter">&nbsp;</td>
+		<td width="288" align="left" valign="top" style="background:#ffffff; line-height:1px; padding-bottom:20px;">
+			<img src="https://image.email.microsoftemail.com/lib/fe621570756503797d1c/m/2/Azure_logo_blk_update.png" alt="Azure" width="91" height="31" border="0" style="display:block;">
+		</td>
+		<td width="285" style="background:#ffffff; line-height:1px;" class="mobileGutter">&nbsp;</td>
+		<td width="1" style="background:#000000; line-height:1px;"></td>
+	</tr>
+</table>
+<!-- /HEADER -->
+
+<!-- HERO -->
+<table width="600" cellpadding="0" cellspacing="0" border="0" bgcolor="#ffffff" class="wrapper">
+	<tr>
+		<td width="1" style="width:1px; background:#000000; line-height:1px; border-top:3px solid #000000; border-bottom:3px solid #000000;"></td>
+		<td width="110" align="left" valign="top" style="width:110px; background:#505050; border-top:3px solid #505050; border-bottom:3px solid #505050;" class="mobileHidden">
+			<img src="http://image.email.microsoftemail.com/lib/fe621570756503797d1c/m/2/33601_AzureTransTemplate_SN_Cloud.png" width="110" height="93" border="0" alt="" style="display:block;"></td>
+		<td width="3" style="width:2px; background:#0078d7; line-height:1px; border-top:3px solid #0078d7; border-bottom:3px solid #0078d7;" class="mobileHidden"></td>
+		<td width="11" style="width:12px; background:#ffffff; line-height:1px; border-top:3px solid #0078d7; border-bottom:3px solid #0078d7;" class="mobileGutter">&nbsp;</td>
+		<td align="left" valign="middle" style="background:#ffffff; color:#505050; font-family:'Segoe UI',Arial,sans-serif; font-size:1px; mso-line-height-rule:exactly; line-height:1px; border-top:3px solid #0078d7; border-bottom:3px solid #0078d7;">
+			<table width="449" cellpadding="0" cellspacing="0" border="0" style="width:449px;" class="fullWidth">
+				<tr>
+					<td style="background:#ffffff; color:#505050; font-family:'Segoe UI',Arial,sans-serif; font-size:17px; mso-line-height-rule:exactly; line-height:26px; padding:20px 0;">
+						Effective the week of April 3, 2017, we’ll introduce improved standardized names for our meter attributes that you’ll find much easier to use and understand.
+					</td>
+				</tr>
+			</table>
+		</td>
+		<td width="22" style="width:23px; background:#ffffff; line-height:1px; border-top:3px solid #0078d7; border-bottom:3px solid #0078d7;" class="mobileGutter">&nbsp;</td>
+		<td width="3" style="width:2px; background:#0078d7; line-height:1px; border-top:3px solid #0078d7; border-bottom:3px solid #0078d7;" class="mobileHidden"></td>
+		<td width="1" style="width:1px; background:#000000; line-height:1px; border-top:3px solid #000000; border-bottom:3px solid #000000;"></td>
+	</tr>
+</table>
+<!-- /HERO -->
+
+<!-- MAIN BODY -->
+<table width="600" cellpadding="0" cellspacing="0" border="0" class="wrapper">
+	<tr>
+		<td width="1" style="background:#000000; line-height:1px;"></td>
+		<td width="124" style="background:#ffffff; line-height:1px; border-top:1px solid #dfdfdf;" class="mobileGutter">&nbsp;</td>
+		<td width="449" align="left" valign="top" style="background:#ffffff; padding:20px 0; color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:13px; mso-line-height-rule:exactly; line-height:20px; border-top:1px solid #dfdfdf;" class="container288">
+
+
+			Based on customer feedback, we are rolling out improved standardized names for Azure meter attributes effective the week of April 3, 2017. These changes will make it easier for you to manage Azure resources and create a consistent taxonomy between feature pages on the <a href="https://click.email.microsoftemail.com/?qs=f543ad221f78a0bb9e4f12ed90eb5006771430ca2ef0bd2d4b040cd6479d844ba5f7fea4a82938e39b78a864f7a5d7cd" title="Azure website"  style="color:#3da5dd; text-decoration:none;">Azure website</a>, detailed usage data downloaded from the management portal or APIs, and invoices. These changes will not impact the meter’s usage data, price, or unique identifier (reported as the Meter ID or Resource GUID). You may need to adjust your reports to accommodate the new naming.
+	<br><br>
+	The following table includes illustrative examples of the improved meter names. (The alternative names for the meter attributes are shown in parentheses for your reference.)
+			<br><br>
+			
+
+			<table cellpadding="0" cellspacing="0" border="0">
+				<tr>
+					<td width="5" align="left" valign="middle" bgcolor="#ffffff" style="color:#5c5c5c; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-top:2px solid #898989; border-bottom:2px solid #898989">&nbsp;</td>
+					<td align="left" valign="middle" bgcolor="#ffffff" style="color:#5c5c5c; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; line-height:20px; padding:10px 0px; border-top:2px solid #898989; border-bottom:2px solid #898989">
+						<strong>Meter Name Format</strong>
+					</td>
+					<td width="5" align="left" valign="middle" bgcolor="#ffffff" style="color:#5c5c5c; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-top:2px solid #898989; border-bottom:2px solid #898989">&nbsp;</td>
+					<td align="left" valign="middle" bgcolor="#ffffff" style="color:#5c5c5c; font-family:'Segoe UI',Arial,sans-serif; font-size:12px;mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-top:2px solid #898989; border-bottom:2px solid #898989">
+						<strong>Meter ID (Resource GUID)</strong>
+					</td>
+					<td width="5" align="left" valign="middle" bgcolor="#ffffff" style="color:#5c5c5c; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-top:2px solid #898989; border-bottom:2px solid #898989">&nbsp;</td>
+					<td align="left" valign="middle" bgcolor="#ffffff" style="color:#5c5c5c; font-family:'Segoe UI',Arial,sans-serif; font-size:12px;mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-top:2px solid #898989; border-bottom:2px solid #898989">
+						<strong>Meter Category (Name)</strong>
+					</td>
+					<td width="5" align="left" valign="middle" bgcolor="#ffffff" style="color:#5c5c5c; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-top:2px solid #898989; border-bottom:2px solid #898989">&nbsp;</td>
+					<td align="left" valign="middle" bgcolor="#ffffff" style="color:#5c5c5c; font-family:'Segoe UI',Arial,sans-serif; font-size:12px;mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-top:2px solid #898989; border-bottom:2px solid #898989">
+						<strong>Meter Sub-category (Type)</strong>
+					</td>
+					<td width="5" align="left" valign="middle" bgcolor="#ffffff" style="color:#5c5c5c; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-top:2px solid #898989; border-bottom:2px solid #898989">&nbsp;</td>
+					<td align="left" valign="middle" bgcolor="#ffffff" style="color:#5c5c5c; font-family:'Segoe UI',Arial,sans-serif; font-size:12px;mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-top:2px solid #898989; border-bottom:2px solid #898989">
+						<strong>Meter Name (Resource)</strong>
+					</td>
+					<td width="5" align="left" valign="middle" bgcolor="#ffffff" style="color:#5c5c5c; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-top:2px solid #898989; border-bottom:2px solid #898989">&nbsp;</td>
+					<td align="left" valign="middle" bgcolor="#ffffff" style="color:#5c5c5c; font-family:'Segoe UI',Arial,sans-serif; font-size:12px;mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-top:2px solid #898989; border-bottom:2px solid #898989">
+						<strong>Unit</strong>
+					</td>
+					<td width="5" align="left" valign="middle" bgcolor="#ffffff" style="color:#5c5c5c; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-top:2px solid #898989; border-bottom:2px solid #898989">&nbsp;</td>
+					<td align="left" valign="middle" bgcolor="#ffffff" style="color:#5c5c5c; font-family:'Segoe UI',Arial,sans-serif; font-size:12px;mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-top:2px solid #898989; border-bottom:2px solid #898989">
+						<strong>Meter Region (Region)</strong>
+					</td>
+					<td width="5" align="left" valign="top" bgcolor="#ffffff" style="color:#5c5c5c; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-top:2px solid #898989; border-bottom:2px solid #898989">&nbsp;</td>
+				</tr>
+				<tr>
+					<td align="left" valign="middle" bgcolor="#eeeeee" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">&nbsp;</td>
+					<td align="left" valign="middle" bgcolor="#eeeeee" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">
+						Old Convention
+					</td>
+					<td align="left" valign="middle" bgcolor="#eeeeee" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">&nbsp;</td>
+					<td align="left" valign="middle" bgcolor="#eeeeee" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">
+						a149966f-73b4-4e1d-b335-d2a572b1e6bd
+					</td>
+					<td align="left" valign="middle" bgcolor="#eeeeee" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">&nbsp;</td>
+					<td align="left" valign="middle" bgcolor="#eeeeee" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">
+						Data Services
+					</td>
+					<td align="left" valign="middle" bgcolor="#eeeeee" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">&nbsp;</td>
+					<td align="left" valign="middle" bgcolor="#eeeeee" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">
+						SQL Database
+					</td>
+					<td align="left" valign="middle" bgcolor="#eeeeee" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">&nbsp;</td>
+					<td align="left" valign="middle" bgcolor="#eeeeee" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">
+						Standard S0 Database Days
+					</td>
+					<td align="left" valign="middle" bgcolor="#eeeeee" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">&nbsp;</td>
+					<td align="left" valign="middle" bgcolor="#eeeeee" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">
+						Days
+					</td>
+					<td align="left" valign="middle" bgcolor="#eeeeee" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">&nbsp;</td>
+					<td align="left" valign="middle" bgcolor="#eeeeee" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">
+						
+					</td>
+					<td align="left" valign="top" bgcolor="#eeeeee" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">&nbsp;</td>
+				</tr>
+				<tr>
+					<td align="left" valign="middle" bgcolor="#eeeeee" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">&nbsp;</td>
+					<td align="left" valign="middle" bgcolor="#eeeeee" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">
+						New Convention
+					</td>
+					<td align="left" valign="middle" bgcolor="#eeeeee" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">&nbsp;</td>
+					<td align="left" valign="middle" bgcolor="#eeeeee" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">
+						No change to Meter ID
+					</td>
+					<td align="left" valign="middle" bgcolor="#eeeeee" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">&nbsp;</td>
+					<td align="left" valign="middle" bgcolor="#eeeeee" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">
+						SQL Database
+					</td>
+					<td align="left" valign="middle" bgcolor="#eeeeee" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">&nbsp;</td>
+					<td align="left" valign="middle" bgcolor="#eeeeee" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">
+						Standard
+					</td>
+					<td align="left" valign="middle" bgcolor="#eeeeee" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">&nbsp;</td>
+					<td align="left" valign="middle" bgcolor="#eeeeee" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">
+						S0 SQL DB
+					</td>
+					<td align="left" valign="middle" bgcolor="#eeeeee" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">&nbsp;</td>
+					<td align="left" valign="middle" bgcolor="#eeeeee" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">
+						1 Day
+					</td>
+					<td align="left" valign="middle" bgcolor="#eeeeee" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">&nbsp;</td>
+					<td align="left" valign="middle" bgcolor="#eeeeee" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">
+						
+					</td>
+					<td align="left" valign="top" bgcolor="#eeeeee" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">&nbsp;</td>
+				</tr>
+				<tr>
+					<td align="left" valign="middle" bgcolor="#ffffff" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">&nbsp;</td>
+					<td align="left" valign="middle" bgcolor="#ffffff" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">
+						Old Convention
+					</td>
+					<td align="left" valign="middle" bgcolor="#ffffff" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">&nbsp;</td>
+					<td align="left" valign="middle" bgcolor="#ffffff" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">
+						30ab1dae-8172-4b24-aa5b-3666d3f0fde1
+					</td>
+					<td align="left" valign="middle" bgcolor="#ffffff" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">&nbsp;</td>
+					<td align="left" valign="middle" bgcolor="#ffffff" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">
+						Storage
+					</td>
+					<td align="left" valign="middle" bgcolor="#ffffff" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">&nbsp;</td>
+					<td align="left" valign="middle" bgcolor="#ffffff" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">
+						Geo Redundant
+					</td>
+					<td align="left" valign="middle" bgcolor="#ffffff" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">&nbsp;</td>
+					<td align="left" valign="middle" bgcolor="#ffffff" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">
+						Standard IO – Table/ Queue (GB)
+					</td>
+					<td align="left" valign="middle" bgcolor="#ffffff" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">&nbsp;</td>
+					<td align="left" valign="middle" bgcolor="#ffffff" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">
+						GB
+					</td>
+					<td align="left" valign="middle" bgcolor="#ffffff" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">&nbsp;</td>
+					<td align="left" valign="middle" bgcolor="#ffffff" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">
+						
+					</td>
+					<td align="left" valign="top" bgcolor="#ffffff" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">&nbsp;</td>
+				</tr>
+				<tr>
+					<td align="left" valign="middle" bgcolor="#ffffff" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">&nbsp;</td>
+					<td align="left" valign="middle" bgcolor="#ffffff" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">
+						New Convention
+					</td>
+					<td align="left" valign="middle" bgcolor="#ffffff" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">&nbsp;</td>
+					<td align="left" valign="middle" bgcolor="#ffffff" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">
+						No change to Meter ID
+					</td>
+					<td align="left" valign="middle" bgcolor="#ffffff" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">&nbsp;</td>
+					<td align="left" valign="middle" bgcolor="#ffffff" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">
+						Storage
+					</td>
+					<td align="left" valign="middle" bgcolor="#ffffff" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">&nbsp;</td>
+					<td align="left" valign="middle" bgcolor="#ffffff" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">
+						Tables and Queues
+					</td>
+					<td align="left" valign="middle" bgcolor="#ffffff" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">&nbsp;</td>
+					<td align="left" valign="middle" bgcolor="#ffffff" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">
+						GR Storage
+					</td>
+					<td align="left" valign="middle" bgcolor="#ffffff" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">&nbsp;</td>
+					<td align="left" valign="middle" bgcolor="#ffffff" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">
+						1 GB
+					</td>
+					<td align="left" valign="middle" bgcolor="#ffffff" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">&nbsp;</td>
+					<td align="left" valign="middle" bgcolor="#ffffff" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">
+						
+					</td>
+					<td align="left" valign="top" bgcolor="#ffffff" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">&nbsp;</td>
+				</tr>
+				<tr>
+					<td align="left" valign="middle" bgcolor="#eeeeee" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">&nbsp;</td>
+					<td align="left" valign="middle" bgcolor="#eeeeee" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">
+						Old Convention
+					</td>
+					<td align="left" valign="middle" bgcolor="#eeeeee" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">&nbsp;</td>
+					<td align="left" valign="middle" bgcolor="#eeeeee" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">
+						2005544f-659d-49c9-9094-8e0aea1be3a5
+					</td>
+					<td align="left" valign="middle" bgcolor="#eeeeee" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">&nbsp;</td>
+					<td align="left" valign="middle" bgcolor="#eeeeee" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">
+						Virtual Machines
+					</td>
+					<td align="left" valign="middle" bgcolor="#eeeeee" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">&nbsp;</td>
+					<td align="left" valign="middle" bgcolor="#eeeeee" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">
+						A1 VM (Windows)
+					</td>
+					<td align="left" valign="middle" bgcolor="#eeeeee" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">&nbsp;</td>
+					<td align="left" valign="middle" bgcolor="#eeeeee" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">
+						Compute Hours
+					</td>
+					<td align="left" valign="middle" bgcolor="#eeeeee" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">&nbsp;</td>
+					<td align="left" valign="middle" bgcolor="#eeeeee" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">
+						Hours
+					</td>
+					<td align="left" valign="middle" bgcolor="#eeeeee" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">&nbsp;</td>
+					<td align="left" valign="middle" bgcolor="#eeeeee" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">
+						US Central
+					</td>
+					<td align="left" valign="top" bgcolor="#eeeeee" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">&nbsp;</td>
+				</tr>
+				<tr>
+					<td align="left" valign="middle" bgcolor="#eeeeee" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">&nbsp;</td>
+					<td align="left" valign="middle" bgcolor="#eeeeee" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">
+						New Convention
+					</td>
+					<td align="left" valign="middle" bgcolor="#eeeeee" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">&nbsp;</td>
+					<td align="left" valign="middle" bgcolor="#eeeeee" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">
+						No change to Meter ID
+					</td>
+					<td align="left" valign="middle" bgcolor="#eeeeee" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">&nbsp;</td>
+					<td align="left" valign="middle" bgcolor="#eeeeee" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">
+						Virtual Machines
+					</td>
+					<td align="left" valign="middle" bgcolor="#eeeeee" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">&nbsp;</td>
+					<td align="left" valign="middle" bgcolor="#eeeeee" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">
+						Standard A Series
+					</td>
+					<td align="left" valign="middle" bgcolor="#eeeeee" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">&nbsp;</td>
+					<td align="left" valign="middle" bgcolor="#eeeeee" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">
+						A1 Windows VM
+					</td>
+					<td align="left" valign="middle" bgcolor="#eeeeee" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">&nbsp;</td>
+					<td align="left" valign="middle" bgcolor="#eeeeee" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">
+						1 Hour
+					</td>
+					<td align="left" valign="middle" bgcolor="#eeeeee" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">&nbsp;</td>
+					<td align="left" valign="middle" bgcolor="#eeeeee" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">
+						US Central
+					</td>
+					<td align="left" valign="top" bgcolor="#eeeeee" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">&nbsp;</td>
+				</tr>
+				<tr>
+					<td align="left" valign="middle" bgcolor="#ffffff" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">&nbsp;</td>
+					<td align="left" valign="middle" bgcolor="#ffffff" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">
+						Old Convention
+					</td>
+					<td align="left" valign="middle" bgcolor="#ffffff" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">&nbsp;</td>
+					<td align="left" valign="middle" bgcolor="#ffffff" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">
+						6c5c3140-e894-4ecf-aacc-60137b0bc93b
+					</td>
+					<td align="left" valign="middle" bgcolor="#ffffff" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">&nbsp;</td>
+					<td align="left" valign="middle" bgcolor="#ffffff" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">
+						Networking
+					</td>
+					<td align="left" valign="middle" bgcolor="#ffffff" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">&nbsp;</td>
+					<td align="left" valign="middle" bgcolor="#ffffff" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">
+						
+					</td>
+					<td align="left" valign="middle" bgcolor="#ffffff" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">&nbsp;</td>
+					<td align="left" valign="middle" bgcolor="#ffffff" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">
+						Data Transfer Out (GB)
+					</td>
+					<td align="left" valign="middle" bgcolor="#ffffff" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">&nbsp;</td>
+					<td align="left" valign="middle" bgcolor="#ffffff" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">
+						GB
+					</td>
+					<td align="left" valign="middle" bgcolor="#ffffff" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">&nbsp;</td>
+					<td align="left" valign="middle" bgcolor="#ffffff" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">
+						Gov (US)
+					</td>
+					<td align="left" valign="top" bgcolor="#ffffff" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">&nbsp;</td>
+				</tr>
+				<tr>
+					<td align="left" valign="middle" bgcolor="#ffffff" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">&nbsp;</td>
+					<td align="left" valign="middle" bgcolor="#ffffff" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">
+						New Convention
+					</td>
+					<td align="left" valign="middle" bgcolor="#ffffff" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">&nbsp;</td>
+					<td align="left" valign="middle" bgcolor="#ffffff" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">
+						No change to Meter ID
+					</td>
+					<td align="left" valign="middle" bgcolor="#ffffff" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">&nbsp;</td>
+					<td align="left" valign="middle" bgcolor="#ffffff" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">
+						Bandwidth
+					</td>
+					<td align="left" valign="middle" bgcolor="#ffffff" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">&nbsp;</td>
+					<td align="left" valign="middle" bgcolor="#ffffff" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">
+						
+					</td>
+					<td align="left" valign="middle" bgcolor="#ffffff" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">&nbsp;</td>
+					<td align="left" valign="middle" bgcolor="#ffffff" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">
+						Data Transfer Out
+					</td>
+					<td align="left" valign="middle" bgcolor="#ffffff" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">&nbsp;</td>
+					<td align="left" valign="middle" bgcolor="#ffffff" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">
+						1 GB
+					</td>
+					<td align="left" valign="middle" bgcolor="#ffffff" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">&nbsp;</td>
+					<td align="left" valign="middle" bgcolor="#ffffff" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">
+						US Gov
+					</td>
+					<td align="left" valign="top" bgcolor="#ffffff" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:20px; padding:10px 0px; border-bottom:1px solid #d2d2d2;">&nbsp;</td>
+				</tr>
+			</table>
+			<br>
+			
+
+			<a href="https://click.email.microsoftemail.com/?qs=f543ad221f78a0bb8b125bb15eee1bcf443af80552998b1466d09cb1d3bec15c18bb260bbe142888a478d7eb03ba6d85" title="Download"  style="color:#3da5dd; text-decoration:none;">Download</a> a detailed spreadsheet containing all meters and their before/after attribute values. This list will be refreshed each month until the change is implemented in production, so please check back regularly for updates prior to the week of April 3, 2017. If you need to continue to report using the old names, please use the mappings in this file.
+	<br><br>
+	To navigate this transition, we’ve also compiled <a href="https://click.email.microsoftemail.com/?qs=f543ad221f78a0bbfdefafbb9e4cabb161d8befc96a90e3ee22889f87ddd42d4a18da7cbe724c5cb90f83b902f642e69" title="instructions"  style="color:#3da5dd; text-decoration:none;">instructions</a> to help you update any reports that rely on the meter attribute names. If you have further questions concerning the <a href="https://click.email.microsoftemail.com/?qs=f543ad221f78a0bb99516080dc3e531d2d3447adeb7aec9add05b8ee5a1906aac2f8e937ed5b475998fdb0e01635f021" title="meter attribute naming changes"  style="color:#3da5dd; text-decoration:none;">meter attribute naming changes</a>, please contact <a href="https://click.email.microsoftemail.com/?qs=f543ad221f78a0bb9131b6a3c711b0f817ff983eab8bf2fd1f9debb5d39b51b99c50651bb7a208cd46b6aa8fa0d19577" title="Azure Support"  style="color:#3da5dd; text-decoration:none;">Azure Support</a>.
+	<br><br>
+	Thank you for your continued use of Azure. We hope these improvements allow you to better analyze and report on your Azure use.
+			<br><br>
+			
+
+			<br>
+			Thank you, <br />
+			Your Azure Team
+			
+
+		</td>
+		<td width="25" style="background:#ffffff; line-height:1px; border-top:1px solid #dfdfdf;" class="mobileGutter">&nbsp;</td>
+		<td width="1" style="background:#000000; line-height:1px; "></td>
+	</tr>
+</table>
+<!-- /MAIN BODY -->
+
+<!-- ACCOUNT 
+
+/ACCOUNT -->
+
+<!-- FOOTER -->
+<table width="600" cellpadding="0" cellspacing="0" border="0" class="wrapper">
+	<tr>
+		<td width="1" style="background:#000000; line-height:1px; border-bottom:solid 1px #000000;"></td>
+		<td width="25" style="background:#505050; line-height:1px; border-bottom:solid 1px #898989;" class="mobileGutter"></td>
+		<td width="548" align="left" valign="top" style="background:#505050; color:#fffffe; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:18px; padding:20px 0; border-bottom:solid 1px #898989;" class="container288">
+			This message from Microsoft is an important part of a program, service, or product that you or your company purchased or participates in. Microsoft respects your privacy. Please read our <a href="https://click.email.microsoftemail.com/?qs=f543ad221f78a0bbde3340dd18405b7a1d0a58d1483b82363d5e778c145bf1c0ae037a018a950d6d63e7029ba8e8585c" title="Privacy Statement"  style="color:#3da5dd; text-decoration:none;">Privacy Statement</a>.
+			
+		</td>
+		<td width="25" style="background:#505050; line-height:1px; border-bottom:solid 1px #898989;" class="mobileGutter"></td>
+		<td width="1" style="background:#000000; line-height:1px; border-bottom:solid 1px #000000;"></td>
+	</tr>
+</table>
+<table width="600" cellpadding="0" cellspacing="0" border="0" class="wrapper">
+	<tr>
+		<td width="1" style="background:#000000; line-height:1px;"></td>
+		<td width="488" valign="top" align="left" style="background:#505050; color:#ffffff; font-family:'Segoe UI',Arial,sans-serif; font-size:11px; padding:20px 0;" class="block3">
+			<table width="488" cellpadding="0" cellspacing="0" border="0" class="fullWidth">
+				<tr>
+					<td width="25" style="background:#505050;line-height:1px;" class="mobileGutter">&nbsp;</td>
+					<td width="453" valign="top" align="left" style="background:#505050; color:#ffffff; font-family:'Segoe UI',Arial,sans-serif; font-size:11px;" class="container288">
+						One Microsoft Way, Redmond, WA 98052 USA
+						
+					</td>
+					<td width="10" valign="top" align="left" style="background:#505050; color:#4c4c4c;line-height:1px;" class="mobileGutter">&nbsp;</td>
+				</tr>
+			</table>
+		</td>
+		<td width="110" valign="top" align="right" style="background:#505050; color:#4c4c4c; padding:20px 0;" class="block2">
+			<table width="110" cellpadding="0" cellspacing="0" border="0" class="fullWidth">
+				<tr>
+					<td width="10" valign="top" align="left" style="background:#505050; color:#4c4c4c;line-height:1px;" class="mobileGutter">&nbsp;</td>
+					<td width="75" valign="top" align="right" style="background:#505050; color:#4c4c4c; font-family:'Segoe UI',Arial,sans-serif; font-size:11px;" class="container288">
+						<img src="http://image.email.microsoftemail.com/lib/fe621570756503797d1c/m/1/MS_Logo_white_100.png" alt="Microsoft" width="75" height="16" border="0" style="display:block;">
+					</td>
+					<td width="25" style="background:#505050; line-height:1px;" class="mobileGutter">&nbsp;</td>
+				</tr>
+			</table>
+		</td>
+		<td width="1" style="background:#000000; line-height:1px;"></td>
+	</tr>
+	<tr>
+		<td width="600" colspan="4" valign="top" align="left" style="background:#f5f5f5; color:#ffffff; font-family:'Segoe UI',Arial,sans-serif; font-size:11px;">&nbsp;</td>
+	</tr>
+</table>
+<!-- /FOOTER -->
+
+		</td>
+		<td valign="top" align="left" width="50%" style="background-color:#f5f5f5;">&nbsp;</td>
+	</tr>
+</table>
+
+<img src="https://click.email.microsoftemail.com/open.aspx?ffcb10-fe8e10777d64067e7c-fdf61571746201797011757d-fe621570756503797d1c-fec21c767365017e-fdfb15727261047b74167770-ff5c17777c" width="1" height="1">
+</body>
+</html>
+
+--LNk04iWZXpAP=_?:--
+

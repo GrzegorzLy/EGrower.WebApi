@@ -1,0 +1,179 @@
+Delivered-To: dragonet.c17@gmail.com
+Received: by 10.107.138.224 with SMTP id c93csp3988581ioj;
+        Tue, 9 Jan 2018 13:00:23 -0800 (PST)
+X-Google-Smtp-Source: ACJfBos0bzcgnqEHkBhICIbR9YrMCOAMQAWS1TLyQ0BqCeH3KbmfCBwzwk+CfqKS53DvQ1I4zJkX
+X-Received: by 10.28.108.7 with SMTP id h7mr12705710wmc.113.1515531623551;
+        Tue, 09 Jan 2018 13:00:23 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1515531623; cv=none;
+        d=google.com; s=arc-20160816;
+        b=Kkrvkqps4GwBEHiEwOTtjXw7uYSYTo/uNjRhWBHFqmxhrwR0QPsUlptE9cfRbiQWwI
+         Jbux2uwDyUZXwDNlcS7MWvuTQTWcAiXd08A+WdXpuxttqZsDfZ0azhvkFfApEKxABbWz
+         0u+wA2LOGReX4k+RvgBFoUV7qIyoLki5VEXvyANLJue7ZjWwWWcGXadYJgCWkanteRzB
+         8/X4NO95pmNppaAwch4x1Q2VvP6GwNU7djZugjIdT8dEhuA1z20TRLPICpRZ2lqFH0Hz
+         37cVqb5ZiXXzDhMRvPwZXKfVjcjEeAE3ASG+UAFRZKk2hD2LO+GbI7xN9D62iL7rWfI2
+         3Gzw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=content-transfer-encoding:list-unsubscribe:mime-version:reply-to
+         :from:date:message-id:subject:to:dkim-signature
+         :arc-authentication-results;
+        bh=FysW5Q0/KIAgHgjFHZRMvMrE31+PjsUOSZyeQna0Gq8=;
+        b=p72WyK8L7p117D8fRxmnz4+eoh1H2Wy6fSbd4ekrPQjhEfYNaUBeQQDXCNrlnh2DiV
+         /nOwNw01YfZcoZIWmqFO13uvljRDiqYqu2ZNawJnZlAjs1hUizBkMVczSv00UpE8BgKJ
+         BzF5b7bqVkxqyEJhDRJr7Algtf5Z79+MNJKBdydgfCqFlQ3uwM6gY3O5tVGS0ovde9DC
+         tMD7A2J8bc92GPNgvbbvbutH/Zq9VPDBSrMO0CBGDJcsNn/OvF7NECtjBmpcvd9Zp0tG
+         y2YexPLJQH8mowEhjQ5nKBx2SsbZ2FxxM5jj9nN7nuVbEOyO+BQ9ZQX1De3cdwj2MEz1
+         EnUg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@dorotafilipiuk.pl header.s=default header.b=F8RAhuqF;
+       spf=pass (google.com: domain of bounce@dorotafilipiuk.pl designates 79.143.176.60 as permitted sender) smtp.mailfrom=bounce@dorotafilipiuk.pl;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=dorotafilipiuk.pl
+Return-Path: <bounce@dorotafilipiuk.pl>
+Received: from dorotafilipiuk.pl (ip-60-176-143-79.static.contabo.net. [79.143.176.60])
+        by mx.google.com with ESMTPS id 9si1279238wmr.167.2018.01.09.13.00.22
+        for <dragonet.c17@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 09 Jan 2018 13:00:23 -0800 (PST)
+Received-SPF: pass (google.com: domain of bounce@dorotafilipiuk.pl designates 79.143.176.60 as permitted sender) client-ip=79.143.176.60;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@dorotafilipiuk.pl header.s=default header.b=F8RAhuqF;
+       spf=pass (google.com: domain of bounce@dorotafilipiuk.pl designates 79.143.176.60 as permitted sender) smtp.mailfrom=bounce@dorotafilipiuk.pl;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=dorotafilipiuk.pl
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
+	d=dorotafilipiuk.pl; s=default; h=Content-Transfer-Encoding:Content-Type:
+	List-Unsubscribe:MIME-Version:Reply-To:From:Date:Message-ID:Subject:To:Sender
+	:Cc:Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
+	Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Id:
+	List-Help:List-Subscribe:List-Post:List-Owner:List-Archive;
+	bh=FysW5Q0/KIAgHgjFHZRMvMrE31+PjsUOSZyeQna0Gq8=; b=F8RAhuqFFPu5Qm6SYrQZRofVZI
+	EP0zfM5sr+ljtXyhiKMtnW1/taFFryQTR9X4PrhmHExiJTg5vbk+baFXuewiCGkgM2GtxWzUKKLUq
+	g1hJwd0mdfzO60xZBefIqjDvGGuzpIzHvm2RvcEVZzG6Jy+JTZGatbS7hvqMmtvUJj0n7+3vD3Aal
+	FiBrXSZLDh6QiUoSXJyqQOhzM3lcGFEZHxBpnPL4HxyQwyuTozI5PHIpbnGKWBG2aY+0JvwyZWlxu
+	zI5Tl1ysSZv7jbkb3Y8+KCqGs9LqwussVF7gVqClWiqT+glkxYhYfHLqxF0+RXjJ09DyAmLPT7ap9
+	eEYBxznw==;
+Received: from [79.143.176.60] (port=36828 helo=dorotafilipiuk.pl)
+	by vmi106355.contabo.host with esmtpa (Exim 4.89)
+	(envelope-from <bounce@dorotafilipiuk.pl>)
+	id 1eYrIv-0005Jt-3q
+	for dragonet.c17@gmail.com; Tue, 09 Jan 2018 11:38:49 +0100
+To: dragonet.c17@gmail.com
+Subject: =?UTF-8?B?W3d5endhbmllXSBQZGYrbGl2ZSBvIDIwOjAwLWR6aWXFhCAy?=
+Message-ID: <166c8c72fc4efadbaf10a087f9440087@dorotafilipiuk.pl>
+Date: Tue, 09 Jan 2018 10:34:03 +0000
+From: "Dorota Filipiuk" <biuro@dorotafilipiuk.pl>
+Reply-To: biuro@dorotafilipiuk.pl
+MIME-Version: 1.0
+X-Mailer-LID: 40,81
+List-Unsubscribe: <http://dorotafilipiuk.pl/interspire/unsubscribe.php?M=58137&C=3dbaa9c3cdcef032e05bcbf3728b538c&L=81&N=367>
+X-Mailer-RecptId: 58137
+X-Mailer-SID: 367
+X-Mailer-Sent-By: 1
+Content-Type: multipart/alternative; charset="UTF-8"; boundary="b1_edfdb20264df7f42be432a628bb6620e"
+Content-Transfer-Encoding: 8bit
+X-AntiAbuse: This header was added to track abuse, please include it with any abuse report
+X-AntiAbuse: Primary Hostname - vmi106355.contabo.host
+X-AntiAbuse: Original Domain - gmail.com
+X-AntiAbuse: Originator/Caller UID/GID - [47 12] / [47 12]
+X-AntiAbuse: Sender Address Domain - dorotafilipiuk.pl
+X-Get-Message-Sender-Via: vmi106355.contabo.host: authenticated_id: biuro@dorotafilipiuk.pl
+X-Authenticated-Sender: vmi106355.contabo.host: biuro@dorotafilipiuk.pl
+X-Source: 
+X-Source-Args: 
+X-Source-Dir: 
+
+--b1_edfdb20264df7f42be432a628bb6620e
+Content-Type: text/plain; format=flowed; charset="UTF-8"
+Content-Transfer-Encoding: 8bit
+
+Cześć,
+dzisiaj również zapraszam Cię na spotkanie na żywo w Grupie
+Wyzwań o godzinie 20:00 w ramach naszego wyzwania.
+Wczoraj frekwencja była ogromna a atmosfera wspaniała ;)
+Mam nadzieję, że będziesz i dzisiaj bo powiemy sobie o najważniejszych
+
+zasadach skutecznego planowania, czyli takiego które działa ;))
+
+Przesyłam Ci również dodatkowe ćwiczenia do tego kroku,
+które znajdziesz pod tym linkiem:
+http://dorotafilipiuk.pl/interspire/link.php?M=58137&N=367&L=2403&F=T
+
+Pamiętaj, że wszystkie materiały będą dostępne tylko do 16.01.
+dlatego nie odkładaj tego na później ;)
+
+Jeśli nie widziałeś jeszcze materiałów do kroku pierwszego
+możesz zobaczyć je tutaj:
+http://dorotafilipiuk.pl/interspire/link.php?M=58137&N=367&L=2402&F=T
+
+Jeśli jeszcze nie jesteś członkiem grupy a chcesz mieć dostęp do
+nagrań i dodatkowych postów, kliknij w ten link:
+http://dorotafilipiuk.pl/interspire/link.php?M=58137&N=367&L=140&F=T
+
+Tymczasem do zobaczenia w grupie i jutro w Twojej skrzynce mailowej :)
+
+Pozdrawiam serdecznie!
+Dorota Filipiuk
+
+www.dorotafilipiuk.pl
+FB: http://dorotafilipiuk.pl/interspire/link.php?M=58137&N=367&L=130&F=T
+YT: http://dorotafilipiuk.pl/interspire/link.php?M=58137&N=367&L=131&F=T
+www.patronite.pl/dorotafilipiuk
+
+Dostajesz tego e-maila, bo chcesz osiągnąć sukces a to wyzwanie może Ci
+to ułatwić.
+Jeśli nie chcesz otrzymywać więcej maili z treściami uczącymi
+efektywności osobistej
+po prostu kiliknij
+TUTAJ:http://dorotafilipiuk.pl/interspire/unsubscribe.php?M=58137&C=3dbaa9c3cdcef032e05bcbf3728b538c&L=81&N=367
+
+--b1_edfdb20264df7f42be432a628bb6620e
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: 8bit
+
+<html>
+<head>
+</head>
+<body>
+Cześć,<br />dzisiaj r&oacute;wnież zapraszam Cię
+na<strong>&nbsp;spotkanie na żywo</strong>&nbsp;w <a
+href="http://dorotafilipiuk.pl/interspire/link.php?M=58137&N=367&L=140&F=H">Grupie<br
+/>Wyzwań</a> o
+godzinie&nbsp;<strong>20</strong><strong>:00&nbsp;</strong>w ramach naszego
+wyzwania.<br />Wczoraj frekwencja była ogromna a atmosfera wspaniała ;)
+<br />Mam nadzieję, że będziesz i dzisiaj&nbsp;bo powiemy sobie o
+<strong>najważniejszych </strong><br /><strong>zasadach skutecznego
+planowania</strong>,&nbsp;czyli takiego kt&oacute;re działa ;))<br /><br
+/>Przesyłam Ci r&oacute;wnież dodatkowe ćwiczenia do tego kroku,<br
+/><span>kt&oacute;re znajdziesz pod tym linkiem:<br /><strong><a
+href="http://dorotafilipiuk.pl/interspire/link.php?M=58137&N=367&L=2403&F=H">http://materialy.dorotafilipiuk.pl/Krok%202.pdf</a></strong><br
+/><br /><span>Pamiętaj, że wszystkie materiały będą dostępne tylko do
+16.01.</span><br /><span>dlatego nie odkładaj tego na p&oacute;źniej
+;)</span><br /><br /><span>Jeśli nie widziałeś jeszcze
+materiał&oacute;w do kroku pierwszego</span><br /><span>możesz zobaczyć
+je tutaj:<br /><strong><a
+href="http://dorotafilipiuk.pl/interspire/link.php?M=58137&N=367&L=2402&F=H">http://materialy.dorotafilipiuk.pl/Krok%201.pdf</a></strong><br
+/><br />Jeśli jeszcze nie jesteś członkiem grupy a chcesz mieć dostęp
+do&nbsp;<br />nagrań i dodatkowych post&oacute;w, kliknij w ten link:<br
+/><strong><a
+href="http://dorotafilipiuk.pl/interspire/link.php?M=58137&N=367&L=140&F=H">https://www.facebook.com/groups/182910378911667/</a></strong><br
+/><br />Tymczasem&nbsp;do zobaczenia w <a
+href="http://dorotafilipiuk.pl/interspire/link.php?M=58137&N=367&L=140&F=H">grupie</a>&nbsp;i
+jutro w Twojej skrzynce mailowej :)<br /><br />Pozdrawiam serdecznie!<br
+/>Dorota Filipiuk<br /><br />www.dorotafilipiuk.pl<br
+/>FB:&nbsp;https://www.facebook.com/dorotafilipiukpl/<br
+/>YT:&nbsp;http://www.youtube.com/c/DorotaFilipiuktrainer&nbsp;<br
+/>www.patronite.pl/dorotafilipiuk<br /><br />Dostajesz tego e-maila, bo
+chcesz osiągnąć sukces a to wyzwanie może Ci to
+ułatwić.</span></span>
+<div>Jeśli nie chcesz otrzymywać więcej maili z treściami uczącymi
+efektywności osobistej</div>
+<span><span>po prostu kiliknij&nbsp;</span><a
+href="http://dorotafilipiuk.pl/interspire/unsubscribe.php?M=58137&C=3dbaa9c3cdcef032e05bcbf3728b538c&L=81&N=367">TUTAJ<span>.</span></a></span><a
+href="http://dorotafilipiuk.pl/interspire/unsubscribe.php?M=58137&C=3dbaa9c3cdcef032e05bcbf3728b538c&L=81&N=367"><br
+/></a><br /><br />
+<img
+src="http://dorotafilipiuk.pl/interspire/open.php?M=58137&L=81&N=367&F=H&image=.jpg"
+height="1" width="10"></body>
+</html>
+
+--b1_edfdb20264df7f42be432a628bb6620e--
+
+

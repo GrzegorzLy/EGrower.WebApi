@@ -1,0 +1,841 @@
+Delivered-To: dragonet.c17@gmail.com
+Received: by 10.107.138.224 with SMTP id c93csp2815400ioj;
+        Mon, 8 Jan 2018 12:49:54 -0800 (PST)
+X-Google-Smtp-Source: ACJfBot287Ng4E1ORCzsQpJInBjoNxB8Z5Rp9VzguxggcDR48SZVW93WWTz+DV5K0a9veDaFjiNE
+X-Received: by 10.98.137.216 with SMTP id n85mr11631702pfk.207.1515444594806;
+        Mon, 08 Jan 2018 12:49:54 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1515444594; cv=none;
+        d=google.com; s=arc-20160816;
+        b=Y9RHEvp+iLy8Cz8VxvKND17ckwNMGPNK8p+Ej+G+w8oosCmZfFx81NdLZukl3w7TQb
+         JRqKJpfXj+zF9sN8vkH++75xUONBDXH/7C2kZi0Pxwp/3ubvJLiJApZ/w4WoRvixsiLp
+         mD8EqrA4WbyKHrArG8jJcJKUOcPkI8fYK4MVzObXkr0NZKQdtcNMnESA8Bnk7zV5X0Ko
+         jg/7xzCVrMGuAiHQuR4pwJLHrkKfYgln4aSvxncRe6QLhjgUiUtOQyjEWnbT+ih2hIWl
+         HBeQhtMJsd/n6DGOpkjG7UBf7PTpz7RYhj6YiXgyATD45leqiaREJXxEJzOlttE9Eyor
+         UGqg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=list-unsubscribe:mime-version:subject:message-id:to:reply-to:from
+         :date:dkim-signature:dkim-signature:arc-authentication-results;
+        bh=9WApXEcat0yL86W/IrCElXEhVhGo3Zm0GWt7vdJRspM=;
+        b=cLQPDL9ZKHW+TrU3Vnq9ZO6mr8+HGHYtyJZuPFEG7adpqPRW4HiLi/NxddPahDWsE9
+         qcn9QkRMuk3fOYA6fZlzJqyYrCdyBVIoiRf6ObyvlMVBg9ezLI0WrxO/4jM43yDRIKrU
+         WQ01qZ0m6WyMN2vbmAkp1REWVsKGhI1D/fqrzloGBUEGn73TuxzBFPCRJmasBI/oPEz8
+         xVIfGJx8G5j2SLXbbvSBhECpwyTCtL/7SmxUO9qooF3101nMAF+PtIpay1ALCEyUyCwe
+         XSptYrFKwSe0lnIoCQgVekZlKToxv1T7P4+JSLcITe8uRxS4J/BcJENSv06N6hMOLee0
+         KX1A==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@pluralsight.com header.s=m1 header.b=Sc5mvvdo;
+       dkim=pass header.i=@mktdns.com header.s=m1 header.b=BWpY7gaB;
+       spf=pass (google.com: domain of 306-dup-745.0.225293.0.0.21163.9.6801855@smtp.pluralsight.com designates 199.15.215.12 as permitted sender) smtp.mailfrom=306-DUP-745.0.225293.0.0.21163.9.6801855@smtp.pluralsight.com
+Return-Path: <306-DUP-745.0.225293.0.0.21163.9.6801855@smtp.pluralsight.com>
+Received: from smtp.pluralsight.com (smtp.pluralsight.com. [199.15.215.12])
+        by mx.google.com with ESMTPS id h90si9014378plb.320.2018.01.08.12.49.54
+        for <dragonet.c17@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 08 Jan 2018 12:49:54 -0800 (PST)
+Received-SPF: pass (google.com: domain of 306-dup-745.0.225293.0.0.21163.9.6801855@smtp.pluralsight.com designates 199.15.215.12 as permitted sender) client-ip=199.15.215.12;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@pluralsight.com header.s=m1 header.b=Sc5mvvdo;
+       dkim=pass header.i=@mktdns.com header.s=m1 header.b=BWpY7gaB;
+       spf=pass (google.com: domain of 306-dup-745.0.225293.0.0.21163.9.6801855@smtp.pluralsight.com designates 199.15.215.12 as permitted sender) smtp.mailfrom=306-DUP-745.0.225293.0.0.21163.9.6801855@smtp.pluralsight.com
+Return-Path: <lindsey@pluralsight.com>
+X-MSFBL: ZHJhZ29uZXQuYzE3QGdtYWlsLmNvbUBkdnAtMTk5LTE1LTIxNS0xMkBiZy1zamQt
+	OTlAMzA2LURVUC03NDU6NjgyNTI6MTczMDY6ODM5MTA6MDoyMTE2Mzo5OjIyNTI5
+	Mzo2ODAxODU1
+Received: from [10.0.87.249] ([10.0.87.249:58392] helo=sjmas03.marketo.org)
+	by sjmta09.marketo.org (envelope-from <lindsey@pluralsight.com>)
+	(ecelerity 3.6.8.47404 r(Core:3.6.8.0)) with ESMTP
+	id D6/C9-26680-D09D35A5; Mon, 08 Jan 2018 14:48:13 -0600
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; t=1515444493;
+	s=m1; d=pluralsight.com; i=@pluralsight.com;
+	h=Date:From:To:Subject:MIME-Version:Content-Type;
+	bh=9WApXEcat0yL86W/IrCElXEhVhGo3Zm0GWt7vdJRspM=;
+	b=Sc5mvvdoeFwLJkfYzPw5kkqlYIS+yVbBPJONzrPK459M32zTz97UlPT5r4Y9OpV2
+	6+sEeF4Y0df4MHMO7aL2Dxbk9E8aqtfdbPmt3kd5e+4WqbNTP0ZvH7l45ji7YSp+qOi
+	hJjMQxZhnkM9RvwWLiJt7I7kpUb71vYIl5RXgClI=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; t=1515444493;
+	s=m1; d=mktdns.com; i=@mktdns.com;
+	h=Date:From:To:Subject:MIME-Version:Content-Type;
+	bh=9WApXEcat0yL86W/IrCElXEhVhGo3Zm0GWt7vdJRspM=;
+	b=BWpY7gaB4sLiQWeqTk0APDBj3VMu2v2BOVFCX2HHRVFXzIglttLxJzfaUpn2EFaQ
+	EI4INuGaa0FC6cTT/RbC3uIoJFFbxzqS5BTqGMBofNtxBcUdT6v8vVRnU8UONTp1d+g
+	gTSgxTDZjNmAd1kXY+7niKaa/5xkcewBRDmIY54Y=
+Date: Mon, 8 Jan 2018 14:48:13 -0600 (CST)
+From: Pluralsight <lindsey@pluralsight.com>
+Reply-To: lindsey@pluralsight.com
+To: dragonet.c17@gmail.com
+Message-ID: <1267354686.-1729065510.1515444493927.JavaMail.root@sjmas03.marketo.org>
+Subject: Take 3 assessments. Win sweet prizes!
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_-1729065511_1817137639.1515444493927"
+X-PVIQ: mkto-306DUP745-000001-000000-225293
+X-Binding: bg-sjd-99
+X-MarketoID: 306-DUP-745:68252:17306:83910:0:21163:9:225293:6801855
+X-MktArchive: false
+List-Unsubscribe: <mailto:OZDGQYTFGI4E2Z32KJQTGYKINNMUW2KPIFIT2PI.225293.21163.9@unsub-sj.mktomail.com>
+X-Mailfrom: 306-DUP-745.0.225293.0.0.21163.9.6801855@smtp.pluralsight.com
+X-MSYS-API: {"options":{"open_tracking":false,"click_tracking":false}}
+X-MktMailDKIM: true
+
+------=_Part_-1729065511_1817137639.1515444493927
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+| Win a DJI Mavic Pro + UAV Goggles |
+<http://track.pluralsight.com/WD0IuNUsv0E1Phl00x1to00>
+<http://track.pluralsight.com/WD0IuNUsv0E1Phl00x1to00>
+Start now <http://track.pluralsight.com/WD0IuNUsv0E1Phl00x1to00>
+<http://track.pluralsight.com/WD0IuNUsv0E1Phl00x1to00>
+Take 3 assessments to win a=20
+
+=20
+DJI MAVIC PRO + UAV GOGGLES
+Here's a better New Year's resolution.=20
+
+=20
+Join the TAKE 3 challenge. It's simple:
+
+Take 3 different=20
+ assessments
+
+Get your Skill IQ=20
+ for each
+
+Be entered to=20
+ win prizes
+You'll also get an accurate measurement of where your skills stand=E2=80=94=
+giving you=20
+ confidence to grow your skills in 2018 and beyond.=20
+
+=20
+
+ The sooner you start, the more chances to win.=20
+
+ Explore our assessments and get going!
+Take 3 now <http://track.pluralsight.com/WD0IuNUsv0E1Phl00x1to00>
+Disclaimer: No purchase necessary. A purchase of any kind will not increase=
+ your chances of winning. Ends February 19, 2018. See the Official Rules & =
+Privacy Policy.
+<http://track.pluralsight.com/dc/JYWY0TlT8MJDYEoI81rBxOnTOO88FqBDDYRDr8jL7C=
+c=3D/R00vstIUxh0010l0DFPovN1>
+
+ Pluralsight, LLC 182 N. Union Ave. Farmington, UT 84025=20
+
+   <http://track.pluralsight.com/dc/M5yi0yZ-UZCCxV3bfEu0anbONeUjOd18p_VSSgg=
+cgn0DrbpjHMEHkIJurPN3o6x7/R00vstIUxh0010l0DFPovN1>
+   <http://track.pluralsight.com/dc/MYFzQrvu5rPS8PETBnVMsRusr34Y1lr0HdZtfs8=
+2X3v9rFnWXM6_VHgQDeQ1wjEu/R00vstIUxh0010l0DFPovN1>
+   <http://track.pluralsight.com/dc/mEXRm9OBeNs3Y1bS8bbzxSIJ8iuvrVEtSkOtQ-B=
+3bvA=3D/R00vstIUxh0010l0DFPovN1>
+   <http://track.pluralsight.com/dc/fG5-PlwEnZR-IoSdwCtjIpTVr9AsJHNwc_srhy7=
+U9rVQYJ5-L-XVAJU3uI-ICH5l/R00vstIUxh0010l0DFPovN1>
+   <http://track.pluralsight.com/dc/yBSzDXz1t83SAu8S57EEMjXpT0QzKEIw3GTILdK=
+ytdEZ4v5sL59nNypA4cX6KDoI/R00vstIUxh0010l0DFPovN1>
+   <http://track.pluralsight.com/dc/M9Y3nowLDCcEv8uSbJAkaXTGHqV_YEzxUjtWE9O=
+_NefBZ08YC8PHjcsXU2E01rGh/R00vstIUxh0010l0DFPovN1>
+
+ Copyright=C2=A9 2017 Pluralsight LLC.
+ All logos and trademarks are the properties of their respective owners.=20
+
+ This email was sent to dragonet.c17@gmail.com <http://track.pluralsight.co=
+m/dc/1pDQu0mqE2rkhpZT-8gq22t_e8hlmX3JHlD628UL3nY=3D/R00vstIUxh0010l0DFPovN1=
+>
+ Unsubscribe <[[https://get.pluralsight.com/UnsubscribePage.html?mkt_unsubs=
+cribe=3D1&mkt_tok=3DeyJpIjoiTldObFltTXhOelF4TVdReiIsInQiOiJFZFkzZGgybVRlT1Z=
+COGFuaGphZ2oxekxkMHg2dEl0ZUVPaFljcXRDZkE2b3ZNVU5hYWMyVHVndFFRRGRGdHZhL1FTSE=
+xSWFEvM3k0T21NeG5UZEFRa01BQitDaUQ0ZWF5RGd5Zjk2M0o5a0pZYUV0YWFwWnhsTks5ZWpiO=
+VBjNyJ9/]]> | Manage your preferences <http://track.pluralsight.com/wUtPNsh=
+Dv0010lIx00x1H0o>
+
+------=_Part_-1729065511_1817137639.1515444493927
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns=3D"http://www.w3.org/1999/xhtml" xmlns:v=3D"urn:schemas-microso=
+ft-com:vml" xmlns:o=3D"urn:schemas-microsoft-com:office:office">
+<head>=20
+<title>PLURALSIGHT</title>=20
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8" />=
+=20
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge" />=20
+<meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1.=
+0 " />=20
+<meta name=3D"format-detection" content=3D"telephone=3Dno" />=20
+<!--[if !mso]><!-->=20
+<link href=3D"https://fonts.googleapis.com/css?family=3DOpen+Sans:300,300i,=
+400,400i,600,600i,700,700i,800,800i" rel=3D"stylesheet" />=20
+<!--<![endif]-->=20
+<style type=3D"text/css">
+body {
+=09margin: 0 !important;
+=09padding: 0 !important;
+=09-webkit-text-size-adjust: 100% !important;
+=09-ms-text-size-adjust: 100% !important;
+=09-webkit-font-smoothing: antialiased !important;
+}
+img {
+=09border: 0 !important;
+=09outline: none !important;
+}
+p {
+=09Margin: 0px !important;
+=09Padding: 0px !important;
+}
+table {
+=09border-collapse: collapse;
+=09mso-table-lspace: 0px;
+=09mso-table-rspace: 0px;
+}
+td, a, span {
+=09border-collapse: collapse;
+=09mso-line-height-rule: exactly;
+}
+.ExternalClass * {
+=09line-height: 100%;
+}
+.em_defaultlink a {
+=09color: inherit !important;
+=09text-decoration: none !important;
+}
+span.MsoHyperlink {
+=09mso-style-priority: 99;
+=09color: inherit;
+}
+span.MsoHyperlinkFollowed {
+=09mso-style-priority: 99;
+=09color: inherit;
+}
+.em_gry a {
+=09color: #888888;
+=09text-decoration: none;
+}
+.em_black a {
+=09color: #000000;
+=09text-decoration: none;
+}
+.em_white1 a {
+=09color: #ffffff;
+=09text-decoration: none;
+}
+.em_blue a {
+=09text-decoration: none;
+=09color: #1e7fbe;
+}
+.em_blue1 a {
+=09text-decoration: none;
+=09color: #43BDED;
+}
+
+/*Stylesheet for the devices width between 481px to 599px*/
+@media only screen and (min-width:481px) and (max-width:599px) {
+.em_main_table {
+=09width: 100% !important;
+}
+.em_wrapper {
+=09width: 100% !important;
+}
+.em_hide {
+=09display: none !important;
+}
+.em_full_img {
+=09width: 100% !important;
+=09height: auto !important;
+}
+.em_h20 {
+=09height: 20px !important;
+}
+.em_side {
+=09width: 10px !important;
+}
+.em_height {
+=09height: 15px !important;
+}
+.em_aside {
+=09padding: 0px 10px !important;
+}
+.em_pad_top {
+=09padding-top: 20px !important;
+}
+}
+
+/*Stylesheet for the devices width between 0px to 480px*/
+@media only screen and (max-width:480px) {
+.em_main_table {
+=09width: 100% !important;
+}
+.em_wrapper {
+=09width: 100% !important;
+}
+.em_hide {
+=09display: none !important;
+}
+.em_full_img {
+=09width: 100% !important;
+=09height: auto !important;
+}
+.em_height {
+=09height: 15px !important;
+}
+.em_side {
+=09width: 10px !important;
+}
+.em_h20 {
+=09height: 20px !important;
+}
+u + .em_body .em_full_wrap {
+=09width: 100% !important;
+=09width: 100vw !important;
+}
+.em_aside {
+=09padding: 0px 10px !important;
+}
+.em_pad_top {
+=09padding-top: 20px !important;
+}
+.em_img {
+=09width: 290px !important;
+=09height: auto !important;
+}
+}
+</style>=20
+<!--[if gte mso 9]>
+    <xml>
+      <o:OfficeDocumentSettings>
+        <o:AllowPNG/>
+        <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+    </xml>
+    <![endif]-->=20
+</head>=20
+<body class=3D"em_body" style=3D"margin:0px; padding:0px;" bgcolor=3D"#ffff=
+ff">=20
+<!--Full width table start-->=20
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" bgco=
+lor=3D"#ffffff" class=3D"em_full_wrap">=20
+<tbody>=20
+<tr>=20
+<td align=3D"center" valign=3D"top">=20
+<table width=3D"600" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" class=
+=3D"em_main_table" style=3D"width:600px; table-layout:fixed;" bgcolor=3D"#f=
+fffff">=20
+<!--HEADER SECTION-->=20
+<tbody>=20
+<tr>=20
+<td align=3D"center" style=3D"font-size:0px;line-height:0px;font-family:Ari=
+al, sans-serif;color:#ffffff;display:none;">=20
+<div class=3D"mktEditable" id=3D"pre-header">
+| Win a DJI Mavic Pro + UAV Goggles |
+</div></td>=20
+</tr>=20
+<tr>=20
+<td valign=3D"top" align=3D"center" bgcolor=3D"#43bded">=20
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" alig=
+n=3D"center">=20
+<tbody>=20
+<tr>=20
+<td width=3D"10" style=3D"width:10px;" class=3D"em_side">&nbsp;</td>=20
+<td align=3D"center" valign=3D"top">=20
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" alig=
+n=3D"center">=20
+<tbody>=20
+<tr>=20
+<td height=3D"40" style=3D"height:40px;" class=3D"em_h20">&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td valign=3D"top" align=3D"center" style=3D"font-size:0px; line-height:0px=
+;">=20
+<div class=3D"mktEditable" id=3D"header_logo">
+<a href=3D
+"http://track.pluralsight.com/WD0IuNUsv0E1Phl00x1to00" target=3D"_blank" st=
+yle=3D"text-decoration: none;"
+><img src=3D"https://pluralsight-assets.s3.amazonaws.com/B2CEmailBlasts/Tak=
+e-Three-2018/Inactive/Email-1/header_logo.png" alt=3D"Pluralsight IQ" width=
+=3D"140" height=3D"20" style=3D"display: block; max-width: 140px; font-fami=
+ly: Arial, sans-serif; font-size: 14px; line-height: 18px; color: #ffffff; =
+font-weight: bold; letter-spacing: 2px;" border=3D"0" constrain=3D"true" im=
+agepreview=3D"false" /></a>
+</div></td>=20
+</tr>=20
+<tr>=20
+<td height=3D"40" style=3D"height:40px;" class=3D"em_h20">&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td valign=3D"top" align=3D"center">=20
+<div class=3D"mktEditable" id=3D"header_image">
+<a href=3D
+"http://track.pluralsight.com/WD0IuNUsv0E1Phl00x1to00" target=3D"_blank"
+><img src=3D"https://pluralsight-assets.s3.amazonaws.com/B2CEmailBlasts/Tak=
+e-Three-2018/Inactive/Email-1/img_1.png" class=3D"em_img" alt=3D"TAKE THR3E=
+" width=3D"324" height=3D"30" style=3D"display: block; max-width: 324px; fo=
+nt-family: Arial, sans-serif; font-size: 14px; line-height: 18px; color: #f=
+fffff; font-weight: bold; letter-spacing: 2px;" border=3D"0" constrain=3D"t=
+rue" imagepreview=3D"false" /></a>
+</div></td>=20
+</tr>=20
+<tr>=20
+<td height=3D"28" style=3D"height:28px;" class=3D"em_h20">&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td valign=3D"top" align=3D"center">=20
+<table width=3D"106" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"center" style=3D"width:106px; border-radius:1px;" bgcolor=3D"#000000">=
+=20
+<tbody>=20
+<tr>=20
+<td height=3D"32" class=3D"em_white1" align=3D"center" valign=3D"middle" st=
+yle=3D"font-family: 'Open Sans', Arial, sans-serif; font-size:12px; color:#=
+ffffff; font-weight:600;">=20
+<div id=3D"text1" class=3D"mktEditable">
+<a href=3D
+"http://track.pluralsight.com/WD0IuNUsv0E1Phl00x1to00" target=3D"_blank" st=
+yle=3D"text-decoration: none; display: block; color: #ffffff; line-height: =
+32px;"
+>Start now</a>
+</div></td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+<tr>=20
+<td height=3D"20" style=3D"height:20px; font-size:1px; line-height:1px;" cl=
+ass=3D"em_h20">&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+<td width=3D"10" style=3D"width:10px;" class=3D"em_side">&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+<!--HEADER SECTION-->=20
+<!--CONTENT SECTION-->=20
+<tr>=20
+<td valign=3D"top" align=3D"center">=20
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" alig=
+n=3D"center" style=3D"width:600px;" class=3D"em_wrapper">=20
+<!--Banner SECTION-->=20
+<tbody>=20
+<tr>=20
+<td valign=3D"top" align=3D"center" style=3D"padding:0px 30px 0px 30px;" cl=
+ass=3D"em_aside">=20
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" alig=
+n=3D"center">=20
+<tbody>=20
+<tr>=20
+<td height=3D"33" style=3D"height:33px;" class=3D"em_h20">&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td valign=3D"top" align=3D"center">=20
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" alig=
+n=3D"center" dir=3D"rtl">=20
+<tbody>=20
+<tr>=20
+<td valign=3D"top" align=3D"center">=20
+<table width=3D"248" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"right" class=3D"em_wrapper" style=3D"width:248px;" dir=3D"ltr">=20
+<tbody>=20
+<tr>=20
+<td width=3D"15" style=3D"width:15px;" class=3D"em_hide">&nbsp;</td>=20
+<td valign=3D"top" align=3D"center">=20
+<div class=3D"mktEditable" id=3D"img_2">
+<a href=3D
+"http://track.pluralsight.com/WD0IuNUsv0E1Phl00x1to00" target=3D"_blank"
+><img src=3D"https://pluralsight-assets.s3.amazonaws.com/B2CEmailBlasts/Tak=
+e-Three-2018/Inactive/Email-1/img_2.png" width=3D"233" height=3D"114" alt=
+=3D" Drone" border=3D"0" style=3D"display: block; font-family: Arial, sans-=
+serif; font-size: 17px; line-height: 20px; color: #000000; max-width: 233px=
+;" constrain=3D"true" imagepreview=3D"false" /></a>
+</div></td>=20
+</tr>=20
+</tbody>=20
+</table>=20
+<!--[if gte mso 9]></td><td valign=3D"top"><![endif]-->=20
+<table width=3D"290" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"left" class=3D"em_wrapper" style=3D"width:290px;" dir=3D"ltr">=20
+<tbody>=20
+<tr>=20
+<td height=3D"20" style=3D"font-size:1px; line-height:1px;" class=3D"em_hid=
+e">&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td align=3D"center" class=3D"em_blue1" style=3D"font-family:'Gotham', Helv=
+etica, Arial, sans-serif; font-size:15px; line-height:23px; color:#43BDED; =
+letter-spacing:1px;">=20
+<div id=3D"text2" class=3D"mktEditable">
+Take 3 assessments to win a=20
+<br />=20
+<span style=3D"font-weight:bold;">DJI MAVIC PRO + UAV GOGGLES</span>
+</div></td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+<tr>=20
+<td valign=3D"top" align=3D"center" class=3D"em_pad_top">=20
+<table width=3D"306" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"center" style=3D"width:306px; max-width:306px;" class=3D"em_wrapper">=
+=20
+<tbody>=20
+<tr>=20
+<td height=3D"1" style=3D"font-size:1px; line-height:1px;" bgcolor=3D"#9395=
+98"><img src=3D"https://pluralsight-assets.s3.amazonaws.com/B2CEmailBlasts/=
+Take-Three-2018/Inactive/Email-1/spacer.gif" width=3D"1" height=3D"1" alt=
+=3D"" border=3D"0" style=3D"display:block;" /></td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+<tr>=20
+<td height=3D"35" style=3D"height:35px;" class=3D"em_h20">&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td align=3D"center" class=3D"em_black" style=3D"font-family:'Helvetica Neu=
+e', Helvetica, Arial, sans-serif; font-size:13px; line-height:22px; color:#=
+000000;">=20
+<div id=3D"text3" class=3D"mktEditable">
+Here's a better New Year's resolution.=20
+<br />=20
+<span style=3D"font-weight:bold;">Join the TAKE 3 challenge. It's simple:</=
+span>
+</div></td>=20
+</tr>=20
+<tr>=20
+<td height=3D"35" style=3D"height:35px;" class=3D"em_h20">&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td valign=3D"top" align=3D"center">=20
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center">=
+=20
+<tbody>=20
+<tr>=20
+<td valign=3D"top" align=3D"center">=20
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"left" clas=
+s=3D"em_wrapper">=20
+<tbody>=20
+<tr>=20
+<td valign=3D"top" align=3D"center">=20
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" alig=
+n=3D"center">=20
+<tbody>=20
+<tr>=20
+<td valign=3D"top" align=3D"center">=20
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"left" clas=
+s=3D"em_wrapper">=20
+<tbody>=20
+<tr>=20
+<td valign=3D"top" align=3D"center">=20
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" alig=
+n=3D"center">=20
+<tbody>=20
+<tr>=20
+<td valign=3D"middle" align=3D"center" height=3D"38" style=3D"height:38px;"=
+>=20
+<div class=3D"mktEditable" id=3D"img_3">
+<img src=3D"https://pluralsight-assets.s3.amazonaws.com/B2CEmailBlasts/Take=
+-Three-2018/Inactive/Email-1/img_3.png" width=3D"37" height=3D"38" alt=3D" =
+" border=3D"0" style=3D"display:block; font-family:Arial, sans-serif; font-=
+size:17px; line-height:20px; color:#000000; max-width:37px;" />
+</div></td>=20
+</tr>=20
+<tr>=20
+<td height=3D"15" style=3D"font-size:1px; line-height:1px;">&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td align=3D"center" class=3D"em_black" style=3D"font-family:'Helvetica Neu=
+e', Helvetica, Arial, sans-serif; font-size: 11px;line-height: 15px;color: =
+#000000;">=20
+<div id=3D"text4" class=3D"mktEditable">
+Take 3 different=20
+<br class=3D"em_hide" /> assessments
+</div></td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+<td width=3D"70" style=3D"width:70px;" class=3D"em_hide">&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table>=20
+<!--[if gte mso 9]></td><td valign=3D"top"><![endif]-->=20
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"right" cla=
+ss=3D"em_wrapper">=20
+<tbody>=20
+<tr>=20
+<td valign=3D"top" align=3D"center" class=3D"em_pad_top">=20
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" alig=
+n=3D"center">=20
+<tbody>=20
+<tr>=20
+<td valign=3D"middle" align=3D"center" height=3D"38" style=3D"height:38px;"=
+>=20
+<div class=3D"mktEditable" id=3D"img_4">
+<img src=3D"https://pluralsight-assets.s3.amazonaws.com/B2CEmailBlasts/Take=
+-Three-2018/Inactive/Email-1/img_4.png" width=3D"46" height=3D"34" alt=3D" =
+" border=3D"0" style=3D"display:block; font-family:Arial, sans-serif; font-=
+size:17px; line-height:20px; color:#000000; max-width:46px;" />
+</div></td>=20
+</tr>=20
+<tr>=20
+<td height=3D"15" style=3D"font-size:1px; line-height:1px;">&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td align=3D"center" class=3D"em_black" style=3D"font-family:'Helvetica Neu=
+e', Helvetica, Arial, sans-serif; font-size: 11px;line-height: 15px;color: =
+#000000;">=20
+<div id=3D"text6" class=3D"mktEditable">
+Get your Skill IQ=20
+<br class=3D"em_hide" /> for each
+</div></td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+<td width=3D"70" style=3D"width:70px;" class=3D"em_hide">&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+</tbody>=20
+</table>=20
+<!--[if gte mso 9]></td><td valign=3D"top"><![endif]-->=20
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"right" cla=
+ss=3D"em_wrapper">=20
+<tbody>=20
+<tr>=20
+<td valign=3D"top" align=3D"center" class=3D"em_pad_top">=20
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" alig=
+n=3D"center">=20
+<tbody>=20
+<tr>=20
+<td valign=3D"middle" align=3D"center" height=3D"38" style=3D"height:38px;"=
+>=20
+<div class=3D"mktEditable" id=3D"img_5">
+<img src=3D"https://pluralsight-assets.s3.amazonaws.com/B2CEmailBlasts/Take=
+-Three-2018/Inactive/Email-1/img_5.png" width=3D"36" height=3D"35" alt=3D" =
+" border=3D"0" style=3D"display:block; font-family:Arial, sans-serif; font-=
+size:17px; line-height:20px; color:#000000; max-width:36px;" />
+</div></td>=20
+</tr>=20
+<tr>=20
+<td height=3D"15" style=3D"font-size:1px; line-height:1px;">&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td align=3D"center" class=3D"em_black" style=3D"font-family:'Helvetica Neu=
+e', Helvetica, Arial, sans-serif; font-size: 11px;line-height: 15px;color: =
+#000000;">=20
+<div id=3D"text7" class=3D"mktEditable">
+Be entered to=20
+<br class=3D"em_hide" /> win prizes
+</div></td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+<tr>=20
+<td height=3D"35" style=3D"height:35px;" class=3D"em_h20">&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td align=3D"center" class=3D"em_black" style=3D"font-family:'Helvetica Neu=
+e', Helvetica, Arial, sans-serif; font-size:13px; line-height:20px; color:#=
+000000;">=20
+<div id=3D"text5" class=3D"mktEditable">
+You'll also get an accurate measurement of where your skills stand=E2=80=94=
+giving you=20
+<br class=3D"em_hide" /> confidence to grow your skills in 2018 and beyond.=
+=20
+<br />=20
+<br /> The sooner you start, the more chances to win.=20
+<br /> Explore our assessments and get going!
+</div></td>=20
+</tr>=20
+<tr>=20
+<td height=3D"30" style=3D"height:30px;" class=3D"em_h20">&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td valign=3D"top" align=3D"center">=20
+<table width=3D"108" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"center" style=3D"width:108px; border-radius:1px;" bgcolor=3D"#43bded">=
+=20
+<tbody>=20
+<tr>=20
+<td height=3D"31" class=3D"em_white1" align=3D"center" valign=3D"middle" st=
+yle=3D"font-family: 'Open Sans', Arial, sans-serif; font-size:12px; color:#=
+ffffff; font-weight:600;">=20
+<div id=3D"text_btn" class=3D"mktEditable">
+<a href=3D
+"http://track.pluralsight.com/WD0IuNUsv0E1Phl00x1to00" target=3D"_blank" st=
+yle=3D"text-decoration: none; display: block; color: #ffffff; line-height: =
+31px;"
+>Take 3 now</a>
+</div></td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+<tr>=20
+<td height=3D"35" style=3D"height:35px;" class=3D"em_h20">&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td align=3D"center" class=3D"em_black" style=3D"font-family:'Helvetica Neu=
+e', Helvetica, Arial, sans-serif; font-size:10px; line-height:13px; color:#=
+000000; width: 400px;">=20
+<div id=3D"text8" class=3D"mktEditable">
+Disclaimer: No purchase necessary. A purchase of any kind will not increase=
+ your chances of winning. Ends February 19, 2018. See the Official Rules &a=
+mp; Privacy Policy.=20
+<br />
+</div></td>=20
+</tr>=20
+<tr>=20
+<td height=3D"35" style=3D"height:35px;" class=3D"em_h20">&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+<!--//Banner SECTION-->=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+<!--//CONTENT SECTION-->=20
+<!--FOOTER_SECTION-->=20
+<tr>=20
+<td valign=3D"top" align=3D"center" bgcolor=3D"#000000">=20
+<table width=3D"600" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" class=
+=3D"em_wrapper" style=3D"width:600px;">=20
+<tbody>=20
+<tr>=20
+<!--Footer Snippet-->=20
+</tr>=20
+</tbody>=20
+<tbody>=20
+<tr style=3D"">=20
+<td style=3D"">=20
+<div class=3D"mktEditable" id=3D"email_footer_snippet" style=3D"">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%">=20
+<tbody>=20
+<tr>=20
+<td class=3D"stack" bgcolor=3D"#000000" style=3D"font-family: Arial, Helvet=
+ica, sans-serif; font-size: 12px; line-height: 14px; color: #888888; paddin=
+g: 50px;">=20
+<div class=3D"mktEditable" id=3D"footer">=20
+<p style=3D"line-height: 100%; margin-top: 0px; margin-bottom: 0px;"><a hre=
+f=3D
+"http://track.pluralsight.com/dc/JYWY0TlT8MJDYEoI81rBxOnTOO88FqBDDYRDr8jL7C=
+c=3D/R00vstIUxh0010l0DFPovN1" target=3D"_blank"
+><img src=3D"http://pluralsight-assets.s3.amazonaws.com/transactional/templ=
+ate/ps-logo-with-icon-horiz-white-line.png" width=3D"195" height=3D"45" bor=
+der=3D"0" style=3D"display: block;" alt=3D"Pluralsight" /></a></p>=20
+<br /> Pluralsight, LLC 182 N. Union Ave. Farmington, UT 84025=20
+<br />
+<br />=20
+<!--Social-->=20
+<table width=3D"192" border=3D"0" cellpadding=3D"7" cellspacing=3D"0">=20
+<tbody>=20
+<tr>=20
+<td width=3D"11"><a href=3D
+"http://track.pluralsight.com/dc/M5yi0yZ-UZCCxV3bfEu0anbONeUjOd18p_VSSggcgn=
+0DrbpjHMEHkIJurPN3o6x7/R00vstIUxh0010l0DFPovN1" target=3D"_blank"
+> <img src=3D"http://pluralsight-assets.s3.amazonaws.com/template_images/fa=
+cebook_white.png" width=3D"11" height=3D"20" alt=3D"facebook" style=3D"disp=
+lay: block;" border=3D"0" /> </a></td>=20
+<td width=3D"20"><a href=3D
+"http://track.pluralsight.com/dc/MYFzQrvu5rPS8PETBnVMsRusr34Y1lr0HdZtfs82X3=
+v9rFnWXM6_VHgQDeQ1wjEu/R00vstIUxh0010l0DFPovN1" target=3D"_blank"
+> <img src=3D"http://pluralsight-assets.s3.amazonaws.com/template_images/in=
+stagram_white.png" width=3D"20" height=3D"19" alt=3D"instagram" style=3D"di=
+splay: block;" border=3D"0" /> </a></td>=20
+<td width=3D"24"><a href=3D
+"http://track.pluralsight.com/dc/mEXRm9OBeNs3Y1bS8bbzxSIJ8iuvrVEtSkOtQ-B3bv=
+A=3D/R00vstIUxh0010l0DFPovN1" target=3D"_blank"
+> <img src=3D"http://pluralsight-assets.s3.amazonaws.com/template_images/tw=
+itter_white.png" width=3D"24" height=3D"19" alt=3D"twitter" style=3D"displa=
+y: block;" border=3D"0" /> </a></td>=20
+<td width=3D"20"><a href=3D
+"http://track.pluralsight.com/dc/fG5-PlwEnZR-IoSdwCtjIpTVr9AsJHNwc_srhy7U9r=
+VQYJ5-L-XVAJU3uI-ICH5l/R00vstIUxh0010l0DFPovN1" target=3D"_blank"
+> <img src=3D"http://pluralsight-assets.s3.amazonaws.com/template_images/li=
+nkedin_white.png" width=3D"20" height=3D"19" alt=3D"Linked in" style=3D"dis=
+play: block;" border=3D"0" /> </a></td>=20
+<td width=3D"19"><a href=3D
+"http://track.pluralsight.com/dc/M9Y3nowLDCcEv8uSbJAkaXTGHqV_YEzxUjtWE9O_Ne=
+fBZ08YC8PHjcsXU2E01rGh/R00vstIUxh0010l0DFPovN1" target=3D"_blank"
+> <img src=3D"http://pluralsight-assets.s3.amazonaws.com/template_images/yo=
+u_tube_white.png" width=3D"17" height=3D"21" alt=3D"YouTube" style=3D"displ=
+ay: block;" border=3D"0" constrain=3D"true" imagepreview=3D"false" /> </a><=
+/td>=20
+</tr>=20
+</tbody>=20
+</table>=20
+<!--End Social-->=20
+<br />
+<br /> Copyright=C2=A9 2018 Pluralsight LLC.
+<br /> All logos and trademarks are the properties of their respective owne=
+rs.=20
+<br />
+<br /> This email was sent to=20
+<a href=3D
+"http://track.pluralsight.com/dc/1pDQu0mqE2rkhpZT-8gq22t_e8hlmX3JHlD628UL3n=
+Y=3D/R00vstIUxh0010l0DFPovN1" style=3D"color: #207fc2; text-decoration: non=
+e;"
+>dragonet.c17@gmail.com</a>
+<br />=20
+<a href=3D"https://get.pluralsight.com/UnsubscribePage.html?mkt_unsubscribe=
+=3D1&mkt_tok=3DeyJpIjoiTldObFltTXhOelF4TVdReiIsInQiOiJFZFkzZGgybVRlT1ZCOGFu=
+aGphZ2oxekxkMHg2dEl0ZUVPaFljcXRDZkE2b3ZNVU5hYWMyVHVndFFRRGRGdHZhL1FTSExSWFE=
+vM3k0T21NeG5UZEFRa01BQitDaUQ0ZWF5RGd5Zjk2M0o5a0pZYUV0YWFwWnhsTks5ZWpiOVBjNy=
+J9/" target=3D"_blank" style=3D"color: #888888; text-decoration: none;">Uns=
+ubscribe</a> |=20
+<a href=3D
+"http://track.pluralsight.com/dc/jXnNgZX0R5Skt2btW6cf1ZC-rp3W1ClrQyb8joQduf=
+id5Pzoibv5JJHzdhivwCdrLGSROPMb33CSgJ5srQVOZw=3D=3D/R00vstIUxh0010l0DFPovN1"=
+ target=3D"_blank" style=3D"color: #888888; text-decoration: none;"
+>Manage your preferences</a>
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table>
+</div></td>=20
+</tr>=20
+<!--End Footer Snippet-->=20
+<tr>=20
+<td width=3D"40" style=3D"width:40px;" class=3D"em_side">&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+<!--//FOOTER_SECTION-->=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+</tbody>=20
+</table>=20
+<!--Full width table End-->=20
+<!--Increase/decrease the number of (&nbsp;) as per the template width-->=
+=20
+<div class=3D"em_hide" style=3D"white-space:nowrap;font:20px courier;color:=
+#ffffff;">
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbs=
+p; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;=20
+</div> =20
+<a href=3D
+"http://track.pluralsight.com/qIPD0h0tvw0Nso11U0lG00x"
+></a>
+<img src=3D"http://track.pluralsight.com/trk?t=3D1&mid=3DMzA2LURVUC03NDU6Nj=
+gyNTI6MTczMDY6ODM5MTA6MDoyMTE2Mzo5OjIyNTI5Mzo2ODAxODU1OmRyYWdvbmV0LmMxN0Bnb=
+WFpbC5jb20%3D" width=3D"1" height=3D"1" style=3D"display:none !important;" =
+alt=3D"" />
+</body>
+</html>
+------=_Part_-1729065511_1817137639.1515444493927--

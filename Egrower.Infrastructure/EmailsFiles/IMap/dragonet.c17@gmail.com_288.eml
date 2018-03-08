@@ -1,0 +1,498 @@
+Delivered-To: dragonet.c17@gmail.com
+Received: by 10.107.33.79 with SMTP id h76csp2466892ioh;
+        Thu, 17 Aug 2017 11:08:15 -0700 (PDT)
+X-Received: by 10.98.104.1 with SMTP id d1mr5988424pfc.197.1502993294630;
+        Thu, 17 Aug 2017 11:08:14 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1502993294; cv=none;
+        d=google.com; s=arc-20160816;
+        b=BAHnNSj0e90g8Z1rSSWlPmISTcrn02W5/mrRyxjFDgnKd6cJYRXYFieu7cGRQChEkS
+         fGS8+NSyjGCgQMNKbMvMCGdRSwVET26sSoaIec3mxmkKnuWsoKURHzDb5Mvit5iNK+Na
+         sciIsxNYvMirOYmcp0dXQsqMJnxYyQcN5l+LoLP6sVHg1WmazKi6SPvLwr9d7Zp558TK
+         BOLpbfNqPjAh3+3XqO0WgV5iOQHuKstESL/U8DVymTG/zzMPEoDGs7ziaGIr5GDtfqhH
+         H74YEfMPrkOsjD8cQDSm9E6R/JxNOck8g9+yNMuXmP1dWBq2cUpiktOldVHQu8F4QDjZ
+         OnnQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=list-unsubscribe:mime-version:subject:message-id:to:reply-to:from
+         :date:dkim-signature:dkim-signature:arc-authentication-results;
+        bh=vLBy/HJdmsdk2deO8cgJI8Xul4Ocfg0QuXar62M9moU=;
+        b=aHBBdypjXv9IDs0eq2R+PNdhlmQh7U+A3uxYQTWwusrCeyhYr8tb0BcUJVno9NB1kO
+         gkF2lhG3AdogVWrxJ8So33435vqvBA7ZMQaMMr0U5yBvFFinVF5LE8gJ/WtuOgau2Rr8
+         jpb/iQQxuVnA8dUV6ZsjH3IP6miaobszd1q3QH2KJyeAL+bv1lvoGckWKkssH1xP31fq
+         n1AYq5pV3uJ62SMW5S7crB+zAsHPGAMLbZKpQXLmGzzhPsXTRM42alqylwQxAr7GvFJH
+         vden0cfmmB77XRzf/FesB3GPn/Qz+uwtrKRC26F+o7nT2LuD5fCEKvNwBQLZettcm06n
+         Vq7w==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@pluralsight.com header.s=m1 header.b=EGiaDlV6;
+       dkim=pass header.i=@mktdns.com header.s=m1 header.b=osWeCF1Q;
+       spf=pass (google.com: domain of 306-dup-745.0.171002.0.0.17066.9.6801855@smtp.pluralsight.com designates 199.15.215.12 as permitted sender) smtp.mailfrom=306-DUP-745.0.171002.0.0.17066.9.6801855@smtp.pluralsight.com
+Return-Path: <306-DUP-745.0.171002.0.0.17066.9.6801855@smtp.pluralsight.com>
+Received: from smtp.pluralsight.com (smtp.pluralsight.com. [199.15.215.12])
+        by mx.google.com with ESMTPS id p6si2595905pli.757.2017.08.17.11.08.14
+        for <dragonet.c17@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 17 Aug 2017 11:08:14 -0700 (PDT)
+Received-SPF: pass (google.com: domain of 306-dup-745.0.171002.0.0.17066.9.6801855@smtp.pluralsight.com designates 199.15.215.12 as permitted sender) client-ip=199.15.215.12;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@pluralsight.com header.s=m1 header.b=EGiaDlV6;
+       dkim=pass header.i=@mktdns.com header.s=m1 header.b=osWeCF1Q;
+       spf=pass (google.com: domain of 306-dup-745.0.171002.0.0.17066.9.6801855@smtp.pluralsight.com designates 199.15.215.12 as permitted sender) smtp.mailfrom=306-DUP-745.0.171002.0.0.17066.9.6801855@smtp.pluralsight.com
+Return-Path: <pslive@pluralsight.com>
+X-MSFBL: ZHJhZ29uZXQuYzE3QGdtYWlsLmNvbUBkdnAtMTk5LTE1LTIxNS0xMkBiZy1zamQt
+	OTlAMzA2LURVUC03NDU6NTUwNzY6MTMzNDQ6NjQ2ODg6MDoxNzA2Njo5OjE3MTAw
+	Mjo2ODAxODU1
+Received: from [10.0.87.249] ([10.0.87.249:43609] helo=sjmas02.marketo.org)
+	by sjmta05.marketo.org (envelope-from <pslive@pluralsight.com>)
+	(ecelerity 3.6.8.47404 r(Core:3.6.8.0)) with ESMTP
+	id 41/B8-24183-98BD5995; Thu, 17 Aug 2017 13:08:09 -0500
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; t=1502993289;
+	s=m1; d=pluralsight.com; i=@pluralsight.com;
+	h=Date:From:To:Subject:MIME-Version:Content-Type;
+	bh=vLBy/HJdmsdk2deO8cgJI8Xul4Ocfg0QuXar62M9moU=;
+	b=EGiaDlV6O3uICVjYBqMGt2xQ0QHJpm54mks0APzYHHV1Jyr1vIVJbAYgosEGkwoy
+	myC/0uaVoP5NR/Du6r2a5HJt3+Tc50nInhfE0jdMW4vYvswUmRBJwdEHkdg2BdiY1xZ
+	/Obum4Qi5rVaFiAfICvX457jJVUy4wJJ4muiT33M=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; t=1502993289;
+	s=m1; d=mktdns.com; i=@mktdns.com;
+	h=Date:From:To:Subject:MIME-Version:Content-Type;
+	bh=vLBy/HJdmsdk2deO8cgJI8Xul4Ocfg0QuXar62M9moU=;
+	b=osWeCF1Q2Ftbk2JR1d1OIviXamoHot5bphfndXjGEsX7Qcp3U4dVMb9/7IOxPCLy
+	Y/V3IrFxB778+3XVXsGHr22pf/kgc+UJaKwuoM1Nc4SVT6eOG/zrcE37pegQgZJy6FL
+	H6HPWFa27JtFKiqwwlZXYkHXx0WapCHgRBqL0NVQ=
+Date: Thu, 17 Aug 2017 13:08:09 -0500 (CDT)
+From: Pluralsight <pslive@pluralsight.com>
+Reply-To: no-reply@pluralsight.com
+To: dragonet.c17@gmail.com
+Message-ID: <1169101649.769370085.1502993289403.JavaMail.root@sjmas02.marketo.org>
+Subject: See former First Lady Michelle Obama at Pluralsight LIVE!
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_769370084_76709430.1502993289403"
+X-PVIQ: mkto-306DUP745-000001-000000-171002
+X-Binding: bg-sjd-99
+X-MarketoID: 306-DUP-745:55076:13344:64688:0:17066:9:171002:6801855
+X-MktArchive: false
+List-Unsubscribe: <mailto:OZDGQYTFGI4E2Z32KJQTGYKINNMUW2KPIFIT2PI.171002.17066.9@unsub-sj.mktomail.com>
+X-Mailfrom: 306-DUP-745.0.171002.0.0.17066.9.6801855@smtp.pluralsight.com
+X-MSYS-API: {"options":{"open_tracking":false,"click_tracking":false}}
+X-MktMailDKIM: true
+
+------=_Part_769370084_76709430.1502993289403
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<http://track.pluralsight.com/R00vst8Uxh0010l0D2PNHN1>
+<http://track.pluralsight.com/R00vst8Uxh0010l0D2PNHN1>
+The former First Lady is a role model, champion and inspiration for women, =
+families and young people across America and around the world. We=E2=80=99r=
+e honored to host her at Pluralsight LIVE for =E2=80=9CA Moderated Conversa=
+tion with Michelle Obama.=E2=80=9D We hope you=E2=80=99ll join us for this =
+memorable experience!
+Register now <http://track.pluralsight.com/E1h0D0lIU3t0N0xP1N0sv08>
+View agenda <http://track.pluralsight.com/AN0J0sDU10Nh8lx00v041tP>
+<http://track.pluralsight.com/AN0J0sDU10Nh8lx00v041tP>
+<http://track.pluralsight.com/AN0J0sDU10Nh8lx00v041tP>
+<http://track.pluralsight.com/dc/JYWY0TlT8MJDYEoI81rBxOnTOO88FqBDDYRDr8jL7C=
+c=3D/VtUK001hN80P100Dvsxl5N0>
+
+
+ Pluralsight, LLC 182 N. Union Ave. Farmington, UT 84025=20
+
+
+   Facebook: <http://track.pluralsight.com/dc/M5yi0yZ-UZCCxV3bfEu0anbONeUjO=
+d18p_VSSggcgn0DrbpjHMEHkIJurPN3o6x7/VtUK001hN80P100Dvsxl5N0>
+   Instagram: <http://track.pluralsight.com/dc/MYFzQrvu5rPS8PETBnVMsRusr34Y=
+1lr0HdZtfs82X3v9rFnWXM6_VHgQDeQ1wjEu/VtUK001hN80P100Dvsxl5N0>
+   Twitter: <http://track.pluralsight.com/dc/mEXRm9OBeNs3Y1bS8bbzxSIJ8iuvrV=
+EtSkOtQ-B3bvA=3D/VtUK001hN80P100Dvsxl5N0>
+   Linkedin: <http://track.pluralsight.com/dc/fG5-PlwEnZR-IoSdwCtjIpTVr9AsJ=
+HNwc_srhy7U9rVQYJ5-L-XVAJU3uI-ICH5l/VtUK001hN80P100Dvsxl5N0>
+   Google+: <http://track.pluralsight.com/dc/yBSzDXz1t83SAu8S57EEMjXpT0QzKE=
+Iw3GTILdKytdEZ4v5sL59nNypA4cX6KDoI/VtUK001hN80P100Dvsxl5N0>
+   YoutTube: <http://track.pluralsight.com/dc/M9Y3nowLDCcEv8uSbJAkaXTGHqV_Y=
+EzxUjtWE9O_NefBZ08YC8PHjcsXU2E01rGh/VtUK001hN80P100Dvsxl5N0>
+
+
+
+ Copyright=C2=A9 2017 Pluralsight LLC.
+ All logos and trademarks are the properties of their respective owners.=20
+
+ This email was sent to dragonet.c17@gmail.com <http://track.pluralsight.co=
+m/dc/1pDQu0mqE2rkhpZT-8gq22t_e8hlmX3JHlD628UL3nY=3D/VtUK001hN80P100Dvsxl5N0=
+>
+ Unsubscribe <[[https://get.pluralsight.com/UnsubscribePage.html?mkt_unsubs=
+cribe=3D1&mkt_tok=3DeyJpIjoiWldRNVpURmtNMlk1T1dZMSIsInQiOiJ6djNueGkwN3BKMXk=
+xVUpxLzhDaTdVRUFuQkliWWxkdk9EekNLYlpzemQ3UzRXd0VORHR2OE5ZTTdIaWo4dzVPL0gvNm=
+VScEI4QVhMVmJ0TTY2MmZEc3Q0T2d2Mk0rdHd1QzBOZEs4QVpGRGwzaE52TWFTa0VYZHZlV00rR=
+XFibSJ9/]]> | Manage your preferences <http://track.pluralsight.com/dc/jXnN=
+gZX0R5Skt2btW6cf1ZC-rp3W1ClrQyb8joQdufid5Pzoibv5JJHzdhivwCdrLGSROPMb33CSgJ5=
+srQVOZw=3D=3D/VtUK001hN80P100Dvsxl5N0>
+
+------=_Part_769370084_76709430.1502993289403
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" >
+<head>
+<title>PLURALSIGHT | LIVE</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="format-detection" content="telephone=no">
+<style type="text/css">
+body {
+        margin: 0 !important;
+        padding: 0 !important;
+        -webkit-text-size-adjust: 100% !important;
+        -ms-text-size-adjust: 100% !important;
+        -webkit-font-smoothing: antialiased !important;
+}
+img {
+        border: 0 !important;
+        outline: none !important;
+}
+p {
+        Margin: 0px !important;
+        Padding: 0px !important;
+}
+table {
+        border-collapse: collapse;
+        mso-table-lspace: 0px;
+        mso-table-rspace: 0px;
+}
+td, a, span {
+        border-collapse: collapse;
+        mso-line-height-rule: exactly;
+}
+.ExternalClass * {
+        line-height: 100%;
+}
+.em_defaultlink a {
+        color: inherit !important;
+        text-decoration: none !important;
+}
+span.MsoHyperlink {
+        mso-style-priority: 99;
+        color: inherit;
+}
+span.MsoHyperlinkFollowed {
+        mso-style-priority: 99;
+        color: inherit;
+}
+.em_white a {
+        color: #ffffff;
+        text-decoration: none;
+}
+.em_orange a {
+        color: #e50085;
+        text-decoration: none;
+}
+.em_gray1 a {
+        color: #231F20;
+        text-decoration: none;
+}
+.em_gray2 a {
+        color: #303232;
+        text-decoration: none;
+}
+.em_black a {
+        color: #000000;
+        text-decoration: none;
+}
+.em_title1 a {
+        color: #009DB4;
+        text-decoration: none;
+}
+.em_title2 a {
+        color: #4cb972;
+        text-decoration: none;
+}
+.em_title3 a {
+        color: #65316B;
+        text-decoration: none;
+}
+.em_gry {
+        color: #818181;
+        text-decoration: none;
+}
+
+/*Stylesheed for the devices width between 481px to 599px*/
+@media only screen and (min-width:481px) and (max-width:599px) {
+.em_main_table {
+        width: 480px !important;
+}
+.em_wrapper {
+        width: 100% !important;
+}
+.em_aside {
+        padding: 0px 10px !important; /*Update the values as required*/
+}
+.em_hide {
+        display: none !important;
+}
+.em_full_img {
+        width: 100% !important;
+        height: auto !important;
+}
+.em_align_cent {
+        text-align: center !important;
+}
+.em_spacer {
+        width: 10px !important;
+}
+.em_height {
+        height: 20px !important;
+        line-height: 1px !important;
+        font-size: 1px;
+}
+.em_side {
+        width: 10px !important;
+}
+.em_pad1 {
+        padding: 0px 20px !important;
+}
+.em_pad_bot {
+        padding-bottom: 20px !important;
+}
+.em_pad_top {
+        padding-top: 20px !important;
+}
+.em_pad_right {
+        padding-right: 0px !important;
+}
+.em_pad_left {
+        padding-left: 0px !important;
+}
+.em_width_set {
+        width: 240px !important;
+}
+}
+
+/*Stylesheed for the devices width between 0px to 480px*/
+@media only screen and (max-width:480px) {
+.em_main_table {
+        width: 100% !important;
+}
+.em_wrapper {
+        width: 100% !important;
+}
+.em_aside {
+        padding: 0px 10px !important; /*Update the values as required*/
+}
+.em_hide {
+        display: none !important;
+}
+.em_full_img {
+        width: 100% !important;
+        height: auto !important;
+}
+.em_align_cent {
+        text-align: center !important;
+}
+.em_spacer {
+        width: 10px !important;
+}
+.em_pad1 {
+        padding: 0px 20px !important;
+}
+.em_pad_bot {
+        padding-bottom: 20px !important;
+}
+.em_pad_top {
+        padding-top: 20px !important;
+}
+.em_pad_right {
+        padding-right: 0px !important;
+}
+.em_pad_left {
+        padding-left: 0px !important;
+}
+.em_width_set {
+        width: 240px !important;
+}
+.em_height {
+        height: 20px !important;
+        line-height: 1px !important;
+        font-size: 1px;
+}
+.em_side {
+        width: 10px !important;
+}
+}
+</style>
+<!--[if gte mso 9]>
+<xml>
+  <o:OfficeDocumentSettings>
+    <o:AllowPNG/>
+    <o:PixelsPerInch>96</o:PixelsPerInch>
+ </o:OfficeDocumentSettings>
+</xml>
+<![endif]-->
+</head>
+<body style="margin:0px; padding:0px; " bgcolor="#FFFFFF" ><!--Full width table start-->
+<table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF" ><tr ><td align="center" valign="top" ><table width="600" border="0" align="center" class="em_main_table" cellpadding="0" cellspacing="0" style="table-layout:fixed; " ><tr ><td valign="top" ><table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" ><!--=== HEADER SECTION === -->
+<tr ><td valign="top" align="center" ><div class="mktEditable" id="Banner1" ><a href=
+"http://track.pluralsight.com/R00vst8Uxh0010l0D2PNHN1" target="_blank" style="text-decoration: none;"
+><img src="http://pluralsight-assets.s3.amazonaws.com/Events/pluralsightlive/obamaannouncement/img2.jpg" width="600" height="145" alt="PLURALSIGHT | LIVE" style="display: block; border: none; font-size: 20px; font-family: Arial, sans-serif; color: #ffffff; line-height: px; max-width: 600px;" class="em_full_img" /></a></div>
+</td>
+</tr>
+<!--=== //HEADER SECTION === --><!--=== BANNER WITH CONTENT SECTION 1 === -->
+<tr ><td valign="top" align="center" ><table width="100%" style="width:600px; " align="center" border="0" cellspacing="0" cellpadding="0" class="em_wrapper" ><tbody ><tr ><td valign="top" align="center" ><div class="mktEditable" id="Banner2" ><a href=
+"http://track.pluralsight.com/R00vst8Uxh0010l0D2PNHN1" target="_blank"
+><img src="http://pluralsight-assets.s3.amazonaws.com/Events/pluralsightlive/obamaannouncement/img3.jpg" width="600" height="237" alt="ANNOUNCING | MICHELLE OBAMA" style="display: block; border: none; font-size: 20px; font-family: Arial, sans-serif; color: #000000; line-height: 23px; max-width: 600px;" class="em_full_img" /></a></div>
+</td>
+</tr>
+<tr ><td valign="top" align="center" ><table width="600" style="width:600px; " align="center" border="0" cellspacing="0" cellpadding="0" class="em_wrapper" ><tbody ><tr ><td style="padding:0px 75px 0px 63px; " class="em_pad1" ><table width="462" style="width:462px; " align="center" border="0" cellspacing="0" cellpadding="0" class="em_wrapper" ><tbody ><tr>
+<td height="25" class="em_height">&nbsp;</td>
+</tr>
+<tr ><td valign="top" align="left" style="font-size:14px; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; color:#000000; font-weight:300; line-height:22px; " class="em_black" ><div class="mktEditable" id="text_1" >The former First Lady is a role model, champion and inspiration for women, families and young people across America and around the world. We&rsquo;re honored to host her at Pluralsight LIVE for &ldquo;A Moderated Conversation with Michelle Obama.&rdquo; We hope you&rsquo;ll join us for this memorable experience!</div>
+</td>
+</tr>
+<tr>
+<td height="25" class="em_height">&nbsp;</td>
+</tr>
+<tr ><td valign="top" align="center" ><table align="center" width="100%" border="0" cellspacing="0" cellpadding="0" ><tr ><td align="center" valign="top" ><table width="195" border="0" cellspacing="0" cellpadding="0" ><tr ><td align="center" valign="top" ><table width="90" border="0" cellspacing="0" cellpadding="0" align="center" ><tr ><td align="center" valign="top" ><table width="90" style="width:90px; border-radius:2px; " align="center" border="0" cellspacing="0" cellpadding="0" bgcolor="#E50085" ><tr ><td align="center" valign="top" ><table align="center" width="100%" border="0" cellspacing="0" cellpadding="0" ><tr ><td height="25" style="font-size:10px; font-family:'Helvetica', Arial, sans-serif; color:#ffffff; " class="em_white" valign="middle" align="center" ><div class="mktEditable" id="text_2" ><a href=
+"http://track.pluralsight.com/E1h0D0lIU3t0N0xP1N0sv08" target="_blank" style="text-decoration: none; color: #ffffff; display: block; line-height: 25px;"
+>Register now</a></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+<td width="15">&nbsp;</td>
+<td align="center" valign="top" ><table align="center" width="90" border="0" cellspacing="0" cellpadding="0" ><tr ><td align="center" valign="top" ><table align="center" width="90" border="0" cellspacing="0" cellpadding="0" style="border:1px #e50085 solid; border-radius:2px; display:block; " ><tr ><td align="center" valign="top" ><table align="center" width="88" border="0" cellspacing="0" cellpadding="0" ><tr ><td height="24" style="font-size:10px; font-family:'Helvetica', Arial, sans-serif; color:#e50085; " class="em_orange" valign="middle" align="center" ><div class="mktEditable" id="text_02" style="text-align:center; " ><a href=
+"http://track.pluralsight.com/AN0J0sDU10Nh8lx00v041tP" target="_blank" style="text-decoration: none; color: #e50085; display: block; line-height: 24px; text-align: center;"
+>View agenda</a></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="60" class="em_height">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<!--=== //BANNER WITH CONTENT SECTION 1 === --><!--=== BANNER WITH CONTENT SECTION 2 === -->
+<tr ><td valign="top" align="center" class="em_aside" ><table width="100%" style="width:600px; " align="center" border="0" cellspacing="0" cellpadding="0" class="em_wrapper" ><tbody ><tr ><td valign="top" align="center" ><table width="425" align="center" border="0" cellspacing="0" cellpadding="0" class="em_wrapper" style="width:425px; " ><tr ><td align="center" valign="top" ><table width="128" align="left" border="0" cellspacing="0" cellpadding="0" class="em_wrapper" style="width:128px; " ><tr ><td valign="top" align="center" ><div class="mktEditable" id="image1" ><a href=
+"http://track.pluralsight.com/AN0J0sDU10Nh8lx00v041tP" target="_blank" style="text-decoration: none;"
+><img src="http://pluralsight-assets.s3.amazonaws.com/Events/pluralsightlive/obamaannouncement/img4.jpg" width="128" height="126" alt="Pluralsight LIVE" style="display: block; font-family: Arial, sans-serif; font-size: 12px; line-height: 15px; color: #000000; font-weight: bold; max-width: 128px;" border="0" class="em_full_img" /></a></div>
+</td>
+</tr>
+</table>
+<!--[if gte mso 9]>
+</td>
+<td valign="top">
+<![endif]-->
+<table width="287" align="right" border="0" cellspacing="0" cellpadding="0" class="em_wrapper" style="width:287px; " ><tr>
+<td height="25" class="em_height">&nbsp;</td>
+</tr>
+<tr ><td align="center" valign="top" ><div class="mktEditable" id="image2" ><a href=
+"http://track.pluralsight.com/AN0J0sDU10Nh8lx00v041tP" target="_blank"
+><img src="http://pluralsight-assets.s3.amazonaws.com/Events/pluralsightlive/obamaannouncement/img5.jpg" width="287" height="70" alt="SEPTEMBER 19-21 SALT LAKE CITY,UT" style="display: block; font-family: Arial, sans-serif; font-size: 12px; line-height: 15px; color: #000000; font-weight: bold; max-width: 287px;" border="0" /></a></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="30" class="em_height">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<!--=== //BANNER WITH CONTENT SECTION 2 === --><!--=== FOOTER SECTION === -->
+<tr ><td align="center" valign="top" ><table width="600" border="0" cellspacing="0" cellpadding="0" class="em_wrapper" style="width:600px; " bgcolor="#000000" ><!--Footer-->
+<tr ><td ><div class="mktEditable" id="email_footer_snippet" ><table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tbody>
+<tr>
+<td class="stack" bgcolor="#000000" style="font-family: Arial, Helvetica, sans-serif; font-size: 12px; line-height: 14px; color: #888888; padding: 50px;">
+<div class="mktEditable" id="footer">
+<p style="line-height: 100%; margin-top: 0px; margin-bottom: 0px;"><a href=
+"http://track.pluralsight.com/dc/JYWY0TlT8MJDYEoI81rBxOnTOO88FqBDDYRDr8jL7Cc=/VtUK001hN80P100Dvsxl5N0" target="_blank"
+><img src="http://pluralsight-assets.s3.amazonaws.com/transactional/template/ps-logo-with-icon-horiz-white-line.png" width="195" height="45" border="0" style="display: block;" alt="Pluralsight" /></a></p>
+<br /> Pluralsight, LLC 182 N. Union Ave. Farmington, UT 84025 <br /><br /> <!--Social-->
+<table width="192" border="0" cellpadding="7" cellspacing="0">
+<tbody>
+<tr>
+<td width="11"><a href=
+"http://track.pluralsight.com/dc/M5yi0yZ-UZCCxV3bfEu0anbONeUjOd18p_VSSggcgn0DrbpjHMEHkIJurPN3o6x7/VtUK001hN80P100Dvsxl5N0" target="_blank"
+> <img src="http://pluralsight-assets.s3.amazonaws.com/template_images/facebook_white.png" width="11" height="20" alt="facebook" style="display: block;" border="0" /> </a></td>
+<td width="20"><a href=
+"http://track.pluralsight.com/dc/MYFzQrvu5rPS8PETBnVMsRusr34Y1lr0HdZtfs82X3v9rFnWXM6_VHgQDeQ1wjEu/VtUK001hN80P100Dvsxl5N0" target="_blank"
+> <img src="http://pluralsight-assets.s3.amazonaws.com/template_images/instagram_white.png" width="20" height="19" alt="instagram" style="display: block;" border="0" /> </a></td>
+<td width="24"><a href=
+"http://track.pluralsight.com/dc/mEXRm9OBeNs3Y1bS8bbzxSIJ8iuvrVEtSkOtQ-B3bvA=/VtUK001hN80P100Dvsxl5N0" target="_blank"
+> <img src="http://pluralsight-assets.s3.amazonaws.com/template_images/twitter_white.png" width="24" height="19" alt="twitter" style="display: block;" border="0" /> </a></td>
+<td width="20"><a href=
+"http://track.pluralsight.com/dc/fG5-PlwEnZR-IoSdwCtjIpTVr9AsJHNwc_srhy7U9rVQYJ5-L-XVAJU3uI-ICH5l/VtUK001hN80P100Dvsxl5N0" target="_blank"
+> <img src="http://pluralsight-assets.s3.amazonaws.com/template_images/linkedin_white.png" width="20" height="19" alt="Linked in" style="display: block;" border="0" /> </a></td>
+<td width="19"><a href=
+"http://track.pluralsight.com/dc/M9Y3nowLDCcEv8uSbJAkaXTGHqV_YEzxUjtWE9O_NefBZ08YC8PHjcsXU2E01rGh/VtUK001hN80P100Dvsxl5N0" target="_blank"
+> <img src="http://pluralsight-assets.s3.amazonaws.com/template_images/you_tube_white.png" width="17" height="21" alt="YouTube" style="display: block;" border="0" constrain="true" imagepreview="false" /> </a></td>
+</tr>
+</tbody>
+</table>
+<!--End Social--> <br /><br /> Copyright&copy; 2017 Pluralsight LLC.<br /> All logos and trademarks are the properties of their respective owners. <br /><br /> This email was sent to <a href=
+"http://track.pluralsight.com/dc/1pDQu0mqE2rkhpZT-8gq22t_e8hlmX3JHlD628UL3nY=/VtUK001hN80P100Dvsxl5N0" style="color: #207fc2; text-decoration: none;"
+>dragonet.c17@gmail.com</a><br /> <a href="https://get.pluralsight.com/UnsubscribePage.html?mkt_unsubscribe=1&mkt_tok=eyJpIjoiWldRNVpURmtNMlk1T1dZMSIsInQiOiJ6djNueGkwN3BKMXkxVUpxLzhDaTdVRUFuQkliWWxkdk9EekNLYlpzemQ3UzRXd0VORHR2OE5ZTTdIaWo4dzVPL0gvNmVScEI4QVhMVmJ0TTY2MmZEc3Q0T2d2Mk0rdHd1QzBOZEs4QVpGRGwzaE52TWFTa0VYZHZlV00rRXFibSJ9/" target="_blank" style="color: #888888; text-decoration: none;">Unsubscribe</a> | <a href=
+"http://track.pluralsight.com/dc/jXnNgZX0R5Skt2btW6cf1ZC-rp3W1ClrQyb8joQdufid5Pzoibv5JJHzdhivwCdrLGSROPMb33CSgJ5srQVOZw==/VtUK001hN80P100Dvsxl5N0" target="_blank" style="color: #888888; text-decoration: none;"
+>Manage your preferences</a></div>
+</td>
+</tr>
+</tbody>
+</table></div>
+</td>
+</tr>
+<!--End Footer-->
+<!--=== //FOOTER SECTION === --></table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<!--Full width table End--><!--Increase/decrease the number of (&nbsp;) as per the template width-->
+<div class="em_hide" style="white-space:nowrap;font:20px courier;color:#FFFFFF">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</div>
+</td>
+</tr>
+</table>
+<a href=
+"http://track.pluralsight.com/iLND0NU8l6v00h001tx1P0s"
+></a>
+<img src="http://track.pluralsight.com/trk?t=1&mid=MzA2LURVUC03NDU6NTUwNzY6MTMzNDQ6NjQ2ODg6MDoxNzA2Njo5OjE3MTAwMjo2ODAxODU1OmRyYWdvbmV0LmMxN0BnbWFpbC5jb20%3D" width="1" height="1" style="display:none !important;" alt="" />
+</body>
+</html>
+------=_Part_769370084_76709430.1502993289403--

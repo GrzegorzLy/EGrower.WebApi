@@ -1,0 +1,542 @@
+Delivered-To: dragonet.c17@gmail.com
+Received: by 10.202.61.212 with SMTP id k203csp566575oia;
+        Thu, 30 Jun 2016 14:34:27 -0700 (PDT)
+X-Received: by 10.36.84.79 with SMTP id t76mr28979875ita.63.1467322467061;
+        Thu, 30 Jun 2016 14:34:27 -0700 (PDT)
+Return-Path: <bounce-866153_HTML-1275061275-4376655-10017485-4822@bounce.e-mail.microsoft.com>
+Received: from mta28.email.microsoftemail.com (mta28.email.microsoftemail.com. [66.231.92.214])
+        by mx.google.com with ESMTPS id 186si645020iox.164.2016.06.30.14.34.26
+        for <dragonet.c17@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 30 Jun 2016 14:34:27 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounce-866153_html-1275061275-4376655-10017485-4822@bounce.e-mail.microsoft.com designates 66.231.92.214 as permitted sender) client-ip=66.231.92.214;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@email.microsoftemail.com;
+       spf=pass (google.com: domain of bounce-866153_html-1275061275-4376655-10017485-4822@bounce.e-mail.microsoft.com designates 66.231.92.214 as permitted sender) smtp.mailfrom=bounce-866153_HTML-1275061275-4376655-10017485-4822@bounce.e-mail.microsoft.com;
+       dmarc=pass (p=NONE dis=NONE) header.from=e-mail.microsoft.com
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=102420140131; d=email.microsoftemail.com;
+ h=From:To:Subject:Date:MIME-Version:Reply-To:Message-ID:Content-Type;
+ bh=gt85gtp+PxL4/4K/lEgBdpuPS6k=;
+ b=Z+CyBeeNJsZXtCmucfPmB84vR3yxywPD32VDpNZnOcW9inYqJXlbG2FaeyyMyZyhnPGfBWBvAYwj
+   pTXWfwDl4c5fNbc974l2qvRFq1QiWkl/b8rAGG5gRW9mEi3npCe3DFDl+rkujz13VDMXG9hdWfwi
+   Zxq0e5qR0baBkVriUww=
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=200608; d=e-mail.microsoft.com;
+ b=JM3Rvc2oX+C/ncZ96P//mVJP8pPrDJQb0vnzuS4zw94lQ1/h+Tur4nUSa350qA8Ags85zBYEELjF
+   doe3MxK2FSffLaMayOWpdkXYi+PAkKaf0f5vQNx7UVde6kh/AYa4TxRVO/IqPwukYYuvtK3wE8su
+   D3hwjU4B2O3KvqagxQ4=;
+Received: by mta28.email.microsoftemail.com id hem864163hsa for <dragonet.c17@gmail.com>; Thu, 30 Jun 2016 15:34:18 -0600 (envelope-from <bounce-866153_HTML-1275061275-4376655-10017485-4822@bounce.e-mail.microsoft.com>)
+From: "Microsoft Student" <MicrosoftStudent@e-mail.microsoft.com>
+To: <dragonet.c17@gmail.com>
+Subject: =?UTF-8?B?SXTigJlzIEltYWdpbmUgQ3VwIHRpbWUhIERvbuKAmXQgbWlzcyB0?=
+ =?UTF-8?B?aGUgQ2hhbXBpb25zaGlwIExpdmVzdHJlYW0gb24gSnVseSAyOSE=?=
+Date: Thu, 30 Jun 2016 15:34:17 -0600
+MIME-Version: 1.0
+Reply-To: "Microsoft" <reply-fe8b10737262027870-866153_HTML-1275061275-10017485-4822@email.microsoftemail.com>
+x-job: 10017485_4376655
+Message-ID: <a7f8f1fd-2b15-4f4a-b34f-07ca2b446ec5@xtinmta1189.xt.local>
+Content-Type: multipart/alternative;
+	boundary="hzO2r7qjjDrE=_?:"
+
+This is a multi-part message in MIME format.
+
+--hzO2r7qjjDrE=_?:
+Content-Type: text/plain;
+	charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+
+
+Microsoft Imagine 
+http://msdn.microsoft.com/en-us/imagine 
+  
+https://www.facebook.com/msftimagine 
+ 
+https://www.twitter.com/MSFTImagine 
+ 
+https://instagram.com/MSFTImagine 
+
+
+June 2016
+
+
+Having trouble viewing this email? 
+https://view.email.microsoftemail.com/?j=fe8b10737262027870&m=fe651570756503797d11&ls=fdf61571746201797011757d&l=fec21c767365017e&s=fdfb15727261047b74167770&jb=ff2f10787766&ju= 
+View as a webpage. 
+ 
+  Update your subscription to continue receiving the Microsoft Imagine newsletter.
+  
+https://profile.microsoft.com/RegSysProfileCenter/wizard.aspx?wizid=cdb0379c-ddab-4995-9750-47fc87fe3ee3&lcid=1033 
+Update Now  
+ 
+
+ 
+Learn
+
+
+ 
+https://channel9.msdn.com/Blogs/ImagineCup/Save-the-Date-Imagine-Cup-Championship-Live-Steam-July-29th-2016-9AM-PST 
+Learn More  
+ 
+ A new Imagine Cup Champion will be crowned!
+
+
+ It all comes down to this. Thirty-five Imagine Cup teams. Three will compete live on stage for a 1:1 mentoring session with Satya Nadella. Only one can emerge victorious. Watch the Imagine Cup Championship Livestream at 9 a.m. PT, July 29 and see the drama unfold!
+ 
+
+ 
+Build
+
+
+ 
+https://www.dreamspark.com/Product/Product.aspx?productid=100&wt.mc_id=DX_48170 
+Download Now  
+ 
+ Get “mobile developer” on your résumé and build cool cross-platform apps and games!
+
+
+Code your app or game in C# and deploy to iOS, Android and Windows apps with Xamarin. Xamarin connects your code to the native APIs and interface designs on all three platforms – so you can spend more time coding and less time porting.
+ 
+
+ 
+Grow
+
+
+ 
+https://mva.microsoft.com/en-US/training-courses/getting-started-with-the-internet-of-things-iot-16170?l=VUaAyuRIC_6305846048 
+Watch Now  
+ 
+ The Internet of Things is the wave of the future. Don’t get left behind.
+
+
+Curious about how to tap into the power of IoT, but you’re not sure where to start? Immerse yourself in the world of connected devices with this online course and start learning to tackle tough business problems in new and exciting ways!
+ 
+
+ 
+Key Dates
+ 
+ 
+Be sure to mark your calendar with this important date!
+
+
+ 
+https://www.imaginecup.com/custom/WorldChampionship 
+9 a.m. PT, July 29, 2016 &mdash; Imagine Cup Championship Livestream  
+ 
+
+ 
+Share
+ 
+ 
+Do you know someone who's a full-time student developer? Please tell them about Microsoft Imagine.
+
+
+https://www.facebook.com/msftimagine 
+ 
+https://www.twitter.com/MSFTImagine 
+ 
+
+ 
+
+http://www.microsoft.com 
+
+
+Microsoft respects your privacy. Please read our online 
+http://go.microsoft.com/fwlink/?LinkId=521839 
+Privacy Statement .
+
+
+
+If you would prefer to no longer receive this newsletter, please 
+https://click.email.microsoftemail.com/m_hcp.aspx?qs=4a62fed4fda65625f47a647ed7765a14dd4e170eded40c6bd727e6073c2c05c655d7d702542f1a5bad03b686f66cd76f9888416ca82d87508d74219a7f9a37d46ffdda8e338f10cb6d33381733d8a6f09eda4d137064d449 
+click here .
+
+
+
+To set your contact preferences for other Microsoft communications 
+https://click.email.microsoftemail.com/m_hcp.aspx?qs=4a62fed4fda65625f47a647ed7765a14dd4e170eded40c6bd727e6073c2c05c655d7d702542f1a5bad03b686f66cd76f9888416ca82d87508d74219a7f9a37d46ffdda8e338f10cb6d33381733d8a6f09eda4d137064d449 
+click here .
+
+
+
+Microsoft Corporation 
+
+One Microsoft Way
+
+Redmond, WA 98052
+
+USA
+
+ 
+
+
+
+
+
+--hzO2r7qjjDrE=_?:
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Microsoft Imagine</title>
+<style>
+    body {background:#4d4d4d; margin:0; padding:0;}
+    .bodywrap{
+        max-width:700px !important;
+        margin:auto;
+    }
+    img[class="hero"] { max-width:700px; width:100% !important; height:auto !important; }
+    img[class="imgSection"] { max-width:300px; min-width:150px; width:100% !important; height:auto !important; }
+    a { text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    table { max-width: 700px; }
+    table td { border-collapse:collapse; margin:0; padding:0; font-family:'Segoe UI',Arial,sans-serif; -webkit-text-size-adjust:none; }
+    img { border:none; }
+
+    @media (max-width: 480px) {
+        *[class*="mobile-hidden"] { display:none !important; }
+        td[class="block"] { display:block !important; }
+        td[class="bodywrap"] { width:350px !important; }
+
+        img[class="imgHeader"] {width:200px !important; height:auto !important; }
+        img[class="imgLogo"] {width:60px !important; height:14px !important; }
+        img[class="imgHero"] {width:350px !important; height:150px !important; }
+        img[class="imgSection"] {min-width:130px !important; width:100% !important; display:block !important; }
+        img[class="imgTopStory"] {min-width:320px !important; width:100% !important; display:block !important; }
+
+        td[class="tdSpacer5"] { width:5px !important; }
+        td[class="tdSpacer10"] { width:10px !important; }
+        td[class="tdSpacer20"] { width:20px !important; }
+
+
+        td[class="txtAnnounce"] { font-size:14px !important; line-height:18px !important; }
+        td[class="txtCTA"] { font-size:10px !important; word-break:keep-all !important; width:70px !important; }
+        td[class="txtCTAlrg"] { font-size:10px !important; word-break:keep-all !important; width:100px !important; }
+        td[class="txtMonth"] { font-size:14px !important; }
+        td[class="txtLZ"] { font-size:18px !important; line-height:18px !important; width:80px !important; }
+        td[class="txtBody"] { font-size:11px !important; line-height:14px !important; width:230px !important; }
+
+        span[class="txtBodyHead"] { font-size:14px !important; line-height:16px !important; }
+    }
+</style>
+</head>
+
+<body leftmargin="0" topmargin="0" bgcolor="#4d4d4d">
+<span style="display:none;"></span>
+
+<table cellpadding="0" cellspacing="0" border="0" align="center">
+    <tr>
+        <td align="center" valign="top" class="bodywrap" style="width:700px; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; line-height:18px; color:#292929; padding:40px 0;">
+
+<!-- Header -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#d83e18">
+    <tr>
+        <td width="20" align="left" class="tdSpacer10" style="color:#ffffff; font-family:'Segoe UI',Arial,sans-serif; font-size:11px; padding:24px 0 8px;">&nbsp;</td>
+        <td width="360" align="left" style="color:#ffffff; font-size:11px; padding:24px 0 8px;">
+            <a href="https://click.email.microsoftemail.com/?qs=8d2a3e1a8a96fe76215d8c33275b25e855626e31901f42fcb26ade0071e1d1c9bf53cde12c21e394" title="Microsoft Imagine"  style="text-decoration:none;border:0px;color:#fffffe">
+                <img src="http://image.email.microsoftemail.com/lib/fe651570756503797d11/m/1/33539_MSImagineLogo-360_2015-04.png" border="0" alt="Microsoft Imagine" class="imgHeader">
+            </a>
+        </td>
+        <td width="20" align="left" class="tdSpacer10" style="color:#ffffff; font-family:'Segoe UI',Arial,sans-serif; font-size:11px; padding:24px 0 8px;">&nbsp;</td>
+        <td width="280" align="right" style="color:#ffffff;font-size:11px; padding:24px 0 8px;">
+            <table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#d83e18">
+                <tr>
+                    <td width="210" align="left" style="color:#ffffff;padding:15px 0;">&nbsp;</td>
+                    <td width="20" align="left" valign="middle" style="color:#000000;padding:0 0 15px;">
+                        <a href="https://click.email.microsoftemail.com/?qs=8d2a3e1a8a96fe76424ad06e889a87f8652cf29158f7991d9d9a07fb407c78ae85373d95a32d4f1e" title="Facebook"  style="text-decoration:none;border:0px;color:#000001">
+                            <img src="http://image.email.microsoftemail.com/lib/fe651570756503797d11/m/1/33539_2015-04_FacebookSocial_20.png" width="20" height="20" border="0" alt="Facebook">
+                        </a>
+                    </td>
+                    <td width="5" align="left" style="color:#ffffff;padding:15px 0;">&nbsp;</td>
+                    <td width="20" align="left" valign="middle" style="color:#000000;padding:0 0 15px;">
+                        <a href="https://click.email.microsoftemail.com/?qs=8d2a3e1a8a96fe76235a48089cec4c195a71348a66b7b6390ad4550039a7865fc68faa17f77a53bf" title="Twitter"  style="text-decoration:none;border:0px;color:#000001">
+                            <img src="http://image.email.microsoftemail.com/lib/fe651570756503797d11/m/1/33539_2015-04_TwitterSocial_20.png" width="20" height="20" border="0" alt="Twitter">
+                        </a>
+                    </td>
+                    <td width="5" align="left" style="color:#ffffff;padding:15px 0;">&nbsp;</td>
+                    <td width="20" align="left" valign="middle" style="color:#000000;padding:0 0 15px;">
+                        <a href="https://click.email.microsoftemail.com/?qs=8d2a3e1a8a96fe7643146e7caa298e8cc3a1d39c5212d49565ec82a63db0e5c148cf0908b76f90b6" title="Instagram"  style="text-decoration:none;border:0px;color:#000001">
+                            <img src="http://image.email.microsoftemail.com/lib/fe651570756503797d11/m/1/33539_2015-04_InstagramSocial_20.png" width="20" height="20" border="0" alt="Instagram">
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="280" align="right" valign="bottom" colspan="6" class="txtMonth" style="color:#ffffff;font-family:'Segoe UI Light','Segoe UI',Arial,sans-serif;font-weight:100;font-size:18px; padding:0 0 6px;">
+                        June 2016
+                    </td>
+                </tr>
+                <tr>
+                    <td width="280" align="right" valign="bottom" colspan="6" style="color:#ffffff;font-family:'Segoe UI Light','Segoe UI',Arial,sans-serif;font-weight:100;font-size:11px; padding:0 0 25px;">
+                        Having trouble viewing this&nbsp;email? <a href="https://click.email.microsoftemail.com/?qs=8d2a3e1a8a96fe767ccf9e9d17733dca63ff8af30b89122b85953be2b8c8c5d3956fb6ef7390aa4d" title="View as a webpage"  style="color:#fffffe; font-weight:bold; text-decoration:underline;">View&nbsp;as&nbsp;a&nbsp;webpage.</a>
+                    </td>
+                </tr>
+            </table>
+        </td>
+        <td width="20" align="left" class="tdSpacer10" style="color:#ffffff; font-family:'Segoe UI',Arial,sans-serif; font-size:11px; padding:24px 0 8px;">&nbsp;</td>
+    </tr>
+</table>
+
+<!-- Optional Announcement Bar -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#5c2d91">
+    <tr>
+        <td width="20" align="left" valign="top" class="tdSpacer20" style="color:#ffffff; font-family:'Segoe UI',Arial,sans-serif; font-size:11px; font-size:14px; line-height:17px;">&nbsp;</td>
+        <td width="420" valign="top" align="left" class="txtAnnounce" style="color:#ffffff; font-family:'Segoe UI Light','Segoe UI',Arial,sans-serif; font-weight:100; font-size:18px; line-height:26px; padding:10px 0px 10px 0px;">   Update your subscription to continue receiving the Microsoft Imagine newsletter.
+        </td>
+        <td width="80" align="left" valign="middle" class="tdSpacer20" style="color:#ffffff; font-family:'Segoe UI',Arial,sans-serif; font-size:11px; font-size:14px; line-height:17px;">&nbsp;</td>
+        <td width="160" valign="middle" align="center" style="color:#ffffff; font-family:'Segoe UI Light','Segoe UI',Arial,sans-serif; font-weight:100; font-size:20px; line-height:20px; padding:10px 0px 10px 0px; text-align: center;">
+            <table cellpadding="0" cellspacing="0" border="0" bgcolor="#270949" valign="middle">
+                <tr>
+                    <td width="20" class="tdSpacer5" valign="middle" style="color:#270949; font-family:'Segoe UI',Arial,sans-serif; font-size:11px; font-weight:bold; line-height:11px; padding:10px 0;">&nbsp;</td>
+                    <td valign="middle" style="color:#ffffff; font-family:'Segoe UI',Arial,sans-serif; font-size:11px; font-weight:bold; line-height:11px; padding:10px 0; text-transform:uppercase; text-align: center;" class="txtCTAlrg">
+                        <a href="https://click.email.microsoftemail.com/?qs=8d2a3e1a8a96fe7620813e8364aa3de5a4e293d36819106bd61306c0226b6b9bf64343f0be5836d2" title="Update Now"  style="color:#fffffe; font-weight:bold; text-decoration:none;">Update Now</a>
+                    </td>
+                    <td valign="middle" width="20" class="tdSpacer5" style="color:#a80000; font-family:'Segoe UI',Arial,sans-serif; font-size:11px; font-weight:bold; line-height:11px; padding:10px 0;">&nbsp;</td>
+                </tr>
+            </table>
+        </td>
+        <td width="20" valign="middle" align="left" valign="middle" class="tdSpacer20" style="color:#ffffff; font-family:'Segoe UI',Arial,sans-serif; font-size:14px; line-height:17px;">&nbsp;</td>
+    </tr>
+</table>
+<!-- /Optional Announcement Bar -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+        <td width="700" align="center" valign="top" style="color:#000000; font-size:11px; line-height:1px; padding:0;">
+            <img src="https://image.email.microsoftemail.com/lib/fe651570756503797d11/m/1/33604_hero_DSC00613-v2.jpg" border="0" alt="" class="imgHero" width="700" height="300">
+        </td>
+    </tr>   
+</table>
+<!-- /Header -->
+
+<!-- Body -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+        <td width="200" valign="top" align="left" bgcolor="#d83b01" style="color:#ffffff; font-size:13px; padding:0; margin:0;" class="storyImg">
+            <table cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                    <td width="20" valign="middle" align="left" class="tdSpacer10" style="color:ffffff; font-size:13px; line-height:17px;">&nbsp;</td>
+                    <td width="150" valign="top" align="left" class="txtLZ" style="color:#ffffff; font-family:'Segoe UI Light','Segoe UI',Arial,sans-serif; font-weight:100; font-size:30px; line-height:34px; padding:20px 0px 10px 0px;">
+                        Learn
+                        <br><br>
+                        <table cellpadding="0" cellspacing="0" border="0" bgcolor="#a80000">
+                            <tr>
+                                <td width="20" class="tdSpacer5" style="color:#a80000; font-family:'Segoe UI',Arial,sans-serif; font-size:11px; font-weight:bold; line-height:11px; padding:10px 0;">&nbsp;</td>
+                                <td style="color:#ffffff; font-family:'Segoe UI',Arial,sans-serif; font-size:11px; font-weight:bold; line-height:11px; padding:10px 0; text-transform:uppercase;" class="txtCTA">
+                                    <a href="https://click.email.microsoftemail.com/?qs=8d2a3e1a8a96fe76fb76792e868d339df619aa40d3635a309e1fdf31de8db816260d682e52a814e4" title="Learn More"  style="color:#fffffe; font-weight:bold; text-decoration:none;">Learn More</a>
+                                </td>
+                                <td width="20" class="tdSpacer5" style="color:#a80000; font-family:'Segoe UI',Arial,sans-serif; font-size:11px; font-weight:bold; line-height:11px; padding:10px 0;">&nbsp;</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td width="30" valign="middle" align="left" class="tdSpacer10" style="color:ffffff; font-size:14px; line-height:17px;">&nbsp;</td>
+                </tr>
+            </table>
+        </td>
+        <td width="500" valign="top" align="left" bgcolor="#ffffff" style="color:#ffffff; font-size:13px; line-height:16px; padding:0;">
+            <table cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                    <td width="20" valign="middle" align="left" class="tdSpacer10" style="color:ffffff; font-family:'Segoe UI',Arial,sans-serif; font-size:13px; line-height:17px;">&nbsp;</td>
+                    <td width="450" valign="middle" align="left" class="txtBody" style="color:#000000; font-family:'Segoe UI',Arial,sans-serif; font-size:13px; line-height:16px; padding:20px 0;">
+                        <span class="txtBodyHead" style="font-size:26px; line-height:30px; font-family:'Segoe UI Light','Segoe UI',Arial,sans-serif; font-weight:100;" class="mobileAdjust">A new Imagine Cup Champion will be crowned!</span>
+                        <br><br>
+                       It all comes down to this. Thirty-five Imagine Cup teams. Three will compete live on stage for a 1:1 mentoring session with Satya Nadella. Only one can emerge victorious. Watch the Imagine Cup Championship Livestream at 9 a.m. PT, July 29 and see the drama unfold!
+                    </td>
+                    <td width="30" valign="middle" align="left" class="tdSpacer10" style="color:ffffff; font-family:'Segoe UI',Arial,sans-serif; font-size:13px; line-height:17px;">&nbsp;</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+
+    <tr>
+        <td width="200" valign="top" align="left" bgcolor="#0078d7" style="color:#ffffff; font-size:13px; padding:0; margin:0;" class="storyImg">
+            <table cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                    <td width="20" valign="middle" align="left" class="tdSpacer10" style="color:ffffff; font-size:13px; line-height:17px;">&nbsp;</td>
+                    <td width="150" valign="top" align="left" class="txtLZ" style="color:#ffffff; font-family:'Segoe UI Light','Segoe UI',Arial,sans-serif; font-weight:100; font-size:30px; line-height:34px; padding:20px 0px 10px 0px;">
+                        Build
+                        <br><br>
+                        <table cellpadding="0" cellspacing="0" border="0" bgcolor="#00188f">
+                            <tr>
+                                <td width="20" class="tdSpacer5" style="color:#00188f; font-family:'Segoe UI',Arial,sans-serif; font-size:11px; font-weight:bold; line-height:11px; padding:10px 0;">&nbsp;</td>
+                                <td style="color:#ffffff; font-family:'Segoe UI',Arial,sans-serif; font-size:11px; font-weight:bold; line-height:11px; padding:10px 0; text-transform:uppercase;" class="txtCTA">
+                                    <a href="https://click.email.microsoftemail.com/?qs=8d2a3e1a8a96fe765bde252b5886a3988142dfa18054a58ff20707855414566a8956980bf2c79c33" title="Download Now"  style="color:#fffffe; font-weight:bold; text-decoration:none;">Download Now</a>
+                                </td>
+                                <td width="20" class="tdSpacer5" style="color:#00188f; font-family:'Segoe UI',Arial,sans-serif; font-size:11px; font-weight:bold; line-height:11px; padding:10px 0;">&nbsp;</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td width="30" valign="middle" align="left" class="tdSpacer10" style="color:ffffff; font-size:14px; line-height:17px;">&nbsp;</td>
+                </tr>
+            </table>
+        </td>
+        <td width="500" valign="top" align="left" bgcolor="#ffffff" style="color:#ffffff; font-size:13px; line-height:16px; padding:0;">
+            <table cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                    <td width="20" valign="middle" align="left" class="tdSpacer10" style="color:ffffff; font-family:'Segoe UI',Arial,sans-serif; font-size:13px; line-height:17px;">&nbsp;</td>
+                    <td width="450" valign="middle" align="left" class="txtBody" style="color:#000000; font-family:'Segoe UI',Arial,sans-serif; font-size:13px; line-height:16px; padding:20px 0;">
+                        <span class="txtBodyHead" style="font-size:26px; line-height:30px; font-family:'Segoe UI Light','Segoe UI',Arial,sans-serif; font-weight:100;" class="mobileAdjust">Get “mobile developer” on your résumé and build cool cross-platform apps and games!</span>
+                        <br><br>
+                        Code your app or game in C# and deploy to iOS, Android and Windows apps with Xamarin. Xamarin connects your code to the native APIs and interface designs on all three platforms – so you can spend more time coding and less time porting.
+                    </td>
+                    <td width="30" valign="middle" align="left" class="tdSpacer10" style="color:ffffff; font-family:'Segoe UI',Arial,sans-serif; font-size:13px; line-height:17px;">&nbsp;</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+
+    <tr>
+        <td width="200" valign="top" align="left" bgcolor="#008272" style="color:#ffffff; font-size:13px; padding:0; margin:0;" class="storyImg">
+            <table cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                    <td width="20" valign="middle" align="left" class="tdSpacer10" style="color:ffffff; font-size:13px; line-height:17px;">&nbsp;</td>
+                    <td width="150" valign="top" align="left" class="txtLZ" style="color:#ffffff; font-family:'Segoe UI Light','Segoe UI',Arial,sans-serif; font-weight:100; font-size:30px; line-height:34px; padding:20px 0px 10px 0px;">
+                        Grow
+                        <br><br>
+                        <table cellpadding="0" cellspacing="0" border="0" bgcolor="#004b50">
+                            <tr>
+                                <td width="20" class="tdSpacer5" style="color:#004b50; font-family:'Segoe UI',Arial,sans-serif; font-size:11px; font-weight:bold; line-height:11px; padding:10px 0;">&nbsp;</td>
+                                <td style="color:#ffffff; font-family:'Segoe UI',Arial,sans-serif; font-size:11px; font-weight:bold; line-height:11px; padding:10px 0; text-transform:uppercase;" class="txtCTA">
+                                    <a href="https://click.email.microsoftemail.com/?qs=8d2a3e1a8a96fe7642a8d6c3f0de9a27c19d3fef1bb228eac6e3a25801f3359fc4c93f260a723ee6" title="Watch Now"  style="color:#fffffe; font-weight:bold; text-decoration:none;">Watch Now</a>
+                                </td>
+                                <td width="20" class="tdSpacer5" style="color:#004b50; font-family:'Segoe UI',Arial,sans-serif; font-size:11px; font-weight:bold; line-height:11px; padding:10px 0;">&nbsp;</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td width="30" valign="middle" align="left" class="tdSpacer10" style="color:ffffff; font-size:14px; line-height:17px;">&nbsp;</td>
+                </tr>
+            </table>
+        </td>
+        <td width="500" valign="top" align="left" bgcolor="#ffffff" style="color:#ffffff; font-size:13px; line-height:16px; padding:0;">
+            <table cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                    <td width="20" valign="middle" align="left" class="tdSpacer10" style="color:ffffff; font-family:'Segoe UI',Arial,sans-serif; font-size:13px; line-height:17px;">&nbsp;</td>
+                    <td width="450" valign="middle" align="left" class="txtBody" style="color:#000000; font-family:'Segoe UI',Arial,sans-serif; font-size:13px; line-height:16px; padding:20px 0;">
+                        <span class="txtBodyHead" style="font-size:26px; line-height:30px; font-family:'Segoe UI Light','Segoe UI',Arial,sans-serif; font-weight:100;" class="mobileAdjust">The Internet of Things is the wave of the future. Don’t get left behind.</span>
+                        <br><br>
+                        Curious about how to tap into the power of IoT, but you’re not sure where to start? Immerse yourself in the world of connected devices with this online course and start learning to tackle tough business problems in new and exciting ways!
+                    </td>
+                    <td width="30" valign="middle" align="left" class="tdSpacer10" style="color:ffffff; font-family:'Segoe UI',Arial,sans-serif; font-size:13px; line-height:17px;">&nbsp;</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+
+    <tr>
+        <td width="200" valign="top" align="left" bgcolor="#00188f" style="color:#ffffff; font-size:13px; padding:0; margin:0;" class="storyImg">
+            <table cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                    <td width="20" valign="middle" align="left" class="tdSpacer10" style="color:ffffff; font-size:13px; line-height:17px;">&nbsp;</td>
+                    <td width="150" valign="top" align="left" class="txtLZ" style="color:#ffffff; font-family:'Segoe UI Light','Segoe UI',Arial,sans-serif; font-weight:100; font-size:30px; line-height:34px; padding:35px 0px 10px 0px;">
+                        Key Dates
+                    </td>
+                    <td width="30" valign="middle" align="left" class="tdSpacer10" style="color:ffffff; font-size:14px; line-height:17px;">&nbsp;</td>
+                </tr>
+            </table>
+        </td>
+        <td width="500" valign="top" align="left" bgcolor="#ffffff" style="color:#ffffff; font-size:13px; line-height:16px; padding:0;">
+            <table cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                    <td width="20" valign="middle" align="left" class="tdSpacer10" style="color:ffffff; font-family:'Segoe UI',Arial,sans-serif; font-size:13px; line-height:17px;">&nbsp;</td>
+                    <td width="450" valign="middle" align="left" class="txtBody" style="color:#000000; font-family:'Segoe UI',Arial,sans-serif; font-size:13px; line-height:16px; padding:20px 0;">
+                        Be sure to mark your calendar with this important date!
+                        <br><br>
+                        <table cellpadding="0" cellspacing="0" border="0" bgcolor="#d9dcee">
+                            <tr>
+                                <td valign="middle" align="left" width="15" bgcolor="#d9dcee" class="tdSpacer5" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:13px; line-height:16px; padding:10px 0;">&nbsp;</td>
+                                <td valign="middle" align="left" bgcolor="#d9dcee" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:13px; line-height:16px; padding:10px 0;">
+                                    <a href="https://click.email.microsoftemail.com/?qs=8d2a3e1a8a96fe76127724ae3ddf2d66cb07147e5ae144742f6f893f63939a3cab8e89fd36aba4bd" title="Imagine Cup Championship Livestream"  style="color:#4d4d4e; text-decoration:none;">9&nbsp;a.m.&nbsp;PT,&nbsp;July&nbsp;29,&nbsp;2016 &mdash; Imagine&nbsp;Cup Championship&nbsp;Livestream</a>
+                                </td>
+                                <td valign="middle" align="left" width="15" bgcolor="#d9dcee" class="tdSpacer5" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:13px; line-height:16px; padding:10px 0;">&nbsp;</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td width="30" valign="middle" align="left" class="tdSpacer10" style="color:ffffff; font-family:'Segoe UI',Arial,sans-serif; font-size:13px; line-height:17px;">&nbsp;</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+
+    <tr>
+        <td width="200" valign="top" align="left" bgcolor="#5c2d91" style="color:#ffffff; font-size:13px; padding:0; margin:0;" class="storyImg">
+            <table cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                    <td width="20" valign="middle" align="left" class="tdSpacer10" style="color:ffffff; font-size:13px; line-height:17px;">&nbsp;</td>
+                    <td width="150" valign="top" align="left" class="txtLZ" style="color:#ffffff; font-family:'Segoe UI Light','Segoe UI',Arial,sans-serif; font-weight:100; font-size:30px; line-height:34px; padding:35px 0px 10px 0px;">
+                        Share
+                    </td>
+                    <td width="30" valign="middle" align="left" class="tdSpacer10" style="color:ffffff; font-size:14px; line-height:17px;">&nbsp;</td>
+                </tr>
+            </table>
+        </td>
+        <td width="500" valign="top" align="left" bgcolor="#ffffff" style="color:#ffffff; font-size:13px; line-height:16px; padding:0;">
+            <table cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                    <td width="20" valign="middle" align="left" class="tdSpacer10" style="color:ffffff; font-family:'Segoe UI',Arial,sans-serif; font-size:13px; line-height:17px;">&nbsp;</td>
+                    <td width="450" valign="middle" align="left" class="txtBody" style="color:#000000; font-family:'Segoe UI',Arial,sans-serif; font-size:13px; line-height:16px; padding:20px 0;">
+                        Do you know someone who's a full-time student developer? Please tell them about Microsoft Imagine.
+                        <br><br>
+                        <a href="https://click.email.microsoftemail.com/?qs=8d2a3e1a8a96fe7673514989b6ec104c4c3eb0e6f784f0c7b8a4f4898d40cb4e10878ffcea319c05" title="Facebook"  style="text-decoration:none;border:0px;color:#000001"><img src="https://image.email.microsoftemail.com/lib/fe651570756503797d11/m/1/fb-share-button.png" alt="Share on Facebook" border="0"></a>&nbsp;<a href="https://click.email.microsoftemail.com/?qs=8d2a3e1a8a96fe76a67d597e44fb0bbfd508efa5e733a3734830350e14b3ecc947d82bc788cf808b" title="Twitter"  style="text-decoration:none;border:0px;color:#000001"><img src="https://image.email.microsoftemail.com/lib/fe651570756503797d11/m/1/twitter-share-button.png" alt="Tweet on Twitter" border="0"></a>
+                    </td>
+                    <td width="30" valign="middle" align="left" class="tdSpacer10" style="color:ffffff; font-family:'Segoe UI',Arial,sans-serif; font-size:13px; line-height:17px;">&nbsp;</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+<!-- /Body -->
+
+<!-- Footer -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#d2d2d2">
+    <tr>
+        <td width="700" align="center" style="color:#ffffff; font-size:11px;">&nbsp;</td>
+    </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#d2d2d2">
+    <tr>
+        <td width="30" valign="middle" align="left" style="color:#d2d2d2; font-family:'Segoe UI',Arial,sans-serif; font-size:10px; line-height:12px; padding:10px 0;"></td>
+        <td width="610" valign="middle" align="left" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:10px; line-height:12px; padding:10px 0;">
+            <a href="https://click.email.microsoftemail.com/?qs=8d2a3e1a8a96fe764acfe8674fe63ebd3bb57d714334b91d3033bd0e2667e50ef1de7d8f045d92a4" title="Microsoft"  style="text-decoration:none;"><img src="http://image.email.microsoftemail.com/lib/fe651570756503797d11/m/1/33539_MSLogo_Footer_2015-04.png" alt="Microsoft" border="0"></a>
+            <br><br>
+        </td>
+        <td width="30" valign="middle" align="left" style="color:#d2d2d2; font-family:'Segoe UI',Arial,sans-serif; font-size:10px; line-height:12px; padding:10px 0;"></td>
+    </tr>
+    <tr>
+        <td width="30" valign="middle" align="left" style="color:#d2d2d2; font-family:'Segoe UI',Arial,sans-serif; font-size:10px; line-height:12px; padding:10px 0;"></td>
+        <td width="610" valign="middle" align="left" style="color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:10px; line-height:12px; padding:10px 0;">
+            Microsoft respects your privacy. Please read our online <a href="https://click.email.microsoftemail.com/?qs=8d2a3e1a8a96fe760bd861aed104fca20c63dc2221774e8b9298bbcc7a15a1a1a225be71f9c90854" title="Privacy Statement"  style="color:#666666; text-decoration:underline;">Privacy Statement</a>.
+            <br><br>
+            If you would prefer to no longer receive this newsletter, please <a href="https://click.email.microsoftemail.com/m_hcp.aspx?qs=4a62fed4fda65625f47a647ed7765a14dd4e170eded40c6bd727e6073c2c05c655d7d702542f1a5bad03b686f66cd76f9888416ca82d87508d74219a7f9a37d46ffdda8e338f10cb6d33381733d8a6f06bf83472a137cab7bb85351c43e8cdf1" title="click here"  style="color:#666666; text-decoration:underline;">click here</a>.
+            <br><br>
+            To set your contact preferences for other Microsoft communications <a href="https://click.email.microsoftemail.com/m_hcp.aspx?qs=4a62fed4fda65625f47a647ed7765a14dd4e170eded40c6bd727e6073c2c05c655d7d702542f1a5bad03b686f66cd76f9888416ca82d87508d74219a7f9a37d46ffdda8e338f10cb6d33381733d8a6f06bf83472a137cab7f1d04c94ae1c6a62" title="click here"  style="color:#666666; text-decoration:underline;">click here</a>.
+            <br><br>
+            Microsoft Corporation <br>
+            One Microsoft Way<br>
+            Redmond, WA 98052<br>
+            USA
+        </td>
+        <td width="30" valign="middle" align="left" style="color:#d2d2d2; font-family:'Segoe UI',Arial,sans-serif; font-size:10px; line-height:12px; padding:10px 0;"></td>
+    </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#d2d2d2">
+    <tr>
+        <td width="700" align="center" style="color:#ffffff; font-size:11px;">&nbsp;</td>
+    </tr>
+</table>
+<!-- /Footer -->
+
+        </td>
+    </tr>
+</table>
+
+<img src="https://click.email.microsoftemail.com/open.aspx?ffcb10-fe8b10737262027870-fdf61571746201797011757d-fe651570756503797d11-fec21c767365017e-fdfb15727261047b74167770-ff2f10787766" width="1" height="1">
+
+</body>
+</html>
+
+--hzO2r7qjjDrE=_?:--
+

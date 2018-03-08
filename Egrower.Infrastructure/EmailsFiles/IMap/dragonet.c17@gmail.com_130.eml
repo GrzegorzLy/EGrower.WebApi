@@ -1,0 +1,151 @@
+Delivered-To: dragonet.c17@gmail.com
+Received: by 10.202.44.193 with SMTP id s184csp1267303ois;
+        Fri, 2 Oct 2015 15:39:12 -0700 (PDT)
+X-Received: by 10.180.87.1 with SMTP id t1mr969379wiz.33.1443825552733;
+        Fri, 02 Oct 2015 15:39:12 -0700 (PDT)
+Return-Path: <000001502ab5891f-e16131db-5002-469a-88c4-10ff8c499a6d-000000@eu-west-1.amazonses.com>
+Received: from a6-237.smtp-out.eu-west-1.amazonses.com (a6-237.smtp-out.eu-west-1.amazonses.com. [54.240.6.237])
+        by mx.google.com with ESMTPS id er8si15826800wjc.65.2015.10.02.15.39.12
+        for <dragonet.c17@gmail.com>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Fri, 02 Oct 2015 15:39:12 -0700 (PDT)
+Received-SPF: pass (google.com: domain of 000001502ab5891f-e16131db-5002-469a-88c4-10ff8c499a6d-000000@eu-west-1.amazonses.com designates 54.240.6.237 as permitted sender) client-ip=54.240.6.237;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of 000001502ab5891f-e16131db-5002-469a-88c4-10ff8c499a6d-000000@eu-west-1.amazonses.com designates 54.240.6.237 as permitted sender) smtp.mailfrom=000001502ab5891f-e16131db-5002-469a-88c4-10ff8c499a6d-000000@eu-west-1.amazonses.com;
+       dkim=pass header.i=@amazonses.com
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=uku4taia5b5tsbglxyj6zym32efj7xqv; d=amazonses.com; t=1443825551;
+	h=Date:To:From:Reply-to:Subject:Message-ID:List-Unsubscribe:MIME-Version:Content-Type:Feedback-ID;
+	bh=YkdECGXG9VD5XSmRinC1Pc9RzSBf/vLk3pOP2iC9RAs=;
+	b=k8m8SFGws9+Zk6JCANLHJz+qGwRQlcGTR37qDVo9ETZkBLmjeKo0JqpkL9///w0Z
+	XxcHOqd+43aHz9TGOtmKsi1H3WBnPl03i8JAX+73gDfWnrqQr4iQ+UBhwXkWuz/vrII
+	MQmnChdbdIjPz9iM5XZG6mjwm+VSB9sPJuQBDang=
+Date: Fri, 2 Oct 2015 22:39:11 +0000
+To: dragonet17 <dragonet.c17@gmail.com>
+From: SPOJ Team <newsletter@spoj.com>
+Reply-to: SPOJ Team <contact@spoj.com>
+Subject: [SPOJ] Future3 Contest
+Message-ID: <000001502ab5891f-e16131db-5002-469a-88c4-10ff8c499a6d-000000@eu-west-1.amazonses.com>
+X-Priority: 3
+X-Mailer: PHPMailer 5.1 (phpmailer.sourceforge.net)
+List-Unsubscribe: <https://sendy.sphere-research.com/unsubscribe/Etr4QejFaMlz0iH763MJsEySkF8u1vjv0Z0XEVyCTJz4g/BzwkkFF9892GPFn7XI5Q4Wxw/zvdp99V4763lZEJHoRDklKtg>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="b1_fe7c3cc60f6f53d08e8694a4397b143d"
+X-SES-Outgoing: 2015.10.02-54.240.6.237
+Feedback-ID: 1.eu-west-1.iZ+0hGpfArdh+ibfNoTJcM0eWJmymsTtSQLtYekkOLI=:AmazonSES
+
+--b1_fe7c3cc60f6f53d08e8694a4397b143d
+Content-Type: text/plain; charset = "UTF-8"
+Content-Transfer-Encoding: 8bit
+
+ 
+			
+				
+					
+						
+						Hi dragonet17!
+
+						Would you like to test your skills? Take part in our programming contests!
+
+						We would like to invite you to take part in two programming contests organized as part of the Future3 - IT Career and Development Day scheduled to be held in Gdańsk in October. The Fair gathers IT students and graduates entering job market and ICT sector employees looking for new professional challenges.
+
+						When?
+
+						October 5-9, 2015 - International Online Programming Contest
+
+						October 20, 2015 - The second contest will be held on-site during the Future3 Job Fair  at Amber Expo in Gdansk.
+
+						Prizes to win:
+
+						
+							RC Quadrocopter Drone, 
+							Arduino Starter Kit, 
+							Kindle Paper White and
+							Amazon vouchers.
+						
+
+						
+						Event details and registration:
+
+						http://contest.future3.pl
+						
+						
+					
+					
+						
+						
+						Copyright © 2015 SPOJ.com
+						
+						You are receiving this email because you opted in on our website. Update your email preferences or unsubscribe.
+						
+						 
+
+
+--b1_fe7c3cc60f6f53d08e8694a4397b143d
+Content-Type: text/html; charset = "UTF-8"
+Content-Transfer-Encoding: 8bit
+
+<html>
+<head>
+	<title></title>
+</head>
+<body bgcolor="#F0F0F0" leftmargin="0" marginheight="0" marginwidth="0" style="margin: 0px; padding: 0px; overflow-x: hidden;" topmargin="0">
+<table bgcolor="#F0F0F0" border="0" cellpadding="0" cellspacing="0" height="100%" width="100%">
+	<tbody>
+		<tr>
+			<td align="center" bgcolor="#F0F0F0" style="background-color: #F0F0F0;" valign="top">&nbsp;
+			<table border="0" cellpadding="0" cellspacing="0" class="container" style="width:600px;max-width:600px" width="600">
+				<tbody>
+					<tr>
+						<td align="left" class="container-padding content" style="padding-left:24px;padding-right:24px;padding-top:12px;padding-bottom:12px;background-color:#ffffff;font-family:Helvetica, Arial, sans-serif;">
+						<h3>Hi dragonet17!</h3>
+
+						<p>Would you like to test your skills? Take part in our programming contests!</p>
+
+						<p>We would like to invite you to take part in two programming contests organized as part of the Future3 - IT Career and Development Day scheduled to be held in Gdańsk in October. The Fair gathers IT students and graduates entering job market and ICT sector employees looking for new professional challenges.</p>
+
+						<p><strong>When?</strong></p>
+
+						<p>October 5-9, 2015 - International Online Programming Contest</p>
+
+						<p>October 20, 2015 - The second contest will be held on-site during the Future3 Job Fair &nbsp;at&nbsp;Amber Expo in Gdansk.</p>
+
+						<p><strong>Prizes to win:</strong></p>
+
+						<ul>
+							<li><strong>RC Quadrocopter Drone, </strong></li>
+							<li><strong>Arduino Starter Kit, </strong></li>
+							<li><strong>Kindle Paper White and</strong></li>
+							<li><strong>Amazon vouchers.</strong></li>
+						</ul>
+
+						<center>
+						<p>Event details and registration:</p>
+
+						<h2 style="padding: 0px;"><a href="https://sendy.sphere-research.com/l/m1h25PXmfMBClgUyJ6ynsA/lXUe7j8924yrdvMGFt8eYtRA/zvdp99V4763lZEJHoRDklKtg">http://contest.future3.pl</a></h2>
+						</center>
+						</td>
+					</tr>
+					<tr>
+						<td align="left" class="container-padding footer-text" style="font-family:Helvetica, Arial, sans-serif;font-size:12px;line-height:16px;color:#aaaaaa;padding-left:24px;padding-right:24px"><br />
+						<br />
+						Copyright &copy; 2015 SPOJ.com<br />
+						<br />
+						You are receiving this email because you opted in on our website. Update your <a href="https://sendy.sphere-research.com/l/m1h25PXmfMBClgUyJ6ynsA/sSgo8hNr3djutFLe6V0J7A/zvdp99V4763lZEJHoRDklKtg">email preferences</a> or <a href="https://sendy.sphere-research.com/unsubscribe/Etr4QejFaMlz0iH763MJsEySkF8u1vjv0Z0XEVyCTJz4g/BzwkkFF9892GPFn7XI5Q4Wxw/zvdp99V4763lZEJHoRDklKtg">unsubscribe</a>.<br />
+						<br />
+						&nbsp;</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</body>
+</html>
+<img src="https://sendy.sphere-research.com/t/zvdp99V4763lZEJHoRDklKtg/m1h25PXmfMBClgUyJ6ynsA" alt=""/>
+
+
+
+--b1_fe7c3cc60f6f53d08e8694a4397b143d--

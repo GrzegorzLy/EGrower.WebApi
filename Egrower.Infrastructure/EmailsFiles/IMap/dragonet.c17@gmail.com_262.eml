@@ -1,0 +1,776 @@
+Delivered-To: dragonet.c17@gmail.com
+Received: by 10.107.162.19 with SMTP id l19csp156110ioe;
+        Tue, 30 May 2017 11:11:09 -0700 (PDT)
+X-Received: by 10.84.217.206 with SMTP id d14mr85785811plj.140.1496167869450;
+        Tue, 30 May 2017 11:11:09 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1496167869; cv=none;
+        d=google.com; s=arc-20160816;
+        b=pqggAz3O8yZefNW3Kk1+yF4r+6hqI+W7AzM1HPLTiLPzebqVq1rr44Ah2Ebq5DYpGB
+         c/wkOrcY4Pyu1skPvuy2WX8giFSjt8zEBJyuhy2vGhlRdmQfU1qY+SMDqC503JG7ilFK
+         7V/VvyhwIBoijV3YjFpezAq584GfFKNxpMh+uAq/CDoGYTUdpW90iQFLu8k8CBwM59VQ
+         4vhfQFFjMh+g/EVbQVSLmbVgdk376M4guX1excTgcUrZ/p6pveWmpREP8uNdtIpoDVPh
+         kRjw/KUI1XjiIa1Eo8AE9gIrSNcWhUD6mT1WqYdyAf9PHEqMqKH1ZkCL2UGuJHPfnYW8
+         zKQg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=list-unsubscribe:mime-version:subject:message-id:to:reply-to:from
+         :date:dkim-signature:dkim-signature:arc-authentication-results;
+        bh=hcbO7922mSGIGH1i9QlasmwpXDxgjFdnTZQijszTPds=;
+        b=cXD4qTao2MqVwwqSOu9tPInfEgoHRiBgJDz2aBzl9GaZfORW6HHkfO3n0zuNkmXcKE
+         px9aY/bUY0JIyZo8bjOryznC/zDuGDy9HsQGMZRTTDQlQkgwDM5IWaEn9hgq0/n4X/9E
+         hbhIfiXHq5N5QNUI0Rxb0GVwxcnqDZ91nG/BlTFO/9sEPb0fYr0odYVaWo/g0CCql5zC
+         9BHYGE9Las4VGi8bCBke4QYzkWX7UdUJx+lF5R/tf5OJKUu8Wlah+Z3mbUX9QWOG36c/
+         cRN+B8AzOpbB5bN8uH8f592EuehLtZvJWAuidxVzK05lblSCmOph2LPTMXTUWHNx+mLD
+         UdpA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@pluralsight.com;
+       dkim=pass header.i=@mktdns.com;
+       spf=pass (google.com: domain of 306-dup-745.0.147755.0.0.15759.9.6801855@smtp.pluralsight.com designates 199.15.215.12 as permitted sender) smtp.mailfrom=306-DUP-745.0.147755.0.0.15759.9.6801855@smtp.pluralsight.com
+Return-Path: <306-DUP-745.0.147755.0.0.15759.9.6801855@smtp.pluralsight.com>
+Received: from smtp.pluralsight.com (smtp.pluralsight.com. [199.15.215.12])
+        by mx.google.com with ESMTPS id i7si1562682pgn.368.2017.05.30.11.11.08
+        for <dragonet.c17@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 30 May 2017 11:11:09 -0700 (PDT)
+Received-SPF: pass (google.com: domain of 306-dup-745.0.147755.0.0.15759.9.6801855@smtp.pluralsight.com designates 199.15.215.12 as permitted sender) client-ip=199.15.215.12;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@pluralsight.com;
+       dkim=pass header.i=@mktdns.com;
+       spf=pass (google.com: domain of 306-dup-745.0.147755.0.0.15759.9.6801855@smtp.pluralsight.com designates 199.15.215.12 as permitted sender) smtp.mailfrom=306-DUP-745.0.147755.0.0.15759.9.6801855@smtp.pluralsight.com
+Return-Path: <no-reply@pluralsight.com>
+X-MSFBL: ZHJhZ29uZXQuYzE3QGdtYWlsLmNvbUBkdnAtMTk5LTE1LTIxNS0xMkBiZy1zamQt
+	OTlAMzA2LURVUC03NDU6NDk1Mjk6MTE4Mjc6NTY4MDk6MDoxNTc1OTo5OjE0Nzc1
+	NTo2ODAxODU1
+Received: from [10.0.87.249] ([10.0.87.249:53481] helo=sjmas03.marketo.org)
+	by sjmta13.marketo.org (envelope-from <no-reply@pluralsight.com>)
+	(ecelerity 3.6.8.47404 r(Core:3.6.8.0)) with ESMTP
+	id 35/8E-15867-3B5BD295; Tue, 30 May 2017 13:10:59 -0500
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; t=1496167859;
+	s=m1; d=pluralsight.com; i=@pluralsight.com;
+	h=Date:From:To:Subject:MIME-Version:Content-Type;
+	bh=hcbO7922mSGIGH1i9QlasmwpXDxgjFdnTZQijszTPds=;
+	b=P78ovcnKicdYSRHrN5gcFQw/XsmVCUvM76YASWkKShQaaK2FXUSOYEOVA3oRp0q+
+	i2Gdj8kXQluHuZuwI2kTochikQz912KaD6WVZJcuDSbfLOT35Lu647Pr7pfUjw4lWYC
+	KbKfE0TdMQA5+F+a8Ft5wFabKZPASnXhcyfAP6t4=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; t=1496167859;
+	s=m1; d=mktdns.com; i=@mktdns.com;
+	h=Date:From:To:Subject:MIME-Version:Content-Type;
+	bh=hcbO7922mSGIGH1i9QlasmwpXDxgjFdnTZQijszTPds=;
+	b=opUmuxix7KNL8lMSxUIwo1d8WND8DwQk0kdHRtorD8DflqM8TjHJ40oEtgI0GJaf
+	m24chd3NolqY2aI+9N1sHTgdg7qR2w3WtxYdm9GY2XVj0rgd3mpBc/80bLcMtW/pBHJ
+	jd3vmKbBlFaLx5vWPrP06lJnqR1djdfuqlvLzfCI=
+Date: Tue, 30 May 2017 13:10:59 -0500 (CDT)
+From: Pluralsight <no-reply@pluralsight.com>
+Reply-To: no-reply@pluralsight.com
+To: dragonet.c17@gmail.com
+Message-ID: <1217300455.681972323.1496167859338.JavaMail.root@sjmas03.marketo.org>
+Subject: Be the best at what you love to do
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_681972322_999580559.1496167859338"
+X-PVIQ: mkto-306DUP745-000001-000000-147755
+X-Binding: bg-sjd-99
+X-MarketoID: 306-DUP-745:49529:11827:56809:0:15759:9:147755:6801855
+X-MktArchive: false
+List-Unsubscribe: <mailto:OZDGQYTFGI4E2Z32KJQTGYKINNMUW2KPIFIT2PI.147755.15759.9@unsub-sj.mktomail.com>
+X-Mailfrom: 306-DUP-745.0.147755.0.0.15759.9.6801855@smtp.pluralsight.com
+X-MSYS-API: {"options":{"open_tracking":false,"click_tracking":false}}
+X-MktMailDKIM: true
+
+------=_Part_681972322_999580559.1496167859338
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<http://track.pluralsight.com/kD05v0N00El01UhxtV0Ns0P>
+BE THE BEST AT WHAT
+YOU LOVE TO DO
+<http://track.pluralsight.com/I0V0ODt0vsl6Nh1x0E0UP00>
+<http://track.pluralsight.com/kD07v0N00El01UhxtV0Ps0P>
+<http://track.pluralsight.com/Y0hsE08Nl00xt001vUD0QPV>
+<http://track.pluralsight.com/z0xt1hv000sUNREVDl90P00>
+<http://track.pluralsight.com/n0Dl0Sa01xNv0PU0tV00hEs>
+<http://track.pluralsight.com/dh0vlVTNEx0Pt00Usb010D0>
+<http://track.pluralsight.com/qVPD0h0tvc0NsE01U0lU00x>
+<http://track.pluralsight.com/R00vstVUxh0010l0DVPEdN0>
+From these 8 categories, click on the ones you=E2=80=99re likely to dive in=
+to and learn to your heart=E2=80=99s content.
+=20
+=20
+
+
+
+Try it free <http://track.pluralsight.com/p0s00D0VeP0x0WNUhv0ltE1>
+<http://track.pluralsight.com/dc/JYWY0TlT8MJDYEoI81rBxOnTOO88FqBDDYRDr8jL7C=
+c=3D/f00Eh0v0tX00VU1xDNPfl0s>
+
+
+ Pluralsight, LLC 182 N. Union Ave. Farmington, UT 84025=20
+
+
+   Facebook: <http://track.pluralsight.com/dc/M5yi0yZ-UZCCxV3bfEu0anbONeUjO=
+d18p_VSSggcgn0DrbpjHMEHkIJurPN3o6x7/f00Eh0v0tX00VU1xDNPfl0s>
+   Instagram: <http://track.pluralsight.com/dc/MYFzQrvu5rPS8PETBnVMsRusr34Y=
+1lr0HdZtfs82X3v9rFnWXM6_VHgQDeQ1wjEu/f00Eh0v0tX00VU1xDNPfl0s>
+   Twitter: <http://track.pluralsight.com/dc/mEXRm9OBeNs3Y1bS8bbzxSIJ8iuvrV=
+EtSkOtQ-B3bvA=3D/f00Eh0v0tX00VU1xDNPfl0s>
+   Linkedin: <http://track.pluralsight.com/dc/fG5-PlwEnZR-IoSdwCtjIpTVr9AsJ=
+HNwc_srhy7U9rVQYJ5-L-XVAJU3uI-ICH5l/f00Eh0v0tX00VU1xDNPfl0s>
+   Google+: <http://track.pluralsight.com/dc/yBSzDXz1t83SAu8S57EEMjXpT0QzKE=
+Iw3GTILdKytdEZ4v5sL59nNypA4cX6KDoI/f00Eh0v0tX00VU1xDNPfl0s>
+   YoutTube: <http://track.pluralsight.com/dc/M9Y3nowLDCcEv8uSbJAkaXTGHqV_Y=
+EzxUjtWE9O_NefBZ08YC8PHjcsXU2E01rGh/f00Eh0v0tX00VU1xDNPfl0s>
+
+
+
+ Copyright=C2=A9 2017 Pluralsight LLC.
+ All logos and trademarks are the properties of their respective owners.=20
+
+ This email was sent to dragonet.c17@gmail.com <http://track.pluralsight.co=
+m/dc/1pDQu0mqE2rkhpZT-8gq22t_e8hlmX3JHlD628UL3nY=3D/f00Eh0v0tX00VU1xDNPfl0s=
+>
+ Unsubscribe <[[https://get.pluralsight.com/UnsubscribePage.html?mkt_unsubs=
+cribe=3D1&mkt_tok=3DeyJpIjoiWkdGbU5qYzVNRFF3TnpabSIsInQiOiJETHFiUVVqWFkxY1V=
+pOTVhZG1wQngwU0hiLzNsekZXV25SUmliWVlidldsZW9NRGtjNnFYeFlpQnN3cEFzQ0VEcExZdD=
+Q4NEpuQkRSUVlnOFlJczZ3TXhSYnZyOGxudWJ2U1VRd0xWd0RyaHFCUE82VXc1R0FnZzNJMFVOZ=
+URIZCJ9/]]> | Manage your preferences <http://track.pluralsight.com/dc/jXnN=
+gZX0R5Skt2btW6cf1ZC-rp3W1ClrQyb8joQdufid5Pzoibv5JJHzdhivwCdrLGSROPMb33CSgJ5=
+srQVOZw=3D=3D/f00Eh0v0tX00VU1xDNPfl0s>
+
+------=_Part_681972322_999580559.1496167859338
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns=3D"http://www.w3.org/1999/xhtml">
+ <head>=20
+  <title>PLURALSIGHT</title>=20
+  <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8">=
+=20
+  <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">=20
+  <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D=
+1.0">=20
+  <meta name=3D"format-detection" content=3D"telephone=3Dno">=20
+  <style type=3D"text/css">
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+    -webkit-text-size-adjust: 100% !important;
+    -ms-text-size-adjust: 100% !important;
+    -webkit-font-smoothing: antialiased !important;
+}
+img {
+    border: 0 !important;
+    outline: none !important;
+}
+p {
+    Margin: 0px !important;
+    Padding: 0px !important;
+}
+table {
+    border-collapse: collapse;
+    mso-table-lspace: 0px;
+    mso-table-rspace: 0px;
+}
+td, a, span {
+    border-collapse: collapse;
+    mso-line-height-rule: exactly;
+}
+.ExternalClass * {
+    line-height: 100%;
+}
+.em_defaultlink a {
+    color: inherit !important;
+    text-decoration: none !important;
+}
+span.MsoHyperlink {
+    mso-style-priority: 99;
+    color: inherit;
+}
+span.MsoHyperlinkFollowed {
+    mso-style-priority: 99;
+    color: inherit;
+}
+.em_font48_blk {
+    font-family: 'Gotham', Arial, sans-serif;
+    font-size: 27px;
+    line-height: 32px;
+    color: #ffffff;
+    font-weight: bold;
+    letter-spacing:.5px;
+}
+.em_font48_blk a {
+    color: #ffffff;
+    text-decoration: none;
+}
+.em_font14, .em_font14 a {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    color: #ffffff;
+    text-decoration: none;
+}
+.em_footer_text {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    line-height: 20px;
+    color: #888888;
+    letter-spacing: 0.9px;
+}
+.em_footer_text a {
+    color: #878787;
+    text-decoration: none;
+}
+.em_footer_text span a {
+    color: #207ec1;
+    text-decoration: none;
+}
+/*Stylesheed for the devices width between 481px to 599px*/
+@media only screen and (min-width:481px) and (max-width:599px) {
+.em_wrapper {
+    width: 100% !important;
+}
+.em_hide {
+    display: none !important;
+}
+.em_height {
+    height: 20px !important;
+}
+.em_spacer {
+    width: 10px !important;
+}
+.em_pad_top {
+    padding-top: 10px !important;
+}
+}
+/*End of Stylesheed for the devices width between 481px to 599px*/
+/*Stylesheed for the devices width below 481px */
+@media only screen and (max-width:480px) {
+.em_wrapper {
+    width: 100% !important;
+}
+.em_hide {
+    display: none !important;
+}
+.em_height {
+    height: 20px !important;
+}
+.em_spacer {
+    width: 10px !important;
+}
+.em_font48_blk {
+    font-size: 23px !important;
+    line-height: 30px !important;
+}
+.em_pad_top {
+    padding-top: 10px !important;
+}
+}
+/*End of Stylesheed for the devices width below 481px */
+</style>=20
+ </head>=20
+ <body style=3D"margin:0px; padding:0px; -webkit-text-size-adjust:100% !imp=
+ortant; -ms-text-size-adjust:100% !important; -webkit-font-smoothing:antial=
+iased !important; ">
+  <!--Full width table start-->=20
+  <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" al=
+ign=3D"center" style=3D"border-collapse:collapse; mso-table-lspace:0px; mso=
+-table-rspace:0px; ">
+   <tbody>
+    <tr>
+     <td align=3D"center" valign=3D"top" style=3D"border-collapse:collapse;=
+ mso-line-height-rule:exactly; ">
+      <table width=3D"600" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"=
+ align=3D"center" class=3D"em_wrapper" style=3D"border-collapse:collapse; m=
+so-table-lspace:0px; mso-table-rspace:0px; ">
+       <!-- CONTENT SECTION STARTS HERE -->=20
+       <tbody>
+        <tr>
+         <td align=3D"center" valign=3D"top" bgcolor=3D"#000000" style=3D"b=
+order-collapse:collapse; mso-line-height-rule:exactly; ">
+          <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" style=3D"border-collapse:collapse; mso-table-lspace:0px; mso-table-r=
+space:0px; ">
+           <tbody>
+            <tr>
+             <td width=3D"55" class=3D"em_spacer" style=3D"border-collapse:=
+ collapse;mso-line-height-rule: exactly;">&nbsp;</td>=20
+             <td align=3D"center" valign=3D"top" style=3D"border-collapse:c=
+ollapse; mso-line-height-rule:exactly; ">
+              <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadd=
+ing=3D"0" align=3D"center" style=3D"border-collapse:collapse; mso-table-lsp=
+ace:0px; mso-table-rspace:0px; ">
+               <tbody>
+                <tr>
+                 <td align=3D"center" valign=3D"top" style=3D"border-collap=
+se:collapse; mso-line-height-rule:exactly; ">
+                  <table width=3D"100%" border=3D"0" cellspacing=3D"0" cell=
+padding=3D"0" style=3D"border-collapse:collapse; mso-table-lspace:0px; mso-=
+table-rspace:0px; ">
+                   <tbody>
+                    <tr>=20
+                     <td height=3D"30" style=3D"line-height: 1px;font-size:=
+ 1px;border-collapse: collapse;mso-line-height-rule: exactly;">&nbsp;</td>=
+=20
+                    </tr>=20
+                    <tr>
+                     <td valign=3D"middle" align=3D"center" style=3D"border=
+-collapse:collapse; mso-line-height-rule:exactly; ">
+                      <div class=3D"mktEditable" id=3D"logo">
+                       <a href=3D
+"http://track.pluralsight.com/kD05v0N00El01UhxtV0Ns0P" target=3D"_blank" st=
+yle=3D"text-decoration: none;border-collapse: collapse;mso-line-height-rule=
+: exactly;"
+><img src=3D"http://pluralsight-assets.s3.amazonaws.com/demand%20emails/B2C=
+NetNewV2/drip2/footer_logo.png" width=3D"112" height=3D"24" alt=3D"PLURALSI=
+GHT" border=3D"0" style=3D"display: block;font-family: Arial, sans-serif;fo=
+nt-size: 15px;color: #ffffff;font-weight: bold;max-width: 112px;border: 0 !=
+important;outline: none !important;"></a>
+                      </div> </td>=20
+                    </tr>=20
+                    <tr>=20
+                     <td height=3D"58" class=3D"em_height" style=3D"line-he=
+ight: 1px;font-size: 1px;border-collapse: collapse;mso-line-height-rule: ex=
+actly;">&nbsp;</td>=20
+                    </tr>=20
+                   </tbody>
+                  </table> </td>=20
+                </tr>=20
+                <tr>
+                 <td align=3D"center" valign=3D"top" style=3D"border-collap=
+se:collapse; mso-line-height-rule:exactly; ">
+                  <table width=3D"100%" border=3D"0" cellspacing=3D"0" cell=
+padding=3D"0" style=3D"border-collapse:collapse; mso-table-lspace:0px; mso-=
+table-rspace:0px; ">
+                   <tbody>
+                    <tr>
+                     <td align=3D"center" valign=3D"top" style=3D"border-co=
+llapse:collapse; mso-line-height-rule:exactly; ">
+                      <table width=3D"100%" border=3D"0" cellspacing=3D"0" =
+cellpadding=3D"0" style=3D"border-collapse:collapse; mso-table-lspace:0px; =
+mso-table-rspace:0px; ">
+                       <tbody>
+                        <tr>
+                         <td align=3D"center" valign=3D"top" class=3D"em_fo=
+nt48_blk" style=3D"border-collapse:collapse; mso-line-height-rule:exactly; =
+font-family:'Gotham', Arial, sans-serif; font-size:27px; line-height:32px; =
+color:#ffffff; font-weight:bold; letter-spacing:.5px; ">
+                          <div class=3D"mktEditable" id=3D"title">
+                           BE THE BEST AT WHAT
+                           <br class=3D"em_hide"> YOU LOVE TO DO
+                          </div> </td>=20
+                        </tr>=20
+                        <tr>=20
+                         <td height=3D"23" class=3D"em_height" style=3D"bor=
+der-collapse: collapse;mso-line-height-rule: exactly;">&nbsp;</td>=20
+                        </tr>=20
+                       </tbody>
+                      </table> </td>=20
+                    </tr>=20
+                   </tbody>
+                  </table>=20
+                  <table width=3D"100%" border=3D"0" cellspacing=3D"0" cell=
+padding=3D"0" style=3D"border-collapse:collapse; mso-table-lspace:0px; mso-=
+table-rspace:0px; ">
+                   <tbody>
+                    <tr>
+                     <td align=3D"center" valign=3D"top" style=3D"border-co=
+llapse:collapse; mso-line-height-rule:exactly; ">
+                      <table width=3D"100%" border=3D"0" cellspacing=3D"0" =
+cellpadding=3D"0" style=3D"border-collapse:collapse; mso-table-lspace:0px; =
+mso-table-rspace:0px; ">
+                       <tbody>
+                        <tr>
+                         <td align=3D"center" valign=3D"top" style=3D"borde=
+r-collapse:collapse; mso-line-height-rule:exactly; ">
+                          <table width=3D"240" border=3D"0" cellspacing=3D"=
+0" cellpadding=3D"0" align=3D"left" class=3D"em_wrapper" style=3D"border-co=
+llapse:collapse; mso-table-lspace:0px; mso-table-rspace:0px; ">
+                           <tbody>
+                            <tr>
+                             <td align=3D"center" valign=3D"top" style=3D"b=
+order-collapse:collapse; mso-line-height-rule:exactly; ">
+                              <table width=3D"240" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" align=3D"center" style=3D"border-collapse:collapse=
+; mso-table-lspace:0px; mso-table-rspace:0px; ">
+                               <tbody>
+                                <tr>
+                                 <td align=3D"center" valign=3D"top" style=
+=3D"border-collapse:collapse; mso-line-height-rule:exactly; ">
+                                  <div class=3D"mktEditable" id=3D"Img_1">
+                                   <a href=3D
+"http://track.pluralsight.com/I0V0ODt0vsl6Nh1x0E0UP00" target=3D"_blank" st=
+yle=3D"text-decoration: none; border-collapse: collapse; mso-line-height-ru=
+le: exactly;"
+><img src=3D"http://pluralsight-assets.s3.amazonaws.com/demand%20emails/B2C=
+NetNewV2/drip2/icon_1.png" width=3D"115" height=3D"115" alt=3D"Software dev=
+elopment" border=3D"0" style=3D"display: block; font-family: Arial, sans-se=
+rif; font-size: 15px; color: #ffffff; font-weight: bold; max-width: 115px; =
+border: 0 !important; outline: none !important;"></a>
+                                  </div> </td>=20
+                                 <td width=3D"10" style=3D"border-collapse:=
+ collapse;mso-line-height-rule: exactly;">&nbsp;</td>=20
+                                 <td align=3D"center" valign=3D"top" style=
+=3D"border-collapse:collapse; mso-line-height-rule:exactly; ">
+                                  <div class=3D"mktEditable" id=3D"Img_2">
+                                   <a href=3D
+"http://track.pluralsight.com/kD07v0N00El01UhxtV0Ps0P" target=3D"_blank" st=
+yle=3D"text-decoration: none; border-collapse: collapse; mso-line-height-ru=
+le: exactly;"
+><img src=3D"http://pluralsight-assets.s3.amazonaws.com/demand%20emails/B2C=
+NetNewV2/drip2/icon_2.png" width=3D"115" height=3D"115" alt=3D"IT ops" bord=
+er=3D"0" style=3D"display: block; font-family: Arial, sans-serif; font-size=
+: 15px; color: #ffffff; font-weight: bold; max-width: 115px; border: 0 !imp=
+ortant; outline: none !important;"></a>
+                                  </div> </td>=20
+                                </tr>=20
+                               </tbody>
+                              </table> </td>=20
+                            </tr>=20
+                           </tbody>
+                          </table>=20
+                          <table width=3D"240" border=3D"0" cellspacing=3D"=
+0" cellpadding=3D"0" align=3D"right" class=3D"em_wrapper" style=3D"border-c=
+ollapse:collapse; mso-table-lspace:0px; mso-table-rspace:0px; ">
+                           <tbody>
+                            <tr>
+                             <td align=3D"center" valign=3D"top" class=3D"e=
+m_pad_top" style=3D"border-collapse:collapse; mso-line-height-rule:exactly;=
+ ">
+                              <table width=3D"240" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" align=3D"center" style=3D"border-collapse:collapse=
+; mso-table-lspace:0px; mso-table-rspace:0px; ">
+                               <tbody>
+                                <tr>
+                                 <td align=3D"center" valign=3D"top" style=
+=3D"border-collapse:collapse; mso-line-height-rule:exactly; ">
+                                  <div class=3D"mktEditable" id=3D"Img_3">
+                                   <a href=3D
+"http://track.pluralsight.com/Y0hsE08Nl00xt001vUD0QPV" target=3D"_blank" st=
+yle=3D"text-decoration: none; border-collapse: collapse; mso-line-height-ru=
+le: exactly;"
+><img src=3D"http://pluralsight-assets.s3.amazonaws.com/demand%20emails/B2C=
+NetNewV2/drip2/icon_3.png" width=3D"115" height=3D"115" alt=3D"Creative pro=
+fessional" border=3D"0" style=3D"display: block; font-family: Arial, sans-s=
+erif; font-size: 15px; color: #ffffff; font-weight: bold; max-width: 115px;=
+ border: 0 !important; outline: none !important;"></a>
+                                  </div> </td>=20
+                                 <td width=3D"10" style=3D"border-collapse:=
+ collapse;mso-line-height-rule: exactly;">&nbsp;</td>=20
+                                 <td align=3D"center" valign=3D"top" style=
+=3D"border-collapse:collapse; mso-line-height-rule:exactly; ">
+                                  <div class=3D"mktEditable" id=3D"Img_4">
+                                   <a href=3D
+"http://track.pluralsight.com/z0xt1hv000sUNREVDl90P00" target=3D"_blank" st=
+yle=3D"text-decoration: none; border-collapse: collapse; mso-line-height-ru=
+le: exactly;"
+><img src=3D"http://pluralsight-assets.s3.amazonaws.com/demand%20emails/B2C=
+NetNewV2/drip2/icon_4.png" width=3D"115" height=3D"115" alt=3D"Business Pro=
+fessional" border=3D"0" style=3D"display: block; font-family: Arial, sans-s=
+erif; font-size: 15px; color: #ffffff; font-weight: bold; max-width: 115px;=
+ border: 0 !important; outline: none !important;"></a>
+                                  </div> </td>=20
+                                </tr>=20
+                               </tbody>
+                              </table> </td>=20
+                            </tr>=20
+                           </tbody>
+                          </table> </td>=20
+                        </tr>=20
+                       </tbody>
+                      </table> </td>=20
+                    </tr>=20
+                    <tr>=20
+                     <td height=3D"10" style=3D"line-height: 1px;font-size:=
+ 1px;border-collapse: collapse;mso-line-height-rule: exactly;">&nbsp;</td>=
+=20
+                    </tr>=20
+                    <tr>
+                     <td align=3D"center" valign=3D"top" style=3D"border-co=
+llapse:collapse; mso-line-height-rule:exactly; ">
+                      <table width=3D"100%" border=3D"0" cellspacing=3D"0" =
+cellpadding=3D"0" style=3D"border-collapse:collapse; mso-table-lspace:0px; =
+mso-table-rspace:0px; ">
+                       <tbody>
+                        <tr>
+                         <td align=3D"center" valign=3D"top" style=3D"borde=
+r-collapse:collapse; mso-line-height-rule:exactly; ">
+                          <table width=3D"240" border=3D"0" cellspacing=3D"=
+0" cellpadding=3D"0" align=3D"left" class=3D"em_wrapper" style=3D"border-co=
+llapse:collapse; mso-table-lspace:0px; mso-table-rspace:0px; ">
+                           <tbody>
+                            <tr>
+                             <td align=3D"center" valign=3D"top" style=3D"b=
+order-collapse:collapse; mso-line-height-rule:exactly; ">
+                              <table width=3D"240" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" align=3D"center" style=3D"border-collapse:collapse=
+; mso-table-lspace:0px; mso-table-rspace:0px; ">
+                               <tbody>
+                                <tr>
+                                 <td align=3D"center" valign=3D"top" style=
+=3D"border-collapse:collapse; mso-line-height-rule:exactly; ">
+                                  <div class=3D"mktEditable" id=3D"Img_5">
+                                   <a href=3D
+"http://track.pluralsight.com/n0Dl0Sa01xNv0PU0tV00hEs" target=3D"_blank" st=
+yle=3D"text-decoration: none; border-collapse: collapse; mso-line-height-ru=
+le: exactly;"
+><img src=3D"http://pluralsight-assets.s3.amazonaws.com/demand%20emails/B2C=
+NetNewV2/drip2/icon_5.png" width=3D"115" height=3D"115" alt=3D" Data Profes=
+sional" border=3D"0" style=3D"display: block; font-family: Arial, sans-seri=
+f; font-size: 15px; color: #ffffff; font-weight: bold; max-width: 115px; bo=
+rder: 0 !important; outline: none !important;"></a>
+                                  </div> </td>=20
+                                 <td width=3D"10" style=3D"border-collapse:=
+ collapse;mso-line-height-rule: exactly;">&nbsp;</td>=20
+                                 <td align=3D"center" valign=3D"top" style=
+=3D"border-collapse:collapse; mso-line-height-rule:exactly; ">
+                                  <div class=3D"mktEditable" id=3D"Img_6">
+                                   <a href=3D
+"http://track.pluralsight.com/dh0vlVTNEx0Pt00Usb010D0" target=3D"_blank" st=
+yle=3D"text-decoration: none; border-collapse: collapse; mso-line-height-ru=
+le: exactly;"
+><img src=3D"http://pluralsight-assets.s3.amazonaws.com/demand%20emails/B2C=
+NetNewV2/drip2/icon_6.png" width=3D"115" height=3D"115" alt=3D"Information =
+and Cyber Security" border=3D"0" style=3D"display: block; font-family: Aria=
+l, sans-serif; font-size: 15px; color: #ffffff; font-weight: bold; max-widt=
+h: 115px; border: 0 !important; outline: none !important;"></a>
+                                  </div> </td>=20
+                                </tr>=20
+                               </tbody>
+                              </table> </td>=20
+                            </tr>=20
+                           </tbody>
+                          </table>=20
+                          <table width=3D"240" border=3D"0" cellspacing=3D"=
+0" cellpadding=3D"0" align=3D"right" class=3D"em_wrapper" style=3D"border-c=
+ollapse:collapse; mso-table-lspace:0px; mso-table-rspace:0px; ">
+                           <tbody>
+                            <tr>
+                             <td align=3D"center" valign=3D"top" class=3D"e=
+m_pad_top" style=3D"border-collapse:collapse; mso-line-height-rule:exactly;=
+ ">
+                              <table width=3D"240" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" align=3D"center" style=3D"border-collapse:collapse=
+; mso-table-lspace:0px; mso-table-rspace:0px; ">
+                               <tbody>
+                                <tr>
+                                 <td align=3D"center" valign=3D"top" style=
+=3D"border-collapse:collapse; mso-line-height-rule:exactly; ">
+                                  <div class=3D"mktEditable" id=3D"Img_7">
+                                   <a href=3D
+"http://track.pluralsight.com/qVPD0h0tvc0NsE01U0lU00x" target=3D"_blank" st=
+yle=3D"text-decoration: none; border-collapse: collapse; mso-line-height-ru=
+le: exactly;"
+><img src=3D"http://pluralsight-assets.s3.amazonaws.com/demand%20emails/B2C=
+NetNewV2/drip2/icon_7.png" width=3D"115" height=3D"115" alt=3D" Architectur=
+e and Construction" border=3D"0" style=3D"display: block; font-family: Aria=
+l, sans-serif; font-size: 15px; color: #ffffff; font-weight: bold; max-widt=
+h: 115px; border: 0 !important; outline: none !important;"></a>
+                                  </div> </td>=20
+                                 <td width=3D"10" style=3D"border-collapse:=
+ collapse;mso-line-height-rule: exactly;">&nbsp;</td>=20
+                                 <td align=3D"center" valign=3D"top" style=
+=3D"border-collapse:collapse; mso-line-height-rule:exactly; ">
+                                  <div class=3D"mktEditable" id=3D"Img_8">
+                                   <a href=3D
+"http://track.pluralsight.com/R00vstVUxh0010l0DVPEdN0" target=3D"_blank" st=
+yle=3D"text-decoration: none; border-collapse: collapse; mso-line-height-ru=
+le: exactly;"
+><img src=3D"http://pluralsight-assets.s3.amazonaws.com/demand%20emails/B2C=
+NetNewV2/drip2/icon_8.png" width=3D"115" height=3D"115" alt=3D"Manufacturin=
+g and Design" border=3D"0" style=3D"display: block; font-family: Arial, san=
+s-serif; font-size: 15px; color: #ffffff; font-weight: bold; max-width: 115=
+px; border: 0 !important; outline: none !important;"></a>
+                                  </div> </td>=20
+                                </tr>=20
+                               </tbody>
+                              </table> </td>=20
+                            </tr>=20
+                           </tbody>
+                          </table> </td>=20
+                        </tr>=20
+                       </tbody>
+                      </table> </td>=20
+                    </tr>=20
+                   </tbody>
+                  </table>=20
+                  <table width=3D"100%" border=3D"0" cellspacing=3D"0" cell=
+padding=3D"0" align=3D"center" class=3D"em_wrapper" style=3D"max-width:480p=
+x; border-collapse:collapse; mso-table-lspace:0px; mso-table-rspace:0px; ">
+                   <tbody>
+                    <tr>=20
+                     <td height=3D"30" style=3D"line-height: 1px;font-size:=
+ 1px;border-collapse: collapse;mso-line-height-rule: exactly;" class=3D"em_=
+height">&nbsp;</td>=20
+                    </tr>=20
+                    <tr>
+                     <td align=3D"center" valign=3D"top" class=3D"em_font14=
+" style=3D"border-collapse:collapse; mso-line-height-rule:exactly; font-fam=
+ily:Helvetica, Arial, sans-serif; font-size:14px; line-height:24px; color:#=
+ffffff; text-decoration:none; ">
+                      <div class=3D"mktEditable" id=3D"text1">
+                       From these 8 categories, click on the ones you=E2=80=
+=99re likely to
+                       <br class=3D"em_hide"> dive into and learn to your h=
+eart=E2=80=99s content.
+                       <br>=20
+                       <br>=20
+                       <!--Button-->=20
+                       <table class=3D"button" align=3D"center" width=3D"14=
+0" border=3D"0" cellspacing=3D"10" cellpadding=3D"5" style=3D"border-top-ri=
+ght-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius=
+: 5px; border-top-left-radius: 5px; border: 1px solid #e80088;">=20
+                        <tbody>=20
+                         <tr>=20
+                          <td style=3D"font-family: 'Helvetica Neue', Helve=
+tica, Arial, sans-serif; font-size: 14px; color: #e80088; text-align: cente=
+r;"><a href=3D
+"http://track.pluralsight.com/p0s00D0VeP0x0WNUhv0ltE1" style=3D"color: #e80=
+088; text-decoration: none;" target=3D"_blank"
+>Try it free</a></td>=20
+                         </tr>=20
+                        </tbody>=20
+                       </table>=20
+                       <!--End Button-->
+                      </div> </td>=20
+                    </tr>=20
+                    <tr>=20
+                     <td height=3D"20" style=3D"line-height: 1px;font-size:=
+ 1px;border-collapse: collapse;mso-line-height-rule: exactly;">&nbsp;</td>=
+=20
+                    </tr>=20
+                   </tbody>
+                  </table> </td>=20
+                </tr>=20
+               </tbody>
+              </table> </td>=20
+             <td width=3D"55" class=3D"em_spacer" style=3D"border-collapse:=
+ collapse;mso-line-height-rule: exactly;">&nbsp;</td>=20
+            </tr>=20
+           </tbody>
+          </table> </td>=20
+        </tr>=20
+        <!-- CONTENT SECTION ENDS HERE -->
+        <!--Footer-->=20
+        <tr>
+         <td>
+          <div class=3D"mktEditable" id=3D"email_footer_snippet">
+           <table width=3D"100%">=20
+            <tbody>=20
+             <tr>=20
+              <td style=3D"font-family: Arial, Helvetica, sans-serif; font-=
+size: 12px; line-height: 14px; color: #888888; padding: 50px;">=20
+               <div id=3D"footer">=20
+                <p style=3D"line-height: 100%; margin-top: 0px; margin-bott=
+om: 0px;"><br></p>=20
+                <table width=3D"466">=20
+                 <tbody>=20
+                  <tr>=20
+                   <td><a href=3D
+"http://track.pluralsight.com/dc/JYWY0TlT8MJDYEoI81rBxOnTOO88FqBDDYRDr8jL7C=
+c=3D/f00Eh0v0tX00VU1xDNPfl0s" target=3D"_blank"
+><img src=3D"http://pluralsight-assets.s3.amazonaws.com/transactional/templ=
+ate/ps-logo-with-icon-horiz-white-line.png" alt=3D"" width=3D"195" height=
+=3D"45"></a><br></td>=20
+                   <td><a href=3D
+"http://track.pluralsight.com/dc/JYWY0TlT8MJDYEoI81rBxOnTOO88FqBDDYRDr8jL7C=
+c=3D/f00Eh0v0tX00VU1xDNPfl0s" target=3D"_blank"
+><img src=3D"http://pluralsight-assets.s3.amazonaws.com/demand%20emails/cre=
+atethefuture/2/txt_img1.png" alt=3D"Create The Future" width=3D"180" height=
+=3D"10" style=3D"float: right;"></a></td>=20
+                  </tr>=20
+                 </tbody>=20
+                </table>=20
+                <p style=3D"line-height: 100%; margin-top: 0px; margin-bott=
+om: 0px;"><br></p>=20
+                <br> Pluralsight, LLC 182 N. Union Ave. Farmington, UT 8402=
+5=20
+                <br>=20
+                <br>=20
+                <table width=3D"190">=20
+                 <tbody>=20
+                  <tr>=20
+                   <td width=3D"11"><a href=3D
+"http://track.pluralsight.com/dc/M5yi0yZ-UZCCxV3bfEu0anbONeUjOd18p_VSSggcgn=
+0DrbpjHMEHkIJurPN3o6x7/f00Eh0v0tX00VU1xDNPfl0s" target=3D"_blank"
+> <img src=3D"http://pluralsight-assets.s3.amazonaws.com/template_images/fa=
+cebook_white.png" width=3D"11" height=3D"20" alt=3D"facebook" style=3D"disp=
+lay: block;"> </a></td>=20
+                   <td width=3D"20"><a href=3D
+"http://track.pluralsight.com/dc/MYFzQrvu5rPS8PETBnVMsRusr34Y1lr0HdZtfs82X3=
+v9rFnWXM6_VHgQDeQ1wjEu/f00Eh0v0tX00VU1xDNPfl0s" target=3D"_blank"
+> <img src=3D"http://pluralsight-assets.s3.amazonaws.com/template_images/in=
+stagram_white.png" width=3D"20" height=3D"19" alt=3D"instagram" style=3D"di=
+splay: block;"> </a></td>=20
+                   <td width=3D"24"><a href=3D
+"http://track.pluralsight.com/dc/mEXRm9OBeNs3Y1bS8bbzxSIJ8iuvrVEtSkOtQ-B3bv=
+A=3D/f00Eh0v0tX00VU1xDNPfl0s" target=3D"_blank"
+> <img src=3D"http://pluralsight-assets.s3.amazonaws.com/template_images/tw=
+itter_white.png" width=3D"24" height=3D"19" alt=3D"twitter" style=3D"displa=
+y: block;"> </a></td>=20
+                   <td width=3D"20"><a href=3D
+"http://track.pluralsight.com/dc/fG5-PlwEnZR-IoSdwCtjIpTVr9AsJHNwc_srhy7U9r=
+VQYJ5-L-XVAJU3uI-ICH5l/f00Eh0v0tX00VU1xDNPfl0s" target=3D"_blank"
+> <img src=3D"http://pluralsight-assets.s3.amazonaws.com/template_images/li=
+nkedin_white.png" width=3D"20" height=3D"19" alt=3D"Linked in" style=3D"dis=
+play: block;"> </a></td>=20
+                   <td width=3D"16"><a href=3D
+"http://track.pluralsight.com/dc/M9Y3nowLDCcEv8uSbJAkaXTGHqV_YEzxUjtWE9O_Ne=
+fBZ08YC8PHjcsXU2E01rGh/f00Eh0v0tX00VU1xDNPfl0s" target=3D"_blank"
+> <img src=3D"http://pluralsight-assets.s3.amazonaws.com/template_images/yo=
+u_tube_white.png" width=3D"16" height=3D"19" alt=3D"you_tube" style=3D"disp=
+lay: block;"> </a></td>=20
+                  </tr>=20
+                 </tbody>=20
+                </table>=20
+                <br>=20
+                <br> Copyright=C2=A9 2016 Pluralsight LLC.=20
+                <br> All logos and trademarks are the properties of their r=
+espective owners.=20
+                <br>=20
+                <br> This email was sent to=20
+                <a href=3D
+"http://track.pluralsight.com/dc/1pDQu0mqE2rkhpZT-8gq22t_e8hlmX3JHlD628UL3n=
+Y=3D/f00Eh0v0tX00VU1xDNPfl0s" style=3D"color: #207fc2; text-decoration: non=
+e;"
+>dragonet.c17@gmail.com</a>=20
+                <br>=20
+                <a href=3D"https://get.pluralsight.com/UnsubscribePage.html=
+?mkt_unsubscribe=3D1&mkt_tok=3DeyJpIjoiWkdGbU5qYzVNRFF3TnpabSIsInQiOiJETHFi=
+UVVqWFkxY1VpOTVhZG1wQngwU0hiLzNsekZXV25SUmliWVlidldsZW9NRGtjNnFYeFlpQnN3cEF=
+zQ0VEcExZdDQ4NEpuQkRSUVlnOFlJczZ3TXhSYnZyOGxudWJ2U1VRd0xWd0RyaHFCUE82VXc1R0=
+FnZzNJMFVOZURIZCJ9/" target=3D"_blank" style=3D"color: #888888; text-decora=
+tion: none;">Unsubscribe</a> |=20
+                <a href=3D
+"http://track.pluralsight.com/dc/jXnNgZX0R5Skt2btW6cf1ZC-rp3W1ClrQyb8joQduf=
+id5Pzoibv5JJHzdhivwCdrLGSROPMb33CSgJ5srQVOZw=3D=3D/f00Eh0v0tX00VU1xDNPfl0s"=
+ target=3D"_blank" style=3D"color: #888888; text-decoration: none;"
+>Manage your preferences</a>=20
+               </div> </td>=20
+             </tr>=20
+            </tbody>=20
+           </table>
+          </div> </td>=20
+        </tr>=20
+        <!--End Footer-->
+       </tbody>
+      </table> </td>=20
+    </tr>=20
+   </tbody>
+  </table>=20
+  <!--Full width table End-->
+  <!--Increase/decrease the number of (-) as per the template width-->=20
+  <div class=3D"em_hide" style=3D"white-space:nowrap; font:20px courier; co=
+lor:#ffffff;">
+   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &n=
+bsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+  </div> =20
+ <a href=3D
+"http://track.pluralsight.com/b0000hUvEDY0PlVg010xtsN"
+></a>
+<img src=3D"http://track.pluralsight.com/trk?t=3D1&mid=3DMzA2LURVUC03NDU6ND=
+k1Mjk6MTE4Mjc6NTY4MDk6MDoxNTc1OTo5OjE0Nzc1NTo2ODAxODU1OmRyYWdvbmV0LmMxN0Bnb=
+WFpbC5jb20%3D" width=3D"1" height=3D"1" style=3D"display:none !important;" =
+alt=3D"" />
+</body>
+</html>
+------=_Part_681972322_999580559.1496167859338--

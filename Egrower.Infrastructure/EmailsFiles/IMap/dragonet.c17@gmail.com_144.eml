@@ -1,0 +1,283 @@
+Delivered-To: dragonet.c17@gmail.com
+Received: by 10.202.65.198 with SMTP id o189csp2507048oia;
+        Wed, 30 Mar 2016 06:01:13 -0700 (PDT)
+X-Received: by 10.107.41.148 with SMTP id p142mr10386514iop.182.1459342873365;
+        Wed, 30 Mar 2016 06:01:13 -0700 (PDT)
+Return-Path: <bounce-866153_HTML-1275061275-4183785-228974-160@bounce.e-mail.microsoft.com>
+Received: from mta28.email.microsoftemail.com (mta28.email.microsoftemail.com. [66.231.92.214])
+        by mx.google.com with ESMTPS id n2si17169525igd.14.2016.03.30.06.01.12
+        for <dragonet.c17@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 30 Mar 2016 06:01:13 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounce-866153_HTML-1275061275-4183785-228974-160@bounce.e-mail.microsoft.com designates 66.231.92.214 as permitted sender) client-ip=66.231.92.214;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@email.microsoftemail.com;
+       spf=pass (google.com: domain of bounce-866153_HTML-1275061275-4183785-228974-160@bounce.e-mail.microsoft.com designates 66.231.92.214 as permitted sender) smtp.mailfrom=bounce-866153_HTML-1275061275-4183785-228974-160@bounce.e-mail.microsoft.com;
+       dmarc=pass (p=NONE dis=NONE) header.from=e-mail.microsoft.com
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=102420140131; d=email.microsoftemail.com;
+ h=From:To:Subject:Date:MIME-Version:Reply-To:Message-ID:Content-Type;
+ bh=XJLxRin0oICcGq5bPDsdGcQHEUs=;
+ b=orsHInew8CCjhmVRh9t2ejDNl6AqF/TQS02HfrDWquDAVieBbc0cUu+hXM7DUeL4p2O39GfxEHPB
+   PE70FH3vnXJlxhx72uZQAYq+nGrHRtdJtaM1OanI0EyWTbgFARKMgBQEE73qz9eTSAWgknFxhw5j
+   krokED2tut410UTuBYg=
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=200608; d=e-mail.microsoft.com;
+ b=ik4Wgzsx5V07knWR7cFQtFm4aoPagw+EkmdWJGBd9fjxeo9rnKlaPN4UZnzF3JjxcTsMDxjbjmZg
+   xcs+p/IkFU4kBVioN2iLY0W8JW7LvLS6zsCpZglrkQtNBu39PLPJYFV0/aSE8R0K32RqF7rwzL+z
+   oPogsDUvL8KyF80WoG4=;
+Received: by mta28.email.microsoftemail.com id hvf71i163hss for <dragonet.c17@gmail.com>; Wed, 30 Mar 2016 06:48:57 -0600 (envelope-from <bounce-866153_HTML-1275061275-4183785-228974-160@bounce.e-mail.microsoft.com>)
+From: "Visual Studio Team Services" <VSTS@e-mail.microsoft.com>
+To: <dragonet.c17@gmail.com>
+Subject: Check out the latest Visual Studio Team Services features!
+Date: Wed, 30 Mar 2016 06:48:56 -0600
+MIME-Version: 1.0
+Reply-To: "Microsoft Visual Studio" <reply-fe8b10717d67037570-866153_HTML-1275061275-228974-160@email.microsoftemail.com>
+x-job: 228974_4183785
+Message-ID: <bf77ae6f-8f6d-4264-9248-76577c6a0c3b@xtinmta177.xt.local>
+Content-Type: multipart/alternative;
+	boundary="gITuAg6kjkvJ=_?:"
+
+This is a multi-part message in MIME format.
+
+--gITuAg6kjkvJ=_?:
+Content-Type: text/plain;
+	charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Visual Studio Online 
+https://view.email.microsoftemail.com/?j=fe8b10717d67037570&m=febf16727d6d0379&ls=fdf61571746201797011757d&l=fec21c767365017e&s=fdfb15727261047b74167770&jb=ff68157675&ju= 
+View this email in your browser  
+  
+  
+ 
+Your hands will never leave your keyboard
+ 
+  
+With new keyboard shortcuts across Team Services – like these for the Code hub – you can work faster and accomplish even more.
+https://www.visualstudio.com/news/2016-jan-25-vso 
+Hit ? to get started!  
+  
+https://app.vssps.visualstudio.com/profile/view 
+Go to your account and check it out!  
+https://app.vssps.visualstudio.com/profile/view 
+ 
+ 
+  
+See all of the new updates and peek into the future with our Features Timeline 
+.
+ 
+ 
+https://www.visualstudio.com/news/news-overview-vs 
+News   -  
+https://www.visualstudio.com/products/visual-studio-team-services-pricing-vs 
+Pricing   -  
+http://www.visualstudio.com/support/support-overview-vs 
+Support 
+
+http://www.facebook.com/visualstudio 
+ 
+https://twitter.com/VSTeam 
+
+ 
+
+This is a mandatory service communication from Visual Studio. Microsoft respects your privacy. Review our 
+https://www.microsoft.com/EN-US/privacystatement/OnlineServices/Default.aspx 
+Privacy Statement .
+
+
+Microsoft Corporation | 
+One Microsoft Way | 
+Redmond, WA 98052 USA
+http://www.microsoft.com/ 
+ 
+
+ 
+
+
+
+
+
+
+
+--gITuAg6kjkvJ=_?:
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+<!--  -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Visual Studio Online</title>
+
+<style type="text/css">
+  body { background:#ebebeb; margin:0; padding:0; }
+  .bodywrap{
+    max-width:600px;
+    margin:auto;
+  }
+  .buttonCTA a, .buttonCTA a:visited {
+    color:#ffffff !important;
+  }
+  @media only screen and (max-width: 480px) {
+    *[class=block]{ display:block;width:100%; }
+    *[class=mobile_hidden] { display:none !important; }
+    *[class=mobile_gutter] { width:15px !important; }
+    *[class=mobile_maxwidth] { width:100% !important;}
+  }
+  img[class="body_image"] { max-width:520px; width:100% !important; height:auto !important; }
+</style>
+
+</head>
+
+<body bgcolor="#ebebeb" leftmargin="0" topmargin="0" style="padding-top:20px;">
+<table cellpadding="0" cellspacing="0" border="0" align="center">
+  <tr>
+    <td align="center" valign="top" class="bodywrap" style="width:600px; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; line-height:18px; color:#292929;">
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="40" align="left" class="mobile_gutter" style="padding:2px 0;">&nbsp;</td>
+    <td width="520" align="right" valign="middle" style="font-family:Tahoma,Geneva,sans-serif; color:#404040; font-size:11px; line-height:2em; text-align:right; padding:2px 0;">
+      <a href="https://click.email.microsoftemail.com/?qs=a63911b143c43d9a4e679015ea0ad5d4ee660c7ca774fbd1114e654621d00ecaae5bb14f2e6470d2"  title="View this email in your browser" style="color:#404041; text-decoration:none;">View this email in your browser</a>
+    </td>
+    <td width="40" align="left" class="mobile_gutter" style="padding:2px 0;">&nbsp;</td>
+  </tr>
+</table>
+<!-- header -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#5c2c90" >
+  <tr>
+    <td width="40" valign="top" align="left" class="mobile_gutter" style="padding:20px 0;">&nbsp;</td>
+    <td width="520" align="left" valign="middle" style="color:#ffffff; font-family:'Segoe UI',Arial,sans-serif; font-size:16px; line-height:20px; padding:20px 0;">
+      <img src="https://image.email.microsoftemail.com/lib/febf16727d6d0379/m/2/33624_VSTS_Logo03.png" width="290" height="28" border="0">
+    </td>
+    </td>
+    <td width="40" valign="top" align="left" class="mobile_gutter" style="padding:20px 0;">&nbsp;</td>
+  </tr>
+</table>
+<!-- main area -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#ffffff">
+  <tr>
+    <td width="40" valign="top" align="left" class="mobile_gutter" style="padding:40px 0 10px;">&nbsp;</td>
+    <td width="520" valign="middle" align="center" style="font-family:'Segoe UI',Arial,sans-serif; font-size:18px; line-height:23px; color:#707070; padding:40px 0 10px;">
+        <a href="#" title="Your hands will never leave your keyboard" alias="Image: Your hands will never leave your keyboard" style="text-decoration:none;"><img src="https://image.email.microsoftemail.com/lib/febf16727d6d0379/m/2/33624_VSTS_Keyboard_520_02.jpg" width="520" height="auto" alt="Your hands will never leave your keyboard" class="body_image"></a>
+    </td>
+    <td width="40" valign="top" align="left" class="mobile_hidden" style="padding:40px 0 10px;">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="40" valign="top" align="left" class="mobile_gutter" style="padding:20px 0 0;">&nbsp;</td>
+    <td width="520" valign="top" align="left" class="scaling" style="font-family:'Segoe UI Light','Segoe UI',Arial,sans-serif; font-size:26px; font-weight:100; line-height:28px; color:#5c2c90; padding:20px 0 0;">
+      Your hands will never leave your&nbsp;keyboard
+    </td>
+    <td width="40" valign="top" align="left" class="mobile_gutter" style="padding:20px 0 0;">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="40" valign="top" align="left" class="mobile_gutter" style="padding:10px 0 30px;">&nbsp;</td>
+    <td width="520" valign="top" align="left" class="block" style="font-family:'Segoe UI Light','Segoe UI',Arial,sans-serif; font-size:16px; font-weight:100; line-height:20px; color:#000000; padding:10px 0 30px;"> 
+        With new keyboard shortcuts across Team Services – like these for the Code hub – you can work faster and accomplish even&nbsp;more.  <a href="https://click.email.microsoftemail.com/?qs=a63911b143c43d9ad8b391ee932ac51b91e7eb7d06a0eb5154b12174ee34bf10040f919efe41f699" title="Hit ? to get started!"  style="color:#0078cf; text-decoration:none;">Hit ? to get started!</a>
+    </td>
+    <td width="40" valign="top" align="left" class="mobile_gutter" style="padding:10px 0 30px;">&nbsp;</td>
+  </tr>
+</table>
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#ffffff">
+  <tr>
+    <td width="40" valign="top" align="left" class="mobile_gutter" style="padding:10px 0 14px;">&nbsp;</td>
+    <td width="520" valign="top" align="center" class="scaling" style="font-family:'Segoe UI',Arial,sans-serif; font-size:20px; line-height:24px; color:#404040; padding:10px 0 14px;">
+
+      <table cellpadding="0" cellspacing="0" border="0" bgcolor="#009404">
+          <tr>
+              <td width="15">&nbsp;</td>
+              <td align="left" valign="middle" style="color:#ffffff; font-family:'Segoe UI',Arial,sans-serif; font-size:18px; line-height:20px; padding:7px 0 9px;"><a href="https://click.email.microsoftemail.com/?qs=a63911b143c43d9a88893e3fa383118bce5b24d7f630a1800cf13adf64e80a7a4cf0444984b48708" title="Go to your account and check it out!"  style="color:#fffffe; text-decoration:none;">Go to your account and check it&nbsp;out!</a></td>
+              <td width="10">&nbsp;</td>
+              <td align="center" valign="middle" width="28" style="color:#ffffff; font-family:'Segoe UI',Arial,sans-serif; font-size:18px; line-height:20px; padding:9px 0 7px;"><a href="https://click.email.microsoftemail.com/?qs=a63911b143c43d9abd31ab7a55f7301b80955a8a81b8fe66813d14402b56e7a0894cd689b3b4a80a" title="Go to your account and check it out!"  style="color:#fffffe; text-decoration:none;"><img src="http://image.email.microsoftemail.com/lib/fe621570756503797d1c/m/1/33333_Azure_ArrowCTA.png" width="20" height="20" border="0"></a></td>
+              <td width="15">&nbsp;</td>
+          </tr>
+      </table>
+
+    </td>
+    <td width="40" valign="top" align="left" class="mobile_gutter" style="padding:10px 0 14px;">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="40" valign="top" align="left" class="mobile_gutter" style="border-bottom:1px solid #ffffff; padding:0 0 40px;">&nbsp;</td>
+    <td width="520" valign="top" align="center" style="font-family:'Segoe UI Light','Segoe UI',Arial,sans-serif; font-size:14px; font-weight:100; line-height:18px; color:#000000; border-bottom:1px solid #939393; padding:0 0 40px;"> 
+        See all of the new updates and peek into the future with our <a href="#" title="Features Timeline" alias="Body: Features Timeline" style="color:#505051; text-decoration:underline;">Features&nbsp;Timeline</a>.
+    </td>
+    <td width="40" valign="top" align="left" class="mobile_gutter" style="border-bottom:1px solid #ffffff; padding:0 0 40px;">&nbsp;</td>
+  </tr>
+</table>
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#ffffff">
+    <tr>
+      <td width="40" bgcolor="#ffffff" class="mobile_gutter" style="line-height:1px;">&nbsp;</td>
+      <td width="520" valign="top" align="center" bgcolor="#ffffff" style="font-family:'Segoe UI',Arial,sans-serif; font-size:16px; line-height:20px; color:#c0c0c0; padding:30px 0;">
+
+        <table cellpadding="0" cellspacing="0" border="0" bgcolor="#ffffff">
+          <tr>
+            <td width="60" align="right" style="font-family:'Segoe UI',Arial,sans-serif; font-size:16px; line-height:20px; color:#c0c0c0;">
+              <a href="https://click.email.microsoftemail.com/?qs=a63911b143c43d9aa74d34db7383a164ea770e070364fa3eeaea45464511dfb5449603aaaf9fd4fd" title="Visual Studio Team Services News"  style="color:#0060a6;text-decoration: none;">News</a>
+            </td>
+            <td width="25" align="center" style="font-family:'Segoe UI',Arial,sans-serif; font-size:16px; line-height:20px; color:#c0c0c0;">&nbsp;&nbsp;&bull;&nbsp;&nbsp;</td>
+            <td width="60" align="center" style="font-family:'Segoe UI',Arial,sans-serif; font-size:16px; line-height:20px; color:#c0c0c0;">
+              <a href="https://click.email.microsoftemail.com/?qs=a63911b143c43d9aff7760d25beb9b932ef4da1d93e1fef2657367acfbc1e1d609ae86c6c460d818" title="Visual Studio Team Services Pricing"  style="color:#0060a6;text-decoration: none;">Pricing</a>
+            </td>
+            <td width="25" align="center" style="font-family:'Segoe UI',Arial,sans-serif; font-size:16px; line-height:20px; color:#c0c0c0;">&nbsp;&nbsp;&bull;&nbsp;&nbsp;</td>
+            <td width="60" align="left" style="font-family:'Segoe UI',Arial,sans-serif; font-size:16px; line-height:20px; color:#c0c0c0;">
+              <a href="https://click.email.microsoftemail.com/?qs=a63911b143c43d9a5c2423886e0a23a922c571dda0efee6bf27212a31dbe2fc7d3d74f29b005d80b" title="Visual Studio Team Services Support"  style="color:#0060a6;text-decoration: none;">Support</a>
+            </td>
+          </tr>
+        </table>
+        <br>
+        <table cellpadding="0" cellspacing="0" border="0" bgcolor="#ffffff">
+          <tr>
+            <td width="21" align="left" bgcolor="#ffffff" style="padding-top:5px;">
+              <a href="https://click.email.microsoftemail.com/?qs=a63911b143c43d9a4cbd46a47f83ea6cba754ae954c500bb678d31ee0223c71a6aaf3a8f606657ba" title="Facebook"  style="text-decoration: none;"><img src="http://image.email.microsoftemail.com/lib/fe651570756503797d11/m/1/tile_facebook_logo2.jpg" width="21" height="21" border="0" alt="Facebook"></a>
+            </td>
+            <td width="5" bgcolor="#ffffff" style="padding-top:5px;">&nbsp;</td>
+            <td width="21" align="left" bgcolor="#ffffff" style="padding-top:5px;">
+              <a href="https://click.email.microsoftemail.com/?qs=a63911b143c43d9a9ee73d7f0dd86d6d59a236422c70e070cfb8e5726a790b83ec33fe3561d87fbf" title="Twitter"  style="text-decoration: none;"><img src="http://image.email.microsoftemail.com/lib/fe651570756503797d11/m/1/twitter-tile.png" width="21" height="21" border="0" alt="Twitter"></a>
+            </td>
+          </tr>
+        </table>
+      </td>
+      <td width="40" bgcolor="#ffffff" class="mobile_gutter" style="line-height:1px;">&nbsp;</td>
+    </tr>
+</table> 
+<!-- Footer -->
+<!-- ENGLISH US -->
+<table cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#eeeeee">        
+  <tr>
+    <td width="45" valign="top" align="left" style="padding-bottom:13px;">&nbsp;</td>
+    <td width="510" align="left" style="font-family:'Segoe UI',Arial,sans-serif; font-size: 10px; line-height: 16px; color: #505050; padding-bottom:13px;">
+    <br><br>
+This is a mandatory service communication from Visual Studio. Microsoft respects your privacy. Review our <a href="https://click.email.microsoftemail.com/?qs=a63911b143c43d9ae33da4c5c8d4b9769adb8a9165c84eda4e6f3d2e3582d5dd29a27d96af34a172" title="Privacy Statement"  style="color: #0044cc; text-decoration: none;">Privacy Statement</a>.
+    <br><br>
+    <table cellpadding="0" cellspacing="0" border="0">
+      <tr>
+        <td width="445" style="font-family:'Segoe UI',Arial,sans-serif; font-size: 10px;  color: #505050;">Microsoft Corporation | 
+        One Microsoft Way | 
+        Redmond, WA 98052 USA</td>
+        <td width="60" align="right"><a href="https://click.email.microsoftemail.com/?qs=a63911b143c43d9a4cee8808274717973e997bb49f23ede19281f40fc63dce9a750a9f7564706287" target="_blank"><img src="http://image.email.microsoftemail.com/lib/febf16727d6d0379/m/1/ms-logo-metro-generic-bk.gif" wdith="60" height="11" alt="Microsoft" border="0" style="display:block;"></a></td>
+        <td width="5" valign="top" align="left">&nbsp;</td>
+      </tr>
+    </table>
+    <br><br>
+    </td>
+    <td width="45" valign="top" align="left" style="padding-bottom:13px;">&nbsp;</td>
+  </tr>
+</table>
+      
+    </td>
+  </tr>
+</table>
+
+<img src="https://click.email.microsoftemail.com/open.aspx?ffcb10-fe8b10717d67037570-fdf61571746201797011757d-febf16727d6d0379-fec21c767365017e-fdfb15727261047b74167770-ff68157675&d=10054" width="1" height="1">
+<style>@media print{ #_t { background-image: url('https://i6nv31bo.emltrk.com/i6nv31bo?p&d=dragonet.c17@gmail.com');}} div.OutlookMessageHeader {background-image:url('https://i6nv31bo.emltrk.com/i6nv31bo?f&d=dragonet.c17@gmail.com')} table.moz-email-headers-table {background-image:url('https://i6nv31bo.emltrk.com/i6nv31bo?f&d=dragonet.c17@gmail.com')} blockquote #_t {background-image:url('https://i6nv31bo.emltrk.com/i6nv31bo?f&d=dragonet.c17@gmail.com')} #MailContainerBody #_t {background-image:url('https://i6nv31bo.emltrk.com/i6nv31bo?f&d=dragonet.c17@gmail.com')}</style><div id="_t"></div>
+<img src="https://i6nv31bo.emltrk.com/i6nv31bo?d=dragonet.c17@gmail.com" width="1" height="1" border="0" />
+
+</body>
+</html>
+
+--gITuAg6kjkvJ=_?:--
+

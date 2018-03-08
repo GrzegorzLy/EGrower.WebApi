@@ -1,0 +1,592 @@
+Delivered-To: dragonet.c17@gmail.com
+Received: by 10.107.162.19 with SMTP id l19csp2999545ioe;
+        Wed, 7 Jun 2017 10:43:58 -0700 (PDT)
+X-Received: by 10.98.90.199 with SMTP id o190mr33184874pfb.185.1496857438617;
+        Wed, 07 Jun 2017 10:43:58 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1496857438; cv=none;
+        d=google.com; s=arc-20160816;
+        b=UkGNJQkSw6lUZJLtYbVfOmoqsFOvcFnWbrqJ3G0h/VXiRPdJy04Oaoq8SDGx3jztsP
+         zYDfXf4evDGHixYstjOFM5DuXpX1rr+Nu/Vrr3jkP+X9BfWsKtgWSTxua01y3sRLcsJz
+         oVmLMGmPTcloqWp23PBfrng1RqRteBuU3blgW3lx09hnIJL05I6DdFUJLjKFodX07DrN
+         G7V0mxlHFQY9hsc4uJufkKUBXK9Hp84HSxJl7WNwMXrWbK3LwSQ5FPamslfzPXEE9+6Y
+         9UjJi1ZrEEy5IEPJm7h1Y+PAzHGy9O1QqSJX2TmhjMCMpyQwoux4pkSsH061PRPVbwJ2
+         uxoQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=list-unsubscribe:mime-version:subject:message-id:to:reply-to:from
+         :date:dkim-signature:dkim-signature:arc-authentication-results;
+        bh=qsboKnva7BX2178DC3uNIVu+N5NqYau9acfz2KxSMG0=;
+        b=gg2CylVzuZsD5pvczzPB1/k6wDanMfSKR3+q915vP514rgdxRYG3cLl9hGmVVyrxV6
+         LEC1lXSox0pfT5GDdDvhWwothQncSsAiw2oyQRVOgxCvQR57oyL0JSaVsELRk+FkqI7B
+         YYZhFN1XfbN+EUlzPDcnvAZGw7bStcod+L0veyrLY2SvS4Am3Pzo6M3dUi9gTxNDVta0
+         j6Ybc/FvD0b+GRFZsF/v1EqeWDDaXpmgIQsEpAKtXHq+dxoEobMOT9VnoGzXJhqdpsyz
+         RupG48BK4pzGcL0CCcxacG6qdDdTlw5sOYy+FlDG6Pp9byfqvAOfv0MSgGjQxUkpOiEx
+         Pebg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@pluralsight.com;
+       dkim=pass header.i=@mktdns.com;
+       spf=pass (google.com: domain of 306-dup-745.0.150475.0.0.16108.9.6801855@smtp.pluralsight.com designates 199.15.215.12 as permitted sender) smtp.mailfrom=306-DUP-745.0.150475.0.0.16108.9.6801855@smtp.pluralsight.com
+Return-Path: <306-DUP-745.0.150475.0.0.16108.9.6801855@smtp.pluralsight.com>
+Received: from smtp.pluralsight.com (smtp.pluralsight.com. [199.15.215.12])
+        by mx.google.com with ESMTPS id c128si1666695pfg.243.2017.06.07.10.43.57
+        for <dragonet.c17@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 07 Jun 2017 10:43:58 -0700 (PDT)
+Received-SPF: pass (google.com: domain of 306-dup-745.0.150475.0.0.16108.9.6801855@smtp.pluralsight.com designates 199.15.215.12 as permitted sender) client-ip=199.15.215.12;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@pluralsight.com;
+       dkim=pass header.i=@mktdns.com;
+       spf=pass (google.com: domain of 306-dup-745.0.150475.0.0.16108.9.6801855@smtp.pluralsight.com designates 199.15.215.12 as permitted sender) smtp.mailfrom=306-DUP-745.0.150475.0.0.16108.9.6801855@smtp.pluralsight.com
+Return-Path: <webinars@pluralsight.com>
+X-MSFBL: ZHJhZ29uZXQuYzE3QGdtYWlsLmNvbUBkdnAtMTk5LTE1LTIxNS0xMkBiZy1zamQt
+	OTlAMzA2LURVUC03NDU6NTAyNjQ6MTIzMzE6NTg2NDU6MDoxNjEwODo5OjE1MDQ3
+	NTo2ODAxODU1
+Received: from [10.0.87.249] ([10.0.87.249:38166] helo=sjmas03.marketo.org)
+	by sjmta09.marketo.org (envelope-from <webinars@pluralsight.com>)
+	(ecelerity 3.6.8.47404 r(Core:3.6.8.0)) with ESMTP
+	id 72/21-14902-25B38395; Wed, 07 Jun 2017 12:43:46 -0500
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; t=1496857426;
+	s=m1; d=pluralsight.com; i=@pluralsight.com;
+	h=Date:From:To:Subject:MIME-Version:Content-Type;
+	bh=qsboKnva7BX2178DC3uNIVu+N5NqYau9acfz2KxSMG0=;
+	b=XxWiny1Pt1AmiSsRXQI1w6v//YlTgQwlg9QIzRS1B+onG3QE8QjvGAeTboRsVAwK
+	c13P4JFRELaYBLU/2S3rJtsFkT2K05IsZz8ZvlS3ON9/ozyf5Kga6Yc2SToU0OiqVVG
+	lpBBCdnJVNsk7vywMpJPlgBtQ4QO+5m6PuL5x53U=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; t=1496857426;
+	s=m1; d=mktdns.com; i=@mktdns.com;
+	h=Date:From:To:Subject:MIME-Version:Content-Type;
+	bh=qsboKnva7BX2178DC3uNIVu+N5NqYau9acfz2KxSMG0=;
+	b=WCUSZq3XrI97FezShpb9QKX8igTTHsfDaNRvhgxvzpLVSxGvu96yXr05DY6oUZnw
+	P3yXTRYqD7H3Fga3IBxsF3xN+ZHpzjFKo2tNrggS3Nadc4528WkOgUP8HUtng37SEHT
+	5YbtH3R0SsKuTxzhXrFnYLlkiF0aaXUcBYapE0qc=
+Date: Wed, 7 Jun 2017 12:43:46 -0500 (CDT)
+From: Pluralsight Webinars <webinars@pluralsight.com>
+Reply-To: webinars@pluralsight.com
+To: dragonet.c17@gmail.com
+Message-ID: <1641694229.918113796.1496857426305.JavaMail.root@sjmas03.marketo.org>
+Subject: =?UTF-8?Q?Keep_your_devs_productive=E2=80=94join_our_Azure_webinar!?=
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_918113795_902559570.1496857426304"
+X-PVIQ: mkto-306DUP745-000001-000000-150475
+X-Binding: bg-sjd-99
+X-MarketoID: 306-DUP-745:50264:12331:58645:0:16108:9:150475:6801855
+X-MktArchive: false
+List-Unsubscribe: <mailto:OZDGQYTFGI4E2Z32KJQTGYKINNMUW2KPIFIT2PI.150475.16108.9@unsub-sj.mktomail.com>
+X-Mailfrom: 306-DUP-745.0.150475.0.0.16108.9.6801855@smtp.pluralsight.com
+X-MSYS-API: {"options":{"open_tracking":false,"click_tracking":false}}
+X-MktMailDKIM: true
+
+------=_Part_918113795_902559570.1496857426304
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<http://track.pluralsight.com/o01kN00ll00XlD0stPUhxv0>
+Live webinar | Wednesday, June 21 at 1 p.m. ET
+Keep your dev team productive with the right Azure service
+Register now =C2=BB <http://track.pluralsight.com/yXlDtxlN0h0vPUl0sm00010>
+Hey Dragonet,
+
+Make an informed decision for your dev team and choose the right Azure serv=
+ice (there are over 70!) with help from expert developer and Pluralsight au=
+thor Barry Luijbregts in our live webinar.
+
+ Barry will help you find ways to save time, make choices that impact your =
+budget and get started on the right path as you build the strategy that wor=
+ks for you. You=E2=80=99ll be able to:=20
+
+ - Determine which features are valuable to you and your team=20
+ - Keep your team productive by using the right tools on the right projects
+ - Evaluate and choose from broad offerings
+
+
+Register today and bring your questions for the live Q&A portion of our eve=
+nt on June 21!
+Register now <http://track.pluralsight.com/yXlDtxlN0h0vPUl0sm00010>
+Happy learning!
+
+Pluralsight
+<http://track.pluralsight.com/o01kN00ll00XlD0stPUhxv0>
+182 N Union Ave Suite 200 Farmington, UT 84025
+<http://track.pluralsight.com/inlD0NUXlmv00h000tx1P0s>
+<[[#]]>
+<http://track.pluralsight.com/iolD0NUXlnv00h000tx1P0s>
+<[[#]]>
+<http://track.pluralsight.com/s0ol0vX0tUNp0D0xsl10h0P>
+<[[#]]>
+Copyright=C2=A9 2017 Pluralsight LLC.
+ All logos and trademarks are the properties of their respective owners.
+
+Pluralsight | 182 N. Union Ave, Farmington, UT 84025
+
+This email was sent to dragonet.c17@gmail.com
+Unsubscribe: http://learn.pluralsight.com/system-unsubscribe
+Manage your preferences: http://learn.pluralsight.com/system-manage-your-pr=
+eferences
+
+
+Manage your email preferences:
+
+------=_Part_918113795_902559570.1496857426304
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+<title>PLURALSIGHT</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="format-detection" content="telephone=no">
+<style type="text/css">
+
+body {
+
+        margin: 0 !important;
+
+        padding: 0 !important;
+
+        -webkit-text-size-adjust: 100% !important;
+
+        -ms-text-size-adjust: 100% !important;
+
+        -webkit-font-smoothing: antialiased !important;
+
+}
+
+img {
+
+        border: 0 !important;
+
+        outline: none !important;
+
+}
+
+p {
+
+        margin: 0px !important;
+
+        padding: 0px !important;
+
+}
+
+table {
+
+        border-collapse: collapse;
+
+        mso-table-lspace: 0px;
+
+        mso-table-rspace: 0px;
+
+}
+
+td, a, span {
+
+        border-collapse: collapse;
+
+        mso-line-height-rule: exactly;
+
+}
+
+div {
+
+line-height:inherit important!;
+
+}
+
+.ExternalClass * {
+
+        line-height: 100%;
+
+}
+
+.em_blue a {
+
+        color: #1f7fc2;
+
+        text-decoration: none;
+
+}
+
+.em_white a {
+
+        color: #ffffff;
+
+        text-decoration: none;
+
+}
+
+.em_black a {
+
+        color: #363636;
+
+        text-decoration: none;
+
+}
+
+.em_grey a {
+
+        color: #878787;
+
+        text-decoration: none;
+
+}
+
+.em_orenge a {
+
+        color: #f16922;
+
+        text-decoration: none;
+
+}
+
+/*Stylesheed for the devices width between 481px to 599px*/
+
+ @media only screen and (min-width:481px) and (max-width:599px) {
+
+table[class=em_main_table] {
+
+        width: 480px !important;
+
+}
+
+table[class=em_wrapper] {
+
+        width: 100% !important;
+
+}
+
+td[class=em_aside] {
+
+        padding: 0px 0px !important; /*Update the values as required*/
+
+}
+
+td[class=em_hide], table[class=em_hide], span[class=em_hide], br[class=em_hide] {
+
+        display: none !important;
+
+}
+
+img[class=em_full_img] {
+
+        width: 100% !important;
+
+        height: auto !important;
+
+}
+
+td[class=em_align_cent] {
+
+        text-align: center !important;
+
+}
+
+td[class=em_height] {
+
+        height: 60px !important;
+
+        font-size: 1px !important;
+
+        line-height: 1px !important;
+
+}
+
+td[class=em_width10] {
+
+        width: 10px !important;
+
+}
+
+}
+
+ 
+
+/*Stylesheed for the devices width between 0px to 480px*/
+
+@media only screen and (max-width:480px) {
+
+table[class=em_main_table] {
+
+        width: 100% !important;
+
+}
+
+table[class=em_wrapper] {
+
+        width: 100% !important;
+
+}
+
+td[class=em_aside] {
+
+        padding: 0px 0px !important; /*Update the ualves as required*/
+
+}
+
+td[class=em_hide], table[class=em_hide], span[class=em_hide], br[class=em_hide] {
+
+        display: none !important;
+
+}
+
+img[class=em_full_img] {
+
+        width: 100% !important;
+
+        height: auto !important;
+
+}
+
+td[class=em_align_cent] {
+
+        text-align: center !important;
+
+}
+
+td[class=em_height] {
+
+        height: 60px !important;
+
+        font-size: 1px !important;
+
+        line-height: 1px !important;
+
+}
+
+td[class=em_width10] {
+
+        width: 10px !important;
+
+}
+
+}
+
+</style>
+</head>
+<body style="margin:0px; padding:0px; " bgcolor="#FFFFFF" ><!--Full width table start-->
+<table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF" ><tr>
+<td align="center" bgcolor="#000" valign="top">
+<table width="650" border="0" align="center" cellpadding="0" cellspacing="0" class="em_wrapper" style="table-layout:fixed;">
+<tr>
+<td valign="top">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td class="em_hide" height="1" style="line-height:0px; font-size:0px;"><img src="http://pluralsight-assets.s3.amazonaws.com/transactional/template/spacer.gif" alt="" height="1" width="650" style="display:block; width:650px; min-width:650px;" border="0"></td>
+</tr>
+<!--=== HEADER SECTION === -->
+<tr>
+<td height="10" style="font-size:1px; line-height:1px;">&nbsp;</td>
+</tr>
+<!--=== //HEADER SECTION === --></table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<!--=== BODY SECTION === -->
+<tr ><td valign="top" align="center" ><table width="650" border="0" cellspacing="0" cellpadding="0" align="center" style="table-layout:fixed; " class="em_wrapper" ><tr>
+<td class="em_hide" height="1" style="line-height:0px; font-size:0px;"><img src="http://pluralsight-assets.s3.amazonaws.com/transactional/template/spacer.gif" alt="" height="1" width="650" style="display:block; width:650px; min-width:650px;" border="0"></td>
+</tr>
+<tr ><td valign="top" ><table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" ><tr ><td width="32" class="em_width10">&nbsp;</td>
+<td valign="top" ><table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" ><tr>
+<td height="54" class="em_height">&nbsp;</td>
+</tr>
+<tr ><td align="left" valign="top" style="font-size:0px; line-height:0px; " ><div class="mktEditable" id="logo" ><a href=
+"http://track.pluralsight.com/o01kN00ll00XlD0stPUhxv0" target="_blank"
+><img src="http://pluralsight-assets.s3.amazonaws.com/transactional/template/ps-logo-with-icon-horiz.png" alt="PLURALSIGHT" width="201px" style="display:block;" border="0"></a></div>
+</td>
+</tr>
+<tr>
+<td height="45" class="em_height">&nbsp;</td>
+</tr>
+<tr ><td align="left" valign="top" style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:16px; line-height:30px; color:#363636; " ><div class="mktEditable" id="content" ><span style="font-size: 18px;">Live webinar | Wednesday, June 21 at 1 p.m. ET </span></div>
+</td>
+</tr>
+<tr>
+<td height="10" class="em_height"></td>
+</tr>
+<tr ><td align="left" valign="top" style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:34px; line-height:40px; color:#363636; " ><div class="mktEditable" id="content" ><span style="font-size: 30px;"> Keep your dev team productive with the right Azure service<br /><span style="font-size: 18px; color: #f15b2a;"><a href=
+"http://track.pluralsight.com/yXlDtxlN0h0vPUl0sm00010" target="_blank" style="color: #ec008c; text-decoration: none;"
+>Register now &raquo;</a></span><br /></span></div>
+</td>
+</tr>
+<tr>
+<td height="45" style="font-size:1px; line-height:1px;">&nbsp;</td>
+</tr>
+<tr ><!-- ==========TOKEN VALUES==========
+                                       
+                    *|OLD_SUB_LEVEL|*
+                                                Monthly
+                                                Monthly Plus
+                                                Annual
+                                                Annual Plus
+
+                                        *|NEW_SUB_LEVEL|*
+                                                Monthly
+                                                Monthly Plus
+                                                Annual
+                                                Annual Plus
+
+                                        *|TERM_CHANGE|*
+                                                Your new subscription will renew/expire on the same date as your old one.
+
+                                                Your new subscription will start today and expire one year from now.
+
+                                                Your new subscription will renew/expire on the same date as your old one, but going forward your term will be monthly.
+
+
+                                        *|PAYMENT_EXPLANATION|*
+                                                No payment is required today to make this change.
+
+                                                Your card has been charged *|AMOUNT|* today. This prorated fee covers the cost difference between your new subscription and the value on your old subscription for the days remaining on your existing term.-->
+<td align="left" valign="top" style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:16px; line-height:26px; color:#363636; " ><div class="mktEditable" id="content" >Hey&nbsp;Dragonet,<br /><br />Make an informed decision for your dev team and choose the right Azure service (there are over 70!) with help from expert developer and Pluralsight author Barry Luijbregts in our live webinar.<br /><br /> Barry will help you find ways to save time, make choices that impact your budget and get started on the right path as you build the strategy that works for you. You&rsquo;ll be able to: <br />
+<ul>
+<li><strong>Determine which features are valuable to you and your team </strong></li>
+<li><strong>Keep your team productive by using the right tools on the right projects</strong></li>
+<li><strong>Evaluate and choose from broad offerings</strong></li>
+</ul>
+Register today and bring your questions for the live Q&amp;A portion of our event on June 21!</div>
+</td>
+</tr>
+<tr>
+<td height="30" class="em_height">&nbsp;</td>
+</tr>
+<tr ><td align="left" valign="top" ><table width="160" border="0" cellspacing="0" cellpadding="0" align="left" ><tr ><td class="em_white" bgcolor="#F16922" height="50" align="center" valign="middle" style="font-family:Gotham, Arial, sans-serif; font-size:16px; background-color:#f16922; color:#ffffff; border-radius:4px; " ><div class="mktEditable" id="button" ><a href=
+"http://track.pluralsight.com/yXlDtxlN0h0vPUl0sm00010" target="_blank" style="text-decoration: none; color: #ffffff; display: block; line-height: 49px;"
+>Register now</a></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center"></table>
+</td>
+</tr>
+</table>
+</td>
+<td width="32" class="em_width10">&nbsp;</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td bgcolor="#F2F2F2" align="center" valign="top">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center"></table>
+</td>
+</tr>
+<tr ><td valign="top" ><table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" ><tr ><td width="32" class="em_width10">&nbsp;</td>
+<td valign="top" ><table width="100%" border="0" cellspacing="0" cellpadding="0" ><tr>
+<td height="30" class="em_height">&nbsp;</td>
+</tr>
+<tr ><td align="left" valign="top" style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:16px; line-height:28px; color:#363636; " ><div class="mktEditable" id="training" >Happy learning!<br>
+Pluralsight</div>
+</td>
+</tr>
+<tr>
+<td height="100" class="em_height">&nbsp;</td>
+</tr>
+</table>
+</td>
+<td width="32" class="em_width10">&nbsp;</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<!--=== //BODY SECTION === --><!--=== FOOTER SECTION === -->
+<tr ><td align="center" bgcolor="#212221" valign="top" ><table width="650" border="0" cellspacing="0" cellpadding="0" align="center" class="em_wrapper" style="table-layout:fixed; " ><tr>
+<td class="em_hide" height="1" style="line-height:0px; font-size:0px;"><img src="http://pluralsight-assets.s3.amazonaws.com/transactional/template/spacer.gif" alt="" height="1" width="650" style="display:block; width:650px; min-width:650px;" border="0"></td>
+</tr>
+<tr ><td valign="top" ><table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" ><tr ><td width="32" class="em_width10">&nbsp;</td>
+<td valign="top" ><table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" ><tr>
+<td height="45" class="em_height">&nbsp;</td>
+</tr>
+<tr ><td align="left" valign="top" style="font-size:0px; line-height:0px; " ><div class="mktEditable" id="logo_2" ><a href=
+"http://track.pluralsight.com/o01kN00ll00XlD0stPUhxv0" target="_blank"
+><img src="http://pluralsight-assets.s3.amazonaws.com/transactional/template/ps-logo-with-icon-horiz-white-line.png" alt="PLURALSIGHT" width="201" style="display:block;" border="0"></a></div>
+</td>
+</tr>
+<tr>
+<td height="12" style="font-size:1px; line-height:1px;">&nbsp;</td>
+</tr>
+<tr ><td align="left" valign="top" style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:12px; line-height:16px; color:#878787; " ><div class="mktEditable" id="address" >182 N Union Ave Suite 200 Farmington, UT 84025</div>
+</td>
+</tr>
+<tr>
+<td height="28" class="em_height">&nbsp;</td>
+</tr>
+<tr ><td valign="top" ><table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" ><tr ><td valign="top" align="left" ><table width="192" border="0" cellspacing="0" cellpadding="0" align="left" ><tr ><td width="10" valign="top" align="center" ><div class="mktEditable" id="fb" ><a href=
+"http://track.pluralsight.com/inlD0NUXlmv00h000tx1P0s" target="_blank"
+><img src="http://pluralsight-assets.s3.amazonaws.com/transactional/template/facebook.png" width="10" height="21" alt="facebook" style="display:block;" border="0"></a></div>
+</td>
+<td>&nbsp;</td>
+<td width="20" valign="top" align="center" ><div class="mktEditable" id="insta" ><a href="#" target="_blank"><img src="http://pluralsight-assets.s3.amazonaws.com/transactional/template/instagram.png" width="20" height="21" alt="instagram" style="display:block;" border="0"></a></div>
+</td>
+<td>&nbsp;</td>
+<td width="24" valign="top" align="center" ><div class="mktEditable" id="twt" ><a href=
+"http://track.pluralsight.com/iolD0NUXlnv00h000tx1P0s" target="_blank"
+><img src="http://pluralsight-assets.s3.amazonaws.com/transactional/template/twitter.png" width="24" height="21" alt="twitter" style="display:block;" border="0"></a></div>
+</td>
+<td>&nbsp;</td>
+<td width="20" valign="top" align="center" ><div class="mktEditable" id="linkedin" ><a href="#" target="_blank"><img src="http://pluralsight-assets.s3.amazonaws.com/transactional/template/linkedin.png" width="20" height="21" alt="linkedin" style="display:block;" border="0"></a></div>
+</td>
+<td>&nbsp;</td>
+<td width="20" valign="top" align="center" ><div class="mktEditable" id="googleplus" ><a href=
+"http://track.pluralsight.com/s0ol0vX0tUNp0D0xsl10h0P" target="_blank"
+><img src="http://pluralsight-assets.s3.amazonaws.com/transactional/template/google_plus.png" width="20" height="21" alt="Google Plus" style="display:block;" border="0"></a></div>
+</td>
+<td>&nbsp;</td>
+<td width="17" valign="top" align="center" ><div class="mktEditable" id="ut" ><a href="#" target="_blank"><img src="http://pluralsight-assets.s3.amazonaws.com/transactional/template/you_tube.png" width="17" height="21" alt="You Tube" style="display:block;" border="0"></a></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="27" class="em_height">&nbsp;</td>
+</tr>
+<tr ><td align="left" valign="top" style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:12px; line-height:20px; color:#878787; " ><div class="mktEditable" id="privacy" >Copyright&copy; 2017 Pluralsight LLC.<br /> All logos and trademarks are the properties of their respective owners.</div>
+</td>
+</tr>
+<tr>
+<td height="7" style="font-size:1px; line-height:1px;">&nbsp;</td>
+</tr>
+<tr>
+<td height="35" class="em_height">&nbsp;</td>
+</tr>
+</table>
+</td>
+<td width="32" class="em_width10">&nbsp;</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<!--=== //FOOTER SECTION === --></table>
+<!--Full width table End-->
+<div style="display:none; white-space:nowrap; font:20px courier; color:#ffffff;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</div>
+<a href=
+"http://track.pluralsight.com/NU00pDxh000XllP0qNs0t1v"
+></a>
+<img src="http://track.pluralsight.com/trk?t=1&mid=MzA2LURVUC03NDU6NTAyNjQ6MTIzMzE6NTg2NDU6MDoxNjEwODo5OjE1MDQ3NTo2ODAxODU1OmRyYWdvbmV0LmMxN0BnbWFpbC5jb20%3D" width="1" height="1" style="display:none !important;" alt="" />
+
+<div style="text-align: left;">
+<p style="color: #5d5c61; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-weight: 300; line-height: 1.25em; font-size: .8em !important;">This email was sent to <span style="color:#f15f22;">dragonet.c17@gmail.com</span><br><a style="color:#5d5c61; text-decoration: underline;" href=
+"http://track.pluralsight.com/u/thPl1x0lDt0vr00NUs000Xq"
+>Unsubscribe</a> | <a style="color:#5d5c61; text-decoration: underline;" href=
+"http://track.pluralsight.com/u/urN000tUsv0h0s01llxDPX0"
+>Manage your email preferences</a></p></div>
+</body>
+</html>
+------=_Part_918113795_902559570.1496857426304--

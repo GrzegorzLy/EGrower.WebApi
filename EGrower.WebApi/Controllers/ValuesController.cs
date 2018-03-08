@@ -2,46 +2,43 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Egrower.Infrastructure.Factories.Interfaces;
 using Egrower.Infrastructure.Factories.MailKit;
 using Microsoft.AspNetCore.Mvc;
 
-namespace EGrower.WebApi.Controllers
-{
-    [Route("api/[controller]")]
-    public class ValuesController : Controller
-    {
+namespace EGrower.WebApi.Controllers {
+    [Route ("api/[controller]")]
+    public class ValuesController : Controller {
+        private readonly IEmailFactory _emailFactory;
+        public ValuesController (IEmailFactory emailFactory) {
+            _emailFactory = emailFactory;
+
+        }
         // GET api/values
         [HttpGet]
-        public IEnumerable<string> Get()
-        {
-
-            Pop3.DownloadMessages();
-            return new string[] { "test", "value2" };
+        public async Task<IActionResult> Get () {
+            // List<string> datas = Pop3.GetDownloadMessages();
+           var mesages = await _emailFactory.DownloadEmailsIMapAsync();
+           await _emailFactory.SaveAttachments(mesages);
+            return Json (mesages);
         }
 
         // GET api/values/5
-        [HttpGet("{id}")]
-        public string Get(int id)
-        {
+        [HttpGet ("{id}")]
+        public string Get (int id) {
             return "value";
         }
 
         // POST api/values
         [HttpPost]
-        public void Post([FromBody]string value)
-        {
-        }
+        public void Post ([FromBody] string value) { }
 
         // PUT api/values/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody]string value)
-        {
-        }
+        [HttpPut ("{id}")]
+        public void Put (int id, [FromBody] string value) { }
 
         // DELETE api/values/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
-        }
+        [HttpDelete ("{id}")]
+        public void Delete (int id) { }
     }
 }

@@ -1,0 +1,550 @@
+Delivered-To: dragonet.c17@gmail.com
+Received: by 10.107.132.20 with SMTP id g20csp1832476iod;
+        Mon, 22 May 2017 10:19:10 -0700 (PDT)
+X-Received: by 10.99.176.15 with SMTP id h15mr26956466pgf.19.1495473550537;
+        Mon, 22 May 2017 10:19:10 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1495473550; cv=none;
+        d=google.com; s=arc-20160816;
+        b=fZTrO7sK7h4JjyQIvIpDigI1Nu9LyEmT/ZGf1A+a1DGgHF1qQBBZBpNnabgTO4VUGP
+         XUF/sTqR+sePSID/+yfDvJ3DeVZTWP3cezLc72WkaOfsGfLI3JrOaTogZcyDXlyhiVBT
+         uvfjbyuxwjNAYFMecFG4cnY2Adv7/Or80Z9NqcF6HhU/zIC+C7Me95/8PAQZAoWwbdqi
+         c1qk4q/Das30XvMxmMDDTOtRvYvBn7LdQHgAI06q/6Iuwlc2d5o61brbVuu69R8KW29y
+         PCKWAmesrPwYl3FCeH+Vnc59XcsGrBWVJztmb6xMp1DGqPmNuERcnFa+lPidicI11ysP
+         pVog==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=list-unsubscribe:mime-version:subject:message-id:to:reply-to:from
+         :date:dkim-signature:dkim-signature:arc-authentication-results;
+        bh=y4rXtPhRavpJc93A+dvvwdhfx55GxFKmqifJEInyhWY=;
+        b=YSqA1kBHmRDgF4JfwAe4QRAkTVtR4/BcYUWrDZkMBOvM4V1hGUhRZug5BTelKF4Zny
+         4nbuLHssgyW7ZbmESpIuy0BNpy3Fda06xHt/+omVJ4GGe6A9wVyVvbEOHViCXN8zrl6V
+         5QE3XkEQ3kDGaoLo2HVfVYBx4kiFQPl5fuE6JA5dG84ul2yPRYBxnv0LXvYUp+IR99no
+         Eez3vmgcv1genn2saSv4+rbmqPu4kHyDCJn4yWTQGxR6S6fyUmXqtd2TTQyFDbI4p86g
+         zn6tw82RtNTkErN58i8v5N0VKUTRN9qpX6kD6nP00elo6kZpal3ymOylIMhJjKLb43sx
+         Cfpw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@pluralsight.com;
+       dkim=pass header.i=@mktdns.com;
+       spf=pass (google.com: domain of 306-dup-745.0.144879.0.0.15758.9.6801855@smtp.pluralsight.com designates 199.15.215.12 as permitted sender) smtp.mailfrom=306-DUP-745.0.144879.0.0.15758.9.6801855@smtp.pluralsight.com
+Return-Path: <306-DUP-745.0.144879.0.0.15758.9.6801855@smtp.pluralsight.com>
+Received: from smtp.pluralsight.com (smtp.pluralsight.com. [199.15.215.12])
+        by mx.google.com with ESMTPS id i193si18212213pfe.242.2017.05.22.10.19.09
+        for <dragonet.c17@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 22 May 2017 10:19:10 -0700 (PDT)
+Received-SPF: pass (google.com: domain of 306-dup-745.0.144879.0.0.15758.9.6801855@smtp.pluralsight.com designates 199.15.215.12 as permitted sender) client-ip=199.15.215.12;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@pluralsight.com;
+       dkim=pass header.i=@mktdns.com;
+       spf=pass (google.com: domain of 306-dup-745.0.144879.0.0.15758.9.6801855@smtp.pluralsight.com designates 199.15.215.12 as permitted sender) smtp.mailfrom=306-DUP-745.0.144879.0.0.15758.9.6801855@smtp.pluralsight.com
+Return-Path: <no-reply@pluralsight.com>
+X-MSFBL: ZHJhZ29uZXQuYzE3QGdtYWlsLmNvbUBkdnAtMTk5LTE1LTIxNS0xMkBiZy1zamQt
+	OTlAMzA2LURVUC03NDU6NDg2Mzc6MTE4MjY6NTY4MDc6MDoxNTc1ODo5OjE0NDg3
+	OTo2ODAxODU1
+Received: from [10.0.87.249] ([10.0.87.249:53118] helo=sjmas03.marketo.org)
+	by sjmta13.marketo.org (envelope-from <no-reply@pluralsight.com>)
+	(ecelerity 3.6.8.47404 r(Core:3.6.8.0)) with ESMTP
+	id B0/55-15867-98D13295; Mon, 22 May 2017 12:19:05 -0500
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; t=1495473545;
+	s=m1; d=pluralsight.com; i=@pluralsight.com;
+	h=Date:From:To:Subject:MIME-Version:Content-Type;
+	bh=y4rXtPhRavpJc93A+dvvwdhfx55GxFKmqifJEInyhWY=;
+	b=aA0lU63/4eXaxb6F2yP8TMVk5TzTMY7zMfObF00UHpsUVp9tgYR6gJPD/cjrh/6E
+	VMsfeUuMptoTsyYa3UE3joDoLXzhaQtna59BQeHfzenm1tctbdzMflKPR9t4DYnPycf
+	hVCA85WjmHA1CXqmMyRb4UzuYwRCK/3os4Us9f1A=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; t=1495473545;
+	s=m1; d=mktdns.com; i=@mktdns.com;
+	h=Date:From:To:Subject:MIME-Version:Content-Type;
+	bh=y4rXtPhRavpJc93A+dvvwdhfx55GxFKmqifJEInyhWY=;
+	b=K2n0E6LvHp75GMhRUetUCTw3oiDwfolrlB9wKIqvRSSWq2mzxfB3UbdyWKOf1A2F
+	Kcz3ksaBFm+RcTg/yvzunl75FWzDArZEpFpVdj29uvl86AopKtoUIPNdkdy93pLFsH6
+	n2ujrQNgl4i4GQ2/VoKkmbR6UYu709CVx4C8WMXA=
+Date: Mon, 22 May 2017 12:19:05 -0500 (CDT)
+From: Pluralsight <no-reply@pluralsight.com>
+Reply-To: no-reply@pluralsight.com
+To: dragonet.c17@gmail.com
+Message-ID: <968462818.464952329.1495473545327.JavaMail.root@sjmas03.marketo.org>
+Subject: Change shouldn't be hard
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_464952328_1844207767.1495473545327"
+X-PVIQ: mkto-306DUP745-000001-000000-144879
+X-Binding: bg-sjd-99
+X-MarketoID: 306-DUP-745:48637:11826:56807:0:15758:9:144879:6801855
+X-MktArchive: false
+List-Unsubscribe: <mailto:OZDGQYTFGI4E2Z32KJQTGYKINNMUW2KPIFIT2PI.144879.15758.9@unsub-sj.mktomail.com>
+X-Mailfrom: 306-DUP-745.0.144879.0.0.15758.9.6801855@smtp.pluralsight.com
+X-MSYS-API: {"options":{"open_tracking":false,"click_tracking":false}}
+X-MktMailDKIM: true
+
+------=_Part_464952328_1844207767.1495473545327
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<http://track.pluralsight.com/UxLl0sP0vU0DhJ01TN000qt>
+CHANGE SHOULDN=E2=80=99T BE HARD
+87%
+of our learners say our
+platform keeps them up
+to speed as tech evolves
+Try it free <http://track.pluralsight.com/GTU0PJ10tMsrD0hv0000lNx>
+Welcome to Pluralsight, a platform you can count on to stay
+relevant, with on-demand technology courses and tools that
+measure your skills and solve your problems=E2=80=94faster.
+Learn more <[[#]]>
+<http://track.pluralsight.com/dc/JYWY0TlT8MJDYEoI81rBxOnTOO88FqBDDYRDr8jL7C=
+c=3D/wUtPNshDv0000lTN00x1s0J>
+
+ <http://track.pluralsight.com/dc/JYWY0TlT8MJDYEoI81rBxOnTOO88FqBDDYRDr8jL7=
+Cc=3D/wUtPNshDv0000lTN00x1s0J>
+
+
+
+
+
+
+ Pluralsight, LLC 182 N. Union Ave. Farmington, UT 84025=20
+
+=20
+
+
+
+   <http://track.pluralsight.com/dc/M5yi0yZ-UZCCxV3bfEu0anbONeUjOd18p_VSSgg=
+cgn0DrbpjHMEHkIJurPN3o6x7/wUtPNshDv0000lTN00x1s0J>
+   <http://track.pluralsight.com/dc/MYFzQrvu5rPS8PETBnVMsRusr34Y1lr0HdZtfs8=
+2X3v9rFnWXM6_VHgQDeQ1wjEu/wUtPNshDv0000lTN00x1s0J>
+   <http://track.pluralsight.com/dc/mEXRm9OBeNs3Y1bS8bbzxSIJ8iuvrVEtSkOtQ-B=
+3bvA=3D/wUtPNshDv0000lTN00x1s0J>
+   <http://track.pluralsight.com/dc/fG5-PlwEnZR-IoSdwCtjIpTVr9AsJHNwc_srhy7=
+U9rVQYJ5-L-XVAJU3uI-ICH5l/wUtPNshDv0000lTN00x1s0J>
+   <http://track.pluralsight.com/dc/yBSzDXz1t83SAu8S57EEMjXpT0QzKEIw3GTILdK=
+ytdEZ4v5sL59nNypA4cX6KDoI/wUtPNshDv0000lTN00x1s0J>
+   <http://track.pluralsight.com/dc/M9Y3nowLDCcEv8uSbJAkaXTGHqV_YEzxUjtWE9O=
+_NefBZ08YC8PHjcsXU2E01rGh/wUtPNshDv0000lTN00x1s0J>
+
+
+
+=20
+
+ Copyright=C2=A9 2016 Pluralsight LLC.
+ All logos and trademarks are the properties of their respective owners.=20
+
+ This email was sent to dragonet.c17@gmail.com <http://track.pluralsight.co=
+m/dc/1pDQu0mqE2rkhpZT-8gq22t_e8hlmX3JHlD628UL3nY=3D/wUtPNshDv0000lTN00x1s0J=
+>
+ Unsubscribe <[[https://get.pluralsight.com/UnsubscribePage.html?mkt_unsubs=
+cribe=3D1&mkt_tok=3DeyJpIjoiTURGak5qaGhZbU5sWmpGbCIsInQiOiJPcmZXc1greUhFNzN=
+zSkFHU3p5Wnltbm1hTlJXRHJPcmNQYU8rTlV6YUV6WWlMSGdrMEJrOUJaeHdBNGsyaUNJVGkzUG=
+habWZheDArRHBsQW00bjJZZWhzaWhqUmw1cEJ2ZEY3Q2VsSk5TR3M1d3podXBvaU13WnRNbVlwQ=
+npUYSJ9/]]> | Manage your preferences <http://track.pluralsight.com/dc/jXnN=
+gZX0R5Skt2btW6cf1ZC-rp3W1ClrQyb8joQdufid5Pzoibv5JJHzdhivwCdrLGSROPMb33CSgJ5=
+srQVOZw=3D=3D/wUtPNshDv0000lTN00x1s0J>
+
+------=_Part_464952328_1844207767.1495473545327
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+<title>PLURALSIGHT</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="format-detection" content="telephone=no">
+<style type="text/css">
+body {
+        margin: 0 !important;
+        padding: 0 !important;
+        -webkit-text-size-adjust: 100% !important;
+        -ms-text-size-adjust: 100% !important;
+        -webkit-font-smoothing: antialiased !important;
+}
+img {
+        border: 0 !important;
+        outline: none !important;
+}
+p {
+        Margin: 0px !important;
+        Padding: 0px !important;
+}
+table {
+        border-collapse: collapse;
+        mso-table-lspace: 0px;
+        mso-table-rspace: 0px;
+}
+td, a, span {
+        border-collapse: collapse;
+        mso-line-height-rule: exactly;
+}
+.ExternalClass * {
+        line-height: 100%;
+}
+.em_defaultlink a {
+        color: inherit !important;
+        text-decoration: none !important;
+}
+span.MsoHyperlink {
+        mso-style-priority: 99;
+        color: inherit;
+}
+span.MsoHyperlinkFollowed {
+        mso-style-priority: 99;
+        color: inherit;
+}
+.em_font48_blk {
+        font-family: 'Gotham', Arial, sans-serif;
+        font-size: 23px;
+        line-height: 26px;
+        color: #ffffff;
+        font-weight: bold;
+        letter-spacing: 0.9px;
+}
+.em_font48_blk a {
+        color: #ffffff;
+        text-decoration: none;
+}
+.em_Font75, .em_Font75 a {
+        font-family: 'Gotham', Arial, sans-serif;
+        font-size: 75px;
+        line-height: 75px;
+        color: #ffffff;
+        font-weight: 900;
+        text-decoration: none;
+}
+.em_font14_blk, .em_font14_blk a {
+        font-family: Helvetica, Arial, sans-serif;
+font-size: 13px;
+line-height: 20px;
+color: #ffffff;
+font-weight: bold;
+padding-top:5px;
+}
+.em_font14, .em_font14 a {
+        font-family: Helvetica, Arial, sans-serif;
+font-size: 14px;
+line-height: 24px;
+color: #ffffff;
+        text-decoration: none;
+}
+.em_Font10, .em_Font10 a {
+        font-family: 'Gotham', Arial, sans-serif;
+        font-size: 10px;
+        line-height: 12px;
+        color: #ffffff;
+        font-weight: bolder;
+        text-decoration: none;
+}
+.em_font12_btn {
+        font-family: Gotham , Arial, sans-serif;
+        font-size: 12px;
+        color: #ec008c;
+        font-weight: bold;
+        height: 26px;
+        letter-spacing: 0.9px;
+}
+.em_font12_btn a {
+        color: #ec008c;
+        text-decoration: none;
+        display: block;
+        line-height: 26px;
+}
+.em_footer_text {
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 12px;
+        line-height: 20px;
+        color: #888888;
+        letter-spacing: 0.9px;
+}
+.em_footer_text a {
+        color: #878787;
+        text-decoration: none;
+}
+
+.em_footer_text span a {
+        color: #207ec1;
+        text-decoration: none;
+}
+/*Stylesheed for the devices width between 481px to 599px*/
+@media only screen and (min-width:481px) and (max-width:599px) {
+.em_wrapper {
+        width: 100% !important;
+}
+.em_wrapper2 {
+        width: 430px !important;
+}
+.em_hide {
+        display: none !important;
+}
+.em_height {
+        height: 20px !important;
+}
+.em_spacer {
+        width: 10px !important;
+}
+.em_center {
+        text-align: center !important;
+}
+}
+/*End of Stylesheed for the devices width between 481px to 599px*/
+/*Stylesheed for the devices width below 481px */
+@media only screen and (max-width:480px) {
+
+.em_wrapper {
+        width: 100% !important;
+}
+.em_wrapper2 {
+        width: 300px !important;
+}
+.em_hide {
+        display: none !important;
+}
+.em_height {
+        height: 20px !important;
+}
+.em_spacer {
+        width: 10px !important;
+}
+.em_center {
+        text-align: center !important;
+}
+.em_font48_blk {
+        font-size: 16px !important;
+        line-height: 18px !important;
+}
+.em_Font75 {
+        font-size: 64px !important;
+        line-height: 64px !important;
+        
+}
+}
+/*End of Stylesheed for the devices width below 481px */
+</style>
+</head>
+<body style="margin:0px; padding:0px; -webkit-text-size-adjust:100% !important; -ms-text-size-adjust:100% !important; -webkit-font-smoothing:antialiased !important; " ><!--Full width table start-->
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" style="border-collapse:collapse; mso-table-lspace:0px; mso-table-rspace:0px; " ><tr ><td align="center" valign="top" style="border-collapse:collapse; mso-line-height-rule:exactly; " ><table width="600" border="0" cellspacing="0" cellpadding="0" align="center" class="em_wrapper" bgcolor="#00000" style="border-collapse:collapse; mso-table-lspace:0px; mso-table-rspace:0px; " ><!-- CONTENT SECTION STARTS HERE -->
+<tr ><td align="center" valign="top" background="http://edmimages.net/edm/2016_december/1481736274159/bg_img.jpg" style="background-position:center top; background-repeat:no-repeat; background-image:url(http://edmimages.net/edm/2016_december/1481736274159/bg_img.jpg); border-collapse:collapse; mso-line-height-rule:exactly; " bgcolor="#000000" ><!--[if gte mso 9]>
+  <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:600px;height:480px;">
+    <v:fill type="tile" src="http://edmimages.net/edm/2016_december/1481736274159/bg_img.jpg" color="#000000" />
+    <v:textbox inset="0,0,0,0">
+  <![endif]-->
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="em_wrapper2" style="border-collapse:collapse; mso-table-lspace:0px; mso-table-rspace:0px; " ><tr ><td class="em_spacer" width="100" style="border-collapse: collapse;mso-line-height-rule: exactly;">&nbsp;</td>
+<td valign="top" align="center" style="border-collapse:collapse; mso-line-height-rule:exactly; " ><table width="100%" cellspacing="0" cellpadding="0" border="0" align="center" style="border-collapse:collapse; mso-table-lspace:0px; mso-table-rspace:0px; " ><tr ><td valign="top" align="center" style="border-collapse:collapse; mso-line-height-rule:exactly; " ><table width="100%" cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse; mso-table-lspace:0px; mso-table-rspace:0px; " ><tr>
+<td style="line-height: 1px;font-size: 1px;border-collapse: collapse;mso-line-height-rule: exactly;" height="33">&nbsp;</td>
+</tr>
+<tr ><td valign="middle" align="center" style="border-collapse:collapse; mso-line-height-rule:exactly; " ><div class="mktEditable" id="logo" ><a href=
+"http://track.pluralsight.com/UxLl0sP0vU0DhJ01TN000qt" target="_blank" style="text-decoration: none; border-collapse: collapse; mso-line-height-rule: exactly;"
+><img src="http://pluralsight-assets.s3.amazonaws.com/demand%20emails/B2CNetNewV2/drip1/footer_logo.png" width="112" height="24" alt="PLURALSIGHT" border="0" style="display: block; font-family: Arial, sans-serif; font-size: 15px; color: #ffffff; font-weight: bold; max-width: 112px; border: 0 !important; outline: none !important;" /></a></div>
+</td>
+</tr>
+<tr>
+<td height="37" class="em_height" style="line-height: 1px;font-size: 1px;border-collapse: collapse;mso-line-height-rule: exactly;">&nbsp;</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr ><td valign="top" align="center" style="border-collapse:collapse; mso-line-height-rule:exactly; " ><table width="100%" cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse; mso-table-lspace:0px; mso-table-rspace:0px; " ><tr ><td valign="top" align="center" style="border-collapse:collapse; mso-line-height-rule:exactly; " ><table width="100%" cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse; mso-table-lspace:0px; mso-table-rspace:0px; " ><tr ><td class="em_font48_blk" valign="top" align="center" style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:'Gotham', Arial, sans-serif; font-size:23px; line-height:26px; color:#ffffff; font-weight:bold; letter-spacing:0.9px; " ><div class="mktEditable" id="title" >CHANGE SHOULDN&rsquo;T BE HARD</div>
+</td>
+</tr>
+<tr>
+<td class="em_height" height="20" style="border-collapse: collapse;mso-line-height-rule: exactly;">&nbsp;</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table width="100%" cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse; mso-table-lspace:0px; mso-table-rspace:0px; " ><tr>
+<td style="line-height: 1px;font-size: 1px;border-collapse: collapse;mso-line-height-rule: exactly;" height="1" bgcolor="#FFFFFF"><img src="http://pluralsight-assets.s3.amazonaws.com/demand%20emails/B2CNetNewV2/drip1/spacer.gif" width="1" height="1" alt="" border="0" style="display: block;border: 0 !important;outline: none !important;"></td>
+</tr>
+<tr>
+<td height="15" style="line-height: 1px;font-size: 1px;border-collapse: collapse;mso-line-height-rule: exactly;">&nbsp;</td>
+</tr>
+<tr ><td valign="top" align="center" style="border-collapse:collapse; mso-line-height-rule:exactly; " ><table border="0" cellspacing="0" cellpadding="0" align="center" class="em_wrapper" style="border-collapse:collapse; mso-table-lspace:0px; mso-table-rspace:0px; " ><tr ><td valign="middle" align="center" style="border-collapse:collapse; mso-line-height-rule:exactly; " ><table border="0" align="left" cellpadding="0" cellspacing="0" class="em_wrapper" style="border-collapse:collapse; mso-table-lspace:0px; mso-table-rspace:0px; " ><tr ><td class="em_Font75 em_center" valign="top" align="right" style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:'Gotham', Arial, sans-serif; font-size:75px; line-height:75px; color:#ffffff; font-weight:900; text-decoration:none; " ><div class="mktEditable" id="text_2" >87%</div>
+</td>
+</tr>
+</table>
+<!--[if gte mso 9]>
+        </td>
+        <td valign="top">
+<![endif]-->
+<table border="0" cellspacing="0" cellpadding="0" align="right" class="em_wrapper" style="border-collapse:collapse; mso-table-lspace:0px; mso-table-rspace:0px; " ><tr ><td width="15" style="border-collapse: collapse;mso-line-height-rule: exactly;"></td>
+<td align="left" valign="middle" class="em_font14_blk em_center" style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Helvetica, Arial, sans-serif; font-size:13px; line-height:20px; color:#ffffff; font-weight:bold; padding-top:5px; " ><div class="mktEditable" id="text_1" >of our learners say our<br class="em_hide">
+platform keeps them up<br class="em_hide">
+to speed as tech evolves</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="15" class="em_height" style="line-height: 1px;font-size: 1px;border-collapse: collapse;mso-line-height-rule: exactly;">&nbsp;</td>
+</tr>
+<tr>
+<td style="line-height: 1px;font-size: 1px;border-collapse: collapse;mso-line-height-rule: exactly;" height="1" bgcolor="#FFFFFF"><img src="http://pluralsight-assets.s3.amazonaws.com/demand%20emails/B2CNetNewV2/drip1/spacer.gif" width="1" height="1" alt="" border="0" style="display: block;border: 0 !important;outline: none !important;"></td>
+</tr>
+</table>
+<table width="100%" cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse; mso-table-lspace:0px; mso-table-rspace:0px; " ><tr>
+<td style="line-height: 1px;font-size: 1px;border-collapse: collapse;mso-line-height-rule: exactly;" height="20">&nbsp;</td>
+</tr>
+<tr ><td valign="top" align="center" style="border-collapse:collapse; mso-line-height-rule:exactly; " ><table width="120" cellspacing="0" cellpadding="0" border="0" align="center" style="border-collapse:collapse; mso-table-lspace:0px; mso-table-rspace:0px; " ><tr>
+<td valign="top" align="center" style="border-collapse: collapse;mso-line-height-rule: exactly;">
+<table width="100%" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse;mso-table-lspace: 0px;mso-table-rspace: 0px;">
+<tr>
+<td style="line-height: 0px;font-size: 0px;border-collapse: collapse;mso-line-height-rule: exactly;" width="3" valign="top" align="center"><img src="http://pluralsight-assets.s3.amazonaws.com/demand%20emails/B2CNetNewV2/drip1/btn_pink_cut_1.png" width="3" height="3" alt="" border="0" style="display: block;border: 0 !important;outline: none !important;"></td>
+<td valign="top" align="center" style="border-collapse: collapse;mso-line-height-rule: exactly;">
+<table width="100%" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse;mso-table-lspace: 0px;mso-table-rspace: 0px;">
+<tr>
+<td style="line-height: 0px;font-size: 0px;border-collapse: collapse;mso-line-height-rule: exactly;" height="1" bgcolor="#EC008C"><img src="http://pluralsight-assets.s3.amazonaws.com/demand%20emails/B2CNetNewV2/drip1/spacer.gif" width="1" height="1" alt="" border="0" style="display: block;border: 0 !important;outline: none !important;"></td>
+</tr>
+<tr>
+<td style="line-height: 0px;font-size: 0px;border-collapse: collapse;mso-line-height-rule: exactly;" height="2"><img src="http://pluralsight-assets.s3.amazonaws.com/demand%20emails/B2CNetNewV2/drip1/spacer.gif" width="1" height="1" alt="" border="0" style="display: block;border: 0 !important;outline: none !important;"></td>
+</tr>
+</table>
+</td>
+<td style="line-height: 0px;font-size: 0px;border-collapse: collapse;mso-line-height-rule: exactly;" width="3" valign="top" align="center"><img src="http://pluralsight-assets.s3.amazonaws.com/demand%20emails/B2CNetNewV2/drip1/btn_pink_cut_2.png" width="3" height="3" alt="" border="0" style="display: block;border: 0 !important;outline: none !important;"></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr ><td valign="top" align="center" style="border-collapse:collapse; mso-line-height-rule:exactly; " ><table width="100%" cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse; mso-table-lspace:0px; mso-table-rspace:0px; " ><tr ><td width="1" bgcolor="#EC008C" style="border-collapse: collapse;mso-line-height-rule: exactly;"></td>
+<td class="em_font12_btn" valign="middle" align="center" style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Gotham , Arial, sans-serif; font-size:12px; color:#ec008c; font-weight:bold; height:26px; letter-spacing:0.9px; " ><div class="mktEditable" id="btntext" ><a href=
+"http://track.pluralsight.com/GTU0PJ10tMsrD0hv0000lNx" target="_blank" style="border-collapse: collapse; mso-line-height-rule: exactly; color: #ec008c; text-decoration: none; display: block; line-height: 26px;"
+>Try it free</a></div>
+</td>
+<td width="1" bgcolor="#EC008C" style="border-collapse: collapse;mso-line-height-rule: exactly;"></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td valign="top" align="center" style="border-collapse: collapse;mso-line-height-rule: exactly;">
+<table width="100%" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse;mso-table-lspace: 0px;mso-table-rspace: 0px;">
+<tr>
+<td style="line-height: 0px;font-size: 0px;border-collapse: collapse;mso-line-height-rule: exactly;" width="3" valign="top" align="center"><img src="http://pluralsight-assets.s3.amazonaws.com/demand%20emails/B2CNetNewV2/drip1/btn_pink_cut_3.png" width="3" height="3" alt="" border="0" style="display: block;border: 0 !important;outline: none !important;"></td>
+<td valign="top" align="center" style="border-collapse: collapse;mso-line-height-rule: exactly;">
+<table width="100%" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse;mso-table-lspace: 0px;mso-table-rspace: 0px;">
+<tr>
+<td style="line-height: 0px;font-size: 0px;border-collapse: collapse;mso-line-height-rule: exactly;" height="2"><img src="http://pluralsight-assets.s3.amazonaws.com/demand%20emails/B2CNetNewV2/drip1/spacer.gif" width="1" height="1" alt="" border="0" style="display: block;border: 0 !important;outline: none !important;"></td>
+</tr>
+<tr>
+<td style="line-height: 0px;font-size: 0px;border-collapse: collapse;mso-line-height-rule: exactly;" height="1" bgcolor="#EC008C"><img src="http://pluralsight-assets.s3.amazonaws.com/demand%20emails/B2CNetNewV2/drip1/spacer.gif" width="1" height="1" alt="" border="0" style="display: block;border: 0 !important;outline: none !important;"></td>
+</tr>
+</table>
+</td>
+<td style="line-height: 0px;font-size: 0px;border-collapse: collapse;mso-line-height-rule: exactly;" width="3" valign="top" align="center"><img src="http://pluralsight-assets.s3.amazonaws.com/demand%20emails/B2CNetNewV2/drip1/btn_pink_cut_4.png" width="3" height="3" alt="" border="0" style="display: block;border: 0 !important;outline: none !important;"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="20" style="line-height: 1px;font-size: 1px;border-collapse: collapse;mso-line-height-rule: exactly;" class="em_height">&nbsp;</td>
+</tr>
+<tr ><td class="em_font14" valign="top" align="center" style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Helvetica, Arial, sans-serif; font-size:14px; line-height:24px; color:#ffffff; text-decoration:none; " ><div class="mktEditable" id="text_3" >Welcome to Pluralsight, a platform you can count on to stay<br class="em_hide">
+relevant, with on&#45;demand technology courses and tools that<br class="em_hide">
+measure your skills and solve your problems&mdash;faster.</div>
+</td>
+</tr>
+<tr>
+<td height="15" style="line-height: 1px;font-size: 1px;border-collapse: collapse;mso-line-height-rule: exactly;">&nbsp;</td>
+</tr>
+<tr ><td valign="top" align="center" style="border-collapse:collapse; mso-line-height-rule:exactly; " ><table cellspacing="0" cellpadding="0" border="0" align="center" style="border-collapse:collapse; mso-table-lspace:0px; mso-table-rspace:0px; " ><tr ><td class="em_Font10" valign="middle" align="left" style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:'Gotham', Arial, sans-serif; font-size:10px; line-height:12px; color:#ffffff; font-weight:bolder; text-decoration:none; " ><div class="mktEditable" id="Button_2" ><a href=
+"http://track.pluralsight.com/GTU0PJ10tMsrD0hv0000lNx" target="_blank" style="border-collapse: collapse; mso-line-height-rule: exactly; font-family: 'Gotham', Arial, sans-serif; font-size: 10px; line-height: 12px; color: #ffffff; font-weight: bolder; text-decoration: none;"
+>Learn more</a></div>
+</td>
+<td style="line-height: 1px;font-size: 1px;border-collapse: collapse;mso-line-height-rule: exactly;" width="5">&nbsp;</td>
+<td style="line-height:0px; font-size:0px; border-collapse:collapse; mso-line-height-rule:exactly; " valign="middle" align="right" ><div class="mktEditable" id="Button_3" ><a href=
+"http://track.pluralsight.com/GTU0PJ10tMsrD0hv0000lNx" target="_blank" style="text-decoration: none; border-collapse: collapse; mso-line-height-rule: exactly;"
+><img src="http://pluralsight-assets.s3.amazonaws.com/demand%20emails/B2CNetNewV2/drip1/arrow.png" width="10" height="5" border="0" style="display: block; max-width: 10px; border: 0 !important; outline: none !important;" /></a></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td style="line-height: 1px;font-size: 1px;border-collapse: collapse;mso-line-height-rule: exactly;" height="20">&nbsp;</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+<td class="em_spacer" width="100" style="border-collapse: collapse;mso-line-height-rule: exactly;">&nbsp;</td>
+</tr>
+</table>
+<!--[if gte mso 9]>
+    </v:textbox>
+  </v:rect>
+  <![endif]--></td>
+</tr>
+<!-- CONTENT SECTION ENDS HERE --><!--Footer-->
+<tr ><td ><div class="mktEditable" id="email_footer_snippet" ><table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tbody>
+<tr>
+<td class="stack" bgcolor="#000000" style="font-family: Arial, Helvetica, sans-serif; font-size: 12px; line-height: 14px; color: #888888; padding: 50px;">
+<div class="mktEditable" id="footer">
+<p style="line-height: 100%; margin-top: 0px; margin-bottom: 0px;"><br /></p>
+<table width="466" height="56">
+<tbody>
+<tr>
+<td align="left"><a href=
+"http://track.pluralsight.com/dc/JYWY0TlT8MJDYEoI81rBxOnTOO88FqBDDYRDr8jL7Cc=/wUtPNshDv0000lTN00x1s0J" target="_blank"
+><img src="http://pluralsight-assets.s3.amazonaws.com/transactional/template/ps-logo-with-icon-horiz-white-line.png" alt="" width="195" height="45" constrain="true" imagepreview="false" border="" /></a><br /></td>
+<td align="right"><a href=
+"http://track.pluralsight.com/dc/JYWY0TlT8MJDYEoI81rBxOnTOO88FqBDDYRDr8jL7Cc=/wUtPNshDv0000lTN00x1s0J" target="_blank"
+><img src="http://pluralsight-assets.s3.amazonaws.com/demand%20emails/product-launch-email1/f_text1.png" alt="" width="91" height="37" constrain="true" imagepreview="false" border="" style="float: right;" /></a></td>
+</tr>
+</tbody>
+</table>
+<p style="line-height: 100%; margin-top: 0px; margin-bottom: 0px;"><br /></p>
+<br /> Pluralsight, LLC 182 N. Union Ave. Farmington, UT 84025 <br /><br /> <!--Social-->
+<table width="190" border="0" cellpadding="7" cellspacing="0" height="36">
+<tbody>
+<tr>
+<td width="11"><a href=
+"http://track.pluralsight.com/dc/M5yi0yZ-UZCCxV3bfEu0anbONeUjOd18p_VSSggcgn0DrbpjHMEHkIJurPN3o6x7/wUtPNshDv0000lTN00x1s0J" target="_blank"
+> <img src="http://pluralsight-assets.s3.amazonaws.com/template_images/facebook_white.png" width="11" height="20" alt="facebook" style="display: block;" border="0" /> </a></td>
+<td width="20"><a href=
+"http://track.pluralsight.com/dc/MYFzQrvu5rPS8PETBnVMsRusr34Y1lr0HdZtfs82X3v9rFnWXM6_VHgQDeQ1wjEu/wUtPNshDv0000lTN00x1s0J" target="_blank"
+> <img src="http://pluralsight-assets.s3.amazonaws.com/template_images/instagram_white.png" width="20" height="19" alt="instagram" style="display: block;" border="0" /> </a></td>
+<td width="24"><a href=
+"http://track.pluralsight.com/dc/mEXRm9OBeNs3Y1bS8bbzxSIJ8iuvrVEtSkOtQ-B3bvA=/wUtPNshDv0000lTN00x1s0J" target="_blank"
+> <img src="http://pluralsight-assets.s3.amazonaws.com/template_images/twitter_white.png" width="24" height="19" alt="twitter" style="display: block;" border="0" /> </a></td>
+<td width="20"><a href=
+"http://track.pluralsight.com/dc/fG5-PlwEnZR-IoSdwCtjIpTVr9AsJHNwc_srhy7U9rVQYJ5-L-XVAJU3uI-ICH5l/wUtPNshDv0000lTN00x1s0J" target="_blank"
+> <img src="http://pluralsight-assets.s3.amazonaws.com/template_images/linkedin_white.png" width="20" height="19" alt="Linked in" style="display: block;" border="0" /> </a></td>
+<td width="16"><a href=
+"http://track.pluralsight.com/dc/M9Y3nowLDCcEv8uSbJAkaXTGHqV_YEzxUjtWE9O_NefBZ08YC8PHjcsXU2E01rGh/wUtPNshDv0000lTN00x1s0J" target="_blank"
+> <img src="http://pluralsight-assets.s3.amazonaws.com/template_images/you_tube_white.png" width="16" height="19" alt="you_tube" style="display: block;" border="0" /> </a></td>
+</tr>
+</tbody>
+</table>
+<!--End Social--> <br /><br /> Copyright&copy; 2016 Pluralsight LLC.<br /> All logos and trademarks are the properties of their respective owners. <br /><br /> This email was sent to <a href=
+"http://track.pluralsight.com/dc/1pDQu0mqE2rkhpZT-8gq22t_e8hlmX3JHlD628UL3nY=/wUtPNshDv0000lTN00x1s0J" style="color: #207fc2; text-decoration: none;"
+>dragonet.c17@gmail.com</a><br /> <a href="https://get.pluralsight.com/UnsubscribePage.html?mkt_unsubscribe=1&mkt_tok=eyJpIjoiTURGak5qaGhZbU5sWmpGbCIsInQiOiJPcmZXc1greUhFNzNzSkFHU3p5Wnltbm1hTlJXRHJPcmNQYU8rTlV6YUV6WWlMSGdrMEJrOUJaeHdBNGsyaUNJVGkzUGhabWZheDArRHBsQW00bjJZZWhzaWhqUmw1cEJ2ZEY3Q2VsSk5TR3M1d3podXBvaU13WnRNbVlwQnpUYSJ9/" target="_blank" style="color: #888888; text-decoration: none;">Unsubscribe</a> | <a href=
+"http://track.pluralsight.com/dc/jXnNgZX0R5Skt2btW6cf1ZC-rp3W1ClrQyb8joQdufid5Pzoibv5JJHzdhivwCdrLGSROPMb33CSgJ5srQVOZw==/wUtPNshDv0000lTN00x1s0J" target="_blank" style="color: #888888; text-decoration: none;"
+>Manage your preferences</a></div>
+</td>
+</tr>
+</tbody>
+</table></div>
+</td>
+</tr>
+<!--End Footer--></table>
+</td>
+</tr>
+</table>
+<!--Full width table End--><!--Increase/decrease the number of (-) as per the template width-->
+<div class="em_hide" style="white-space:nowrap; font:20px courier; color:#ffffff;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</div>
+<a href=
+"http://track.pluralsight.com/x0D0000J1tT0vNU0OhsltPx"
+></a>
+<img src="http://track.pluralsight.com/trk?t=1&mid=MzA2LURVUC03NDU6NDg2Mzc6MTE4MjY6NTY4MDc6MDoxNTc1ODo5OjE0NDg3OTo2ODAxODU1OmRyYWdvbmV0LmMxN0BnbWFpbC5jb20%3D" width="1" height="1" style="display:none !important;" alt="" />
+</body>
+</html>
+------=_Part_464952328_1844207767.1495473545327--

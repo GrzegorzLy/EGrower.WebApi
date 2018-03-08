@@ -1,0 +1,258 @@
+Delivered-To: dragonet.c17@gmail.com
+Received: by 10.202.65.198 with SMTP id o189csp344496oia;
+        Fri, 25 Mar 2016 13:32:35 -0700 (PDT)
+X-Received: by 10.107.134.94 with SMTP id i91mr16506160iod.95.1458937955376;
+        Fri, 25 Mar 2016 13:32:35 -0700 (PDT)
+Return-Path: <bounce-884605_HTML-1274186703-3741981-10017485-78128@bounce.e-mail.microsoft.com>
+Received: from mta28.email.microsoftemail.com (mta28.email.microsoftemail.com. [66.231.92.214])
+        by mx.google.com with ESMTPS id r197si14144526ior.42.2016.03.25.13.32.35
+        for <dragonet.c17@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Fri, 25 Mar 2016 13:32:35 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounce-884605_HTML-1274186703-3741981-10017485-78128@bounce.e-mail.microsoft.com designates 66.231.92.214 as permitted sender) client-ip=66.231.92.214;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@email.microsoftemail.com;
+       spf=pass (google.com: domain of bounce-884605_HTML-1274186703-3741981-10017485-78128@bounce.e-mail.microsoft.com designates 66.231.92.214 as permitted sender) smtp.mailfrom=bounce-884605_HTML-1274186703-3741981-10017485-78128@bounce.e-mail.microsoft.com;
+       dmarc=pass (p=NONE dis=NONE) header.from=microsoft.com
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=102420140131; d=email.microsoftemail.com;
+ h=From:To:Subject:Date:MIME-Version:Reply-To:Message-ID:Content-Type;
+ bh=IpqkyMq3hNtLA4h1jzcKg87vsl4=;
+ b=lvnA7mc9R52wD7GweVHQVW9QqQtqtstYdBy2f4XT9xdFrcAnJjlqxFRUfOYi1xBVaVK+5SqZepCe
+   vcEJ9cYN/GYS6rEf7d/Gy2vee2KZOGSqEdGADnnZjH6xOwi4+Bnq5ULbu5XGhtLDvUhOghz6AyvW
+   tRvUIoWRPtAR2kpFRrw=
+Received: by mta28.email.microsoftemail.com id humg66163hs0 for <dragonet.c17@gmail.com>; Fri, 25 Mar 2016 14:24:38 -0600 (envelope-from <bounce-884605_HTML-1274186703-3741981-10017485-78128@bounce.e-mail.microsoft.com>)
+From: "Microsoft DreamSpark" <MicrosoftDreamSpark@email.microsoft.com>
+To: <dragonet.c17@gmail.com>
+Subject: Welcome To Dreamspark
+Date: Fri, 25 Mar 2016 14:24:38 -0600
+MIME-Version: 1.0
+Reply-To: "Microsoft.com" <reply-fe8e177771650d7574-884605_HTML-1274186703-10017485-78128@email.microsoftemail.com>
+x-job: 10017485_3741981
+Message-ID: <c6d785de-e52f-4694-aaf0-4b2e429c0d3a@xtinmta1135.xt.local>
+Content-Type: multipart/alternative;
+	boundary="FRoJyubtVhDh=_?:"
+
+This is a multi-part message in MIME format.
+
+--FRoJyubtVhDh=_?:
+Content-Type: text/plain;
+	charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+
+
+
+
+https://www.dreamspark.com/ 
+Microsoft DreamSpark 
+
+
+Congratulations on your new Microsoft DreamSpark membership! Your student verification is complete, and you can now access the latest Microsoft professional developer tools at no-cost, including:
+
+
+	- 
+https://www.dreamspark.com/Product/Product.aspx?productid=99&WT.mc_id=16728-DEV-e_ds_rm_dst_wel2_az-1 
+Microsoft Azure cloud services (no credit card required) 
+	- 
+https://www.dreamspark.com/Product/Product.aspx?productid=101&WT.mc_id=16729-DEV-e_ds_rm_dst_wel2_vs-1 
+Visual Studio Community 2015 
+	- 
+https://www.dreamspark.com/Product/Product.aspx?productid=77&cmpid=E_DS_RM_DST_VER_WS_en-us 
+Windows Server 2012 R2 
+	- 
+https://www.dreamspark.com/Product/Product.aspx?productid=83&cmpid=E_DS_RM_DST_VER_SQL_en-us 
+SQL Server 2014 Enterprise Edition  
+Enjoy the wealth of DreamSpark resources created to help you build the next big technology breakthrough and get a head start on your career.
+
+
+
+Sincerely,
+
+
+
+The DreamSpark Team
+
+https://www.dreamspark.com/?cmpid=E_DS_RM_DST_VER_SIG_en-us 
+www.dreamspark.com 
+
+Membership Resources
+	- Get your DreamSpark inquiries answered via 
+https://www.dreamspark.com/Student/Support.aspx?cmpid=E_DS_RM_DST_VER_DSS_en-us 
+DreamSpark support .
+	- Stay up to date and connected: 
+
+https://www.facebook.com/MicrosoftStudent 
+ 
+https://twitter.com/ms_student 
+
+
+
+This message from Microsoft is an important part of a program, service, or product that you or your company purchased or participate in.
+
+
+
+Microsoft respects your privacy. Please read our 
+http://go.microsoft.com/fwlink/?LinkId=248681 
+Privacy Statement. 
+
+
+This is a mandatory service communication.To set your contact preferences for other communications, visit the 
+http://go.microsoft.com/fwlink/?LinkId=243191 
+Promotional Communications Manager . 
+
+
+
+
+Microsoft Corporation
+
+One Microsoft Way
+
+Redmond, WA 98052 USA 
+
+
+
+http://www.microsoft.com/ 
+
+
+
+
+
+--FRoJyubtVhDh=_?:
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+<html><body><img src="http://click.email.microsoftemail.com/open.aspx?ffcb10-fe8e177771650d7574-fdeb157174610075721d7972-fe651570756503797d11-fec01c7871620478-fdf815727260057573137076-fef5137874660c&d=10054" width="1" height="1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+/***** GENERAL EMAIL CLIENT FIXES *****/
+ReadMsgBody{ width: 100%;} /* Forces Hotmail to display emails at full width */
+.ExternalClass {width: 100%;} /*Hotmail table centering fix*/
+.ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height: 100%;} /* Forces Hotmail to display normal line spacing*/
+body {-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;margin:0 !important; padding:0 !important;} /* Prevent Webkit and Windows Mobile platforms from changing default font sizes, while not breaking desktop design. */
+.ExternalClass img[class^=Emoji] { width: 10px !important; height: 10px !important; display: inline !important; } /* Hotmail symbol fix for mobile devices */
+hr { color: #ababab; background-color: #ababab; height: 1px; border: none; }
+p { margin: 1em 0;} /*Yahoo paragraph fix*/
+table td { border-collapse: collapse;}  /*This resolves the Outlook 07, 10, and Gmail td padding issue fix*/
+/* Remove the borders that appear when linking images with "border:none" and "outline:none" */
+img {outline:0;}
+a img {border:none;}
+p {margin: 1em 0;} /*Yahoo paragraph fix*/
+.applelinks a {color:#666666; text-decoration: none;} /* Re-style iPhone automatic links (eg. phone numbers) */
+
+/***** SMARTPHONE STYLING RULES *****/
+@media screen and (max-width: 600px){
+#wrapper {width:100%; max-width:600px;}
+}
+</style>
+ 
+<table id="wrapper" align="left" width="600" border="0" cellspacing="0" cellpadding="0">
+  <tbody>
+    <tr>
+      <td align="center" valign="top">
+      
+<img src="https://pixel.monitor1.returnpath.net/pixel.gif?r=18431546f86595ba61488baf42d3e1af9bf64e23&campaign=DreamSparkEvalTriggeredTrans" width="1" height="1" />
+      <table id="maintable" align="center" border="0" cellpadding="0" cellspacing="0" width="96%" style="border: solid #e35a33 1px;">
+    <tr>
+        <td align="left" bgcolor="#e35a33" valign="middle" style="padding:15px 0px 0px 25px;">
+            <span style="color: #ffffff;  font-family: 'Segoe UI', 'DejaVu Sans', 'Trebuchet MS', Verdana, sans-serif; font-size: 28px;">
+                <a href="https://click.email.microsoftemail.com/?qs=7cb641f6b9ba807f0b7c0538894a4677a8562f7d33c59a9a1f28a893ead3fef976e9a84f55ee2226" style="color: #ffffff; text-decoration: none"  >Microsoft DreamSpark</a></span>
+        </td>
+    </tr>
+    <tr>
+      <td height="6" bgcolor="#f5c29c"></td>
+    </tr>
+    <tr>
+        <td align="left" style="vertical-align: top; padding: 15px 25px 15px 25px; background-color: #FFFFFF;">
+
+ <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tbody>
+    <tr>
+      <td>
+      
+<table cellpadding="0" cellspacing="0" border="0" bordercolor="" width="100%" bgcolor=""><tr><td><table  width="100%" bgcolor="" border="0" bordercolor="" cellpadding="0" cellspacing="0"><tr><td style="font-family:Arial; font-size:13px"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tbody>
+		<tr>
+			<td align="left" valign="top" style='color: rgb(102, 102, 102); font-family: "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif; font-size: 14px;'>
+			Congratulations on your new Microsoft DreamSpark membership! Your student verification is complete, and you can now access the latest Microsoft professional developer tools at no-cost, including:
+			<br>
+			<ul>
+				<li><a style="color: rgb(227, 90, 51); text-decoration: none;" href="https://click.email.microsoftemail.com/?qs=9c99dea6d68b9334cf6ffaf22dfe100900c7b154a671e1276a64875d4e252019c468265b343dd630">Microsoft Azure cloud services (no credit card required)</a></li>
+                <li><a style="color: rgb(227, 90, 51); text-decoration: none;" href="https://click.email.microsoftemail.com/?qs=d3ff7ce66a8a4f29e4e315edf61e21a0e1382cfa7df2221e92638e0f4459bae256253d49b55eb28f">Visual Studio Community 2015</a></li>
+				<li><a style="color: rgb(227, 90, 51); text-decoration: none;" href="https://click.email.microsoftemail.com/?qs=f15d9e6784ced98d52b91135143bd276627e11b37d3c4958f44a8481f89a705c6ed5b0d2f397afe3">Windows Server 2012 R2</a></li>
+				<li><a style="color: rgb(227, 90, 51); text-decoration: none;" href="https://click.email.microsoftemail.com/?qs=c7c7dad1d4fcf2bab8a5294c61321b30f1270ad10428186b98f517616be384e8f095b631b96adfd2">SQL Server 2014 Enterprise Edition </a></li>
+			</ul>
+			Enjoy the wealth of DreamSpark resources created to help you build the next big technology breakthrough and get a head start on your career.  
+			<br>
+			<br>
+			Sincerely,
+			<br>
+			<br>
+			The DreamSpark Team<br>
+			<a style="color: rgb(227, 90, 51); text-decoration: none;" href="https://click.email.microsoftemail.com/?qs=60c7684d86e5cefc13e639a4779d5748a97688a5d1e6961f9b5f6c94ae6ea98a62d3f2c4456f1e48">www.dreamspark.com</a>
+			<br>
+			<br>
+			<hr width="100%" size="1" align="LEFT" color="#e35a33" hr="">
+			<strong style="color: rgb(227, 90, 51); font-size: 22px;">Membership Resources</strong>
+			<ul>
+				<li>Get your DreamSpark inquiries answered via <a style="color: rgb(227, 90, 51); text-decoration: none;" href="https://click.email.microsoftemail.com/?qs=4be8cd3a173583b0b86c024b29c8aaf4a38788b7ef345dd605eff62e1d335b84cea86cf97d7e0786">DreamSpark support</a>.</li>
+				<li>Stay up to date and connected:   <br>
+				<a href="https://click.email.microsoftemail.com/?qs=f026b4c4d1dccca0abed85e3db6ae7c032db0abbba35b7b78a9977f4fbff9eb0b01fde18f4f4a04c"><img width="20" height="20" alt="Microsoft" src="http://image.email.microsoftemail.com/lib/feed1d76726202/m/1/Facebook+logo.png"></a>&nbsp;<a href="https://click.email.microsoftemail.com/?qs=a892f32ad67e2c2b79d0eb8d0275668dafec0c4592c9c57571eecfda286d7c4919cb0e1c3d700d89"><img width="20" height="20" alt="Microsoft" src="http://image.email.microsoftemail.com/lib/feed1d76726202/m/1/Twitter+logo.png"></a></li>
+			</ul>
+			<hr width="100%" size="1" align="LEFT" color="#e35a33" hr="">
+			</td>
+		</tr>
+	</tbody>
+</table></td></tr></table></td></tr></table>
+
+      </td>
+    </tr>
+    <tr>
+     
+     <td align="left" valign="top">
+     
+     <table id="footer" width="100%" border="0" cellspacing="0" cellpadding="10">
+    <tr>
+    <td align="left" valign="top" style="font-family:'Segoe UI', 'DejaVu Sans', 'Trebuchet MS', Verdana, sans-serif; font-size:11px; color:#666666;">
+
+This message from Microsoft is an important part of a program, service, or product that you or your company purchased or participate in.
+<br /><br />
+Microsoft respects your privacy. Please read our <a href="https://click.email.microsoftemail.com/?qs=a7b852c2c314f9c2b343f8149e8e010e3f608f02c8f6a19a09fb294ed3a267cb9e8c7037e740286e">Privacy Statement.</a>  
+<br /><br />
+This is a mandatory service communication.  To set your contact preferences for other communications, visit the <a href="https://click.email.microsoftemail.com/?qs=ece0bbd51f76ad9e1c51355df108431a5c5e0d49b9a81282b1b37f4133e8f3588322798f730f74de">Promotional Communications Manager</a>. 
+
+<br /><br />
+Microsoft Corporation<br>                                                                                                              
+One Microsoft Way<br>
+Redmond, WA 98052 USA 
+	
+			</td>
+		</tr>
+        <tr>
+    <td align="right" valign="top" style="font-family:'Segoe UI', 'DejaVu Sans', 'Trebuchet MS', Verdana, sans-serif; font-size:12px; color:#666666;"><a style="color: #e35a33; text-decoration: none;" href="https://click.email.microsoftemail.com/?qs=bec5db9a3f60d06722c0211770d63e993987818e83e635aa0b4e74052a4a3eaee3a3993febae3397"><img style="width: 110px; height: 48px;" title="MicrosoftFooterLogo" alt="MicrosoftFooterLogo" src="http://image.email.microsoftemail.com/lib/fecf15737365007c/m/2/Microsoft_new_logo.png" thid="250c6d89-08ad-409e-a40a-a103930512d0" height="48" hspace="0" border="0" width="110"></a>
+    </td></tr>
+
+    </table>
+
+     
+      
+      </td>
+     
+    </tr>
+  </tbody>
+</table>
+       		
+</td>
+</tr>
+</table>
+      </td>
+    </tr>
+  </tbody>
+ 
+</table>
+
+
+</body></html>
+
+--FRoJyubtVhDh=_?:--
+

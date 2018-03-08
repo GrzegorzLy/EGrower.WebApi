@@ -1,0 +1,124 @@
+Delivered-To: dragonet.c17@gmail.com
+Received: by 10.12.201.81 with SMTP id v17csp331760qvj;
+        Sat, 3 Feb 2018 01:58:51 -0800 (PST)
+X-Google-Smtp-Source: AH8x226QViZJ2pnGiVPTlHr7268k/z+DGZlq/XZpAqPGK3Ky3fIH515gioQzownCd8oQ0/W8aHQc
+X-Received: by 10.28.203.135 with SMTP id b129mr2613790wmg.155.1517651931140;
+        Sat, 03 Feb 2018 01:58:51 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1517651931; cv=none;
+        d=google.com; s=arc-20160816;
+        b=GE9TaokHSreFcTu0qyA+69nQ5pNNsuyGdCJz/tccsFp3To5OFAnupw2oeGWowHANJM
+         sTmBa2ru/ZzpwOw8m5KYFLhTSVvi2m70kRbKWWOiVlAbOHP8S2WRTYA/rko0cbPg+awm
+         VDnYxSlhVDkwyKML1HiCyjGJSvW9XwDHbxc3x6MR8BNThSk5clzyzfbK8XoRK0nFTUf+
+         6JJvKZ2Z24QoT1TmXdXUOtaKi9UO2N0ajFTLqWM8KKSl+J4J/J8KykuLCNetPcsmrDjg
+         sUaE3F7utcxaSZ6cYKA+32cojnj+k0HAARjvRZ6lNaWrTnGmRRwKZ9RP79/n322t6FSr
+         11gQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=content-transfer-encoding:list-unsubscribe:mime-version:reply-to
+         :from:date:message-id:subject:to:dkim-signature
+         :arc-authentication-results;
+        bh=VlgdkuX61bHSL+3pqtyWXibeSxFOlr9xtM7ydwWU8YU=;
+        b=ZL2AWo2cZroc43b6UsuMbzzagc2V5DQSYBfqtLxql72emyZ4v7viaqymWlsYZXxDYY
+         Cxk+itdvjRtyrh/nxt1zIcYRnEvRDHsnq2i3OgaFsU15UYmSMHt1sKlWqzuOW17Q2x+/
+         ecNe+d5AmKxO2bxepSPCma+LlAS07SMuEcGmadb0A8xog6n57IdibjZpfXEfbocR80nb
+         7Bb8qd29zm9dwn7P8kYYjH2bW7ydS5vt7EDCFFEW6qk/J0B43G2lQ5BnwQqJoUkRKCHO
+         85Q/XBv8RsMz25YW493KwYHwrnaCHs3Jn6o8yGbxC3ZAfgc+UAf8kHGP+OCFhc2et32m
+         7aTg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@dorotafilipiuk.pl header.s=default header.b=slwMpcvy;
+       spf=pass (google.com: domain of bounce@dorotafilipiuk.pl designates 79.143.176.60 as permitted sender) smtp.mailfrom=bounce@dorotafilipiuk.pl;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=dorotafilipiuk.pl
+Return-Path: <bounce@dorotafilipiuk.pl>
+Received: from dorotafilipiuk.pl (ip-60-176-143-79.static.contabo.net. [79.143.176.60])
+        by mx.google.com with ESMTPS id o11si3424333wra.549.2018.02.03.01.58.50
+        for <dragonet.c17@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Sat, 03 Feb 2018 01:58:51 -0800 (PST)
+Received-SPF: pass (google.com: domain of bounce@dorotafilipiuk.pl designates 79.143.176.60 as permitted sender) client-ip=79.143.176.60;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@dorotafilipiuk.pl header.s=default header.b=slwMpcvy;
+       spf=pass (google.com: domain of bounce@dorotafilipiuk.pl designates 79.143.176.60 as permitted sender) smtp.mailfrom=bounce@dorotafilipiuk.pl;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=dorotafilipiuk.pl
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
+	d=dorotafilipiuk.pl; s=default; h=Content-Transfer-Encoding:Content-Type:
+	List-Unsubscribe:MIME-Version:Reply-To:From:Date:Message-ID:Subject:To:Sender
+	:Cc:Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
+	Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Id:
+	List-Help:List-Subscribe:List-Post:List-Owner:List-Archive;
+	bh=VlgdkuX61bHSL+3pqtyWXibeSxFOlr9xtM7ydwWU8YU=; b=slwMpcvyg2btzvTYOKo/e0v4IK
+	RrnX7aWEbX7JJNaa0vjOUobtX0LvHfQ717IzNkvK2AZOeCeL4A52tVKSpUVhMf1nEYnMHk6QhncFU
+	wPRQqs1nSYoiu8SPw19QF58HXbZfGA2rufATTuWfT9tr1ZKMcmd28Fq1Giv69EX8R4QbKeYA1VmGE
+	+l0e2uO6feUdPETXwctCLh/zkuuc7FPSHRRuumkj3US4IwOxxhzesGjeBa6vnZFe4X1+tbNQNnYeh
+	qBL7s5RfsJk+RaBYYHIRxBz4ZKseDn/tZ45vSPK3bjmPUeOGBG4lAxHnze4wgRPse+SttFtzoNVYb
+	/muONnbw==;
+Received: from [79.143.176.60] (port=47382 helo=dorotafilipiuk.pl)
+	by vmi106355.contabo.host with esmtpa (Exim 4.89)
+	(envelope-from <bounce@dorotafilipiuk.pl>)
+	id 1eht1b-0007WW-GK
+	for dragonet.c17@gmail.com; Sat, 03 Feb 2018 09:18:15 +0100
+To: dragonet.c17@gmail.com
+Subject: =?UTF-8?B?W3dpZGVvXVByYXdvIHByenljacSFZ2FuaWEgLSBuYWp3YcW8bmllanN6eSBjenlubmlrIG8ga3TDs3J5bSB3c3p5c2N5IHphcG9taW5hasSF?=
+Message-ID: <5af42fd709ea16018551aa1e0db3f752@dorotafilipiuk.pl>
+Date: Sat, 03 Feb 2018 08:07:11 +0000
+From: "Dorota Filipiuk" <biuro@dorotafilipiuk.pl>
+Reply-To: biuro@dorotafilipiuk.pl
+MIME-Version: 1.0
+X-Mailer-LID: 74,82,65,11,39,21,7,12,62,63,16,3,24,1,64,23,13,34,69,68,78,73,72,2,20,18,17,4,80,8,33,22,14,77,38,35,67,70,40,81,66
+List-Unsubscribe: <http://dorotafilipiuk.pl/interspire/unsubscribe.php?M=58137&C=3dbaa9c3cdcef032e05bcbf3728b538c&L=81&N=382>
+X-Mailer-RecptId: 58137
+X-Mailer-SID: 382
+X-Mailer-Sent-By: 1
+Content-Type: text/plain; format=flowed; charset="UTF-8"
+Content-Transfer-Encoding: 8bit
+X-AntiAbuse: This header was added to track abuse, please include it with any abuse report
+X-AntiAbuse: Primary Hostname - vmi106355.contabo.host
+X-AntiAbuse: Original Domain - gmail.com
+X-AntiAbuse: Originator/Caller UID/GID - [47 12] / [47 12]
+X-AntiAbuse: Sender Address Domain - dorotafilipiuk.pl
+X-Get-Message-Sender-Via: vmi106355.contabo.host: authenticated_id: biuro@dorotafilipiuk.pl
+X-Authenticated-Sender: vmi106355.contabo.host: biuro@dorotafilipiuk.pl
+X-Source: 
+X-Source-Args: 
+X-Source-Dir: 
+
+,,Szybkie samochody, egzotyczne podróże, satysfakcjonująca praca oraz
+wymarzony dom z widokiem na morze. Jak je otrzymać?
+Wystarczy tylko umiejętne używać prawa przyciągania,
+które polega na pozytywnej wizualizacji”. Dlaczego kuszące obietnice
+się nie spełniają?
+
+Poznaj PRAWO PRZYCIĄGANIA
+i najważniejszy czynnik o którym wszyscy zapominają… Zobacz film:
+
+http://dorotafilipiuk.pl/interspire/link.php?M=58137&N=382&L=2412&F=T
+
+
+
+[Przypominajka]Wszystkie osoby, które skomentowały ten link:
+http://dorotafilipiuk.pl/interspire/link.php?M=58137&N=382&L=2410&F=T,
+dostały ode mnie mega duzy kod rabatowy z okazji premiery Generatora
+Czasu.
+Do końca tego tygodnia wpiszcie go w koszyku zamowienia a otrzymacie
+
+duuuza znizke z okazji premiery tego kursu.
+
+
+
+Kochani nie wiem czy wiecie, ale strona dorotafilipiuk.pl
+obchodzi swoją pierwszą rocznicę!
+
+Bardzo się cieszę, że jesteście ze mną :)
+Chciałabym Was zapytać co mogę zrobić jeszcze lepiej,
+w tym celu stworzyłam krótką ankietę z nagroda:
+http://dorotafilipiuk.pl/interspire/link.php?M=58137&N=382&L=2413&F=T
+
+
+
+Z góry bardzo Wam dziękuję
+
+Dorota
+
+
+Jeśli nie chcesz otrzymywać wiadomości ode mnie
+
+kliknij tutaj
+

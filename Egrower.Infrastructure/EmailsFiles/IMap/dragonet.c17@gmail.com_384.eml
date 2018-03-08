@@ -1,0 +1,94 @@
+Delivered-To: dragonet.c17@gmail.com
+Received: by 10.12.142.74 with SMTP id w10csp2830563qvb;
+        Mon, 12 Feb 2018 06:31:29 -0800 (PST)
+X-Google-Smtp-Source: AH8x224p+ppf/o2LGKXEExuKPz5EczS6q3oSYquvyWIvFKn8x0rXl30FuXhu15OWpIHaOKvydOkX
+X-Received: by 10.46.125.3 with SMTP id y3mr8101937ljc.23.1518445889366;
+        Mon, 12 Feb 2018 06:31:29 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1518445889; cv=none;
+        d=google.com; s=arc-20160816;
+        b=MPE5t0jdaRWRzNee8BZ66JOvWqgANGax7CwlqRtBImpzUH3M6VV849/yZZgeHA6LVV
+         UHBuI3tD1UL6GMNWuAfaEsIbrHw2GqfR3YtBCYlmS/IeYcm427v9Fgnekne8j2FBuwOe
+         D2WITb/TbZScf9lU5hVcsVEUwstY4H3XGTiaiCjuuoCE+X2g/APnBhTbiood3EahG/Ze
+         6vCkD1syr1OQHvAZiz7gUmFYYHCEWxKuI6/OeD+JioxjIqnfeRRI0UEd+VRMvc8pU8eE
+         ZHSssNPnxLB+aYYI/ENeeVwAlgo3P4bNGztbLzDK82b7ohtyLyldvGX2HtbazSobXAlE
+         Nfsg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=message-id:content-transfer-encoding:subject:date:to:from
+         :mime-version:arc-authentication-results;
+        bh=w0oUHZhrr2iC+T3uaZ+5us6bC3qZoTzgrw1XNcz9cvs=;
+        b=mRxMcwfjRIty6Jh3UBPuGdAtuwcCRyeynWmtALUXbiDocBN3/HvXMVLolbgKp9+DVF
+         eEFuKtqWYePxzyzwRuUZImkRtOVhmUvHiNpOwjJE791WmJ4K4X2v3UOsnIo3/f/xyR2N
+         a7/QuziyHFNqhSq76/GFWssfk12IhHIs6PLVN0yj+mSjfMOchBAUCkI/z+xpig7mbkRX
+         Nnh5AUjgdVcbm/yqPmZZaNglJcTzkfejsS9HNEEcuSmP7nlmOOnjUZi8itebfW5cePHu
+         FgtEiuyTUCdgoHOFKXZNTUpaTw2sE6VXPYUtAYIhQuoj+am728jz6ZdsUp/kLsAGNoC2
+         UYnQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=pass (google.com: domain of pomoc@hostedwindows.pl designates 213.218.125.180 as permitted sender) smtp.mailfrom=pomoc@hostedwindows.pl
+Return-Path: <pomoc@hostedwindows.pl>
+Received: from DBHW21.htx-net.pl (mx1.dcsweb.pl. [213.218.125.180])
+        by mx.google.com with ESMTP id q15si310515lfa.123.2018.02.12.06.31.29
+        for <dragonet.c17@gmail.com>;
+        Mon, 12 Feb 2018 06:31:29 -0800 (PST)
+Received-SPF: pass (google.com: domain of pomoc@hostedwindows.pl designates 213.218.125.180 as permitted sender) client-ip=213.218.125.180;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of pomoc@hostedwindows.pl designates 213.218.125.180 as permitted sender) smtp.mailfrom=pomoc@hostedwindows.pl
+Received: from DBHW21 ([192.168.15.62]) by DBHW21.htx-net.pl with Microsoft SMTPSVC(7.5.7601.17514);
+	 Mon, 12 Feb 2018 15:31:29 +0100
+MIME-Version: 1.0
+From: pomoc@hostedwindows.pl
+To: dragonet.c17@gmail.com
+Date: 12 Feb 2018 15:31:29 +0100
+Subject: =?utf-8?B?UHJ6eXBvbW5pZW5pZSBoYXNsYSAvIFBhc3N3b3JkIHJlbWlu?=
+ =?utf-8?B?ZGVyIGZvciBLYXJvbCBDaWNob8WE?=
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: base64
+Return-Path: pomoc@hostedwindows.pl
+Message-ID: <DBHW21AKIQXl7Mg4KBD00028503@DBHW21.htx-net.pl>
+X-OriginalArrivalTime: 12 Feb 2018 14:31:29.0003 (UTC) FILETIME=[2B7DABB0:01D3A40E]
+
+PGh0bWw+PGhlYWQ+PHN0eWxlIHR5cGU9InRleHQvY3NzIj4uU3VtbWFyeSB7IGJhY2tn
+cm91bmQtY29sb3I6ICMjZmZmZmZmOyBwYWRkaW5nOiA1cHg7IH0KLlN1bW1hcnkgLkhl
+YWRlciB7IHBhZGRpbmc6IDEwcHggMHB4IDEwcHggMTBweDsgZm9udC1zaXplOiAxNnB0
+OyBiYWNrZ3JvdW5kLWNvbG9yOiAjI0U1RjJGRjsgY29sb3I6ICMjMUY0OTc4OyBib3Jk
+ZXItYm90dG9tOiBzb2xpZCAycHggIyM4NkI5Rjc7IH0KLlN1bW1hcnkgQSB7IGNvbG9y
+OiAjIzAxNTNBNDsgfQouU3VtbWFyeSB7IGZvbnQtZmFtaWx5OiBUYWhvbWE7IGZvbnQt
+c2l6ZTogOXB0OyB9Ci5TdW1tYXJ5IEgxIHsgZm9udC1zaXplOiAxLjdlbTsgY29sb3I6
+ICMjMUY0OTc4OyBib3JkZXItYm90dG9tOiBkb3R0ZWQgM3B4ICMjZWZlZmVmOyB9Ci5T
+dW1tYXJ5IEgyIHsgZm9udC1zaXplOiAxLjNlbTsgY29sb3I6ICMjMUY0OTc4OyB9IAou
+U3VtbWFyeSBUQUJMRSB7IGJvcmRlcjogc29saWQgMXB4ICMjZTVlNWU1OyB9Ci5TdW1t
+YXJ5IFRILAouU3VtbWFyeSBURC5MYWJlbCB7IHBhZGRpbmc6IDVweDsgZm9udC1zaXpl
+OiA4cHQ7IGZvbnQtd2VpZ2h0OiBib2xkOyBiYWNrZ3JvdW5kLWNvbG9yOiAjI2Y1ZjVm
+NTsgfQouU3VtbWFyeSBURCB7IHBhZGRpbmc6IDhweDsgZm9udC1zaXplOiA5cHQ7IH0K
+LlN1bW1hcnkgVUwgTEkgeyBmb250LXNpemU6IDEuMWVtOyBmb250LXdlaWdodDogYm9s
+ZDsgfQouU3VtbWFyeSBVTCBVTCBMSSB7IGZvbnQtc2l6ZTogMC45ZW07IGZvbnQtd2Vp
+Z2h0OiBub3JtYWw7IH08L3N0eWxlPjwvaGVhZD48Ym9keT5BY2NvdW50IFN1bW1hcnkg
+SW5mb3JtYXRpb24KPGRpdiBjbGFzcz0iU3VtbWFyeSIgc3R5bGU9ImJhY2tncm91bmQt
+Y29sb3I6ICMjZmZmZmZmO3BhZGRpbmc6IDVweDtmb250LWZhbWlseTogVGFob21hO2Zv
+bnQtc2l6ZTogOXB0Ij48YSBuYW1lPSJ0b3AiIHN0eWxlPSJjb2xvcjogIyMwMTUzQTQi
+PjwvYT4KPGRpdiBjbGFzcz0iSGVhZGVyIiBzdHlsZT0icGFkZGluZzogMTBweCAwcHgg
+MTBweCAxMHB4O2ZvbnQtc2l6ZTogMTZwdDtiYWNrZ3JvdW5kLWNvbG9yOiAjI0U1RjJG
+Rjtjb2xvcjogIyMxRjQ5Nzg7Ym9yZGVyLWJvdHRvbTogc29saWQgMnB4ICMjODZCOUY3
+Ij5Ib3N0aW5nIEFjY291bnQgSW5mb3JtYXRpb248L2Rpdj4KPHA+SGVsbG8gS2Fyb2ws
+PC9wPgo8cD5QbGVhc2UsIGZpbmQgYmVsb3cgZGV0YWlscyBvZiB5b3VyIGNvbnRyb2wg
+cGFuZWwgYWNjb3VudC4gVGhlIHJlc3RvcmUgY29kZSB3YXMgZ2VuZXJhdGVkIGZvciB5
+b3UuIFlvdSBzaG91bGQgY2hhbmdlIHRoZSBwYXNzd29yZCBhZnRlciBlbnRlcmluZyBp
+dC48L3A+CjxoMSBzdHlsZT0iZm9udC1zaXplOiAxLjdlbTtjb2xvcjogIyMxRjQ5Nzg7
+Ym9yZGVyLWJvdHRvbTogZG90dGVkIDNweCAjI2VmZWZlZiI+Q29udHJvbCBQYW5lbCBV
+Ukw8L2gxPgo8dGFibGUgc3R5bGU9ImJvcmRlcjogc29saWQgMXB4ICMjZTVlNWU1Ij4K
+PHRoZWFkPgo8dHI+Cjx0aCBzdHlsZT0icGFkZGluZzogNXB4O2ZvbnQtc2l6ZTogOHB0
+O2ZvbnQtd2VpZ2h0OiBib2xkO2JhY2tncm91bmQtY29sb3I6ICMjZjVmNWY1Ij5Db250
+cm9sIFBhbmVsIFVSTDwvdGg+Cjx0aCBzdHlsZT0icGFkZGluZzogNXB4O2ZvbnQtc2l6
+ZTogOHB0O2ZvbnQtd2VpZ2h0OiBib2xkO2JhY2tncm91bmQtY29sb3I6ICMjZjVmNWY1
+Ij5Vc2VybmFtZTwvdGg+Cjx0aCBzdHlsZT0icGFkZGluZzogNXB4O2ZvbnQtc2l6ZTog
+OHB0O2ZvbnQtd2VpZ2h0OiBib2xkO2JhY2tncm91bmQtY29sb3I6ICMjZjVmNWY1Ij5S
+ZXN0b3JlIENvZGU8L3RoPgo8L3RyPgo8L3RoZWFkPgo8dGJvZHk+Cjx0cj4KPHRkIHN0
+eWxlPSJwYWRkaW5nOiA4cHg7Zm9udC1zaXplOiA5cHQiPjxhIGhyZWY9Imh0dHBzOi8v
+cGFuZWwuZGNzd2ViLnBsLyIgc3R5bGU9ImNvbG9yOiAjIzAxNTNBNCI+aHR0cHM6Ly9w
+YW5lbC5kY3N3ZWIucGw8L2E+PC90ZD4KPHRkIHN0eWxlPSJwYWRkaW5nOiA4cHg7Zm9u
+dC1zaXplOiA5cHQiPmRyYWdvbmV0PC90ZD4KPHRkIHN0eWxlPSJwYWRkaW5nOiA4cHg7
+Zm9udC1zaXplOiA5cHQiPjU3NDUyMjwvdGQ+CjwvdHI+CjwvdGJvZHk+CjwvdGFibGU+
+CjxwPklmIHlvdSBoYXZlIGFueSBxdWVzdGlvbnMgcmVnYXJkaW5nIHlvdXIgaG9zdGlu
+ZyBhY2NvdW50LCBmZWVsIGZyZWUgdG8gY29udGFjdCBvdXIgc3VwcG9ydCBkZXBhcnRt
+ZW50IGF0IGFueSB0aW1lLjwvcD4KPHA+QmVzdCByZWdhcmRzPC9wPgo8L2Rpdj48L2Jv
+ZHk+PC9odG1sPg==
+

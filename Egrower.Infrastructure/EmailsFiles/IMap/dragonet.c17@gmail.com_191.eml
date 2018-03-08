@@ -1,0 +1,261 @@
+Delivered-To: dragonet.c17@gmail.com
+Received: by 10.202.97.3 with SMTP id v3csp1561562oib;
+        Tue, 20 Sep 2016 09:09:31 -0700 (PDT)
+X-Received: by 10.36.219.65 with SMTP id c62mr5237295itg.44.1474387771498;
+        Tue, 20 Sep 2016 09:09:31 -0700 (PDT)
+Return-Path: <bounce-866153_HTML-1275061275-4549479-10017485-1064@bounce.e-mail.microsoft.com>
+Received: from mta28.email.microsoftemail.com (mta28.email.microsoftemail.com. [66.231.92.214])
+        by mx.google.com with ESMTPS id w125si30528391ith.36.2016.09.20.09.09.31
+        for <dragonet.c17@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 20 Sep 2016 09:09:31 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounce-866153_html-1275061275-4549479-10017485-1064@bounce.e-mail.microsoft.com designates 66.231.92.214 as permitted sender) client-ip=66.231.92.214;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@email.microsoftemail.com;
+       spf=pass (google.com: domain of bounce-866153_html-1275061275-4549479-10017485-1064@bounce.e-mail.microsoft.com designates 66.231.92.214 as permitted sender) smtp.mailfrom=bounce-866153_HTML-1275061275-4549479-10017485-1064@bounce.e-mail.microsoft.com;
+       dmarc=pass (p=NONE dis=NONE) header.from=e-mail.microsoft.com
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=102420140131; d=email.microsoftemail.com;
+ h=From:To:Subject:Date:MIME-Version:Reply-To:List-ID:Message-ID:Content-Type;
+ bh=6glCFYSdb2fFIJu2Z5PPzItannk=;
+ b=aKPW3NSg1CZTKxAzpxQIuCOmMR8ozDyP4gsBzfwA7nlF0F63N9uXwjRlTdwJw9OThBcLcmnq7wFT
+   1uOd9gvF7SWardLzfwk9euSPr3HA3ota6FFvExh1hYWtrIq5N4gKUHca/en5RJyijXDCoOaErzdU
+   Jt0bEmMk0gr1vTS3wOA=
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=200608; d=e-mail.microsoft.com;
+ b=Hzb/yLutaqBWd9WjNucpAHjTvjue5JDA6ouJJNz+sZ2jAT0GA6+cTnG1wVev7qJizt0kjcK1AwwB
+   n5qWN4hJcUj9V119hgxPgQomq0whVJIYIldwFYrdkGVXFkA8aBCMHkeQATloMj4kVCBEuQU6xq0u
+   +csR2DOZHkVOLp0OAwE=;
+Received: by mta28.email.microsoftemail.com id hs5fjm163hsb for <dragonet.c17@gmail.com>; Tue, 20 Sep 2016 10:07:34 -0600 (envelope-from <bounce-866153_HTML-1275061275-4549479-10017485-1064@bounce.e-mail.microsoft.com>)
+From: "MS Imagine" <MSImagine@e-mail.microsoft.com>
+To: <dragonet.c17@gmail.com>
+Subject: DreamSpark graduates to Microsoft Imagine
+Date: Tue, 20 Sep 2016 10:07:34 -0600
+MIME-Version: 1.0
+Reply-To: "Microsoft" <reply-fe851075716d007a7c-866153_HTML-1275061275-10017485-1064@email.microsoftemail.com>
+List-ID: <10017485_4549479.xt.local>
+X-CSA-Complaints: whitelistcomplaints@eco.de
+x-job: 10017485_4549479
+Message-ID: <362ceaeb-f6cb-4106-81ef-05a0bfe8c265@xtinmta1111.xt.local>
+Content-Type: multipart/alternative;
+	boundary="lxenv8H7gQuK=_?:"
+
+This is a multi-part message in MIME format.
+
+--lxenv8H7gQuK=_?:
+Content-Type: text/plain;
+	charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Microsoft Imagine
+ Having trouble viewing this email? 
+https://view.email.microsoftemail.com/?j=fe851075716d007a7c&m=fe651570756503797d11&ls=fdf61571746201797011757d&l=fec21c767365017e&s=fdfb15727261047b74167770&jb=ff3415707360&ju= 
+View as a webpage .
+
+
+https://imagine.microsoft.com 
+
+ 
+
+
+
+Hello Dragonet17,
+
+
+
+DreamSpark was renamed Microsoft Imagine. As a DreamSpark student or participant in the Imagine Cup, this is a critical program change. While the DreamSpark name has been retired, the program benefits are still available to you as part of Microsoft Imagine.
+
+
+
+To continue to access free tools, software, online learning and competitions like the Imagine Cup through Microsoft Imagine, you’ll need to 
+https://imagine.microsoft.com/Account/Edit?wt.mc_id=DX_873643 
+create a new student profile . 
+
+
+
+Once you create your Microsoft Imagine profile please explore, experiment, and create with no-cost access to Microsoft technologies like Azure, online learning experiences, and contests.
+
+
+Thanks, 
+
+The Microsoft Imagine Team 
+
+https://imagine.microsoft.com 
+imagine.microsoft.com 
+
+
+
+http://microsoft.com/ 
+
+ Microsoft respects your privacy. Please read our online 
+https://go.microsoft.com/fwlink/?LinkId=521839 
+Privacy Statement . 
+
+This is a mandatory service communication.To set your contact preferences for other communications, visit the 
+https://go.microsoft.com/fwlink/?LinkId=243191 
+Promotional Communications Manager .
+
+Microsoft Corporation
+
+One Microsoft Way
+
+Redmond, WA 98052 USA
+
+
+
+
+
+
+--lxenv8H7gQuK=_?:
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Microsoft Imagine</title>
+<style>
+    body {background:#f5f5f5;margin:0;padding:0;}
+    .bodywrap{
+        max-width:640px !important;margin:auto;
+    }
+    img[class="hero"] { max-width:600px; width:100% !important; height:auto !important; }
+    a, a span { color: #b4009d; background-color: none !important; border: none !important; text-decoration:none; }
+    a:hover {text-decoration:underline; }
+    table td {border-collapse:collapse;margin:0;padding:0;font-family:'Segoe UI',Helvetica,Arial,sans-serif; }
+    img {border:none;}
+    @media (max-width: 480px) {
+        *[class*="mobile-hidden"] { display:none !important; }
+        td[class="block"] { display:block !important; max-width:320px !important; }
+        td[class="bodywrap"] { width:320px !important; }
+        img[class="header"] { width:100% !important; height:auto !important; }
+        img[class="hero"] { width:100% !important; height:auto !important; }
+        *[class*="wrapper"] { width:100% !important; }
+    }
+</style>
+</head><body leftmargin="0" topmargin="0" bgcolor="#f5f5f5" style="background-color: #f5f5f5;">
+
+
+<table cellpadding="0" cellspacing="0" border="0" align="center" style="background-color: #f5f5f5;">
+    <tr>
+    <td align="center" valign="top" bgcolor="#ffffff" class="bodywrap" style="width: 640px; font-family:'Segoe UI',Helvetica,Arial,sans-serif; color: #000000; padding: 20px; ">
+    <table>
+<!-- Preheader -->  
+    <tr>
+        <td width="100%" valign="top" align="right" style="color:#737373; font-size:11px; padding:10px 0;">
+           
+
+<!-- Countries with DE-DE VAWP Content -->
+<!-- Preheader -->
+
+Having trouble viewing this&nbsp;email? <a href="https://click.email.microsoftemail.com/?qs=0b794e4a698fd5a5ee36581906bb19cd9d3198bc14e7ef651867f7838f17e001542bae52881a3666"  style="color:#b4009d;">View as a webpage</a>.
+
+
+        </td>
+    </tr>
+
+<!-- /Preheader -->
+
+<!-- Header -->
+
+    <tr>
+        <td width="100%" align="left"  bgcolor="#b4009d" class="wrapper">
+           <a href="https://click.email.microsoftemail.com/?qs=0b794e4a698fd5a5b875990aebae03819287057b649e7a27d6391f9dfa59ebbedee1ed98365e969a" target="_blank"><img width="476" src="https://image.email.microsoftemail.com/lib/fe651570756503797d11/m/1/2016_Imagine-Logo-White.png" border="0" alt="Microsoft Imagine" class="header">
+        </td>
+    </tr>
+
+<!-- /Header -->
+
+<!-- Body -->
+    <tr>
+        <td width="600" valign="top" align="left" style="font-family:'Segoe UI',Helvetica,Arial,sans-serif;color:#000000;font-size:18px;line-height:24px; padding-top:20px; padding-bottom:40px;">
+             
+
+<!-- Countries with DE-DE Content -->
+<table>
+<!-- Body -->
+    <tr>
+        <td width="600" valign="top" align="left" style="font-family:'Segoe UI',Helvetica,Arial,sans-serif;color:#000000;font-size:18px;line-height:24px;padding-bottom:40px;">
+            Hello Dragonet17,
+            <br /><br />
+            DreamSpark was renamed Microsoft Imagine. As a DreamSpark student or participant in the Imagine Cup, this is a critical program change. While the DreamSpark name has been retired, the program benefits are still available to you as part of Microsoft Imagine.
+            <br /><br />
+            To continue to access free tools, software, online learning and competitions like the Imagine Cup through Microsoft Imagine, you’ll need to <a href="https://click.email.microsoftemail.com/?qs=0b794e4a698fd5a516dc414b5f8c29cf5952e840295270e7643c47310194e81bacd1d579cbc9e2a6"   style="color:#b4009d; text-decoration:none;">create a new student profile</a>. 
+            <br /><br />
+            Once you create your Microsoft Imagine profile please explore, experiment, and create with no-cost access to Microsoft technologies like Azure, online learning experiences, and contests.
+        </td>
+    </tr>
+<!-- Closing-->
+    <tr>
+        <td width="600" valign="top" align="left" style="font-family:'Segoe UI',Helvetica,Arial,sans-serif;color:#000000;font-size:18px;line-height:24px;">
+            Thanks, <br />
+            The Microsoft Imagine Team <br />
+            <a href="https://click.email.microsoftemail.com/?qs=0b794e4a698fd5a5acf5300c0b0b25d5e60aba023e208346a64eafa46fd30b7e4580dbb30d4f2131"  style="color:#b4009d; text-decoration:none;">imagine.microsoft.com</a>
+
+        </td>
+    </tr>
+</table>
+
+        </td>
+    </tr>
+<!-- /Body -->
+
+<!-- Logo -->
+
+    <tr>
+        <td width="600" class="block" valign="middle" align="left" style="line-height:12px; padding-top:40px; border-top: 1px solid #737373;">
+            <a href="https://click.email.microsoftemail.com/?qs=0b794e4a698fd5a5f7181e5408ce65d1e3ff4446f3d5283355d240ddb283e71de2513736837539cc" title="Microsoft"  style="text-decoration:none;">
+            <img src="https://image.email.microsoftemail.com/lib/fe651570756503797d11/m/1/MS_ColorBlock_GreyText.png" alt="Microsoft" width="122" border="0"></a>
+        </td>
+    </tr>
+
+<!-- / Logo -->
+
+<!-- Footer -->
+    <tr>
+        <td width="600" valign="middle" align="left" style="color:#737373;font-size:14px; line-height:18px; padding-top:20px; padding-bottom: 20px;">
+               
+
+
+<!-- Countries with Single Language footer -->
+<table width="100%" cellpadding="10" align="center" style="max-width:550px;">
+    <tr>
+    <td>
+
+<p> <font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#000000">
+Microsoft respects your privacy. Please read our online <a href="https://click.email.microsoftemail.com/?qs=0b794e4a698fd5a5ea8b7a57f6e96f86afdcdbf72353a8e8af27a29187ede7715144d59959bccd8c">Privacy Statement</a>.   </font>
+</p>
+<p> <font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#000000">
+This is a mandatory service communication.&nbsp; To set your contact preferences for other communications, visit the <a href="https://click.email.microsoftemail.com/?qs=273be72bd329a060c99199b9a833d3d7e34dea97b9b2a15065ad867a74a5de700676d70afd099850">Promotional Communications Manager</a>.
+</font>
+</p>
+
+<p> <font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#000000">
+
+Microsoft Corporation<br>                                                                                                              
+One Microsoft Way<br>
+Redmond, WA 98052 USA 
+
+</font>
+</p>
+	</td>
+    </tr>
+    </table>
+
+
+        </td>
+    </tr>
+
+<!-- /Footer -->
+        </table>
+        </td>
+    </tr>
+</table>
+
+<img src="https://click.email.microsoftemail.com/open.aspx?ffcb10-fe851075716d007a7c-fdf61571746201797011757d-fe651570756503797d11-fec21c767365017e-fdfb15727261047b74167770-ff3415707360" width="1" height="1">
+
+
+</body></html>
+
+--lxenv8H7gQuK=_?:--
+

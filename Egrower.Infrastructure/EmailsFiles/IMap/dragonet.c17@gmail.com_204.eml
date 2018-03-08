@@ -1,0 +1,564 @@
+Delivered-To: dragonet.c17@gmail.com
+Received: by 10.107.20.18 with SMTP id 18csp491602iou;
+        Wed, 9 Nov 2016 18:16:29 -0800 (PST)
+X-Received: by 10.36.124.71 with SMTP id a68mr2326285itd.9.1478744189009;
+        Wed, 09 Nov 2016 18:16:29 -0800 (PST)
+Return-Path: <bounce-889884_HTML-1275061275-4657015-10017488-2738@bounce.e-mail.microsoft.com>
+Received: from mta28.email.microsoftemail.com (mta28.email.microsoftemail.com. [66.231.92.214])
+        by mx.google.com with ESMTPS id o128si1674489ioe.82.2016.11.09.18.16.28
+        for <dragonet.c17@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 09 Nov 2016 18:16:29 -0800 (PST)
+Received-SPF: pass (google.com: domain of bounce-889884_html-1275061275-4657015-10017488-2738@bounce.e-mail.microsoft.com designates 66.231.92.214 as permitted sender) client-ip=66.231.92.214;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@email.microsoftemail.com;
+       spf=pass (google.com: domain of bounce-889884_html-1275061275-4657015-10017488-2738@bounce.e-mail.microsoft.com designates 66.231.92.214 as permitted sender) smtp.mailfrom=bounce-889884_HTML-1275061275-4657015-10017488-2738@bounce.e-mail.microsoft.com;
+       dmarc=pass (p=NONE dis=NONE) header.from=e-mail.microsoft.com
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=102420140131; d=email.microsoftemail.com;
+ h=From:To:Subject:Date:MIME-Version:Reply-To:List-ID:Message-ID:Content-Type;
+ bh=KpOFsU0eDG0aadWDa6UQR9IO3EE=;
+ b=dh5OzdXvlOssN+oc8DweZe2Qmz425U8Yo/jHiaDgjzuAC7xAGqAi+WHuYvJqiXiB9vBFn+Ogee8l
+   lGw36+znmI85lLEsFWDRDRmzt7Up0fMLZ/gzGOcRGPAaJHQVOXp9pKJeavEKnrRp4HRwAYwW3EGn
+   N0Twzcm/XocOJphxElY=
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=200608; d=e-mail.microsoft.com;
+ b=Mdon2G0h2PIJE5cHe607L/UN9rqdAXh+21DA/gUpOpFLrH+j9kgPwP+hcTVw+LF0+QB0ddTemuZ3
+   ETLUQQeJyHT00WAZol7FYOvWzubT1duux+YqrdgP8qTRuLxzzdC1RI4deJuduRfd7C5acqbeiI58
+   qPI/2smSR0XSSZHVcI4=;
+Received: by mta28.email.microsoftemail.com id h4fc7o163hs0 for <dragonet.c17@gmail.com>; Wed, 9 Nov 2016 20:15:51 -0600 (envelope-from <bounce-889884_HTML-1275061275-4657015-10017488-2738@bounce.e-mail.microsoft.com>)
+From: "Azure Team" <AzureTeam@e-mail.microsoft.com>
+To: <dragonet.c17@gmail.com>
+Subject: Azure pricing and services updates
+Date: Wed, 09 Nov 2016 20:15:51 -0600
+MIME-Version: 1.0
+Reply-To: "Azure Team" <reply-fe9310767063047c70-889884_HTML-1275061275-10017488-2738@email.microsoftemail.com>
+List-ID: <10017488_4657015.xt.local>
+X-CSA-Complaints: whitelistcomplaints@eco.de
+x-job: 10017488_4657015
+Message-ID: <950e422a-0d20-4ace-b334-9fd749a7e1ad@xtinmta4188.xt.local>
+Feedback-ID: 10017488:4657015:66.231.92.214:sfmktgcld
+Content-Type: multipart/alternative;
+	boundary="Z7EjhYAVQ9eY=_?:"
+
+This is a multi-part message in MIME format.
+
+--Z7EjhYAVQ9eY=_?:
+Content-Type: text/plain;
+	charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+
+Azure pricing and services updates 
+Having trouble viewing this email? 
+https://view.email.microsoftemail.com/?j=fe9310767063047c70&m=fe621570756503797d1c&ls=fdf61571746201797011757d&l=feb21c787c6c0c79&s=fdfb15727261047b74167770&jb=ff2b1677766c&ju= 
+View as a webpage .
+
+ 
+ 
+
+
+
+ 
+In this email, you’ll find the latest Azure release announcements and pricing changes related to new and updated releases.
+
+
+Search by keyword or sort articles by categories via the 
+https://pages.email.microsoftemail.com/page.aspx?qs=773ed3059447707d512e37a3fe1c05148512177d470702227ac53de308838ab11c393c616b40a01bf8184530dfa61c7f24a29704329de6bff5271c3f9b3a329b5b2cdf05ce5a649a53efb08bddb58099 
+website version .
+
+
+
+ 
+
+
+ 
+
+
+Microsoft Cognitive Services: New feature, Face API Person Group, in public preview
+
+https://azure.microsoft.com/en-us/pricing/details/cognitive-services/?WT.mc_id=azurebg_email_Trans_1221_Tier_2_Release_MOSP 
+Pricing  | 
+https://azure.microsoft.com/en-us/services/cognitive-services/?WT.mc_id=azurebg_email_Trans_1221_Tier_2_Release_MOSP 
+Cognitive Services webpage 
+
+
+Now in public preview, an update has been made to the Microsoft Cognitive Services Face API to enable developers to store up to 100,000 Persons by purchasing additional Person Faces. For more information about pricing, please visit the 
+https://azure.microsoft.com/en-us/pricing/details/cognitive-services/?WT.mc_id=azurebg_email_Trans_1221_Tier_2_Release_MOSP 
+Cognitive Services Pricing  webpage. To learn more about Microsoft Cognitive Services, please visit the 
+https://azure.microsoft.com/en-us/services/cognitive-services/?WT.mc_id=azurebg_email_Trans_1221_Tier_2_Release_MOSP 
+Cognitive Services  webpage.
+<br><br>
+Microsoft Cognitive Services is a collection of APIs that lets developers build intelligent apps by tapping into high-quality vision, speech, language, knowledge, and search technologies developed with decades of Microsoft research.
+
+
+
+
+
+
+
+
+
+Microsoft Cognitive Services: Content Moderator in public preview
+
+https://azure.microsoft.com/en-us/pricing/details/cognitive-services/?WT.mc_id=azurebg_email_Trans_1221_Tier_2_Release_MOSP 
+Pricing  | 
+https://azure.microsoft.com/en-us/services/cognitive-services/?WT.mc_id=azurebg_email_Trans_1221_Tier_2_Release_MOSP 
+Cognitive Services webpage 
+
+
+Now in public preview, Content Moderator is available as a service in the 
+https://portal.azure.com/#create/Microsoft.CognitiveServices/apitype/ContentModerator 
+Azure portal . For more information about pricing, please visit the 
+https://azure.microsoft.com/en-us/pricing/details/cognitive-services/?WT.mc_id=azurebg_email_Trans_1221_Tier_2_Release_MOSP 
+Cognitive Services Pricing  webpage. To learn more about Microsoft Cognitive Services, please visit the 
+https://azure.microsoft.com/en-us/services/cognitive-services/?WT.mc_id=azurebg_email_Trans_1221_Tier_2_Release_MOSP 
+Cognitive Services  webpage.
+<br><br>
+Part of Microsoft Cognitive Services, Content Moderator automatically filters out offensive content in text, image, and video across platforms, and includes human review tools for more nuanced cases.
+
+
+
+
+
+
+Microsoft Dynamics 365 for Customer Insights in public preview
+
+https://azure.microsoft.com/en-us/pricing/details/customer-insights/?WT.mc_id=azurebg_email_Trans_1221_Tier_2_Release_MOSP 
+Pricing  | 
+https://www.microsoft.com/en-us/dynamics/customer-insights?WT.mc_id=azurebg_email_Trans_1221_Tier_2_Release_MOSP 
+Dynamics 365 website 
+
+
+Microsoft Dynamics 365 for Customer Insights is in public preview. For more information about pricing, please visit the 
+https://azure.microsoft.com/en-us/pricing/details/customer-insights/?WT.mc_id=azurebg_email_Trans_1221_Tier_2_Release_MOSP 
+Dynamics 365 for Customer Insights Pricing  webpage. To learn more about Customer Insights, please visit the 
+https://www.microsoft.com/en-us/dynamics/customer-insights?WT.mc_id=azurebg_email_Trans_1221_Tier_2_Release_MOSP 
+Dynamics 365  website.
+<br><br>
+Customer Insights is a new SaaS solution that helps you engage customers by empowering your employees with actionable insights.
+
+
+
+
+
+
+
+
+
+Azure Media Redactor in public preview
+
+https://azure.microsoft.com/en-us/pricing/details/media-services/?WT.mc_id=azurebg_email_Trans_1221_Tier_2_Release_MOSP 
+Pricing  | 
+https://azure.microsoft.com/en-us/services/media-services/?WT.mc_id=azurebg_email_Trans_1221_Tier_2_Release_MOSP 
+Media Services webpage 
+
+
+Now in public preview, Azure Media Redactor, a new Azure Media Analytics service, offers two service tiers: Basic and Standard. These tiers support a variety of resolutions and frame rates. For more information about pricing, please visit the 
+https://azure.microsoft.com/en-us/pricing/details/media-services/?WT.mc_id=azurebg_email_Trans_1221_Tier_2_Release_MOSP 
+Media Services Pricing  webpage. To learn more about Media Services, please visit the 
+https://azure.microsoft.com/en-us/services/media-services/?WT.mc_id=azurebg_email_Trans_1221_Tier_2_Release_MOSP 
+Media Services  webpage. 
+<br><br>
+Media Redactor is a media processor that automatically blurs faces from video. For more information, please visit the 
+https://azure.microsoft.com/en-us/blog/azure-media-redactor/?WT.mc_id=azurebg_email_Trans_1221_Tier_2_Release_MOSP 
+Azure Blog .
+
+
+
+
+
+
+
+
+
+
+
+
+Hybrid Connections feature of Azure Service Bus in public preview
+
+https://azure.microsoft.com/en-us/pricing/details/service-bus/?WT.mc_id=azurebg_email_Trans_1221_Tier_2_Release_MOSP 
+Pricing  | 
+https://azure.microsoft.com/en-us/services/service-bus/?WT.mc_id=azurebg_email_Trans_1221_Tier_2_Release_MOSP 
+Service Bus webpage 
+
+
+Hybrid Connections, a feature of Azure Service Bus, is in public preview. For more information about pricing, please visit the 
+https://azure.microsoft.com/en-us/pricing/details/service-bus/?WT.mc_id=azurebg_email_Trans_1221_Tier_2_Release_MOSP 
+Service Bus Pricing  webpage. To learn more about the new Hybrid Connections API and Service Bus, please visit the 
+https://azure.microsoft.com/en-us/services/service-bus/?WT.mc_id=azurebg_email_Trans_1221_Tier_2_Release_MOSP 
+Service Bus  webpage.
+<br><br>
+Hybrid Connections lets you securely access existing assets wherever they are, without a complex firewall, network, or VPN configuration.
+ 
+ 
+
+
+
+
+
+
+
+
+
+In-Memory OLTP for Azure SQL Database generally available
+
+
+In-Memory OLTP, a feature of Azure SQL Database, is generally available. Memory-optimized tables, memory-optimized table types, and natively compiled T-SQL modules are now available in all Premium databases, including databases in Premium elastic pools. For more information, please read the 
+https://aka.ms/inmemory?WT.mc_id=azurebg_email_Trans_1221_Tier_2_Release_MOSP 
+In-Memory OLTP  blog post.
+
+
+
+
+
+
+
+
+
+<strong>Note:</strong> As an Azure customer, you are receiving this email because we are required to notify you of all pricing changes. This is the only communication that you will receive directly from Microsoft regarding these pricing changes.
+
+
+
+
+
+
+
+
+Thank you, 
+
+
+
+Your Azure Team
+
+ 
+ 
+
+
+
+
+
+
+ 
+
+This message from Microsoft is an important part of a program, service, or product that you or your company purchased or participates in. Microsoft respects your privacy. Please read our 
+http://www.microsoft.com/privacystatement/en-us/OnlineServices/Default.aspx 
+Privacy Statement .
+
+
+ 
+One Microsoft Way, Redmond, WA 98052 USA
+
+ 
+  
+
+ 
+ 
+
+
+
+
+--Z7EjhYAVQ9eY=_?:
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=600, user-scalable=no" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Azure pricing and services updates</title>
+<style>
+	* {-webkit-text-size-adjust: none}
+
+	body {margin:0; padding:0;}
+	table, table td { border-collapse:collapse; mso-table-lspace:0; mso-table-rspace:0; margin:0; padding:0; }
+
+	@media only screen and (max-width: 480px) {
+
+		*[class].wrapper {
+			width:320px!important;
+			min-width: 0 !important;
+		}
+
+		*[class].container288 {
+			width:288px!important;
+		}
+
+		/* Hide from mobile */
+		*[class*="mobileHidden"] { display:none !important; }
+
+		/* Custom */
+		*[class="fullWidth"] { width:100% !important; }
+
+		td[class="block"] { width:100% !important; display:block !important; }
+		td[class="block2"] { width:100% !important; display:block !important; border-top:none !important; padding:5px 0 20px 0 !important; }
+		td[class="block3"] { width:100% !important; display:block !important; border-bottom:none !important; padding:10px 0 !important; }
+
+		img[class="photo"] { width:100% !important; height:auto !important; }
+
+		td[class="mobileGutter"] { width: 15px !important; }
+	}
+</style>
+</head>
+<body><style type="text/css">
+div.preheader 
+{ display: none !important; } 
+</style>
+<div class="preheader" style="font-size: 1px; display: none !important;">Required customer communication from Azure</div>
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+	<tr>
+		<td valign="top" align="right" width="50%" style="background-color:#f5f5f5;">&nbsp;</td>
+		<td valign="top" style="background-color:#f5f5f5;">
+
+<!-- PREHEADER-->
+<table width="600" cellpadding="0" cellspacing="0" border="0" style="min-width:600px;" class="wrapper">
+	<tr>
+		<td width="600" align="right" style="background-color:#f5f5f5; color:#3f4042; font-family:'Segoe UI',Arial,sans-serif; font-size:10px; font-weight:bold; padding:24px 0 3px;">
+			Having trouble viewing this email? <a href="https://click.email.microsoftemail.com/?qs=6594eb9b1436326933f6c6365c53fc29ecd79377fd3e83f3eed7c2d60a15449ec20d41ad1c7c841962ad29abec0d8eff" title="View as a webpage"  style="color:#3da5dd; text-decoration:none;">View as a webpage</a>.
+		</td>
+	</tr>
+</table>
+<!-- /PREHEADER -->
+
+<!-- HEADER -->
+<table width="600" cellpadding="0" cellspacing="0" border="0" class="wrapper">
+	<tr>
+		<td width="1" style="background:#000000; line-height:1px; border-top:1px solid #000000;"></td>
+		<td style="background:#ffffff; line-height:1px; border-top:1px solid #000000;">
+			<table width="413" cellpadding="0" cellspacing="0" border="0" class="fullWidth">
+				<tr>
+					<td width="25" style="background:#ffffff;" class="mobileGutter">&nbsp;</td>
+					<td align="left" valign="top" style="background:#ffffff; padding:20px 0;">
+						<img src="http://image.email.microsoftemail.com/lib/fe621570756503797d1c/m/2/33601_AzureTransTemplate_MS_Logo.png" alt="Microsoft" width="74" height="15" border="0" style="display:block;">
+					</td>
+				</tr>
+				<tr>
+					<td width="25" style="background:#ffffff;" class="mobileGutter">&nbsp;</td>
+					<td align="left" valign="top" style="background:#ffffff; line-height:1px; padding-bottom:20px;">
+						<img src="https://image.email.microsoftemail.com/lib/fe621570756503797d1c/m/2/Azure_logo_blk.png" alt="Azure" width="100" height="30" border="0" style="display:block;">
+					</td>
+				</tr>
+				<tr>
+					<td height="15" colspan="2" style="background:#002050; font-size:1px;line-height:1px;">&nbsp;</td>
+				</tr>
+				
+			</table>
+		</td>
+		<td width="185" align="right" valign="bottom" style="background:#ffffff; line-height:1px; border-top:1px solid #000000;" class="mobileHidden">
+			<img src="http://image.email.microsoftemail.com/lib/fe621570756503797d1c/m/2/informative_white.png" width="185" height="50" border="0">
+		</td>
+		<td width="1" style="background:#000000; line-height:1px; border-top:1px solid #000000;"></td>
+	</tr>
+</table>
+<!-- /HEADER -->
+
+<!-- HERO -->
+<table width="600" cellpadding="0" cellspacing="0" border="0" bgcolor="#ffffff" class="wrapper">
+	<tr>
+		<td width="1" style="background:#000000; line-height:1px; border-bottom:1px solid #000000;"></td>
+		<td width="25" style="background:#ffffff; line-height:1px; padding-bottom:10px; border-bottom:1px solid #dfdfdf;" class="mobileGutter">&nbsp;</td>
+		<td align="left" valign="middle" style="background:#ffffff; color:#404041; line-height:1px; padding-bottom:10px; border-bottom:1px solid #dfdfdf;">
+			<table width="363" cellpadding="0" cellspacing="0" border="0" class="fullWidth">
+				<tr>
+					<td style="background:#ffffff; color:#404041; font-family:'Segoe UI',Arial,sans-serif; font-size:17px; mso-line-height-rule:exactly; line-height:26px; padding:20px 0;">
+						In this email, you’ll find the latest Azure release announcements and pricing changes related to new and updated releases.
+					</td>
+				</tr>
+				<tr>
+					<td style="background:#ffffff; color:#404041; font-family:'Segoe UI',Arial,sans-serif; font-size:11px; mso-line-height-rule:exactly; line-height:17px; padding:8px 0 20px;">
+						Search by keyword or sort articles by categories via the <a href="https://pages.email.microsoftemail.com/page.aspx?qs=773ed3059447707d512e37a3fe1c05148512177d470702227ac53de308838ab11c393c616b40a01bf8184530dfa61c7f24a29704329de6bff5271c3f9b3a329b5b2cdf05ce5a649a35b290ea2f6efde7debebe648ee427837e2cc33c608f8f05" title="website version"  style="color:#3da5dd; text-decoration:none;">website version</a>.
+					</td>
+				</tr>
+				
+			</table>
+		</td>
+		<td width="25" style="background:#ffffff; line-height:1px; padding-bottom:10px; border-bottom:1px solid #dfdfdf;" class="mobileGutter">&nbsp;</td>
+		<td width="185" align="right" valign="top" style="background:#ffffff; padding-bottom:10px; border-bottom:1px solid #dfdfdf;" class="mobileHidden">
+			<img src="http://image.email.microsoftemail.com/lib/fe621570756503797d1c/m/2/33601_AzureTransTemplate_GearIcon_btm.png" width="185" height="165" border="0" alt="Azure" style="display:block;"></td>
+		
+		<td width="1" style="background:#000000; line-height:1px; border-bottom:1px solid #000000;"></td>
+	</tr>
+</table>
+<!-- /HERO -->
+
+<!-- BODY -->
+<table width="600" cellpadding="0" cellspacing="0" border="0" class="wrapper">
+	<tr>
+		<td width="1" style="background:#000000; line-height:1px;"></td>
+		<td width="25" style="background:#ffffff; line-height:1px;" class="mobileGutter">&nbsp;</td>
+		<td width="548" align="left" valign="top" style="background:#ffffff; padding:20px 0; color:#4d4d4d; font-family:'Segoe UI',Arial,sans-serif; font-size:13px; mso-line-height-rule:exactly; line-height:20px;" class="container288">
+
+
+			<span style="font-size:17px; font-weight:bold;">Microsoft Cognitive Services: New feature, Face API Person Group, in public preview</span>
+			<br>
+
+			<span style="font-size:11px;"><a href="https://click.email.microsoftemail.com/?qs=6594eb9b14363269f865c5695a6dfb963bccd41c9ecdf880651389241bb88e7c7f8a2007c13e3f5728f22d24476af709" title="Pricing"  style="color:#3da5dd; text-decoration:none;">Pricing</a> | <a href="https://click.email.microsoftemail.com/?qs=6594eb9b143632692d23df157b97ddea57dd957c2110caec692aeda0a5f3b8fa8ece4ebfd2697e04228780f0d328f97a" title="Cognitive Services webpage"  style="color:#3da5dd; text-decoration:none;">Cognitive Services webpage</a></span>
+			<br>
+
+			Now in public preview, an update has been made to the Microsoft Cognitive Services Face API to enable developers to store up to 100,000 Persons by purchasing additional Person Faces. For more information about pricing, please visit the <a href="https://click.email.microsoftemail.com/?qs=6594eb9b14363269e969c7d1cb24ce17c9d51e35a4244154b671a738a24d66259397e714881ac62d9ad233e9b6536ae1" title="Cognitive Services Pricing"  style="color:#3da5dd; text-decoration:none;">Cognitive Services Pricing</a> webpage. To learn more about Microsoft Cognitive Services, please visit the <a href="https://click.email.microsoftemail.com/?qs=6594eb9b143632697d3f360bf5a424e54aeda582b880af927b4f70739b06bcfff231a4e495584830ff406a55887a9ed2" title="Cognitive Services"  style="color:#3da5dd; text-decoration:none;">Cognitive Services</a> webpage.
+	<br><br>
+	Microsoft Cognitive Services is a collection of APIs that lets developers build intelligent apps by tapping into high-quality vision, speech, language, knowledge, and search technologies developed with decades of Microsoft research.
+			<br><br>
+
+			
+
+			
+
+
+			<span style="font-size:17px; font-weight:bold;">Microsoft Cognitive Services: Content Moderator in public preview</span>
+			<br>
+
+			<span style="font-size:11px;"><a href="https://click.email.microsoftemail.com/?qs=6594eb9b14363269490a5372a897ade49cda91898e6c378890b9751e18a63bf3689f922f1bb51102575bee0625322124" title="Pricing"  style="color:#3da5dd; text-decoration:none;">Pricing</a> | <a href="https://click.email.microsoftemail.com/?qs=6594eb9b1436326907bc12c0d8c0647f06f4a6a29bceee2e929753e0a803d1cc022e58f41133450a5af57be25270ab0a" title="Cognitive Services webpage"  style="color:#3da5dd; text-decoration:none;">Cognitive Services webpage</a></span>
+			<br>
+
+			Now in public preview, Content Moderator is available as a service in the <a href="https://click.email.microsoftemail.com/?qs=6594eb9b14363269a86545e5c40224e48a7da5c16b384e4b9ff458113f22c550c0dd03c5b05f2b4c952e0eb7706d90df" title="Azure portal"  style="color:#3da5dd; text-decoration:none;">Azure portal</a>. For more information about pricing, please visit the <a href="https://click.email.microsoftemail.com/?qs=6594eb9b14363269317d83b20c0ad91db0b6f58d488488a48fc962b90bb53fbb625f3a5a2239aa9d7b7330965a08ab05" title="Cognitive Services Pricing"  style="color:#3da5dd; text-decoration:none;">Cognitive Services Pricing</a> webpage. To learn more about Microsoft Cognitive Services, please visit the <a href="https://click.email.microsoftemail.com/?qs=6594eb9b143632695392b0c1d251e0d095f02ef3087858036f05fa82d4422733bc8fa0d5dbb7b5cc2ae715cf549803db" title="Cognitive Services"  style="color:#3da5dd; text-decoration:none;">Cognitive Services</a> webpage.
+	<br><br>
+	Part of Microsoft Cognitive Services, Content Moderator automatically filters out offensive content in text, image, and video across platforms, and includes human review tools for more nuanced cases.
+			<br><br>
+			
+
+
+			<span style="font-size:17px; font-weight:bold;">Microsoft Dynamics 365 for Customer Insights in public preview</span>
+			<br>
+
+			<span style="font-size:11px;"><a href="https://click.email.microsoftemail.com/?qs=6594eb9b143632693ab36d26a95a6fb4911033128dd0868d2754f884d0ddb687d7068d0a58fea8dbba7f855e0fba90ce" title="Pricing"  style="color:#3da5dd; text-decoration:none;">Pricing</a> | <a href="https://click.email.microsoftemail.com/?qs=6594eb9b14363269060414f5d7da4d06b88a72d371722d39a5515abbc85e40c1f3dd7878b94b091ddec1b8119e966df9" title="Dynamics 365 website"  style="color:#3da5dd; text-decoration:none;">Dynamics 365 website</a></span>
+			<br>
+
+			Microsoft Dynamics 365 for Customer Insights is in public preview. For more information about pricing, please visit the <a href="https://click.email.microsoftemail.com/?qs=6594eb9b14363269a7d196ff71f5177c68ce353e9c498a4cb06249a0dd074ddd49141685dae8a1cedd4beb0de33f2ce6" title="Dynamics 365 for Customer Insights Pricing"  style="color:#3da5dd; text-decoration:none;">Dynamics 365 for Customer Insights Pricing</a> webpage. To learn more about Customer Insights, please visit the <a href="https://click.email.microsoftemail.com/?qs=6594eb9b14363269472776e43b139a7ebfc952b88009847858c29fabf17d18b2942524990150db9525a2adac5d548187" title="Dynamics 365"  style="color:#3da5dd; text-decoration:none;">Dynamics 365</a> website.
+	<br><br>
+	Customer Insights is a new SaaS solution that helps you engage customers by empowering your employees with actionable insights.
+			<br><br>
+			
+
+
+			
+
+
+			<span style="font-size:17px; font-weight:bold;">Azure Media Redactor in public preview</span>
+			<br>
+
+			<span style="font-size:11px;"><a href="https://click.email.microsoftemail.com/?qs=6594eb9b14363269c4f46272b4d2b274e957adebdf57be639a54bc72069ed7e587c1072555bbf54623b605523fae8e74" title="Pricing"  style="color:#3da5dd; text-decoration:none;">Pricing</a> | <a href="https://click.email.microsoftemail.com/?qs=6594eb9b1436326979891e3f80e2f12a43134d006fce779646e6ea76b746dacad666b8aa121ac5393eb6296548d6b8ef" title="Media Services webpage"  style="color:#3da5dd; text-decoration:none;">Media Services webpage</a></span>
+			<br>
+
+			Now in public preview, Azure Media Redactor, a new Azure Media Analytics service, offers two service tiers: Basic and Standard. These tiers support a variety of resolutions and frame rates. For more information about pricing, please visit the <a href="https://click.email.microsoftemail.com/?qs=6594eb9b14363269b367c3354dd492c4d566d3383281ea468217bc7b7b9f0ac831a45f45c5420275b5b0da77e884a6b2" title="Media Services Pricing"  style="color:#3da5dd; text-decoration:none;">Media Services Pricing</a> webpage. To learn more about Media Services, please visit the <a href="https://click.email.microsoftemail.com/?qs=6594eb9b14363269ccc0df5c720851564ad8084e7bed0c8e8f437a7b5552d99f0a1af8701189ffabf1cc1ac850133324" title="Media Services"  style="color:#3da5dd; text-decoration:none;">Media Services</a> webpage. 
+	<br><br>
+	Media Redactor is a media processor that automatically blurs faces from video. For more information, please visit the <a href="https://click.email.microsoftemail.com/?qs=6594eb9b1436326970351e244f9d9171a76a590ffdcd2d428659d8a089d9af8987fc43e50da965be924ce47458cefcfd" title="Azure Blog"  style="color:#3da5dd; text-decoration:none;">Azure Blog</a>.
+			<br><br>
+			
+
+
+			
+
+
+			
+
+
+			<span style="font-size:17px; font-weight:bold;">Hybrid Connections feature of Azure Service Bus in public preview</span>
+			<br>
+
+			<span style="font-size:11px;"><a href="https://click.email.microsoftemail.com/?qs=6594eb9b143632690a189f5769a14bc92d567506ab866b0340755c39680ed834930d5bfbe0253a0fe035108e4a6cc2ff" title="Pricing"  style="color:#3da5dd; text-decoration:none;">Pricing</a> | <a href="https://click.email.microsoftemail.com/?qs=6594eb9b14363269a5fde803c9edac0965826bfa799483aa7fd18210654451188ae95a4453395d917746b5731d1d5e64" title="Service Bus webpage"  style="color:#3da5dd; text-decoration:none;">Service Bus webpage</a></span>
+			<br>
+
+			Hybrid Connections, a feature of Azure Service Bus, is in public preview. For more information about pricing, please visit the <a href="https://click.email.microsoftemail.com/?qs=6594eb9b14363269dbcb03b0fb7bf9a50c3df651ea342fc610fdf53685ed0d45dc17262a7b7dd2e1b15f97cf883ae6a9" title="Service Bus Pricing"  style="color:#3da5dd; text-decoration:none;">Service Bus Pricing</a> webpage. To learn more about the new Hybrid Connections API and Service Bus, please visit the <a href="https://click.email.microsoftemail.com/?qs=6594eb9b143632695ce32254f77bf4da5b2b7711cdbe5ecbeb79b1641a214d7d2e2d487c6a9de87706f02d8a7ee9c910" title="Service Bus"  style="color:#3da5dd; text-decoration:none;">Service Bus</a> webpage.
+	<br><br>
+	Hybrid Connections lets you securely access existing assets wherever they are, without a complex firewall, network, or VPN configuration.<a href="https://click.email.microsoftemail.com/?qs=6594eb9b143632699a956c10fe3dd3150c75c8f090cdf93f91f9d31ace8605ef40be6e981d105457" title=""  style="color:#3da5dd; text-decoration:none;"></a>
+			<br><br>
+			
+
+
+			
+
+
+			<span style="font-size:17px; font-weight:bold;">In-Memory OLTP for Azure SQL Database generally available</span>
+			<br>
+
+			In-Memory OLTP, a feature of Azure SQL Database, is generally available. Memory-optimized tables, memory-optimized table types, and natively compiled T-SQL modules are now available in all Premium databases, including databases in Premium elastic pools. For more information, please read the <a href="https://click.email.microsoftemail.com/?qs=6594eb9b143632690e0ce60ed2e6934f9f43916a50ed61b49c247c0958f2292fda8579ec9624d30efe6adfbfa70138db" title="In-Memory OLTP"  style="color:#3da5dd; text-decoration:none;">In-Memory OLTP</a> blog post.
+			<br><br>
+			
+
+
+			
+
+
+			<strong>Note:</strong> As an Azure customer, you are receiving this email because we are required to notify you of all pricing changes. This is the only communication that you will receive directly from Microsoft regarding these pricing changes.
+			<br><br>
+			
+
+
+			<br>
+			Thank you, 
+			<br><br>
+			Your Azure Team
+
+		</td>
+		<td width="25" style="background:#ffffff; line-height:1px;" class="mobileGutter">&nbsp;</td>
+		<td width="1" style="background:#000000; line-height:1px;"></td>
+	</tr>
+</table>
+<!-- /BODY -->
+
+<!-- ACCOUNT 
+
+/ACCOUNT -->
+
+<!-- FOOTER -->
+<table width="600" cellpadding="0" cellspacing="0" border="0" class="wrapper">
+	<tr>
+		<td width="1" style="background:#000000; line-height:1px; border-bottom:solid 1px #000000;"></td>
+		<td width="25" style="background:#505050; line-height:1px; border-bottom:solid 1px #898989;" class="mobileGutter"></td>
+		<td width="548" align="left" valign="top" style="background:#505050; color:#fffffe; font-family:'Segoe UI',Arial,sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:18px; padding:20px 0; border-bottom:solid 1px #898989;" class="container288">
+			This message from Microsoft is an important part of a program, service, or product that you or your company purchased or participates in. Microsoft respects your privacy. Please read our <a href="https://click.email.microsoftemail.com/?qs=6594eb9b143632699bff53c5310cd1e56c7a385d5a2515367074a220fade280aa0780bae1a752ed3fe50e100b0ca027a" title="Privacy Statement"  style="color:#3da5dd; text-decoration:none;">Privacy Statement</a>.
+			
+		</td>
+		<td width="25" style="background:#505050; line-height:1px; border-bottom:solid 1px #898989;" class="mobileGutter"></td>
+		<td width="1" style="background:#000000; line-height:1px; border-bottom:solid 1px #000000;"></td>
+	</tr>
+</table>
+<table width="600" cellpadding="0" cellspacing="0" border="0" class="wrapper">
+	<tr>
+		<td width="1" style="background:#000000; line-height:1px;"></td>
+		<td width="488" valign="top" align="left" style="background:#505050; color:#ffffff; font-family:'Segoe UI',Arial,sans-serif; font-size:11px; padding:20px 0;" class="block3">
+			<table width="488" cellpadding="0" cellspacing="0" border="0" class="fullWidth">
+				<tr>
+					<td width="25" style="background:#505050;line-height:1px;" class="mobileGutter">&nbsp;</td>
+					<td width="453" valign="top" align="left" style="background:#505050; color:#ffffff; font-family:'Segoe UI',Arial,sans-serif; font-size:11px;" class="container288">
+						One Microsoft Way, Redmond, WA 98052 USA
+						
+					</td>
+					<td width="10" valign="top" align="left" style="background:#505050; color:#4c4c4c;line-height:1px;" class="mobileGutter">&nbsp;</td>
+				</tr>
+			</table>
+		</td >
+		<td width="110" valign="top" align="right" style="background:#505050; color:#4c4c4c; padding:20px 0;" class="block2">
+			<table width="110" cellpadding="0" cellspacing="0" border="0" class="fullWidth">
+				<tr>
+					<td width="10" valign="top" align="left" style="background:#505050; color:#4c4c4c;line-height:1px;" class="mobileGutter">&nbsp;</td>
+					<td width="75" valign="top" align="right" style="background:#505050; color:#4c4c4c; font-family:'Segoe UI',Arial,sans-serif; font-size:11px;" class="container288">
+						<img src="http://image.email.microsoftemail.com/lib/fe621570756503797d1c/m/1/MS_Logo_white_100.png" alt="Microsoft" width="75" height="16" border="0" style="display:block;"></td>
+					<td width="25" style="background:#505050; line-height:1px;" class="mobileGutter">&nbsp;</td>
+				</tr>
+			</table>
+		</td>
+		<td width="1" style="background:#000000; line-height:1px;"></td>
+	</tr>
+	<tr>
+		<td width="600" colspan="4" valign="top" align="left" style="background:#f5f5f5; color:#ffffff; font-family:'Segoe UI',Arial,sans-serif; font-size:11px; border-top:solid 1px #000000;">&nbsp;</td>
+	</tr>
+</table>
+<!-- /FOOTER -->
+
+		</td>
+		<td valign="top" align="left" width="50%" style="background-color:#f5f5f5;">&nbsp;</td>
+	</tr>
+</table>
+
+<img src="https://click.email.microsoftemail.com/open.aspx?ffcb10-fe9310767063047c70-fdf61571746201797011757d-fe621570756503797d1c-feb21c787c6c0c79-fdfb15727261047b74167770-ff2b1677766c" width="1" height="1">
+</body>
+</html>
+
+--Z7EjhYAVQ9eY=_?:--
+

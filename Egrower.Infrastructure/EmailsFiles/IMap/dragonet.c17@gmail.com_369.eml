@@ -1,0 +1,2509 @@
+Delivered-To: dragonet.c17@gmail.com
+Received: by 10.12.142.74 with SMTP id w10csp867511qvb;
+        Thu, 8 Feb 2018 09:40:12 -0800 (PST)
+X-Google-Smtp-Source: AH8x225i3tksvtXa7TqAqfFz5oDtwNqqjZiBVvc42QJbdcYpcKPFOJq8n21Kth9GnK4Vn01Z/P9I
+X-Received: by 10.99.110.7 with SMTP id j7mr1116371pgc.156.1518111612548;
+        Thu, 08 Feb 2018 09:40:12 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1518111612; cv=none;
+        d=google.com; s=arc-20160816;
+        b=YViPVe0mwYdP8Em0Rb6RU6bais7OXhqlFjm6I13TMJazN1Oay1HGCNRcBIwA1KLNM5
+         P5EcwKT+xN/tAF25ZgslQ4tK2LXcc1rcvP4Fyi+dnOXeDLuWKXTjPtPdOKUvkNjWNZWa
+         /ytysAZ+7FOzdJNlbSzRy+TVGF0ThhviDkpdqDIMNibE6C+YUh3NVwjT/osTlnI3N/25
+         Gx3LYgbW7diDUjmEgzgpdL4xSy62ds7agf0q0o3DhGdwCFPzF5FI/cQB/BgzAzWSzLjf
+         J/aA5CI8o5afPlrGM0vOqLfOyBbcYVpGfn2xoaTdvekwzy9XjUaodqSCZDoalgprs8py
+         4S/w==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=list-unsubscribe:mime-version:subject:message-id:to:reply-to:from
+         :date:dkim-signature:dkim-signature:arc-authentication-results;
+        bh=UeikTRmuU+H12hteofA0pyq9mrYEwgtfG4EqcbLuCD0=;
+        b=xdTwpXzC2SDOPK3t/Vwzel6FqrfAl7zSMygYvenX3z24EGeIL6H7DBKC9EH4BnXqh7
+         SYCRZvAM0l6peQoBG59S24f1w5d8Qr/pmj71LelCZJ8UIbUwN/00vll3f2L7xkrwsSXy
+         BiBcf8VYOn+1cqnxGnwc34tBUY3/2Wsqf0sn0RDuamBZ7nvBzOGbkrOr9DcgX0eRQlLC
+         DrppUhqo5dCTfVtYR900+Zaycb5zH44C80ixD6uwJAYd3Bb/cbK5cMah5RXbicgBuEAh
+         /1L0VuUcQ+P+o5mbkf5hQMrSIdA1db/DV/bNzx15ggNXfIrmDbEO7SSnfHJ1XtIZiXmL
+         hP8g==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@pluralsight.com header.s=m1 header.b=IEK/Yn+t;
+       dkim=pass header.i=@mktdns.com header.s=m1 header.b=YJzNrVj8;
+       spf=pass (google.com: domain of 306-dup-745.0.237480.0.0.22110.9.6801855@smtp.pluralsight.com designates 199.15.215.12 as permitted sender) smtp.mailfrom=306-DUP-745.0.237480.0.0.22110.9.6801855@smtp.pluralsight.com
+Return-Path: <306-DUP-745.0.237480.0.0.22110.9.6801855@smtp.pluralsight.com>
+Received: from smtp.pluralsight.com (smtp.pluralsight.com. [199.15.215.12])
+        by mx.google.com with ESMTPS id c1si218171pgf.354.2018.02.08.09.40.11
+        for <dragonet.c17@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 08 Feb 2018 09:40:12 -0800 (PST)
+Received-SPF: pass (google.com: domain of 306-dup-745.0.237480.0.0.22110.9.6801855@smtp.pluralsight.com designates 199.15.215.12 as permitted sender) client-ip=199.15.215.12;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@pluralsight.com header.s=m1 header.b=IEK/Yn+t;
+       dkim=pass header.i=@mktdns.com header.s=m1 header.b=YJzNrVj8;
+       spf=pass (google.com: domain of 306-dup-745.0.237480.0.0.22110.9.6801855@smtp.pluralsight.com designates 199.15.215.12 as permitted sender) smtp.mailfrom=306-DUP-745.0.237480.0.0.22110.9.6801855@smtp.pluralsight.com
+Return-Path: <Lindsey@pluralsight.com>
+X-MSFBL: ZHJhZ29uZXQuYzE3QGdtYWlsLmNvbUBkdnAtMTk5LTE1LTIxNS0xMkBiZy1zamQt
+	OTlAMzA2LURVUC03NDU6NzE5MDg6MTgwNTA6ODY5MTk6MDoyMjExMDo5OjIzNzQ4
+	MDo2ODAxODU1
+Received: from [10.0.87.249] ([10.0.87.249:33035] helo=sjmas01.marketo.org)
+	by sjmta02.marketo.org (envelope-from <Lindsey@pluralsight.com>)
+	(ecelerity 3.6.8.47404 r(Core:3.6.8.0)) with ESMTP
+	id 5C/62-17451-86B8C7A5; Thu, 08 Feb 2018 11:39:52 -0600
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; t=1518111592;
+	s=m1; d=pluralsight.com; i=@pluralsight.com;
+	h=Date:From:To:Subject:MIME-Version:Content-Type;
+	bh=UeikTRmuU+H12hteofA0pyq9mrYEwgtfG4EqcbLuCD0=;
+	b=IEK/Yn+tBSOOs0uSbCm4tvO/sTWlY9uv76BsHR6v8Fq4BTj/sFpyEc8wZPYm2EDc
+	Y+duxLhEOZ3HTelCVEltk7TE9GxTG8Ums+b+dcS24+aM//w45xhA135jr6s6fwflHs2
+	tJCIB50xYlVgA3+HZ2cdJLeu4T7MVf5md2fe+HJ0=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; t=1518111592;
+	s=m1; d=mktdns.com; i=@mktdns.com;
+	h=Date:From:To:Subject:MIME-Version:Content-Type;
+	bh=UeikTRmuU+H12hteofA0pyq9mrYEwgtfG4EqcbLuCD0=;
+	b=YJzNrVj89CYhCO7zrJB5uDg3494Me63iK/3tzAwx1Agu/VC8+029pl1QW54SLKnL
+	AspjHnrPtfD764tx71oYPyUgHsOr5GVRqwH97X+fXxu8UkfNCby+saNsZHhZve6NWjs
+	t/dgopCGHyDmzzzXAa1BX0v5BE5GFi2wFp6oUteE=
+Date: Thu, 8 Feb 2018 11:39:52 -0600 (CST)
+From: Pluralsight <Lindsey@pluralsight.com>
+Reply-To: Lindsey@pluralsight.com
+To: dragonet.c17@gmail.com
+Message-ID: <349262245.321204807.1518111592136.JavaMail.root@sjmas01.marketo.org>
+Subject: New from Pluralsight: Share your skills on Stack Overflow + fresh
+ content
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_321204804_1311954918.1518111592136"
+X-PVIQ: mkto-306DUP745-000001-000000-237480
+X-Binding: bg-sjd-99
+X-MarketoID: 306-DUP-745:71908:18050:86919:0:22110:9:237480:6801855
+X-MktArchive: false
+List-Unsubscribe: <mailto:OZDGQYTFGI4E2Z32KJQTGYKINNMUW2KPIFIT2PI.237480.22110.9@unsub-sj.mktomail.com>
+X-Mailfrom: 306-DUP-745.0.237480.0.0.22110.9.6801855@smtp.pluralsight.com
+X-MSYS-API: {"options":{"open_tracking":false,"click_tracking":false}}
+X-MktMailDKIM: true
+
+------=_Part_321204804_1311954918.1518111592136
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Log in <http://track.pluralsight.com/JU1vDx0fSP0Nlut1hl000s0> =C2=A0|=C2=A0=
+=20
+Free trial <http://track.pluralsight.com/hvlSgsU01D000xhuN010Pmt> =C2=A0|=
+=C2=A0=20
+Measure skills <http://track.pluralsight.com/CUl00n0hv0uD0Nht1x1SP0s> =C2=
+=A0|=C2=A0=20
+See popular courses <http://track.pluralsight.com/p0s00D1SoP0x0iNUhv0ltu1>
+Share your skills with the world
+We=E2=80=99ve teamed up to help you share your expertise, see how your skil=
+ls compare and uncover knowledge gaps. Now you can add your Skill IQ to you=
+r Developer Story on Stack Overflow.
+Get Your Skill IQ <http://track.pluralsight.com/s0ju0vS0tUNp0D1xsl10h0P>
+Join Pluralsight to learn the latest technology skills
+Get started <http://track.pluralsight.com/K00xsDU00vuk1qhtl1SN0P0>
+MEASURE YOUR SKILLS
+C++ <http://track.pluralsight.com/qSPD0h0tvr0Nsu11U0ll00x>
+Get your Skill IQ <http://track.pluralsight.com/qSPD0h0tvr0Nsu11U0ll00x>
+Windows Server=20
+ Management <http://track.pluralsight.com/kD0sv0N10ul01UhxtS0ms0P>
+Get your Skill IQ <http://track.pluralsight.com/kD0sv0N10ul01UhxtS0ms0P>
+View all assessments <http://track.pluralsight.com/eN1tnP01000UDu0xsStvl0h>
+LEARN SOMETHING NEW
+FREE: AEM Authoring Fundamentals  <http://track.pluralsight.com/go0tsNv0x10=
+SUP0hD001uul>
+by Matthew Pizzi <http://track.pluralsight.com/go0tsNv0x10SUP0hD001uul>
+Software Development <http://track.pluralsight.com/go0tsNv0x10SUP0hD001uul>
+Microsoft Azure Stack: The Big Picture  <http://track.pluralsight.com/n0Dl0=
+pv01xNv0PU0tS01hus>
+by Jason Helmick <http://track.pluralsight.com/n0Dl0pv01xNv0PU0tS01hus>
+IT Ops <http://track.pluralsight.com/n0Dl0pv01xNv0PU0tS01hus>
+Hands-on Responsive Web Design 1: Media Queries & CSS Preprocessing <http:/=
+/track.pluralsight.com/K00xsDU00vuq1whtl1SN0P0>
+by Paul Cheney <http://track.pluralsight.com/K00xsDU00vuq1whtl1SN0P0>
+Software Development <http://track.pluralsight.com/K00xsDU00vuq1whtl1SN0P0>
+Introduction to Docker on Windows with Visual Studio 2017 <http://track.plu=
+ralsight.com/TxNDu0l0S001tUr10vsxhP0>
+by Marcel de Vries <http://track.pluralsight.com/TxNDu0l0S001tUr10vsxhP0>
+IT Ops <http://track.pluralsight.com/TxNDu0l0S001tUr10vsxhP0>
+Using Advanced Data Structures in Modern Applications <http://track.plurals=
+ight.com/MN1P0x0tDusSh00yv0lU0s1>
+by Rasmus Amossen <http://track.pluralsight.com/MN1P0x0tDusSh00yv0lU0s1>
+Software Development <http://track.pluralsight.com/MN1P0x0tDusSh00yv0lU0s1>
+Mobile Device Management =E2=80=93 The Big Picture <http://track.pluralsigh=
+t.com/SU0P1h0tv0s0NDl1S00uxzt>
+by Simon Binder <http://track.pluralsight.com/SU0P1h0tv0s0NDl1S00uxzt>
+IT Ops <http://track.pluralsight.com/SU0P1h0tv0s0NDl1S00uxzt>
+Java Fundamentals: Input/Output <http://track.pluralsight.com/eN1tuP01000UD=
+u0xsSAvl0h>
+by Jose Paumard <http://track.pluralsight.com/eN1tuP01000UDu0xsSAvl0h>
+Software Development <http://track.pluralsight.com/eN1tuP01000UDu0xsSAvl0h>
+VMware vSphere Automated Reporting with PowerCLI <http://track.pluralsight.=
+com/f00uh1v0tv00SU1xDNPBl0s>
+by Aaron Rosenmund <http://track.pluralsight.com/f00uh1v0tv00SU1xDNPBl0s>
+IT Ops <http://track.pluralsight.com/f00uh1v0tv00SU1xDNPBl0s>
+Spring Cloud Fundamentals <http://track.pluralsight.com/f00uh1v0tw00SU1xDNP=
+Cl0s>
+by Dustin Schultz <http://track.pluralsight.com/f00uh1v0tw00SU1xDNPCl0s>
+Software Development <http://track.pluralsight.com/f00uh1v0tw00SU1xDNPCl0s>
+View all courses <http://track.pluralsight.com/luUxD000vStl1P1hs0N0x0D>
+STAY IN THE KNOW
+Keep up with Angular
+Is an expiration date looming on your Angular horizon? Find out in our live=
+ webinar and prep yourself (and apps) to handle the latest versions.=20
+
+=20
+BROADEN YOUR HORIZONS =C2=BB <http://track.pluralsight.com/VtUE001huS0P100D=
+vsxlyN0>
+IoT and you
+Are you living on the IoT edge? Learn why any devices that connect to wifi =
+(coffee makers, watches, etc.) can be a threat to your company.=20
+
+=20
+INTERNET OF ALL THE THINGS =C2=BB <http://track.pluralsight.com/Au0F0sDU10N=
+hSlx00v0z1tP>
+New path: Juniper Networks
+Gain the entry-level skills and knowledge you=E2=80=99ll need to ace the Ju=
+niper Networks Certified Associate =E2=80=93 Junos (JNCIA-Junos) JN0-102 ex=
+am.=20
+
+=20
+START PATH =C2=BB <http://track.pluralsight.com/z0xt1hv000sUNAuSDlG1P00>
+2018 security conferences
+Rub shoulders with experts and get your security practices up to scratch. H=
+ere=E2=80=99s the ultimate list of InfoSec conferences to attend this year.=
+=20
+
+=20
+SEE YOU THERE? =C2=BB <http://track.pluralsight.com/I0S0BDt0vslHNh1x0u0UP01=
+>
+Ask 3: PowerShell
+In our Ask 3 series, we question top technologists on in-demand skills. Whe=
+n it comes to PowerShell, start thinking open source and cross platform.=20
+
+=20
+MAKE THE MENTAL SHIFT =C2=BB <http://track.pluralsight.com/gC0tsNv0x10SUP0h=
+D001Iul>
+
+------=_Part_321204804_1311954918.1518111592136
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns=3D"http://www.w3.org/1999/xhtml" xmlns:v=3D"urn:schemas-microso=
+ft-com:vml" xmlns:o=3D"urn:schemas-microsoft-com:office:office">
+<head>=20
+<!--[if gte mso 9]><xml>
+<o:OfficeDocumentSettings>
+<o:AllowPNG/>
+<o:PixelsPerInch>96</o:PixelsPerInch>
+</o:OfficeDocumentSettings>
+</xml><![endif]-->=20
+<title>PLURALSIGHT</title>=20
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8" />=
+=20
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge" />=20
+<meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1.=
+0 " />=20
+<meta name=3D"format-detection" content=3D"telephone=3Dno" />=20
+<style type=3D"text/css">
+body { margin: 0 !important; padding: 0 !important; -webkit-text-size-adjus=
+t: 100% !important; -ms-text-size-adjust: 100% !important; -webkit-font-smo=
+othing: antialiased !important; }
+img { border: 0 !important; outline: none !important; }
+p { Margin: 0px !important; Padding: 0px !important; }
+table { border-collapse: collapse; mso-table-lspace: 0px; mso-table-rspace:=
+ 0px; }
+td, a, span { border-collapse: collapse; mso-line-height-rule: exactly; }
+.ExternalClass * { line-height: 100%; }
+.em_defaultlink a { color: inherit !important; text-decoration: none !impor=
+tant; }
+span.MsoHyperlink { mso-style-priority: 99; color: inherit; }
+span.MsoHyperlinkFollowed { mso-style-priority: 99; color: inherit; }
+.em_black a { text-decoration: none; color: #000000; }
+.em_pink a { text-decoration: none; color: #EC008B; }
+.em_blk a { text-decoration: none; color: #414042; }
+.em_gary a { text-decoration: none; color: #868789; }
+.em_gary1 a { text-decoration: none; color: #231F20; }
+.em_gary3 a { text-decoration: none; color: #595A5C; }
+.em_grey2 a { text-decoration: none; color: #A7A9AC; }
+.em_footer a { text-decoration: none; color: #888889; }
+.em_footer1 a { text-decoration: none; color: #666568; }
+.em_wht a { text-decoration: none; color: #ffffff; }
+ @media only screen and (min-width:481px) and (max-width:599px) {
+.em_main_table { width: 100% !important; }
+.em_wrapper { width: 100% !important; }
+.em_side { width: 10px !important; }
+.em_hide { display: none !important; }
+.em_img { width: 100% !important; height: auto !important; max-width: none =
+!important; }
+.em_center { text-align: center !important; }
+.em_spc_20 { height: 20px !important; }
+.em_top { padding-top: 20px !important; }
+.em_pad { padding: 0 10px !important; }
+.em_aside { padding: 0px 10px!important; /*Update the values as required*/ =
+}
+}
+@media screen and (max-width: 480px) {
+.em_main_table { width: 100% !important; }
+.em_wrapper { width: 100% !important; }
+.em_side { width: 10px !important; }
+.em_hide { display: none !important; }
+.em_img { width: 100% !important; height: auto !important; max-width: none =
+!important; }
+.em_center { text-align: center !important; }
+.em_spc_20 { height: 20px !important; }
+.em_top { padding-top: 20px !important; }
+.em_pad { padding: 0 10px !important; }
+u + .em_body .em_full_wrap { width: 100% !important; width: 100vw !importan=
+t; }
+.em_brk { display: block !important; }
+.em_aside { padding: 0px 10px!important; /*Update the values as required*/ =
+}
+}
+</style>=20
+</head>=20
+<body class=3D"em_body" style=3D"margin:0px; padding:0px;" bgcolor=3D"#2525=
+25">=20
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" clas=
+s=3D"em_full_wrap" bgcolor=3D"#252525">=20
+<tbody>
+<tr>=20
+<td align=3D"center" valign=3D"top" class=3D"mktoContainer" id=3D"template_=
+wrapper">
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" clas=
+s=3D"em_full_wrap mktoModule" id=3D"PRE_HEADER_SECTION">=20
+<tbody>=20
+<tr>=20
+<td align=3D"center" valign=3D"top">=20
+<table align=3D"center" width=3D"600" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" class=3D"em_main_table" style=3D"width:600px;">=20
+<tbody>=20
+<tr>=20
+<td align=3D"center" valign=3D"top">=20
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td align=3D"left" valign=3D"top" class=3D"em_pad em_blk em_center" style=
+=3D" font-family:Arial, sans-serif; font-size:0px; line-height:0px; color:#=
+ffffff;">| IoT policy + add your skills to Stack Overflow | </td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" clas=
+s=3D"em_full_wrap mktoModule" id=3D"HEADER_SECTION">=20
+<tbody>=20
+<tr>=20
+<td align=3D"center" valign=3D"top" class=3D"em_aside">=20
+<table align=3D"center" width=3D"600" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" class=3D"em_main_table" style=3D"width:600px;">=20
+<tbody>=20
+<tr>=20
+<td height=3D"30" class=3D"em_spc_20">&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td align=3D"center" valign=3D"top">=20
+<div class=3D"mktoImg" id=3D"logo1" mktolockimgsize=3D"true">
+<a href=3D
+"http://track.pluralsight.com/JU1vDx0eSP0Nkut1hl000s0" target=3D"_blank" st=
+yle=3D"text-decoration: none; color:#ffffff;"
+><img src=3D"https://pluralsight-assets.s3.amazonaws.com/newsletter/2018-Ne=
+wsletters/2018-Newsletters-Courses/logo.png" width=3D"140" height=3D"31" al=
+t=3D"PLURALSIGHT" style=3D"font-family:Arial, sans-serif; font-size:20px; c=
+olor:#000000; line-height:22px; display:block; max-width:140px;" border=3D"=
+0" /></a>
+</div></td>=20
+</tr>=20
+<tr>=20
+<td height=3D"35" class=3D"em_spc_20">&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td class=3D"em_gary" align=3D"center" valign=3D"top" style=3D"font-family:=
+'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:10px; line-height=
+:14px; color:#868789;">=20
+<div id=3D"text1" class=3D"mktoText">
+<a href=3D
+"http://track.pluralsight.com/JU1vDx0fSP0Nlut1hl000s0" target=3D"_blank" st=
+yle=3D"text-decoration: none; color: #868789;"
+>Log in</a> &nbsp;|&nbsp;=20
+<a href=3D
+"http://track.pluralsight.com/hvlSgsU01D000xhuN010Pmt" target=3D"_blank" st=
+yle=3D"text-decoration: none; color: #868789;"
+>Free trial</a> &nbsp;|&nbsp;=20
+<a href=3D
+"http://track.pluralsight.com/CUl00n0hv0uD0Nht1x1SP0s" target=3D"_blank" st=
+yle=3D"text-decoration: none; color: #868789;"
+>Measure skills</a> &nbsp;|&nbsp;=20
+<a href=3D
+"http://track.pluralsight.com/p0s00D1SoP0x0iNUhv0ltu1" target=3D"_blank" st=
+yle=3D"text-decoration: none; color: #868789;"
+>See popular courses</a>
+</div></td>=20
+</tr>=20
+<tr>=20
+<td height=3D"30" style=3D"line-height:1px; font-size:1px;">&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" clas=
+s=3D"em_full_wrap mktoModule" id=3D"HEADER_BANNER_SECTION">=20
+<tbody>=20
+<tr>=20
+<td align=3D"center" valign=3D"top">=20
+<table align=3D"center" width=3D"600" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" class=3D"em_main_table" style=3D"width:600px;">=20
+<tbody>=20
+<tr>=20
+<td align=3D"center" valign=3D"top">=20
+<div class=3D"mktoImg" id=3D"img92" mktolockimgsize=3D"true">
+<a href=3D"#" target=3D"_blank" style=3D"text-decoration: none; color:#ffff=
+ff;"><img src=3D"https://pluralsight-assets.s3.amazonaws.com/newsletter/020=
+718 Newsletters/0002-18_WeeklyProspect_Feb7_af_cigarbanner.jpg" width=3D"60=
+0" height=3D"52" style=3D"display:block; border:none; font-family:Arial, sa=
+ns-serif; font-size:15px; line-height:20px; color:#000000; max-width:600px;=
+" class=3D"em_img" /></a>
+</div></td>=20
+</tr>=20
+<tr>=20
+<td height=3D"30" style=3D"height:30px;" class=3D"em_spc_20">&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" clas=
+s=3D"em_full_wrap mktoModule" id=3D"BANNER_WITH_TEXT_SECTION">=20
+<tbody>=20
+<tr>=20
+<td align=3D"center" valign=3D"top">=20
+<table align=3D"center" width=3D"600" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" class=3D"em_main_table" style=3D"width:600px;">=20
+<tbody>=20
+<tr>=20
+<td align=3D"center" valign=3D"top">=20
+<div class=3D"mktoImg" id=3D"img1" mktolockimgsize=3D"true">
+<a href=3D
+"http://track.pluralsight.com/s0ju0vS0tUNp0D1xsl10h0P" target=3D"_blank" st=
+yle=3D"text-decoration: none; color:#ffffff;"
+><img src=3D"https://pluralsight-assets.s3.amazonaws.com/newsletter/020718 =
+Newsletters/0003-18_LedeImage_Feb7_af-vF3.gif" width=3D"600" height=3D"249"=
+ alt=3D"Pluralsight IQ + Stack Overflow" style=3D"font-family:Arial, sans-s=
+erif; font-size:20px; color:#000000; line-height:22px; display:block; max-w=
+idth:600px;" class=3D"em_img" border=3D"0" /></a>
+</div></td>=20
+</tr>=20
+<tr>=20
+<td align=3D"center" valign=3D"top" bgcolor=3D"#353736">=20
+<table width=3D"600" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"center" class=3D"em_wrapper" style=3D"width:600px;">=20
+<tbody>=20
+<tr>=20
+<td width=3D"50" class=3D"em_side">&nbsp;</td>=20
+<td align=3D"center" valign=3D"top">=20
+<table width=3D"500" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"center" class=3D"em_wrapper" style=3D"width:500px;">=20
+<tbody>=20
+<tr>=20
+<td height=3D"30" class=3D"em_spc_20">&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td class=3D"em_wht" align=3D"center" valign=3D"top" style=3D"font-family:'=
+Helvetica Neue', Helvetica, Arial, sans-serif; font-size:20px; line-height:=
+22px; color:#ffffff;">=20
+<div id=3D"text2" class=3D"mktoText">
+Share your skills with the world
+</div></td>=20
+</tr>=20
+<tr>=20
+<td height=3D"9" style=3D"line-height:1px; font-size:1px;">&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td class=3D"em_pink" align=3D"center" valign=3D"top" style=3D"font-family:=
+'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:14px; line-height=
+:20px; color:#ffffff; font-weight:300;">=20
+<div id=3D"text3" class=3D"mktoText">
+We=E2=80=99ve teamed up to help you share your expertise, see how your skil=
+ls compare and uncover knowledge gaps. Now you can add your Skill IQ to you=
+r Developer Story on Stack Overflow.
+</div></td>=20
+</tr>=20
+<tr>=20
+<td height=3D"30" class=3D"em_spc_20">&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td align=3D"center" valign=3D"top">=20
+<table width=3D"151" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"center" style=3D"width:151px; border:2px solid #949598;">=20
+<tbody>=20
+<tr>=20
+<td align=3D"center" valign=3D"middle" class=3D"em_white" height=3D"37" sty=
+le=3D"font-family:'HelveticaNeue', Arial, sans-serif; font-size:13px; color=
+:#A7A9AC; ">=20
+<div id=3D"mtext55" class=3D"mktoText">
+<a href=3D
+"http://track.pluralsight.com/s0ju0vS0tUNp0D1xsl10h0P" target=3D"_blank" st=
+yle=3D"text-decoration: none; color: #ffffff; line-height: 37px; display: b=
+lock;"
+>Get Your Skill IQ</a>
+</div></td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+<td width=3D"50" class=3D"em_side">&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+<tr>=20
+<td height=3D"20" class=3D"em_spc_20">&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td height=3D"30" class=3D"em_spc_20">&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" clas=
+s=3D"em_full_wrap mktoModule" id=3D"SIGN_UP_BANNER">=20
+<tbody>=20
+<tr>=20
+<td align=3D"center" valign=3D"top">=20
+<table align=3D"center" width=3D"600" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" class=3D"em_main_table" style=3D"width:600px;">=20
+<tbody>=20
+<tr>=20
+<td align=3D"center" valign=3D"top" height=3D"76">=20
+<table width=3D"600" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"center" style=3D"width:600px;" class=3D"em_wrapper" bgcolor=3D"#000000"=
+>=20
+<tbody>=20
+<tr>=20
+<td width=3D"18" style=3D"width:18px;">&nbsp;</td>=20
+<td align=3D"center" valign=3D"top">=20
+<table width=3D"564" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"center" style=3D"width:564px;" class=3D"em_wrapper">=20
+<tbody>=20
+<tr>=20
+<td height=3D"15" style=3D"height:15px; font-size:0px; line-height:0px;">&n=
+bsp;</td>=20
+</tr>=20
+<tr>=20
+<td align=3D"center" valign=3D"top" class=3D"em_wht" style=3D"font-family:'=
+HelveticaNeue', Arial, sans-serif; font-size:20px; color:#FFFFFF; line-heig=
+ht:25px;">=20
+<div id=3D"mtext78" class=3D"mktoText">
+Join Pluralsight to learn the latest technology skills
+</div></td>=20
+</tr>=20
+<tr>=20
+<td height=3D"8" style=3D"height:8px; font-size:0px; line-height:0px;">&nbs=
+p;</td>=20
+</tr>=20
+<tr>=20
+<td align=3D"center" valign=3D"top">=20
+<table width=3D"151" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"center" background=3D"https://pluralsight-assets.s3.amazonaws.com/newsl=
+etter/020718%20Newsletters/Gradient_Button.jpg" style=3D"width:151px; ">=20
+<tbody>=20
+<tr>=20
+<td align=3D"center" valign=3D"middle" class=3D"em_white" height=3D"37" sty=
+le=3D"font-family:'HelveticaNeue', Arial, sans-serif; font-size:13px; color=
+:#A7A9AC;">=20
+<div id=3D"mtext56" class=3D"mktoText">
+<a href=3D
+"http://track.pluralsight.com/K00xsDU00vuk1qhtl1SN0P0" target=3D"_blank" st=
+yle=3D"text-decoration: none; color: #ffffff; line-height: 37px; display: b=
+lock;"
+>Get started</a>
+</div></td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+<tr>=20
+<td height=3D"15" style=3D"height:15px; font-size:0px; line-height:0px;">&n=
+bsp;</td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+<td width=3D"18" style=3D"width:18px;">&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+<tr>=20
+<td height=3D"30" style=3D"height:30px; font-size:0px; line-height:0px">&nb=
+sp;</td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" clas=
+s=3D"em_full_wrap mktoModule" id=3D"TWO_COLUMN_SECTION">=20
+<tbody>=20
+<tr>=20
+<td align=3D"center" valign=3D"top">=20
+<table align=3D"center" width=3D"600" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" class=3D"em_main_table" style=3D"width:600px;">=20
+<tbody>=20
+<tr>=20
+<td align=3D"center" valign=3D"top" style=3D"font-family:'HelveticaNeue', A=
+rial, sans-serif; font-size:14px; color:#FFFFFF; line-height:20px; font-wei=
+ght:bold;">=20
+<div id=3D"mtext9" class=3D"mktoText">
+MEASURE YOUR SKILLS
+</div></td>=20
+</tr>=20
+<tr>=20
+<td class=3D"em_spc_20" height=3D"18" style=3D"height:18px; font-size:0px; =
+line-height:0px;">&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td align=3D"center" valign=3D"top">=20
+<table width=3D"600" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"center" style=3D"width:600px;" class=3D"em_wrapper">=20
+<tbody>=20
+<tr>=20
+<td align=3D"center" valign=3D"top">=20
+<table width=3D"290" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"left" style=3D"width:290px;" class=3D"em_wrapper" bgcolor=3D"#353736">=
+=20
+<tbody>=20
+<tr>=20
+<td align=3D"center" valign=3D"top" height=3D"98" style=3D"height:98px;">=
+=20
+<table width=3D"290" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"center" style=3D"width:290px;" class=3D"em_wrapper">=20
+<tbody>=20
+<tr>=20
+<td width=3D"24" style=3D"width:24px;">&nbsp;</td>=20
+<td align=3D"center" valign=3D"middle">=20
+<table width=3D"242" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"center" style=3D"width:242px;" class=3D"em_wrapper">=20
+<tbody>=20
+<tr>=20
+<td height=3D"24" style=3D"height:24px; font-size:0px; line-height:0px;">&n=
+bsp;</td>=20
+</tr>=20
+<tr>=20
+<td align=3D"center" valign=3D"middle">=20
+<table width=3D"242" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"center" style=3D"width:242px;" class=3D"em_wrapper">=20
+<tbody>=20
+<tr>=20
+<td align=3D"left" valign=3D"middle" width=3D"49">=20
+<div class=3D"mktoImg" id=3D"ximg12" mktolockimgsize=3D"true">
+<a href=3D
+"http://track.pluralsight.com/qSPD0h0tvr0Nsu11U0ll00x" target=3D"_blank"
+><img src=3D"https://pluralsight-assets.s3.amazonaws.com/newsletter/020718 =
+Newsletters/C%2B%2B.png" width=3D"49" height=3D"50" style=3D"display:block;=
+ max-width:49px; border:none;" alt=3D"C++" /></a>
+</div></td>=20
+<td width=3D"23" style=3D"width:23px;">&nbsp;</td>=20
+<td align=3D"left" valign=3D"top">=20
+<table width=3D"170" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"left" style=3D"width:170px;">=20
+<tbody>=20
+<tr>=20
+<td align=3D"left" valign=3D"top" class=3D"em_wht" style=3D"font-family:'He=
+lveticaNeue', Arial, sans-serif; font-size:16px; color:#ffffff; line-height=
+:25px; text-decoration: none;">=20
+<div id=3D"mtext10" class=3D"mktoText">
+<a href=3D
+"http://track.pluralsight.com/qSPD0h0tvr0Nsu11U0ll00x"
+>C++</a>
+</div></td>=20
+</tr>=20
+<tr>=20
+<td height=3D"5" style=3D"height:5px; font-size:0px; line-height:0px;">&nbs=
+p;</td>=20
+</tr>=20
+<tr>=20
+<td align=3D"left" valign=3D"top">=20
+<table width=3D"170" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"left" style=3D"width:170px;">=20
+<tbody>=20
+<tr>=20
+<td align=3D"left" valign=3D"top" style=3D"font-size:0px; line-height:0px;"=
+ width=3D"16">=20
+<div class=3D"mktoImg" id=3D"mimg14" mktolockimgsize=3D"true">
+<a href=3D
+"http://track.pluralsight.com/qSPD0h0tvr0Nsu11U0ll00x" target=3D"_blank"
+><img src=3D"https://pluralsight-assets.s3.amazonaws.com/newsletter/2018-Ne=
+wsletters/2018-Newsletters-Courses/img7.jpg" width=3D"16" height=3D"15" sty=
+le=3D"display:block; border:none; max-width:16px;" /></a>
+</div></td>=20
+<td width=3D"5" style=3D"width:5px;"></td>=20
+<td align=3D"left" valign=3D"top" class=3D"em_wht" style=3D"font-family:'He=
+lveticaNeue', Arial, sans-serif; font-size:11px; color:#ffffff; line-height=
+:15px; text-decoration: none;">=20
+<div id=3D"mtext11" class=3D"mktoText">
+<a href=3D
+"http://track.pluralsight.com/qSPD0h0tvr0Nsu11U0ll00x"
+> Get your Skill IQ</a>
+</div></td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+<tr>=20
+<td height=3D"14" style=3D"height:14px; font-size:0px; line-height:0px;">&n=
+bsp;</td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+<td width=3D"24" style=3D"width:24px;">&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+</tbody>=20
+</table>=20
+<table width=3D"290" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"right" style=3D"width:290px;" class=3D"em_wrapper">=20
+<tbody>=20
+<tr>=20
+<td align=3D"center" valign=3D"top" class=3D"em_top">=20
+<table width=3D"290" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"center" style=3D"width:290px;" class=3D"em_wrapper" bgcolor=3D"#353736"=
+>=20
+<tbody>=20
+<tr>=20
+<td width=3D"24" style=3D"width:24px;" height=3D"98">&nbsp;</td>=20
+<td align=3D"center" valign=3D"middle">=20
+<table width=3D"242" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"center" style=3D"width:242px;" class=3D"em_wrapper">=20
+<tbody>=20
+<tr>=20
+<td height=3D"14" style=3D"height:14px; font-size:0px; line-height:0px;">&n=
+bsp;</td>=20
+</tr>=20
+<tr>=20
+<td align=3D"center" valign=3D"middle">=20
+<table width=3D"242" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"center" style=3D"width:242px;" class=3D"em_wrapper">=20
+<tbody>=20
+<tr>=20
+<td align=3D"left" valign=3D"middle" width=3D"49">=20
+<div class=3D"mktoImg" id=3D"mimg13" mktolockimgsize=3D"true">
+<a href=3D
+"http://track.pluralsight.com/kD0sv0N10ul01UhxtS0ms0P" target=3D"_blank"
+><img src=3D"https://pluralsight-assets.s3.amazonaws.com/newsletter/2018-Ne=
+wsletters/2018-Newsletters-Courses/img9.jpg" width=3D"37" height=3D"38" sty=
+le=3D"display:block; border:none; max-width:37px;" alt=3D"Windows" /></a>
+</div></td>=20
+<td width=3D"23" style=3D"width:23px;">&nbsp;</td>=20
+<td align=3D"left" valign=3D"top">=20
+<table width=3D"170" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"left" style=3D"width:170px;">=20
+<tbody>=20
+<tr>=20
+<td align=3D"left" valign=3D"top" class=3D"em_wht" style=3D"font-family:'He=
+lveticaNeue', Arial, sans-serif; font-size:16px; color:#ffffff; line-height=
+:25px; text-decoration: none;">=20
+<div id=3D"mtext12" class=3D"mktoText">
+<a href=3D
+"http://track.pluralsight.com/kD0sv0N10ul01UhxtS0ms0P"
+> Windows Server <br /> Management</a>
+</div></td>=20
+</tr>=20
+<tr>=20
+<td height=3D"5" style=3D"height:5px; font-size:0px; line-height:0px;">&nbs=
+p;</td>=20
+</tr>=20
+<tr>=20
+<td align=3D"left" valign=3D"top">=20
+<table width=3D"170" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"left" style=3D"width:170px;">=20
+<tbody>=20
+<tr>=20
+<td align=3D"left" valign=3D"top" style=3D"font-size:0px; line-height:0px;"=
+ width=3D"16">=20
+<div class=3D"mktoImg" id=3D"mimg17" mktolockimgsize=3D"true">
+<a href=3D
+"http://track.pluralsight.com/kD0sv0N10ul01UhxtS0ms0P" target=3D"_blank"
+><img src=3D"https://pluralsight-assets.s3.amazonaws.com/newsletter/2018-Ne=
+wsletters/2018-Newsletters-Courses/img7.jpg" width=3D"16" height=3D"15" sty=
+le=3D"display:block; border:none; max-width:16px;" /></a>
+</div></td>=20
+<td width=3D"5" style=3D"width:5px;"></td>=20
+<td align=3D"left" valign=3D"top" class=3D"em_wht" style=3D"font-family:'He=
+lveticaNeue', Arial, sans-serif; font-size:11px; color:#ffffff; line-height=
+:15px; text-decoration: none;">=20
+<div id=3D"mtext13" class=3D"mktoText">
+<a href=3D
+"http://track.pluralsight.com/kD0sv0N10ul01UhxtS0ms0P"
+> Get your Skill IQ</a>
+</div></td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+<tr>=20
+<td height=3D"14" style=3D"height:14px; font-size:0px; line-height:0px;">&n=
+bsp;</td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+<td width=3D"24" style=3D"width:24px;">&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+<tr>=20
+<td class=3D"em_spc_20" height=3D"30" style=3D"height:30px; font-size:0px; =
+line-height:0px;">&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" clas=
+s=3D"em_full_wrap mktoModule" id=3D"BUTTON40e3bc4e-ac2e-421d-819a-57801d37b=
+068">=20
+<tbody>=20
+<tr>=20
+<td align=3D"center" valign=3D"top">=20
+<table align=3D"center" width=3D"600" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" class=3D"em_main_table" style=3D"width:600px;">=20
+<tbody>=20
+<tr>=20
+<td align=3D"center" valign=3D"top">=20
+<table width=3D"151" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"center" style=3D"width:151px; border:solid 2px #999a9c;">=20
+<tbody>=20
+<tr>=20
+<td align=3D"center" valign=3D"middle" class=3D"em_wht" height=3D"38" style=
+=3D"font-family:'HelveticaNeue', Arial, sans-serif; font-size:13px; color:#=
+FFFFFF; font-weight:500;">=20
+<div id=3D"mtext2840e3bc4e-ac2e-421d-819a-57801d37b068" class=3D"mktoText">
+<a href=3D
+"http://track.pluralsight.com/eN1tnP01000UDu0xsStvl0h" target=3D"_blank" st=
+yle=3D"text-decoration: none; color: #ffffff; display: block; line-height: =
+38px;"
+>View all assessments</a>
+</div></td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+<tr>=20
+<td height=3D"35" style=3D"height:35px; font-size:0px; line-height:0px" cla=
+ss=3D"em_spc_20">&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" clas=
+s=3D"em_full_wrap mktoModule" id=3D"LEARN_SOMETHING_NEW">=20
+<tbody>=20
+<tr>=20
+<td align=3D"center" valign=3D"top">=20
+<table align=3D"center" width=3D"600" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" class=3D"em_main_table" style=3D"width:600px;">=20
+<tbody>=20
+<tr>=20
+<td align=3D"center" valign=3D"top" class=3D"em_wht" style=3D"font-family:'=
+HelveticaNeue', Arial, sans-serif; font-size:14px; color:#FFFFFF; line-heig=
+ht:20px; font-weight:bold;">=20
+<div id=3D"mtext14" class=3D"mktoText">
+LEARN SOMETHING NEW
+</div></td>=20
+</tr>=20
+<tr>=20
+<td height=3D"14" style=3D"height:14px; font-size:0px; line-height:0px;">&n=
+bsp;</td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" clas=
+s=3D"em_full_wrap mktoModule" id=3D"FREE_COURSE">=20
+<tbody>=20
+<tr>=20
+<td align=3D"center" valign=3D"top">=20
+<table align=3D"center" width=3D"600" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" class=3D"em_main_table" style=3D"width:600px;">=20
+<tbody>=20
+<tr>=20
+<td align=3D"center" valign=3D"top" height=3D"76" background=3D"https://plu=
+ralsight-assets.s3.amazonaws.com/newsletter/2018-Newsletters/2018-Newslette=
+rs-Courses/bg4.jpg" style=3D"background:url(https://pluralsight-assets.s3.a=
+mazonaws.com/newsletter/2018-Newsletters/2018-Newsletters-Courses/bg4.jpg) =
+center top no-repeat; background-size:100% 100%;">=20
+<!--[if gte mso 9]>
+  <v:rect xmlns:v=3D"urn:schemas-microsoft-com:vml" fill=3D"true" stroke=3D=
+"false" style=3D"width:600px;height:76px;">
+    <v:fill type=3D"tile" src=3D"http://edmimages.net/edm/2018/jan/i1515788=
+322966/bg4.jpg" color=3D"#ffffff" />
+    <v:textbox inset=3D"0,0,0,0">
+  <![endif]-->=20
+<table width=3D"600" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"center" style=3D"width:600px;" class=3D"em_wrapper">=20
+<tbody>=20
+<tr>=20
+<td width=3D"18" style=3D"width:18px;">&nbsp;</td>=20
+<td align=3D"center" valign=3D"top">=20
+<table width=3D"564" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"center" style=3D"width:564px;" class=3D"em_wrapper">=20
+<tbody>=20
+<tr>=20
+<td height=3D"15" style=3D"height:15px; font-size:0px; line-height:0px;">&n=
+bsp;</td>=20
+</tr>=20
+<tr>=20
+<td align=3D"left" valign=3D"top" class=3D"em_wht" style=3D"font-family:'He=
+lveticaNeue', Arial, sans-serif; font-size:20px; color:#FFFFFF; line-height=
+:25px; text-decoration: none; display:block;">=20
+<div id=3D"mtext15" class=3D"mktoText">
+<a href=3D
+"http://track.pluralsight.com/go0tsNv0x10SUP0hD001uul"
+> FREE: AEM Authoring Fundamentals </a>
+</div></td>=20
+</tr>=20
+<tr>=20
+<td height=3D"8" style=3D"height:8px; font-size:0px; line-height:0px;">&nbs=
+p;</td>=20
+</tr>=20
+<tr>=20
+<td align=3D"center" valign=3D"top">=20
+<table width=3D"564" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=
+=3D"width:564px;" class=3D"em_wrapper">=20
+<tbody>=20
+<tr>=20
+<td align=3D"left" valign=3D"middle" class=3D"em_wht" width=3D"120" style=
+=3D"font-family:'HelveticaNeue', Arial, sans-serif; font-size:12px; color:#=
+FFFFFF; line-height:15px; text-decoration: none;">=20
+<div id=3D"mtext61" class=3D"mktoText">
+<a href=3D
+"http://track.pluralsight.com/go0tsNv0x10SUP0hD001uul"
+> by Matthew Pizzi</a>
+</div></td>=20
+<td width=3D"33" style=3D"width:33px;" class=3D"em_side">&nbsp;</td>=20
+<td align=3D"left" valign=3D"middle">=20
+<table width=3D"141" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"left" style=3D"width:141px; border:solid 2px #f7afab;">=20
+<tbody>=20
+<tr>=20
+<td align=3D"center" valign=3D"middle" class=3D"em_wht" height=3D"22" style=
+=3D"font-family:'HelveticaNeue', Arial, sans-serif; font-size:12px; color:#=
+FFFFFF; font-weight:bold;">=20
+<div id=3D"mtext17" class=3D"mktoText">
+<a href=3D
+"http://track.pluralsight.com/go0tsNv0x10SUP0hD001uul" target=3D"_blank" st=
+yle=3D"text-decoration: none; color: #ffffff; display: block; line-height: =
+22px;"
+>Software Development</a>
+</div></td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+<tr>=20
+<td height=3D"15" style=3D"height:15px; font-size:0px; line-height:0px;">&n=
+bsp;</td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+<td width=3D"18" style=3D"width:18px;">&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table>=20
+<!--[if gte mso 9]>
+    </v:textbox>
+  </v:rect>
+  <![endif]--></td>=20
+</tr>=20
+<tr>=20
+<td height=3D"14" style=3D"height:14px; font-size:0px; line-height:0px">&nb=
+sp;</td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" clas=
+s=3D"em_full_wrap mktoModule" id=3D"DATA_PROFESSIONAL">=20
+<tbody>=20
+<tr>=20
+<td align=3D"center" valign=3D"top">=20
+<table align=3D"center" width=3D"600" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" class=3D"em_main_table" style=3D"width:600px;">=20
+<tbody>=20
+<tr>=20
+<td align=3D"center" valign=3D"top" height=3D"76">=20
+<table width=3D"600" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"center" style=3D"width:600px;" class=3D"em_wrapper" bgcolor=3D"#353736"=
+>=20
+<tbody>=20
+<tr>=20
+<td width=3D"18" style=3D"width:18px;">&nbsp;</td>=20
+<td align=3D"center" valign=3D"top">=20
+<table width=3D"564" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"center" style=3D"width:564px;" class=3D"em_wrapper">=20
+<tbody>=20
+<tr>=20
+<td height=3D"15" style=3D"height:15px; font-size:0px; line-height:0px;">&n=
+bsp;</td>=20
+</tr>=20
+<tr>=20
+<td align=3D"left" valign=3D"top" class=3D"em_wht" style=3D"font-family:'He=
+lveticaNeue', Arial, sans-serif; font-size:20px; color:#FFFFFF; line-height=
+:25px;text-decoration: none; display:block;">=20
+<div id=3D"mtext22" class=3D"mktoText">
+<a href=3D
+"http://track.pluralsight.com/n0Dl0pv01xNv0PU0tS01hus"
+> Microsoft Azure Stack: The Big Picture </a>
+</div></td>=20
+</tr>=20
+<tr>=20
+<td height=3D"8" style=3D"height:8px; font-size:0px; line-height:0px;">&nbs=
+p;</td>=20
+</tr>=20
+<tr>=20
+<td align=3D"center" valign=3D"top">=20
+<table width=3D"564" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=
+=3D"width:564px;" class=3D"em_wrapper">=20
+<tbody>=20
+<tr>=20
+<td align=3D"left" valign=3D"middle" class=3D"em_grey2" width=3D"120" style=
+=3D"font-family:'HelveticaNeue', Arial, sans-serif; font-size:12px; color:#=
+A7A9AC; line-height:15px; text-decoration: none;">=20
+<div id=3D"mtext23" class=3D"mktoText">
+<a href=3D
+"http://track.pluralsight.com/n0Dl0pv01xNv0PU0tS01hus"
+> by Jason Helmick</a>
+</div></td>=20
+<td width=3D"33" style=3D"width:33px;" class=3D"em_side">&nbsp;</td>=20
+<td align=3D"left" valign=3D"middle" style=3D"font-size:0px; line-height:0p=
+x;" width=3D"12">=20
+<div class=3D"mktoImg" id=3D"ximg10" mktolockimgsize=3D"true">
+<a href=3D
+"http://track.pluralsight.com/n0Dl0pv01xNv0PU0tS01hus" target=3D"_blank"
+><img src=3D"https://pluralsight-assets.s3.amazonaws.com/newsletter/020718%=
+20Newsletters/0002-18_WeeklyProspect_Feb7_af_YELLOW.jpg" width=3D"8" height=
+=3D"8" style=3D"display:block; border:none; max-width:12px;" /></a>
+</div></td>=20
+<td align=3D"left" valign=3D"middle" class=3D"em_grey2" style=3D"font-famil=
+y:'HelveticaNeue', Arial, sans-serif; font-size:12px; color:#A7A9AC; line-h=
+eight:15px; font-weight:bold;text-decoration: none;">=20
+<div id=3D"mtext24" class=3D"mktoText">
+<a href=3D
+"http://track.pluralsight.com/n0Dl0pv01xNv0PU0tS01hus"
+> &nbsp;&nbsp;IT Ops</a>
+</div></td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+<tr>=20
+<td height=3D"15" style=3D"height:15px; font-size:0px; line-height:0px;">&n=
+bsp;</td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+<td width=3D"18" style=3D"width:18px;">&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+<tr>=20
+<td height=3D"14" style=3D"height:14px; font-size:0px; line-height:0px">&nb=
+sp;</td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" clas=
+s=3D"em_full_wrap mktoModule" id=3D"SOFTWARE_DEVELOPEMENTaaa1fbe9-f591-49cc=
+-a3ff-8e5297fa26ee">=20
+<tbody>=20
+<tr>=20
+<td align=3D"center" valign=3D"top">=20
+<table align=3D"center" width=3D"600" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" class=3D"em_main_table" style=3D"width:600px;">=20
+<tbody>=20
+<tr>=20
+<td align=3D"center" valign=3D"top" height=3D"76">=20
+<table width=3D"600" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"center" style=3D"width:600px;" class=3D"em_wrapper" bgcolor=3D"#353736"=
+>=20
+<tbody>=20
+<tr>=20
+<td width=3D"18" style=3D"width:18px;">&nbsp;</td>=20
+<td align=3D"center" valign=3D"top">=20
+<table width=3D"564" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"center" style=3D"width:564px;" class=3D"em_wrapper">=20
+<tbody>=20
+<tr>=20
+<td height=3D"15" style=3D"height:15px; font-size:0px; line-height:0px;">&n=
+bsp;</td>=20
+</tr>=20
+<tr>=20
+<td align=3D"left" valign=3D"top" class=3D"em_wht" style=3D"font-family:'He=
+lveticaNeue', Arial, sans-serif; font-size:20px; color:#FFFFFF; line-height=
+:25px; text-decoration: none; display:block;">=20
+<div id=3D"mtext18aaa1fbe9-f591-49cc-a3ff-8e5297fa26ee" class=3D"mktoText">
+<a href=3D
+"http://track.pluralsight.com/K00xsDU00vuq1whtl1SN0P0" target=3D"_blank"
+> Hands-on Responsive Web Design 1: Media Queries &amp; CSS Preprocessing</=
+a>
+</div></td>=20
+</tr>=20
+<tr>=20
+<td height=3D"8" style=3D"height:8px; font-size:0px; line-height:0px;">&nbs=
+p;</td>=20
+</tr>=20
+<tr>=20
+<td align=3D"center" valign=3D"top">=20
+<table width=3D"564" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=
+=3D"width:564px;" class=3D"em_wrapper">=20
+<tbody>=20
+<tr>=20
+<td align=3D"left" valign=3D"middle" class=3D"em_grey2" width=3D"120" style=
+=3D"font-family:'HelveticaNeue', Arial, sans-serif; font-size:12px; color:#=
+A7A9AC; line-height:15px;text-decoration: none;">=20
+<div id=3D"mtext19aaa1fbe9-f591-49cc-a3ff-8e5297fa26ee" class=3D"mktoText">
+<a href=3D
+"http://track.pluralsight.com/K00xsDU00vuq1whtl1SN0P0" target=3D"_blank"
+> by Paul Cheney</a>
+</div></td>=20
+<td width=3D"33" style=3D"width:33px;" class=3D"em_side">&nbsp;</td>=20
+<td align=3D"left" valign=3D"middle" style=3D"font-size:0px; line-height:0p=
+x;" width=3D"12">=20
+<div class=3D"mktoImg" id=3D"mimg19aaa1fbe9-f591-49cc-a3ff-8e5297fa26ee" mk=
+tolockimgsize=3D"true">
+<a href=3D
+"http://track.pluralsight.com/K00xsDU00vuq1whtl1SN0P0" target=3D"_blank"
+><img src=3D"https://pluralsight-assets.s3.amazonaws.com/newsletter/020718%=
+20Newsletters/0002-18_WeeklyProspect_Feb7_af_BLUE.jpg" width=3D"8" height=
+=3D"8" style=3D"display:block; border:none; max-width:12px;" /></a>
+</div></td>=20
+<td align=3D"left" valign=3D"middle" class=3D"em_grey2" style=3D"font-famil=
+y:'HelveticaNeue', Arial, sans-serif; font-size:12px; color:#A7A9AC; line-h=
+eight:15px; font-weight:bold;text-decoration: none;">=20
+<div id=3D"mtext21aaa1fbe9-f591-49cc-a3ff-8e5297fa26ee" class=3D"mktoText">
+<a href=3D
+"http://track.pluralsight.com/K00xsDU00vuq1whtl1SN0P0" target=3D"_blank"
+> &nbsp;&nbsp;Software Development</a>
+</div></td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+<tr>=20
+<td height=3D"15" style=3D"height:15px; font-size:0px; line-height:0px;">&n=
+bsp;</td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+<td width=3D"18" style=3D"width:18px;">&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+<tr>=20
+<td height=3D"14" style=3D"height:14px; font-size:0px; line-height:0px">&nb=
+sp;</td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" clas=
+s=3D"em_full_wrap mktoModule" id=3D"DATA_PROFESSIONAL8e6c32e4-988c-4310-8de=
+6-22e537a21e2a">=20
+<tbody>=20
+<tr>=20
+<td align=3D"center" valign=3D"top">=20
+<table align=3D"center" width=3D"600" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" class=3D"em_main_table" style=3D"width:600px;">=20
+<tbody>=20
+<tr>=20
+<td align=3D"center" valign=3D"top" height=3D"76">=20
+<table width=3D"600" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"center" style=3D"width:600px;" class=3D"em_wrapper" bgcolor=3D"#353736"=
+>=20
+<tbody>=20
+<tr>=20
+<td width=3D"18" style=3D"width:18px;">&nbsp;</td>=20
+<td align=3D"center" valign=3D"top">=20
+<table width=3D"564" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"center" style=3D"width:564px;" class=3D"em_wrapper">=20
+<tbody>=20
+<tr>=20
+<td height=3D"15" style=3D"height:15px; font-size:0px; line-height:0px;">&n=
+bsp;</td>=20
+</tr>=20
+<tr>=20
+<td align=3D"left" valign=3D"top" class=3D"em_wht" style=3D"font-family:'He=
+lveticaNeue', Arial, sans-serif; font-size:20px; color:#FFFFFF; line-height=
+:25px;text-decoration: none; display:block;">=20
+<div id=3D"mtext228e6c32e4-988c-4310-8de6-22e537a21e2a" class=3D"mktoText">
+<a href=3D
+"http://track.pluralsight.com/TxNDu0l0S001tUr10vsxhP0"
+> Introduction to Docker on Windows with Visual Studio 2017</a>
+</div></td>=20
+</tr>=20
+<tr>=20
+<td height=3D"8" style=3D"height:8px; font-size:0px; line-height:0px;">&nbs=
+p;</td>=20
+</tr>=20
+<tr>=20
+<td align=3D"center" valign=3D"top">=20
+<table width=3D"564" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=
+=3D"width:564px;" class=3D"em_wrapper">=20
+<tbody>=20
+<tr>=20
+<td align=3D"left" valign=3D"middle" class=3D"em_grey2" width=3D"120" style=
+=3D"font-family:'HelveticaNeue', Arial, sans-serif; font-size:12px; color:#=
+A7A9AC; line-height:15px;text-decoration: none;">=20
+<div id=3D"mtext238e6c32e4-988c-4310-8de6-22e537a21e2a" class=3D"mktoText">
+<a href=3D
+"http://track.pluralsight.com/TxNDu0l0S001tUr10vsxhP0"
+> by Marcel de Vries</a>
+</div></td>=20
+<td width=3D"33" style=3D"width:33px;" class=3D"em_side">&nbsp;</td>=20
+<td align=3D"left" valign=3D"middle" style=3D"font-size:0px; line-height:0p=
+x;" width=3D"12">=20
+<div class=3D"mktoImg" id=3D"ximg108e6c32e4-988c-4310-8de6-22e537a21e2a" mk=
+tolockimgsize=3D"true">
+<a href=3D
+"http://track.pluralsight.com/TxNDu0l0S001tUr10vsxhP0" target=3D"_blank"
+><img src=3D"https://pluralsight-assets.s3.amazonaws.com/newsletter/020718%=
+20Newsletters/0002-18_WeeklyProspect_Feb7_af_YELLOW.jpg" width=3D"8" height=
+=3D"8" style=3D"display:block; border:none; max-width:12px;" /></a>
+</div></td>=20
+<td align=3D"left" valign=3D"middle" class=3D"em_grey2" style=3D"font-famil=
+y:'HelveticaNeue', Arial, sans-serif; font-size:12px; color:#A7A9AC; line-h=
+eight:15px; font-weight:bold;text-decoration: none;">=20
+<div id=3D"mtext248e6c32e4-988c-4310-8de6-22e537a21e2a" class=3D"mktoText">
+<a href=3D
+"http://track.pluralsight.com/TxNDu0l0S001tUr10vsxhP0"
+> &nbsp;&nbsp;IT Ops</a>
+</div></td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+<tr>=20
+<td height=3D"15" style=3D"height:15px; font-size:0px; line-height:0px;">&n=
+bsp;</td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+<td width=3D"18" style=3D"width:18px;">&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+<tr>=20
+<td height=3D"14" style=3D"height:14px; font-size:0px; line-height:0px">&nb=
+sp;</td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" clas=
+s=3D"em_full_wrap mktoModule" id=3D"SOFTWARE_DEVELOPEMENT8190e541-742b-42b3=
+-ad33-3741323c6165">=20
+<tbody>=20
+<tr>=20
+<td align=3D"center" valign=3D"top">=20
+<table align=3D"center" width=3D"600" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" class=3D"em_main_table" style=3D"width:600px;">=20
+<tbody>=20
+<tr>=20
+<td align=3D"center" valign=3D"top" height=3D"76">=20
+<table width=3D"600" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"center" style=3D"width:600px;" class=3D"em_wrapper" bgcolor=3D"#353736"=
+>=20
+<tbody>=20
+<tr>=20
+<td width=3D"18" style=3D"width:18px;">&nbsp;</td>=20
+<td align=3D"center" valign=3D"top">=20
+<table width=3D"564" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"center" style=3D"width:564px;" class=3D"em_wrapper">=20
+<tbody>=20
+<tr>=20
+<td height=3D"15" style=3D"height:15px; font-size:0px; line-height:0px;">&n=
+bsp;</td>=20
+</tr>=20
+<tr>=20
+<td align=3D"left" valign=3D"top" class=3D"em_wht" style=3D"font-family:'He=
+lveticaNeue', Arial, sans-serif; font-size:20px; color:#FFFFFF; line-height=
+:25px;text-decoration: none; display:block;">=20
+<div id=3D"mtext188190e541-742b-42b3-ad33-3741323c6165" class=3D"mktoText">
+<a href=3D
+"http://track.pluralsight.com/MN1P0x0tDusSh00yv0lU0s1"
+> Using Advanced Data Structures in Modern Applications</a>
+</div></td>=20
+</tr>=20
+<tr>=20
+<td height=3D"8" style=3D"height:8px; font-size:0px; line-height:0px;">&nbs=
+p;</td>=20
+</tr>=20
+<tr>=20
+<td align=3D"center" valign=3D"top">=20
+<table width=3D"564" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=
+=3D"width:564px;" class=3D"em_wrapper">=20
+<tbody>=20
+<tr>=20
+<td align=3D"left" valign=3D"middle" class=3D"em_grey2" width=3D"120" style=
+=3D"font-family:'HelveticaNeue', Arial, sans-serif; font-size:12px; color:#=
+A7A9AC; line-height:15px;text-decoration: none;">=20
+<div id=3D"mtext198190e541-742b-42b3-ad33-3741323c6165" class=3D"mktoText">
+<a href=3D
+"http://track.pluralsight.com/MN1P0x0tDusSh00yv0lU0s1"
+> by Rasmus Amossen</a>
+</div></td>=20
+<td width=3D"33" style=3D"width:33px;" class=3D"em_side">&nbsp;</td>=20
+<td align=3D"left" valign=3D"middle" style=3D"font-size:0px; line-height:0p=
+x;" width=3D"12">=20
+<div class=3D"mktoImg" id=3D"mimg198190e541-742b-42b3-ad33-3741323c6165" mk=
+tolockimgsize=3D"true">
+<a href=3D
+"http://track.pluralsight.com/MN1P0x0tDusSh00yv0lU0s1" target=3D"_blank"
+><img src=3D"https://pluralsight-assets.s3.amazonaws.com/newsletter/2018-Ne=
+wsletters/2018-Newsletters-Courses/img10.jpg" width=3D"12" height=3D"12" st=
+yle=3D"display:block; border:none; max-width:12px;" /></a>
+</div></td>=20
+<td align=3D"left" valign=3D"middle" class=3D"em_grey2" style=3D"font-famil=
+y:'HelveticaNeue', Arial, sans-serif; font-size:12px; color:#A7A9AC; line-h=
+eight:15px; font-weight:bold;text-decoration: none;">=20
+<div id=3D"mtext218190e541-742b-42b3-ad33-3741323c6165" class=3D"mktoText">
+<a href=3D
+"http://track.pluralsight.com/MN1P0x0tDusSh00yv0lU0s1"
+> &nbsp;&nbsp;Software Development</a>
+</div></td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+<tr>=20
+<td height=3D"15" style=3D"height:15px; font-size:0px; line-height:0px;">&n=
+bsp;</td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+<td width=3D"18" style=3D"width:18px;">&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+<tr>=20
+<td height=3D"14" style=3D"height:14px; font-size:0px; line-height:0px">&nb=
+sp;</td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" clas=
+s=3D"em_full_wrap mktoModule" id=3D"DATA_PROFESSIONAL812154c0-4877-41c7-be7=
+1-e7af4a00bab5">=20
+<tbody>=20
+<tr>=20
+<td align=3D"center" valign=3D"top">=20
+<table align=3D"center" width=3D"600" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" class=3D"em_main_table" style=3D"width:600px;">=20
+<tbody>=20
+<tr>=20
+<td align=3D"center" valign=3D"top" height=3D"76">=20
+<table width=3D"600" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"center" style=3D"width:600px;" class=3D"em_wrapper" bgcolor=3D"#353736"=
+>=20
+<tbody>=20
+<tr>=20
+<td width=3D"18" style=3D"width:18px;">&nbsp;</td>=20
+<td align=3D"center" valign=3D"top">=20
+<table width=3D"564" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"center" style=3D"width:564px;" class=3D"em_wrapper">=20
+<tbody>=20
+<tr>=20
+<td height=3D"15" style=3D"height:15px; font-size:0px; line-height:0px;">&n=
+bsp;</td>=20
+</tr>=20
+<tr>=20
+<td align=3D"left" valign=3D"top" class=3D"em_wht" style=3D"font-family:'He=
+lveticaNeue', Arial, sans-serif; font-size:20px; color:#FFFFFF; line-height=
+:25px;text-decoration: none; display:block;">=20
+<div id=3D"mtext22812154c0-4877-41c7-be71-e7af4a00bab5" class=3D"mktoText">
+<a href=3D
+"http://track.pluralsight.com/SU0P1h0tv0s0NDl1S00uxzt"
+> Mobile Device Management =E2=80=93 The Big Picture</a>
+</div></td>=20
+</tr>=20
+<tr>=20
+<td height=3D"8" style=3D"height:8px; font-size:0px; line-height:0px;">&nbs=
+p;</td>=20
+</tr>=20
+<tr>=20
+<td align=3D"center" valign=3D"top">=20
+<table width=3D"564" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=
+=3D"width:564px;" class=3D"em_wrapper">=20
+<tbody>=20
+<tr>=20
+<td align=3D"left" valign=3D"middle" class=3D"em_grey2" width=3D"120" style=
+=3D"font-family:'HelveticaNeue', Arial, sans-serif; font-size:12px; color:#=
+A7A9AC; line-height:15px;text-decoration: none;">=20
+<div id=3D"mtext23812154c0-4877-41c7-be71-e7af4a00bab5" class=3D"mktoText">
+<a href=3D
+"http://track.pluralsight.com/SU0P1h0tv0s0NDl1S00uxzt"
+> by Simon Binder</a>
+</div></td>=20
+<td width=3D"33" style=3D"width:33px;" class=3D"em_side">&nbsp;</td>=20
+<td align=3D"left" valign=3D"middle" style=3D"font-size:0px; line-height:0p=
+x;" width=3D"12">=20
+<div class=3D"mktoImg" id=3D"ximg10812154c0-4877-41c7-be71-e7af4a00bab5" mk=
+tolockimgsize=3D"true">
+<a href=3D
+"http://track.pluralsight.com/SU0P1h0tv0s0NDl1S00uxzt" target=3D"_blank"
+><img src=3D"https://pluralsight-assets.s3.amazonaws.com/newsletter/020718%=
+20Newsletters/0002-18_WeeklyProspect_Feb7_af_YELLOW.jpg" width=3D"8" height=
+=3D"8" style=3D"display:block; border:none; max-width:12px;" /></a>
+</div></td>=20
+<td align=3D"left" valign=3D"middle" class=3D"em_grey2" style=3D"font-famil=
+y:'HelveticaNeue', Arial, sans-serif; font-size:12px; color:#A7A9AC; line-h=
+eight:15px; font-weight:bold;text-decoration: none;">=20
+<div id=3D"mtext24812154c0-4877-41c7-be71-e7af4a00bab5" class=3D"mktoText">
+<a href=3D
+"http://track.pluralsight.com/SU0P1h0tv0s0NDl1S00uxzt"
+> &nbsp;&nbsp;IT Ops</a>
+</div></td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+<tr>=20
+<td height=3D"15" style=3D"height:15px; font-size:0px; line-height:0px;">&n=
+bsp;</td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+<td width=3D"18" style=3D"width:18px;">&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+<tr>=20
+<td height=3D"14" style=3D"height:14px; font-size:0px; line-height:0px">&nb=
+sp;</td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" clas=
+s=3D"em_full_wrap mktoModule" id=3D"SOFTWARE_DEVELOPEMENT0c15479e-bf5a-4925=
+-a79a-bd5b9951c3c1">=20
+<tbody>=20
+<tr>=20
+<td align=3D"center" valign=3D"top">=20
+<table align=3D"center" width=3D"600" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" class=3D"em_main_table" style=3D"width:600px;">=20
+<tbody>=20
+<tr>=20
+<td align=3D"center" valign=3D"top" height=3D"76">=20
+<table width=3D"600" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"center" style=3D"width:600px;" class=3D"em_wrapper" bgcolor=3D"#353736"=
+>=20
+<tbody>=20
+<tr>=20
+<td width=3D"18" style=3D"width:18px;">&nbsp;</td>=20
+<td align=3D"center" valign=3D"top">=20
+<table width=3D"564" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"center" style=3D"width:564px;" class=3D"em_wrapper">=20
+<tbody>=20
+<tr>=20
+<td height=3D"15" style=3D"height:15px; font-size:0px; line-height:0px;">&n=
+bsp;</td>=20
+</tr>=20
+<tr>=20
+<td align=3D"left" valign=3D"top" class=3D"em_wht" style=3D"font-family:'He=
+lveticaNeue', Arial, sans-serif; font-size:20px; color:#FFFFFF; line-height=
+:25px;text-decoration: none; display:block;">=20
+<div id=3D"mtext180c15479e-bf5a-4925-a79a-bd5b9951c3c1" class=3D"mktoText">
+<a href=3D
+"http://track.pluralsight.com/eN1tuP01000UDu0xsSAvl0h"
+> Java Fundamentals: Input/Output</a>
+</div></td>=20
+</tr>=20
+<tr>=20
+<td height=3D"8" style=3D"height:8px; font-size:0px; line-height:0px;">&nbs=
+p;</td>=20
+</tr>=20
+<tr>=20
+<td align=3D"center" valign=3D"top">=20
+<table width=3D"564" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=
+=3D"width:564px;" class=3D"em_wrapper">=20
+<tbody>=20
+<tr>=20
+<td align=3D"left" valign=3D"middle" class=3D"em_grey2" width=3D"120" style=
+=3D"font-family:'HelveticaNeue', Arial, sans-serif; font-size:12px; color:#=
+A7A9AC; line-height:15px;text-decoration: none;">=20
+<div id=3D"mtext190c15479e-bf5a-4925-a79a-bd5b9951c3c1" class=3D"mktoText">
+<a href=3D
+"http://track.pluralsight.com/eN1tuP01000UDu0xsSAvl0h"
+> by Jose Paumard</a>
+</div></td>=20
+<td width=3D"33" style=3D"width:33px;" class=3D"em_side">&nbsp;</td>=20
+<td align=3D"left" valign=3D"middle" style=3D"font-size:0px; line-height:0p=
+x;" width=3D"12">=20
+<div class=3D"mktoImg" id=3D"mimg190c15479e-bf5a-4925-a79a-bd5b9951c3c1" mk=
+tolockimgsize=3D"true">
+<a href=3D
+"http://track.pluralsight.com/eN1tuP01000UDu0xsSAvl0h" target=3D"_blank"
+><img src=3D"https://pluralsight-assets.s3.amazonaws.com/newsletter/2018-Ne=
+wsletters/2018-Newsletters-Courses/img10.jpg" width=3D"12" height=3D"12" st=
+yle=3D"display:block; border:none; max-width:12px;" /></a>
+</div></td>=20
+<td align=3D"left" valign=3D"middle" class=3D"em_grey2" style=3D"font-famil=
+y:'HelveticaNeue', Arial, sans-serif; font-size:12px; color:#A7A9AC; line-h=
+eight:15px; font-weight:bold;text-decoration: none;">=20
+<div id=3D"mtext210c15479e-bf5a-4925-a79a-bd5b9951c3c1" class=3D"mktoText">
+<a href=3D
+"http://track.pluralsight.com/eN1tuP01000UDu0xsSAvl0h"
+> &nbsp;&nbsp;Software Development</a>
+</div></td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+<tr>=20
+<td height=3D"15" style=3D"height:15px; font-size:0px; line-height:0px;">&n=
+bsp;</td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+<td width=3D"18" style=3D"width:18px;">&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+<tr>=20
+<td height=3D"14" style=3D"height:14px; font-size:0px; line-height:0px">&nb=
+sp;</td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" clas=
+s=3D"em_full_wrap mktoModule" id=3D"DATA_PROFESSIONAL412c3eb8-fa54-4fac-8d5=
+4-9b1d3f7fd5ea">=20
+<tbody>=20
+<tr>=20
+<td align=3D"center" valign=3D"top">=20
+<table align=3D"center" width=3D"600" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" class=3D"em_main_table" style=3D"width:600px;">=20
+<tbody>=20
+<tr>=20
+<td align=3D"center" valign=3D"top" height=3D"76">=20
+<table width=3D"600" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"center" style=3D"width:600px;" class=3D"em_wrapper" bgcolor=3D"#353736"=
+>=20
+<tbody>=20
+<tr>=20
+<td width=3D"18" style=3D"width:18px;">&nbsp;</td>=20
+<td align=3D"center" valign=3D"top">=20
+<table width=3D"564" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"center" style=3D"width:564px;" class=3D"em_wrapper">=20
+<tbody>=20
+<tr>=20
+<td height=3D"15" style=3D"height:15px; font-size:0px; line-height:0px;">&n=
+bsp;</td>=20
+</tr>=20
+<tr>=20
+<td align=3D"left" valign=3D"top" class=3D"em_wht" style=3D"font-family:'He=
+lveticaNeue', Arial, sans-serif; font-size:20px; color:#FFFFFF; line-height=
+:25px;text-decoration: none;display:block;">=20
+<div id=3D"mtext22412c3eb8-fa54-4fac-8d54-9b1d3f7fd5ea" class=3D"mktoText">
+<a href=3D
+"http://track.pluralsight.com/f00uh1v0tv00SU1xDNPBl0s"
+> VMware vSphere Automated Reporting with PowerCLI</a>
+</div></td>=20
+</tr>=20
+<tr>=20
+<td height=3D"8" style=3D"height:8px; font-size:0px; line-height:0px;">&nbs=
+p;</td>=20
+</tr>=20
+<tr>=20
+<td align=3D"center" valign=3D"top">=20
+<table width=3D"564" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=
+=3D"width:564px;" class=3D"em_wrapper">=20
+<tbody>=20
+<tr>=20
+<td align=3D"left" valign=3D"middle" class=3D"em_grey2" width=3D"120" style=
+=3D"font-family:'HelveticaNeue', Arial, sans-serif; font-size:12px; color:#=
+A7A9AC; line-height:15px;text-decoration: none;">=20
+<div id=3D"mtext23412c3eb8-fa54-4fac-8d54-9b1d3f7fd5ea" class=3D"mktoText">
+<a href=3D
+"http://track.pluralsight.com/f00uh1v0tv00SU1xDNPBl0s"
+> by Aaron Rosenmund</a>
+</div></td>=20
+<td width=3D"33" style=3D"width:33px;" class=3D"em_side">&nbsp;</td>=20
+<td align=3D"left" valign=3D"middle" style=3D"font-size:0px; line-height:0p=
+x;" width=3D"12">=20
+<div class=3D"mktoImg" id=3D"ximg10412c3eb8-fa54-4fac-8d54-9b1d3f7fd5ea" mk=
+tolockimgsize=3D"true">
+<a href=3D
+"http://track.pluralsight.com/f00uh1v0tv00SU1xDNPBl0s" target=3D"_blank"
+><img src=3D"https://pluralsight-assets.s3.amazonaws.com/newsletter/020718%=
+20Newsletters/0002-18_WeeklyProspect_Feb7_af_YELLOW.jpg" width=3D"8" height=
+=3D"8" style=3D"display:block; border:none; max-width:12px;" /></a>
+</div></td>=20
+<td align=3D"left" valign=3D"middle" class=3D"em_grey2" style=3D"font-famil=
+y:'HelveticaNeue', Arial, sans-serif; font-size:12px; color:#A7A9AC; line-h=
+eight:15px; font-weight:bold;text-decoration: none;">=20
+<div id=3D"mtext24412c3eb8-fa54-4fac-8d54-9b1d3f7fd5ea" class=3D"mktoText">
+<a href=3D
+"http://track.pluralsight.com/f00uh1v0tv00SU1xDNPBl0s"
+> &nbsp;&nbsp;IT Ops</a>
+</div></td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+<tr>=20
+<td height=3D"15" style=3D"height:15px; font-size:0px; line-height:0px;">&n=
+bsp;</td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+<td width=3D"18" style=3D"width:18px;">&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+<tr>=20
+<td height=3D"14" style=3D"height:14px; font-size:0px; line-height:0px">&nb=
+sp;</td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" clas=
+s=3D"em_full_wrap mktoModule" id=3D"SOFTWARE_DEVELOPEMENT7ee42d74-ab37-4894=
+-8f98-13247cc9e541">=20
+<tbody>=20
+<tr>=20
+<td align=3D"center" valign=3D"top">=20
+<table align=3D"center" width=3D"600" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" class=3D"em_main_table" style=3D"width:600px;">=20
+<tbody>=20
+<tr>=20
+<td align=3D"center" valign=3D"top" height=3D"76">=20
+<table width=3D"600" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"center" style=3D"width:600px;" class=3D"em_wrapper" bgcolor=3D"#353736"=
+>=20
+<tbody>=20
+<tr>=20
+<td width=3D"18" style=3D"width:18px;">&nbsp;</td>=20
+<td align=3D"center" valign=3D"top">=20
+<table width=3D"564" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"center" style=3D"width:564px;" class=3D"em_wrapper">=20
+<tbody>=20
+<tr>=20
+<td height=3D"15" style=3D"height:15px; font-size:0px; line-height:0px;">&n=
+bsp;</td>=20
+</tr>=20
+<tr>=20
+<td align=3D"left" valign=3D"top" class=3D"em_wht" style=3D"font-family:'He=
+lveticaNeue', Arial, sans-serif; font-size:20px; color:#FFFFFF; line-height=
+:25px; text-decoration: none;display:block;">=20
+<div id=3D"mtext187ee42d74-ab37-4894-8f98-13247cc9e541" class=3D"mktoText">
+<a href=3D
+"http://track.pluralsight.com/f00uh1v0tw00SU1xDNPCl0s"
+> Spring Cloud Fundamentals</a>
+</div></td>=20
+</tr>=20
+<tr>=20
+<td height=3D"8" style=3D"height:8px; font-size:0px; line-height:0px;">&nbs=
+p;</td>=20
+</tr>=20
+<tr>=20
+<td align=3D"center" valign=3D"top">=20
+<table width=3D"564" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=
+=3D"width:564px;" class=3D"em_wrapper">=20
+<tbody>=20
+<tr>=20
+<td align=3D"left" valign=3D"middle" class=3D"em_grey2" width=3D"120" style=
+=3D"font-family:'HelveticaNeue', Arial, sans-serif; font-size:12px; color:#=
+A7A9AC; line-height:15px;text-decoration: none;">=20
+<div id=3D"mtext197ee42d74-ab37-4894-8f98-13247cc9e541" class=3D"mktoText">
+<a href=3D
+"http://track.pluralsight.com/f00uh1v0tw00SU1xDNPCl0s"
+> by Dustin Schultz</a>
+</div></td>=20
+<td width=3D"33" style=3D"width:33px;" class=3D"em_side">&nbsp;</td>=20
+<td align=3D"left" valign=3D"middle" style=3D"font-size:0px; line-height:0p=
+x;" width=3D"12">=20
+<div class=3D"mktoImg" id=3D"mimg197ee42d74-ab37-4894-8f98-13247cc9e541" mk=
+tolockimgsize=3D"true">
+<a href=3D
+"http://track.pluralsight.com/f00uh1v0tw00SU1xDNPCl0s" target=3D"_blank"
+><img src=3D"https://pluralsight-assets.s3.amazonaws.com/newsletter/2018-Ne=
+wsletters/2018-Newsletters-Courses/img10.jpg" width=3D"12" height=3D"12" st=
+yle=3D"display:block; border:none; max-width:12px;" /></a>
+</div></td>=20
+<td align=3D"left" valign=3D"middle" class=3D"em_grey2" style=3D"font-famil=
+y:'HelveticaNeue', Arial, sans-serif; font-size:12px; color:#A7A9AC; line-h=
+eight:15px; font-weight:bold; text-decoration: none;">=20
+<div id=3D"mtext217ee42d74-ab37-4894-8f98-13247cc9e541" class=3D"mktoText">
+<a href=3D
+"http://track.pluralsight.com/f00uh1v0tw00SU1xDNPCl0s"
+> &nbsp;&nbsp;Software Development</a>
+</div></td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+<tr>=20
+<td height=3D"15" style=3D"height:15px; font-size:0px; line-height:0px;">&n=
+bsp;</td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+<td width=3D"18" style=3D"width:18px;">&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+<tr>=20
+<td height=3D"14" style=3D"height:14px; font-size:0px; line-height:0px">&nb=
+sp;</td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" clas=
+s=3D"em_full_wrap mktoModule" id=3D"BUTTON">=20
+<tbody>=20
+<tr>=20
+<td align=3D"center" valign=3D"top">=20
+<table align=3D"center" width=3D"600" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" class=3D"em_main_table" style=3D"width:600px;">=20
+<tbody>=20
+<tr>=20
+<td align=3D"center" valign=3D"top">=20
+<table width=3D"151" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"center" style=3D"width:151px; border:solid 2px #999a9c;">=20
+<tbody>=20
+<tr>=20
+<td align=3D"center" valign=3D"middle" class=3D"em_wht" height=3D"38" style=
+=3D"font-family:'HelveticaNeue', Arial, sans-serif; font-size:13px; color:#=
+FFFFFF; font-weight:500;">=20
+<div id=3D"mtext28" class=3D"mktoText">
+<a href=3D
+"http://track.pluralsight.com/luUxD000vStl1P1hs0N0x0D" target=3D"_blank" st=
+yle=3D"text-decoration: none; color: #ffffff; display: block; line-height: =
+38px;"
+>View all courses</a>
+</div></td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+<tr>=20
+<td height=3D"35" style=3D"height:35px; font-size:0px; line-height:0px" cla=
+ss=3D"em_spc_20">&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" clas=
+s=3D"em_full_wrap  mktoModule" id=3D"LEFT_IMG_RIGHT_CONTENT_SECTION">=20
+<tbody>=20
+<tr>=20
+<td align=3D"center" valign=3D"top">=20
+<table width=3D"600" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"center" style=3D"width:600px;" class=3D"em_main_table">=20
+<tbody>=20
+<tr>=20
+<td align=3D"center" valign=3D"top" class=3D"em_wht" style=3D"font-family:'=
+HelveticaNeue', Arial, sans-serif; font-size:14px; color:#ffffff; line-heig=
+ht:20px; font-weight:bold;">=20
+<div id=3D"text11" class=3D"mktoText">
+STAY IN THE KNOW
+</div></td>=20
+</tr>=20
+<tr>=20
+<td height=3D"20" style=3D"height:20px; font-size:0px; line-height:0px;">&n=
+bsp;</td>=20
+</tr>=20
+<tr>=20
+<td align=3D"center" valign=3D"top">=20
+<table align=3D"center" width=3D"600" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" class=3D"em_main_table" style=3D"width:600px;" bgcolor=3D"#3537=
+36">=20
+<tbody>=20
+<tr>=20
+<td align=3D"center" valign=3D"top">=20
+<table width=3D"220" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"left" style=3D"width:220px;" class=3D"em_wrapper">=20
+<tbody>=20
+<tr>=20
+<td align=3D"center" valign=3D"top">=20
+<table width=3D"220" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"center" style=3D"width:220px;" class=3D"em_wrapper">=20
+<tbody>=20
+<tr>=20
+<td align=3D"center" valign=3D"top">=20
+<div class=3D"mktoImg" id=3D"img7" mktolockimgsize=3D"true">
+<a href=3D
+"http://track.pluralsight.com/VtUE001huS0P100DvsxlyN0" target=3D"_blank" st=
+yle=3D"text-decoration: none; color:#ffffff;"
+><img src=3D"https://pluralsight-assets.s3.amazonaws.com/newsletter/020718 =
+Newsletters/0002-18_MonthlyActive_Feb7_af_Angular.jpg" width=3D"220" height=
+=3D"170" style=3D"display:block; border:none; max-width:220px;" class=3D"em=
+_img" alt=3D"Angular" /></a>
+</div></td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+</tbody>=20
+</table>=20
+<table width=3D"362" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"right" style=3D"width:362px;" class=3D"em_wrapper">=20
+<tbody>=20
+<tr>=20
+<td align=3D"center" valign=3D"top" class=3D"em_aside">=20
+<table width=3D"362" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"center" style=3D"width:362px;" class=3D"em_wrapper">=20
+<tbody>=20
+<tr>=20
+<td height=3D"25" style=3D"height:25px;" class=3D"em_spc_20">&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td align=3D"left" valign=3D"top" class=3D"em_wht" style=3D"font-family:'He=
+lveticaNeue', Arial, sans-serif; font-size:20px; color:#ffffff; line-height=
+:25px;">=20
+<div id=3D"text19" class=3D"mktoText">
+Keep up with Angular
+</div></td>=20
+</tr>=20
+<tr>=20
+<td height=3D"15" style=3D"height:15px; font-size:0px; line-height:0px;">&n=
+bsp;</td>=20
+</tr>=20
+<tr>=20
+<td align=3D"left" valign=3D"top" class=3D"em_pink" style=3D"font-family:'H=
+elveticaNeue', Arial, sans-serif; font-size:14px; color:#A7A9AC; line-heigh=
+t:20px; padding-right:20px;">=20
+<div id=3D"text20" class=3D"mktoText">
+Is an expiration date looming on your Angular horizon? Find out in our live=
+ webinar and prep yourself (and apps) to handle the latest versions.=20
+<br />=20
+<span style=3D"font-size: 9px; font-weight: bold;"><a href=3D
+"http://track.pluralsight.com/VtUE001huS0P100DvsxlyN0" target=3D"_blank" st=
+yle=3D"text-decoration: none; color: #ec008b;"
+>BROADEN YOUR HORIZONS =C2=BB</a></span>
+</div></td>=20
+</tr>=20
+<tr>=20
+<td height=3D"20" style=3D"height:15px; font-size:0px; line-height:0px;">&n=
+bsp;</td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+<tr>=20
+<td class=3D"em_spc_20" height=3D"20" style=3D"height:20px; font-size:0px; =
+line-height:0px;">&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" clas=
+s=3D"em_full_wrap mktoModule" id=3D"RIGHT_IMG_LEFT_CONTENT_SECTION">=20
+<tbody>=20
+<tr>=20
+<td align=3D"center" valign=3D"top">=20
+<table width=3D"600" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"center" style=3D"width:600px;" class=3D"em_main_table">=20
+<tbody>=20
+<tr>=20
+<td align=3D"center" valign=3D"top">=20
+<table align=3D"center" width=3D"600" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" class=3D"em_main_table" style=3D"width:600px;" bgcolor=3D"#3537=
+36">=20
+<tbody>=20
+<tr>=20
+<td align=3D"center" valign=3D"top">=20
+<table width=3D"220" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"right" style=3D"width:220px;" class=3D"em_wrapper">=20
+<tbody>=20
+<tr>=20
+<td align=3D"center" valign=3D"top">=20
+<table width=3D"220" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"center" style=3D"width:220px;" class=3D"em_wrapper">=20
+<tbody>=20
+<tr>=20
+<td align=3D"center" valign=3D"top">=20
+<div class=3D"mktoImg" id=3D"img6" mktolockimgsize=3D"true">
+<a href=3D
+"http://track.pluralsight.com/Au0F0sDU10NhSlx00v0z1tP" target=3D"_blank" st=
+yle=3D"text-decoration: none; color:#ffffff;"
+><img src=3D"https://pluralsight-assets.s3.amazonaws.com/newsletter/020718 =
+Newsletters/0002-18_MonthlyActive_Feb7_af_IoT.jpg" width=3D"220" height=3D"=
+170" style=3D"display:block; border:none; max-width:220px;" class=3D"em_img=
+" alt=3D"IoT" /></a>
+</div></td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+</tbody>=20
+</table>=20
+<table width=3D"362" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"left" style=3D"width:362px;" class=3D"em_wrapper">=20
+<tbody>=20
+<tr>=20
+<td width=3D"20" style=3D"width:20px;" class=3D"em_hide">&nbsp;</td>=20
+<td align=3D"center" valign=3D"top" class=3D"em_aside">=20
+<table width=3D"342" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"center" style=3D"width:342px;" class=3D"em_wrapper">=20
+<tbody>=20
+<tr>=20
+<td height=3D"25" style=3D"height:25px;" class=3D"em_spc_20">&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td align=3D"left" valign=3D"top" class=3D"em_wht" style=3D"font-family:'He=
+lveticaNeue', Arial, sans-serif; font-size:20px; color:#ffffff; line-height=
+:25px;">=20
+<div id=3D"text17" class=3D"mktoText">
+IoT and you
+</div></td>=20
+</tr>=20
+<tr>=20
+<td height=3D"15" style=3D"height:15px; font-size:0px; line-height:0px;">&n=
+bsp;</td>=20
+</tr>=20
+<tr>=20
+<td align=3D"left" valign=3D"top" class=3D"em_pink" style=3D"font-family:'H=
+elveticaNeue', Arial, sans-serif; font-size:14px; color:#A7A9AC; line-heigh=
+t:20px; padding-right:20px;">=20
+<div id=3D"text18" class=3D"mktoText">
+Are you living on the IoT edge? Learn why any devices that connect to wifi =
+(coffee makers, watches, etc.) can be a threat to your company.=20
+<br />=20
+<span style=3D"font-size: 9px; font-weight: bold;"><a href=3D
+"http://track.pluralsight.com/Au0F0sDU10NhSlx00v0z1tP" target=3D"_blank" st=
+yle=3D"text-decoration: none; color: #ec008b;"
+>INTERNET OF ALL THE THINGS =C2=BB</a></span>
+</div></td>=20
+</tr>=20
+<tr>=20
+<td height=3D"20" style=3D"height:15px; font-size:0px; line-height:0px;">&n=
+bsp;</td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+<tr>=20
+<td height=3D"20" style=3D"height:20px; font-size:0px; line-height:0px;">&n=
+bsp;</td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" clas=
+s=3D"em_full_wrap  mktoModule" id=3D"TITLE_WITH_IMG_AND_CONTENT_SECTION577c=
+2579-42f4-4218-bbc8-c4cfb530d626">=20
+<tbody>=20
+<tr>=20
+<td align=3D"center" valign=3D"top">=20
+<table align=3D"center" width=3D"600" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" class=3D"em_main_table" style=3D"width:600px;">=20
+<tbody>=20
+<tr>=20
+<td align=3D"center" valign=3D"top">=20
+<table align=3D"center" width=3D"600" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" class=3D"em_main_table" style=3D"width:600px;" bgcolor=3D"#3537=
+36">=20
+<tbody>=20
+<tr>=20
+<td align=3D"center" valign=3D"top">=20
+<table width=3D"220" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"left" style=3D"width:220px;" class=3D"em_wrapper">=20
+<tbody>=20
+<tr>=20
+<td align=3D"center" valign=3D"top">=20
+<table width=3D"220" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"center" style=3D"width:220px;" class=3D"em_wrapper">=20
+<tbody>=20
+<tr>=20
+<td align=3D"center" valign=3D"top">=20
+<div class=3D"mktoImg" id=3D"img5577c2579-42f4-4218-bbc8-c4cfb530d626" mkto=
+lockimgsize=3D"true">
+<a href=3D
+"http://track.pluralsight.com/z0xt1hv000sUNAuSDlG1P00" target=3D"_blank" st=
+yle=3D"text-decoration: none; color:#ffffff;"
+><img src=3D"https://pluralsight-assets.s3.amazonaws.com/newsletter/020718 =
+Newsletters/0002-18_MonthlyActive_Feb7_af_jpg.jpg" width=3D"220" height=3D"=
+170" alt=3D"Juniper Networks" style=3D"display:block; border:none; font-fam=
+ily:Arial, sans-serif; font-size:15px; line-height:20px; color:#000000; max=
+-width:220px;" class=3D"em_img" /></a>
+</div></td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+</tbody>=20
+</table>=20
+<table width=3D"362" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"right" style=3D"width:362px;" class=3D"em_wrapper">=20
+<tbody>=20
+<tr>=20
+<td align=3D"center" valign=3D"top" class=3D"em_aside">=20
+<table width=3D"362" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"center" style=3D"width:362px;" class=3D"em_wrapper">=20
+<tbody>=20
+<tr>=20
+<td height=3D"25" style=3D"height:25px;" class=3D"em_spc_20">&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td align=3D"left" valign=3D"top" class=3D"em_wht" style=3D"font-family:'He=
+lveticaNeue', Arial, sans-serif; font-size:20px; color:#ffffff; line-height=
+:25px;">=20
+<div id=3D"text13577c2579-42f4-4218-bbc8-c4cfb530d626" class=3D"mktoText">
+New path: Juniper Networks
+</div></td>=20
+</tr>=20
+<tr>=20
+<td height=3D"15" style=3D"height:15px; font-size:0px; line-height:0px;">&n=
+bsp;</td>=20
+</tr>=20
+<tr>=20
+<td align=3D"left" valign=3D"top" class=3D"em_pink" style=3D"font-family:'H=
+elveticaNeue', Arial, sans-serif; font-size:14px; color:#A7A9AC; line-heigh=
+t:20px; padding-right:20px;">=20
+<div id=3D"text15577c2579-42f4-4218-bbc8-c4cfb530d626" class=3D"mktoText">
+Gain the entry-level skills and knowledge you=E2=80=99ll need to ace the Ju=
+niper Networks Certified Associate =E2=80=93 Junos (JNCIA-Junos) JN0-102 ex=
+am.=20
+<br />=20
+<span style=3D"font-size: 9px; font-weight: bold;"><a href=3D
+"http://track.pluralsight.com/z0xt1hv000sUNAuSDlG1P00" target=3D"_blank" st=
+yle=3D"text-decoration: none; color: #ec008b;"
+>START PATH =C2=BB</a></span>
+</div></td>=20
+</tr>=20
+<tr>=20
+<td height=3D"20" style=3D"height:15px; font-size:0px; line-height:0px;">&n=
+bsp;</td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+<tr>=20
+<td class=3D"em_spc_20" height=3D"20" style=3D"height:20px; font-size:0px; =
+line-height:0px;">&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" clas=
+s=3D"em_full_wrap mktoModule" id=3D"RIGHT_IMG_LEFT_CONTENT_SECTION44144a23-=
+2300-4f9d-97e9-b213d3dd80c4">=20
+<tbody>=20
+<tr>=20
+<td align=3D"center" valign=3D"top">=20
+<table width=3D"600" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"center" style=3D"width:600px;" class=3D"em_main_table">=20
+<tbody>=20
+<tr>=20
+<td align=3D"center" valign=3D"top">=20
+<table align=3D"center" width=3D"600" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" class=3D"em_main_table" style=3D"width:600px;" bgcolor=3D"#3537=
+36">=20
+<tbody>=20
+<tr>=20
+<td align=3D"center" valign=3D"top">=20
+<table width=3D"220" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"right" style=3D"width:220px;" class=3D"em_wrapper">=20
+<tbody>=20
+<tr>=20
+<td align=3D"center" valign=3D"top">=20
+<table width=3D"220" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"center" style=3D"width:220px;" class=3D"em_wrapper">=20
+<tbody>=20
+<tr>=20
+<td align=3D"center" valign=3D"top">=20
+<div class=3D"mktoImg" id=3D"img644144a23-2300-4f9d-97e9-b213d3dd80c4" mkto=
+lockimgsize=3D"true">
+<a href=3D
+"http://track.pluralsight.com/I0S0BDt0vslHNh1x0u0UP01" target=3D"_blank" st=
+yle=3D"text-decoration: none; color:#ffffff;"
+><img src=3D"https://pluralsight-assets.s3.amazonaws.com/newsletter/020718 =
+Newsletters/0002-18_MonthlyActive_Feb7_af_security.jpg" width=3D"220" heigh=
+t=3D"170" style=3D"display:block; border:none; max-width:220px;" class=3D"e=
+m_img" alt=3D"2018" /></a>
+</div></td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+</tbody>=20
+</table>=20
+<table width=3D"362" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"left" style=3D"width:362px;" class=3D"em_wrapper">=20
+<tbody>=20
+<tr>=20
+<td width=3D"20" style=3D"width:20px;" class=3D"em_hide">&nbsp;</td>=20
+<td align=3D"center" valign=3D"top" class=3D"em_aside">=20
+<table width=3D"342" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"center" style=3D"width:342px;" class=3D"em_wrapper">=20
+<tbody>=20
+<tr>=20
+<td height=3D"25" style=3D"height:25px;" class=3D"em_spc_20">&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td align=3D"left" valign=3D"top" class=3D"em_wht" style=3D"font-family:'He=
+lveticaNeue', Arial, sans-serif; font-size:20px; color:#ffffff; line-height=
+:25px;">=20
+<div id=3D"text1744144a23-2300-4f9d-97e9-b213d3dd80c4" class=3D"mktoText">
+2018 security conferences
+</div></td>=20
+</tr>=20
+<tr>=20
+<td height=3D"15" style=3D"height:15px; font-size:0px; line-height:0px;">&n=
+bsp;</td>=20
+</tr>=20
+<tr>=20
+<td align=3D"left" valign=3D"top" class=3D"em_pink" style=3D"font-family:'H=
+elveticaNeue', Arial, sans-serif; font-size:14px; color:#A7A9AC; line-heigh=
+t:20px; padding-right:20px;">=20
+<div id=3D"text1844144a23-2300-4f9d-97e9-b213d3dd80c4" class=3D"mktoText">
+Rub shoulders with experts and get your security practices up to scratch. H=
+ere=E2=80=99s the ultimate list of InfoSec conferences to attend this year.=
+=20
+<br />=20
+<span style=3D"font-size: 9px; font-weight: bold;"><a href=3D
+"http://track.pluralsight.com/I0S0BDt0vslHNh1x0u0UP01" target=3D"_blank" st=
+yle=3D"text-decoration: none; color: #ec008b;"
+>SEE YOU THERE? =C2=BB</a></span>
+</div></td>=20
+</tr>=20
+<tr>=20
+<td height=3D"20" style=3D"height:15px; font-size:0px; line-height:0px;">&n=
+bsp;</td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+<tr>=20
+<td height=3D"20" style=3D"height:20px; font-size:0px; line-height:0px;">&n=
+bsp;</td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" clas=
+s=3D"em_full_wrap  mktoModule" id=3D"TITLE_WITH_IMG_AND_CONTENT_SECTION">=
+=20
+<tbody>=20
+<tr>=20
+<td align=3D"center" valign=3D"top">=20
+<table align=3D"center" width=3D"600" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" class=3D"em_main_table" style=3D"width:600px;">=20
+<tbody>=20
+<tr>=20
+<td align=3D"center" valign=3D"top">=20
+<table align=3D"center" width=3D"600" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" class=3D"em_main_table" style=3D"width:600px;" bgcolor=3D"#3537=
+36">=20
+<tbody>=20
+<tr>=20
+<td align=3D"center" valign=3D"top">=20
+<table width=3D"220" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"left" style=3D"width:220px;" class=3D"em_wrapper">=20
+<tbody>=20
+<tr>=20
+<td align=3D"center" valign=3D"top">=20
+<table width=3D"220" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"center" style=3D"width:220px;" class=3D"em_wrapper">=20
+<tbody>=20
+<tr>=20
+<td align=3D"center" valign=3D"top">=20
+<div class=3D"mktoImg" id=3D"img5" mktolockimgsize=3D"true">
+<a href=3D
+"http://track.pluralsight.com/gC0tsNv0x10SUP0hD001Iul" target=3D"_blank" st=
+yle=3D"text-decoration: none; color:#ffffff;"
+><img src=3D"https://pluralsight-assets.s3.amazonaws.com/newsletter/020718 =
+Newsletters/0002-18_MonthlyActive_Feb7_af_PowerShell.jpg" width=3D"220" hei=
+ght=3D"170" alt=3D"Ask 3: Powershell" style=3D"display:block; border:none; =
+font-family:Arial, sans-serif; font-size:15px; line-height:20px; color:#000=
+000; max-width:220px;" class=3D"em_img" /></a>
+</div></td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+</tbody>=20
+</table>=20
+<table width=3D"362" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"right" style=3D"width:362px;" class=3D"em_wrapper">=20
+<tbody>=20
+<tr>=20
+<td align=3D"center" valign=3D"top" class=3D"em_aside">=20
+<table width=3D"362" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"center" style=3D"width:362px;" class=3D"em_wrapper">=20
+<tbody>=20
+<tr>=20
+<td height=3D"25" style=3D"height:25px;" class=3D"em_spc_20">&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td align=3D"left" valign=3D"top" class=3D"em_wht" style=3D"font-family:'He=
+lveticaNeue', Arial, sans-serif; font-size:20px; color:#ffffff; line-height=
+:25px;">=20
+<div id=3D"text13" class=3D"mktoText">
+Ask 3: PowerShell
+</div></td>=20
+</tr>=20
+<tr>=20
+<td height=3D"15" style=3D"height:15px; font-size:0px; line-height:0px;">&n=
+bsp;</td>=20
+</tr>=20
+<tr>=20
+<td align=3D"left" valign=3D"top" class=3D"em_pink" style=3D"font-family:'H=
+elveticaNeue', Arial, sans-serif; font-size:14px; color:#A7A9AC; line-heigh=
+t:20px; padding-right:20px;">=20
+<div id=3D"text15" class=3D"mktoText">
+In our Ask 3 series, we question top technologists on in-demand skills. Whe=
+n it comes to PowerShell, start thinking open source and cross platform.=20
+<br />=20
+<span style=3D"font-size: 9px; font-weight: bold;"><a href=3D
+"http://track.pluralsight.com/gC0tsNv0x10SUP0hD001Iul" target=3D"_blank" st=
+yle=3D"text-decoration: none; color: #ec008b;"
+>MAKE THE MENTAL SHIFT =C2=BB</a></span>
+</div></td>=20
+</tr>=20
+<tr>=20
+<td height=3D"20" style=3D"height:15px; font-size:0px; line-height:0px;">&n=
+bsp;</td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+<tr>=20
+<td class=3D"em_spc_20" height=3D"50" style=3D"height:50px; font-size:0px; =
+line-height:0px;">&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" clas=
+s=3D"em_full_wrap mktoModule" id=3D"FOOTER_SNIPPET_SECTIONaab27b4b-7c91-410=
+d-8b81-6959d509a9ff">=20
+<tbody>=20
+<tr>=20
+<td align=3D"center" valign=3D"top">=20
+<table width=3D"600" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" class=
+=3D"em_wrapper" style=3D"width:600px;" bgcolor=3D"#252525">=20
+<tbody>=20
+<tr>=20
+<td valign=3D"top" align=3D"center">=20
+<div class=3D"mktEditable" id=3D"email_footer_snippetaab27b4b-7c91-410d-8b8=
+1-6959d509a9ff">
+<!-- FOOTER  SECTION -->=20
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" clas=
+s=3D"em_full_wrap">=20
+<tbody>=20
+<tr>=20
+<td align=3D"center" valign=3D"top">=20
+<table align=3D"center" width=3D"600" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" class=3D"em_main_table mktoModule" mktoname=3D"Block_1" id=3D"B=
+lock_1" style=3D"width: 600px;">=20
+<tbody>=20
+<tr>=20
+<td align=3D"center" valign=3D"top" class=3D"em_aside">=20
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td height=3D"30" class=3D"em_spc_20">&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td align=3D"center" valign=3D"top" style=3D"font-size: 0px; line-height: 0=
+px;">=20
+<div class=3D"mktoImg" mktoname=3D"image" id=3D"img9">
+<img src=3D"https://pluralsight-assets.s3.amazonaws.com/newsletter/2018-New=
+sletters/Email%20footer%20/0002-18_MonthlyActive_Feb7_af_CTFfooter.png" wid=
+th=3D"145" height=3D"13" alt=3D"CREATE THE FUTURE" style=3D"font-family: Ar=
+ial, sans-serif; font-size: 12px; color: #000000; line-height: 22px; displa=
+y: block; max-width: 142px;" border=3D"0" constrain=3D"true" imagepreview=
+=3D"false" />
+</div> </td>=20
+</tr>=20
+<tr>=20
+<td height=3D"30" class=3D"em_spc_20">&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td align=3D"center" valign=3D"top">=20
+<table width=3D"190" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"center" style=3D"width: 190px;">=20
+<tbody>=20
+<tr>=20
+<td align=3D"center" valign=3D"top" width=3D"12">=20
+<div class=3D"mktoImg" mktoname=3D"image" id=3D"img10">
+<a href=3D
+"http://track.pluralsight.com/wUtPNshDv0010lSJ00x1D0u" target=3D"_blank" st=
+yle=3D"text-decoration: none; color: #ffffff;"
+><img src=3D"https://pluralsight-assets.s3.amazonaws.com/newsletter/2018-Ne=
+wsletters/Email%20footer%20/0002-18_MonthlyActive_Feb7_af_FBfooter.png" wid=
+th=3D"13" height=3D"23" alt=3D"fb" style=3D"font-family: Arial, sans-serif;=
+ font-size: 20px; color: #000000; line-height: 22px; display: block; max-wi=
+dth: 12px;" border=3D"0" constrain=3D"true" imagepreview=3D"false" /></a>
+</div> </td>=20
+<td width=3D"23">&nbsp;</td>=20
+<td align=3D"center" valign=3D"top" width=3D"20">=20
+<div class=3D"mktoImg" mktoname=3D"image" id=3D"img11">
+<a href=3D
+"http://track.pluralsight.com/dh0vlSENux0Pt00UsK110D0" target=3D"_blank" st=
+yle=3D"text-decoration: none; color: #ffffff;"
+><img src=3D"https://pluralsight-assets.s3.amazonaws.com/newsletter/2018-Ne=
+wsletters/Email%20footer%20/0002-18_MonthlyActive_Feb7_af_instafooter.png" =
+width=3D"20" height=3D"23" alt=3D"insta" style=3D"font-family: Arial, sans-=
+serif; font-size: 20px; color: #000000; line-height: 22px; display: block; =
+max-width: 20px;" border=3D"0" constrain=3D"true" imagepreview=3D"false" />=
+</a>
+</div> </td>=20
+<td width=3D"23">&nbsp;</td>=20
+<td align=3D"center" valign=3D"top" width=3D"25">=20
+<div class=3D"mktoImg" mktoname=3D"image" id=3D"img12">
+<a href=3D
+"http://track.pluralsight.com/UxLl0sP0vU1Dhu01SN000Ft" target=3D"_blank" st=
+yle=3D"text-decoration: none; color: #ffffff;"
+><img src=3D"https://pluralsight-assets.s3.amazonaws.com/newsletter/2018-Ne=
+wsletters/Email%20footer%20/0002-18_MonthlyActive_Feb7_af_twitterfooter.png=
+" width=3D"25" height=3D"23" alt=3D"tw" style=3D"font-family: Arial, sans-s=
+erif; font-size: 20px; color: #000000; line-height: 22px; display: block; m=
+ax-width: 25px;" border=3D"0" constrain=3D"true" imagepreview=3D"false" /><=
+/a>
+</div> </td>=20
+<td width=3D"23">&nbsp;</td>=20
+<td align=3D"center" valign=3D"top" width=3D"23">=20
+<div class=3D"mktoImg" mktoname=3D"image" id=3D"img13">
+<a href=3D
+"http://track.pluralsight.com/thPl1x0uDt0vM01NUs000SG" target=3D"_blank" st=
+yle=3D"text-decoration: none; color: #ffffff;"
+><img src=3D"https://pluralsight-assets.s3.amazonaws.com/newsletter/2018-Ne=
+wsletters/Email%20footer%20/0002-18_MonthlyActive_Feb7_af_linkedinfooter.pn=
+g" width=3D"23" height=3D"23" alt=3D"in" style=3D"font-family: Arial, sans-=
+serif; font-size: 20px; color: #000000; line-height: 22px; display: block; =
+max-width: 23px;" border=3D"0" constrain=3D"true" imagepreview=3D"false" />=
+</a>
+</div> </td>=20
+<td width=3D"23">&nbsp;</td>=20
+<td align=3D"center" valign=3D"top" width=3D"18">=20
+<div class=3D"mktoImg" mktoname=3D"image" id=3D"img14">
+<a href=3D
+"http://track.pluralsight.com/DDHs10N0PUt00u0SvN1l0hx" target=3D"_blank" st=
+yle=3D"text-decoration: none; color: #ffffff;"
+><img src=3D"https://pluralsight-assets.s3.amazonaws.com/newsletter/2018-Ne=
+wsletters/Email%20footer%20/0002-18_MonthlyActive_Feb7_af_youtubefooter.png=
+" width=3D"19" height=3D"23" alt=3D"yt" style=3D"font-family: Arial, sans-s=
+erif; font-size: 20px; color: #000000; line-height: 22px; display: block; m=
+ax-width: 18px;" border=3D"0" constrain=3D"true" imagepreview=3D"false" /><=
+/a>
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td height=3D"20" style=3D"line-height: 1px; font-size: 1px;">&nbsp;</td>=
+=20
+</tr>=20
+<tr>=20
+<td class=3D"em_footer" align=3D"center" style=3D"font-family: 'Helvetica N=
+eue', Helvetica, Arial, sans-serif; font-size: 10px; line-height: 12px; col=
+or: #888889;">=20
+<div id=3D"text21" class=3D"mktoText" mktoname=3D"text">
+182 N Union Ave Suite 200 Farmington, UT 84025
+</div> </td>=20
+</tr>=20
+<tr>=20
+<td height=3D"10" style=3D"line-height: 1px; font-size: 1px;">&nbsp;</td>=
+=20
+</tr>=20
+<tr>=20
+<td class=3D"em_footer" align=3D"center" style=3D"font-family: 'Helvetica N=
+eue', Helvetica, Arial, sans-serif; font-size: 10px; line-height: 12px; col=
+or: #888889;">=20
+<div id=3D"text22" class=3D"mktoText" mktoname=3D"text">
+This email was sent to=20
+<a href=3D
+"http://track.pluralsight.com/kD0Ov0N10ul01UhxtS0Is0P" style=3D"text-decora=
+tion: none; color: #247ec2;"
+>dragonet.c17@gmail.com</a>
+</div> </td>=20
+</tr>=20
+<tr>=20
+<td class=3D"em_footer1" align=3D"center" style=3D"font-family: 'Helvetica =
+Neue', Helvetica, Arial, sans-serif; font-size: 10px; line-height: 12px; co=
+lor: #666568;">=20
+<div id=3D"text23" class=3D"mktoText" mktoname=3D"text">
+<a href=3D"https://get.pluralsight.com/UnsubscribePage.html?mkt_unsubscribe=
+=3D1&mkt_tok=3DeyJpIjoiWXpCbU16WTBOVGRqTVdFNSIsInQiOiJRVzRUczgyZEt4Q0RZbjdP=
+TWhudFFSZlZPdXY5RDVNb1BMQ0xtSW5qd2NBRm9tN3NQWldYdnpFcU54LzNKSGdQRldtVU0zelh=
+ndnFRQjVZeWoxY20yTjAzK0VwUFVYclFXYWtsQ1RYclNXTkkxNnVxNXRxdEJQeHZ3NXQ4NVhnTi=
+J9" target=3D"_blank" style=3D"text-decoration: underline; color: #666568;"=
+>Unsubscribe</a> |=20
+<a href=3D
+"http://track.pluralsight.com/DDJs10P0PUt00u0SvN1l0hx" target=3D"_blank" st=
+yle=3D"text-decoration: underline; color: #666568;"
+>Manage your preferences</a>
+</div> </td>=20
+</tr>=20
+<tr>=20
+<td height=3D"30" class=3D"em_spc_20">&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td class=3D"em_hide" style=3D"line-height: 1px; min-width: 600px; backgrou=
+nd-color: #f4f5f7;"><img alt=3D"" src=3D"https://pluralsight-assets.s3.amaz=
+onaws.com/newsletter/2018-Newsletters/2018-Newsletters-Content/spacer.gif" =
+height=3D"1" width=3D"600" style=3D"max-height: 1px; min-height: 1px; displ=
+ay: block; width: 600px; min-width: 600px;" border=3D"0" /></td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+</tbody>=20
+</table>=20
+<!-- //FOOTER  SECTION -->
+</div></td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+</tbody>
+</table>=20
+<div class=3D"em_hide" style=3D"white-space: nowrap; display: none; font-si=
+ze:0px; line-height:0px;">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp=
+; &nbsp; &nbsp; &nbsp;
+</div>=20
+<style data-ignore-inlining=3D"">@media print{ #_t { background-image: url(=
+'https://sl5eeck5.emltrk.com/sl5eeck5?p&d=3Ddragonet.c17@gmail.com');}} div=
+.OutlookMessageHeader {background-image:url('https://sl5eeck5.emltrk.com/sl=
+5eeck5?f&d=3Ddragonet.c17@gmail.com')} table.moz-email-headers-table {backg=
+round-image:url('https://sl5eeck5.emltrk.com/sl5eeck5?f&d=3Ddragonet.c17@gm=
+ail.com')} blockquote #_t {background-image:url('https://sl5eeck5.emltrk.co=
+m/sl5eeck5?f&d=3Ddragonet.c17@gmail.com')} #MailContainerBody #_t {backgrou=
+nd-image:url('https://sl5eeck5.emltrk.com/sl5eeck5?f&d=3Ddragonet.c17@gmail=
+.com')}</style>
+<div id=3D"_t"></div>=20
+<img src=3D"https://sl5eeck5.emltrk.com/sl5eeck5?d=3Ddragonet.c17@gmail.com=
+" width=3D"1" height=3D"1" border=3D"0" alt=3D"" /> =20
+<a href=3D
+"http://track.pluralsight.com/o01KN00Qu00SlD1stPUhxv0"
+></a>
+<img src=3D"http://track.pluralsight.com/trk?t=3D1&mid=3DMzA2LURVUC03NDU6Nz=
+E5MDg6MTgwNTA6ODY5MTk6MDoyMjExMDo5OjIzNzQ4MDo2ODAxODU1OmRyYWdvbmV0LmMxN0Bnb=
+WFpbC5jb20%3D" width=3D"1" height=3D"1" style=3D"display:none !important;" =
+alt=3D"" />
+</body>
+</html>
+------=_Part_321204804_1311954918.1518111592136--

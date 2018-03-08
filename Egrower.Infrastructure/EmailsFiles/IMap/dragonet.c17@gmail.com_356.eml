@@ -1,0 +1,147 @@
+Delivered-To: dragonet.c17@gmail.com
+Received: by 10.107.138.136 with SMTP id c8csp476300ioj;
+        Sat, 13 Jan 2018 01:38:13 -0800 (PST)
+X-Google-Smtp-Source: ACJfBos1qiUuU7fHRE9FUUiNT6KCtchJkz/cDTXVsPddKSxIFtEHCY/5ADcLOZenh+oNq7YLqDUI
+X-Received: by 10.223.167.66 with SMTP id e2mr26908250wrd.91.1515836293846;
+        Sat, 13 Jan 2018 01:38:13 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1515836293; cv=none;
+        d=google.com; s=arc-20160816;
+        b=RZhkdrNDRVfYVICwT5865JrO94Bqsb3b4Hp0RjwQdYKzavjc/eTWWz4fPcozIieFMx
+         cdxqhESDdds+UaBjfIDSb16UQuD4WMh6A9w5wJN5zcEMDD0bryHEuGKuluphIYLrvN24
+         wp7Sf2l55PJdo/Jxh8OMR+0Ol8GNUQt6kV2ZpIalUlHPVfcx94Zft8WXoJ7dSF7j3ipZ
+         YwXodxZE/eMe0+05Lb5oWvgDn4q5YJmutoc7re+wuzbXG4yeFpVqMFD1qhlnZ0Q6vyac
+         ccc8hw3/v53E07ukoGqEgYvNcuzaFgWa7GiGJNuIuWvk9mYow2d7aBGbgulfimo7ogY9
+         He4A==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=content-transfer-encoding:list-unsubscribe:mime-version:reply-to
+         :from:date:message-id:subject:to:dkim-signature
+         :arc-authentication-results;
+        bh=du6udrQtAqjC1WZi+HlUqbAZkirvsgH/t9DIhH0E1yQ=;
+        b=GLQhf9nZrlQUYiFI/Ro60OAMh6V08mozqxIY7l0j/PoJp4DIo+R/QZ0jG9czcUDvY0
+         a358m8BePWTWY3FomY5rELsUYOGOEHHMpvXI/Diq5CS5C+Esc0QMqOl7hbGS6uqVFzx1
+         M8sgj5MK4kLMMC/67xN2bO2/1l65ufdNsxTTpHt/Gu6bfpqzJvbWZbS99DkFvJH8+5OH
+         3PyPLoItfoHHUe3Cg/jog45wAqRghjWM+FKXznRpo0IfF9pRoJ8AucwlWVwFNPUTbPL9
+         siYxLoe1jCUTrPmbLksfQbonHR+KnV3xuriedhLk/9y6tCef6OgrqU4FGhmQnzERT8On
+         RqoQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@dorotafilipiuk.pl header.s=default header.b=pfbMJl/W;
+       spf=pass (google.com: domain of bounce@dorotafilipiuk.pl designates 79.143.176.60 as permitted sender) smtp.mailfrom=bounce@dorotafilipiuk.pl;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=dorotafilipiuk.pl
+Return-Path: <bounce@dorotafilipiuk.pl>
+Received: from dorotafilipiuk.pl (ip-60-176-143-79.static.contabo.net. [79.143.176.60])
+        by mx.google.com with ESMTPS id n107si8265805wrb.247.2018.01.13.01.38.13
+        for <dragonet.c17@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Sat, 13 Jan 2018 01:38:13 -0800 (PST)
+Received-SPF: pass (google.com: domain of bounce@dorotafilipiuk.pl designates 79.143.176.60 as permitted sender) client-ip=79.143.176.60;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@dorotafilipiuk.pl header.s=default header.b=pfbMJl/W;
+       spf=pass (google.com: domain of bounce@dorotafilipiuk.pl designates 79.143.176.60 as permitted sender) smtp.mailfrom=bounce@dorotafilipiuk.pl;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=dorotafilipiuk.pl
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
+	d=dorotafilipiuk.pl; s=default; h=Content-Transfer-Encoding:Content-Type:
+	List-Unsubscribe:MIME-Version:Reply-To:From:Date:Message-ID:Subject:To:Sender
+	:Cc:Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
+	Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Id:
+	List-Help:List-Subscribe:List-Post:List-Owner:List-Archive;
+	bh=du6udrQtAqjC1WZi+HlUqbAZkirvsgH/t9DIhH0E1yQ=; b=pfbMJl/WvqHNf480bKIdziFp96
+	e4oezNqyp9QjMAlq7hgD9mFCs/j6YqB21ELIdH/vQGEKQn5Jy6cS0qa4m/Ns+UOiJ6/AYcsJX70/6
+	yzSRErwhMnjOx6w0qACLuOnfFr+jd0i0up3o6kG96CEyJ0cOLOhoI052Z5dCkD8ZjCYaLCKzjWjeI
+	Px6jlG+CUvCabAu9QOoZT91+RjiSOkRgjS+oqECXF1iocpgJVKzIGIzYzBUm82GGoDvOvsuQ2DepQ
+	lYf9VIfNfkGa2eO0EdgVrwy00qxDSProLon9d9BlaN1I3nKRYKkmxfchIJ9JL50shr5MVa2XBiD1k
+	sscnUKSg==;
+Received: from [79.143.176.60] (port=53678 helo=dorotafilipiuk.pl)
+	by vmi106355.contabo.host with esmtpa (Exim 4.89)
+	(envelope-from <bounce@dorotafilipiuk.pl>)
+	id 1eaGnL-0002K1-98
+	for dragonet.c17@gmail.com; Sat, 13 Jan 2018 09:04:06 +0100
+To: dragonet.c17@gmail.com
+Subject: =?UTF-8?B?W3d5endhbmllXSBXYcW8bmUgaW5mb3JtYWNqZQ==?=
+Message-ID: <8abe14569bb6d057631d00764b585216@dorotafilipiuk.pl>
+Date: Sat, 13 Jan 2018 08:00:03 +0000
+From: "Dorota Filipiuk" <biuro@dorotafilipiuk.pl>
+Reply-To: biuro@dorotafilipiuk.pl
+MIME-Version: 1.0
+X-Mailer-LID: 40,81
+List-Unsubscribe: <http://dorotafilipiuk.pl/interspire/unsubscribe.php?M=58137&C=3dbaa9c3cdcef032e05bcbf3728b538c&L=81&N=372>
+X-Mailer-RecptId: 58137
+X-Mailer-SID: 372
+X-Mailer-Sent-By: 1
+Content-Type: multipart/alternative; charset="UTF-8"; boundary="b1_58b04a86ff40adfb4e265afec90cd9fc"
+Content-Transfer-Encoding: 8bit
+X-AntiAbuse: This header was added to track abuse, please include it with any abuse report
+X-AntiAbuse: Primary Hostname - vmi106355.contabo.host
+X-AntiAbuse: Original Domain - gmail.com
+X-AntiAbuse: Originator/Caller UID/GID - [47 12] / [47 12]
+X-AntiAbuse: Sender Address Domain - dorotafilipiuk.pl
+X-Get-Message-Sender-Via: vmi106355.contabo.host: authenticated_id: biuro@dorotafilipiuk.pl
+X-Authenticated-Sender: vmi106355.contabo.host: biuro@dorotafilipiuk.pl
+X-Source: 
+X-Source-Args: 
+X-Source-Dir: 
+
+--b1_58b04a86ff40adfb4e265afec90cd9fc
+Content-Type: text/plain; format=flowed; charset="UTF-8"
+Content-Transfer-Encoding: 8bit
+
+Kochani,
+chcę Wam bardzo podziękować za te 5 dni wspólnego
+wyzwania! Bardzo się cieszę, że jak zawsze panowała
+na nim świetna atmosfera! Mam nadzieję, że wdrożysz
+chociaż jedną wskazówkę, dzięki której Twoje życie stanie
+się łatwiejsze ;)
+
+Przypominam też:
+- wszystkie materiały (nagrania LIVE i ćwiczenia) będą
+dostępne tylko do 16.01. a później zostaną usunięte
+
+- ostatni LIVE znajdziecie na moi fanpagu ( a nie w Grupie Wyzwań)
+pod tym linkiem:
+
+http://dorotafilipiuk.pl/interspire/link.php?M=58137&N=372&L=2407&F=T
+
+- niespodzianka z ostaniego LIVE będzie dostępna
+tylko do DZISIAJ do godziny 20:00! ;)
+
+Pozdrawiam Was serdecznie!
+Dorota
+
+Jeśli chcesz wypisać się z mojego mailingu kliknij
+TUTAJ:http://dorotafilipiuk.pl/interspire/unsubscribe.php?M=58137&C=3dbaa9c3cdcef032e05bcbf3728b538c&L=81&N=372
+
+--b1_58b04a86ff40adfb4e265afec90cd9fc
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: 8bit
+
+<html>
+<head>
+</head>
+<body>
+Kochani,&nbsp;<br />chcę Wam bardzo podziękować za te 5 dni
+wsp&oacute;lnego<br />wyzwania! Bardzo się cieszę, że jak zawsze
+panowała&nbsp;<br />na nim świetna atmosfera! Mam nadzieję, że
+wdrożysz<br />chociaż jedną wskaz&oacute;wkę, dzięki kt&oacute;rej
+<strong>Twoje życie stanie</strong><br /><strong>się łatwiejsze</strong>
+;)<br /><br /><span style="text-decoration: underline;">Przypominam
+też:</span><br />- wszystkie materiały (nagrania LIVE i ćwiczenia)
+będą&nbsp;<br />dostępne<strong> tylko do 16.01.</strong> a
+p&oacute;źniej zostaną usunięte<br /><br />- ostatni LIVE znajdziecie na
+moi fanpagu ( a nie w Grupie Wyzwań) <br />pod tym linkiem:<br /><a
+href="http://dorotafilipiuk.pl/interspire/link.php?M=58137&N=372&L=2407&F=H"><br
+/></a><strong><a
+href="http://dorotafilipiuk.pl/interspire/link.php?M=58137&N=372&L=2407&F=H">https://www.facebook.com/dorotafilipiukpl/videos/2020232418257290/<br
+/><br /></a>-&nbsp;niespodzianka z <a
+href="http://dorotafilipiuk.pl/interspire/link.php?M=58137&N=372&L=2407&F=H">ostaniego
+LIVE</a> będzie dostępna<br />tylko do DZISIAJ do godziny 20:00! ;)<br
+/></strong><br />Pozdrawiam Was serdecznie!<br />Dorota<br /><br />Jeśli
+chcesz wypisać się z mojego mailingu kliknij <a
+href="http://dorotafilipiuk.pl/interspire/unsubscribe.php?M=58137&C=3dbaa9c3cdcef032e05bcbf3728b538c&L=81&N=372">TUTAJ</a><strong><br
+/><br /></strong>
+<img
+src="http://dorotafilipiuk.pl/interspire/open.php?M=58137&L=81&N=372&F=H&image=.jpg"
+height="1" width="10"></body>
+</html>
+
+--b1_58b04a86ff40adfb4e265afec90cd9fc--
+
+

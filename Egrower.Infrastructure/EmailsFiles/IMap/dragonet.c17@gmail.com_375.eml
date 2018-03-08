@@ -1,0 +1,94 @@
+Delivered-To: dragonet.c17@gmail.com
+Received: by 10.12.142.74 with SMTP id w10csp1315472qvb;
+        Sat, 10 Feb 2018 17:36:46 -0800 (PST)
+X-Google-Smtp-Source: AH8x226xgwLZwtMIbQINkya83xFA582Fw8UzozXE0U5eGciZ2CaskSNzBXGsLIvCAqkR7b1pXseM
+X-Received: by 10.237.39.4 with SMTP id n4mr12453946qtd.230.1518313006910;
+        Sat, 10 Feb 2018 17:36:46 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1518313006; cv=none;
+        d=google.com; s=arc-20160816;
+        b=zxLJXe8O/jJQUVLgKC9k7jiXON59E5z/6LvlBTe21YJYl3OQXoR3xpEjinZfUj0+AT
+         WUcplaE/VUVnJnurOf9YJArhiivQLue2P7JXltYYpomfEe6m5k0/kQvMnxcwfWWZBzjA
+         AunbnE8MTDtbtXu4dnvhx9BobmvFdlJaUY2S9S4E9AZZYczag6klBDVzkATbxG8xRNgu
+         YzvTVSHquinaUUO1nMNekWRpqJ4XRI3sRwKcHkUgvJRY7uSPDVCyMJIwGhpQuoo+x8ie
+         cD6o+Hr6TxwmTKDiv0zBZvS5H2X3CogSzCogextQXfMaXJWRC9QybGg35Y9j6eJQy29c
+         PxsQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=content-transfer-encoding:mime-version:date:message-id:to:subject
+         :from:dkim-signature:dkim-signature:arc-authentication-results;
+        bh=KULoCMXj/w/FJCNych8ULQwKo7ifaKU2xMN5VVKa7zs=;
+        b=qBqsxxWrh6HYMtuVC3Whb8bjQ85iYdN6vzVcC1Tvp56zE4ePZkJPRi32sIbaDVQISW
+         Vsu3M/wwKulVq7qwLFeii9quVF3/eTP0cCYFrsRiryh3ZWDeKXyG9YvqT7uUPCDzrvEg
+         anJvKg9u7XjlKiLf7rRfHNuYGcItCN6m3x/hpT1bkt68tVxJZynsOZnzS1seui8Cg0HP
+         c1y589W7VKvolAQJeDDgHIWea8p0M9cBH7f76wsDV1d84/XAnAwXOexEp2ZCsi+303Q9
+         s7uXTRLeQ0Oe9jPHbDMMANXV6U6EhhKcNFdSsLo8aFkQmjoGIlEKzKrnL+aC5iRsCv3w
+         LhjQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@support.digitalocean.com header.s=mandrill header.b=nTaouHHs;
+       dkim=pass header.i=@mandrillapp.com header.s=mandrill header.b=Wd29VrD3;
+       spf=pass (google.com: domain of bounce-md_30039865.5a7f9e2e.v1-7921d339be56426b9c7c593ac81dac8e@mda.digitalocean.com designates 205.201.137.27 as permitted sender) smtp.mailfrom=bounce-md_30039865.5a7f9e2e.v1-7921d339be56426b9c7c593ac81dac8e@mda.digitalocean.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=support.digitalocean.com
+Return-Path: <bounce-md_30039865.5a7f9e2e.v1-7921d339be56426b9c7c593ac81dac8e@mda.digitalocean.com>
+Received: from mail283.us4.mandrillapp.com (mail283.us4.mandrillapp.com. [205.201.137.27])
+        by mx.google.com with ESMTPS id l2si3243364qkd.70.2018.02.10.17.36.46
+        for <dragonet.c17@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Sat, 10 Feb 2018 17:36:46 -0800 (PST)
+Received-SPF: pass (google.com: domain of bounce-md_30039865.5a7f9e2e.v1-7921d339be56426b9c7c593ac81dac8e@mda.digitalocean.com designates 205.201.137.27 as permitted sender) client-ip=205.201.137.27;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@support.digitalocean.com header.s=mandrill header.b=nTaouHHs;
+       dkim=pass header.i=@mandrillapp.com header.s=mandrill header.b=Wd29VrD3;
+       spf=pass (google.com: domain of bounce-md_30039865.5a7f9e2e.v1-7921d339be56426b9c7c593ac81dac8e@mda.digitalocean.com designates 205.201.137.27 as permitted sender) smtp.mailfrom=bounce-md_30039865.5a7f9e2e.v1-7921d339be56426b9c7c593ac81dac8e@mda.digitalocean.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=support.digitalocean.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=mandrill; d=support.digitalocean.com;
+ h=From:Subject:To:Message-Id:Date:MIME-Version:Content-Type:Content-Transfer-Encoding; i=support@support.digitalocean.com;
+ bh=KULoCMXj/w/FJCNych8ULQwKo7ifaKU2xMN5VVKa7zs=;
+ b=nTaouHHscfRC/jgJLIkWEsHmY+kRjL3R8LOXjXIciziDvjEPvwk8y+cxaRM8hvwxZOYzo8LLBGRn
+   AE68Sj3omcjsfAIomRAv3eYjQCNiYuSKtUMh45zpqdI7xe//3RTwBEAL/3UL/MZtZBYrbrOoo5SN
+   4we04gTLtsmxg5gyU+8=
+Received: from pmta07.mandrill.prod.suw01.rsglab.com (127.0.0.1) by mail283.us4.mandrillapp.com id hfuf2s174e0t for <dragonet.c17@gmail.com>; Sun, 11 Feb 2018 01:36:46 +0000 (envelope-from <bounce-md_30039865.5a7f9e2e.v1-7921d339be56426b9c7c593ac81dac8e@mda.digitalocean.com>)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=mandrillapp.com; 
+ i=@mandrillapp.com; q=dns/txt; s=mandrill; t=1518313006; h=From : 
+ Subject : To : Message-Id : Date : MIME-Version : Content-Type : 
+ Content-Transfer-Encoding : From : Subject : Date : X-Mandrill-User : 
+ List-Unsubscribe; bh=KULoCMXj/w/FJCNych8ULQwKo7ifaKU2xMN5VVKa7zs=; 
+ b=Wd29VrD3Pnhz2fBepIPWQ0RBJXCl4H08U223surLzIahwGTKx+DNqmyhXJShuk2OwryCK9
+ ntDGKGJjncM4Db2vn6vAEWted1vTERU6rKoGmBtY59Dkeigo+GRFIGdMCQxPlLu/OgJ8XYaA
+ qyVtJXnnKPlZvGK+cdz5zswwzLKKc=
+From: DigitalOcean <support@support.digitalocean.com>
+Subject: =?utf-8?Q?Please=20verify=20that=20it=E2=80=99s=20you?=
+Return-Path: <bounce-md_30039865.5a7f9e2e.v1-7921d339be56426b9c7c593ac81dac8e@mda.digitalocean.com>
+Received: from [162.243.191.74] by mandrillapp.com id 7921d339be56426b9c7c593ac81dac8e; Sun, 11 Feb 2018 01:36:46 +0000
+To: <dragonet.c17@gmail.com>
+X-Report-Abuse: Please forward a copy of this message, including all headers, to abuse@mandrill.com
+X-Report-Abuse: You can also report abuse here: http://mandrillapp.com/contact/abuse?id=30039865.7921d339be56426b9c7c593ac81dac8e
+X-Mandrill-User: md_30039865
+Message-Id: <30039865.20180211013646.5a7f9e2e88a621.13823335@mail283.us4.mandrillapp.com>
+Date: Sun, 11 Feb 2018 01:36:46 +0000
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+Please verify that it=E2=80=99s you
+
+Your sign in attempt seems a little different than usual. This could be bec=
+ause you are signing in from a different device or a different location.
+
+If you are attempting to sign-in, please use the following code to confirm =
+your identity:
+
+374283
+
+Here are the details of the sign-in attempt:
+Sunday, February 02/11/18 at 01:36 UTC
+Account: dragonet.c17@gmail.com
+Location: PL
+IP Address: 83.4.133.71
+Operating system: Windows 10 64-bit
+Browser: Chrome
+
+If this wasn=E2=80=99t you, please reset your password. Like always, if you=
+ have any questions please respond to this email to open a support ticket.
+
+Yours securely,
+Team DigitalOcean
+

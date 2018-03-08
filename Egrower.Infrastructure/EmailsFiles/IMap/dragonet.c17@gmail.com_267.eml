@@ -1,0 +1,183 @@
+Delivered-To: dragonet.c17@gmail.com
+Received: by 10.107.162.19 with SMTP id l19csp417240ioe;
+        Tue, 13 Jun 2017 09:18:12 -0700 (PDT)
+X-Received: by 10.36.69.97 with SMTP id y94mr918941ita.50.1497370692018;
+        Tue, 13 Jun 2017 09:18:12 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1497370691; cv=none;
+        d=google.com; s=arc-20160816;
+        b=y1ceC5J5WHp3Mer20b+zb9vfUUbBtREpyW3m5fyEB/A8fOyPxkp3DqlvW3mIt7QO+z
+         t+veOisVVXlamowIN7fFxaQBS3USbY7tE8+lP/PYJLho9WijVlFz77qks9Yybc0qFRoA
+         P2mIZa0C01H/eg+0X6rVi/DsG7dY4ioQmcRoaWGIvDdQGIsD1iaslJSObNOOzNtP9rMy
+         7+LoPaJTi3PFAPSq3UCglfBoMC+f8ogXb77IRzqVEqOmv9554wpR6bBV+XZwAWABNGts
+         lcDBVS/9UBIEZJAcYrExF6VH2rPUPEB5ACM8GXqxTmKmDd/669FeRQHfsB+M+FQL5uyd
+         xy0Q==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=date:sensitivity:importance:mime-version:subject:message-id:to:from
+         :arc-authentication-results;
+        bh=b7pacVvP6LHqVZ5/efwqwXvnj/zES+M06Xizm06Jq9o=;
+        b=RREkbN4Y+f+2JkCmkystH8XgkeuJCr6DH2QMVWVbsm8TqRGw83sCmm/0/wE9kKJCQb
+         Q/y5ZW7cSzCjJt38SuhFKQGUYYm4nw9ZBwFSYY1TnRZcXBuYm72JBGfPnuiiibi+XjHw
+         0fKWODbYVzQW+sLs8MiJgoVRsTzmYqdOiEoSDzXyeugzpGSToQi0RwRdd5t+fuEGynv3
+         ZUxKEt8Wimh/VQ0TLfSMmaycpae+IEXxE4ML8/7+zGuOwbF+FkGWFtL5+neBmkFohKFQ
+         YN9YbiuRXjd3bN5BCrKQHp1MwkrPZvj5VJ0eqGxEFCg4UqKMKOJWeDTk+4TJTmzAULyO
+         E5cw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=pass (google.com: domain of careers@recruiting.accenture.com designates 68.233.76.14 as permitted sender) smtp.mailfrom=careers@recruiting.accenture.com
+Return-Path: <careers@recruiting.accenture.com>
+Received: from chrelay.taleo.net (chrelay.taleo.net. [68.233.76.14])
+        by mx.google.com with ESMTPS id u5si10574310itf.25.2017.06.13.09.18.11
+        for <dragonet.c17@gmail.com>
+        (version=TLS1 cipher=AES128-SHA bits=128/128);
+        Tue, 13 Jun 2017 09:18:11 -0700 (PDT)
+Received-SPF: pass (google.com: domain of careers@recruiting.accenture.com designates 68.233.76.14 as permitted sender) client-ip=68.233.76.14;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of careers@recruiting.accenture.com designates 68.233.76.14 as permitted sender) smtp.mailfrom=careers@recruiting.accenture.com
+Received: from invalidemail.com by invalidemail.com; Tue, 13 Jun 2017 11:51:00 -0400 (EDT)
+From: Accenture Talent Acquisition <careers@recruiting.accenture.com>
+To: dragonet.c17@gmail.com, 
+	=?utf-8?Q?Karol_Cicho=C5=84?= <dragonet.c17@gmail.com>
+Message-ID: <670493870.184191497369060009.JavaMail.rcc@127.0.0.1>
+Subject: Programista .NET-00461714 w
+MIME-Version: 1.0
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_18419_1208774070.1497369060007"
+X-Priority: 3
+X-MSMail-Priority: Normal
+Importance: normal
+Sensitivity: Company-Confidential
+Date: Tue, 13 Jun 2017 11:51:00 -0400 (EDT)
+
+------=_Part_18419_1208774070.1497369060007
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+Content-Disposition: inline
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/htm=
+l4/strict.dtd">
+<html>
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"/><=
+title></title>
+</head>
+<body style=3D'font-family: Arial, Times New Roman, Verdana, Sans-Serif; pa=
+dding: 5px 5px 5px 5px; margin: 0px; border-style: none; background-color: =
+#ffffff'>
+<div><DIV><SPAN STYLE=3D"FONT-SIZE: x-small; FONT-FAMILY: Arial">Szanowna P=
+ani / Szanowny Panie</SPAN></DIV>
+<DIV><SPAN STYLE=3D"FONT-SIZE: x-small; FONT-FAMILY: Arial">&nbsp;</SPAN></=
+DIV>
+<DIV><SPAN STYLE=3D"FONT-SIZE: x-small; FONT-FAMILY: Arial">Dzi=C4=99kujemy=
+ za zainteresowanie stanowiskiem Programista .NET - 00461714.</SPAN></DIV>
+<DIV><SPAN STYLE=3D"FONT-SIZE: x-small; FONT-FAMILY: Arial">&nbsp;</SPAN></=
+DIV>
+<DIV><SPAN STYLE=3D"FONT-SIZE: x-small; FONT-FAMILY: Arial">Je=C5=BCeli Pan=
+i/Pana umiej=C4=99tno=C5=9Bci, do=C5=9Bwiadczenie i kwalifikacje zawodowe b=
+=C4=99d=C4=85 odpowiada=C5=82y oczekiwaniom Accenture odno=C5=9Bnie tego (b=
+=C4=85d=C5=BA innego) stanowiska, wkr=C3=B3tce si=C4=99 z Pani=C4=85/Panem =
+skontaktujemy.</SPAN></DIV>
+<DIV><SPAN STYLE=3D"FONT-SIZE: x-small; FONT-FAMILY: Arial">&nbsp;</SPAN></=
+DIV>
+<DIV><SPAN STYLE=3D"FONT-SIZE: x-small; FONT-FAMILY: Arial">W celu dost=C4=
+=99pu do swojego profilu kandydata, prosz=C4=99 klikn=C4=85=C4=87</SPAN> <A=
+ HREF=3D"https://accenture.taleo.net/careersection/10240/jobapply.ftl?job=
+=3D00461714&lang=3Dpl" REL=3D"external"><SPAN STYLE=3D"FONT-SIZE: x-small; =
+FONT-FAMILY: Arial">tutaj</SPAN></A><SPAN STYLE=3D"FONT-SIZE: x-small; FONT=
+-FAMILY: Arial">.</SPAN></DIV>
+<DIV>&nbsp;</DIV>
+<DIV><SPAN STYLE=3D"FONT-SIZE: x-small; FONT-FAMILY: Arial">&nbsp;</SPAN></=
+DIV>
+<DIV><SPAN STYLE=3D"FONT-SIZE: x-small; FONT-FAMILY: Arial">Jeszcze raz dzi=
+=C4=99kujemy za zainteresowanie firm=C4=85 Accenture.</SPAN></DIV>
+<DIV>&nbsp;</DIV>
+<DIV>&nbsp;</DIV>
+<DIV><SPAN STYLE=3D"FONT-SIZE: x-small; FONT-FAMILY: Arial">Dzia=C5=82 Rekr=
+utacji Accenture</SPAN></DIV>
+<DIV>&nbsp;</DIV>
+<DIV>&nbsp;</DIV>
+<DIV><SPAN STYLE=3D"FONT-SIZE: x-small; FONT-FAMILY: Arial">Stay Connected:=
+ <A HREF=3D"http://careers.accenture.com/careers/global" REL=3D"external"><=
+img src=3D "http://accenture.taleo.net/custom/images/company_logo_24.gif"> =
+</img></A> <A HREF=3D"http://www.facebook.com/accenture" REL=3D"external"><=
+img src=3D "http://accenture.taleo.net/custom/images/company_logo_25.gif"> =
+</img></A> <A HREF=3D"http://www.linkedin.com/companies/accenture" REL=3D"e=
+xternal"><img src=3D "http://accenture.taleo.net/custom/images/company_logo=
+_26.gif"> </img></A> <A HREF=3D"http://twitter.com/accenture" REL=3D"extern=
+al"><img src=3D "http://accenture.taleo.net/custom/images/company_logo_27.g=
+if"> </img></A> <A HREF=3D"http://www.youtube.com/accenture" REL=3D"externa=
+l"><img src=3D "http://accenture.taleo.net/custom/images/company_logo_28.gi=
+f"> </img></A></SPAN>
+
+<DIV>&nbsp;</DIV>
+</DIV>
+<DIV><BR/>
+<SPAN STYLE=3D"FONT-SIZE: xx-small; FONT-FAMILY: Arial"><STRONG>To konto ma=
+ilowe s=C5=82u=C5=BCy jedynie do rozsy=C5=82ania informacji. Prosimy nie od=
+powiada=C4=87 na niniejszego maila, poniewa=C5=BC odpowied=C5=BA nie zostan=
+ie dostarczona do Dzia=C5=82u Rekrutacji.<BR/>
+Z powodu r=C3=B3=C5=BCnic systemowych, niekt=C3=B3re znaki mog=C4=85 nie wy=
+=C5=9Bwietla=C4=87 si=C4=99 prawid=C5=82owo.</STRONG></SPAN></DIV></div></b=
+ody>
+</html>
+
+------=_Part_18419_1208774070.1497369060007
+Content-Type: application/octet-stream; name=this_message_in_html.html
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename=this_message_in_html.html
+
+PCFET0NUWVBFIEhUTUwgUFVCTElDICItLy9XM0MvL0RURCBIVE1MIDQuMDEvL0VOIiAiaHR0cDov
+L3d3dy53My5vcmcvVFIvaHRtbDQvc3RyaWN0LmR0ZCI+CjxodG1sPgo8aGVhZD4KPG1ldGEgaHR0
+cC1lcXVpdj0iQ29udGVudC1UeXBlIiBjb250ZW50PSJ0ZXh0L2h0bWw7IGNoYXJzZXQ9dXRmLTgi
+Lz48dGl0bGU+PC90aXRsZT4KPC9oZWFkPgo8Ym9keSBzdHlsZT0nZm9udC1mYW1pbHk6IEFyaWFs
+LCBUaW1lcyBOZXcgUm9tYW4sIFZlcmRhbmEsIFNhbnMtU2VyaWY7IHBhZGRpbmc6IDVweCA1cHgg
+NXB4IDVweDsgbWFyZ2luOiAwcHg7IGJvcmRlci1zdHlsZTogbm9uZTsgYmFja2dyb3VuZC1jb2xv
+cjogI2ZmZmZmZic+CjxkaXY+PERJVj48U1BBTiBTVFlMRT0iRk9OVC1TSVpFOiB4LXNtYWxsOyBG
+T05ULUZBTUlMWTogQXJpYWwiPlN6YW5vd25hIFBhbmkgLyBTemFub3dueSBQYW5pZTwvU1BBTj48
+L0RJVj4KPERJVj48U1BBTiBTVFlMRT0iRk9OVC1TSVpFOiB4LXNtYWxsOyBGT05ULUZBTUlMWTog
+QXJpYWwiPiZuYnNwOzwvU1BBTj48L0RJVj4KPERJVj48U1BBTiBTVFlMRT0iRk9OVC1TSVpFOiB4
+LXNtYWxsOyBGT05ULUZBTUlMWTogQXJpYWwiPkR6acSZa3VqZW15IHphIHphaW50ZXJlc293YW5p
+ZSBzdGFub3dpc2tpZW0gUHJvZ3JhbWlzdGEgLk5FVCAtIDAwNDYxNzE0LjwvU1BBTj48L0RJVj4K
+PERJVj48U1BBTiBTVFlMRT0iRk9OVC1TSVpFOiB4LXNtYWxsOyBGT05ULUZBTUlMWTogQXJpYWwi
+PiZuYnNwOzwvU1BBTj48L0RJVj4KPERJVj48U1BBTiBTVFlMRT0iRk9OVC1TSVpFOiB4LXNtYWxs
+OyBGT05ULUZBTUlMWTogQXJpYWwiPkplxbxlbGkgUGFuaS9QYW5hIHVtaWVqxJl0bm/Fm2NpLCBk
+b8Wbd2lhZGN6ZW5pZSBpIGt3YWxpZmlrYWNqZSB6YXdvZG93ZSBixJlkxIUgb2Rwb3dpYWRhxYJ5
+IG9jemVraXdhbmlvbSBBY2NlbnR1cmUgb2Rub8WbbmllIHRlZ28gKGLEhWTFuiBpbm5lZ28pIHN0
+YW5vd2lza2EsIHdrcsOzdGNlIHNpxJkgeiBQYW5pxIUvUGFuZW0gc2tvbnRha3R1amVteS48L1NQ
+QU4+PC9ESVY+CjxESVY+PFNQQU4gU1RZTEU9IkZPTlQtU0laRTogeC1zbWFsbDsgRk9OVC1GQU1J
+TFk6IEFyaWFsIj4mbmJzcDs8L1NQQU4+PC9ESVY+CjxESVY+PFNQQU4gU1RZTEU9IkZPTlQtU0la
+RTogeC1zbWFsbDsgRk9OVC1GQU1JTFk6IEFyaWFsIj5XIGNlbHUgZG9zdMSZcHUgZG8gc3dvamVn
+byBwcm9maWx1IGthbmR5ZGF0YSwgcHJvc3rEmSBrbGlrbsSFxIc8L1NQQU4+IDxBIEhSRUY9Imh0
+dHBzOi8vYWNjZW50dXJlLnRhbGVvLm5ldC9jYXJlZXJzZWN0aW9uLzEwMjQwL2pvYmFwcGx5LmZ0
+bD9qb2I9MDA0NjE3MTQmbGFuZz1wbCIgUkVMPSJleHRlcm5hbCI+PFNQQU4gU1RZTEU9IkZPTlQt
+U0laRTogeC1zbWFsbDsgRk9OVC1GQU1JTFk6IEFyaWFsIj50dXRhajwvU1BBTj48L0E+PFNQQU4g
+U1RZTEU9IkZPTlQtU0laRTogeC1zbWFsbDsgRk9OVC1GQU1JTFk6IEFyaWFsIj4uPC9TUEFOPjwv
+RElWPgo8RElWPiZuYnNwOzwvRElWPgo8RElWPjxTUEFOIFNUWUxFPSJGT05ULVNJWkU6IHgtc21h
+bGw7IEZPTlQtRkFNSUxZOiBBcmlhbCI+Jm5ic3A7PC9TUEFOPjwvRElWPgo8RElWPjxTUEFOIFNU
+WUxFPSJGT05ULVNJWkU6IHgtc21hbGw7IEZPTlQtRkFNSUxZOiBBcmlhbCI+SmVzemN6ZSByYXog
+ZHppxJlrdWplbXkgemEgemFpbnRlcmVzb3dhbmllIGZpcm3EhSBBY2NlbnR1cmUuPC9TUEFOPjwv
+RElWPgo8RElWPiZuYnNwOzwvRElWPgo8RElWPiZuYnNwOzwvRElWPgo8RElWPjxTUEFOIFNUWUxF
+PSJGT05ULVNJWkU6IHgtc21hbGw7IEZPTlQtRkFNSUxZOiBBcmlhbCI+RHppYcWCIFJla3J1dGFj
+amkgQWNjZW50dXJlPC9TUEFOPjwvRElWPgo8RElWPiZuYnNwOzwvRElWPgo8RElWPiZuYnNwOzwv
+RElWPgo8RElWPjxTUEFOIFNUWUxFPSJGT05ULVNJWkU6IHgtc21hbGw7IEZPTlQtRkFNSUxZOiBB
+cmlhbCI+U3RheSBDb25uZWN0ZWQ6IDxBIEhSRUY9Imh0dHA6Ly9jYXJlZXJzLmFjY2VudHVyZS5j
+b20vY2FyZWVycy9nbG9iYWwiIFJFTD0iZXh0ZXJuYWwiPjxpbWcgc3JjPSAiaHR0cDovL2FjY2Vu
+dHVyZS50YWxlby5uZXQvY3VzdG9tL2ltYWdlcy9jb21wYW55X2xvZ29fMjQuZ2lmIj4gPC9pbWc+
+PC9BPiA8QSBIUkVGPSJodHRwOi8vd3d3LmZhY2Vib29rLmNvbS9hY2NlbnR1cmUiIFJFTD0iZXh0
+ZXJuYWwiPjxpbWcgc3JjPSAiaHR0cDovL2FjY2VudHVyZS50YWxlby5uZXQvY3VzdG9tL2ltYWdl
+cy9jb21wYW55X2xvZ29fMjUuZ2lmIj4gPC9pbWc+PC9BPiA8QSBIUkVGPSJodHRwOi8vd3d3Lmxp
+bmtlZGluLmNvbS9jb21wYW5pZXMvYWNjZW50dXJlIiBSRUw9ImV4dGVybmFsIj48aW1nIHNyYz0g
+Imh0dHA6Ly9hY2NlbnR1cmUudGFsZW8ubmV0L2N1c3RvbS9pbWFnZXMvY29tcGFueV9sb2dvXzI2
+LmdpZiI+IDwvaW1nPjwvQT4gPEEgSFJFRj0iaHR0cDovL3R3aXR0ZXIuY29tL2FjY2VudHVyZSIg
+UkVMPSJleHRlcm5hbCI+PGltZyBzcmM9ICJodHRwOi8vYWNjZW50dXJlLnRhbGVvLm5ldC9jdXN0
+b20vaW1hZ2VzL2NvbXBhbnlfbG9nb18yNy5naWYiPiA8L2ltZz48L0E+IDxBIEhSRUY9Imh0dHA6
+Ly93d3cueW91dHViZS5jb20vYWNjZW50dXJlIiBSRUw9ImV4dGVybmFsIj48aW1nIHNyYz0gImh0
+dHA6Ly9hY2NlbnR1cmUudGFsZW8ubmV0L2N1c3RvbS9pbWFnZXMvY29tcGFueV9sb2dvXzI4Lmdp
+ZiI+IDwvaW1nPjwvQT48L1NQQU4+Cgo8RElWPiZuYnNwOzwvRElWPgo8L0RJVj4KPERJVj48QlIv
+Pgo8U1BBTiBTVFlMRT0iRk9OVC1TSVpFOiB4eC1zbWFsbDsgRk9OVC1GQU1JTFk6IEFyaWFsIj48
+U1RST05HPlRvIGtvbnRvIG1haWxvd2Ugc8WCdcW8eSBqZWR5bmllIGRvIHJvenN5xYJhbmlhIGlu
+Zm9ybWFjamkuIFByb3NpbXkgbmllIG9kcG93aWFkYcSHIG5hIG5pbmllanN6ZWdvIG1haWxhLCBw
+b25pZXdhxbwgb2Rwb3dpZWTFuiBuaWUgem9zdGFuaWUgZG9zdGFyY3pvbmEgZG8gRHppYcWCdSBS
+ZWtydXRhY2ppLjxCUi8+ClogcG93b2R1IHLDs8W8bmljIHN5c3RlbW93eWNoLCBuaWVrdMOzcmUg
+em5ha2kgbW9nxIUgbmllIHd5xZt3aWV0bGHEhyBzacSZIHByYXdpZMWCb3dvLjwvU1RST05HPjwv
+U1BBTj48L0RJVj48L2Rpdj48L2JvZHk+CjwvaHRtbD4K
+------=_Part_18419_1208774070.1497369060007--
+

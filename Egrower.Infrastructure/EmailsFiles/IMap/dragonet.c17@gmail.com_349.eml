@@ -1,0 +1,195 @@
+Delivered-To: dragonet.c17@gmail.com
+Received: by 10.107.138.224 with SMTP id c93csp2869774ioj;
+        Mon, 8 Jan 2018 13:53:02 -0800 (PST)
+X-Google-Smtp-Source: ACJfBotd4hQYAHuUh0O7qINWZCFLyZWd8Xgk8jvnLNlxuYegtvBDXCKQlumkAHyilsSMlqnmt9HQ
+X-Received: by 10.28.28.72 with SMTP id c69mr10570448wmc.149.1515448382854;
+        Mon, 08 Jan 2018 13:53:02 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1515448382; cv=none;
+        d=google.com; s=arc-20160816;
+        b=zDtrVz66UPlWmwcHs7nTeJO3GUH1+3WfuzfPfW6nF2tQO9pPbThz4aMmOHbtEQzSFo
+         4qM0CtHiXiG8vttLtjFUzb0OUgVvUV9oT0ZeOgeBaLshYCN0YgVFFJ/93HiWwimZ+91d
+         GXUKtHYvGSecK8V0l7E5aw3YVMfiPDCf+Y9UhfdSgYBFKPGKX0T8NcECBPIiI+ylvDst
+         e0xe5UxgnkoHuRPw/hE12FtL90txnVYpyj4n1StDOK0NlJLjWi6qStw5Ggb+Om7THrOu
+         AsC0FbIJ3kif3TG9KMO7mO1xIHHx8ycFaOd6Zid6ThxaCROw0qYmcKWTgBf9SuPO3bcd
+         ZwVA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=content-transfer-encoding:list-unsubscribe:mime-version:reply-to
+         :from:date:message-id:subject:to:dkim-signature
+         :arc-authentication-results;
+        bh=V8tV0+Ml7WBdYAkDEXMqmV+O6PzX7W0TjODXAesxP7k=;
+        b=bPAgOTDkfrHvmXpmNJ3vBhhZUttdLNca18Sss9N6nKH9IgS51NXueufPHnv8H9Rp3H
+         O6M03QJL4WsFG9fltnWwcVeeGH1tbGOPgFesvM42UWSkMbVtdJQbCqL9m1o22PA8A/b9
+         R0BU+tk8HA509BHM0NV1YfqQuudMDeZxxHswp2qEcJ3WEKiqziNnVVzHpnZaV81q2cDZ
+         pp+AtsCF4vgd9rFWeNcIxbMeh/Np2j0+H838ANN+PGhWJZWq3PoZ4IjdT53E2I4pxLiO
+         4c/I9E3llJjaYloTG0n5NwtWPjSluMFfkRcXJCEjd+aXrfJGYAUpvnIwid2NwlGDW4Vx
+         /I+w==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@dorotafilipiuk.pl header.s=default header.b=rNDnNnqb;
+       spf=pass (google.com: domain of bounce@dorotafilipiuk.pl designates 79.143.176.60 as permitted sender) smtp.mailfrom=bounce@dorotafilipiuk.pl;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=dorotafilipiuk.pl
+Return-Path: <bounce@dorotafilipiuk.pl>
+Received: from dorotafilipiuk.pl (ip-60-176-143-79.static.contabo.net. [79.143.176.60])
+        by mx.google.com with ESMTPS id d200si8403937wmd.238.2018.01.08.13.53.02
+        for <dragonet.c17@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 08 Jan 2018 13:53:02 -0800 (PST)
+Received-SPF: pass (google.com: domain of bounce@dorotafilipiuk.pl designates 79.143.176.60 as permitted sender) client-ip=79.143.176.60;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@dorotafilipiuk.pl header.s=default header.b=rNDnNnqb;
+       spf=pass (google.com: domain of bounce@dorotafilipiuk.pl designates 79.143.176.60 as permitted sender) smtp.mailfrom=bounce@dorotafilipiuk.pl;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=dorotafilipiuk.pl
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
+	d=dorotafilipiuk.pl; s=default; h=Content-Transfer-Encoding:Content-Type:
+	List-Unsubscribe:MIME-Version:Reply-To:From:Date:Message-ID:Subject:To:Sender
+	:Cc:Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
+	Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Id:
+	List-Help:List-Subscribe:List-Post:List-Owner:List-Archive;
+	bh=V8tV0+Ml7WBdYAkDEXMqmV+O6PzX7W0TjODXAesxP7k=; b=rNDnNnqbE35x8Y12F7/690SWzZ
+	YW/rcAr+OVnlmAoUgJO88EfLZ2D8p3JaEoACi5CgIeUJj2imTCVxenXHfVEow3pGj0Np+2F9eVNXW
+	AZurr8lNvYuBiEGKuwaIb44VxuUNVVRhcIeHXm4oHUWffReD+UrInkkinQ3WxFmreAK6/JPQ+mitO
+	mmRhzfQJxDa52XFaLC9HLo93QzKKyqnN517Y6/bnPMu0Y2lZmtVbl//I43mb7HQJ+s2CsUZKBJy6+
+	DTv6zUh2J2hS9Q9/UMniznhkXMoLTS+5p1BhHlAtmiRDU8fxjYFcEzONavq/7dz+n7bomnOF4r4jV
+	C0iEHcsw==;
+Received: from [79.143.176.60] (port=44758 helo=dorotafilipiuk.pl)
+	by vmi106355.contabo.host with esmtpa (Exim 4.89)
+	(envelope-from <bounce@dorotafilipiuk.pl>)
+	id 1eYfLq-0006TO-8C
+	for dragonet.c17@gmail.com; Mon, 08 Jan 2018 22:53:02 +0100
+To: dragonet.c17@gmail.com
+Subject: =?UTF-8?B?W3d5endhbmllXSBQZGYgKyBsaXZlIG8gMjA6MDAgLSBkemllxYQgMQ==?=
+Message-ID: <74027c67288cc8785bcaebeaee3d706c@dorotafilipiuk.pl>
+Date: Mon, 08 Jan 2018 21:53:02 +0000
+From: "Dorota Filipiuk" <biuro@dorotafilipiuk.pl>
+Reply-To: biuro@dorotafilipiuk.pl
+MIME-Version: 1.0
+X-Mailer-LID: 81
+List-Unsubscribe: <http://dorotafilipiuk.pl/interspire/unsubscribe.php?M=58137&C=3dbaa9c3cdcef032e05bcbf3728b538c&L=81&A=366>
+X-Mailer-RecptId: 58137
+X-Mailer-SID: 366
+Content-Type: multipart/alternative; charset="UTF-8"; boundary="b1_bc9b9cdb5cd4864508730b8bd7a3ad2b"
+Content-Transfer-Encoding: 8bit
+X-AntiAbuse: This header was added to track abuse, please include it with any abuse report
+X-AntiAbuse: Primary Hostname - vmi106355.contabo.host
+X-AntiAbuse: Original Domain - gmail.com
+X-AntiAbuse: Originator/Caller UID/GID - [47 12] / [47 12]
+X-AntiAbuse: Sender Address Domain - dorotafilipiuk.pl
+X-Get-Message-Sender-Via: vmi106355.contabo.host: authenticated_id: biuro@dorotafilipiuk.pl
+X-Authenticated-Sender: vmi106355.contabo.host: biuro@dorotafilipiuk.pl
+X-Source: 
+X-Source-Args: 
+X-Source-Dir: 
+
+--b1_bc9b9cdb5cd4864508730b8bd7a3ad2b
+Content-Type: text/plain; format=flowed; charset="UTF-8"
+Content-Transfer-Encoding: 8bit
+
+Cześć,
+
+już DZISIAJ zaczynamy nasze wyzwanie "Weź CZAS w swoje ręce"
+- tak się cieszę!
+Codziennie przez 5 dni będę Ci przysyłać informacje o kolejnych
+materiałach dostępnych w ramach tego wydarzenia a także
+codziennie widzimy się o 20:00 na mini szkoleniu.
+
+Jeśli jeszcze nie jesteś w grupie DOŁĄCZ DO NAS!
+(http://dorotafilipiuk.pl/interspire/link.php?M=58137&A=366&L=140&F=T)
+
+Dzisiaj zajmiemy się rzeczą absolutnie fundamentalną jeśli
+chodzi o efektywne zarządzanie sobą w czasie. O 20:00 na naszej
+Grupie Wyzwań, podczas 30-minutowego live'a powiem Ci dlaczego ludzie
+sukcesu potrafią działać zdecydowanie skuteczniej mimo, że mają
+dokładnie
+te same 24 godziny co każdy z nas. Chętnie odpowiem też na Wasze pytania
+i
+dam Wam pewne zadanie do przemyślenia ;)
+
+Przygotowałam dla Ciebie również bezpłatne materiały, które pomogą
+Ci
+krok po kroku się doskonalić, które będą uzupełnieniem
+do codziennych spotkań na żywo.
+Dodatkowe ćwiczenia do 1' kroku możesz pobrać tutaj:
+http://dorotafilipiuk.pl/interspire/link.php?M=58137&A=366&L=2402&F=T
+
+
+Uwaga: Do wszystkich materiałów (live'ów na grupie i plików pdf)
+będziesz mieć dostęp tylko tydzień od publikacji ;)
+
+Tymczasem do zobaczenia w grupie i jutro w Twojej skrzynce mailowej :)
+
+Pozdrawiam serdecznie!
+Dorota
+
+www.dorotafilipiuk.pl
+FB: http://dorotafilipiuk.pl/interspire/link.php?M=58137&A=366&L=130&F=T
+YT: http://dorotafilipiuk.pl/interspire/link.php?M=58137&A=366&L=131&F=T
+
+
+Dostajesz tego e-maila, bo chcesz osiągnąć sukces a to wyzwanie może Ci
+to ułatwić.
+Jeśli nie chcesz otrzymywać więcej maili z treściami uczącymi
+efektywności osobistej
+po prostu kiliknij
+TUTAJ:http://dorotafilipiuk.pl/interspire/unsubscribe.php?M=58137&C=3dbaa9c3cdcef032e05bcbf3728b538c&L=81&A=366
+
+--b1_bc9b9cdb5cd4864508730b8bd7a3ad2b
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: 8bit
+
+<html>
+<head>
+</head>
+<body>
+<span>Cześć,</span><br /><br /><span>już</span><strong>&nbsp;DZISIAJ
+zaczynamy nasze&nbsp;wyzwanie "Weź CZAS w swoje
+ręce"</strong><span>&nbsp;</span><br /><span>- tak się cieszę!</span><br
+/><span>Codziennie przez 5&nbsp;dni&nbsp;będę Ci przysyłać
+informacje&nbsp;o kolejnych&nbsp;</span><br /><span>materiałach
+dostępnych w ramach tego wydarzenia a także&nbsp;</span><br
+/><span>codziennie widzimy się o 20:00 na mini szkoleniu.&nbsp;</span><br
+/><br /><span>Jeśli jeszcze nie jesteś w grupie&nbsp;</span><strong><a
+href="http://dorotafilipiuk.pl/interspire/link.php?M=58137&A=366&L=140&F=H">DOŁĄCZ
+DO NAS!</a><br
+/></strong><span>(https://www.facebook.com/groups/182910378911667/)</span><br
+/><br /><span>Dzisiaj zajmiemy się rzeczą absolutnie fundamentalną
+jeśli</span><br /><span>chodzi o efektywne zarządzanie sobą w czasie.
+O&nbsp;</span><strong>20:00</strong><span>&nbsp;na naszej</span><br /><a
+href="http://dorotafilipiuk.pl/interspire/link.php?M=58137&A=366&L=140&F=H">Grupie
+Wyzwań</a><span>, podczas&nbsp;</span><strong>30-minutowego
+live'a</strong><span>&nbsp;powiem Ci
+dlaczego</span><strong>&nbsp;ludzie&nbsp;</strong><br /><strong>sukcesu
+potrafią działać&nbsp;zdecydowanie skuteczniej</strong><span>&nbsp;mimo,
+że mają dokładnie&nbsp;</span><br /><span>te same 24 godziny&nbsp;co
+każdy z nas. Chętnie odpowiem też na Wasze pytania i&nbsp;</span><br
+/><span>dam Wam&nbsp;pewne zadanie do przemyślenia ;)</span><br /><br
+/><span>Przygotowałam dla Ciebie
+r&oacute;wnież</span><strong>&nbsp;bezpłatne materiały, kt&oacute;re
+pomogą Ci<br />krok po kroku się doskonalić</strong><span>, kt&oacute;re
+będą uzupełnieniem</span><br /><span>do codziennych spotkań na
+żywo.&nbsp;</span><strong><br /></strong><span>Dodatkowe ćwiczenia do 1'
+kroku możesz pobrać tutaj:</span><br /><strong><a
+href="http://dorotafilipiuk.pl/interspire/link.php?M=58137&A=366&L=2402&F=H">http://materialy.dorotafilipiuk.pl/Krok%201.pdf</a></strong><br
+/><br /><strong><br /></strong><span>Uwaga: Do wszystkich
+materiał&oacute;w (live'&oacute;w na grupie i plik&oacute;w pdf)</span><br
+/><span>będziesz mieć dostęp tylko tydzień&nbsp;od publikacji
+;)</span><strong><br /></strong><br /><span>Tymczasem&nbsp;do zobaczenia
+w&nbsp;</span><a
+href="http://dorotafilipiuk.pl/interspire/link.php?M=58137&A=366&L=140&F=H">grupie&nbsp;</a><span>i
+jutro w Twojej skrzynce mailowej :)</span><br /><br /><span>Pozdrawiam
+serdecznie!</span><br /><span>Dorota&nbsp;</span><br /><br
+/><span>www.dorotafilipiuk.pl</span><br
+/><span>FB:&nbsp;https://www.facebook.com/dorotafilipiukpl/</span><br
+/><span>YT:&nbsp;http://www.youtube.com/c/DorotaFilipiuktrainer&nbsp;</span><br
+/><br /><br /><span>Dostajesz tego e-maila, bo chcesz osiągnąć sukces a
+to wyzwanie może Ci to ułatwić.</span>
+<div>Jeśli nie chcesz otrzymywać więcej maili z treściami uczącymi
+efektywności osobistej</div>
+<span>po prostu kiliknij&nbsp;</span><a
+href="http://dorotafilipiuk.pl/interspire/unsubscribe.php?M=58137&C=3dbaa9c3cdcef032e05bcbf3728b538c&L=81&A=366">TUTAJ.</a>
+<img
+src="http://dorotafilipiuk.pl/interspire/open.php?M=58137&L=81&A=366&F=H&image=.jpg"
+height="1" width="10"></body>
+</html>
+
+--b1_bc9b9cdb5cd4864508730b8bd7a3ad2b--
+
+

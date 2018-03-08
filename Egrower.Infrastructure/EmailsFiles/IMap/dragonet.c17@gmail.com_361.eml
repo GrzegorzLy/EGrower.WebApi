@@ -1,0 +1,1650 @@
+Delivered-To: dragonet.c17@gmail.com
+Received: by 10.107.7.81 with SMTP id 78csp1021303ioh;
+        Wed, 24 Jan 2018 10:36:09 -0800 (PST)
+X-Google-Smtp-Source: AH8x226rZL5GfSsUGyBi3kTpAgDJJgcPgkqtraYFAbUpLMenkqx7wfOp1Z3adAVaRHxyxHZx8VkW
+X-Received: by 10.99.124.94 with SMTP id l30mr11208909pgn.108.1516818969382;
+        Wed, 24 Jan 2018 10:36:09 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1516818969; cv=none;
+        d=google.com; s=arc-20160816;
+        b=IQDo10MWQwdBY0CxzIqskU7udn6HRvI3yiof7mjBCLppSdqNPsraWGT+QV8i8ySpGP
+         p3+8GCFEbxUM2/hg/rg26S0LikExap4vDTGiID+5P5ulKg8ILAcUFvhpEyLjhj4oPnRN
+         lSmnuOBoSLhTplZtvobL1hwLIW5r4kxcJG5sVZfelCnYStJROLSPUkbbewPfGumCE7U2
+         Hj01jmX7wDSTo9NDRswC7H2JtLdWHulnOVxnWz3kXdi2r6+j3sp30OGwW9MelgPbEDKu
+         PZH+LDo6qKVhevJT2p7bobFCWJgKevhXXQQzQgpwgTOC/ppJejhXoVjXIAs5VEOp9bgx
+         6/Ug==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=list-unsubscribe:mime-version:subject:message-id:to:reply-to:from
+         :date:dkim-signature:dkim-signature:arc-authentication-results;
+        bh=v28iGKYVkjBq+FdgJ4Q1I5A0oHFNpQOksXWnaY4T8Ag=;
+        b=QAnQ1hfrfRV1ydsEJhdInaV5AbXsAhFIWRevGP/dAmfvBxXs8hLqp+ii8v9bLUO+ul
+         yVovTDLQO0IhtPhQ/2e4DDyQEpvmO0GqoEoqz+S4UgmivTzlxKZS7F7jHRHuxChs8u/9
+         JddVvNeuPS5gxU/ozPxNvL72ysSMYCJCNZMGmyBSONQ+GZz7t0t7XNEfGxKzBTsvbuhE
+         GtLkvktOPyFTJgRC3PUXYFMF8xzpzE+B58Z+CS1ccBFwj+DhVk8nz9+q7N9uKZMLzIu6
+         dMqZm3JmqZ4t9wkZcQ6a3S4Qyej/aRiKGrYul51GDn9K142Mg15flt24qLE5u58KCgA/
+         IxhQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@xamarin.com header.s=m1 header.b=u/94Te/W;
+       dkim=pass header.i=@mktdns.com header.s=m1 header.b=OFoqabYO;
+       spf=pass (google.com: domain of 975-jox-769.0.15654.0.0.5079.9.27787535@em-sj-77.mktomail.com designates 199.15.214.184 as permitted sender) smtp.mailfrom=975-JOX-769.0.15654.0.0.5079.9.27787535@em-sj-77.mktomail.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=xamarin.com
+Return-Path: <975-JOX-769.0.15654.0.0.5079.9.27787535@em-sj-77.mktomail.com>
+Received: from hercules.mktdns.com (hercules.mktdns.com. [199.15.214.184])
+        by mx.google.com with ESMTPS id h18si3212871pfi.294.2018.01.24.10.36.07
+        for <dragonet.c17@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 24 Jan 2018 10:36:09 -0800 (PST)
+Received-SPF: pass (google.com: domain of 975-jox-769.0.15654.0.0.5079.9.27787535@em-sj-77.mktomail.com designates 199.15.214.184 as permitted sender) client-ip=199.15.214.184;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@xamarin.com header.s=m1 header.b=u/94Te/W;
+       dkim=pass header.i=@mktdns.com header.s=m1 header.b=OFoqabYO;
+       spf=pass (google.com: domain of 975-jox-769.0.15654.0.0.5079.9.27787535@em-sj-77.mktomail.com designates 199.15.214.184 as permitted sender) smtp.mailfrom=975-JOX-769.0.15654.0.0.5079.9.27787535@em-sj-77.mktomail.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=xamarin.com
+Return-Path: <newsletter@xamarin.com>
+X-MSFBL: ZHJhZ29uZXQuYzE3QGdtYWlsLmNvbUBkdnAtMTk5LTE1LTIxNC0xODRAYmctc2pk
+	LTE4M0A5NzUtSk9YLTc2OTo1MDAxOjM3MzE6MTY3NDE6MTo1MDc5Ojk6MTU2NTQ6
+	Mjc3ODc1MzU=
+Received: from [10.0.87.249] ([10.0.87.249:49188] helo=sjmas01.marketo.org)
+	by sjmta06.marketo.org (envelope-from <newsletter@xamarin.com>)
+	(ecelerity 3.6.8.47404 r(Core:3.6.8.0)) with ESMTP
+	id 4E/7D-30717-312D86A5; Wed, 24 Jan 2018 12:36:03 -0600
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; t=1516818963;
+	s=m1; d=xamarin.com; i=@xamarin.com;
+	h=Date:From:To:Subject:MIME-Version:Content-Type;
+	bh=v28iGKYVkjBq+FdgJ4Q1I5A0oHFNpQOksXWnaY4T8Ag=;
+	b=u/94Te/WNGr/p4V08d6p8Q03wHxtaQJAvTcAgfCTs+LZ4YLkwG1RfbraPLXHV70E
+	XJIfs+8t7bQs8NT6gQPKKomA9Pa8cGtFUw3CCC0toh1lR6QGpZrrAi/JMWMwvUlOd7c
+	lxkX3Ow8B7SJGS5zyg+Wu1OmWQxZR054LTCsixks=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; t=1516818962;
+	s=m1; d=mktdns.com; i=@mktdns.com;
+	h=Date:From:To:Subject:MIME-Version:Content-Type;
+	bh=v28iGKYVkjBq+FdgJ4Q1I5A0oHFNpQOksXWnaY4T8Ag=;
+	b=OFoqabYOo+DvC2BoZ65sRDvVHmnjsuTNPY7pYjS7hp+D5ZpHXuZs5RT3xDsA6fIS
+	PLM7LBGxYJtEeY41HLVBoS9Mc9YYUNlfVAUWKYX0kMHnxuaYyLtxY4uVskIEPMb1qx5
+	Ch6ZAZQMsYz0/B6PiGxl+QAbV/r+i5gNfUri5li8=
+Date: Wed, 24 Jan 2018 12:36:02 -0600 (CST)
+From: Xamarin <newsletter@xamarin.com>
+Reply-To: newsletter@xamarin.com
+To: dragonet.c17@gmail.com
+Message-ID: <438287099.-117458044.1516818962984.JavaMail.root@sjmas01.marketo.org>
+Subject: Your Xamarin Newsletter for January 2018
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_-117458047_978755594.1516818962983"
+X-Binding: bg-sjd-183
+X-MarketoID: 975-JOX-769:5001:3731:16741:1:5079:9:15654:27787535
+X-MktArchive: false
+List-Unsubscribe: <mailto:J44UQNZRGFHW6Z3NNFCXKUTRNN4XQTCOOI4TSNDRIJWVMWRUOZPVS6S7HFWGGLKCOZSWWPI.15654.5079.9@unsub-sj.mktomail.com>
+X-Mailfrom: 975-JOX-769.0.15654.0.0.5079.9.27787535@em-sj-77.mktomail.com
+X-MSYS-API: {"options":{"open_tracking":false,"click_tracking":false}}
+X-MktMailDKIM: true
+
+------=_Part_-117458047_978755594.1516818962983
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Register for our Visual Studio App Center Webinar, download the SmartHotel =
+360 reference app suite, and more!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Xamarin Newsletter
+
+
+January 2018
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Join us for Xamarin University Presents: Ship Better Apps with Visual Studi=
+o App Center <http://mkto-o0039.com/E050J13yOOO0Q0AX4F0Sd05>
+
+
+
+
+
+
+Join Xamarin University's Mark Smith on Thursday, January 25 at 9 am PT / 1=
+2 pm GMT to learn how to automate your app development pipeline with Visual=
+ Studio App Center. Mark will share best practices and walk through step-by=
+-step demos, including connecting your apps, continuous builds, automated t=
+esting, distribution, and crash reporting, so you'll leave ready to improve=
+ your apps. Register =C2=BB <http://mkto-o0039.com/LAS4XO0050PF1JzO30d050Q>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Kickstart Development with the Open-Source SmartHotel 360 Reference App Sui=
+te <http://mkto-o0039.com/gQ0OSQd0A405OX05J100AF3>
+
+
+
+
+
+
+SmartHotel360 is an open-source, end-to-end reference app suite to help you=
+ learn to create Xamarin.Forms apps with the Xamarin Live Player, Xamarin.F=
+orms Native Forms, and native features, while connecting to backend and Azu=
+re services. The app suite also contains an ASP.NET Core 2.0 website featur=
+ing a microservice architecture using Docker. Download =C2=BB <http://mkto-=
+o0039.com/G5O0XF40OBSRJ05d01003QA>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Get the C# Developer=E2=80=99s Guide to Shipping Better Apps with Visual St=
+udio App Center <http://mkto-o0039.com/y5FJOA3Q050dXOS0SC00140>
+
+
+
+
+
+
+Many of you have already starting using App Center, but we know some haven=
+=E2=80=99t had a chance to try it yet. Whether you=E2=80=99ve already conne=
+cted your apps or are just creating your account, we=E2=80=99ve rounded up =
+our favorite resources to help you jumpstart a year of shipping amazing app=
+s. Learn more =C2=BB <http://mkto-o0039.com/b00005OdFJT1X35D040AOSQ>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Get the Source Code and Walkthrough of Xamarin.Forms App Telerik Tagit <htt=
+p://mkto-o0039.com/v1SO0QFw05dXJ3g5O04A000>
+
+
+
+
+
+
+Telerik Tagit is a fully-featured Xamarin.Forms app that uses Microsoft Cog=
+nitive Services Computer Vision API and Progress Telerik UI for Xamarin to =
+create an intelligent, fully native Android, iOS, and UWP app. Check out th=
+e free source code and six-part walkthrough now. Get the source code =C2=BB=
+ <http://mkto-o0039.com/c0S04A3J0dQO155Xh0OxF00>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Try the Visual Studio 2017 version 15.6 Preview <http://mkto-o0039.com/gU0O=
+SQd0A405OX05J100EF3>
+
+
+
+
+
+
+The release of Visual Studio 2017 version 15.5 included many exciting featu=
+res, including live XAML previewing in Android emulators with the Xamarin L=
+ive Player, and improvements to the Mac pairing mechanism. Visual Studio 20=
+17 version 15.6 Preview 2 builds on this progress, introducing macOS enviro=
+nment provisioning, iOS Wi-Fi deployment, live XAML previewing in the Remot=
+ed iOS Simulator, and more! Get started =C2=BB <http://mkto-o0039.com/z0AO4=
+5d001SOQVF5J3F0X00>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+See How Colonial Life Drives Field Sales Productivity with .NET, Mobile, an=
+d DevOps <http://mkto-o0039.com/jAGO054dJ10SO03QX5W0F00>
+
+
+
+
+
+
+Colonial Life=E2=80=99s four-member development team completely rebuilt its=
+ internal sales apps, including many new features, such as intelligent filt=
+ering, consumer-esque help tips, and more, in just four months. They share =
+how they use Xamarin.Forms, automated testing, distribution, crash reportin=
+g, and Team Foundation Server to deliver intuitive native apps, as well as =
+their advice for developers. Read more =C2=BB <http://mkto-o0039.com/v1SO0Q=
+FX05dXJ3H5O04A000>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Tips and Tricks
+
+
+
+
+
+
+Xamarin.Forms Native Forms is Polished and Shiny in 2.5.0 <http://mkto-o003=
+9.com/q5XJ051Odm0QSF04O03C00A>: Since we previewed Native Forms in June, th=
+e team has worked to fix bugs and integrate community feedback. This post f=
+rom E.Z. Hart covers what's new and shows you how to start embedding Native=
+ Forms in your own apps.
+
+
+
+The Top 12 Xamarin Blog Posts of 2017 <http://mkto-o0039.com/gD0OSQd0A405OX=
+05J100nF3>: Each January, we highlight our most popular blog posts from the=
+ previous year. Check out 2017's round-up for tips, tricks, and guides to b=
+uilding better apps faster with Microsoft's end-to-end mobile lifecycle too=
+ls and services.
+
+
+
+Iterate Faster with the Xamarin Live Player and iOS Coded User Interface <h=
+ttp://mkto-o0039.com/AF1o0SJO40Q553A00d0E0OX>: The Xamarin Live Player allo=
+ws you to rapidly iterate and develop Android and iOS apps, without ever ha=
+ving to compile. In this informative post, James Montemagno shows you how t=
+o use the Xamarin Live Player with your iOS apps.
+
+
+
+Xamarin.Android Now Double Stuffed with Oreo 8.1 <http://mkto-o0039.com/n0J=
+30Fp04AQd0XO0O5105FS>: Jon Douglas covers how to get the most out of Androi=
+d Oreo 8.1 with Xamarin.Android, which now supports new Android Oreo 8.1 fe=
+atures, including Android Go, Neural Networks API, Autofill framework enhan=
+cements, SharedMemory API, and more.
+
+
+
+The Xamarin Show | Getting Started with iOS Development in C# <http://mkto-=
+o0039.com/t5X34A1FJO0dq00QOS0005G>: James Montemangno's developer video ser=
+ies on Channel 9 covers topics in the world of Xamarin app development. Exp=
+lore a few of James=E2=80=99 favorite iOS episodes to start developing full=
+y native iOS apps with C#, Visual Studio, and Xamarin.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Upcoming Events
+
+
+
+
+
+
+Sri Lanka .NET Forum <http://mkto-o0039.com/G5O0XF40OrSHJ05d01003QA>: Two s=
+essions covering the fundamentals of functional programming, including OOP =
+and functional programming in F#, ASP.NET Core with Middleware, and hands-o=
+n demos. February 1, Colombo, Sri Lanka <http://mkto-o0039.com/G5O0XF40OrSH=
+J05d01003QA>
+
+
+
+Azure and Xamarin from How to Wow <http://mkto-o0039.com/x0J0000F4I51dQO0s5=
+S3OXA>: An introduction to Xamarin, .NET Core, .NET Standard, and using Xam=
+arin.Forms to take apps from "How?" to "Wow" (Delhi NCR Xamarin and Azure D=
+evelopers group). February 3, Gurugram, India <http://mkto-o0039.com/x0J000=
+0F4I51dQO0s5S3OXA>
+
+
+
+MADN Belgium <http://mkto-o0039.com/VOOt1005F50X400JdSA3JQ0>: Explore navig=
+ation, automatic inspections and quick fixes, code generation, and built-in=
+ tooling, like version control integration and local history. February 5, E=
+degem, Belgium <http://mkto-o0039.com/VOOt1005F50X400JdSA3JQ0>
+
+
+
+What's New in Xamarin.Forms 2.5 <http://mkto-o0039.com/rS0K0X4F0OudOQJ5301A=
+050>: Join Microsoft MVP Mark Radacz as he presents the latest changes in X=
+amarin.Forms 2.5. Be sure to bring your laptop with Xamarin fully installed=
+. Beginners welcome! February 5, Jacksonville, FL, USA <http://mkto-o0039.c=
+om/rS0K0X4F0OudOQJ5301A050>
+
+
+
+There is a Service for That! <http://mkto-o0039.com/DJLS00v0XOO00F15dQ4305A=
+>: Join Mayur Tendulkar from Microsoft to learn how to add must-have mobile=
+ services, like push notifications, user authentication, data storage, and =
+crash reporting to your Xamarin apps. February 10, Mumbai, India <http://mk=
+to-o0039.com/DJLS00v0XOO00F15dQ4305A>
+
+
+
+2018 Training Series <http://mkto-o0039.com/O0F03SAX0410QJdM0w055OO>: Sydne=
+y Mobile .NET Developers kicks off 2018 with an intro to Visual Studio Tool=
+s for Xamarin, including Xamarin.Android, Xamarin.iOS, UWP and Windows 10, =
+and the importance of high quality user experiences. February 13, Sydney, A=
+ustralia <http://mkto-o0039.com/O0F03SAX0410QJdM0w055OO>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Xamarin from Microsoft
+
+Xamarin Inc., as a wholly-owned Microsoft subsidiary acting as a separate l=
+egal entity, adheres to the Microsoft Privacy Statement: https://privacy.mi=
+crosoft.com/en-us/privacystatement
+
+If you'd like to discontinue receiving these types of e-mails, you may opt-=
+out using this link: https://resources.xamarin.com/unsubscribe.html?mkt_uns=
+ubscribe=3D1&mkt_tok=3DeyJpIjoiWm1ZNE1XTTRZV1ZqTXprMyIsInQiOiJmWWhabWlyVkRE=
+WExjTkxwSXN6QnBQUFFkTGNPN3ZDUUp6SFZlbFoveFlLWXlnQWlMYUp2dmFwQWhqQnpMZC9ENmZ=
+FRkhNNWREMURLODdRM3JlNnBHR3Q0VmdxQzVDeDRLWFRFQy9LazMzck9IbC9TTUY4U1h1V2lyRn=
+c1SmtvVSJ9=20
+
+1355 Market St. 4th Floor, San Francisco, CA, 94103
+
+------=_Part_-117458047_978755594.1516818962983
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html lang=3D"en" xmlns=3D"http://www.w3.org/1999/xhtml" >
+<head>
+<title>Xamarin Newsletter: January 2018</title>
+<meta charset=3D"utf-8">
+<meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1"=
+>
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+<style type=3D"text/css">
+  /*<![CDATA[*/
+  /* CLIENT-SPECIFIC STYLES */
+  #outlook a{padding:0;} /* Force Outlook to provide a "view in browser" me=
+ssage */
+  .ReadMsgBody{width:100%;} .ExternalClass{width:100%;} /* Force Hotmail to=
+ display emails at full width */
+  .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass fon=
+t, .ExternalClass td, .ExternalClass div {line-height: 100%;} /* Force Hotm=
+ail to display normal line spacing */
+  body, table, td, a{-webkit-text-size-adjust:100%; -ms-text-size-adjust:10=
+0%;} /* Prevent WebKit and Windows mobile changing default text sizes */
+  table, td{mso-table-lspace:0pt; mso-table-rspace:0pt;} /* Remove spacing =
+between tables in Outlook 2007 and up */
+  img{-ms-interpolation-mode:bicubic;} /* Allow smoother rendering of resiz=
+ed image in Internet Explorer */
+  td[class=3D"padding-copy"]{
+    padding: 30px 0px 0px !important;
+    font-size: 22px;
+    line-height: 30px;
+  }
+  td[class=3D"padding-copy-tips-body"]{
+    padding: 10px 0px 0px !important;
+    font-size: 22px;
+    line-height: 30px;
+    text-align: left;
+  }
+  td[class=3D"padding-copy-head"]{
+    font-size: 40px !important;
+    line-height: 50px !important;
+  }
+  td[class=3D"padding-copy-subhead"]{
+    font-size: 28px !important;
+    line-height: 50px !important;
+  }
+  td[class=3D"padding-copy-h1"]{
+    font-size: 30px;
+    line-height: 42px;
+    font-family: Helvetica, arial, sans-serif;
+    font-weight: lighter;
+    color: #5c4aa5;
+    padding-bottom: 20px;
+  }
+  td[class=3D"padding-copy-intro"]{
+    font-size: 16px !important;
+    line-height: 30px;
+    padding:30px 7% !important;
+    text-align: center;
+  }
+  td[class=3D"padding-copy-tips"]{
+    font-size: 30px;
+    line-height: 42px;
+    font-family: Helvetica, arial, sans-serif;
+    font-weight: lighter;
+    color: #fd0255;
+  }
+  td[class=3D"padding-copy-footer"]{
+    font-size: 16px;
+    line-height: 25px;
+    font-family: 'Segoe UI', Helvetica, arial, sans-serif;
+    color: #777777;
+  }
+  /* RESET STYLES */
+  body{margin:0; padding:0;}
+  img{border:0; height:auto; line-height:100%; outline:none; text-decoratio=
+n:none;}
+  table{border-collapse:collapse !important;}
+  body{height:100% !important; margin:0; padding:0; width:100% !important;}
+
+
+  /* iOS BLUE LINKS */
+  .appleBody a {color:#e5e5e5 !important; text-decoration: none !important;=
+}
+  .appleFooter a {color:#e5e5e5 !important; text-decoration: none !importan=
+t;}
+  .appleFooterDate a {color:#707070 !important; text-decoration: none !impo=
+rtant;}
+  .appleBody span {color:#707070 !important; text-decoration: none !importa=
+nt;}
+
+  /* MOBILE STYLES */
+  @media screen and (max-width: 768px) {
+
+    /* USE THESE CLASSES TO HIDE CONTENT ON MOBILE */
+
+    /* FULL-WIDTH TABLES */
+    table[class=3D"responsive-table"]{
+      width:100%!important;
+      text-align:center;
+    }
+
+    /* UTILITY CLASSES FOR ADJUSTING PADDING ON MOBILE */
+    td[class=3D"padding"]{
+      padding: 10px 5% 15px 5% !important;
+    }
+    td[class=3D"padding-copy"]{
+      padding: 30px 5% 10px 5% !important;
+      text-align: left;
+      font-size: 26px;
+      line-height: 32px;
+    }
+    td[class=3D"padding-copy-intro"]{
+      padding: 30px 7% !important;
+      font-size: 16px !important;
+      line-height: 28px;
+      text-align: center;
+    }
+    td[class=3D"padding-copy-tips-body"]{
+      padding: 10px 5% 10px 5% !important;
+      text-align: left;
+      font-size: 26px;
+      line-height: 32px;
+    }
+    td[class=3D"padding-copy-head"]{
+      padding: 20px 5% 0px 5% !important;
+      text-align: center;
+      font-size: 35px !important;
+      line-height: 45px !important;
+    }
+    td[class=3D"padding-copy-subhead"]{
+      padding: 0px 5% 10px 5% !important;
+      text-align: center;
+      font-size: 24px !important;
+      line-height: 40px !important;
+    }
+    td[class=3D"padding-copy-h1"]{
+      font-size: 30px;
+      line-height: 42px;
+      font-family: Helvetica, arial, sans-serif;
+      font-weight: lighter;
+      color: #5c4aa5;
+      padding: 20px 0px;
+    }
+    td[class=3D"padding-copy-tips"]{
+      font-size: 30px;
+      line-height: 42px;
+      font-family: Helvetica, arial, sans-serif;
+      font-weight: lighter;
+      color: #fd0255;
+      padding: 20px 0px;
+    }
+    td[class=3D"padding-copy-footer"]{
+      padding: 10px 5% 30px 5% !important;
+      text-align: center;
+      font-size: 26px;
+      line-height: 32px;
+    }
+
+    td[class=3D"section-padding"]{
+      padding: 20px 15px 30px !important;
+    }
+    /* iOS BLUE LINKS */
+    .appleBody a {color:#e5e5e5 !important; text-decoration: none !importan=
+t;}
+    .appleFooter a {color:#e5e5e5 !important; text-decoration: none !import=
+ant;}
+    .appleFooterDate a {color:#707070 !important; text-decoration: none !im=
+portant;}
+    .appleBody span {color:#707070 !important; text-decoration: none !impor=
+tant;}
+  }
+
+
+  /* MOBILE STYLES */
+  @media screen and (max-width: 525px) {
+
+    /* USE THESE CLASSES TO HIDE CONTENT ON MOBILE */
+    td[class=3D"mobile-hide"]{
+      display:none;}
+
+      img[class=3D"mobile-hide"]{
+        display: none !important;
+      }
+      /* FULL-WIDTH TABLES */
+      table[class=3D"responsive-table"]{
+        width:100%!important;
+        text-align:center;
+      }
+
+      /* UTILITY CLASSES FOR ADJUSTING PADDING ON MOBILE */
+      td[class=3D"padding"]{
+        padding: 10px 5% 15px 5% !important;
+      }
+
+      td[class=3D"padding-copy-head"]{
+        padding: 20px 5% 0px 5% !important;
+        text-align: center;
+        font-size: 35px !important;
+        line-height: 45px !important;
+      }
+      td[class=3D"padding-copy-intro"]{
+        padding: 40px 7% 10px 7% !important;
+        font-size: 16px !important;
+        line-height: 24px;
+        text-align: center;
+      }
+      td[class=3D"padding-copy-subhead"]{
+        padding: 0px 5% 10px 5% !important;
+        text-align: center;
+        font-size: 24px !important;
+        line-height: 40px !important;
+      }
+
+      td[class=3D"padding-copy"]{
+        padding: 10px 5% 50px 5% !important;
+        text-align: center;
+        font-size: 26px;
+        line-height: 32px;
+      }
+      td[class=3D"padding-copy-tips-body"]{
+        padding: 10px 5% 20px 5% !important;
+        text-align: left;
+        font-size: 26px;
+        line-height: 32px;
+      }
+      td[class=3D"padding-copy-h1"]{
+        font-size: 26px !important;
+        line-height: 42px;
+        font-family: Helvetica, arial, sans-serif;
+        font-weight: lighter;
+        color: #5c4aa5;
+        padding: 20px 0px;
+      }
+      td[class=3D"padding-copy-tips"]{
+        font-size: 26px !important;
+        line-height: 42px;
+        font-family: Helvetica, arial, sans-serif;
+        font-weight: lighter;
+        color: #fd0255;
+        padding: 20px 0px;
+      }
+      td[class=3D"padding-copy-footer"]{
+        padding: 10px 5% 30px 5% !important;
+        text-align: center;
+        font-size: 26px;
+        line-height: 32px;
+      }
+      td[class=3D"section-padding-background"]{
+        padding: 30px 15px 0px !important;
+      }
+      td[class=3D"section-padding"]{
+        padding: 20px 15px 20px !important;
+        background-color: #e5e5e5 !important;
+      }
+      /* iOS BLUE LINKS */
+      .appleBody a {color:#e5e5e5 !important; text-decoration: none !import=
+ant;}
+      .appleFooter a {color:#e5e5e5 !important; text-decoration: none !impo=
+rtant;}
+      .appleFooterDate a {color:#707070 !important; text-decoration: none !=
+important;}
+      .appleBody span {color:#707070 !important; text-decoration: none !imp=
+ortant;}
+    }
+    /*]]>*/
+</style>
+<title>Xamarin Newsletter: January 2018</title>
+<meta charset=3D"utf-8">
+<meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1"=
+>
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+<style type=3D"text/css">
+  /*<![CDATA[*/
+  /* CLIENT-SPECIFIC STYLES */
+  #outlook a{padding:0;} /* Force Outlook to provide a "view in browser" me=
+ssage */
+  .ReadMsgBody{width:100%;} .ExternalClass{width:100%;} /* Force Hotmail to=
+ display emails at full width */
+  .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass fon=
+t, .ExternalClass td, .ExternalClass div {line-height: 100%;} /* Force Hotm=
+ail to display normal line spacing */
+  body, table, td, a{-webkit-text-size-adjust:100%; -ms-text-size-adjust:10=
+0%;} /* Prevent WebKit and Windows mobile changing default text sizes */
+  table, td{mso-table-lspace:0pt; mso-table-rspace:0pt;} /* Remove spacing =
+between tables in Outlook 2007 and up */
+  img{-ms-interpolation-mode:bicubic;} /* Allow smoother rendering of resiz=
+ed image in Internet Explorer */
+  td[class=3D"padding-copy"]{
+    padding: 30px 0px 0px !important;
+    font-size: 22px;
+    line-height: 30px;
+  }
+  td[class=3D"padding-copy-tips-body"]{
+    padding: 10px 0px 0px !important;
+    font-size: 22px;
+    line-height: 30px;
+    text-align: left;
+  }
+  td[class=3D"padding-copy-head"]{
+    font-size: 40px !important;
+    line-height: 50px !important;
+  }
+  td[class=3D"padding-copy-subhead"]{
+    font-size: 28px !important;
+    line-height: 50px !important;
+  }
+  td[class=3D"padding-copy-h1"]{
+    font-size: 30px;
+    line-height: 42px;
+    font-family: Helvetica, arial, sans-serif;
+    font-weight: lighter;
+    color: #5c4aa5;
+    padding-bottom: 20px;
+  }
+  td[class=3D"padding-copy-intro"]{
+    font-size: 16px !important;
+    line-height: 30px;
+    padding:30px 7% !important;
+    text-align: center;
+  }
+  td[class=3D"padding-copy-tips"]{
+    font-size: 30px;
+    line-height: 42px;
+    font-family: Helvetica, arial, sans-serif;
+    font-weight: lighter;
+    color: #fd0255;
+  }
+  td[class=3D"padding-copy-footer"]{
+    font-size: 16px;
+    line-height: 25px;
+    font-family: 'Segoe UI', Helvetica, arial, sans-serif;
+    color: #777777;
+  }
+  /* RESET STYLES */
+  body{margin:0; padding:0;}
+  img{border:0; height:auto; line-height:100%; outline:none; text-decoratio=
+n:none;}
+  table{border-collapse:collapse !important;}
+  body{height:100% !important; margin:0; padding:0; width:100% !important;}
+
+
+  /* iOS BLUE LINKS */
+  .appleBody a {color:#e5e5e5 !important; text-decoration: none !important;=
+}
+  .appleFooter a {color:#e5e5e5 !important; text-decoration: none !importan=
+t;}
+  .appleFooterDate a {color:#707070 !important; text-decoration: none !impo=
+rtant;}
+  .appleBody span {color:#707070 !important; text-decoration: none !importa=
+nt;}
+
+  /* MOBILE STYLES */
+  @media screen and (max-width: 768px) {
+
+    /* USE THESE CLASSES TO HIDE CONTENT ON MOBILE */
+
+    /* FULL-WIDTH TABLES */
+    table[class=3D"responsive-table"]{
+      width:100%!important;
+      text-align:center;
+    }
+
+    /* UTILITY CLASSES FOR ADJUSTING PADDING ON MOBILE */
+    td[class=3D"padding"]{
+      padding: 10px 5% 15px 5% !important;
+    }
+    td[class=3D"padding-copy"]{
+      padding: 30px 5% 10px 5% !important;
+      text-align: left;
+      font-size: 26px;
+      line-height: 32px;
+    }
+    td[class=3D"padding-copy-intro"]{
+      padding: 30px 7% !important;
+      font-size: 16px !important;
+      line-height: 28px;
+      text-align: center;
+    }
+    td[class=3D"padding-copy-tips-body"]{
+      padding: 10px 5% 10px 5% !important;
+      text-align: left;
+      font-size: 26px;
+      line-height: 32px;
+    }
+    td[class=3D"padding-copy-head"]{
+      padding: 20px 5% 0px 5% !important;
+      text-align: center;
+      font-size: 35px !important;
+      line-height: 45px !important;
+    }
+    td[class=3D"padding-copy-subhead"]{
+      padding: 0px 5% 10px 5% !important;
+      text-align: center;
+      font-size: 24px !important;
+      line-height: 40px !important;
+    }
+    td[class=3D"padding-copy-h1"]{
+      font-size: 30px;
+      line-height: 42px;
+      font-family: Helvetica, arial, sans-serif;
+      font-weight: lighter;
+      color: #5c4aa5;
+      padding: 20px 0px;
+    }
+    td[class=3D"padding-copy-tips"]{
+      font-size: 30px;
+      line-height: 42px;
+      font-family: Helvetica, arial, sans-serif;
+      font-weight: lighter;
+      color: #fd0255;
+      padding: 20px 0px;
+    }
+    td[class=3D"padding-copy-footer"]{
+      padding: 10px 5% 30px 5% !important;
+      text-align: center;
+      font-size: 26px;
+      line-height: 32px;
+    }
+
+    td[class=3D"section-padding"]{
+      padding: 20px 15px 30px !important;
+    }
+    /* iOS BLUE LINKS */
+    .appleBody a {color:#e5e5e5 !important; text-decoration: none !importan=
+t;}
+    .appleFooter a {color:#e5e5e5 !important; text-decoration: none !import=
+ant;}
+    .appleFooterDate a {color:#707070 !important; text-decoration: none !im=
+portant;}
+    .appleBody span {color:#707070 !important; text-decoration: none !impor=
+tant;}
+  }
+
+
+  /* MOBILE STYLES */
+  @media screen and (max-width: 525px) {
+
+    /* USE THESE CLASSES TO HIDE CONTENT ON MOBILE */
+    td[class=3D"mobile-hide"]{
+      display:none;}
+
+      img[class=3D"mobile-hide"]{
+        display: none !important;
+      }
+      /* FULL-WIDTH TABLES */
+      table[class=3D"responsive-table"]{
+        width:100%!important;
+        text-align:center;
+      }
+
+      /* UTILITY CLASSES FOR ADJUSTING PADDING ON MOBILE */
+      td[class=3D"padding"]{
+        padding: 10px 5% 15px 5% !important;
+      }
+
+      td[class=3D"padding-copy-head"]{
+        padding: 20px 5% 0px 5% !important;
+        text-align: center;
+        font-size: 35px !important;
+        line-height: 45px !important;
+      }
+      td[class=3D"padding-copy-intro"]{
+        padding: 40px 7% 10px 7% !important;
+        font-size: 16px !important;
+        line-height: 24px;
+        text-align: center;
+      }
+      td[class=3D"padding-copy-subhead"]{
+        padding: 0px 5% 10px 5% !important;
+        text-align: center;
+        font-size: 24px !important;
+        line-height: 40px !important;
+      }
+
+      td[class=3D"padding-copy"]{
+        padding: 10px 5% 50px 5% !important;
+        text-align: center;
+        font-size: 26px;
+        line-height: 32px;
+      }
+      td[class=3D"padding-copy-tips-body"]{
+        padding: 10px 5% 20px 5% !important;
+        text-align: left;
+        font-size: 26px;
+        line-height: 32px;
+      }
+      td[class=3D"padding-copy-h1"]{
+        font-size: 26px !important;
+        line-height: 42px;
+        font-family: Helvetica, arial, sans-serif;
+        font-weight: lighter;
+        color: #5c4aa5;
+        padding: 20px 0px;
+      }
+      td[class=3D"padding-copy-tips"]{
+        font-size: 26px !important;
+        line-height: 42px;
+        font-family: Helvetica, arial, sans-serif;
+        font-weight: lighter;
+        color: #fd0255;
+        padding: 20px 0px;
+      }
+      td[class=3D"padding-copy-footer"]{
+        padding: 10px 5% 30px 5% !important;
+        text-align: center;
+        font-size: 26px;
+        line-height: 32px;
+      }
+      td[class=3D"section-padding-background"]{
+        padding: 30px 15px 0px !important;
+      }
+      td[class=3D"section-padding"]{
+        padding: 20px 15px 20px !important;
+        background-color: #e5e5e5 !important;
+      }
+      /* iOS BLUE LINKS */
+      .appleBody a {color:#e5e5e5 !important; text-decoration: none !import=
+ant;}
+      .appleFooter a {color:#e5e5e5 !important; text-decoration: none !impo=
+rtant;}
+      .appleFooterDate a {color:#707070 !important; text-decoration: none !=
+important;}
+      .appleBody span {color:#707070 !important; text-decoration: none !imp=
+ortant;}
+    }
+    /*]]>*/
+</style>
+</head>
+<body style=3D"margin:0; padding:0; " ><div ><div class=3D"mktEditable" ><!=
+-- HEADER -->
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%">
+<tbody>
+<tr>
+<td bgcolor=3D"#333333"><!-- HIDDEN PREHEADER TEXT -->
+<div style=3D"display: none; font-size: 1px; color: #fefefe; line-height: 1=
+px; font-family: Segoe, Helvetica, arial, sans-serif; max-height: 0px; max-=
+width: 0px; opacity: 0; overflow: hidden;">Register for our Visual Studio A=
+pp Center Webinar, download the SmartHotel 360 reference app suite, and mor=
+e!</div>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- ONE COLUMN SECTION -->
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%">
+<tbody>
+<tr>
+<td style=3D"background: linear-gradient(-80deg, #4c7fb3 0%, #55a0a9 50%, #=
+75a47d 100%); background-color: #3498db; padding: 40px 15px 40px 15px;" ali=
+gn=3D"center">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"600" class=
+=3D"responsive-table">
+<tbody>
+<tr>
+<td>
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td><!-- COPY -->
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" alig=
+n=3D"center">
+<tbody>
+<tr>
+<td align=3D"center" style=3D"font-size: 40px; font-family: 'Segoe UI', Hel=
+vetica, arial, sans-serif; color: #ffffff; font-weight: lighter; padding-to=
+p: 30px;" class=3D"padding-copy-head">Xamarin Newsletter</td>
+</tr>
+<tr>
+<td align=3D"center" style=3D"font-size: 24px; font-family: 'Segoe UI', Hel=
+vetica, arial, sans-serif; color: #ffffff; font-weight: lighter; padding-bo=
+ttom: 20px;" class=3D"padding-copy-subhead">January 2018</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- COMPACT ARTICLE SECTION -->
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" alig=
+n=3D"center">
+<tbody>
+<tr>
+<td bgcolor=3D"#FFFFFF" align=3D"center" style=3D"padding: 0px;" class=3D"s=
+ection-padding-background">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" clas=
+s=3D"responsive-table" align=3D"center">
+<tbody>
+<tr>
+<td bgcolor=3D"#FFFFFF" align=3D"center" style=3D"padding: 40px 15px;" clas=
+s=3D"section-padding">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"600px" cla=
+ss=3D"responsive-table">
+<tbody>
+<tr>
+<td align=3D"center" class=3D"padding-copy-h1" style=3D"font-size: 30px; li=
+ne-height: 42px; font-family: Helvetica, arial, sans-serif; font-weight: li=
+ghter; color: #5c4aa5; padding-bottom: 0px;"><a href=3D
+"http://mkto-o0039.com/I051qJO0dS3aQ54A0F0OX00" target=3D"_blank" style=3D"=
+color: #5c4aa5; text-decoration: none;"
+>Join us for <em>Xamarin University Presents: Ship Better Apps with Visual =
+Studio App Center</em></a></td>
+</tr>
+</tbody>
+</table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"600px" cla=
+ss=3D"responsive-table" align=3D"center">
+<tbody>
+<tr>
+<td valign=3D"top" align=3D"left" style=3D"padding: 20px 10px 0px 20px; fon=
+t-size: 16px; line-height: 28px; font-family: Helvetica, arial, sans-serif;=
+ font-weight: lighter; color: #707070;" class=3D"padding-copy"><strong>Join=
+ Xamarin University's Mark Smith on Thursday, January 25 at 9 am PT / 12 pm=
+ GMT</strong> to learn how to automate your app development pipeline with V=
+isual Studio App Center. Mark will share best practices and walk through st=
+ep-by-step demos, including connecting your apps, continuous builds, automa=
+ted testing, distribution, and crash reporting, so you'll leave ready to im=
+prove your apps. <a href=3D
+"http://mkto-o0039.com/TbQJF0305000OOr41dSA5X0" target=3D"_blank" style=3D"=
+color: #5c4aa5; text-decoration: none; font-weight: bold;"
+>Register &raquo;</a></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" alig=
+n=3D"center">
+<tbody>
+<tr>
+<td bgcolor=3D"#FFFFFF" align=3D"center" style=3D"padding: 0px;" class=3D"s=
+ection-padding-background">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" clas=
+s=3D"responsive-table" align=3D"center">
+<tbody>
+<tr>
+<td bgcolor=3D"#E5E5E5" align=3D"center" style=3D"padding: 40px 15px;" clas=
+s=3D"section-padding">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"600px" cla=
+ss=3D"responsive-table" align=3D"center">
+<tbody>
+<tr>
+<td align=3D"center" class=3D"padding-copy-h1" style=3D"font-size: 30px; li=
+ne-height: 42px; font-family: Helvetica, arial, sans-serif; font-weight: li=
+ghter; color: #5c4aa5; padding-bottom: 0px;"><a href=3D
+"http://mkto-o0039.com/I051sJO0dS3cQ54A0F0OX00" target=3D"_blank" style=3D"=
+color: #5c4aa5; text-decoration: none;"
+>Kickstart Development with the Open-Source SmartHotel 360 Reference App Su=
+ite</a></td>
+</tr>
+</tbody>
+</table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"600px" cla=
+ss=3D"responsive-table" align=3D"center">
+<tbody>
+<tr>
+<td valign=3D"top" align=3D"left" style=3D"padding: 20px 10px 0px 20px; fon=
+t-size: 16px; line-height: 28px; font-family: Helvetica, arial, sans-serif;=
+ font-weight: lighter; color: #707070;" class=3D"padding-copy">SmartHotel36=
+0 is an open-source, end-to-end reference app suite to help you learn to cr=
+eate Xamarin.Forms apps with the Xamarin Live Player, Xamarin.Forms Native =
+Forms, and native features, while connecting to backend and Azure services.=
+ The app suite also contains an ASP.NET Core 2.0 website featuring a micros=
+ervice architecture using Docker. <a href=3D
+"http://mkto-o0039.com/p0S00J05dX0A1tQO5d03OF4" target=3D"_blank" style=3D"=
+color: #5c4aa5; text-decoration: none; font-weight: bold;"
+>Download &raquo;</a></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%">
+<tbody>
+<tr>
+<td bgcolor=3D"#FFFFFF" align=3D"center" style=3D"padding: 0px;" class=3D"s=
+ection-padding-background">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" clas=
+s=3D"responsive-table" align=3D"center">
+<tbody>
+<tr>
+<td bgcolor=3D"#FFFFFF" align=3D"center" style=3D"padding: 40px 15px;" clas=
+s=3D"section-padding">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"600px" cla=
+ss=3D"responsive-table" align=3D"center">
+<tbody>
+<tr>
+<td align=3D"center" class=3D"padding-copy-h1" style=3D"font-size: 30px; li=
+ne-height: 42px; font-family: Helvetica, arial, sans-serif; font-weight: li=
+ghter; color: #5c4aa5; padding-bottom: 0px;"><a href=3D
+"http://mkto-o0039.com/MQ0X1A0OJFS5500ed03O0u4" target=3D"_blank" style=3D"=
+color: #5c4aa5; text-decoration: none;"
+>Get the C# Developer=E2=80=99s Guide to Shipping Better Apps with Visual S=
+tudio App Center</a></td>
+</tr>
+</tbody>
+</table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"600px" cla=
+ss=3D"responsive-table" align=3D"center">
+<tbody>
+<tr>
+<td valign=3D"top" align=3D"left" style=3D"padding: 20px 10px 0px 20px; fon=
+t-size: 16px; line-height: 28px; font-family: Helvetica, arial, sans-serif;=
+ font-weight: lighter; color: #707070;" class=3D"padding-copy">Many of you =
+have already starting using App Center, but we know some haven=E2=80=99t ha=
+d a chance to try it yet. Whether you=E2=80=99ve already connected your app=
+s or are just creating your account, we=E2=80=99ve rounded up our favorite =
+resources to help you jumpstart a year of shipping amazing apps. <a href=3D
+"http://mkto-o0039.com/v1SO0QFv05dXJ3f5O04A000" target=3D"_blank" style=3D"=
+color: #5c4aa5; text-decoration: none; font-weight: bold;"
+>Learn more &raquo;</a></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%">
+<tbody>
+<tr>
+<td bgcolor=3D"#FFFFFF" align=3D"center" style=3D"padding: 0px;" class=3D"s=
+ection-padding-background">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" clas=
+s=3D"responsive-table" align=3D"center">
+<tbody>
+<tr>
+<td bgcolor=3D"#E5E5E5" align=3D"center" style=3D"padding: 40px 15px;" clas=
+s=3D"section-padding">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"600px" cla=
+ss=3D"responsive-table" align=3D"center">
+<tbody>
+<tr>
+<td align=3D"center" class=3D"padding-copy-h1" style=3D"font-size: 30px; li=
+ne-height: 42px; font-family: Helvetica, arial, sans-serif; font-weight: li=
+ghter; color: #5c4aa5; padding-bottom: 0px;"><a href=3D
+"http://mkto-o0039.com/v1SO0QFw05dXJ3g5O04A000" target=3D"_blank" style=3D"=
+color: #5c4aa5; text-decoration: none;"
+>Get the Source Code and Walkthrough of Xamarin.Forms App <em>Telerik Tagit=
+</em></a></td>
+</tr>
+</tbody>
+</table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"600px" cla=
+ss=3D"responsive-table" align=3D"center">
+<tbody>
+<tr>
+<td valign=3D"top" align=3D"left" style=3D"padding: 20px 10px 0px 20px; fon=
+t-size: 16px; line-height: 28px; font-family: Helvetica, arial, sans-serif;=
+ font-weight: lighter; color: #707070;" class=3D"padding-copy"><em>Telerik =
+Tagit</em> is a fully-featured Xamarin.Forms app that uses Microsoft Cognit=
+ive Services Computer Vision API and Progress Telerik UI for Xamarin to cre=
+ate an intelligent, fully native Android, iOS, and UWP app. Check out the f=
+ree source code and six-part walkthrough now. <a href=3D
+"http://mkto-o0039.com/c0S04A3J0dQO155Xh0OxF00" target=3D"_blank" style=3D"=
+color: #5c4aa5; text-decoration: none; font-weight: bold;"
+>Get the source code &raquo;</a></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" alig=
+n=3D"center">
+<tbody>
+<tr>
+<td bgcolor=3D"#FFFFFF" align=3D"center" style=3D"padding: 0px;" class=3D"s=
+ection-padding-background">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" clas=
+s=3D"responsive-table" align=3D"center">
+<tbody>
+<tr>
+<td bgcolor=3D"#FFFFFF" align=3D"center" style=3D"padding: 40px 15px;" clas=
+s=3D"section-padding">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"600px" cla=
+ss=3D"responsive-table" align=3D"center">
+<tbody>
+<tr>
+<td align=3D"center" class=3D"padding-copy-h1" style=3D"font-size: 30px; li=
+ne-height: 42px; font-family: Helvetica, arial, sans-serif; font-weight: li=
+ghter; color: #5c4aa5; padding-bottom: 0px;"><a href=3D
+"http://mkto-o0039.com/G5O0XF40OiSyJ05d01003QA" target=3D"_blank" style=3D"=
+color: #5c4aa5; text-decoration: none;"
+>Try the Visual Studio 2017 version 15.6 Preview</a></td>
+</tr>
+</tbody>
+</table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"600px" cla=
+ss=3D"responsive-table" align=3D"center">
+<tbody>
+<tr>
+<td valign=3D"top" align=3D"left" style=3D"padding: 20px 10px 0px 20px; fon=
+t-size: 16px; line-height: 28px; font-family: Helvetica, arial, sans-serif;=
+ font-weight: lighter; color: #707070;" class=3D"padding-copy">The release =
+of Visual Studio 2017 version 15.5 included many exciting features, includi=
+ng live XAML previewing in Android emulators with the Xamarin Live Player, =
+and improvements to the Mac pairing mechanism. Visual Studio 2017 version 1=
+5.6 Preview 2 builds on this progress, introducing macOS environment provis=
+ioning, iOS Wi-Fi deployment, live XAML previewing in the Remoted iOS Simul=
+ator, and more! <a href=3D
+"http://mkto-o0039.com/q5XJ051Odj0QSF04O03z00A" target=3D"_blank" style=3D"=
+color: #5c4aa5; text-decoration: none; font-weight: bold;"
+>Get started &raquo;</a></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" alig=
+n=3D"center">
+<tbody>
+<tr>
+<td bgcolor=3D"#FFFFFF" align=3D"center" style=3D"padding: 0px;" class=3D"s=
+ection-padding-background">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" clas=
+s=3D"responsive-table" align=3D"center">
+<tbody>
+<tr>
+<td bgcolor=3D"#E5E5E5" align=3D"center" style=3D"padding: 40px 15px;" clas=
+s=3D"section-padding">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"600px" cla=
+ss=3D"responsive-table" align=3D"center">
+<tbody>
+<tr>
+<td align=3D"center" class=3D"padding-copy-h1" style=3D"font-size: 30px; li=
+ne-height: 42px; font-family: Helvetica, arial, sans-serif; font-weight: li=
+ghter; color: #5c4aa5; padding-bottom: 0px;"><a href=3D
+"http://mkto-o0039.com/X5d03kO1Q000XFSOA045JA0" target=3D"_blank" style=3D"=
+color: #5c4aa5; text-decoration: none;"
+>See How Colonial Life Drives Field Sales Productivity with .NET, Mobile, a=
+nd DevOps</a></td>
+</tr>
+</tbody>
+</table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"600px" cla=
+ss=3D"responsive-table" align=3D"center">
+<tbody>
+<tr>
+<td valign=3D"top" align=3D"left" style=3D"padding: 20px 10px 0px 20px; fon=
+t-size: 16px; line-height: 28px; font-family: Helvetica, arial, sans-serif;=
+ font-weight: lighter; color: #707070;" class=3D"padding-copy">Colonial Lif=
+e=E2=80=99s four-member development team completely rebuilt its internal sa=
+les apps, including many new features, such as intelligent filtering, consu=
+mer-esque help tips, and more, in just four months. They share how they use=
+ Xamarin.Forms, automated testing, distribution, crash reporting, and Team =
+Foundation Server to deliver intuitive native apps, as well as their advice=
+ for developers. <a href=3D
+"http://mkto-o0039.com/X5d03lO1Q000XFSOA045JB0" target=3D"_blank" style=3D"=
+color: #5c4aa5; text-decoration: none; font-weight: bold;"
+>Read more &raquo;</a></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" alig=
+n=3D"center">
+<tbody>
+<tr>
+<td bgcolor=3D"#FFFFFF" align=3D"center" style=3D"padding: 0px;" class=3D"s=
+ection-padding-background">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" clas=
+s=3D"responsive-table" align=3D"center">
+<tbody>
+<tr>
+<td bgcolor=3D"#FFFFFF" align=3D"center" style=3D"padding: 40px 15px;" clas=
+s=3D"section-padding">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"600px" cla=
+ss=3D"responsive-table">
+<tbody>
+<tr>
+<td align=3D"center" class=3D"padding-copy-tips" style=3D"font-size: 30px; =
+line-height: 42px; font-family: Helvetica, arial, sans-serif; font-weight: =
+lighter; color: #fd0255; padding-bottom: 20px;">Tips and Tricks</td>
+</tr>
+</tbody>
+</table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"600px" cla=
+ss=3D"responsive-table" align=3D"center">
+<tbody>
+<tr>
+<td valign=3D"top" align=3D"center" style=3D"padding: 20px 10px 0px 20px; f=
+ont-size: 16px; line-height: 28px; font-family: Helvetica, arial, sans-seri=
+f; font-weight: lighter; text-align: left; color: #707070;" class=3D"paddin=
+g-copy-tips-body"><a href=3D
+"http://mkto-o0039.com/q5XJ051Odm0QSF04O03C00A" target=3D"_blank" style=3D"=
+color: #3498db; text-decoration: none; font-weight: bold;"
+>Xamarin.Forms Native Forms is Polished and Shiny in 2.5.0</a>: Since we pr=
+eviewed Native Forms in June, the team has worked to fix bugs and integrate=
+ community feedback. This post from E.Z. Hart covers what's new and shows y=
+ou how to start embedding Native Forms in your own apps.<br>
+<br>
+<a href=3D
+"http://mkto-o0039.com/gD0OSQd0A405OX05J100nF3" target=3D"_blank" style=3D"=
+color: #3498db; text-decoration: none; font-weight: bold;"
+>The Top 12 Xamarin Blog Posts of 2017</a>: Each January, we highlight our =
+most popular blog posts from the previous year. Check out 2017's round-up f=
+or tips, tricks, and guides to building better apps faster with Microsoft's=
+ end-to-end mobile lifecycle tools and services.<br>
+<br>
+<a href=3D
+"http://mkto-o0039.com/AF1o0SJO40Q553A00d0E0OX" target=3D"_blank" style=3D"=
+color: #3498db; text-decoration: none; font-weight: bold;"
+>Iterate Faster with the Xamarin Live Player and iOS Coded User Interface</=
+a>: The Xamarin Live Player allows you to rapidly iterate and develop Andro=
+id and iOS apps, without ever having to compile. In this informative post, =
+James Montemagno shows you how to use the Xamarin Live Player with your iOS=
+ apps.<br>
+<br>
+<a href=3D
+"http://mkto-o0039.com/n0J30Fp04AQd0XO0O5105FS" target=3D"_blank" style=3D"=
+color: #3498db; text-decoration: none; font-weight: bold;"
+>Xamarin.Android Now Double Stuffed with Oreo 8.1</a>: Jon Douglas covers h=
+ow to get the most out of Android Oreo 8.1 with Xamarin.Android, which now =
+supports new Android Oreo 8.1 features, including Android Go, Neural Networ=
+ks API, Autofill framework enhancements, SharedMemory API, and more.<br>
+<br>
+<a href=3D
+"http://mkto-o0039.com/t5X34A1FJO0dq00QOS0005G" target=3D"_blank" style=3D"=
+color: #3498db; text-decoration: none; font-weight: bold;"
+><em>The Xamarin Show</em> | Getting Started with iOS Development in C#</a>=
+: James Montemangno's developer video series on Channel 9 covers topics in =
+the world of Xamarin app development. Explore a few of James=E2=80=99 favor=
+ite iOS episodes to start developing fully native iOS apps with C#, Visual =
+Studio, and Xamarin.</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" alig=
+n=3D"center">
+<tbody>
+<tr>
+<td bgcolor=3D"#FFFFFF" align=3D"center" style=3D"padding: 0px;" class=3D"s=
+ection-padding-background">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" clas=
+s=3D"responsive-table">
+<tbody>
+<tr>
+<td bgcolor=3D"#E5E5E5" align=3D"center" style=3D"padding: 40px 15px;" clas=
+s=3D"section-padding">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"600px" cla=
+ss=3D"responsive-table">
+<tbody>
+<tr>
+<td align=3D"center" class=3D"padding-copy-tips" style=3D"font-size: 30px; =
+line-height: 42px; font-family: Helvetica, arial, sans-serif; font-weight: =
+lighter; color: #fd0255; padding-bottom: 20px;">Upcoming Events</td>
+</tr>
+</tbody>
+</table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"600px" cla=
+ss=3D"responsive-table">
+<tbody>
+<tr>
+<td valign=3D"top" align=3D"left" style=3D"padding: 20px 10px 0px 20px; fon=
+t-size: 16px; line-height: 28px; font-family: Helvetica, arial, sans-serif;=
+ font-weight: lighter; color: #707070;" class=3D"padding-copy-tips-body"><a=
+ href=3D
+"http://mkto-o0039.com/G5O0XF40OrSHJ05d01003QA" target=3D"_blank" style=3D"=
+color: #3498db; text-decoration: none; font-weight: bold;"
+>Sri Lanka .NET Forum</a>: Two sessions covering the fundamentals of functi=
+onal programming, including OOP and functional programming in F#, ASP.NET C=
+ore with Middleware, and hands-on demos. <a href=3D
+"http://mkto-o0039.com/G5O0XF40OrSHJ05d01003QA" target=3D"_blank" style=3D"=
+color: #3498db; text-decoration: none;"
+>February 1, Colombo, Sri Lanka</a><br>
+<br>
+<a href=3D
+"http://mkto-o0039.com/x0J0000F4I51dQO0s5S3OXA" target=3D"_blank" style=3D"=
+color: #3498db; text-decoration: none; font-weight: bold;"
+>Azure and Xamarin from How to Wow</a>: An introduction to Xamarin, .NET Co=
+re, .NET Standard, and using Xamarin.Forms to take apps from "How?" to "Wow=
+" (Delhi NCR Xamarin and Azure Developers group). <a href=3D
+"http://mkto-o0039.com/x0J0000F4I51dQO0s5S3OXA" target=3D"_blank" style=3D"=
+color: #3498db; text-decoration: none;"
+>February 3, Gurugram, India</a><br>
+<br>
+<a href=3D
+"http://mkto-o0039.com/VOOt1005F50X400JdSA3JQ0" target=3D"_blank" style=3D"=
+color: #3498db; text-decoration: none; font-weight: bold;"
+>MADN Belgium</a>: Explore navigation, automatic inspections and quick fixe=
+s, code generation, and built-in tooling, like version control integration =
+and local history. <a href=3D
+"http://mkto-o0039.com/VOOt1005F50X400JdSA3JQ0" target=3D"_blank" style=3D"=
+color: #3498db; text-decoration: none;"
+>February 5, Edegem, Belgium</a><br>
+<br>
+<a href=3D
+"http://mkto-o0039.com/rS0K0X4F0OudOQJ5301A050" target=3D"_blank" style=3D"=
+color: #3498db; text-decoration: none; font-weight: bold;"
+>What's New in Xamarin.Forms 2.5</a>: Join Microsoft MVP Mark Radacz as he =
+presents the latest changes in Xamarin.Forms 2.5. Be sure to bring your lap=
+top with Xamarin fully installed. Beginners welcome! <a href=3D
+"http://mkto-o0039.com/rS0K0X4F0OudOQJ5301A050" target=3D"_blank" style=3D"=
+color: #3498db; text-decoration: none;"
+>February 5, Jacksonville, FL, USA</a><br>
+<br>
+<a href=3D
+"http://mkto-o0039.com/DJLS00v0XOO00F15dQ4305A" target=3D"_blank" style=3D"=
+color: #3498db; text-decoration: none; font-weight: bold;"
+>There is a Service for That!</a>: Join Mayur Tendulkar from Microsoft to l=
+earn how to add must-have mobile services, like push notifications, user au=
+thentication, data storage, and crash reporting to your Xamarin apps. <a hr=
+ef=3D
+"http://mkto-o0039.com/DJLS00v0XOO00F15dQ4305A" target=3D"_blank" style=3D"=
+color: #3498db; text-decoration: none;"
+>February 10, Mumbai, India</a><br>
+<br>
+<a href=3D
+"http://mkto-o0039.com/O0F03SAX0410QJdM0w055OO" target=3D"_blank" style=3D"=
+color: #3498db; text-decoration: none; font-weight: bold;"
+>2018 Training Series</a>: Sydney Mobile .NET Developers kicks off 2018 wit=
+h an intro to Visual Studio Tools for Xamarin, including Xamarin.Android, X=
+amarin.iOS, UWP and Windows 10, and the importance of high quality user exp=
+eriences. <a href=3D
+"http://mkto-o0039.com/O0F03SAX0410QJdM0w055OO" target=3D"_blank" style=3D"=
+color: #3498db; text-decoration: none;"
+>February 13, Sydney, Australia</a><br></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr>
+<td bgcolor=3D"#FFFFFF" align=3D"center" style=3D"padding: 10px 0px;"></td>
+</tr>
+</tbody>
+</table>
+<!-- FOOTER -->
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%">
+<tbody>
+<tr>
+<td bgcolor=3D"#FFFFFF" align=3D"center" style=3D"padding: 30px 0px 30px;">
+<table width=3D"500" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"center" class=3D"responsive-table">
+<tbody>
+<tr>
+<td align=3D"center" valign=3D"middle" style=3D"font-size: 12px; line-heigh=
+t: 18px; font-family: Helvetica, Arial, sans-serif; color: #707070;"><span =
+class=3D"appleFooter" style=3D"color: #707070!important; font-size: 14px;">=
+Xamarin from Microsoft</span></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<a href=3D
+"http://mkto-o0039.com/y5FJOA3Q050dXON0Sx00140"
+></a>
+<img src=3D"http://mkto-o0039.com/trk?t=3D1&mid=3DOTc1LUpPWC03Njk6NTAwMTozN=
+zMxOjE2NzQxOjE6NTA3OTo5OjE1NjU0OjI3Nzg3NTM1OmRyYWdvbmV0LmMxN0BnbWFpbC5jb20%=
+3D" width=3D"1" height=3D"1" style=3D"display:none !important;" alt=3D"" />
+
+<p>
+<font face=3D"Arial" size=3D"1">
+Xamarin Inc., as a wholly-owned Microsoft subsidiary acting as a separate l=
+egal entity, adheres to the <a href=3D
+"http://mkto-o0039.com/u/uYQ100OOSd050I04F3AJX50"
+>Microsoft Privacy Statement</a>.
+<br>
+If you'd like to discontinue receiving these types of emails, you may <a hr=
+ef=3D
+"http://mkto-o0039.com/u/f00F50d0OZ015O4AJQXJ30S"
+>opt-out here</a>.
+<br>
+1355 Market St. 4th Floor, San Francisco, CA, 94103
+</font>
+</p>
+</body>
+</html>
+------=_Part_-117458047_978755594.1516818962983--

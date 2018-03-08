@@ -1,0 +1,82 @@
+Delivered-To: dragonet.c17@gmail.com
+Received: by 10.107.50.140 with SMTP id y134csp488744ioy;
+        Fri, 13 Oct 2017 03:13:02 -0700 (PDT)
+X-Received: by 10.28.150.194 with SMTP id y185mr952020wmd.54.1507889582172;
+        Fri, 13 Oct 2017 03:13:02 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1507889582; cv=none;
+        d=google.com; s=arc-20160816;
+        b=oSiNyljwCDTVqKka7LGcCbMJ7ELp9+x5PpMwfVOycUwqfpNrYS3qQW6lMJfo3a2t4m
+         U66eafulA1sDS6xnAFmpkjpULRVjG3by9Vzt9F3NYHpnAaUPyPQJGo8KPssSUhz2jhyz
+         YJdKF2jtCOkrr/+C2+84KDWrPILQb+JQdXdE8l4bHVBgG2ejZKvAy60yKoEsofIByV3e
+         Yeo7+un8MycMoCrMQaQ48Z32p4x49EnQ1TAwgLkFfbuabQWpkSTilW0iiqHIDwN1+hVO
+         SxPmpxPFarjxCc6CjgrTqWIrl2NuzGgP1nJ/AIoZP1ZsLPvVZZ7A7Je/SBKCmuPH7nr7
+         zyXg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=content-id:mime-version:to:message-id:subject:date:from
+         :dkim-signature:arc-authentication-results;
+        bh=nf71Ui91izSpY+t+PnPcgQR9RsEHteQECrJOAAhhots=;
+        b=tTVsuFCPlr6YqIC+iDYJpE7HsoX05juz81/BZFByCNcgaWpLXSxoV6IewqQ276QXJG
+         FD/3qCfszfZ/hwFqOT27AFgCmf39wYkmz+aM7ewctx+mwLlr7kAPDjB6JXePenvYQPPY
+         wxlSHTohpt4NuPy5/EnjHfHnUCAl8vq+oglvY8pheDPJ6S+gq0WRqMeo4nNwSq6wzTda
+         zZSpdiypaaiHjtotyFqLAhUDESyls5hb7wHkKVaueqiqprHfS/t9jOuuARCZC2B2G+H/
+         MzvBxrKf3gz5eL7DCmm0v3Abavk3RsEo2vxjI5awF5cP/4wHFWFeiIOzCXClE9JjVEFC
+         RHuA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=H+1+X56I;
+       spf=pass (google.com: domain of test.mailing.andrzej@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=test.mailing.andrzej@gmail.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=gmail.com
+Return-Path: <test.mailing.andrzej@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id m14sor226474wmd.46.2017.10.13.03.13.02
+        for <dragonet.c17@gmail.com>
+        (Google Transport Security);
+        Fri, 13 Oct 2017 03:13:02 -0700 (PDT)
+Received-SPF: pass (google.com: domain of test.mailing.andrzej@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=H+1+X56I;
+       spf=pass (google.com: domain of test.mailing.andrzej@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=test.mailing.andrzej@gmail.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=from:date:subject:message-id:to:mime-version:content-id;
+        bh=nf71Ui91izSpY+t+PnPcgQR9RsEHteQECrJOAAhhots=;
+        b=H+1+X56IkQpazhKzuh1Jal05bH2ER8merU5vn3625pkWUDXCUYfcDhm/MAJUHwNRox
+         noAgb5TpHLXbY/t+Opqo+2aBohljryTuztsZAO94ZdZIwGeBVdKuVZppU8oSVhWHeacX
+         A7Ee5Elzj0FvF/TEY8eUW+roKg1N1dufbn6/lg+QCWbKvu3Y4RwHRJ/88Nq6Ettoz5Lr
+         5e7FyW+TCpKu4LR2pe0DXbifiqm0xmtPHXiwt3yjmmU4A6iUQIo5dsY10kdxCHDCKh93
+         x3dKQTcB8OfprVpCZ6WcWfQZb8cmHCHeNf6VCOZ9ObTP6GBU67JXGMS8smSOlYlOAyE6
+         IWag==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:from:date:subject:message-id:to:mime-version
+         :content-id;
+        bh=nf71Ui91izSpY+t+PnPcgQR9RsEHteQECrJOAAhhots=;
+        b=gZpWmyEBJSPdiEabdiVZim+Y5jdFiH4j5Eb9KyhIGYV2hQoLju0DDbY5XsKHxE/ucQ
+         4UpCFnaZlLedJ7a0IYb2IFfOmTrygtFEBOqgpJjlCbk5fMh0vdbNAgAYMJhRXHVATehc
+         2bf0c3qLuMkpP+xqVkiUxXJs0YBfygvRYDCW+g9ErsGduGlMcqC1sjrdL56pmL8zmxP5
+         PmBB3X+XnT8gq8b9mA+KmrdTtCZDIQttAej58mvxk263Shx3bot5mVBkQzbJJs8LIeeD
+         T6Lg26JF5yaOuol1FIvSXPydbl+JPWfGNZ9isOhggBYOV+Y+wfQvkNlMOu+VwW6yv5Sd
+         BWWA==
+X-Gm-Message-State: AMCzsaVA19rNBQo/7ZkV1i0OV2GrDQY+z5QlN/Ove0vIe71sTGf81btD
+	0kSbpdMQ/80iEh1A8G/rZWw7FKSRq6U=
+X-Google-Smtp-Source: ABhQp+TFG32iKPKCTJsNJnoq/u/RATw3u1jLf+qsP9q3EAEHwOD/mo8XJdqsxan8QArgSoZeYD3JdQ==
+X-Received: by 10.28.45.5 with SMTP id t5mr974921wmt.108.1507889581688;
+        Fri, 13 Oct 2017 03:13:01 -0700 (PDT)
+Return-Path: <test.mailing.andrzej@gmail.com>
+Received: from [192.168.1.23] (ebz96.neoplus.adsl.tpnet.pl. [83.22.215.96])
+        by smtp.gmail.com with ESMTPSA id q81sm1386965wrb.88.2017.10.13.03.13.00
+        for <dragonet.c17@gmail.com>
+        (version=TLS1 cipher=ECDHE-RSA-AES128-SHA bits=128/128);
+        Fri, 13 Oct 2017 03:13:01 -0700 (PDT)
+From: Inkubator <test.mailing.andrzej@gmail.com>
+X-Google-Original-From: Inkubator <test.Mailing.Andrzej@gmail.com>
+Date: Fri, 13 Oct 2017 12:12:55 +0200
+Subject: Account Activation
+Message-Id: <XTMKS7TCL2U4.JM96J9D2J7ED@localhost.localdomain>
+To: dragonet91 <dragonet.c17@gmail.com>
+MIME-Version: 1.0
+Content-Type: text/html; charset=utf-8
+Content-Id: <YBKVS7TCL2U4.4ET45OD8WXO22@localhost.localdomain>
+
+<p>Hello dragonet91 </p><p>Your activation link for Inkubator account is <a target="_blank" href = "http://localhost:63003/account/activation/ f1aa999b-6cd8-415a-8fde-5e997187491f">here</a>
+

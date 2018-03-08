@@ -1,0 +1,1391 @@
+Delivered-To: dragonet.c17@gmail.com
+Received: by 10.202.61.212 with SMTP id k203csp8356oia;
+        Wed, 20 Jul 2016 12:34:23 -0700 (PDT)
+X-Received: by 10.66.219.68 with SMTP id pm4mr16742509pac.19.1469043263331;
+        Wed, 20 Jul 2016 12:34:23 -0700 (PDT)
+Return-Path: <306-DUP-745.0.7843.0.0.11649.7.6801855-0-276@smtp.pluralsight.com>
+Received: from smtp.pluralsight.com (smtp.pluralsight.com. [199.15.215.12])
+        by mx.google.com with ESMTPS id i3si4875938pfc.94.2016.07.20.12.34.23
+        for <dragonet.c17@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 20 Jul 2016 12:34:23 -0700 (PDT)
+Received-SPF: pass (google.com: domain of 306-dup-745.0.7843.0.0.11649.7.6801855-0-276@smtp.pluralsight.com designates 199.15.215.12 as permitted sender) client-ip=199.15.215.12;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@pluralsight.com;
+       spf=pass (google.com: domain of 306-dup-745.0.7843.0.0.11649.7.6801855-0-276@smtp.pluralsight.com designates 199.15.215.12 as permitted sender) smtp.mailfrom=306-DUP-745.0.7843.0.0.11649.7.6801855-0-276@smtp.pluralsight.com
+Return-Path: <no-reply@pluralsight.com>
+X-MSFBL: ZHJhZ29uZXQuYzE3QGdtYWlsLmNvbUBkdnAtMTk5LTE1LTIxNS0xMkBiZy1zamQt
+	OTlAMzA2LURVUC03NDU6MTc1MTU6Nzg0MzozODY3MzowOjExNjQ5Ojc6NjgwMTg1
+	NS0wLTI3Ng==
+Received: from [10.0.87.249] ([10.0.87.249:35420] helo=sjmas02.marketo.org)
+	by sjmta16.marketo.org (envelope-from <no-reply@pluralsight.com>)
+	(ecelerity 3.6.8.47404 r(Core:3.6.8.0)) with ESMTP
+	id 2C/20-06317-A91DF875; Wed, 20 Jul 2016 14:31:38 -0500
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; t=1469043098;
+	s=m1; d=pluralsight.com; i=@pluralsight.com;
+	h=Date:From:To:Subject:MIME-Version:Content-Type;
+	bh=FALo+uznZuIQlOA2ZWaW/d4LOly7NbqrJ48a+Ruqzho=;
+	b=KZehKQFUKJsGFK0Zb90SwreRlw1FK0i5P+KzVVi35pXPHCuwKik9w1MHYXrsvpvv
+	hJrjbyfPJxKsc4MwzqrADNYYBIlvI6bihgFV++7V4NTEi3WqOy65OCOvgSqNOKmRQjj
+	/bV5gcxp2rMgEmRHds+uVO9vvBVFCB+7PefQmTv4=
+Date: Wed, 20 Jul 2016 14:31:38 -0500 (CDT)
+From: Pluralsight <no-reply@pluralsight.com>
+Reply-To: no-reply@pluralsight.com
+To: dragonet.c17@gmail.com
+Message-ID: <858065755.553616188.1469043098952.JavaMail.root@sjmas02.marketo.org>
+Subject: New this week: New creative courses from the new member of the
+ Pluralsight family
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_553616184_1034616447.1469043098952"
+X-PVIQ: mkto-306DUP745-000001-000000-048021
+X-Binding: bg-sjd-99
+X-MarketoID: 306-DUP-745:17515:7843:38673:0:11649:7:6801855-0-276
+X-MktArchive: false
+List-Unsubscribe: <mailto:OZDGQYTFGI4E2Z32KJQTGYKINNMUW2KPIFIT2PI.7843.11649.7@unsub-sj.mktomail.com>
+X-Mailfrom: 306-DUP-745.0.7843.0.0.11649.7.6801855-0-276@smtp.pluralsight.com
+X-MSYS-API: {"options":{"open_tracking":false,"click_tracking":false}}
+X-MktMailDKIM: true
+
+------=_Part_553616184_1034616447.1469043098952
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<http://track.pluralsight.com/dc/l6WRhHKnwa3LcpUsJiJZ-E_DM4gByr1vjBt3_ZFhCB=
+o=3D/bU01HP00ss0eh0D00tJzx40vl000N>
+New this week
+=E2=80=9CInertia is the death of creativity.=E2=80=9D <http://track.plurals=
+ight.com/cv0000AUPl0e04s0x0tKHND1000hs>
+AUSTIN KLEON
+Pluralsight + Train Simple forge a new creative learning experience
+When you stop learning, you stop growing. The demand to design the next gre=
+at product, develop a seamless user-experience or communicate a brand=E2=80=
+=99s vision is evolving as newer and greater technologies appear. But helpi=
+ng your team keep up just got easier. We're excited to announce we've acqui=
+red Train Simple, giving you more courses on Photoshop, After Effects, InDe=
+sign and other Adobe technologies.
+Learn more <http://track.pluralsight.com/cv0000AUPl0e04s0x0tKHND1000hs>
+<http://track.pluralsight.com/q100NDL0esBP00U4s0vxlh0000H0t>
+NEW for Developers
+On-demand webinar: Alexa Skills Kit
+<http://track.pluralsight.com/QM000PHv0D0l40s0sC0Nxh000t1eU>
+Get a first-hand look from Dave Isbitski, Chief Evangelist for Alexa and Ec=
+ho at Amazon, as he gives an introduction to voice design for Alexa. And, g=
+et started learning with our first course on the subject=E2=80=94for free! =
+(See the course below, free for a limited time)
+Start webinar =C2=BB <http://track.pluralsight.com/QM000PHv0D0l40s0sC0Nxh00=
+0t1eU>
+FREE COURSE THIS MONTH
+Developing Alexa Skills for Amazon Echo <http://track.pluralsight.com/q100N=
+DL0esBP00U4s0vxlh0000H0t>  with Walter Quesada
+Intermediate
+Deploying .NET Applications with Octopus Deploy <http://track.pluralsight.c=
+om/QP000PHv0D0l40s0sF0Nxh000t1eU> =C2=A0by=C2=A0Kenneth Truyers
+Beginner
+Using the Web Speech API with AngularJS <http://track.pluralsight.com/o0sDR=
+4xsP0Ne0hUtl000H000v10H0> =C2=A0by=C2=A0Tony Thorsen
+Intermediate
+Play by Play: Docker for Web Developers <http://track.pluralsight.com/w0U0P=
+000lJ00Tvte0000sDhs1xN4H> =C2=A0with John Papa and Dan Wahlin
+Beginner
+Getting Started with Power BI <http://track.pluralsight.com/deHv0UPt41hs000=
+0slL0VxD00N000> =C2=A0by=C2=A0Stacia Misner Varga
+Beginner
+View all new dev courses <http://track.pluralsight.com/EsH00D004NUs01e0Wx0v=
+0P0t0Mlh0>
+<http://track.pluralsight.com/K0e001DHU0sO0v000xhl0sYPt04N0>
+NEW for IT Professionals
+Advanced Malware Analysis: Combating Exploit Kits <http://track.pluralsight=
+.com/WtQvsx001004D000hN0lPU000es0H> =C2=A0by=C2=A0Jared DeMott
+Advanced
+Wireshark 2.0: Fundamentals <http://track.pluralsight.com/WtSvsx021004D000h=
+N0lPU000es0H> =C2=A0by Avril Salter
+Beginner
+Deploy Azure Virtual Networks, VPNs, and Gateways <http://track.pluralsight=
+.com/tsNU0010v4l4xUt00H0D0se000P0h> =C2=A0by=C2=A0Gary Grudzinskas
+Intermediate
+Understanding and Using Azure Storage <http://track.pluralsight.com/Y000N00=
+l06Usv04xDt0Ws1P0He00h> =C2=A0by=C2=A0John Savill
+Intermediate
+Azure Site Recovery: IaaS Migration and Disaster Recovery <http://track.plu=
+ralsight.com/Q8000PHv0D0l40s0sY0Nxh000t1eU> =C2=A0by=C2=A0Nicolas Blank
+Intermediate
+View all new IT courses <http://track.pluralsight.com/y00s0Nhtx0010e90l00sD=
+4U00ZvPH>
+<http://track.pluralsight.com/i10P0elDU000I04s0h0s000vxbNt0>
+NEW for Creative Professionals
+Creating a Realistic Still Life Scene in Illustrator <http://track.pluralsi=
+ght.com/LsvI0l04Nhts0P000x010U0dD00e2> =C2=A0by=C2=A0Simeon Elson
+Advanced
+Modeling for Photorealistic Interiors with CINEMA 4D <http://track.pluralsi=
+ght.com/asx000s1000e00UINfP0lD4h4t0v0> =C2=A0by=C2=A0Sophie Jameson
+Advanced
+Advanced Color Grading in Adobe SpeedGrade CC and Premiere Pro CC <http://t=
+rack.pluralsight.com/FssP0D0I00004v00xhe0U0hl0N1t6> =C2=A0
+by=C2=A0Jon Acosta
+Intermediate
+Designing VEX Driven Digital Assets in Houdini <http://track.pluralsight.co=
+m/NDs0leUNP0000000xh8I41vs0j00t> =C2=A0by=C2=A0Jonathan Granskog
+Intermediate
+SOLIDWORKS Essentials - Revolve and Sweep <http://track.pluralsight.com/asx=
+000s1000e00UINlP0lDah4t0v0> =C2=A0by=C2=A0Amee Meghani
+Beginner
+View all new creative courses <http://track.pluralsight.com/s00DNv40mb0sh0U=
+t00slx01000IeP>
+**INSERT FOOTER SNIPPET**
+
+------=_Part_553616184_1034616447.1469043098952
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+<title>PLURALSIGHT</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="format-detection" content="telephone=no"><!--[if !mso]><!-->
+<!--<![endif]-->
+
+<style type="text/css">
+      body {
+      -webkit-text-size-adjust: 100% !important;
+      -ms-text-size-adjust: 100% !important;
+      -webkit-font-smoothing: antialiased !important;
+      }
+      img {
+      border: 0 !important;
+      outline: none !important;
+      }
+      p {
+      Margin: 0px !important;
+      Padding: 0px !important;
+      }
+      table {
+      border-collapse: collapse;
+      mso-table-lspace: 0px;
+      mso-table-rspace: 0px;
+      }
+      td, a, span {
+      border-collapse: collapse;
+      mso-line-height-rule: exactly;
+      }
+      .ExternalClass * {
+      line-height: 100%;
+      }
+      span.MsoHyperlink {
+      mso-style-priority: 99;
+      color: inherit;
+      }
+      span.MsoHyperlinkFollowed {
+      mso-style-priority: 99;
+      color: inherit;
+      }
+          .em_gray a {
+          color: #878787;
+          text-decoration: none;
+          }
+          .em_blk a {
+          color: #231F20;
+          text-decoration: none;
+          }
+          .em_wht a {
+          color: #ffffff;
+          text-decoration: none;
+          }
+          .em_pink a {
+          color: #EC008C;
+          text-decoration: none;
+          }
+          .em_blue a {
+          color: #0E9BBD;
+          text-decoration: none;
+          }
+          .em_gray2 a {
+          color: #868686;
+          text-decoration: none;
+          }
+          .em_yellow a {
+          color: #F5B41E;
+          text-decoration: none;
+          }
+          .em_red a {
+          color: #D92328;
+          text-decoration: none;
+          }
+      @media only screen and (min-width: 481px) and (max-width: 599px) {
+      table[class=em_main_table] {
+      width: 100% !important;
+      }
+      table[class=em_wrapper] {
+      width: 100% !important;
+      }
+      table[class=em_center], td[class=em_center] {
+      text-align: center !important;
+      }
+      td[class=em_height] {
+      height: 20px !important;
+      }
+      td[class=em_hide], br[class=em_hide], span[class=em_hide] {
+      display: none !important;
+      }
+      td[class=em_pad] {
+      padding-left: 15px !important;
+      padding-right: 15px !important;
+      }
+      img[class=em_img] {
+      width: 100% !important;
+      height: auto !important;
+      }
+      td[class=em_side] {
+      width: 10px !important;
+      }
+      span[class=em_br] {
+      display:block !important;
+      }
+      }
+      @media only screen and (max-width: 480px) {
+      table[class=em_main_table] {
+      width: 100% !important;
+      }
+      table[class=em_wrapper] {
+      width: 100% !important;
+      }
+      table[class=em_center], td[class=em_center] {
+      text-align: center !important;
+      }
+      td[class=em_height] {
+      height: 20px !important;
+      }
+      td[class=em_height1] {
+      height: 90px !important;
+      }
+      td[class=em_hide], br[class=em_hide], span[class=em_hide] {
+      display: none !important;
+      }
+      td[class=em_pad] {
+      padding-left: 15px !important;
+      padding-right: 15px !important;
+      }
+      img[class=em_img] {
+      width: 100% !important;
+      height: auto !important;
+      }
+      td[class=em_side] {
+      width: 10px !important;
+      }
+      td[class=em_font10] {
+      font-size:10px !important;
+      }
+      span[class=em_br] {
+      display:block !important;
+      }
+      }
+</style>
+</head>
+<body style="margin:0px; padding:0px; " bgcolor="#FFFFFF" ><!--Full width table start-->
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" bgcolor="#FFFFFF" ><tr>
+<td align="center" valign="top">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+<tr>
+<td bgcolor="#ED4D38" style="line-height:0px; font-size:0px;"><img src="http://pluralsight-assets.s3.amazonaws.com/newsletter/072016/spacer_img.gif" width="1" height="1" alt="" border="0" style="display:block;"></td>
+<td width="560" align="center" valign="top">
+<table width="560" border="0" cellspacing="0" cellpadding="0" align="center" class="em_main_table" style="table-layout:fixed;">
+<tr>
+<td align="center" valign="top" style="line-height:0px; font-size:0px;"><img src="http://pluralsight-assets.s3.amazonaws.com/newsletter/072016/header_line.jpg" width="560" height="10" alt="" border="0" style="display:block;" class="em_img"></td>
+</tr>
+</table>
+</td>
+<td bgcolor="#E71978" style="line-height:0px; font-size:0px;"><img src="http://pluralsight-assets.s3.amazonaws.com/newsletter/072016/spacer_img.gif" width="1" height="1" alt="" border="0" style="display:block;"></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr ><td align="center" valign="top" ><table width="600" border="0" cellspacing="0" cellpadding="0" align="center" class="em_main_table" style="table-layout:fixed; " ><tr ><td align="center" valign="top" ><table width="100%" align="center" cellpadding="0" cellspacing="0" border="0" ><tr>
+<td height="45" class="em_height">&nbsp;</td>
+</tr>
+<tr ><td align="center" valign="top" ><div class="mktEditable" id="logo" ><a href=
+"http://track.pluralsight.com/dc/l6WRhHKnwa3LcpUsJiJZ-E_DM4gByr1vjBt3_ZFhCBo=/bU01HP00ss0eh0D00tJzx40vl000N" target="_blank" style="text-decoration: none;"
+><img src="http://pluralsight-assets.s3.amazonaws.com/newsletter/072016/logo.png" width="147" height="32" alt="PLURALSIGHT" border="0" style="display: block; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 15px; line-height: 21px; color: #231f20; font-weight: bold;"></a></div>
+</td>
+</tr>
+<tr>
+<td height="25" class="em_height">&nbsp;</td>
+</tr>
+<tr ><td align="center" class="em_blk" style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:36px; line-height:39px; color:#231F20; font-weight:300; " ><div class="mktEditable" id="text1" >New this week</div>
+</td>
+</tr>
+<tr>
+<td height="65" class="em_height">&nbsp;</td>
+</tr>
+<tr ><td align="center" valign="top" ><table width="100%" align="center" cellpadding="0" cellspacing="0" border="0" ><tr ><td width="12" class="em_side">&nbsp;</td>
+<td align="center" valign="top" ><table width="100%" align="center" cellpadding="0" cellspacing="0" border="0" ><tr ><td align="center" valign="top" height="257" background="http://edmimages.net/edm/2016_july/1468868661308/bg_img.jpg" style="background-position:center top; background-repeat:no-repeat; " ><!--[if gte mso 9]>
+                                  <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:577px;height:257px;background-repeat:no-repeat;">
+                                  <v:fill type="tile" src="http://edmimages.net/edm/2016_july/1468868661308/bg_img.jpg" color="#7bceeb" />
+                                  <v:textbox inset="0,0,0,0">
+                                  <![endif]-->
+<table width="100%" align="center" cellpadding="0" cellspacing="0" border="0" ><tr ><td width="10">&nbsp;</td>
+<td align="center" valign="top" ><table width="100%" align="center" cellpadding="0" cellspacing="0" border="0" ><tr>
+<td height="110" class="em_height1">&nbsp;</td>
+</tr>
+<tr ><td align="center" class="em_wht" style="font-family:'Gotham', Arial, sans-serif; font-size:27px; line-height:30px; color:#ffffff; font-weight:300; " ><div class="mktEditable" id="text2" ><span style="color: #ffffff;"><a href=
+"http://track.pluralsight.com/cv0000AUPl0e04s0x0tKHND1000hs" target="_blank" style="color: #ffffff; text-decoration: none;"
+><span style="font-weight: bold;">&ldquo;Inertia</span> is the death of creativity.<span style="font-weight: bold;">&rdquo;</span></a></span></div>
+</td>
+</tr>
+<tr>
+<td height="10" style="font-size:1px; line-height:1px;">&nbsp;</td>
+</tr>
+<tr ><td align="center" valign="top" ><table width="280" align="center" cellpadding="0" cellspacing="0" border="0" ><tr ><td align="center" valign="top">
+<table width="80" align="center" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td height="6" style="font-size:0px; line-height:0px;"><img src="http://pluralsight-assets.s3.amazonaws.com/newsletter/072016/spacer_img.gif" width="1" height="1" alt="" border="0" style="display:blockl;"></td>
+</tr>
+<tr>
+<td height="1" bgcolor="#FFFFFF" style="font-size:0px; line-height:0px;"><img src="http://pluralsight-assets.s3.amazonaws.com/newsletter/072016/spacer_img.gif" width="1" height="1" alt="" border="0" style="display:blockl;"></td>
+</tr>
+<tr>
+<td height="6" style="font-size:0px; line-height:0px;"><img src="http://pluralsight-assets.s3.amazonaws.com/newsletter/072016/spacer_img.gif" width="1" height="1" alt="" border="0" style="display:blockl;"></td>
+</tr>
+</table>
+</td>
+<td width="10"></td>
+<td align="center" class="em_wht" valign="middle" style="font-family:'Gotham', Arial, sans-serif; font-size:11px; line-height:13px; font-weight:bold; color:#ffffff; " ><div class="mktEditable" id="text3" >AUSTIN KLEON</div>
+</td>
+<td width="10"></td>
+<td align="center" valign="top">
+<table width="80" align="center" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td height="6" style="font-size:0px; line-height:0px;"><img src="http://pluralsight-assets.s3.amazonaws.com/newsletter/072016/spacer_img.gif" width="1" height="1" alt="" border="0" style="display:blockl;"></td>
+</tr>
+<tr>
+<td height="1" bgcolor="#FFFFFF" style="font-size:0px; line-height:0px;"><img src="http://pluralsight-assets.s3.amazonaws.com/newsletter/072016/spacer_img.gif" width="1" height="1" alt="" border="0" style="display:blockl;"></td>
+</tr>
+<tr>
+<td height="6" style="font-size:0px; line-height:0px;"><img src="http://pluralsight-assets.s3.amazonaws.com/newsletter/072016/spacer_img.gif" width="1" height="1" alt="" border="0" style="display:blockl;"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+<td width="10">&nbsp;</td>
+</tr>
+</table>
+<!--[if gte mso 9]>
+                                  </v:textbox>
+                                  </v:rect>
+                                  <![endif]--></td>
+</tr>
+<tr>
+<td height="16" style="font-size:1px; line-height:1px;">&nbsp;</td>
+</tr>
+<tr ><td align="left" class="em_blk" style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:18px; line-height:21px; color:#231F20; font-weight:bold; " ><div class="mktEditable" id="text4" >Pluralsight + Train Simple forge a new creative learning experience</div>
+</td>
+</tr>
+<tr>
+<td height="15" style="font-size:1px; line-height:1px;">&nbsp;</td>
+</tr>
+<tr ><td align="left" class="em_blk" style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:11px; line-height:14px; color:#231F20; " ><div class="mktEditable" id="text5" >When you stop learning, you stop growing. The demand to design the next great product, develop a seamless user-experience or communicate a brand&rsquo;s vision is evolving as newer and greater technologies appear. But helping your team keep up just got easier. We're excited to announce we've acquired Train Simple, giving you more courses on Photoshop, After Effects, InDesign and other Adobe technologies.<br></div>
+</td>
+</tr>
+<tr>
+<td height="30" class="em_height" style="font-size:1px; line-height:1px;">&nbsp;</td>
+</tr>
+<tr ><td align="center" valign="top" ><table width="195" align="center" cellpadding="0" cellspacing="0" border="0" ><tr ><td align="right" valign="top" width="3"><img src="http://pluralsight-assets.s3.amazonaws.com/newsletter/072016/p_1.jpg" width="3" height="35" alt="" border="0" style="display:block;"></td>
+<td align="center" valign="top" ><table width="100%" align="center" cellpadding="0" cellspacing="0" border="0" ><tr>
+<td height="2" bgcolor="#ED1F99" style="font-size:0px; line-height:0px;"><img src="http://pluralsight-assets.s3.amazonaws.com/newsletter/072016/spacer_img.gif" width="1" height="1" alt="" border="0" style="display:block;"></td>
+</tr>
+<tr ><td align="center" class="em_pink" valign="middle" height="31" style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:11px; color:#EC008C; font-weight:bold; " ><div class="mktEditable" id="text6" ><a href=
+"http://track.pluralsight.com/cv0000AUPl0e04s0x0tKHND1000hs" target="_blank" style="text-decoration: none; color: #ec008c; line-height: 31px; display: block;"
+>Learn more</a></div>
+</td>
+</tr>
+<tr>
+<td height="2" bgcolor="#ED1F99" style="font-size:0px; line-height:0px;"><img src="http://pluralsight-assets.s3.amazonaws.com/newsletter/072016/spacer_img.gif" width="1" height="1" alt="" border="0" style="display:block;"></td>
+</tr>
+</table>
+</td>
+<td align="left" valign="top" width="3"><img src="http://pluralsight-assets.s3.amazonaws.com/newsletter/072016/p_2.jpg" width="3" height="35" alt="" border="0" style="display:block;"></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="50" class="em_height" style="font-size:1px; line-height:1px;">&nbsp;</td>
+</tr>
+<tr ><td align="center" valign="top" ><div class="mktEditable" id="img1" ><a href=
+"http://track.pluralsight.com/q100NDL0esBP00U4s0vxlh0000H0t" target="_blank"
+><img class="em_img" src="http://pluralsight-assets.s3.amazonaws.com/newsletter/072016/img_1.jpg" width="577" height="139" border="0" style="display: block;" constrain="true" imagepreview="false"></a></div>
+</td>
+</tr>
+<tr>
+<td height="20" style="font-size:1px; line-height:1px;">&nbsp;</td>
+</tr>
+<tr ><td align="left" class="em_blk" style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:16px; line-height:19px; color:#231F20; font-weight:bold; " ><div class="mktEditable" id="text7" >NEW <span style="font-weight:300;">for Developers</span></div>
+</td>
+</tr>
+<tr>
+<td height="16" style="font-size:1px; line-height:1px;">&nbsp;</td>
+</tr>
+<tr ><td align="left" class="em_blue" style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:19px; line-height:22px; color:#0E9BBD; font-weight:bold; " ><div class="mktEditable" id="text8" >On-demand webinar: Alexa Skills Kit</div>
+</td>
+</tr>
+<tr>
+<td height="15" style="font-size:1px; line-height:1px;">&nbsp;</td>
+</tr>
+<tr ><td align="center" valign="top" ><table width="100%" align="center" cellpadding="0" cellspacing="0" border="0" ><tr ><td align="left" valign="top" ><table width="217" align="left" cellpadding="0" cellspacing="0" border="0" class="em_wrapper" ><tr ><td align="center" valign="top" ><table width="100%" align="center" cellpadding="0" cellspacing="0" border="0" ><tr ><td width="26" class="em_side">&nbsp;</td>
+<td align="center" valign="top" ><table width="100%" align="center" cellpadding="0" cellspacing="0" border="0" ><tr>
+<td height="45" class="em_height">&nbsp;</td>
+</tr>
+<tr ><td align="center" valign="top" ><div class="mktEditable" id="img2" ><a href=
+"http://track.pluralsight.com/QM000PHv0D0l40s0sC0Nxh000t1eU" target="_blank" style="text-decoration: none;"
+><img src="http://pluralsight-assets.s3.amazonaws.com/newsletter/072016/amazon.png" width="151" height="33" alt="amazon alexa" border="0" style="display: block; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 19px; line-height: 22px; color: #0e9bbd; font-weight: bold;"></a></div>
+</td>
+</tr>
+<tr>
+<td height="37" class="em_height">&nbsp;</td>
+</tr>
+</table>
+</td>
+<td width="47" class="em_side">&nbsp;</td>
+<td width="1" bgcolor="#D8DADB" class="em_hide"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table width="360" align="right" cellpadding="0" cellspacing="0" border="0" class="em_wrapper" ><tr ><td width="15" class="em_hide">&nbsp;</td>
+<td align="center" valign="top" ><table width="100%" align="center" cellpadding="0" cellspacing="0" border="0" ><tr>
+<td height="10" class="em_hide" style="font-size:1px; line-height:1px;">&nbsp;</td>
+</tr>
+<tr ><td align="left" class="em_blk" style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:12px; line-height:15px; color:#231F20; " ><div class="mktEditable" id="text9" >Get a first-hand look from Dave Isbitski, Chief Evangelist for Alexa and Echo at Amazon, as he gives an introduction to voice design for Alexa. And, get started learning with our first course on the subject&mdash;for free! (See the course below, free for a limited time)</div>
+</td>
+</tr>
+<tr>
+<td height="8" style="font-size:1px; line-height:1px;">&nbsp;</td>
+</tr>
+<tr ><td align="left" class="em_blue" style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:13px; line-height:16px; color:#0E9BBD; font-weight:bold; " ><div class="mktEditable" id="text10" ><a href=
+"http://track.pluralsight.com/QM000PHv0D0l40s0sC0Nxh000t1eU" target="_blank" style="text-decoration: none; color: #0e9bbd;"
+>Start webinar &raquo;</a></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="15" style="font-size:1px; line-height:1px;">&nbsp;</td>
+</tr>
+<tr ><td align="center" valign="top" bgcolor="#0E9BBC" ><table width="100%" align="center" cellpadding="0" cellspacing="0" border="0" ><tr ><td width="10">&nbsp;</td>
+<td align="center" valign="top" ><table width="100%" align="center" cellpadding="0" cellspacing="0" border="0" ><tr>
+<td height="10" style="font-size:1px; line-height:1px;">&nbsp;</td>
+</tr>
+<tr ><td align="left" style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:13px; line-height:16px; color:#ffffff; font-weight:bold; " ><div class="mktEditable" id="text11" >FREE COURSE THIS MONTH</div>
+</td>
+</tr>
+<tr>
+<td height="10" style="font-size:1px; line-height:1px;">&nbsp;</td>
+</tr>
+</table>
+</td>
+<td width="10">&nbsp;</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="15" style="font-size:1px; line-height:1px;">&nbsp;</td>
+</tr>
+<tr ><td align="left" valign="top" ><table width="100%" align="left" cellpadding="0" cellspacing="0" border="0" ><tr ><td align="left" valign="top" width="20" style="font-size:0px; line-height:0px;"><a href=
+"http://track.pluralsight.com/f00hle0sN00PU040DtDsx0NHv1000" target="_blank" style="text-decoration:none;"
+><img src="http://pluralsight-assets.s3.amazonaws.com/newsletter/072016/icon_1.png" width="20" height="20" alt="" border="0" style="display:block;"></a></td>
+<td align="center" valign="top" ><table width="100%" align="center" cellpadding="0" cellspacing="0" border="0" ><tr ><td align="left" valign="top" ><table align="left" cellpadding="0" cellspacing="0" border="0" class="em_wrapper" ><tr ><td align="left" valign="top" ><table align="left" cellpadding="0" cellspacing="0" border="0" ><tr ><td width="10"></td>
+<td align="left" class="em_blk" style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:14px; line-height:20px; color:#231F20; " ><div class="mktEditable" id="text12" ><span class="em_blk"><a href=
+"http://track.pluralsight.com/q100NDL0esBP00U4s0vxlh0000H0t" target="_blank"
+>Developing Alexa Skills for Amazon Echo</a>&nbsp;&nbsp;</span><span style="font-size: 10px; line-height: 20px; color: #868686;">with Walter Quesada</span></div>
+</td>
+<td width="10"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table align="right" cellpadding="0" cellspacing="0" border="0" class="em_wrapper" ><tr ><td align="left" valign="top" ><table align="left" cellpadding="0" cellspacing="0" border="0" ><tr ><td width="10"></td>
+<td align="right" class="em_gray2" style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:10px; line-height:20px; color:#868686; " ><div class="mktEditable" id="text13" >Intermediate</div>
+</td>
+<td width="10"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="10" style="font-size:1px; line-height:1px;">&nbsp;</td>
+</tr>
+<tr>
+<td height="8" style="font-size:1px; line-height:1px;" bgcolor="#0E9BBC">&nbsp;</td>
+</tr>
+<tr>
+<td height="10" style="font-size:1px; line-height:1px;">&nbsp;</td>
+</tr>
+<tr ><td align="left" valign="top" ><table width="100%" align="left" cellpadding="0" cellspacing="0" border="0" ><tr ><td align="left" valign="top" width="20" style="font-size:0px; line-height:0px;"><a href=
+"http://track.pluralsight.com/k1000hsxD0NU00st0l4000Ee0HvOP" target="_blank" style="text-decoration:none;"
+><img src="http://pluralsight-assets.s3.amazonaws.com/newsletter/072016/icon_2.png" width="20" height="20" alt="" border="0" style="display:block;"></a></td>
+<td align="center" valign="top" ><table width="100%" align="center" cellpadding="0" cellspacing="0" border="0" ><tr ><td align="left" valign="top" ><table align="left" cellpadding="0" cellspacing="0" border="0" class="em_wrapper" ><tr ><td align="left" valign="top" ><table align="left" cellpadding="0" cellspacing="0" border="0" ><tr ><td width="10"></td>
+<td align="left" class="em_blk" style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:14px; line-height:20px; color:#231F20; " ><div class="mktEditable" id="text14" ><span class="em_blk"><a href=
+"http://track.pluralsight.com/QP000PHv0D0l40s0sF0Nxh000t1eU" target="_blank"
+>Deploying .NET Applications with Octopus Deploy</a> &nbsp;</span><span style="font-size: 10px; line-height: 20px; color: #868686;">by&nbsp;Kenneth Truyers</span></div>
+</td>
+<td width="10"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table align="right" cellpadding="0" cellspacing="0" border="0" class="em_wrapper" ><tr ><td align="left" valign="top" ><table align="left" cellpadding="0" cellspacing="0" border="0" ><tr ><td width="10"></td>
+<td align="right" class="em_gray2" style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:10px; line-height:20px; color:#868686; " ><div class="mktEditable" id="text15" >Beginner</div>
+</td>
+<td width="10"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="8" style="font-size:1px; line-height:1px;">&nbsp;</td>
+</tr>
+<tr>
+<td align="center" valign="top">
+<table width="100%" align="center" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td height="1" bgcolor="#D2D4D4" style="font-size:0px; line-height:0px;"><img src="http://pluralsight-assets.s3.amazonaws.com/newsletter/072016/spacer_img.gif" width="1" height="1" alt="" border="0" style="display:block;"></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="8" style="font-size:1px; line-height:1px;">&nbsp;</td>
+</tr>
+<tr ><td align="left" valign="top" ><table width="100%" align="left" cellpadding="0" cellspacing="0" border="0" ><tr ><td align="left" valign="top" width="20" style="font-size:0px; line-height:0px;"><a href=
+"http://track.pluralsight.com/bU01HP00ss0eh0D00tQGx40vl000N" target="_blank" style="text-decoration:none;"
+><img src="http://pluralsight-assets.s3.amazonaws.com/newsletter/072016/icon_2.png" width="20" height="20" alt="" border="0" style="display:block;"></a></td>
+<td align="center" valign="top" ><table width="100%" align="center" cellpadding="0" cellspacing="0" border="0" ><tr ><td align="left" valign="top" ><table align="left" cellpadding="0" cellspacing="0" border="0" class="em_wrapper" ><tr ><td align="left" valign="top" ><table align="left" cellpadding="0" cellspacing="0" border="0" ><tr ><td width="10"></td>
+<td align="left" class="em_blk" style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:14px; line-height:20px; color:#231F20; " ><div class="mktEditable" id="text16" ><span class="em_blk"><a href=
+"http://track.pluralsight.com/o0sDR4xsP0Ne0hUtl000H000v10H0" target="_blank"
+>Using the Web Speech API with AngularJS</a> &nbsp;</span><span style="font-size: 10px; line-height: 20px; color: #868686;">by&nbsp;Tony Thorsen</span></div>
+</td>
+<td width="10"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table align="right" cellpadding="0" cellspacing="0" border="0" class="em_wrapper" ><tr ><td align="left" valign="top" ><table align="left" cellpadding="0" cellspacing="0" border="0" ><tr ><td width="10"></td>
+<td align="right" class="em_gray2" style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:10px; line-height:20px; color:#868686; " ><div class="mktEditable" id="text17" >Intermediate</div>
+</td>
+<td width="10"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="8" style="font-size:1px; line-height:1px;">&nbsp;</td>
+</tr>
+<tr>
+<td align="center" valign="top">
+<table width="100%" align="center" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td height="1" bgcolor="#D2D4D4" style="font-size:0px; line-height:0px;"><img src="http://pluralsight-assets.s3.amazonaws.com/newsletter/072016/spacer_img.gif" width="1" height="1" alt="" border="0" style="display:block;"></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="8" style="font-size:1px; line-height:1px;">&nbsp;</td>
+</tr>
+<tr ><td align="left" valign="top" ><table width="100%" align="left" cellpadding="0" cellspacing="0" border="0" ><tr ><td align="left" valign="top" width="20" style="font-size:0px; line-height:0px;"><a href=
+"http://track.pluralsight.com/QS000PHv0D0l40s0sI0Nxh000t1eU" target="_blank" style="text-decoration:none;"
+><img src="http://pluralsight-assets.s3.amazonaws.com/newsletter/072016/icon_2.png" width="20" height="20" alt="" border="0" style="display:block;"></a></td>
+<td align="center" valign="top" ><table width="100%" align="center" cellpadding="0" cellspacing="0" border="0" ><tr ><td align="left" valign="top" ><table align="left" cellpadding="0" cellspacing="0" border="0" class="em_wrapper" ><tr ><td align="left" valign="top" ><table align="left" cellpadding="0" cellspacing="0" border="0" ><tr ><td width="10"></td>
+<td align="left" class="em_blk" style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:14px; line-height:20px; color:#231F20; " ><div class="mktEditable" id="text18" ><span class="em_blk"><a href=
+"http://track.pluralsight.com/w0U0P000lJ00Tvte0000sDhs1xN4H" target="_blank"
+>Play by Play: Docker for Web Developers</a> &nbsp;</span><span style="font-size: 10px; line-height: 20px; color: #868686;">with John Papa and Dan Wahlin</span></div>
+</td>
+<td width="10"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table align="right" cellpadding="0" cellspacing="0" border="0" class="em_wrapper" ><tr ><td align="left" valign="top" ><table align="left" cellpadding="0" cellspacing="0" border="0" ><tr ><td width="10"></td>
+<td align="right" class="em_gray2" style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:10px; line-height:20px; color:#868686; " ><div class="mktEditable" id="text19" >Beginner</div>
+</td>
+<td width="10"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="8" style="font-size:1px; line-height:1px;">&nbsp;</td>
+</tr>
+<tr>
+<td align="center" valign="top">
+<table width="100%" align="center" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td height="1" bgcolor="#D2D4D4" style="font-size:0px; line-height:0px;"><img src="http://pluralsight-assets.s3.amazonaws.com/newsletter/072016/spacer_img.gif" width="1" height="1" alt="" border="0" style="display:block;"></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="8" style="font-size:1px; line-height:1px;">&nbsp;</td>
+</tr>
+<tr ><td align="left" valign="top" ><table width="100%" align="left" cellpadding="0" cellspacing="0" border="0" ><tr ><td align="left" valign="top" width="20" style="font-size:0px; line-height:0px;"><a href=
+"http://track.pluralsight.com/k1000hsxD0NU00st0l4000Ke0HvUP" target="_blank" style="text-decoration:none;"
+><img src="http://pluralsight-assets.s3.amazonaws.com/newsletter/072016/icon_2.png" width="20" height="20" alt="" border="0" style="display:block;"></a></td>
+<td align="center" valign="top" ><table width="100%" align="center" cellpadding="0" cellspacing="0" border="0" ><tr ><td align="left" valign="top" ><table align="left" cellpadding="0" cellspacing="0" border="0" class="em_wrapper" ><tr ><td align="left" valign="top" ><table align="left" cellpadding="0" cellspacing="0" border="0" ><tr ><td width="10"></td>
+<td align="left" class="em_blk" style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:14px; line-height:20px; color:#231F20; " ><div class="mktEditable" id="text20" ><span class="em_blk"><a href=
+"http://track.pluralsight.com/deHv0UPt41hs0000slL0VxD00N000" target="_blank"
+>Getting Started with Power BI</a> &nbsp;</span><span style="font-size: 10px; line-height: 20px; color: #868686;">by&nbsp;Stacia Misner Varga</span></div>
+</td>
+<td width="10"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table align="right" cellpadding="0" cellspacing="0" border="0" class="em_wrapper" ><tr ><td align="left" valign="top" ><table align="left" cellpadding="0" cellspacing="0" border="0" ><tr ><td width="10"></td>
+<td align="right" class="em_gray2" style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:10px; line-height:20px; color:#868686; " ><div class="mktEditable" id="text21" >Beginner</div>
+</td>
+<td width="10"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="45" class="em_height" style="font-size:1px; line-height:1px;">&nbsp;</td>
+</tr>
+<tr ><td align="center" valign="top" ><table width="195" align="center" cellpadding="0" cellspacing="0" border="0" ><tr ><td align="right" valign="top" width="3"><img src="http://pluralsight-assets.s3.amazonaws.com/newsletter/072016/b_1.jpg" width="3" height="35" alt="" border="0" style="display:block;"></td>
+<td align="center" valign="top" ><table width="100%" align="center" cellpadding="0" cellspacing="0" border="0" ><tr>
+<td height="2" bgcolor="#30A9C5" style="font-size:0px; line-height:0px;"><img src="http://pluralsight-assets.s3.amazonaws.com/newsletter/072016/spacer_img.gif" width="1" height="1" alt="" border="0" style="display:block;"></td>
+</tr>
+<tr ><td align="center" valign="middle" class="em_blue" height="31" style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:11px; color:#0E9BBD; font-weight:bold; " ><div class="mktEditable" id="text22" ><a href=
+"http://track.pluralsight.com/EsH00D004NUs01e0Wx0v0P0t0Mlh0" target="_blank" style="text-decoration: none; color: #0e9bbd; line-height: 31px; display: block;"
+>View all new dev courses</a></div>
+</td>
+</tr>
+<tr>
+<td height="2" bgcolor="#30A9C5" style="font-size:0px; line-height:0px;"><img src="http://pluralsight-assets.s3.amazonaws.com/newsletter/072016/spacer_img.gif" width="1" height="1" alt="" border="0" style="display:block;"></td>
+</tr>
+</table>
+</td>
+<td align="left" valign="top" width="3"><img src="http://pluralsight-assets.s3.amazonaws.com/newsletter/072016/b_2.jpg" width="3" height="35" alt="" border="0" style="display:block;"></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td height="75" class="em_height" style="font-size:1px; line-height:1px;">&nbsp;</td>
+</tr>
+<tr><!--  ********************************************************************* C2A BANNER SECTION *************************************************************************************************** --></tr>
+<tr>
+<td valign="top">
+<table width="600" bgcolor="#231F20" border="0" cellspacing="0" cellpadding="0" align="center" class="em_wrapper">
+<tr>
+<td width="10">&nbsp;</td>
+<td valign="top">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+<tr>
+<td height="15" style="line-height:1px;font-size:1px">&nbsp;</td>
+</tr>
+<tr>
+<td height="18" style="line-height:1px;font-size:1px">&nbsp;</td>
+</tr>
+<tr>
+<td align="center" style="font-family:Gotham-Medium,Arial,sans-serif;font-size:14px;color:#ffffff;line-height:17px;letter-spacing:1px">
+<div>Join Pluralsight to learn the latest technology skills</div>
+</td>
+</tr>
+<tr>
+<td height="10" style="line-height:1px;font-size:1px">&nbsp;</td>
+</tr>
+<tr>
+<td valign="top" align="center" style="line-height:0px;font-size:0px">
+<div>Get 4,500+ expert-authored courses at your fingertips</div>
+</td>
+</tr>
+<tr>
+<td height="15" style="line-height:1px;font-size:1px">&nbsp;</td>
+</tr>
+<tr>
+<td valign="top" align="center">
+<table width="150" border="0" cellspacing="0" cellpadding="0" align="center">
+<tbody>
+<tr>
+<td height="30" valign="middle" bgcolor="#ED6925" align="center" style="font-family:Gotham-Medium,Arial,sans-serif;font-size:11px;color:#ffffff;border-radius:2px;font-weight:bold">
+<div><a href=
+"http://track.pluralsight.com/Cse000s01NPx0UX4lH00D00hNt0v0" target="_blank" style="color: white; text-decoration: none;"
+>Sign up now</a></div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td height="15" style="line-height:1px;font-size:1px">&nbsp;</td>
+</tr>
+<tr>
+<td height="20" style="line-height:1px;font-size:1px">&nbsp;</td>
+</tr>
+</table>
+</td>
+<td width="10">&nbsp;</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+<td align="left" valign="top" width="3"><img src="http://pluralsight-assets.s3.amazonaws.com/newsletter/072016/b_2.jpg" width="3" height="35" alt="" border="0" style="display:block;"></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td height="75" class="em_height" style="font-size:1px; line-height:1px;">&nbsp;</td>
+</tr>
+<tr ><!-- END C2A BANNER SECTION --><td align="center" valign="top" ><div class="mktEditable" id="img3" ><a href=
+"http://track.pluralsight.com/K0e001DHU0sO0v000xhl0sYPt04N0" target="_blank"
+><img class="em_img" src="http://pluralsight-assets.s3.amazonaws.com/newsletter/072016/img_2.jpg" width="577" height="139" alt="" border="0" style="display: block;"></a></div>
+</td>
+</tr>
+<tr>
+<td height="17" style="font-size:1px; line-height:1px;">&nbsp;</td>
+</tr>
+<tr ><td align="left" class="em_blk" style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:16px; line-height:19px; color:#231F20; font-weight:bold; " ><div class="mktEditable" id="text23" >NEW <span style="font-weight:300;">for IT Professionals</span></div>
+</td>
+</tr>
+<tr>
+<td height="17" style="font-size:1px; line-height:1px;">&nbsp;</td>
+</tr>
+<tr ><td align="left" valign="top" ><table width="100%" align="left" cellpadding="0" cellspacing="0" border="0" ><tr ><td align="left" valign="top" width="20" style="font-size:0px; line-height:0px;"><a href=
+"http://track.pluralsight.com/f00hle0sN00PU040DtPsx0ZHv1000" target="_blank" style="text-decoration:none;"
+><img src="http://pluralsight-assets.s3.amazonaws.com/newsletter/072016/icon_2.png" width="20" height="20" alt="" border="0" style="display:block;"></a></td>
+<td align="center" valign="top" ><table width="100%" align="center" cellpadding="0" cellspacing="0" border="0" ><tr ><td align="left" valign="top" ><table align="left" cellpadding="0" cellspacing="0" border="0" class="em_wrapper" ><tr ><td align="left" valign="top" ><table align="left" cellpadding="0" cellspacing="0" border="0" ><tr ><td width="10"></td>
+<td align="left" class="em_blk" style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:14px; line-height:20px; color:#231F20; " ><div class="mktEditable" id="text24" ><span class="em_blk"><a href=
+"http://track.pluralsight.com/WtQvsx001004D000hN0lPU000es0H" target="_blank"
+>Advanced Malware Analysis: Combating Exploit Kits</a> &nbsp;</span><span style="font-size: 10px; line-height: 20px; color: #868686;">by&nbsp;Jared DeMott</span></div>
+</td>
+<td width="10"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table align="right" cellpadding="0" cellspacing="0" border="0" class="em_wrapper" ><tr ><td align="left" valign="top" ><table align="left" cellpadding="0" cellspacing="0" border="0" ><tr ><td width="10"></td>
+<td align="right" class="em_gray2" style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:10px; line-height:20px; color:#868686; " ><div class="mktEditable" id="text25" >Advanced</div>
+</td>
+<td width="10"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="8" style="font-size:1px; line-height:1px;">&nbsp;</td>
+</tr>
+<tr>
+<td align="center" valign="top">
+<table width="100%" align="center" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td height="1" bgcolor="#D2D4D4" style="font-size:0px; line-height:0px;"><img src="http://pluralsight-assets.s3.amazonaws.com/newsletter/072016/spacer_img.gif" width="1" height="1" alt="" border="0" style="display:block;"></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="8" style="font-size:1px; line-height:1px;">&nbsp;</td>
+</tr>
+<tr ><td align="left" valign="top" ><table width="100%" align="left" cellpadding="0" cellspacing="0" border="0" ><tr ><td align="left" valign="top" width="20" style="font-size:0px; line-height:0px;"><a href=
+"http://track.pluralsight.com/Y000N00l01Usv04xDt0Rs1P0He00h" target="_blank" style="text-decoration:none;"
+><img src="http://pluralsight-assets.s3.amazonaws.com/newsletter/072016/icon_2.png" width="20" height="20" alt="" border="0" style="display:block;"></a></td>
+<td align="center" valign="top" ><table width="100%" align="center" cellpadding="0" cellspacing="0" border="0" ><tr ><td align="left" valign="top" ><table align="left" cellpadding="0" cellspacing="0" border="0" class="em_wrapper" ><tr ><td align="left" valign="top" ><table align="left" cellpadding="0" cellspacing="0" border="0" ><tr ><td width="10"></td>
+<td align="left" class="em_blk" style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:14px; line-height:20px; color:#231F20; " ><div class="mktEditable" id="text26" ><span class="em_blk"><a href=
+"http://track.pluralsight.com/WtSvsx021004D000hN0lPU000es0H" target="_blank"
+>Wireshark 2.0: Fundamentals</a> &nbsp;</span><span style="font-size: 10px; line-height: 20px; color: #868686;">by Avril Salter</span></div>
+</td>
+<td width="10"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table align="right" cellpadding="0" cellspacing="0" border="0" class="em_wrapper" ><tr ><td align="left" valign="top" ><table align="left" cellpadding="0" cellspacing="0" border="0" ><tr ><td width="10"></td>
+<td align="right" class="em_gray2" style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:10px; line-height:20px; color:#868686; " ><div class="mktEditable" id="text27" >Beginner</div>
+</td>
+<td width="10"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="8" style="font-size:1px; line-height:1px;">&nbsp;</td>
+</tr>
+<tr>
+<td align="center" valign="top">
+<table width="100%" align="center" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td height="1" bgcolor="#D2D4D4" style="font-size:0px; line-height:0px;"><img src="http://pluralsight-assets.s3.amazonaws.com/newsletter/072016/spacer_img.gif" width="1" height="1" alt="" border="0" style="display:block;"></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="8" style="font-size:1px; line-height:1px;">&nbsp;</td>
+</tr>
+<tr ><td align="left" valign="top" ><table width="100%" align="left" cellpadding="0" cellspacing="0" border="0" ><tr ><td align="left" valign="top" width="20" style="font-size:0px; line-height:0px;"><a href=
+"http://track.pluralsight.com/Y000N00l03Usv04xDt0Ts1P0He00h" target="_blank" style="text-decoration:none;"
+><img src="http://pluralsight-assets.s3.amazonaws.com/newsletter/072016/icon_2.png" width="20" height="20" alt="" border="0" style="display:block;"></a></td>
+<td align="center" valign="top" ><table width="100%" align="center" cellpadding="0" cellspacing="0" border="0" ><tr ><td align="left" valign="top" ><table align="left" cellpadding="0" cellspacing="0" border="0" class="em_wrapper" ><tr ><td align="left" valign="top" ><table align="left" cellpadding="0" cellspacing="0" border="0" ><tr ><td width="10"></td>
+<td align="left" class="em_blk" style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:14px; line-height:20px; color:#231F20; " ><div class="mktEditable" id="text28" ><span class="em_blk"><a href=
+"http://track.pluralsight.com/tsNU0010v4l4xUt00H0D0se000P0h" target="_blank"
+>Deploy Azure Virtual Networks, VPNs, and Gateways</a> &nbsp;</span><span style="font-size: 10px; line-height: 20px; color: #868686;">by&nbsp;Gary Grudzinskas</span></div>
+</td>
+<td width="10"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table align="right" cellpadding="0" cellspacing="0" border="0" class="em_wrapper" ><tr ><td align="left" valign="top" ><table align="left" cellpadding="0" cellspacing="0" border="0" ><tr ><td width="10"></td>
+<td align="right" class="em_gray2" style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:10px; line-height:20px; color:#868686; " ><div class="mktEditable" id="text29" >Intermediate</div>
+</td>
+<td width="10"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="8" style="font-size:1px; line-height:1px;">&nbsp;</td>
+</tr>
+<tr>
+<td align="center" valign="top">
+<table width="100%" align="center" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td height="1" bgcolor="#D2D4D4" style="font-size:0px; line-height:0px;"><img src="http://pluralsight-assets.s3.amazonaws.com/newsletter/072016/spacer_img.gif" width="1" height="1" alt="" border="0" style="display:block;"></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="8" style="font-size:1px; line-height:1px;">&nbsp;</td>
+</tr>
+<tr ><td align="left" valign="top" ><table width="100%" align="left" cellpadding="0" cellspacing="0" border="0" ><tr ><td align="left" valign="top" width="20" style="font-size:0px; line-height:0px;"><a href=
+"http://track.pluralsight.com/k1000hsxD0NU00st0l4000Ve0Hv5P" target="_blank" style="text-decoration:none;"
+><img src="http://pluralsight-assets.s3.amazonaws.com/newsletter/072016/icon_2.png" width="20" height="20" alt="" border="0" style="display:block;"></a></td>
+<td align="center" valign="top" ><table width="100%" align="center" cellpadding="0" cellspacing="0" border="0" ><tr ><td align="left" valign="top" ><table align="left" cellpadding="0" cellspacing="0" border="0" class="em_wrapper" ><tr ><td align="left" valign="top" ><table align="left" cellpadding="0" cellspacing="0" border="0" ><tr ><td width="10"></td>
+<td align="left" class="em_blk" style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:14px; line-height:20px; color:#231F20; " ><div class="mktEditable" id="text30" ><span class="em_blk"><a href=
+"http://track.pluralsight.com/Y000N00l06Usv04xDt0Ws1P0He00h" target="_blank"
+>Understanding and Using Azure Storage</a> &nbsp;</span><span style="font-size: 10px; line-height: 20px; color: #868686;">by&nbsp;John Savill</span></div>
+</td>
+<td width="10"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table align="right" cellpadding="0" cellspacing="0" border="0" class="em_wrapper" ><tr ><td align="left" valign="top" ><table align="left" cellpadding="0" cellspacing="0" border="0" ><tr ><td width="10"></td>
+<td align="right" class="em_gray2" style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:10px; line-height:20px; color:#868686; " ><div class="mktEditable" id="text31" >Intermediate</div>
+</td>
+<td width="10"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="8" style="font-size:1px; line-height:1px;">&nbsp;</td>
+</tr>
+<tr>
+<td align="center" valign="top">
+<table width="100%" align="center" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td height="1" bgcolor="#D2D4D4" style="font-size:0px; line-height:0px;"><img src="http://pluralsight-assets.s3.amazonaws.com/newsletter/072016/spacer_img.gif" width="1" height="1" alt="" border="0" style="display:block;"></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="8" style="font-size:1px; line-height:1px;">&nbsp;</td>
+</tr>
+<tr ><td align="left" valign="top" ><table width="100%" align="left" cellpadding="0" cellspacing="0" border="0" ><tr ><td align="left" valign="top" width="20" style="font-size:0px; line-height:0px;"><a href=
+"http://track.pluralsight.com/HhHv10l0xt000s0s0N47DP000eXU0" target="_blank" style="text-decoration:none;"
+><img src="http://pluralsight-assets.s3.amazonaws.com/newsletter/072016/icon_2.png" width="20" height="20" alt="" border="0" style="display:block;"></a></td>
+<td align="center" valign="top" ><table width="100%" align="center" cellpadding="0" cellspacing="0" border="0" ><tr ><td align="left" valign="top" ><table align="left" cellpadding="0" cellspacing="0" border="0" class="em_wrapper" ><tr ><td align="left" valign="top" ><table align="left" cellpadding="0" cellspacing="0" border="0" ><tr ><td width="10"></td>
+<td align="left" class="em_blk" style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:14px; line-height:20px; color:#231F20; " ><div class="mktEditable" id="text32" ><span class="em_blk"><a href=
+"http://track.pluralsight.com/Q8000PHv0D0l40s0sY0Nxh000t1eU" target="_blank"
+>Azure Site Recovery: IaaS Migration and Disaster Recovery</a> &nbsp;</span><span style="font-size: 10px; line-height: 20px; color: #868686;">by&nbsp;Nicolas Blank</span></div>
+</td>
+<td width="10"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table align="right" cellpadding="0" cellspacing="0" border="0" class="em_wrapper" ><tr ><td align="left" valign="top" ><table align="left" cellpadding="0" cellspacing="0" border="0" ><tr ><td width="10"></td>
+<td align="right" class="em_gray2" style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:10px; line-height:20px; color:#868686; " ><div class="mktEditable" id="text33" >Intermediate</div>
+</td>
+<td width="10"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="45" class="em_height" style="font-size:1px; line-height:1px;">&nbsp;</td>
+</tr>
+<tr ><td align="center" valign="top" ><table width="195" align="center" cellpadding="0" cellspacing="0" border="0" ><tr ><td align="right" valign="top" width="3"><img src="http://pluralsight-assets.s3.amazonaws.com/newsletter/072016/y_1.jpg" width="3" height="35" alt="" border="0" style="display:block;"></td>
+<td align="center" valign="top" ><table width="100%" align="center" cellpadding="0" cellspacing="0" border="0" ><tr>
+<td height="2" bgcolor="#F5B41E" style="font-size:0px; line-height:0px;"><img src="http://pluralsight-assets.s3.amazonaws.com/newsletter/072016/spacer_img.gif" width="1" height="1" alt="" border="0" style="display:block;"></td>
+</tr>
+<tr ><td align="center" class="em_yellow" valign="middle" height="31" style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:11px; color:#F5B41E; font-weight:bold; " ><div class="mktEditable" id="text34" ><a href=
+"http://track.pluralsight.com/y00s0Nhtx0010e90l00sD4U00ZvPH" target="_blank" style="text-decoration: none; color: #f5b41e; line-height: 31px; display: block;"
+>View all new IT courses</a></div>
+</td>
+</tr>
+<tr>
+<td height="2" bgcolor="#F5B41E" style="font-size:0px; line-height:0px;"><img src="http://pluralsight-assets.s3.amazonaws.com/newsletter/072016/spacer_img.gif" width="1" height="1" alt="" border="0" style="display:block;"></td>
+</tr>
+</table>
+</td>
+<td align="left" valign="top" width="3"><img src="http://pluralsight-assets.s3.amazonaws.com/newsletter/072016/y_2.jpg" width="3" height="35" alt="" border="0" style="display:block;"></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="85" class="em_height" style="font-size:1px; line-height:1px;">&nbsp;</td>
+</tr>
+<tr ><td align="center" valign="top" ><div class="mktEditable" id="img4" ><a href=
+"http://track.pluralsight.com/i10P0elDU000I04s0h0s000vxbNt0" target="_blank"
+><img class="em_img" src="http://pluralsight-assets.s3.amazonaws.com/newsletter/072016/img_3.jpg" width="577" height="137" alt="" border="0" style="display: block;"></a></div>
+</td>
+</tr>
+<tr>
+<td height="17" style="font-size:1px; line-height:1px;">&nbsp;</td>
+</tr>
+<tr ><td align="left" class="em_blk" style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:16px; line-height:19px; color:#231F20; font-weight:bold; " ><div class="mktEditable" id="text35" >NEW <span style="font-weight:300;">for Creative Professionals</span></div>
+</td>
+</tr>
+<tr>
+<td height="17" style="font-size:1px; line-height:1px;">&nbsp;</td>
+</tr>
+<tr ><td align="left" valign="top" ><table width="100%" align="left" cellpadding="0" cellspacing="0" border="0" ><tr ><td align="left" valign="top" width="20" style="font-size:0px; line-height:0px;"><a href=
+"http://track.pluralsight.com/e40e000s10ND0lhx00U10cIs0vP0t" target="_blank" style="text-decoration:none;"
+><img src="http://pluralsight-assets.s3.amazonaws.com/newsletter/072016/icon_2.png" width="20" height="20" alt="" border="0" style="display:block;"></a></td>
+<td align="center" valign="top" ><table width="100%" align="center" cellpadding="0" cellspacing="0" border="0" ><tr ><td align="left" valign="top" ><table align="left" cellpadding="0" cellspacing="0" border="0" class="em_wrapper" ><tr ><td align="left" valign="top" ><table align="left" cellpadding="0" cellspacing="0" border="0" ><tr ><td width="10"></td>
+<td align="left" class="em_blk" style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:14px; line-height:20px; color:#231F20; " ><div class="mktEditable" id="text36" ><span class="em_blk"><a href=
+"http://track.pluralsight.com/LsvI0l04Nhts0P000x010U0dD00e2" target="_blank"
+>Creating a Realistic Still Life Scene in Illustrator</a> &nbsp;</span><span style="font-size: 10px; line-height: 20px; color: #868686;">by&nbsp;Simeon Elson</span></div>
+</td>
+<td width="10"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table align="right" cellpadding="0" cellspacing="0" border="0" class="em_wrapper" ><tr ><td align="left" valign="top" ><table align="left" cellpadding="0" cellspacing="0" border="0" ><tr ><td width="10"></td>
+<td align="right" class="em_gray2" style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:10px; line-height:20px; color:#868686; " ><div class="mktEditable" id="text37" >Advanced</div>
+</td>
+<td width="10"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="8" style="font-size:1px; line-height:1px;">&nbsp;</td>
+</tr>
+<tr>
+<td align="center" valign="top">
+<table width="100%" align="center" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td height="1" bgcolor="#D2D4D4" style="font-size:0px; line-height:0px;"><img src="http://pluralsight-assets.s3.amazonaws.com/newsletter/072016/spacer_img.gif" width="1" height="1" alt="" border="0" style="display:block;"></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="8" style="font-size:1px; line-height:1px;">&nbsp;</td>
+</tr>
+<tr ><td align="left" valign="top" ><table width="100%" align="left" cellpadding="0" cellspacing="0" border="0" ><tr ><td align="left" valign="top" width="20" style="font-size:0px; line-height:0px;"><a href=
+"http://track.pluralsight.com/pv0l0ehx0et00NI00U03040sD1s0P" target="_blank" style="text-decoration:none;"
+><img src="http://pluralsight-assets.s3.amazonaws.com/newsletter/072016/icon_2.png" width="20" height="20" alt="" border="0" style="display:block;"></a></td>
+<td align="center" valign="top" ><table width="100%" align="center" cellpadding="0" cellspacing="0" border="0" ><tr ><td align="left" valign="top" ><table align="left" cellpadding="0" cellspacing="0" border="0" class="em_wrapper" ><tr ><td align="left" valign="top" ><table align="left" cellpadding="0" cellspacing="0" border="0" ><tr ><td width="10"></td>
+<td align="left" class="em_blk" style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:14px; line-height:20px; color:#231F20; " ><div class="mktEditable" id="text38" ><span class="em_blk"><a href=
+"http://track.pluralsight.com/asx000s1000e00UINfP0lD4h4t0v0" target="_blank"
+>Modeling for Photorealistic Interiors with CINEMA 4D</a> &nbsp;</span><span style="font-size: 10px; line-height: 20px; color: #868686;">by&nbsp;Sophie Jameson</span></div>
+</td>
+<td width="10"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table align="right" cellpadding="0" cellspacing="0" border="0" class="em_wrapper" ><tr ><td align="left" valign="top" ><table align="left" cellpadding="0" cellspacing="0" border="0" ><tr ><td width="10"></td>
+<td align="right" class="em_gray2" style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:10px; line-height:20px; color:#868686; " ><div class="mktEditable" id="text39" >Advanced</div>
+</td>
+<td width="10"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="8" style="font-size:1px; line-height:1px;">&nbsp;</td>
+</tr>
+<tr>
+<td align="center" valign="top">
+<table width="100%" align="center" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td height="1" bgcolor="#D2D4D4" style="font-size:0px; line-height:0px;"><img src="http://pluralsight-assets.s3.amazonaws.com/newsletter/072016/spacer_img.gif" width="1" height="1" alt="" border="0" style="display:block;"></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="8" style="font-size:1px; line-height:1px;">&nbsp;</td>
+</tr>
+<tr ><td align="left" valign="top" ><table width="100%" align="left" cellpadding="0" cellspacing="0" border="0" ><tr ><td align="left" valign="top" width="20" style="font-size:0px; line-height:0px;"><a href=
+"http://track.pluralsight.com/G0v40UxP5000Ds0eNsgl00ht01I00" target="_blank" style="text-decoration:none;"
+><img src="http://pluralsight-assets.s3.amazonaws.com/newsletter/072016/icon_2.png" width="20" height="20" alt="" border="0" style="display:block;"></a></td>
+<td align="center" valign="top" ><table width="100%" align="center" cellpadding="0" cellspacing="0" border="0" ><tr ><td align="left" valign="top" ><table align="left" cellpadding="0" cellspacing="0" border="0" class="em_wrapper" ><tr ><td align="left" valign="top" ><table align="left" cellpadding="0" cellspacing="0" border="0" ><tr ><td width="10"></td>
+<td align="left" class="em_blk" style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:14px; line-height:20px; color:#231F20; " ><div class="mktEditable" id="text40" ><span class="em_blk"><a href=
+"http://track.pluralsight.com/FssP0D0I00004v00xhe0U0hl0N1t6" target="_blank"
+>Advanced Color Grading in Adobe SpeedGrade CC and Premiere Pro CC</a> &nbsp;<br></span><span style="font-size: 10px; line-height: 20px; color: #868686;">by&nbsp;Jon Acosta</span></div>
+</td>
+<td width="10"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table align="right" cellpadding="0" cellspacing="0" border="0" class="em_wrapper" ><tr ><td align="left" valign="top" ><table align="left" cellpadding="0" cellspacing="0" border="0" ><tr ><td width="10"></td>
+<td align="right" class="em_gray2" style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:10px; line-height:20px; color:#868686; " ><div class="mktEditable" id="text41" >Intermediate</div>
+</td>
+<td width="10"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="8" style="font-size:1px; line-height:1px;">&nbsp;</td>
+</tr>
+<tr>
+<td align="center" valign="top">
+<table width="100%" align="center" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td height="1" bgcolor="#D2D4D4" style="font-size:0px; line-height:0px;"><img src="http://pluralsight-assets.s3.amazonaws.com/newsletter/072016/spacer_img.gif" width="1" height="1" alt="" border="0" style="display:block;"></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="8" style="font-size:1px; line-height:1px;">&nbsp;</td>
+</tr>
+<tr ><td align="left" valign="top" ><table width="100%" align="left" cellpadding="0" cellspacing="0" border="0" ><tr ><td align="left" valign="top" width="20" style="font-size:0px; line-height:0px;"><a href=
+"http://track.pluralsight.com/vt00sIvsP7hil0e1N4U0000x00D00" target="_blank" style="text-decoration:none;"
+><img src="http://pluralsight-assets.s3.amazonaws.com/newsletter/072016/icon_2.png" width="20" height="20" alt="" border="0" style="display:block;"></a></td>
+<td align="center" valign="top" ><table width="100%" align="center" cellpadding="0" cellspacing="0" border="0" ><tr ><td align="left" valign="top" ><table align="left" cellpadding="0" cellspacing="0" border="0" class="em_wrapper" ><tr ><td align="left" valign="top" ><table align="left" cellpadding="0" cellspacing="0" border="0" ><tr ><td width="10"></td>
+<td align="left" class="em_blk" style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:14px; line-height:20px; color:#231F20; " ><div class="mktEditable" id="text42" ><span class="em_blk"><a href=
+"http://track.pluralsight.com/NDs0leUNP0000000xh8I41vs0j00t" target="_blank"
+>Designing VEX Driven Digital Assets in Houdini</a> &nbsp;</span><span style="font-size: 10px; line-height: 20px; color: #868686;">by&nbsp;Jonathan Granskog</span></div>
+</td>
+<td width="10"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table align="right" cellpadding="0" cellspacing="0" border="0" class="em_wrapper" ><tr ><td align="left" valign="top" ><table align="left" cellpadding="0" cellspacing="0" border="0" ><tr ><td width="10"></td>
+<td align="right" class="em_gray2" style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:10px; line-height:20px; color:#868686; " ><div class="mktEditable" id="text43" >Intermediate</div>
+</td>
+<td width="10"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="8" style="font-size:1px; line-height:1px;">&nbsp;</td>
+</tr>
+<tr>
+<td align="center" valign="top">
+<table width="100%" align="center" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td height="1" bgcolor="#D2D4D4" style="font-size:0px; line-height:0px;"><img src="http://pluralsight-assets.s3.amazonaws.com/newsletter/072016/spacer_img.gif" width="1" height="1" alt="" border="0" style="display:block;"></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="8" style="font-size:1px; line-height:1px;">&nbsp;</td>
+</tr>
+<tr ><td align="left" valign="top" ><table width="100%" align="left" cellpadding="0" cellspacing="0" border="0" ><tr ><td align="left" valign="top" width="20" style="font-size:0px; line-height:0px;"><a href=
+"http://track.pluralsight.com/Rxk0tN0h00UP0svs094l0I00D001e" target="_blank" style="text-decoration:none;"
+><img src="http://pluralsight-assets.s3.amazonaws.com/newsletter/072016/icon_2.png" width="20" height="20" alt="" border="0" style="display:block;"></a></td>
+<td align="center" valign="top" ><table width="100%" align="center" cellpadding="0" cellspacing="0" border="0" ><tr ><td align="left" valign="top" ><table align="left" cellpadding="0" cellspacing="0" border="0" class="em_wrapper" ><tr ><td align="left" valign="top" ><table align="left" cellpadding="0" cellspacing="0" border="0" ><tr ><td width="10"></td>
+<td align="left" class="em_blk" style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:14px; line-height:20px; color:#231F20; " ><div class="mktEditable" id="text44" ><span class="em_blk"><a href=
+"http://track.pluralsight.com/asx000s1000e00UINlP0lDah4t0v0" target="_blank"
+>SOLIDWORKS Essentials - Revolve and Sweep</a> &nbsp;</span><span style="font-size: 10px; line-height: 20px; color: #868686;">by&nbsp;Amee Meghani</span></div>
+</td>
+<td width="10"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table align="right" cellpadding="0" cellspacing="0" border="0" class="em_wrapper" ><tr ><td align="left" valign="top" ><table align="left" cellpadding="0" cellspacing="0" border="0" ><tr ><td width="10"></td>
+<td align="right" class="em_gray2" style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:10px; line-height:20px; color:#868686; " ><div class="mktEditable" id="text45" >Beginner</div>
+</td>
+<td width="10"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="45" class="em_height" style="font-size:1px; line-height:1px;">&nbsp;</td>
+</tr>
+<tr ><td align="center" valign="top" ><table width="195" align="center" cellpadding="0" cellspacing="0" border="0" ><tr ><td align="right" valign="top" width="3"><img src="http://pluralsight-assets.s3.amazonaws.com/newsletter/072016/r_1.jpg" width="3" height="35" alt="" border="0" style="display:block;"></td>
+<td align="center" valign="top" ><table width="100%" align="center" cellpadding="0" cellspacing="0" border="0" ><tr>
+<td height="2" bgcolor="#E77478" style="font-size:0px; line-height:0px;"><img src="http://pluralsight-assets.s3.amazonaws.com/newsletter/072016/spacer_img.gif" width="1" height="1" alt="" border="0" style="display:block;"></td>
+</tr>
+<tr ><td align="center" class="em_red" valign="middle" height="31" style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:11px; color:#D92328; font-weight:bold; " ><div class="mktEditable" id="text46" ><a href=
+"http://track.pluralsight.com/s00DNv40mb0sh0Ut00slx01000IeP" target="_blank" style="text-decoration: none; color: #d92328; line-height: 31px; display: block;"
+>View all new creative courses</a></div>
+</td>
+</tr>
+<tr>
+<td height="2" bgcolor="#E77478" style="font-size:0px; line-height:0px;"><img src="http://pluralsight-assets.s3.amazonaws.com/newsletter/072016/spacer_img.gif" width="1" height="1" alt="" border="0" style="display:block;"></td>
+</tr>
+</table>
+</td>
+<td align="left" valign="top" width="3"><img src="http://pluralsight-assets.s3.amazonaws.com/newsletter/072016/r_2.jpg" width="3" height="35" alt="" border="0" style="display:block;"></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="120" class="em_height" style="font-size:1px; line-height:1px;">&nbsp;</td>
+</tr>
+</table>
+</td>
+<td width="11" class="em_side">&nbsp;</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<table bgcolor="#000000" width="100%" border="0" cellspacing="0" cellpadding="0" style="mso-padding-alt:0px 0px 0px 0px; " ><tr ><td ><!--Body Table-->
+<table class="bodyTable" width="650" border="0" cellspacing="0" cellpadding="0" align="center" style="margin-left:auto; margin-right:auto; " ><!--Footer-->
+<tr ><td ><div class="mktEditable" id="email_footer_snippet" ><table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tbody>
+<tr>
+<td class="stack" bgcolor="#000000" style="font-family: Arial, Helvetica, sans-serif; font-size: 12px; line-height: 14px; color: #888888; padding: 50px;">
+<div class="mktEditable" id="footer">
+<p style="line-height: 100%; margin-top: 0px; margin-bottom: 0px;"><a href=
+"http://track.pluralsight.com/dc/JYWY0TlT8MJDYEoI81rBxA5Wzd11AHCXfBqCVJRER9xH2CoFF1T_qdKJ8hYXcDPBRZ3NC9F8fLOEQVJzTsZQB_r65yO0DFLKcA_5Qgyfl35kMtVtRHjhxAoxIYFBOADV-WIMt7jnPeJTxyzswcObVg==/bU01HP00ss0eh0D00tJzx40vl000N" target="_blank"
+><img src="http://pluralsight-assets.s3.amazonaws.com/transactional/template/ps-logo-with-icon-horiz-white-line.png" width="195" height="45" border="0" style="display: block;" alt="Pluralsight" /></a></p>
+<br /> Pluralsight, LLC 182 N. Union Ave. Farmington, UT 84025 <br /><br /> <!--Social-->
+<table width="192" border="0" cellpadding="7" cellspacing="0">
+<tbody>
+<tr>
+<td width="11"><a href=
+"http://track.pluralsight.com/dc/M5yi0yZ-UZCCxV3bfEu0anbONeUjOd18p_VSSggcgn1KnVyLbzm9JXbC780PBpiyhoAsjcBBeMtxgMU63eHu7NbQGAWshYPXHZT6dQeqcKopxUQHL_dlAJavDyQdA-dKt7q6ZCKy07fClLmpG5zUWNBtdNHblTbj5ROCO2GAOUs=/bU01HP00ss0eh0D00tJzx40vl000N" target="_blank"
+> <img src="http://pluralsight-assets.s3.amazonaws.com/template_images/facebook_white.png" width="11" height="20" alt="facebook" style="display: block;" border="0" /> </a></td>
+<td width="20"><a href=
+"http://track.pluralsight.com/dc/MYFzQrvu5rPS8PETBnVMsRusr34Y1lr0HdZtfs82X3vO04_NGrzlGCmyDx4mB_FX9RW0b7lTCwl609tXruV3xuQUOsOBIYbuA4JJJLUf7hdbO-LhqFx0WgqUgDLhLErVcXaTpWSoPG1C00ZDP3NeZHubYXU-N1RQDx-O7C1KMQk=/bU01HP00ss0eh0D00tJzx40vl000N" target="_blank"
+> <img src="http://pluralsight-assets.s3.amazonaws.com/template_images/instagram_white.png" width="20" height="19" alt="instagram" style="display: block;" border="0" /> </a></td>
+<td width="24"><a href=
+"http://track.pluralsight.com/dc/mEXRm9OBeNs3Y1bS8bbzxbRyXNqtjLoy0YuxYDuUp_hcm68MWs-VvlhlQw_yCFRQxTNfsK9M2JSR0b8ORLa0PjAt1z8ZJkIlE_Hwp0m1zH2y823BwNu793CwP63PXY3g2yUgqRkZFz4fFHardOx0kQ==/bU01HP00ss0eh0D00tJzx40vl000N" target="_blank"
+> <img src="http://pluralsight-assets.s3.amazonaws.com/template_images/twitter_white.png" width="24" height="19" alt="twitter" style="display: block;" border="0" /> </a></td>
+<td width="20"><a href=
+"http://track.pluralsight.com/dc/fG5-PlwEnZR-IoSdwCtjIpTVr9AsJHNwc_srhy7U9rUyu4L2r1h4f19cfOkDh-jC_aSXaFI_o1f_o8tdzABVODS4oOTF__xYU0tXwPyBDY-fd43JWy7tyae5_Dh9orn-7zWJfJlNwZJriffbexWnRaPGTwYkNMZAX7pCZC8ZD1g=/bU01HP00ss0eh0D00tJzx40vl000N" target="_blank"
+> <img src="http://pluralsight-assets.s3.amazonaws.com/template_images/linkedin_white.png" width="20" height="19" alt="Linked in" style="display: block;" border="0" /> </a></td>
+<td width="19"><a href=
+"http://track.pluralsight.com/dc/yBSzDXz1t83SAu8S57EEMjXpT0QzKEIw3GTILdKytdHKGDOG7XdRkIuWxViFt2KBdU6g76rMaIXllKzQtu0d2f_je8pkDVSsw-YZZSBOYoCsRxoY4Jhij55GTXTUQVPvNC131PfHABx-IP_g4t1VMd49Dp15xBm3ptEQtrk0hwk=/bU01HP00ss0eh0D00tJzx40vl000N" target="_blank"
+> <img src="http://pluralsight-assets.s3.amazonaws.com/template_images/google_plus_white.png" width="19" height="19" alt="google_plus" style="display: block;" border="0" /> </a></td>
+<td width="16"><a href=
+"http://track.pluralsight.com/dc/M9Y3nowLDCcEv8uSbJAkaXTGHqV_YEzxUjtWE9O_NefGiOBbRfI-gjia7kTCFLdEwyQ1iShLugq03T4cT-vjUHEuF4XuBi-LLkDlrGtIsKYwkMMpGZkXC_14polzEo8iA7VjUxq870JVp5e1qSy_jAWFDD1KlK8LSisRqZV-M7c=/bU01HP00ss0eh0D00tJzx40vl000N" target="_blank"
+> <img src="http://pluralsight-assets.s3.amazonaws.com/template_images/you_tube_white.png" width="16" height="19" alt="you_tube" style="display: block;" border="0" /> </a></td>
+</tr>
+</tbody>
+</table>
+<!--End Social--> <br /><br /> Copyright&copy; 2016 Pluralsight LLC.<br /> All logos and trademarks are the properties of their respective owners. <br /><br /> This email was sent to <a href=
+"http://track.pluralsight.com/dc/1pDQu0mqE2rkhpZT-8gq22t_e8hlmX3JHlD628UL3nY=/bU01HP00ss0eh0D00tJzx40vl000N" style="color: #207fc2; text-decoration: none;"
+>dragonet.c17@gmail.com</a><br /> <a href="https://get.pluralsight.com/UnsubscribePage.html?mkt_unsubscribe=1&mkt_tok=eyJpIjoiWkRCaU5XTTROV0k1WlRneCIsInQiOiJMcVFJQkpVcGJrTDFNTXNrcXVHM1hESy9kczBJeXIySTVab1lDMWN1N0lLMjVNcWRUMHJCQzNsUjRINzNFTmlPNk1IdjJ3bDlnOXpPNDhXWGdPbGVUbm55SkI2ekZwZnVWQ2RMbVdpVUVXdW0xOEQwanh3bWNCNXd6Rk5wZWNUeSJ9/?utm_campaign=nl-w-na-062916&utm_content=&utm_medium=email&utm_source=marketo" target="_blank" style="color: #888888; text-decoration: none;">Unsubscribe</a> | <a href=
+"http://track.pluralsight.com/dc/jXnNgZX0R5Skt2btW6cf1ZC-rp3W1ClrQyb8joQdufid5Pzoibv5JJHzdhivwCdrNqgIyWsu9MLAZvui4o5kY5qLHIjxHSlEPg9uqza1J4b4_RsN3qQLfiBwZ-WFbk7phDBTfIOWWjkA17-fTEQS8hvl3tdHsBR6AH1yUg8danRhB67KOabYIA-yT2eJWBF4/bU01HP00ss0eh0D00tJzx40vl000N" target="_blank" style="color: #888888; text-decoration: none;"
+>Manage your preferences</a></div>
+</td>
+</tr>
+</tbody>
+</table></div>
+</td>
+</tr>
+<!--End Footer--></table>
+<!--End Body Table--></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+<img src="http://track.pluralsight.com/trk?t=1&mid=MzA2LURVUC03NDU6MTc1MTU6Nzg0MzozODY3MzowOjExNjQ5Ojc6NjgwMTg1NS0wLTI3NjpkcmFnb25ldC5jMTdAZ21haWwuY29t" width="1" height="1" style="display:none !important;" alt="" />
+</body>
+</html>
+------=_Part_553616184_1034616447.1469043098952--

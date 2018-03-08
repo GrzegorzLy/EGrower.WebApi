@@ -1,0 +1,220 @@
+Delivered-To: dragonet.c17@gmail.com
+Received: by 10.202.65.198 with SMTP id o189csp666590oia;
+        Thu, 7 Apr 2016 14:20:28 -0700 (PDT)
+X-Received: by 10.37.101.67 with SMTP id z64mr2872773ybb.17.1460064027984;
+        Thu, 07 Apr 2016 14:20:27 -0700 (PDT)
+Return-Path: <bounce-30_HTML-34204586-2681-7231722-713@bounce.microsoftemails.com>
+Received: from mta6.microsoftemails.com (mta6.microsoftemails.com. [136.147.186.6])
+        by mx.google.com with ESMTP id q6si2208320ywf.207.2016.04.07.14.20.27
+        for <dragonet.c17@gmail.com>;
+        Thu, 07 Apr 2016 14:20:27 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounce-30_HTML-34204586-2681-7231722-713@bounce.microsoftemails.com designates 136.147.186.6 as permitted sender) client-ip=136.147.186.6;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@email2.microsoft.com;
+       spf=pass (google.com: domain of bounce-30_HTML-34204586-2681-7231722-713@bounce.microsoftemails.com designates 136.147.186.6 as permitted sender) smtp.mailfrom=bounce-30_HTML-34204586-2681-7231722-713@bounce.microsoftemails.com;
+       dmarc=fail (p=NONE dis=NONE) header.from=email2.office.com
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=msft20151201; d=email2.microsoft.com;
+ h=From:To:Subject:Date:MIME-Version:Reply-To:Message-ID:Content-Type:Content-Transfer-Encoding;
+ bh=nikQDQTEt4lf9CrkhMbT8YEwdMs=;
+ b=izzA8UBtHZYXTw+2d7ZzljSd5RUhQlRnfonfbS8y47mEftIeCalM0Y6ntWq3/0wBiNb5U4zA+D9V
+   jZcbJ1I6dtfTqscO2KSUh/ZYnPNHTsa3jQMuZ/eiV91+DMMk8lBMZxtQu3NBglYYN/rt17wkk8N7
+   b0pXZXgAY0zHRmo8Wv4=
+Received: by mta6.microsoftemails.com id h0r7hm163hs3 for <dragonet.c17@gmail.com>; Thu, 7 Apr 2016 21:20:25 +0000 (envelope-from <bounce-30_HTML-34204586-2681-7231722-713@bounce.microsoftemails.com>)
+From: "Microsoft OneDrive" <email@email2.office.com>
+To: <dragonet.c17@gmail.com>
+Subject: Witamy w Microsoft OneDrive
+Date: Thu, 07 Apr 2016 15:20:25 -0600
+MIME-Version: 1.0
+Reply-To: "No Reply OneDrive" <reply-ff2e16767d65-30_HTML-34204586-7231722-713@microsoftemails.com>
+x-job: 7231722_2681
+Message-ID: <e6bc31ed-6d37-4bbb-8f99-699cbd8dd412@atl1s07mta718.xt.local>
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-type" content="text/html;charset=utf-8">
+	<meta name="format-detection" content="telephone=no"> 
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Witamy w Microsoft OneDrive</title>
+	<style type="text/css">
+		a {color:#666666;text-decoration:none !important;}
+		p{padding:0;margin:0;}
+		table{border-collapse:collapse;margin:0;-ms-text-size-adjust:auto;-webkit-text-size-adjust:100%}
+		a:visited {color:#666666;text-decoration:none!important;}
+		input::-moz-focus-inner {border: 0; outline: 0}		
+	</style>
+	<!--[if gte mso 9]>
+	<style type="text/css" media="all">
+		 body {mso-line-height-rule: exactly;}
+         table{border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;}
+		 tr {mso-line-height-rule: exactly;}
+		 td{mso-line-height-rule: exactly;}
+	</style>
+	<![endif]-->
+
+	<!--[if gte mso 15]>
+	<style type="text/css" media="all">
+		body{font-size:0;line-height:0;mso-line-height-rule:exactly;}
+        table{border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;}
+		tr{font-size:0px;mso-line-height-alt:0px;mso-margin-top-alt:0px;mso-line-height-rule:exactly;}
+		td{mso-line-height-rule:exactly;}
+	</style>
+	<![endif]-->
+	<style type="text/css">
+	@import url(https://asgcdn.azureedge.net/general/fonts/latin_full.css);
+
+	@media screen and (max-width:480px){
+		body[yahoofix] {padding:0 !important;margin:0 !important;}
+		body[yahoofix] .hiddenIs{display: none!important;}
+		body[yahoofix] .full_width{width:100% !important;}
+		body[yahoofix] .mobpadding{padding-left:10px !important;padding-right:10px !important;}
+		body[yahoofix] .mobpadding0{padding-left:0px !important;padding-right:0px !important;}
+		body[yahoofix] .full_width_image{width:100% !important;height:auto;}
+		body[yahoofix] .{display:block !important;padding-bottom:5px;}
+	}
+	</style>
+</head>
+
+<body yahoofix style="background-color:#f8f8f8;color:#f8f8f8;line-height:0;font-size:1px;">
+<img src="http://click.microsoftemails.com/open.aspx?ffcb10-ff2e16767d65-fe621774776402797112-fe9713727665037f77-ff9c1770-fe5f1774776400787d12-ff64137176&d=70012" width="1" height="1">
+<table bgcolor="#f8f8f8" width="100%" border="0" cellspacing="0" cellpadding="0" align="center"><tr><td align="center" style="padding:0 10px;">
+<table width="600" border="0" cellspacing="0" cellpadding="0" align="center" class="full_width" bgcolor="#f8f8f8" >
+
+<tr>
+	<td align="left" style="padding:10px 0 0 0;font-size:11px;line-height:15px;font-family:'Segoe UI','Segoe UI Regular',SUWR,Arial,Sans-serif; font-weight: normal;color:#767676;">Microsoft OneDrive daje więcej możliwości, gdziekolwiek jesteś.</td>
+</tr>
+
+<tr>
+	<td align="left" style="padding:20px 0 40px 0;font-size:11px;line-height:15px;font-family:'Segoe UI','Segoe UI Regular',SUWR,Arial,Sans-serif; font-weight: normal;color:#767676;">Masz problem z wyświetlaniem wiadomości? <a href="http://view.microsoftemails.com/?qs=9db6e378a2e6f9d78ff3ef0c6f456eac0bb9c6888e2c891c03231f33d7948298cab92ec0be9a6bca9dc894b3bc23815acdd5a3f1a77a2ff12522efb283f10d52" target="_blank" style="color:#666666;text-decoration:none;"><strong style="font-weight:bold;color:#666666!important;text-decoration:none!important;">Kliknij tutaj.</strong></a></td>
+</tr>
+<!-- TOP AREA DESCRIPTIONS END -->
+ 
+<tr>
+	<td class="full_width" style="padding:0 0 20px 0;">
+		<table cellspacing="0" cellpadding="0" border="0" class="full_width"  align="left">
+			<tr>
+				<td align="left" style="padding:0px 5px;">
+					<a href="http://click.microsoftemails.com/?qs=6ae30763049e15964765f69cac934be1b2e361852f6d4312b0786d9db2119b727a935e51957e126d"  target="_blank"><img src="https://asgcdn.azureedge.net/2015-11-od-welcome-onboarding-email-fy16/images/en-us/onedrive_logo_double.png" width="160" height="26" alt="OneDrive" border="0" style="display:block;"></a>
+				</td>
+			</tr>
+		</table>
+		<table cellspacing="0" cellpadding="0" border="0" class="full_width" style="display:table;" align="right">
+			<tr>
+				<td align="left" style="padding:0px 20px 0 5px;" class="hiddenIs">
+					<a href="http://click.microsoftemails.com/?qs=269325a9134d3cd355aad395c642b5987c2e4c420042b5007882977719decded25759c51dd934e6b"  target="_blank"><img src="https://asgcdn.azureedge.net/2015-11-od-welcome-onboarding-email-fy16/images/en-us/social_icon_twt_double.png" width="20" height="20" alt="Twitter" border="0" style="display:block;"></a>
+				</td>
+				<td align="left" style="padding:0px 5px;" class="hiddenIs">
+					<a href="http://click.microsoftemails.com/?qs=269325a9134d3cd30047190d2310a81d2e6f130cb4dd47beeed63d4fd7c930a947f9e98744fde433"  target="_blank"><img src="https://asgcdn.azureedge.net/2015-11-od-welcome-onboarding-email-fy16/images/en-us/social_icon_fb_double.png" width="9" height="20" alt="Facebook" border="0" style="display:block;"></a>
+				</td>
+			</tr>
+		</table>
+	</td>
+</tr>
+
+<!-- HERO IMAGE BEGIN -->
+<tr>
+	<td class="full_width mobpadding0">
+		<img src="https://asgcdn.azureedge.net/2015-11-od-welcome-onboarding-email-fy16/images/en-us/hero.gif" width="600" height="400" border="0" alt="Więcej możliwości, gdziekolwiek jesteś" class="full_width_image" style="display:block;">
+	</td>
+</tr>
+<!-- HERO IMAGE END -->
+
+<tr>
+	<td align="left" class="full_width mobpadding" style="padding:20px 10px 25px;" bgcolor="#ffffff">
+		<table width="440" cellspacing="0" cellpadding="0" border="0" class="full_width" style="display:table;">
+			<tr>
+				<td align="left" style="font-family:'Segoe UI Light','Segoe UI',SUWL,Arial,Sans-serif; font-weight: lighter; line-height:38px; font-size:28px; color:#666666;padding-bottom:10px;">Więcej możliwości, gdziekolwiek jesteś</td>
+			</tr>
+			<tr>
+				<td align="left" style="font-family:'Segoe UI','Segoe UI Regular',SUWR,Arial,Sans-serif; font-weight: normal; line-height:20px; font-size:15px; color:#666666;">Dzięki Microsoft OneDrive możesz mieć dostęp do swoich dokumentów, zdjęć i innych plików z dowolnego miejsca za pomocą różnych urządzeń, m.in. komputera PC lub Mac, tabletu czy telefonu komórkowego. Możesz także zaprosić rodzinę i&nbsp;znajomych do przeglądania i edytowania Twoich plików, dzięki czemu udostępnianie plików i współpraca nad nimi będą jeszcze łatwiejsze.</td>
+			</tr>
+			<tr>
+				<td align="left" style="padding:20px 0 0 0;font-family:Segoe XDR, Segoe WP, Segoe UI, Helvetica, Arial; line-height:20px; font-size:15px; color:#666666;">Oto, jak rozpocząć:</td>
+			</tr>
+			<tr>
+				<td style="padding:0 0 0 10px;">
+					<table cellspacing="0" cellpadding="0" border="0">
+						<tr>
+							<td align="left" style="padding:10px 0 10px 0;font-family:'Segoe UI','Segoe UI Regular',SUWR,Arial,Sans-serif; font-weight: normal; line-height:20px; font-size:15px; color:#666666;vertical-align:top;padding-right:10px;">1.</td>
+							<td align="left" style="padding:10px 0 10px 0;font-family:'Segoe UI','Segoe UI Regular',SUWR,Arial,Sans-serif; font-weight: normal; line-height:20px; font-size:15px; color:#666666;">Zaloguj się na <a href="http://click.microsoftemails.com/?qs=269325a9134d3cd314e0916afe4836fcd567aff15351a968b195b089bf45cdc63e2936f1023b6a7a"  target="_blank" style="text-decoration:none;color:#666666;"><strong style="color:#666666;font-family:'Segoe UI Bold','Segoe UI',SUWSB,Arial,Sans-serif; font-weight: bold;">OneDrive.com</strong></a> lub <a href="http://click.microsoftemails.com/?qs=269325a9134d3cd3717e801adeb8934d91ab680783b75a5c6f373fedba7346ff5ce9c8201cf35b5f"  target="_blank" style="text-decoration:none;color:#666666;"><strong style="color:#666666;font-family:'Segoe UI Bold','Segoe UI',SUWSB,Arial,Sans-serif; font-weight: bold;">pobierz i zainstaluj aplikację OneDrive</strong></a> na swoim komputerze PC lub Mac.</td>
+						</tr>
+						<tr>
+							<td align="left" style="padding:10px 0 10px 0;font-family:'Segoe UI','Segoe UI Regular',SUWR,Arial,Sans-serif; font-weight: normal; line-height:20px; font-size:15px; color:#666666;vertical-align:top;padding-right:10px;">2.</td>
+							<td align="left" style="padding:10px 0 10px 0;font-family:'Segoe UI','Segoe UI Regular',SUWR,Arial,Sans-serif; font-weight: normal; line-height:20px; font-size:15px; color:#666666;">Aby dodać pliki, przeciągnij je i upuść w oknie przeglądarki albo przenieś je do folderu OneDrive na komputerze.</td>
+						</tr>
+						<tr>
+							<td align="left" style="padding:10px 0 10px 0;font-family:'Segoe UI','Segoe UI Regular',SUWR,Arial,Sans-serif; font-weight: normal; line-height:20px; font-size:15px; color:#666666;vertical-align:top;padding-right:10px;">3.</td>
+							<td align="left" style="padding:10px 0 10px 0;font-family:'Segoe UI','Segoe UI Regular',SUWR,Arial,Sans-serif; font-weight: normal; line-height:20px; font-size:15px; color:#666666;">Po zsynchronizowaniu pliki będą cały czas dostępne, niezależnie od urządzenia, jakiego używasz.</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+	</td>
+</tr>
+<tr>
+	<td align="left" class="full_width mobpadding" style="padding:14px 10px 14px 10px;" bgcolor="#0072c6">
+		<table cellspacing="0" cellpadding="0" border="0" style="display:table;">
+			<tr>
+				<td align="left" style="padding-right:12px;"><a href="http://click.microsoftemails.com/?qs=269325a9134d3cd3538f15bf77cdb2a615e1ea2d05d421f4147ef4d315e4f3d5916dc065465ac270"  target="_blank"><img src="https://asgcdn.azureedge.net/2015-11-od-welcome-onboarding-email-fy16/images/en-us/download_icon.png" width="26" height="26" alt="Pobierz nasze aplikacje" border="0" style="display:block;"></a></td>
+				<td align="left" style="font-family:'Segoe UI Light','Segoe UI',SUWL,Arial,Sans-serif; font-weight: lighter; line-height:28px; font-size:21px; color:#ffffff;"><a href="http://click.microsoftemails.com/?qs=269325a9134d3cd39a965c234e5476d7ce48a78a7052c5be741d1d428047d475bfb29337a51f33e8"  target="_blank" style="color:#ffffff;text-decoration:none;"><strong style="text-decoration:none;
+			color:#ffffff;font-weight:normal;">Pobierz nasze aplikacje</strong></a></td>
+			</tr>
+		</table>
+	</td>
+</tr>
+
+<tr>
+	<td align="left" style="padding:30px 0 20px 0;font-family:'Segoe UI Semilight','Segoe UI',SUWL,Arial,Sans-serif; font-weight: lighter; line-height:23px; font-size:17px; color:#a6a6a6;">Połącz się z OneDrive</td>
+</tr>
+<tr>
+	<td class="full_width" style="padding:14px 0 20px 0;">
+		<table cellspacing="0" cellpadding="0" border="0"  style="display:table;">
+			<tr>
+				<td align="left" style="padding:0px 5px;">
+					<a href="http://click.microsoftemails.com/?qs=269325a9134d3cd355aad395c642b5987c2e4c420042b5007882977719decded25759c51dd934e6b"  target="_blank"><img src="https://asgcdn.azureedge.net/2015-11-od-welcome-onboarding-email-fy16/images/en-us/social_icon_twt_double.png" width="20" height="20" alt="Twitter" border="0" style="display:block;"></a>
+				</td>
+				<td align="left" style="padding:0px 5px;">
+					<a href="http://click.microsoftemails.com/?qs=269325a9134d3cd30047190d2310a81d2e6f130cb4dd47beeed63d4fd7c930a947f9e98744fde433"  target="_blank"><img src="https://asgcdn.azureedge.net/2015-11-od-welcome-onboarding-email-fy16/images/en-us/social_icon_fb_double.png" width="9" height="20" alt="Facebook" border="0" style="display:block;"></a>
+				</td>
+			</tr>
+		</table>
+	</td>
+</tr>
+
+<!-- SERVICE NOTIFICATION FOOTER WHITE BEGIN -->
+<tr>
+	<td class="full_width" style="padding:20px 0;">
+		<table border="0" cellspacing="0" cellpadding="0" class="full_width">
+			<tr>
+				<td align="left" class="full_width" style="padding-bottom:40px;">
+					<a href="http://click.microsoftemails.com/?qs=269325a9134d3cd3d305a5d82c00adf6ca27e80cc3278d19e183040de3c0cc2c63eef4454a7906ce"  target="_blank"> <img src="https://asgcdn.azureedge.net/general/mslogos/ms_logo_g_double.png" width="113" height="24" alt="Microsoft" border="0" style="display:block;"> </a>
+				</td>
+			</tr>
+			<tr>
+				<td align="left" class="full_width appleLinksGrey"  style="text-align:left;font-size:11px;line-height:13px;font-family:Segoe UI,SUWR,Arial,Sans-Serif;color:#737373;">
+					Niniejszą wiadomość wysyłamy do wszystkich nowych użytkowników OneDrive. <font style="line-height:10px;"><br><br></font> Microsoft szanuje Twoją prywatność. Wiecej informacji na ten temat można znaleźć na stronie dotyczącej <a href="http://click.microsoftemails.com/?qs=269325a9134d3cd3e646a9d2e45ea9b56f22bd6bea4b73dbacfbf4954c98c0aee5f61412b3d25dd6"  target="_blank" style="color:#666666;text-decoration:none;"><strong style="font-family:'Segoe UI Bold','Segoe UI',SUWSB,Arial,Sans-serif; font-weight: bold;color:#666666;text-decoration:none;">ochrony prywatności</strong></a>. <font style="line-height:10px;"><br><br></font> Microsoft Corporation<br> One Microsoft Wa&#65279;y<br> Redmond, WA 980&#65279;52
+				</td>
+			</tr>
+		</table>
+	</td>
+</tr>
+<!-- SERVICE NOTIFICATION FOOTER WHITE END -->
+
+</table> 
+
+</td></tr></table>
+</body>
+</html>
+
+
+
+<img src="http://click.microsoftemails.com/open.aspx?ffcb10-ff2e16767d65-fe621774776402797112-fe9713727665037f77-ff9c1770-fe5f1774776400787d12-ff64137176&d=70012" width="1" height="1">
+                    
+                

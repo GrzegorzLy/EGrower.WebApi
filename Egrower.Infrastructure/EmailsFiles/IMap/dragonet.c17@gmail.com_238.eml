@@ -1,0 +1,326 @@
+Delivered-To: dragonet.c17@gmail.com
+Received: by 10.107.156.204 with SMTP id f195csp2369345ioe;
+        Tue, 7 Mar 2017 08:53:32 -0800 (PST)
+X-Received: by 10.107.27.204 with SMTP id b195mr1726662iob.26.1488905612133;
+        Tue, 07 Mar 2017 08:53:32 -0800 (PST)
+Return-Path: <bounce-866153_HTML-1275061275-4921669-228974-326@bounce.e-mail.microsoft.com>
+Received: from mta28.email.microsoftemail.com (mta28.email.microsoftemail.com. [66.231.92.214])
+        by mx.google.com with ESMTPS id y128si986479itb.14.2017.03.07.08.53.31
+        for <dragonet.c17@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 07 Mar 2017 08:53:32 -0800 (PST)
+Received-SPF: pass (google.com: domain of bounce-866153_html-1275061275-4921669-228974-326@bounce.e-mail.microsoft.com designates 66.231.92.214 as permitted sender) client-ip=66.231.92.214;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@email.microsoftemail.com;
+       spf=pass (google.com: domain of bounce-866153_html-1275061275-4921669-228974-326@bounce.e-mail.microsoft.com designates 66.231.92.214 as permitted sender) smtp.mailfrom=bounce-866153_HTML-1275061275-4921669-228974-326@bounce.e-mail.microsoft.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=e-mail.microsoft.com
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=102420140131; d=email.microsoftemail.com;
+ h=From:To:Subject:Date:MIME-Version:Reply-To:List-ID:Message-ID:Content-Type;
+ bh=q9aiy8ErOJKFt93mB4pZKKET/8E=;
+ b=KngiJxT4yeV9V3qSZ90FHCiGu8wuKVAM8Bd6nMkkREuoprkMOnZeBLoc3C+TeOEjPX3SUlSc/8+T
+   8JZBXQYxv0X9lPpSBLoUdU2BGx6PCpgb7O3s75UQoDln+fy/Ll+WHWoSQEhruEyaCSWNrhIj+bfC
+   awt4g1t5YpV/Qp8GA2M=
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=200608; d=e-mail.microsoft.com;
+ b=URA6RVB5r+rL7aVem/RLHzv5SDDc2Cy9Ph73x9tlY2WaJcMk57uDrCRZtwKwa0WLFQXlHnIJlVmP
+   f9ewGCaa6nbpBfC3mqGBAxmE4uI8/dlY0mCcy9kFjmKGXB7WTQwd9toAqVwpbeNKnOycyTfmZhE2
+   EfFp+1gISaA6VoTZqJs=;
+Received: by mta28.email.microsoftemail.com id hnrioo163hs6 for <dragonet.c17@gmail.com>; Tue, 7 Mar 2017 10:53:14 -0600 (envelope-from <bounce-866153_HTML-1275061275-4921669-228974-326@bounce.e-mail.microsoft.com>)
+From: "Visual Studio Dev Essentials" <vs_dev_essentials@e-mail.microsoft.com>
+To: <dragonet.c17@gmail.com>
+Subject: Your Dev Essentials update for March
+Date: Tue, 07 Mar 2017 10:53:14 -0600
+MIME-Version: 1.0
+Reply-To: "Microsoft" <reply-fe8a10797765027b7c-866153_HTML-1275061275-228974-326@email.microsoftemail.com>
+List-ID: <228974_4921669.xt.local>
+X-CSA-Complaints: whitelistcomplaints@eco.de
+x-job: 228974_4921669
+Message-ID: <a8e9e42d-1bfa-4bcb-8ee4-182d7b17345b@xtinmta4192.xt.local>
+Feedback-ID: 228974:4921669:66.231.92.214:sfmktgcld
+Content-Type: multipart/alternative;
+	boundary="qCr287kekbJW=_?:"
+
+This is a multi-part message in MIME format.
+
+--qCr287kekbJW=_?:
+Content-Type: text/plain;
+	charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+
+
+Happy launch day! If you missed anything from the Visual Studio 2017 launch, catch up on all the news, the keynote, and technical sessions on demand.
+
+https://aka.ms/vs2017rtm-dess2?wt.mc_id=AID533228_EML_4921669 
+Watch now
+https://aka.ms/vs2017rtm-dess2?wt.mc_id=AID533228_EML_4921669 
+
+Download Visual Studio 2017!
+
+Develop high quality apps for Android, iOS, Linux, Windows, Web, and the Cloud. Enhancements to code navigation, IntelliSense, refactoring, code fixes, debugging, and unit testing, save you time and effort on everyday tasks regardless of language or platform.
+
+https://aka.ms/vs2017rtm-dess-dl?wt.mc_id=AID533228_EML_4921669 
+Download now
+https://aka.ms/vs2017rtm-dess-dl?wt.mc_id=AID533228_EML_4921669 
+
+New: DevOps and Cloud training
+
+Get a 3-month subscription to Opsgility, one of the most comprehensive video libraries for Microsoft Azure and DevOps curriculum available.
+
+https://my.visualstudio.com/?wt.mc_id=AID533228_EML_4921669 
+Activate now
+https://my.visualstudio.com/?wt.mc_id=AID533228_EML_4921669 
+
+
+This mail was sent to you as part of your Visual Studio Dev Essentials membership. If you wish to opt out of this program, please go to your 
+https://my.visualstudio.com/subscriptions?wt.mc_id=AID533228_EML_4921669 
+subscriptions 
+page and click on the “Leave program” link.
+
+
+
+This message from Microsoft is an important part of a program, service, or product that you or your company purchased or participate in. 
+
+
+Microsoft respects your privacy. Please read our 
+https://go.microsoft.com/fwlink/?LinkId=521839 
+PrivacyStatement. 
+
+
+Microsoft Corporation
+
+One Microsoft Way
+
+Redmond, WA 98052
+
+
+
+
+
+--qCr287kekbJW=_?:
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <!--[if !mso]><!-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!--<![endif]-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+
+  <!-- Load css via grunt template -->
+  
+
+  <style>
+
+    /* MSO 9 FIX */
+    table {border-collapse: collapse;}
+
+    /* Windows Phone 8 Fix
+    ** http://mattstow.com/responsive-design-in-ie10-on-windows-phone-8.html
+    */
+
+    @-ms-viewport {
+      width: device-width;
+    }
+
+    /* Responsive Styles */
+
+    /*@media only screen and (max-device-width: 480px) {*/
+    @media only screen and (max-width: 700px) {
+
+      .column {
+        max-width: 90% !important;
+        text-align: center;
+      }
+
+      img {
+        max-width: 100% !important;
+      }
+
+      .module-feature-story {
+        padding: 0 8px !important;
+      }
+
+      .module-feature-story .text-column {
+        padding: 20px 20px 20px 0 !important;
+      }
+
+    }
+
+  </style>
+
+  <!--[if gte mso 9]>
+  <xml>
+  <o:OfficeDocumentSettings>
+  <o:AllowPNG/>
+  <o:PixelsPerInch>96</o:PixelsPerInch>
+  </o:OfficeDocumentSettings>
+  </xml>
+  <![endif]-->
+
+</head>
+
+<body data-env="PROD" style="Margin: 0; padding: 0; min-width: 100%; background-color: #505050;"><style type="text/css">
+div.preheader 
+{ display: none !important; } 
+</style>
+<div class="preheader" style="font-size: 1px; display: none !important;">Visual Studio 2017 is here and new on-demand training</div>
+<img src="https://pixel.app.returnpath.net/pixel.gif?r=e372827c46de0108ca343cdc6f4332960daaf5c8" width="1" height="1" />
+<img src="https://pixel.monitor1.returnpath.net/pixel.gif?r=e372827c46de0108ca343cdc6f4332960daaf5c8" width="1" height="1" />
+  <!-- Wrapper/Container Table: Use a wrapper table to control the width and the background color consistently of your email. Use this approach instead of setting attributes on the body tag. -->
+
+  <center class="wrapper" style="width: 100%; table-layout: fixed; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+    <div class="webkit" style="max-width: 600px;">
+      <!--[if (gte mso 9)|(IE)]>
+      <table cellpadding="0" cellspacing="0" border="0" width="600" align="center">
+      <tr>
+      <td>
+      <![endif]-->
+            <table cellpadding="0" cellspacing="0" border="0" class="outer" width="600" align="center" style="border-spacing: 0; font-family: sans-serif; color: #222222; border-collapse: collapse; Margin: 0 auto; width: 100%; max-width: 600px;">
+
+
+
+              <!-- START: Module Masthead -->
+                <tr>
+                  <td class="module-masthead" align="left" style="padding: 25px; background-color: #fff;">
+                    <img src="https://image.email.microsoftemail.com/lib/febf16727d6d0379/m/2/212842_masthead-2x.png" width="155" alt="Microsoft Visual Studio" style="border: 0; -ms-interpolation-mode: bicubic; display: block; outline: none; text-decoration: none; padding: 0; background-color: #fff;"/>
+                  </td>
+                </tr>
+              <!-- END: Module Masthead -->
+
+
+
+
+              <!-- START: Module Story 2 (with disclaimer) -->
+                <tr>
+                  <td class="one-column module-story" style="padding: 0 25px; background-color: #fff;">
+                    <div class="table-wrapper" style="background-color: #fff;">
+                      <table cellpadding="0" cellspacing="0" border="0" width="100%" style="border-spacing: 0; font-family: sans-serif; color: #222222; border-collapse: collapse; background-color: #fff;">
+                        <tr style="background-color: #fff;">
+                          <td class="inner image-column" style="background-color: #fff; padding: 0;">
+                            <table cellpadding="0" cellspacing="0" border="0" class="contents" style="border-spacing: 0; font-family: sans-serif; color: #222222; border-collapse: collapse; width: 100%; background-color: #fff; text-align: left;">
+                              <tr style="background-color: #fff;">
+                                <td style="padding: 0; background-color: #fff;"><img src="https://image.email.microsoftemail.com/lib/febf16727d6d0379/m/2/Denurture.jpg" width="550" alt="" class="column-image" style="border: 0; -ms-interpolation-mode: bicubic; display: block; outline: none; text-decoration: none; padding: 0; background-color: #fff;"/></td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="one-column module-story-text-block" style="padding: 0 25px 25px 25px; background-color: #fff; height: 28px;">
+                    <table cellpadding="0" cellspacing="0" border="0" width="100%" style="border-spacing: 0; font-family: sans-serif; color: #222222; border-collapse: collapse; background-color: #fff;">
+                      <tr style="background-color: #fff;">
+                        <td class="inner contents" style="width: 100%; padding: 0 0 10px 0; text-align: left; background-color: #EFEFEF;"><br/>
+                          <p class="body" style="Margin: 0 20px; font-size: 14px; background-color: #EFEFEF; font-family: ’Segoe UI’, Helvetica, Arial, sans-serif; font-weight: 400; line-height: 130%; color: #505050; mso-line-height-rule: exactly;">Happy launch day! If you missed anything from the Visual Studio 2017 launch, catch up on all the news, the keynote, and technical sessions on demand.</p>
+                           
+                          <table cellpadding="0" cellspacing="0" border="0" class="cta" style="border-spacing: 0; font-family: sans-serif; color: #222222; border-collapse: collapse; background-color: #EFEFEF; Margin: 0 20px 0 20px;">
+                            <tr style="background-color: #EFEFEF;">
+                              <td style="background-color: #EFEFEF; padding: 5px 5px 5px 0;">
+                                <a href="https://click.email.microsoftemail.com/?qs=edcb123b609d8104a69dbf41b7a0de793faa06f76ab5260efeff73ce5b05dc25d7600a0618e5cf833e9b01ffca63362c45e1747cb3492c90" style="background-color: #EFEFEF; color: #5C2D91; text-decoration: none; font-family: ’Segoe UI’, Helvetica, Arial, sans-serif; font-weight: 400; font-size: 16px; mso-line-height-rule: exactly;"><span style="background-color: #EFEFEF; color: #5C2D91;">Watch now</span></a></td>
+                              <td style="background-color: #EFEFEF; padding: 5px 5px 5px 0; width:15px !important;" valign="top">
+                                <a href="https://click.email.microsoftemail.com/?qs=edcb123b609d8104a69dbf41b7a0de793faa06f76ab5260efeff73ce5b05dc25d7600a0618e5cf833e9b01ffca63362c45e1747cb3492c90" style="background-color: #EFEFEF; color: #5C2D91; text-decoration: none; font-family: ’Segoe UI’, Helvetica, Arial, sans-serif; font-weight: 400; font-size: 16px; mso-line-height-rule: exactly;"><img src="https://image.email.microsoftemail.com/lib/febf16727d6d0379/m/2/212842_arrow-2x.png" width="15" alt="Arrow Image" class="cta-image" style="border: 0; -ms-interpolation-mode: bicubic; display: block; outline: none; text-decoration: none; padding: 0; background-color: #EFEFEF;"></a>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+
+
+                      <tr style="background-color: #fff;">
+                        <td class="inner contents" style="width: 100%; padding: 0 0 10px 0; text-align: left; background-color: #EFEFEF;">
+                          <p class="h1" style="Margin: 10px 20px 0 20px; font-size: 24px; font-weight: 100; background-color: #EFEFEF; font-family: ’Segoe UI’, Helvetica, Arial, sans-serif; line-height: 130%; color: #0078D7; mso-line-height-rule: exactly;">Download Visual Studio 2017!</p>
+                          <p class="body" style="Margin: 0 20px; font-size: 14px; background-color: #EFEFEF; font-family: ’Segoe UI’, Helvetica, Arial, sans-serif; font-weight: 400; line-height: 130%; color: #505050; mso-line-height-rule: exactly;">Develop high quality apps for Android, iOS, Linux, Windows, Web, and the Cloud. Enhancements to code navigation, IntelliSense, refactoring, code fixes, debugging, and unit testing, save you time and effort on everyday tasks regardless of language or platform.</p>
+                           
+                          <table cellpadding="0" cellspacing="0" border="0" class="cta" style="border-spacing: 0; font-family: sans-serif; color: #222222; border-collapse: collapse; background-color: #EFEFEF; Margin: 0 20px 0 20px;">
+                            <tr style="background-color: #EFEFEF;">
+                              <td style="background-color: #EFEFEF; padding: 5px 5px 5px 0;">
+                                <a href="https://click.email.microsoftemail.com/?qs=edcb123b609d8104fc9e435380257b6c64145771e7fe9051326625d8ac316e901fa78f30ca3149784f72c0b4c87ec86d468973b3d967a19e" style="background-color: #EFEFEF; color: #5C2D91; text-decoration: none; font-family: ’Segoe UI’, Helvetica, Arial, sans-serif; font-weight: 400; font-size: 16px; mso-line-height-rule: exactly;"><span style="background-color: #EFEFEF; color: #5C2D91;">Download now</span></a></td>
+                              <td style="background-color: #EFEFEF; padding: 5px 5px 5px 0; width:15px !important;" valign="top">
+                                <a href="https://click.email.microsoftemail.com/?qs=edcb123b609d8104fc9e435380257b6c64145771e7fe9051326625d8ac316e901fa78f30ca3149784f72c0b4c87ec86d468973b3d967a19e" style="background-color: #EFEFEF; color: #5C2D91; text-decoration: none; font-family: ’Segoe UI’, Helvetica, Arial, sans-serif; font-weight: 400; font-size: 16px; mso-line-height-rule: exactly;"><img src="https://image.email.microsoftemail.com/lib/febf16727d6d0379/m/2/212842_arrow-2x.png" width="15" alt="Arrow Image" class="cta-image" style="border: 0; -ms-interpolation-mode: bicubic; display: block; outline: none; text-decoration: none; padding: 0; background-color: #EFEFEF;"></a>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr style="background-color: #fff;">
+                        <td class="inner contents" style="width: 100%; padding: 0 0 10px 0; text-align: left; background-color: #EFEFEF; height: 102px;">
+                          <p class="h1" style="Margin: 10px 20px 0 20px; font-size: 24px; font-weight: 100; background-color: #EFEFEF; font-family: ’Segoe UI’, Helvetica, Arial, sans-serif; line-height: 130%; color: #0078D7; mso-line-height-rule: exactly;">New: DevOps and Cloud training</p>
+                          <p class="body" style="Margin:0 20px; font-size: 14px; background-color: #EFEFEF; font-family: ’Segoe UI’, Helvetica, Arial, sans-serif; font-weight: 400; line-height: 130%; color: #505050; mso-line-height-rule: exactly;">Get a 3-month subscription to Opsgility, one of the most comprehensive video libraries for Microsoft Azure and DevOps curriculum available.</p>
+                          <table cellpadding="0" cellspacing="0" border="0" class="cta" style="border-spacing: 0; font-family: sans-serif; color: #222222; border-collapse: collapse; background-color: #EFEFEF; Margin: 0 20px 0 20px;">
+                            <tr style="background-color: #EFEFEF;">
+                              <td style="background-color: #EFEFEF; padding: 5px 5px 5px 0;">
+                                <a href="https://click.email.microsoftemail.com/?qs=edcb123b609d81044b2b72d559e2179fb3196021367c18b25d83739ab464ae2f8c88158155f61678caef9b7f44b6e45a04c0c4abc74cb8c7" style="background-color: #EFEFEF; color: #5C2D91; text-decoration: none; font-family: ’Segoe UI’, Helvetica, Arial, sans-serif; font-weight: 400; font-size: 16px; mso-line-height-rule: exactly;"><span style="background-color: #EFEFEF; color: #5C2D91;">Activate now</td>
+                              <td style="background-color: #EFEFEF; padding: 5px 5px 5px 0; width:15px !important;" valign="top">
+                                <a href="https://click.email.microsoftemail.com/?qs=edcb123b609d81044b2b72d559e2179fb3196021367c18b25d83739ab464ae2f8c88158155f61678caef9b7f44b6e45a04c0c4abc74cb8c7" style="background-color: #EFEFEF; color: #5C2D91; text-decoration: none; font-family: ’Segoe UI’, Helvetica, Arial, sans-serif; font-weight: 400; font-size: 16px; mso-line-height-rule: exactly;"><img src="https://image.email.microsoftemail.com/lib/febf16727d6d0379/m/2/212842_arrow-2x.png" width="15" alt="Arrow Image" class="cta-image" style="border: 0; -ms-interpolation-mode: bicubic; display: block; outline: none; text-decoration: none; padding: 0; background-color: #EFEFEF;"></a>
+                              </td>
+                            </tr>
+                            
+                          </table><br/>
+
+
+                         </td>
+                      </tr>
+
+                         </td></tr>
+                      
+                      
+                      
+                      
+                    </table>
+                  </td>
+                </tr>
+             
+                <!-- START: Module Footer -->
+                <tr>
+                  <td class="one-column module-footer" style="padding: 25px; background-color: #505050;">
+                    <table cellpadding="0" cellspacing="0" border="0" width="100%" style="border-spacing: 0; font-family: sans-serif; color: #222222; border-collapse: collapse; background-color: #505050;">
+                      <tr style="background-color: #505050;">
+                        <td class="inner contents" style="width: 100%; background-color: #505050; padding: 0; text-align: left;">
+                          <p class="body" style="Margin: 0; background-color: #505050; Margin-bottom: 10px; font-size: 10px; font-family: ’Segoe UI’, Helvetica, Arial, sans-serif; font-weight: 400; line-height: 130%; color: #fff; mso-line-height-rule: exactly; text-align: left;">
+                            This mail was sent to you as part of your Visual Studio Dev Essentials membership. If you wish to opt out of this program, please go to your   <a href="https://click.email.microsoftemail.com/?qs=edcb123b609d810458f94db1d692eff463880cc576928f3fa8826fdaa48202a7c95565998ecd6375775f766f20ac874c8fa921a9df52a3d6" style="text-decoration: underline; background-color: #505050; color: #0078D7;"><span style="background-color: #505050; color: #0078D7;">subscriptions</span></a> 
+							page and click on the “Leave program” link.
+                            
+                            <br style="background-color: #505050;">
+
+                            </p>
+                          <span style="Margin: 0; background-color: #505050; Margin-bottom: 10px; font-size: 10px; font-family: ’Segoe UI’, Helvetica, Arial, sans-serif; font-weight: 400; line-height: 130%; color: #fff; mso-line-height-rule: exactly; text-align: left;">This message from Microsoft is an important part of a program, service, or product that you or your company purchased or participate in. <br />
+<br />
+Microsoft respects your privacy. Please read our <a href="https://click.email.microsoftemail.com/?qs=edcb123b609d8104d8385c21e394622825938419fbd0f157d8bebc8cd2503b1ea7456b22f954c606f18999b01218d77dde4ed64084ae0852" style="background-color: #505050; color: #0078D7;">Privacy  Statement.</a> <br />
+<br />
+Microsoft Corporation<br />
+One Microsoft Way<br />
+Redmond, WA 98052</span>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              <!-- END: Module Footer -->
+
+
+
+
+
+            </table>
+      <!--[if (gte mso 9)|(IE)]>
+      </td>
+      </tr>
+      </table>
+      <![endif]-->
+    </div>
+  </center>
+  <img src="https://click.email.microsoftemail.com/open.aspx?ffcb10-fe8a10797765027b7c-fdf61571746201797011757d-febf16727d6d0379-fec21c767365017e-fdfb15727261047b74167770-ff64177273" width="1" height="1">
+</body>
+
+</html>
+
+
+--qCr287kekbJW=_?:--
+

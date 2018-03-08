@@ -1,0 +1,603 @@
+Delivered-To: dragonet.c17@gmail.com
+Received: by 10.202.97.10 with SMTP id v10csp2277608oib;
+        Sat, 6 Aug 2016 13:50:58 -0700 (PDT)
+X-Received: by 10.129.41.138 with SMTP id p132mr63090409ywp.46.1470516658247;
+        Sat, 06 Aug 2016 13:50:58 -0700 (PDT)
+Return-Path: <bounce-35_HTML-841296157-10489-7231719-47063@bounce.email.skype.com>
+Received: from mta17.microsoftemails.com (mta17.microsoftemails.com. [136.147.186.17])
+        by mx.google.com with ESMTP id v135si3173061ybb.303.2016.08.06.13.50.57
+        for <dragonet.c17@gmail.com>;
+        Sat, 06 Aug 2016 13:50:58 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounce-35_html-841296157-10489-7231719-47063@bounce.email.skype.com designates 136.147.186.17 as permitted sender) client-ip=136.147.186.17;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@email.skype.com;
+       spf=pass (google.com: domain of bounce-35_html-841296157-10489-7231719-47063@bounce.email.skype.com designates 136.147.186.17 as permitted sender) smtp.mailfrom=bounce-35_HTML-841296157-10489-7231719-47063@bounce.email.skype.com;
+       dmarc=pass (p=NONE dis=NONE) header.from=email.skype.com
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=200608; d=email.skype.com;
+ h=From:To:Subject:Date:MIME-Version:Reply-To:Message-ID:Content-Type; i=alerts@email.skype.com;
+ bh=ZGHTU37bOispbZX4lFCDTThULdM=;
+ b=rGriwjlZcgu7n8hP9NZm/tpD50b3nUNyH4FWohXPbadp/ZsOil47tQyFVT4M7x9qJZKi80Wra7bM
+   DHQdTRLso4n9zKOyzsmVEHsqka30diANHhvupNTs2mec0v9sT3g7W6P66JqMNdIQ9gM5zapRuAt9
+   9PwQe5ru+7O1X1JwDt0=
+Received: by mta17.microsoftemails.com id hkp6r4163hsc for <dragonet.c17@gmail.com>; Sat, 6 Aug 2016 20:08:57 +0000 (envelope-from <bounce-35_HTML-841296157-10489-7231719-47063@bounce.email.skype.com>)
+From: "Skype" <alerts@email.skype.com>
+To: <dragonet.c17@gmail.com>
+Subject: =?UTF-8?B?QWt0dWFsaXphY2phIHdhcnVua8OzdyDFm3dpYWRjemVuaWEgdXM=?=
+ =?UTF-8?B?xYJ1ZyBpIHphc2FkIHphY2hvd2FuaWEgcG91Zm5vxZtjaSBpbmZvcm1hY2pp?=
+Date: Sat, 06 Aug 2016 14:08:57 -0600
+MIME-Version: 1.0
+Reply-To: "NoReply" <reply-fef91570716c0d-35_HTML-841296157-7231719-47063@email.skype.com>
+x-job: 7231719_10489
+Message-ID: <3c9f0ad5-b038-456e-9cca-80b1226c5537@atl1s07mta655.xt.local>
+Content-Type: multipart/alternative;
+	boundary="z4CKuSx73vbq=_?:"
+
+This is a multi-part message in MIME format.
+
+--z4CKuSx73vbq=_?:
+Content-Type: text/plain;
+	charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+
+
+
+
+Aktualizacja warunków świadczenia usług i zasad zachowania poufności informacji 
+Umowa o świadczenie usług i Zasady zachowania poufności informacji stały się jaśniejsze. Witaj, Być może zastanawiasz się, dlaczego otrzymujesz tę wiadomość, skoro jesteś użytkownikiem programu Skype. W październiku 2011 r. Skype dołączył do rodziny Microsoft. Większość produktów i usług konsumenckich Microsoft podlega tej samej Umowie o świadczenie usług firmy Microsoft. Otrzymujesz tę wiadomość, ponieważ Microsoft aktualizuje wspomnianą wyżej umowę w celu jaśniejszego i precyzyjniejszego przedstawienia warunków użytkownikom programu Skype oraz uwzględnienia dodatkowych produktów, usług i funkcji oferowanych przez Microsoft.
+
+       
+
+Umowa o świadczenie usług i Zasady zachowania poufnościinformacji stały się jaśniejsze
+
+http://view.email.skype.com/?qs=03ef73302513bea2fcef3127cb29f2174b2ef4f41b3c82c169961fca6ec081985a0702a2e21a4db4fb0bb9a35752d5c4db2f6d742d6fb9c2173afaa54a4b4989 
+Ta wiadomość e-mail nie wyświetla się prawidłowo?
+
+Nie pamiętasz 
+https://go.microsoft.com/fwlink/?LinkID=691090 
+hasła?
+
+Witaj,
+
+Być może zastanawiasz się, dlaczego otrzymujesz tę wiadomość, skoro jesteś użytkownikiem programu Skype. W październiku 2011 r. Skype dołączył do rodziny Microsoft. Większość produktów i usług konsumenckich Microsoft podlega tej samej Umowie o świadczenie usług firmy Microsoft. Otrzymujesz tę wiadomość, ponieważ Microsoft aktualizuje wspomnianą wyżej umowę w celu jaśniejszego i precyzyjniejszego przedstawienia warunków użytkownikom programu Skype oraz uwzględnienia dodatkowych produktów, usług i funkcji oferowanych przez Microsoft.
+
+Umowa o świadczenie usług firmy Microsoft to umowa zawarta pomiędzy Użytkownikiem a Microsoft (lub jednym z podmiotów stowarzyszonych Microsoft), która reguluje korzystanie przez Użytkownika z produktów i usług konsumenckich firmy Microsoft online.
+
+Poniżej przedstawiamy najważniejsze zmiany wprowadzone do Umowy o świadczenie usług firmy Microsoft: 
+
+Uwzględnienie dodatkowych usług (takich jak GroupMe i czat grupowy) oraz nowych funkcji w ramach objętych tymi warunkami usług (takich jak Skype, Bing i program nagród)
+
+Objaśnienia, że konta służbowe podlegają innym warunkom
+
+Informacja, że na konsoli Xbox trzeba zalogować się co najmniej raz na 5 lat, aby zachować aktywny tag gracza
+
+Wyjaśnienie dotyczące limitów przechowywania danych w przestrzeni dyskowej OneDrive i czynników, które mogą mieć wpływ na synchronizację i przekazywanie plików do usług OneDrive
+
+Pełna treść Umowy o świadczenie usług firmy Microsoft znajduje się 
+https://go.microsoft.com/fwlink/?LinkID=822631 
+tutaj. Więcej informacji na temat tych zmian można znaleźć na stronie często zadawanych pytań 
+https://go.microsoft.com/fwlink/?LinkID=799610 
+tutaj. Zmiany w treści Umowy o świadczenie usług firmy Microsoft wejdą w życie 15 września 2016 r. Korzystanie z produktów i usług od tego dnia będzie równoznaczne z zaakceptowaniem tych zaktualizowanych postanowień Umowy. 
+
+Aktualizujemy również Zasady zachowania poufności informacji firmy Microsoft. Aktualizacje te są opisane na stronie często zadawanych pytań 
+https://go.microsoft.com/fwlink/?LinkID=799610 
+tutaj i zaczną obowiązywać 2 sierpnia 2016 r.
+
+W przypadku niewyrażenia zgody Użytkownik może zrezygnować z korzystania z produktów i usług, a także zlikwidować konto Microsoft przed wejściem w życie tych postanowień. Rodzice i opiekunowie osób niepełnoletnich są odpowiedzialni za korzystanie przez nie z produktów i usług firmy Microsoft, w tym za dokonywanie zakupów.
+
+Dziękujemy za korzystanie z produktów i usług firmy Microsoft.
+
+https://go.microsoft.com/fwlink/?LinkID=521839 
+
+Zasady zachowania poufności informacji  firmy Microsoft 
+
+https://go.microsoft.com/fwlink/?LinkID=822631 
+
+Umowa o świadczenie usług  firmy Microsoft 
+
+https://go.microsoft.com/fwlink/?LinkID=799610 
+
+Często zadawane  pytania 
+
+ 
+
+       
+       
+
+https://go.microsoft.com/fwlink/?LinkId=691092 
+Dostęp do konta
+https://go.microsoft.com/fwlink/?LinkID=691093 
+Pobierz najnowszą wersję
+       
+
+https://go.microsoft.com/fwlink/?LinkId=691094 
+Odkryj funkcje Skype'a
+https://go.microsoft.com/fwlink/?LinkID=691095 
+Uzyskaj pomoc
+
+       
+
+https://go.microsoft.com/fwlink/?LinkID=271181 
+
+https://go.microsoft.com/fwlink/?LinkId=691096 
+
+https://go.microsoft.com/fwlink/?LinkId=691097 
+
+https://go.microsoft.com/fwlink/?LinkId=691098 
+
+https://go.microsoft.com/fwlink/?LinkId=691099 
+
+https://go.microsoft.com/fwlink/?LinkId=691100 
+
+© 2016 Skype i/lub Microsoft.
+
+https://go.microsoft.com/fwlink/?LinkID=691101 
+Regulamin użytkowania
+•
+
+https://go.microsoft.com/fwlink/?LinkID=691102 
+Prywatność
+
+Skype Communications SARL, 23–29 Rives de Clausen, L-2165 Luxembourg, Luksemburg.
+
+Brak łączności z numerami alarmowymi przez Skype'aSkype nie zastępuje telefonu i nie można go używać do nawiązywania połączeń z numerami alarmowymi.
+
+
+
+
+
+--z4CKuSx73vbq=_?:
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+
+
+
+
+
+<!--
+
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+<!--[if gte mso 9]>
+	<xml>
+		<o:OfficeDocumentSettings>
+		<o:PixelsPerInch>96</o:PixelsPerInch>
+		</o:OfficeDocumentSettings>
+	</xml>
+<![endif]-->
+	<meta http-equiv="Content-type" content="text/html;charset=utf-8" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="format-detection" content="date=no" />
+	<meta name="format-detection" content="address=no" />
+	<meta name="format-detection" content="email=no" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!--[if !mso]><!-->
+		<![if gte mso 15]>
+			<script type="text/javascript" src="https://asgcdn.azureedge.net/general/webview/viewinbrowser.js"></script>
+		<![endif]>
+	<!--<![endif]-->
+	<style type="text/css">
+		@import url(https://asgcdn.azureedge.net/general/fonts/fontface.css);
+
+		body{font-size:0;line-height:0;mso-line-height-rule:exactly;}
+		table{border-collapse:collapse;margin:0;-ms-text-size-adjust:auto;-webkit-text-size-adjust:100%;}
+		tr{font-size:0;mso-line-height-rule:exactly;}
+		td{mso-line-height-rule:exactly;}
+		input::-moz-focus-inner{border:0;outline:0;}
+		.-liox-gmailapp-fix{display:none;}
+
+		@media screen and (max-device-width:480px),(max-width:480px)
+		{
+		body[yahoofix] {margin:0;padding:0;}
+		body[yahoofix] .full_width{width:100% !important;}
+		body[yahoofix] .mob_full_width{width:100% !important;}
+		body[yahoofix] .mobpadding{padding-left:10px !important;padding-right:10px !important;}
+		body[yahoofix] .mob_padding{padding-left:10px !important;padding-right:10px !important;}
+		body[yahoofix] .mobpadding0{padding-left:0px !important;padding-right:0px !important;}
+		body[yahoofix] .full_width_image{width:100% !important;height:auto;}
+		body[yahoofix] .mobwidth{width:100px !important;min-width:100px !important;}
+		}
+	</style>
+	<title>Aktualizacja warunków świadczenia usług i zasad zachowania poufności informacji </title>
+</head>
+
+
+
+<body yahoofix="yahoofix" style="color:#ffffff;">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff" style="min-width:100%;">
+<tr>
+<td align="center" class="full_width" >
+<table class="full_width" width="640" border="0" cellspacing="0" cellpadding="0" align="center" style="width:640px;">
+
+<tr>
+	<td  class="full_width mobpadding0" height="1" style="padding:0;font-weight:normal;font-family:'Segoe UI','Segoe UI Regular',SUWR,Arial,Sans-Serif;line-height:2px;font-size:1px;color:#ffffff;display:none;visibility:hidden;">
+		Umowa o świadczenie usług i Zasady zachowania poufności informacji stały się jaśniejsze. Witaj, Być może zastanawiasz się, dlaczego otrzymujesz tę wiadomość, skoro jesteś użytkownikiem programu Skype. W październiku 2011 r. Skype dołączył do rodziny Microsoft. Większość produktów i usług konsumenckich Microsoft podlega tej samej Umowie o świadczenie usług firmy Microsoft. Otrzymujesz tę wiadomość, ponieważ Microsoft aktualizuje wspomnianą wyżej umowę w celu jaśniejszego i precyzyjniejszego przedstawienia warunków użytkownikom programu Skype oraz uwzględnienia dodatkowych produktów, usług i funkcji oferowanych przez Microsoft.
+	</td>
+</tr>
+
+<tr>
+	<td width="100%">
+
+		<table width="100%" cellspacing="0" cellpadding="0" border="0" style="width:100%;min-width:100%;">
+			<!--[if !mso]><!--><tr><td colspan="2" class="-liox-gmailapp-fix" style="word-break:break-all;font-size:1px;line-height:0;letter-spacing:80px;font-weight:normal;font-family:Arial,Sans-Serif;color:#ffffff;">&nbsp; &nbsp; &nbsp; &nbsp;</td></tr><!--<![endif]-->
+			<tr>
+				<td class="mob_padding" style="padding:25px 0 20px;">
+
+					<table align="left" cellspacing="0" cellpadding="0" border="0">
+						<tr>
+							<td align="left" valign="top" style="padding:2px 10px 0 0;font-size:11px;line-height:15px;font-weight:bold;font-family:'Segoe UI','Segoe UI Regular',SUWR,Verdana,sans-serif;color:#00aff0;">
+								Umowa o świadczenie usług i Zasady zachowania poufności<br/>informacji stały się jaśniejsze
+							</td>
+						</tr>
+					</table>
+
+					<table align="right" cellspacing="0" cellpadding="0" border="0">
+						<tr>
+							<td id="webview" align="right" style="padding:2px 0 0;font-size:11px;line-height:15px;font-weight:normal;font-family:'Segoe UI','Segoe UI Regular',SUWR,Verdana,sans-serif;color:#333534;"><a href="http://view.email.skype.com/?qs=03ef73302513bea2fcef3127cb29f2174b2ef4f41b3c82c169961fca6ec081985a0702a2e21a4db4fb0bb9a35752d5c4db2f6d742d6fb9c2173afaa54a4b4989" target="_blank" style="color:#00aff0;text-decoration:none;"><strong style="font-weight:normal;" >Ta wiadomość e-mail nie wyświetla się prawidłowo?</strong></a></td>
+						</tr>
+						<tr>
+							<td align="right" style="padding:0;font-size:11px;line-height:15px;font-weight:normal;font-family:'Segoe UI','Segoe UI Regular',SUWR,Verdana,sans-serif;color:#333534;" >
+							Nie pamiętasz <a href="https://go.microsoft.com/fwlink/?LinkID=691090" target="_blank" style="color:#00aff0;text-decoration:none;"><strong style="font-weight:normal;">hasła</strong></a>?</td>
+						</tr>
+					</table>
+
+				</td>
+			</tr>
+			<tr>
+				<td align="left" class="mob_padding" style="padding:35px 0;">
+					<img cade="logo_alt" src="https://asgcdn.azureedge.net/general/skype/header_skype_logo_double.png" width="150" height="65" alt="Skype™" border="0" style="display:block;">
+				</td>
+			</tr>
+		</table>
+	</td>
+</tr>
+</table></td></tr></table>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#e6f7fe" style="min-width:100%;">
+<tr>
+<td align="center" class=" mob_full_width" style="padding:0 10px;">
+
+<table class="mob_full_width" width="640" border="0" cellspacing="0" cellpadding="0" align="center" style="width:640px;">
+<tr>
+	<td align="left" class="full_width mobpadding0" style="padding:20px 20px 0 20px;">
+		<table cellspacing="0" cellpadding="0" border="0" class="full_width" style="width:100%;display:table;">
+			<tr>
+				<td align="left" style="padding:0 0 20px 0;font-size:20px;line-height:26px;font-weight:normal;font-family:'Segoe UI','Segoe UI Regular',SUWR,Verdana,sans-serif;color:#333534;" >
+					Witaj,
+				</td>
+			</tr>
+			<tr>
+				<td style="padding:0;font-size:20px;line-height:26px;font-weight:normal;font-family:'Segoe UI','Segoe UI Regular',SUWR,Verdana,sans-serif;color:#333534;">
+					Być może zastanawiasz się, dlaczego otrzymujesz tę wiadomość, skoro jesteś użytkownikiem programu Skype. <br/>W&nbsp;październiku 2011&nbsp;r. Skype dołączył do rodziny Microsoft. Większość produktów i&nbsp;usług konsumenckich Microsoft podlega tej samej Umowie o świadczenie usług firmy Microsoft. Otrzymujesz tę wiadomość, ponieważ Microsoft aktualizuje wspomnianą wyżej umowę w&nbsp;celu jaśniejszego i&nbsp;precyzyjniejszego przedstawienia warunków użytkownikom programu Skype oraz uwzględnienia dodatkowych produktów, usług i&nbsp;funkcji oferowanych przez Microsoft.
+				</td>
+			</tr>
+			<tr>
+				<td style="padding:20px 0 0 0;font-size:20px;line-height:26px;font-weight:normal;font-family:'Segoe UI','Segoe UI Regular',SUWR,Verdana,sans-serif;color:#333534;">
+					Umowa o&nbsp;świadczenie usług firmy Microsoft to umowa zawarta pomiędzy Użytkownikiem a Microsoft (lub jednym z&nbsp;podmiotów stowarzyszonych Microsoft), która reguluje korzystanie przez Użytkownika z&nbsp;produktów i&nbsp;usług konsumenckich firmy Microsoft online.
+				</td>
+			</tr>
+		</table>
+	</td>
+</tr>
+
+<tr>
+	<td align="left" class="full_width mobpadding0" style="padding:0 20px;">
+		<table cellspacing="0" cellpadding="0" border="0" class="full_width" style="width:100%;display:table;">
+			<tr>
+				<td style="padding:20px 0 0 0;font-size:20px;line-height:26px;font-weight:normal;font-family:'Segoe UI','Segoe UI Regular',SUWR,Verdana,sans-serif;color:#333534;">
+					Poniżej przedstawiamy najważniejsze zmiany wprowadzone do Umowy o świadczenie usług firmy Microsoft: 
+				</td>
+			</tr>
+			<tr>
+				<td style="padding:20px 0 0 0;">
+					<table cellspacing="0" cellpadding="0" border="0">
+						<tr>
+							<td valign="top" width="60" style="padding:5px 0 0 0;" >
+								<img src="https://asgcdn.azureedge.net/2016-07-skype-msa/images/en-us/mail1_bullet_double.png" width="30" height="23" alt="" border="0" style="display:inline-block;" />
+							</td>
+							<td>
+								<table cellspacing="0" cellpadding="0" border="0">
+									<tr>
+										<td align="left" valign="top" style="padding:0 0 30px 0;font-size:20px;line-height:26px;font-weight:normal;font-family:'Segoe UI','Segoe UI Regular',SUWR,Arial,Sans-Serif;color:#33353a;">
+											Uwzględnienie dodatkowych usług (takich jak GroupMe i&nbsp;czat grupowy) oraz nowych funkcji w&nbsp;ramach objętych tymi warunkami usług (takich jak Skype, Bing i&nbsp;program nagród)
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+						<tr>
+							<td valign="top" width="60" style="padding:5px 0 0 0;">
+								<img src="https://asgcdn.azureedge.net/2016-07-skype-msa/images/en-us/mail1_bullet_double.png" width="30" height="23" alt="" border="0" style="display:inline-block;" />
+							</td>
+							<td>
+								<table cellspacing="0" cellpadding="0" border="0">
+									<tr>
+										<td align="left" valign="top" style="padding:0 0 30px 0;font-size:20px;line-height:26px;font-weight:normal;font-family:'Segoe UI','Segoe UI Regular',SUWR,Arial,Sans-Serif;color:#33353a;">
+											Objaśnienia, że konta służbowe podlegają innym warunkom
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+						<tr>
+							<td valign="top" width="60" style="padding:5px 0 0 0;">
+								<img src="https://asgcdn.azureedge.net/2016-07-skype-msa/images/en-us/mail1_bullet_double.png" width="30" height="23" alt="" border="0" style="display:inline-block;" />
+							</td>
+							<td >
+								<table cellspacing="0" cellpadding="0" border="0">
+									<tr>
+										<td align="left" valign="top" style="padding:0 0 43px 0;font-size:20px;line-height:26px;font-weight:normal;font-family:'Segoe UI','Segoe UI Regular',SUWR,Arial,Sans-Serif;color:#33353a;">
+											Informacja, że na konsoli Xbox trzeba zalogować się co najmniej raz na 5 lat, aby zachować aktywny tag gracza
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+						<tr>
+							<td valign="top" width="60" style="padding:5px 0 0 0;">
+								<img src="https://asgcdn.azureedge.net/2016-07-skype-msa/images/en-us/mail1_bullet_double.png" width="30" height="23" alt="" border="0" style="display:inline-block;" />
+							</td>
+							<td >
+								<table cellspacing="0" cellpadding="0" border="0">
+									<tr>
+										<td align="left" valign="top" style="padding:0 0 43px 0;font-size:20px;line-height:26px;font-weight:normal;font-family:'Segoe UI','Segoe UI Regular',SUWR,Arial,Sans-Serif;color:#33353a;">
+											Wyjaśnienie dotyczące limitów przechowywania danych w&nbsp;przestrzeni dyskowej OneDrive i&nbsp;czynników, które mogą mieć wpływ na synchronizację i&nbsp;przekazywanie plików do usług OneDrive
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+	</td>
+</tr>
+
+<tr>
+	<td align="left" class="full_width mobpadding0" style="padding:0 20px 10px;">
+		<table cellspacing="0" cellpadding="0" border="0" class="full_width" style="width:100%;display:table;">
+			<tr>
+				<td style="padding:0 0 0 0;font-size:20px;line-height:26px;font-weight:normal;font-family:'Segoe UI','Segoe UI Regular',SUWR,Verdana,sans-serif;color:#333534;">
+					Pełna treść Umowy o&nbsp;świadczenie usług firmy Microsoft znajduje się <a 
+					href="https://go.microsoft.com/fwlink/?LinkID=822631" target="_blank" style="text-decoration:none;color:#00aff0;"><strong style="color:#00aff0;"><span style="color:#00aff0;font-weight:normal;">tutaj</span></strong></a>. Więcej informacji na temat tych zmian można znaleźć na stronie często zadawanych pytań <a 
+					href="https://go.microsoft.com/fwlink/?LinkID=799610" target="_blank" style="text-decoration:none;color:#00aff0;"><strong style="color:#00aff0;font-weight:normal;"><span style="color:#00aff0;">tutaj</span></strong></a>. Zmiany w&nbsp;treści Umowy o&nbsp;świadczenie usług firmy Microsoft wejdą w&nbsp;życie 15&nbsp;września&nbsp;2016&nbsp;r. Korzystanie z&nbsp;produktów i&nbsp;usług od tego dnia będzie równoznaczne z&nbsp;zaakceptowaniem tych zaktualizowanych postanowień Umowy. 
+				</td>
+			</tr>
+			<tr>
+				<td style="padding:20px 0 0 0;font-size:20px;line-height:26px;font-weight:normal;font-family:'Segoe UI','Segoe UI Regular',SUWR,Verdana,sans-serif;color:#333534;">
+					Aktualizujemy również Zasady zachowania poufności informacji firmy Microsoft. Aktualizacje te są opisane na stronie często zadawanych pytań <a href="https://go.microsoft.com/fwlink/?LinkID=799610" target="_blank" style="text-decoration:none;color:#00aff0;"><strong style="font-weight:normal;color:#00aff0;"><span style="color:#00aff0;">tutaj</span></strong></a> i&nbsp;zaczną obowiązywać 2&nbsp;sierpnia&nbsp;2016&nbsp;r.
+				</td>
+			</tr>
+			<tr>
+				<td style="padding:20px 0 0 0;font-size:20px;line-height:26px;font-weight:normal;font-family:'Segoe UI','Segoe UI Regular',SUWR,Verdana,sans-serif;color:#333534;">
+				W przypadku niewyrażenia zgody Użytkownik może zrezygnować z&nbsp;korzystania z&nbsp;produktów i&nbsp;usług, a&nbsp;także zlikwidować konto Microsoft przed wejściem w&nbsp;życie tych postanowień. Rodzice i&nbsp;opiekunowie osób niepełnoletnich są odpowiedzialni za korzystanie przez nie z&nbsp;produktów i&nbsp;usług firmy Microsoft, w&nbsp;tym za dokonywanie zakupów.
+				</td>
+			</tr>
+			<tr>
+				<td style="padding:20px 0 0 0;font-size:20px;line-height:26px;font-weight:normal;font-family:'Segoe UI','Segoe UI Regular',SUWR,Verdana,sans-serif;color:#333534;">
+				Dziękujemy za korzystanie z&nbsp;produktów i&nbsp;usług firmy Microsoft.
+				</td>
+			</tr>
+		</table>
+	</td>
+</tr>
+<tr>
+	<td class="mobpadding0" style="padding:10px 20px 0;vertical-align:middle;font-size:21px;line-height:28px;font-weight:normal;letter-spacing:-0.3px;font-family:'Segoe UI','Segoe UI Regular',SUWR,Verdana,sans-serif;font-weight:normal;color:#00aff0;" align="left">
+		<a href="https://go.microsoft.com/fwlink/?LinkID=521839" target="_blank" style="color:#00aff0;text-decoration:none;">
+			Zasady zachowania poufności informacji <span style="white-space: nowrap;">firmy Microsoft&nbsp;<img src="https://asgcdn.azureedge.net/general/skype/skype_arrow_blue_double.png" width="19" height="15" alt="" border="0" style="padding-top:9px;padding-left:6px;display:inline-block;vertical-align:top;"></span>
+		</a>
+	</td>
+</tr>
+<tr>
+	<td class="mobpadding0 mobwidth" style="padding:20px 20px 0;vertical-align:middle;font-size:21px;line-height:28px;font-weight:normal;letter-spacing:-0.3px;font-family:'Segoe UI','Segoe UI Regular',SUWR,Verdana,sans-serif;font-weight:normal;color:#00aff0; " align="left">
+		<a href="https://go.microsoft.com/fwlink/?LinkID=822631" target="_blank" style="color:#00aff0;text-decoration:none;">
+			Umowa o&nbsp;świadczenie usług <span style="white-space: nowrap;">firmy Microsoft&nbsp;<img src="https://asgcdn.azureedge.net/general/skype/skype_arrow_blue_double.png" width="19" height="15" alt="" border="0" style="padding-top:9px;padding-left:6px;display:inline-block;vertical-align:top;"></span>
+		</a>
+	</td>
+</tr>
+<tr>
+	<td class="mobpadding0 mobwidth" style="padding:20px 20px 50px;vertical-align:middle;font-size:21px;line-height:28px;font-weight:normal;letter-spacing:-0.3px;font-family:'Segoe UI','Segoe UI Regular',SUWR,Verdana,sans-serif;font-weight:normal;color:#00aff0;" align="left">
+		<a href="https://go.microsoft.com/fwlink/?LinkID=799610" target="_blank" style="color:#00aff0;text-decoration:none;">
+			Często zadawane <span style="white-space: nowrap;">pytania&nbsp;<img src="https://asgcdn.azureedge.net/general/skype/skype_arrow_blue_double.png" width="19" height="15" alt="" border="0" style="padding-top:9px;padding-left:6px;display:inline-block;vertical-align:top;"></span>
+		</a>
+	</td>
+</tr>
+
+
+</table></td></tr></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff" style="min-width:100%;">
+<tr>
+<td align="center" class=" mob_full_width" style="padding:0 10px;">
+<table class="mob_full_width" width="640" border="0" cellspacing="0" cellpadding="0" align="center" style="width:640px;">
+<!--
+	Content container
+-->
+<tr>
+	<td class="mob_padding" style="padding:60px 0 0;" bgcolor="#ffffff">
+		&nbsp;
+	</td>
+</tr>
+</table></td></tr></table>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#f0f0f0" style="min-width:100%;">
+<tr>
+<td align="center" class="mob_full_width" style="padding:0 10px;">
+
+<table class="mob_full_width" width="640" border="0" cellspacing="0" cellpadding="0" align="center" style="width:640px;">
+
+<tr bgcolor="#f0f0f0"><td align="center">
+<table width="640" border="0" cellspacing="0" cellpadding="0" align="center" class="mob_full_width" bgcolor="#f0f0f0" style="width:640px;">
+<!--[if !mso]><!--><tr><td class="-liox-gmailapp-fix" style="word-break:break-all;font-size:1px;line-height:0;letter-spacing:80px;font-weight:normal;font-family:Arial,Sans-Serif;color:#ffffff;">&nbsp; &nbsp; &nbsp; &nbsp;</td></tr><!--<![endif]-->
+<tr>
+	<td class="mobpadding0" style="padding:15px 25px 15px;border-bottom:1px #e0e0e0 dashed;">
+
+		<table class="mob_full_width" width="284" align="left" cellspacing="0" cellpadding="0" border="0" style="width:284px;">
+			<!--[if !mso]><!-->
+			<tr><td colspan="2" class="-liox-gmailapp-fix" style="word-break:break-all;font-size:1px;line-height:0;letter-spacing:80px;">&nbsp; &nbsp; &nbsp; &nbsp;</td></tr>
+			<!--<![endif]-->
+			<tr>
+							<td valign="top" align="left" class="mob_full_width" width="50%" style="width:50%;min-width:130px;padding:11px 0 0 0;font-size:12px;line-height:15px;font-weight:normal;font-family:Arial,Helvetica,Sans-Serif;color:#333534;">
+
+								<a href="https://go.microsoft.com/fwlink/?LinkId=691092" target="_blank" style="color:#00aff0;text-decoration:none;"><strong style="font-weight:normal;color:#00aff0;text-decoration:none;">Dostęp do konta</strong></a>
+							</td>
+							<td valign="top" align="right" class="mob_full_width" width="50%" style="width:50%;min-width:130px;padding:11px 0 0 0;font-size:12px;line-height:15px;font-weight:normal;font-family:Arial,Helvetica,Sans-Serif;color:#333534;">
+								<a href="https://go.microsoft.com/fwlink/?LinkID=691093" target="_blank" style="color:#00aff0;text-decoration:none;"><strong style="font-weight:normal;color:#00aff0;text-decoration:none;">Pobierz najnowszą wersję</strong></a>
+							</td>
+			</tr>
+		</table>
+
+		<table class="mob_full_width" width="237" align="right" cellspacing="0" cellpadding="0" border="0" style="width:237px;">
+			<!--[if !mso]><!-->
+			<tr><td colspan="2" class="-liox-gmailapp-fix" style="word-break:break-all;font-size:1px;line-height:0;letter-spacing:80px;">&nbsp; &nbsp; &nbsp; &nbsp;</td></tr>
+			<!--<![endif]-->
+			<tr>
+
+							<td valign="top" align="left" class="mob_full_width" width="50%" style="width:50%;min-width:130px;padding:11px 0 0 0;font-size:12px;line-height:15px;font-weight:normal;font-family:Arial,Helvetica,Sans-Serif;color:#333534;">
+								<a href="https://go.microsoft.com/fwlink/?LinkId=691094" target="_blank" style="color:#00aff0;text-decoration:none;"><strong style="font-weight:normal;color:#00aff0;text-decoration:none;">Odkryj funkcje Skype'a</strong></a>
+							</td>
+							<td valign="top" align="right" class="mob_full_width" width="50%" style="width:50%;min-width:100px;padding:11px 0 0 0;font-size:12px;line-height:15px;font-weight:normal;font-family:Arial,Helvetica,Sans-Serif;color:#333534;">
+								<a href="https://go.microsoft.com/fwlink/?LinkID=691095" target="_blank" style="color:#00aff0;text-decoration:none;"><strong style="font-weight:normal;color:#00aff0;text-decoration:none;">Uzyskaj pomoc</strong></a>
+							</td>
+			</tr>
+		</table>
+
+	</td>
+</tr>
+</table> 
+
+</td>
+</tr>
+
+<tr bgcolor="#f0f0f0"><td align="center" style="padding-top:11px;">
+<table width="640" border="0" cellspacing="0" cellpadding="0" align="center" class="mob_full_width" bgcolor="#f0f0f0" style="width:640px;">
+<!--[if !mso]><!--><tr><td class="-liox-gmailapp-fix" style="word-break:break-all;font-size:1px;line-height:0;letter-spacing:80px;font-weight:normal;font-family:Arial,Sans-Serif;color:#ffffff;">&nbsp; &nbsp; &nbsp; &nbsp;</td></tr><!--<![endif]-->
+<tr>
+	<td class="" bgcolor="#f0f0f0" style="padding:20px 0;">
+
+		<table width="100%" cellspacing="0" cellpadding="0" border="0" style="width:100%;min-width:100%;">
+			<tr>
+				<!-- 
+					social media
+				-->
+				<td>
+					<table align="left" cellspacing="0" cellpadding="0" border="0">
+						<tr>
+							<td class="mob_full_width mobpadding0" align="left">
+								<a href="https://go.microsoft.com/fwlink/?LinkID=271181" target="_blank">
+									<img src="https://asgcdn.azureedge.net/general/mslogos/ms_logo_g_double.png" width="104" height="22" alt="Microsoft" border="0" style="display:inline-block;">
+
+								</a>
+							</td>
+						</tr>
+					</table>
+
+					<table align="right" cellspacing="0" cellpadding="0" border="0">
+						<tr>
+							<td>
+								<a href="https://go.microsoft.com/fwlink/?LinkId=691096" target="_blank">
+									<img src="https://asgcdn.azureedge.net/general/skype/footer_facebook_icon_double.png" width="32" height="32" alt="Facebook" border="0" style="display:inline-block;">
+								</a>
+							</td>
+							<td>
+								<a href="https://go.microsoft.com/fwlink/?LinkId=691097" target="_blank">
+									<img src="https://asgcdn.azureedge.net/general/skype/footer_twitter_icon_double.png" width="32" height="32" alt="Twitter" border="0" style="display:inline-block;">
+								</a>
+							</td>
+							<td>
+								<a href="https://go.microsoft.com/fwlink/?LinkId=691098" target="_blank">
+									<img src="https://asgcdn.azureedge.net/general/skype/footer_youtube_icon_double.png" width="32" height="32" alt="YouTube" border="0" style="display:inline-block;">
+								</a>
+							</td>
+							<td>
+								<a href="https://go.microsoft.com/fwlink/?LinkId=691099" target="_blank">
+									<img src="https://asgcdn.azureedge.net/general/skype/footer_pinterest_icon_double.png" width="32" height="32" alt="Pinterest" border="0" style="display:inline-block;">
+								</a>
+							</td>
+							<td>
+								<a href="https://go.microsoft.com/fwlink/?LinkId=691100" target="_blank">
+									<img src="https://asgcdn.azureedge.net/general/skype/footer_rss_icon_double.png" width="24" height="32" alt="RSS Feeds" border="0" style="display:inline-block;">
+								</a>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<!--
+					Privacy links
+				-->
+				<td style="padding:25px 0 0;">
+
+					<table align="left" cellspacing="0" cellpadding="0" border="0">
+						<tr>
+							<td height="18" style="padding:0 5px 0 0;font-size:12px;line-height:18px;font-weight:bold;font-family:Arial,Helvetica,Sans-Serif;color:#909090;">
+								© 2016 Skype i/lub Microsoft.
+							</td>
+						</tr>
+					</table>
+
+					<table align="left" cellspacing="0" cellpadding="0" border="0">
+						<tr>
+							<td height="18" style="padding:0;font-size:12px;line-height:18px;font-weight:normal;font-family:Arial,Helvetica,Sans-Serif;color:#909090;">
+								<a href="https://go.microsoft.com/fwlink/?LinkID=691101" target="_blank" style="color:#00aff0;text-decoration:none;white-space:nowrap;"><strong style="font-weight:normal;color:#00aff0;text-decoration:none;">Regulamin użytkowania</strong></a>
+								•
+								<a href="https://go.microsoft.com/fwlink/?LinkID=691102" target="_blank" style="color:#00aff0;text-decoration:none;white-space:nowrap;"><strong style="font-weight:normal;color:#00aff0;text-decoration:none;">Prywatność</strong></a>
+
+							</td>
+						</tr>
+					</table>
+
+				</td>
+			</tr>
+			<tr>
+				<!--
+					address
+				-->
+				<td align="left" style="padding:20px 0 20px;font-size:12px;line-height:18px;font-weight:bold;font-family:Arial,Helvetica,Sans-Serif;color:#909090;">
+					Skype Communications SARL, 23–29 Rives de Clausen, L-2165 Luxembourg, Luksemburg.
+				</td>
+			</tr>
+			<tr>
+				<!--
+					No emergancy calls
+				-->
+				<td class="mob_padding" bgcolor="#e1e1e1" style="padding:20px;">
+					<table align="left" cellspacing="0" cellpadding="0" border="0">
+						<tr>
+							<td>
+								<img src="https://asgcdn.azureedge.net/general/skype/footer_no_phone_double.png" width="40" height="29" alt="Brak łączności z numerami alarmowymi przez Skype'a" border="0" style="display:inline-block;">
+							</td>
+							<td align="left" class="mobpaddingR0" style="padding:0 0 0 20px;font-size:12px;line-height:18px;font-weight:normal;font-family:Arial,Helvetica,Sans-Serif;color:#909090;">
+								<span style="font-weight:bold;font-size:14px;line-height:18px;">Brak łączności z numerami alarmowymi przez Skype'a</span><br/>Skype nie zastępuje telefonu i nie można go używać do nawiązywania połączeń z&nbsp;numerami alarmowymi.
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+	</td>
+</tr>
+</table>
+
+</td>
+</tr>
+
+</table>
+</td>
+</tr>
+</table>
+
+</body>
+</html>
+
+
+
+--z4CKuSx73vbq=_?:--
+
