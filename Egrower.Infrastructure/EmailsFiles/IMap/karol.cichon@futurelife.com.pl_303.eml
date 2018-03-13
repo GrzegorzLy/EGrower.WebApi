@@ -1,0 +1,363 @@
+X-Virus-Scanned: by amavisd-new using ClamAV (8)
+X-Spam-Flag: NO
+X-Spam-Score: 0.881
+X-Spam-Level: 
+X-Spam-Status: No, score=0.881 tagged_above=-10 required=6.31
+	tests=[DKIM_SIGNED=0.1, DKIM_VALID=-0.1, DKIM_VALID_AU=-0.1,
+	FREEMAIL_FROM=0.001, HTML_MESSAGE=0.001, NA_REMOVAL=1,
+	RCVD_IN_MSPIKE_H3=-0.01, RCVD_IN_MSPIKE_WL=-0.01, SPF_PASS=-0.001]
+	autolearn=disabled
+Authentication-Results: avas8.cloud.netart (amavisd-new);
+	dkim=pass (2048-bit key) header.d=google.com header.b=Yj9bt4JI;
+	dkim=pass (2048-bit key) header.d=gmail.com header.b=XqEYZbZO
+X-Seen: aea8d79ee87cdef3e373abd4de8ff2c806615cd0
+Received: from mail-lf0-f74.google.com (mail-lf0-f74.google.com [209.85.215.74])
+	by fldziaba.nazwa.pl (Postfix) with ESMTP id 31B901C828E
+	for <karol.cichon@futurelife.com.pl>; Tue, 13 Feb 2018 08:09:58 +0100 (CET)
+Received: by mail-lf0-f74.google.com with SMTP id k143so4936385lfe.23
+        for <karol.cichon@futurelife.com.pl>; Mon, 12 Feb 2018 23:09:58 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=google.com; s=20161025;
+        h=mime-version:reply-to:sender:message-id:date:subject:from:to;
+        bh=fjDqNXw9JLvMCMEJRrfEUZ/hdPKc0hmm3s/lDahmU5E=;
+        b=Yj9bt4JI8s+Dd1J1tM2SXgphPAXjlZ4rqHrLI8ACryTQlRGdhNWNY7egIw7DtU5hQx
+         qqrB5iIxIGV6dHMq3erHOy9+Sgb/9EfJHtMd0nhmfOrcqshZVM6MB9jjjQ+7nt1xzWqA
+         scnQMmgLPPxUXX/F6VWdew7PnFo8pC3kGktdb9m0Bmf0Yd1iMBZMV3qMHXrEVOQHTJu5
+         G0fgs9xeQJTYSq+F44RJTPMIxmoAb5ZZcu5cWa4COzFsCHBj4+o6JaRYiWTCDdpj2F9h
+         /zb+HSnVEy28AhUyx9OBGDJXaV3ffaZBS5acKstJh+r9T/CA71RIR0ZldnuRBNKDUMqx
+         8kXA==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=mime-version:reply-to:sender:message-id:date:subject:from:to;
+        bh=fjDqNXw9JLvMCMEJRrfEUZ/hdPKc0hmm3s/lDahmU5E=;
+        b=XqEYZbZOnJqOM5LryJCL9iLzoTfdrXmmxIbKTU4c+BP/xBPI1E0kQgEA9ixqbX7MPE
+         OGno0Cln0P987NC0J/WxtdlRzBVRKV1tvaFR5PYgcAPz3xT4srCuLkS19PENyyqZ7HTi
+         WwINk5x6BVt7eVxFqCE193EsQoTZGgZUgM9jl3j4nMw6Q2C7Y6oTW5gai6Z4w15uDvKz
+         NUWYdgRYQMNBIaNqUK4Qfv8BZ4W9WkZjZDUpO0s5HmnwKC2+HVMO4/EgSomXW+JR+6Xv
+         2rtjXJz7/RNmEhtZNsWk3wUSM0+tpdDU5CbIXNPKhIq3Rqdab07ltNikVHQw2FsAOxvv
+         6BIg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:reply-to:sender:message-id:date
+         :subject:from:to;
+        bh=fjDqNXw9JLvMCMEJRrfEUZ/hdPKc0hmm3s/lDahmU5E=;
+        b=MwhlfmaQLn+Kf1Mzqcv3+PVpLtyxgXlSW0WD+32MeytG9QJYTm/TwlnjgPAaqeAAHg
+         LlcGrwMENCM3rtvzeXiMylujhS8f+6Ic5EWgtiNP/vwg+4UEAYzyb3Xn1/t+t+wkavjS
+         rrob9Q7dW2Egk1rSQt1RWdyJ3fl0FJ7uDuDA1Qa1+PlyQsksdweOENs9QgpdVAATZgvZ
+         emyjP/0G+ZKJF6bOk02W++kG7dk2KgoNtA29dAkSl6YeLwPKiU8CsREeZZVGTrOya7in
+         0Hb9NR6YQrMTPk3kYvB66vNFurw2/5MS8NXYHCoL9I3wRubOazzGMslX1QGgaxAxurHv
+         UY0A==
+X-Gm-Message-State: APf1xPCLIqOJwI38pp6DnunvPoJN215zjJmcfEW2DL39gm3GUo8LrUQ0
+	mOQbDttUNqKeJ3fV1hEVIgj5CstNpP2lVJko+GWU
+X-Google-Smtp-Source: AH8x226qwepNV/GfrtXziepM8ax7XEMXoKTkbbFLVzmqVJ1dau58x37mf7kdbMEbLjCfJqMqe3dROKOTdXO7Pv+hZ0mD
+MIME-Version: 1.0
+X-Received: by 10.46.87.72 with SMTP id r8mr13265ljd.14.1518505797538; Mon, 12
+ Feb 2018 23:09:57 -0800 (PST)
+Reply-To: flsot.calendar@gmail.com
+Sender: Kalendarz Google <calendar-notification@google.com>
+Message-ID: <f403045f8918a6ddeb056512ae42@google.com>
+Date: Tue, 13 Feb 2018 07:09:57 +0000
+Subject: =?UTF-8?Q?Zaproszenie=3A_Zebranie_zarz=C4=85du_=2D_wt=2E_13_lut_2018_6pm?=
+	=?UTF-8?Q?_=2D_7=3A30pm_=28CET=29_=28karol=2Ecichon=40futurelife=2Ecom=2Epl=29?=
+From: flsot.calendar@gmail.com
+To: karol.cichon@futurelife.com.pl, mikolaj.bartoszek@futurelife.com.pl, 
+	michal.bolarczyk@futurelife.com.pl, krzysztof.mierzejewski@futurelife.com.pl
+Content-Type: multipart/mixed; boundary="f403045f8918a6ddbe056512ae41"
+
+--f403045f8918a6ddbe056512ae41
+Content-Type: multipart/alternative; boundary="f403045f8918a6ddb9056512ae3f"
+
+--f403045f8918a6ddb9056512ae3f
+Content-Type: text/plain; charset="UTF-8"; format=flowed; delsp=yes
+Content-Transfer-Encoding: base64
+
+Wm9zdGHFgmXFmyB6YXByb3N6b255IG5hIG5hc3TEmXB1asSFY2Ugd3lkYXJ6ZW5pZS4NCg0KVHl0
+dcWCOiBaZWJyYW5pZSB6YXJ6xIVkdQ0KWmVicmFuaWUgYmVkemllIHBvc3dpZWNvbmUgbWFya2V0
+aW5nb3dpLCB6YXJ6YWR6YW5pdSwgcHJvamVrdG9tIGkgIA0KYml6bmVzcGxhbm93aS4NCktpZWR5
+OiB3dC4gMTMgbHV0IDIwMTggNnBtIOKAkyA3OjMwcG0gV2Fyc3phd2ENCkdkemllOiBTa3lwZQ0K
+S2FsZW5kYXJ6OiBrYXJvbC5jaWNob25AZnV0dXJlbGlmZS5jb20ucGwNCkt0bzoNCiAgICAgKiBm
+bHNvdC5jYWxlbmRhckBnbWFpbC5jb23igJMgb3JnYW5pemF0b3INCiAgICAgKiBtaWtvbGFqLmJh
+cnRvc3pla0BmdXR1cmVsaWZlLmNvbS5wbA0KICAgICAqIGthcm9sLmNpY2hvbkBmdXR1cmVsaWZl
+LmNvbS5wbA0KICAgICAqIG1pY2hhbC5ib2xhcmN6eWtAZnV0dXJlbGlmZS5jb20ucGwNCiAgICAg
+KiBrcnp5c3p0b2YubWllcnplamV3c2tpQGZ1dHVyZWxpZmUuY29tLnBsDQoNClN6Y3plZ8OzxYJ5
+IHd5ZGFyemVuaWE6ICANCmh0dHBzOi8vd3d3Lmdvb2dsZS5jb20vY2FsZW5kYXIvZXZlbnQ/YWN0
+aW9uPVZJRVcmZWlkPU0zRnliemR2YkRKbGNuVmxabVZ3Yldac1lqYzJNMkpyTW04Z2EyRnliMnd1
+WTJsamFHOXVRR1oxZEhWeVpXeHBabVV1WTI5dExuQnMmdG9rPU1qUWpabXh6YjNRdVkyRnNaVzVr
+WVhKQVoyMWhhV3d1WTI5dE5EYzBNek14TVdKak9HVmxZVGMyTkdaaE9UQm1OREpqWmpobU5UZ3lO
+MkpsTkRWak5qZzNPQSZjdHo9RXVyb3BlL1dhcnNhdyZobD1wbA0KDQpaYXByb3N6ZW5pZSB6IEth
+bGVuZGFyemEgR29vZ2xlOiBodHRwczovL3d3dy5nb29nbGUuY29tL2NhbGVuZGFyLw0KDQpXaWFk
+b21vxZvEhyBncnplY3pub8WbY2lvd2Egem9zdGHFgmEgd3lzecWCYW5hIGRvIENpZWJpZSBuYSBh
+ZHJlcyAgDQprYXJvbC5jaWNob25AZnV0dXJlbGlmZS5jb20ucGwsIHBvbmlld2HFvCB1Y3plc3Ru
+aWN6eXN6IHcgdHltIHd5ZGFyemVuaXUuDQoNCkFieSB6cmV6eWdub3dhxIcgeiBvdHJ6eW15d2Fu
+aWEgdyBwcnp5c3rFgm/Fm2NpIHBvd2lhZG9taWXFhCBkb3R5Y3rEhWN5Y2ggdGVnbyAgDQp3eWRh
+cnplbmlhLCBvZHJ6dcSHIGplLiBaYW1pYXN0IHRlZ28gbW/FvGVzeiB0ZcW8IHphxYJvxbx5xIcg
+c29iaWUga29udG8gR29vZ2xlICANCm5hIGh0dHBzOi8vd3d3Lmdvb2dsZS5jb20vY2FsZW5kYXIv
+IGkgc2Ftb2R6aWVsbmllIGRlY3lkb3dhxIcgbyB1c3Rhd2llbmlhY2ggIA0KcG93aWFkb21pZcWE
+IGRsYSBjYcWCZWdvIHN3b2plZ28ga2FsZW5kYXJ6YS4NCg0KSmXFm2xpIHByemVrYcW8ZXN6IGRh
+bGVqIHRvIHphcHJvc3plbmllLCBrYcW8ZHkgeiBqZWdvIG9kYmlvcmPDs3cgYsSZZHppZSBtw7Nn
+xYIgIA0Kem1vZHlmaWtvd2HEhyBUd29qxIUgb2Rwb3dpZWTFui4gV2nEmWNlaiBpbmZvcm1hY2pp
+IG5hIHN0cm9uaWU6ICANCmh0dHBzOi8vc3VwcG9ydC5nb29nbGUuY29tL2NhbGVuZGFyL2Fuc3dl
+ci8zNzEzNSNmb3J3YXJkaW5nDQo=
+--f403045f8918a6ddb9056512ae3f
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<span itemscope itemtype=3D"http://schema.org/InformAction"><span style=3D"=
+display:none" itemprop=3D"about" itemscope itemtype=3D"http://schema.org/Pe=
+rson"><meta itemprop=3D"description" content=3D"Zaproszenie od: flsot.calen=
+dar@gmail.com"/></span><span itemprop=3D"object" itemscope itemtype=3D"http=
+://schema.org/Event"><div style=3D""><table cellspacing=3D"0" cellpadding=
+=3D"8" border=3D"0" summary=3D"" style=3D"width:100%;font-family:Arial,Sans=
+-serif;border:1px Solid #ccc;border-width:1px 2px 2px 1px;background-color:=
+#fff;"><tr><td><meta itemprop=3D"eventStatus" content=3D"http://schema.org/=
+EventScheduled"/><div style=3D"padding:2px"><span itemprop=3D"publisher" it=
+emscope itemtype=3D"http://schema.org/Organization"><meta itemprop=3D"name"=
+ content=3D"Google Calendar"/></span><meta itemprop=3D"eventId/googleCalend=
+ar" content=3D"3qro7ol2eruefepmflb763bk2o"/><div style=3D"float:right;font-=
+weight:bold;font-size:13px"> <a href=3D"https://www.google.com/calendar/eve=
+nt?action=3DVIEW&amp;eid=3DM3FybzdvbDJlcnVlZmVwbWZsYjc2M2JrMm8ga2Fyb2wuY2lj=
+aG9uQGZ1dHVyZWxpZmUuY29tLnBs&amp;tok=3DMjQjZmxzb3QuY2FsZW5kYXJAZ21haWwuY29t=
+NDc0MzMxMWJjOGVlYTc2NGZhOTBmNDJjZjhmNTgyN2JlNDVjNjg3OA&amp;ctz=3DEurope/War=
+saw&amp;hl=3Dpl" style=3D"color:#20c;white-space:nowrap" itemprop=3D"url">w=
+i=C4=99cej szczeg=C3=B3=C5=82=C3=B3w &raquo;</a><br></div><h3 style=3D"padd=
+ing:0 0 6px 0;margin:0;font-family:Arial,Sans-serif;font-size:16px;font-wei=
+ght:bold;color:#222"><span itemprop=3D"name">Zebranie zarz=C4=85du</span></=
+h3><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" summary=3D"Szcze=
+g=C3=B3=C5=82y wydarzenia"><tr><td style=3D"padding:0 1em 10px 0;font-famil=
+y:Arial,Sans-serif;font-size:13px;color:#888;white-space:nowrap;width:90px"=
+ valign=3D"top"><div><i style=3D"font-style:normal">Kiedy</i></div></td><td=
+ style=3D"padding-bottom:10px;font-family:Arial,Sans-serif;font-size:13px;c=
+olor:#222" valign=3D"top"><div style=3D"text-indent:-1px"><time itemprop=3D=
+"startDate" datetime=3D"20180213T170000Z"></time><time itemprop=3D"endDate"=
+ datetime=3D"20180213T183000Z"></time>wt. 13 lut 2018 6pm =E2=80=93 7:30pm =
+<span style=3D"color:#888">Warszawa</span></div></td></tr><tr><td style=3D"=
+padding:0 1em 10px 0;font-family:Arial,Sans-serif;font-size:13px;color:#888=
+;white-space:nowrap;width:90px" valign=3D"top"><div><i style=3D"font-style:=
+normal">Gdzie</i></div></td><td style=3D"padding-bottom:10px;font-family:Ar=
+ial,Sans-serif;font-size:13px;color:#222" valign=3D"top"><div style=3D"text=
+-indent:-1px"><span itemprop=3D"location" itemscope itemtype=3D"http://sche=
+ma.org/Place"><span itemprop=3D"name" class=3D"notranslate">Skype</span><sp=
+an dir=3D"ltr"> (<a href=3D"https://maps.google.com/maps?q=3DSkype&amp;hl=
+=3Dpl" style=3D"color:#20c;white-space:nowrap" target=3D"_blank" itemprop=
+=3D"map">mapa</a>)</span></span></div></td></tr><tr><td style=3D"padding:0 =
+1em 10px 0;font-family:Arial,Sans-serif;font-size:13px;color:#888;white-spa=
+ce:nowrap;width:90px" valign=3D"top"><div><i style=3D"font-style:normal">Ka=
+lendarz</i></div></td><td style=3D"padding-bottom:10px;font-family:Arial,Sa=
+ns-serif;font-size:13px;color:#222" valign=3D"top"><div style=3D"text-inden=
+t:-1px">karol.cichon@futurelife.com.pl</div></td></tr><tr><td style=3D"padd=
+ing:0 1em 10px 0;font-family:Arial,Sans-serif;font-size:13px;color:#888;whi=
+te-space:nowrap;width:90px" valign=3D"top"><div><i style=3D"font-style:norm=
+al">Kto</i></div></td><td style=3D"padding-bottom:10px;font-family:Arial,Sa=
+ns-serif;font-size:13px;color:#222" valign=3D"top"><table cellspacing=3D"0"=
+ cellpadding=3D"0"><tr><td style=3D"padding-right:10px;font-family:Arial,Sa=
+ns-serif;font-size:13px;color:#222;width:10px"><div style=3D"text-indent:-1=
+px"><span style=3D"font-family:Courier New,monospace">&#x2022;</span></div>=
+</td><td style=3D"padding-right:10px;font-family:Arial,Sans-serif;font-size=
+:13px;color:#222"><div style=3D"text-indent:-1px"><div><div style=3D"margin=
+:0 0 0.3em 0"><span itemprop=3D"attendee" itemscope itemtype=3D"http://sche=
+ma.org/Person"><span itemprop=3D"name" class=3D"notranslate">flsot.calendar=
+@gmail.com</span><meta itemprop=3D"email" content=3D"flsot.calendar@gmail.c=
+om"/></span><span itemprop=3D"organizer" itemscope itemtype=3D"http://schem=
+a.org/Person"><meta itemprop=3D"name" content=3D"flsot.calendar@gmail.com"/=
+><meta itemprop=3D"email" content=3D"flsot.calendar@gmail.com"/></span><spa=
+n style=3D"font-size:11px;color:#888">=E2=80=93 organizator</span></div></d=
+iv></div></td></tr><tr><td style=3D"padding-right:10px;font-family:Arial,Sa=
+ns-serif;font-size:13px;color:#222;width:10px"><div style=3D"text-indent:-1=
+px"><span style=3D"font-family:Courier New,monospace">&#x2022;</span></div>=
+</td><td style=3D"padding-right:10px;font-family:Arial,Sans-serif;font-size=
+:13px;color:#222"><div style=3D"text-indent:-1px"><div><div style=3D"margin=
+:0 0 0.3em 0"><span itemprop=3D"attendee" itemscope itemtype=3D"http://sche=
+ma.org/Person"><span itemprop=3D"name" class=3D"notranslate">mikolaj.bartos=
+zek@futurelife.com.pl</span><meta itemprop=3D"email" content=3D"mikolaj.bar=
+toszek@futurelife.com.pl"/></span></div></div></div></td></tr><tr><td style=
+=3D"padding-right:10px;font-family:Arial,Sans-serif;font-size:13px;color:#2=
+22;width:10px"><div style=3D"text-indent:-1px"><span style=3D"font-family:C=
+ourier New,monospace">&#x2022;</span></div></td><td style=3D"padding-right:=
+10px;font-family:Arial,Sans-serif;font-size:13px;color:#222"><div style=3D"=
+text-indent:-1px"><div><div style=3D"margin:0 0 0.3em 0"><span itemprop=3D"=
+attendee" itemscope itemtype=3D"http://schema.org/Person"><span itemprop=3D=
+"name" class=3D"notranslate">karol.cichon@futurelife.com.pl</span><meta ite=
+mprop=3D"email" content=3D"karol.cichon@futurelife.com.pl"/></span></div></=
+div></div></td></tr><tr><td style=3D"padding-right:10px;font-family:Arial,S=
+ans-serif;font-size:13px;color:#222;width:10px"><div style=3D"text-indent:-=
+1px"><span style=3D"font-family:Courier New,monospace">&#x2022;</span></div=
+></td><td style=3D"padding-right:10px;font-family:Arial,Sans-serif;font-siz=
+e:13px;color:#222"><div style=3D"text-indent:-1px"><div><div style=3D"margi=
+n:0 0 0.3em 0"><span itemprop=3D"attendee" itemscope itemtype=3D"http://sch=
+ema.org/Person"><span itemprop=3D"name" class=3D"notranslate">michal.bolarc=
+zyk@futurelife.com.pl</span><meta itemprop=3D"email" content=3D"michal.bola=
+rczyk@futurelife.com.pl"/></span></div></div></div></td></tr><tr><td style=
+=3D"padding-right:10px;font-family:Arial,Sans-serif;font-size:13px;color:#2=
+22;width:10px"><div style=3D"text-indent:-1px"><span style=3D"font-family:C=
+ourier New,monospace">&#x2022;</span></div></td><td style=3D"padding-right:=
+10px;font-family:Arial,Sans-serif;font-size:13px;color:#222"><div style=3D"=
+text-indent:-1px"><div><div style=3D"margin:0 0 0.3em 0"><span itemprop=3D"=
+attendee" itemscope itemtype=3D"http://schema.org/Person"><span itemprop=3D=
+"name" class=3D"notranslate">krzysztof.mierzejewski@futurelife.com.pl</span=
+><meta itemprop=3D"email" content=3D"krzysztof.mierzejewski@futurelife.com.=
+pl"/></span></div></div></div></td></tr></table></td></tr></table><div styl=
+e=3D"padding-bottom:15px;font-family:Arial,Sans-serif;font-size:13px;color:=
+#222;white-space:pre-wrap!important;white-space:-moz-pre-wrap!important;whi=
+te-space:-pre-wrap!important;white-space:-o-pre-wrap!important;white-space:=
+pre;word-wrap:break-word"><span>Zebranie bedzie poswiecone marketingowi, za=
+rzadzaniu, projektom i biznesplanowi. </span><meta itemprop=3D"description"=
+ content=3D"Zebranie bedzie poswiecone marketingowi, zarzadzaniu, projektom=
+ i biznesplanowi. "/></div></div><p style=3D"color:#222;font-size:13px;marg=
+in:0"><span style=3D"color:#888">Bierzesz udzia=C5=82?&nbsp;&nbsp;&nbsp;</s=
+pan><wbr><strong><span itemprop=3D"potentialaction" itemscope itemtype=3D"h=
+ttp://schema.org/RsvpAction"><meta itemprop=3D"attendance" content=3D"http:=
+//schema.org/RsvpAttendance/Yes"/><span itemprop=3D"handler" itemscope item=
+type=3D"http://schema.org/HttpActionHandler"><link itemprop=3D"method" href=
+=3D"http://schema.org/HttpRequestMethod/GET"/><a href=3D"https://www.google=
+.com/calendar/event?action=3DRESPOND&amp;eid=3DM3FybzdvbDJlcnVlZmVwbWZsYjc2=
+M2JrMm8ga2Fyb2wuY2ljaG9uQGZ1dHVyZWxpZmUuY29tLnBs&amp;rst=3D1&amp;tok=3DMjQj=
+Zmxzb3QuY2FsZW5kYXJAZ21haWwuY29tNDc0MzMxMWJjOGVlYTc2NGZhOTBmNDJjZjhmNTgyN2J=
+lNDVjNjg3OA&amp;ctz=3DEurope/Warsaw&amp;hl=3Dpl" style=3D"color:#20c;white-=
+space:nowrap" itemprop=3D"url">Tak</a></span></span><span style=3D"margin:0=
+ 0.4em;font-weight:normal"> - </span><span itemprop=3D"potentialaction" ite=
+mscope itemtype=3D"http://schema.org/RsvpAction"><meta itemprop=3D"attendan=
+ce" content=3D"http://schema.org/RsvpAttendance/Maybe"/><span itemprop=3D"h=
+andler" itemscope itemtype=3D"http://schema.org/HttpActionHandler"><link it=
+emprop=3D"method" href=3D"http://schema.org/HttpRequestMethod/GET"/><a href=
+=3D"https://www.google.com/calendar/event?action=3DRESPOND&amp;eid=3DM3Fybz=
+dvbDJlcnVlZmVwbWZsYjc2M2JrMm8ga2Fyb2wuY2ljaG9uQGZ1dHVyZWxpZmUuY29tLnBs&amp;=
+rst=3D3&amp;tok=3DMjQjZmxzb3QuY2FsZW5kYXJAZ21haWwuY29tNDc0MzMxMWJjOGVlYTc2N=
+GZhOTBmNDJjZjhmNTgyN2JlNDVjNjg3OA&amp;ctz=3DEurope/Warsaw&amp;hl=3Dpl" styl=
+e=3D"color:#20c;white-space:nowrap" itemprop=3D"url">By=C4=87 mo=C5=BCe</a>=
+</span></span><span style=3D"margin:0 0.4em;font-weight:normal"> - </span><=
+span itemprop=3D"potentialaction" itemscope itemtype=3D"http://schema.org/R=
+svpAction"><meta itemprop=3D"attendance" content=3D"http://schema.org/RsvpA=
+ttendance/No"/><span itemprop=3D"handler" itemscope itemtype=3D"http://sche=
+ma.org/HttpActionHandler"><link itemprop=3D"method" href=3D"http://schema.o=
+rg/HttpRequestMethod/GET"/><a href=3D"https://www.google.com/calendar/event=
+?action=3DRESPOND&amp;eid=3DM3FybzdvbDJlcnVlZmVwbWZsYjc2M2JrMm8ga2Fyb2wuY2l=
+jaG9uQGZ1dHVyZWxpZmUuY29tLnBs&amp;rst=3D2&amp;tok=3DMjQjZmxzb3QuY2FsZW5kYXJ=
+AZ21haWwuY29tNDc0MzMxMWJjOGVlYTc2NGZhOTBmNDJjZjhmNTgyN2JlNDVjNjg3OA&amp;ctz=
+=3DEurope/Warsaw&amp;hl=3Dpl" style=3D"color:#20c;white-space:nowrap" itemp=
+rop=3D"url">Nie</a></span></span></strong>&nbsp;&nbsp;&nbsp;&nbsp;<wbr><a h=
+ref=3D"https://www.google.com/calendar/event?action=3DVIEW&amp;eid=3DM3Fybz=
+dvbDJlcnVlZmVwbWZsYjc2M2JrMm8ga2Fyb2wuY2ljaG9uQGZ1dHVyZWxpZmUuY29tLnBs&amp;=
+tok=3DMjQjZmxzb3QuY2FsZW5kYXJAZ21haWwuY29tNDc0MzMxMWJjOGVlYTc2NGZhOTBmNDJjZ=
+jhmNTgyN2JlNDVjNjg3OA&amp;ctz=3DEurope/Warsaw&amp;hl=3Dpl" style=3D"color:#=
+20c;white-space:nowrap" itemprop=3D"url">wi=C4=99cej opcji &raquo;</a></p><=
+/td></tr><tr><td style=3D"background-color:#f6f6f6;color:#888;border-top:1p=
+x Solid #ccc;font-family:Arial,Sans-serif;font-size:11px"><p>Zaproszenie z =
+<a href=3D"https://www.google.com/calendar/" target=3D"_blank" style=3D"">K=
+alendarza Google</a></p><p>Wiadomo=C5=9B=C4=87 grzeczno=C5=9Bciowa zosta=C5=
+=82a wysy=C5=82ana do Ciebie na adres karol.cichon@futurelife.com.pl, ponie=
+wa=C5=BC uczestniczysz w tym wydarzeniu.</p><p>Aby zrezygnowa=C4=87 z otrzy=
+mywania w przysz=C5=82o=C5=9Bci powiadomie=C5=84 dotycz=C4=85cych tego wyda=
+rzenia, odrzu=C4=87 je. Zamiast tego mo=C5=BCesz te=C5=BC za=C5=82o=C5=BCy=
+=C4=87 sobie konto Google na https://www.google.com/calendar/ i samodzielni=
+e decydowa=C4=87 o ustawieniach powiadomie=C5=84 dla ca=C5=82ego swojego ka=
+lendarza.</p><p>Je=C5=9Bli przeka=C5=BCesz dalej to zaproszenie, ka=C5=BCdy=
+ z jego odbiorc=C3=B3w b=C4=99dzie m=C3=B3g=C5=82 zmodyfikowa=C4=87 Twoj=C4=
+=85 odpowied=C5=BA. <a href=3D"https://support.google.com/calendar/answer/3=
+7135#forwarding">Dowiedz si=C4=99 wi=C4=99cej</a>.</p></td></tr></table></d=
+iv></span></span>
+--f403045f8918a6ddb9056512ae3f
+Content-Type: text/calendar; charset="UTF-8"; method=REQUEST
+Content-Transfer-Encoding: quoted-printable
+
+BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:REQUEST
+BEGIN:VEVENT
+DTSTART:20180213T170000Z
+DTEND:20180213T183000Z
+DTSTAMP:20180213T070957Z
+ORGANIZER;CN=3Dflsot.calendar@gmail.com:mailto:flsot.calendar@gmail.com
+UID:3qro7ol2eruefepmflb763bk2o@google.com
+ATTENDEE;CUTYPE=3DINDIVIDUAL;ROLE=3DREQ-PARTICIPANT;PARTSTAT=3DNEEDS-ACTION=
+;RSVP=3D
+ TRUE;CN=3Dmikolaj.bartoszek@futurelife.com.pl;X-NUM-GUESTS=3D0:mailto:miko=
+laj.b
+ artoszek@futurelife.com.pl
+ATTENDEE;CUTYPE=3DINDIVIDUAL;ROLE=3DREQ-PARTICIPANT;PARTSTAT=3DNEEDS-ACTION=
+;RSVP=3D
+ TRUE;CN=3Dkarol.cichon@futurelife.com.pl;X-NUM-GUESTS=3D0:mailto:karol.cic=
+hon@f
+ uturelife.com.pl
+ATTENDEE;CUTYPE=3DINDIVIDUAL;ROLE=3DREQ-PARTICIPANT;PARTSTAT=3DNEEDS-ACTION=
+;RSVP=3D
+ TRUE;CN=3Dmichal.bolarczyk@futurelife.com.pl;X-NUM-GUESTS=3D0:mailto:micha=
+l.bol
+ arczyk@futurelife.com.pl
+ATTENDEE;CUTYPE=3DINDIVIDUAL;ROLE=3DREQ-PARTICIPANT;PARTSTAT=3DACCEPTED;RSV=
+P=3DTRUE
+ ;CN=3Dflsot.calendar@gmail.com;X-NUM-GUESTS=3D0:mailto:flsot.calendar@gmai=
+l.com
+ATTENDEE;CUTYPE=3DINDIVIDUAL;ROLE=3DREQ-PARTICIPANT;PARTSTAT=3DNEEDS-ACTION=
+;RSVP=3D
+ TRUE;CN=3Dkrzysztof.mierzejewski@futurelife.com.pl;X-NUM-GUESTS=3D0:mailto=
+:krzy
+ sztof.mierzejewski@futurelife.com.pl
+CREATED:20180213T070957Z
+DESCRIPTION:Zebranie bedzie poswiecone marketingowi\, zarzadzaniu\, projekt
+ om i biznesplanowi. \n\n-::~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:=
+~
+ :~:~:~:~:~:~:~:~:~:~:~:~:~:~::~:~::-\nNie edytuj tej sekcji opisu.\n\nWy=
+=C5=9Bwi
+ etl to wydarzenie pod adresem https://www.google.com/calendar/event?action=
+=3D
+ VIEW&eid=3DM3FybzdvbDJlcnVlZmVwbWZsYjc2M2JrMm8ga2Fyb2wuY2ljaG9uQGZ1dHVyZWx=
+pZm
+ UuY29tLnBs&tok=3DMjQjZmxzb3QuY2FsZW5kYXJAZ21haWwuY29tNDc0MzMxMWJjOGVlYTc2N=
+GZh
+ OTBmNDJjZjhmNTgyN2JlNDVjNjg3OA&ctz=3DEurope/Warsaw&hl=3Dpl.\n-::~:~::~:~:~=
+:~:~:
+ ~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~::~:~::-
+LAST-MODIFIED:20180213T070957Z
+LOCATION:Skype
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Zebranie zarz=C4=85du
+TRANSP:OPAQUE
+END:VEVENT
+END:VCALENDAR
+
+--f403045f8918a6ddb9056512ae3f--
+--f403045f8918a6ddbe056512ae41
+Content-Type: application/ics; name="invite.ics"
+Content-Disposition: attachment; filename="invite.ics"
+Content-Transfer-Encoding: base64
+
+QkVHSU46VkNBTEVOREFSDQpQUk9ESUQ6LS8vR29vZ2xlIEluYy8vR29vZ2xlIENhbGVuZGFyIDcw
+LjkwNTQvL0VODQpWRVJTSU9OOjIuMA0KQ0FMU0NBTEU6R1JFR09SSUFODQpNRVRIT0Q6UkVRVUVT
+VA0KQkVHSU46VkVWRU5UDQpEVFNUQVJUOjIwMTgwMjEzVDE3MDAwMFoNCkRURU5EOjIwMTgwMjEz
+VDE4MzAwMFoNCkRUU1RBTVA6MjAxODAyMTNUMDcwOTU3Wg0KT1JHQU5JWkVSO0NOPWZsc290LmNh
+bGVuZGFyQGdtYWlsLmNvbTptYWlsdG86Zmxzb3QuY2FsZW5kYXJAZ21haWwuY29tDQpVSUQ6M3Fy
+bzdvbDJlcnVlZmVwbWZsYjc2M2JrMm9AZ29vZ2xlLmNvbQ0KQVRURU5ERUU7Q1VUWVBFPUlORElW
+SURVQUw7Uk9MRT1SRVEtUEFSVElDSVBBTlQ7UEFSVFNUQVQ9TkVFRFMtQUNUSU9OO1JTVlA9DQog
+VFJVRTtDTj1taWtvbGFqLmJhcnRvc3pla0BmdXR1cmVsaWZlLmNvbS5wbDtYLU5VTS1HVUVTVFM9
+MDptYWlsdG86bWlrb2xhai5iDQogYXJ0b3N6ZWtAZnV0dXJlbGlmZS5jb20ucGwNCkFUVEVOREVF
+O0NVVFlQRT1JTkRJVklEVUFMO1JPTEU9UkVRLVBBUlRJQ0lQQU5UO1BBUlRTVEFUPU5FRURTLUFD
+VElPTjtSU1ZQPQ0KIFRSVUU7Q049a2Fyb2wuY2ljaG9uQGZ1dHVyZWxpZmUuY29tLnBsO1gtTlVN
+LUdVRVNUUz0wOm1haWx0bzprYXJvbC5jaWNob25AZg0KIHV0dXJlbGlmZS5jb20ucGwNCkFUVEVO
+REVFO0NVVFlQRT1JTkRJVklEVUFMO1JPTEU9UkVRLVBBUlRJQ0lQQU5UO1BBUlRTVEFUPU5FRURT
+LUFDVElPTjtSU1ZQPQ0KIFRSVUU7Q049bWljaGFsLmJvbGFyY3p5a0BmdXR1cmVsaWZlLmNvbS5w
+bDtYLU5VTS1HVUVTVFM9MDptYWlsdG86bWljaGFsLmJvbA0KIGFyY3p5a0BmdXR1cmVsaWZlLmNv
+bS5wbA0KQVRURU5ERUU7Q1VUWVBFPUlORElWSURVQUw7Uk9MRT1SRVEtUEFSVElDSVBBTlQ7UEFS
+VFNUQVQ9QUNDRVBURUQ7UlNWUD1UUlVFDQogO0NOPWZsc290LmNhbGVuZGFyQGdtYWlsLmNvbTtY
+LU5VTS1HVUVTVFM9MDptYWlsdG86Zmxzb3QuY2FsZW5kYXJAZ21haWwuY29tDQpBVFRFTkRFRTtD
+VVRZUEU9SU5ESVZJRFVBTDtST0xFPVJFUS1QQVJUSUNJUEFOVDtQQVJUU1RBVD1ORUVEUy1BQ1RJ
+T047UlNWUD0NCiBUUlVFO0NOPWtyenlzenRvZi5taWVyemVqZXdza2lAZnV0dXJlbGlmZS5jb20u
+cGw7WC1OVU0tR1VFU1RTPTA6bWFpbHRvOmtyenkNCiBzenRvZi5taWVyemVqZXdza2lAZnV0dXJl
+bGlmZS5jb20ucGwNCkNSRUFURUQ6MjAxODAyMTNUMDcwOTU3Wg0KREVTQ1JJUFRJT046WmVicmFu
+aWUgYmVkemllIHBvc3dpZWNvbmUgbWFya2V0aW5nb3dpXCwgemFyemFkemFuaXVcLCBwcm9qZWt0
+DQogb20gaSBiaXpuZXNwbGFub3dpLiBcblxuLTo6fjp+Ojp+On46fjp+On46fjp+On46fjp+On46
+fjp+On46fjp+On46fjp+On46fjp+DQogOn46fjp+On46fjp+On46fjp+On46fjp+On46fjo6fjp+
+OjotXG5OaWUgZWR5dHVqIHRlaiBzZWtjamkgb3Bpc3UuXG5cbld5xZt3aQ0KIGV0bCB0byB3eWRh
+cnplbmllIHBvZCBhZHJlc2VtIGh0dHBzOi8vd3d3Lmdvb2dsZS5jb20vY2FsZW5kYXIvZXZlbnQ/
+YWN0aW9uPQ0KIFZJRVcmZWlkPU0zRnliemR2YkRKbGNuVmxabVZ3Yldac1lqYzJNMkpyTW04Z2Ey
+RnliMnd1WTJsamFHOXVRR1oxZEhWeVpXeHBabQ0KIFV1WTI5dExuQnMmdG9rPU1qUWpabXh6YjNR
+dVkyRnNaVzVrWVhKQVoyMWhhV3d1WTI5dE5EYzBNek14TVdKak9HVmxZVGMyTkdaaA0KIE9UQm1O
+REpqWmpobU5UZ3lOMkpsTkRWak5qZzNPQSZjdHo9RXVyb3BlL1dhcnNhdyZobD1wbC5cbi06On46
+fjo6fjp+On46fjp+Og0KIH46fjp+On46fjp+On46fjp+On46fjp+On46fjp+On46fjp+On46fjp+
+On46fjp+On46fjp+On46fjp+On46On46fjo6LQ0KTEFTVC1NT0RJRklFRDoyMDE4MDIxM1QwNzA5
+NTdaDQpMT0NBVElPTjpTa3lwZQ0KU0VRVUVOQ0U6MA0KU1RBVFVTOkNPTkZJUk1FRA0KU1VNTUFS
+WTpaZWJyYW5pZSB6YXJ6xIVkdQ0KVFJBTlNQOk9QQVFVRQ0KRU5EOlZFVkVOVA0KRU5EOlZDQUxF
+TkRBUg0K
+--f403045f8918a6ddbe056512ae41--

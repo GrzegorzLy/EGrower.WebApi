@@ -7,23 +7,23 @@ using MimeKit;
 
 namespace Egrower.Infrastructure.Factories {
     public class EmailMessage {
+        public int Id { get; private set; }
+        public string From { get;private set; }
+        public string To { get;private set; }
+        public DateTime Date { get;private set; }
+        public string Subject { get;private set; }
+        public string TextBody { get;private set; }
+        // public string TextHTMLBody { get;private set; }
+        // public IEnumerable<MimeEntity> Attachments { get; set; }
 
-        public string From { get; set; }
-        public string To { get; set; }
-        public DateTime Date { get; set; }
-        public string Subject { get; set; }
-        public string TextBody { get; set; }
-        public string TextHTMLBody { get; set; }
-        public IEnumerable<MimeEntity> Attachments { get; set; }
-        // files
 
-        public EmailMessage (string from, string to, DateTimeOffset date, string subject, string textBody, string textHTMLBody) {
+        public EmailMessage (int id,string from, string to, DateTimeOffset date, string subject, string textBody) {
             From = from;
             To = to;
             Date = date.DateTime;
             Subject = subject;
-            TextBody = textBody;
-            TextHTMLBody = textBody;
+            TextBody = "textBody";
+            // TextHTMLBody = textBody;
         }
         public  EmailMessage(MimeMessage message)
         {
@@ -31,10 +31,10 @@ namespace Egrower.Infrastructure.Factories {
             To = message.To.ToString();
             Date = message.Date.DateTime;
             Subject =message.Subject;
-            TextBody = message.TextBody;
-            TextHTMLBody = message.TextBody;
-            if(message.Attachments !=null)
-            Attachments = message.Attachments;
+            TextBody = "message.TextBody";
+            // TextHTMLBody = message.TextBody;
+            // if(message.Attachments !=null)
+            // Attachments = message.Attachments;
         }
 
 		// public async Task SaveAttachments (MimeMessage message)
@@ -55,7 +55,6 @@ namespace Egrower.Infrastructure.Factories {
 		// 		}
 		// 	}
 		// }
-
 
     }
 }

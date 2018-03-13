@@ -18,9 +18,11 @@ namespace EGrower.WebApi.Controllers {
         [HttpGet]
         public async Task<IActionResult> Get () {
             // List<string> datas = Pop3.GetDownloadMessages();
-           var mesages = await _emailFactory.DownloadEmailsIMapAsync();
-           await _emailFactory.SaveAttachments(mesages);
-            return Json (mesages);
+            // var mesages = await _emailFactory.GetEmailsIMapAsync ();
+            // await _emailFactory.SaveAttachments (mesages);
+            var mesages = await _emailFactory.DeleteMessageAsync ();
+            var emails = await _emailFactory.ConvertMailMessagesAsync (mesages);
+            return Json (emails);
         }
 
         // GET api/values/5

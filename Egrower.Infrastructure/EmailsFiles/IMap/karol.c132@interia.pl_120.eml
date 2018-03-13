@@ -1,0 +1,537 @@
+Received: from fmx9.pf.interia.pl (fmx9.pf.interia.pl [127.0.0.1])
+	by fmx9.pf.interia.pl (Postfix) with ESMTP id A8152E0046
+	for <karol.c132@interia.pl>; Sat, 10 Feb 2018 15:54:13 +0100 (CET)
+X-Envelope-From: <40latki@40latki.pl>
+Received: from 40latki.pl (40latki.pl [138.201.163.177])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+	(No client certificate requested)
+	by fmx9.pf.interia.pl (Postfix) with ESMTPS
+	for <karol.c132@interia.pl>; Sat, 10 Feb 2018 15:54:13 +0100 (CET)
+Received: by 40latki.pl (Postfix, from userid 0)
+	id 03406F065AF; Sat, 10 Feb 2018 09:54:12 -0500 (EST)
+DKIM-Signature: v=1; a=rsa-sha256; c=simple/simple; d=40latki.pl; s=mail;
+	t=1518274453; bh=qG5/UuLxyr5FIbAsKRkw2bG7Wr27b6CDbeSQGr+0dQU=;
+	h=Date:From:To:Subject:From;
+	b=ZP1rQ9/TD8lucIb7FW9h5PE8P3H8pdNRci92sFn8IB8rcDpqf0HufZ+YBJV+ey9f2
+	 hdLfzUEnWAQhloPqqcc7Tse5BHY58i30Biy4UTvSVDSt7+hxWQEZnZIRFsghk+hfvj
+	 GrWHtowlVNGany9S8vAqflxM9G6SYcvKqc0bkjUU=
+Date: Sat, 10 Feb 2018 09:54:12 -0500
+From: 40latki@40latki.pl
+To: karol.c132@interia.pl
+Message-ID: <5a7f0794d9ce1_45533ee7fc553c1@40latki.mail>
+Subject: =?UTF-8?Q?Panowie_40+_i_Panie_30+_Czekaj=C4=85_Na_Randk=C4=99_-?=
+ =?UTF-8?Q?_Sprawd=C5=BA!?=
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+X-IPL-Priority-Group: 26-24
+X-IPL-VerifiedSender: 40latki@40latki.pl
+X-Interia-Antivirus: OK
+X-IPL-SAS-UREP: -10
+X-IPL-SAS-UREP-PRIV: 0
+X-IPL-SAS: 0
+X-IPL-Envelope-To: karol.c132@interia.pl
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://ww=
+w.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns=3D"http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"=
+ />
+	<meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D=
+1, minimum-scale=3D1, maximum-scale=3D1" />
+	<title>Profil 40 latka w Internecie</title>
+	<style type=3D"text/css">
+.ReadMsgBody { width: 100%; background-color: #ffffff; }
+.ExternalClass { width: 100%; background-color: #ffffff; }
+.ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass fon=
+t, .ExternalClass td, .ExternalClass div { line-height: 100%; }
+html { width: 100%; }
+body { -webkit-text-size-adjust: none; -ms-text-size-adjust: none; margin=
+: 0; padding: 0; }
+table { border-spacing: 0; border-collapse: collapse; }
+img { display: block !important; }
+table td { border-collapse: collapse; }
+.yshortcuts a { border-bottom: none !important; }
+a { color: #21b6ae; text-decoration: none; }
+.textbutton a { font-family: 'open sans', arial, sans-serif !important; c=
+olor: #ffffff !important; }
+.footer-link a { color: #7f8c8d !important; }
+ @media only screen and (max-width: 640px) {
+body { width: auto !important; }
+table[class=3D"table600"] { width: 450px !important; }
+table[class=3D"table-inner"] { width: 90% !important; }
+table[class=3D"table2-2"] { width: 47% !important; text-align: left !impo=
+rtant; }
+table[class=3D"table3-3"] { width: 100% !important; text-align: center !i=
+mportant; }
+table[class=3D"table1-3"] { width: 29% !important; }
+table[class=3D"table3-1"] { width: 64% !important; text-align: left !impo=
+rtant; }
+/* Image */
+img[class=3D"img1"] { width: 100% !important; height: auto !important; }
+}
+ @media only screen and (max-width: 479px) {
+body { width: auto !important; }
+table[class=3D"table600"] { width: 290px !important; }
+table[class=3D"table-inner"] { width: 82% !important; }
+table[class=3D"table2-2"] { width: 100% !important; text-align: left !imp=
+ortant; }
+table[class=3D"table3-3"] { width: 100% !important; text-align: center !i=
+mportant; }
+table[class=3D"table1-3"] { width: 100% !important; }
+table[class=3D"table3-1"] { width: 100% !important; text-align: center !i=
+mportant; }
+/* image */
+img[class=3D"img1"] { width: 100% !important; }
+img[class=3D"img-hide"] { width: 0px !important; height: 0px !important; =
+line-height: 0px !important; max-height: 0px !important; max-width: 0px !=
+important; }
+}
+.upper{text-transform:uppercase;}
+</style>
+</head>
+
+<body>
+	<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" b=
+gcolor=3D"#ffffff">
+
+		<!-- header -->
+
+		<tr>
+			<td>
+				<table width=3D"100%" border=3D"0" align=3D"center" cellpadding=3D"0"=
+ cellspacing=3D"0">
+					<tr>
+						<td background=3D"https://40latki.pl/mailing/header-bg-1.jpg" bgcol=
+or=3D"#2d3044" valign=3D"top" style=3D"background-size:cover; background-=
+position:top;">
+							<table class=3D"table600" width=3D"600" border=3D"0" align=3D"cent=
+er" cellpadding=3D"0" cellspacing=3D"0">
+								<tr>
+									<td height=3D"80"></td>
+								</tr>
+								<!-- logo -->
+								<!--<tr>
+									<td align=3D"center" style=3D"line-height: 0px;">
+										<img style=3D"display:block; line-height:0px; font-size:0px; bo=
+rder:0px;" src=3D"http://40latki.pl/mailing/logo_final.png" alt=3D"logo" =
+/>
+									</td>
+								</tr>-->
+								=
+
+								=
+
+								<!-- title -->
+								<tr>
+									<td align=3D"center" style=3D"font-family: 'Open Sans', Arial, s=
+ans-serif; font-size:16px; color:#FFFFFF;">PORTAL RANDKOWY DLA 40 LATK=C3=
+=93W<span style=3D'color:#36D7B7'> ORAZ KOBIET OD 30 LAT</span> </td>
+								</tr>
+								<!-- end title -->
+
+								<tr>
+									<td align=3D"center" style=3D"font-family: 'Open Sans', Arial, s=
+ans-serif; font-size:42px;font-weight:800; color:#FFFFFF;">RANDKI DLA 40 =
+LATK=C3=93W</td>
+								</tr>
+								=
+
+								<!-- title -->
+								<tr>
+									<td align=3D"center" style=3D"font-family: 'Open Sans', Arial, s=
+ans-serif; font-size:16px; color:#FFFFFF;padding-top:5px;"><span style=3D=
+'color:#36D7B7'>100% DARMOWA REJESTRACJA</span> M=C4=98=C5=BBCZY=C5=B9NI =
+40+ KOBIETY 30+ </td>
+								</tr>
+									<!-- end title -->
+									=
+
+
+								<tr>
+									<td height=3D"80"></td>
+								</tr>
+								=
+
+							</table>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+
+		<!-- end header -->
+
+		<!-- 1/1 content center -->
+		<tr>
+			<td>
+				<table class=3D"table600" width=3D"600" border=3D"0" align=3D"center"=
+ cellpadding=3D"0" cellspacing=3D"0">
+					<tr>
+						<td height=3D"50"></td>
+					</tr>
+					<!-- title -->
+					<tr>
+						<td align=3D"center" style=3D"font-family: 'Open Sans', Arial, sans=
+-serif; font-size:21px; font-weight: bold; color:#21b6ae;"><a href=3D'htt=
+ps://www.40latki.pl' class=3D'upper'>Zarejestruj sw=C3=B3j profil 40+ lat=
+ka - <span style=3D'font-size:21px;color:#ff7859;'>TUTAJ</span></a></td>
+					</tr>
+					<!-- end title -->
+					<tr>
+						<td height=3D"10"></td>
+					</tr>
+
+					<!-- content -->
+					<tr>
+						<td align=3D"center" style=3D"font-family: 'Open Sans', Arial, sans=
+-serif; font-size:13px; color:#7f8c8d; line-height:24px;">
+							Osoby korzystaj=C4=85ce z Naszego portalu dla 40+ latk=C3=B3w m=C3=
+=B3wi=C4=85, =C5=BCe to =C5=9Bwietny portal randkowy, fajna spo=C5=82eczn=
+o=C5=9B=C4=87 czy w ko=C5=84cu, =C5=9Bwietny serwis do zawierania znajomo=
+=C5=9Bci i sp=C4=99dzania wolnego czasu... <br>Ciekawe jak Ty postanowisz=
+ wykorzysta=C4=87 sw=C3=B3j profil 40+ latka na Naszym portalu.Zapraszamy=
+ wszystkie osoby powy=C5=BCej 40 lat lub kobiety powy=C5=BCej 30 lat.
+						</td>
+					</tr>
+					<!-- end content -->
+				</table>
+			</td>
+		</tr>
+		<!-- end 1/1 content center -->
+
+		<!-- 1/2 right -->
+		<tr>
+			<td>
+				<table class=3D"table600" width=3D"600" border=3D"0" align=3D"center"=
+ cellpadding=3D"0" cellspacing=3D"0">
+					<tr>
+						<td height=3D"50"></td>
+					</tr>
+					<tr>
+						<td align=3D"right">
+							<!-- img -->
+
+							<table class=3D"table2-2" width=3D"287" border=3D"0" align=3D"left=
+" cellpadding=3D"0" cellspacing=3D"0">
+								<tr>
+									<td align=3D"center" style=3D"line-height:0px;">
+										<img style=3D"display:block; line-height:0px; font-size:0px; bo=
+rder:0px;" class=3D"img1" src=3D"https://40latki.pl/mailing/photo1.jpg" a=
+lt=3D"img" width=3D"287" height=3D"190" />
+									</td>
+								</tr>
+							</table>
+
+							<!-- end img -->
+
+							<!--Space-->
+
+							<table width=3D"1" height=3D"20" border=3D"0" cellpadding=3D"0" ce=
+llspacing=3D"0" align=3D"left">
+								<tr>
+									<td height=3D"20" style=3D"font-size: 0;line-height: 0;border-co=
+llapse: collapse;">
+										<p style=3D"padding-left: 24px;">&nbsp;</p>
+									</td>
+								</tr>
+							</table>
+
+							<!--End Space-->
+
+							<table style=3D"border:1px solid #e2e2e2;" width=3D"287" border=3D=
+"0" align=3D"right" cellpadding=3D"0" cellspacing=3D"0" class=3D"table2-2=
+">
+								<tr>
+									<td>
+										<table class=3D"table-inner" width=3D"237" border=3D"0" align=3D=
+"center" cellpadding=3D"0" cellspacing=3D"0">
+											<tr align=3D"left">
+												<td>
+													<table width=3D"50" border=3D"0" cellpadding=3D"0" cellspaci=
+ng=3D"0">
+														<tr>
+															<td style=3D"border-bottom:3px solid #21b6ae;" height=3D"2=
+0"></td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+											<tr>
+												<td height=3D"10"></td>
+											</tr>
+											<!-- title -->
+											<tr align=3D"left">
+												<td style=3D"font-family: 'Open Sans', Arial, sans-serif; fon=
+t-size:18px; color:#3b3b3b; line-height:30px; font-weight: bold;">40latki=
+.pl to:</td>
+											</tr>
+											<!-- end title -->
+											<tr>
+												<td height=3D"5"></td>
+											</tr>
+
+											<!-- content -->
+											<tr>
+												<td style=3D"font-family: 'Open Sans', Arial, sans-serif; fon=
+t-size:13px; color:#7f8c8d; line-height:24px;">
+													MO=C5=BBLIWO=C5=9A=C4=86 ZAWIERANIA NOWYCH ZNAJOMO=C5=9ACI W=
+ SIECI I PRZEDE WSZYSTKIM, =C5=9AWIETNA ZABAWA ONLINE!
+												</td>
+											</tr>
+											<!-- end content -->
+
+											<tr>
+												<td height=3D"20"></td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<!-- end 1/2 right -->
+
+		<!-- 1/2 left -->
+		<tr>
+			<td>
+				<table class=3D"table600" width=3D"600" border=3D"0" align=3D"center"=
+ cellpadding=3D"0" cellspacing=3D"0">
+					<tr>
+						<td height=3D"50"></td>
+					</tr>
+					<tr>
+						<td align=3D"right">
+							<!-- img -->
+
+							<table class=3D"table2-2" width=3D"287" border=3D"0" align=3D"righ=
+t" cellpadding=3D"0" cellspacing=3D"0">
+								<tr>
+									<td align=3D"center" style=3D"line-height:0px;">
+										<img style=3D"display:block; line-height:0px; font-size:0px; bo=
+rder:0px;" class=3D"img1" src=3D"https://40latki.pl/mailing/photo2.jpg" a=
+lt=3D"img" width=3D"287" height=3D"190" />
+									</td>
+								</tr>
+							</table>
+
+							<!-- end img -->
+
+							<!--Space-->
+
+							<table width=3D"1" height=3D"20" border=3D"0" cellpadding=3D"0" ce=
+llspacing=3D"0" align=3D"right">
+								<tr>
+									<td height=3D"20" style=3D"font-size: 0;line-height: 0;border-co=
+llapse: collapse;">
+										<p style=3D"padding-left: 24px;">&nbsp;</p>
+									</td>
+								</tr>
+							</table>
+
+							<!--End Space-->
+
+							<table style=3D"border:1px solid #e2e2e2;" width=3D"287" border=3D=
+"0" align=3D"left" cellpadding=3D"0" cellspacing=3D"0" class=3D"table2-2"=
+>
+								<tr>
+									<td>
+										<table class=3D"table-inner" width=3D"237" border=3D"0" align=3D=
+"center" cellpadding=3D"0" cellspacing=3D"0">
+											<tr align=3D"left">
+												<td>
+													<table width=3D"50" border=3D"0" cellpadding=3D"0" cellspaci=
+ng=3D"0">
+														<tr>
+															<td style=3D"border-bottom:3px solid #21b6ae;" height=3D"2=
+0"></td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+											<tr>
+												<td height=3D"10"></td>
+											</tr>
+											<!-- title -->
+											<tr align=3D"left">
+												<td style=3D"font-family: 'Open Sans', Arial, sans-serif; fon=
+t-size:18px; color:#3b3b3b; line-height:30px; font-weight: bold;">Nasz po=
+rtal to r=C3=B3wnie=C5=BC:</td>
+											</tr>
+											<!-- end title -->
+											<tr>
+												<td height=3D"5"></td>
+											</tr>
+
+											<!-- content -->
+											<tr>
+												<td style=3D"font-family: 'Open Sans', Arial, sans-serif; fon=
+t-size:13px; color:#7f8c8d; line-height:24px;">
+													Tablica post=C3=B3w i komentarzy, zdj=C4=99cia bez ogranicze=
+=C5=84, znajomi, wiadomo=C5=9Bci, modyfikacja wygl=C4=85du profilu i wiel=
+e, wiele wi=C4=99cej ... =
+
+												</td>
+											</tr>
+											<!-- end content -->
+
+											<tr>
+												<td height=3D"20"></td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<!-- end 1/2 left -->
+
+		<!-- CTA bar -->
+		<tr>
+			<td>
+				<table align=3D"center" width=3D"100%" border=3D"0" cellspacing=3D"0"=
+ cellpadding=3D"0">
+					<tr>
+						<td height=3D"50"></td>
+					</tr>
+					<tr>
+						<td bgcolor=3D"#34495e">
+							<table class=3D"table600" width=3D"600" border=3D"0" align=3D"cent=
+er" cellpadding=3D"0" cellspacing=3D"0">
+								<tr>
+									<td height=3D"25"></td>
+								</tr>
+
+								<!-- title -->
+								<tr>
+									<td align=3D"center" class=3D'upper' style=3D"font-family: 'Open=
+ Sans', Arial, sans-serif; font-size:24px; color:#ffffff; line-height:24p=
+x;">NIE CZEKAJ, ZAREJESTRUJ SI=C4=98 TERAZ!</td>
+								</tr>
+								<!-- end title -->
+
+								<tr>
+									<td height=3D"20"></td>
+								</tr>
+
+								<!-- button -->
+								<tr>
+									<td>
+										<table width=3D"150" border=3D"0" align=3D"center" cellpadding=3D=
+"0" cellspacing=3D"0" bgcolor=3D"#21b6ae" class=3D"textbutton" style=3D" =
+border-radius:30px;">
+											<tr>
+												<td width=3D"10"></td>
+												<td height=3D"30" align=3D"center" style=3D"font-family: 'Ope=
+n Sans', Arial, sans-serif; font-size:13px; color:#ffffff;">
+													<a href=3D"https://www.40latki.pl" style=3D"color:#ffffff;">=
+REJESTRUJ=C4=98 PROFIL</a>
+												</td>
+												<td width=3D"10"></td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+								<!-- end button -->
+
+								<tr>
+									<td height=3D"20"></td>
+								</tr>
+								<tr>
+									<td align=3D"center" style=3D"line-height:0px;">
+										<img style=3D"display:block; border:0px; line-height:0px; font-=
+size:0px;" src=3D"https://40latki.pl/mailing/point-up.png" width=3D"30" h=
+eight=3D"10" alt=3D"img" />
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<!-- end CTA bar -->
+
+	=
+
+
+		<!-- footer -->
+		<tr>
+			<td>
+				<table width=3D"100%" border=3D"0" align=3D"center" cellpadding=3D"0"=
+ cellspacing=3D"0">
+					<tr>
+						<td height=3D"50"></td>
+					</tr>
+					=
+
+					<tr>
+						<td bgcolor=3D"#e2e6e7" align=3D"center">
+							<table class=3D"table600" width=3D"600" border=3D"0" cellspacing=3D=
+"0" cellpadding=3D"0">
+								<tr>
+									<td height=3D"10"></td>
+								</tr>
+								<tr>
+									<td>
+										<!-- copyright -->
+
+										<table class=3D"table3-3" width=3D"390" border=3D"0" align=3D"l=
+eft" cellpadding=3D"0" cellspacing=3D"0">
+											<tr>
+												<td valign=3D"middle" style=3D"font-family: 'Open Sans', Aria=
+l, sans-serif; font-size:13px; color:#7f8c8d; line-height:28px;">Copyrigh=
+t =C2=A9 40latki.pl 2016, All rights reserved.</td>
+											</tr>
+										</table>
+
+										<!-- end copyright -->
+										<!--Space-->
+
+										<table width=3D"1" height=3D"0" border=3D"0" cellpadding=3D"0" =
+cellspacing=3D"0" align=3D"left">
+											<tr>
+												<td height=3D"0" style=3D"font-size: 0;line-height: 0;border-=
+collapse: collapse;">
+													<p style=3D"padding-left: 24px;">&nbsp;</p>
+												</td>
+											</tr>
+										</table>
+
+										<!--End Space-->
+
+										<table class=3D"table3-3" width=3D"184" border=3D"0" align=3D"r=
+ight" cellpadding=3D"0" cellspacing=3D"0">
+											<!-- email option -->
+											<tr>
+												<td style=3D"font-family: 'Open Sans', Arial, sans-serif; fon=
+t-size:13px; color:#7f8c8d; line-height:28px;">
+													<a href=3D"#">webversion</a>
+													=
+
+												</td>
+											</tr>
+											<!-- email option -->
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height=3D"10"></td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>=
