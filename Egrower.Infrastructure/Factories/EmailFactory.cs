@@ -27,8 +27,8 @@ namespace Egrower.Infrastructure.Factories {
             PathImap = "..\\Egrower.Infrastructure\\EmailsFiles\\IMap\\";
             PathPop3Log = "..\\Egrower.Infrastructure\\EmailsFiles\\Pop3Logs\\";
             PathImapLog = "..\\Egrower.Infrastructure\\EmailsFiles\\IMapLogs\\";
-            email = "karol.c132@interia.pl";
-            password = "dagonet43";
+            email = "";
+            password = "";
             AttachmentPath = "..\\Egrower.Infrastructure\\EmailsFiles\\Attachments\\";
         }
         // public async Task<IEnumerable<EmailMessage>> GetEmailsIMapAsync () {
