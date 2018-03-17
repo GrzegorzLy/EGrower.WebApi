@@ -31,7 +31,7 @@ namespace EGrower.WebApi.Controllers {
                     item.Date, item.Subject, item.HtmlBody);
                 foreach (var item1 in item.Attachments)
                 {
-                    emailMessage.Atachments.Add(new Atachment(item1.ToString(), EmailFactory.ConvertToByteArray(item1)));
+                    emailMessage.Atachments.Add(new Atachment(item1.ContentType.Name, EmailFactory.ConvertToByteArray(item1)));
                 }
 
                 _eGrowerContext.EmailMessages.Add(emailMessage);
