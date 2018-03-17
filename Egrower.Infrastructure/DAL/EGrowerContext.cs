@@ -18,12 +18,12 @@ namespace Egrower.Infrastructure.DAL
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<EmailMessage>()
-                .HasMany(em => em.Attachments)
+                .HasMany(em => em.Atachments)
                 .WithOne(a => a.EmailMessage);
                
         }
 
         public DbSet<EmailMessage> EmailMessages { get; set; }
-        public DbSet<Atachment> Attachments{ get; set; }
+        public DbSet<Atachment> Atachments{ get; set; }
     }
 }

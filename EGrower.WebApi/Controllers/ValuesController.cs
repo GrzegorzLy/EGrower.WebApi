@@ -6,6 +6,7 @@ using Egrower.Infrastructure.DAL;
 using Egrower.Infrastructure.Factories;
 using Egrower.Infrastructure.Factories.Interfaces;
 using Egrower.Infrastructure.Factories.MailKit;
+using EGrower.Core.Domain;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EGrower.WebApi.Controllers {
@@ -24,18 +25,16 @@ namespace EGrower.WebApi.Controllers {
         public async Task<IActionResult> Get () {
             // List<string> datas = Pop3.GetDownloadMessages();
              var mesages = await _emailFactory.GetEmailsIMapAsync();
-            List<byte[]> list = new List<byte[]>();
             foreach (var item in mesages)
             {
-                int i =+ 1;
-                _eGrowerContext.EmailMessages.Add(new Core.Domain.EmailMessage(i,item.From.ToString(), item.To.ToString(), 
-                    item.Date, item.Subject, item.TextBody));
+                EmailMessage emailMessage = new EmailMessage(item.From.ToString(), item.To.ToString(), 
+                    item.Date, item.Subject, item.HtmlBody);
                 foreach (var item1 in item.Attachments)
                 {
-                    _eGrowerContext.Attachments.Add(new Core.Domain.Atachment(item1.ToString(),
-                                                    EmailFactory.ConvertToByteArrayAsync(item1), i));
-                    list.Add(EmailFactory.ConvertToByteArrayAsync(item1));
+                    emailMessage.Atachments.Add(new Atachment(item1.ToString(), EmailFactory.ConvertToByteArrayAsync(item1)));
                 }
+
+                _eGrowerContext.EmailMessages.Add(emailMessage);
             }
             // await _emailFactory.SaveAttachments (mesages);
             //var mesages = await _emailFactory.DeleteMessageAsync ();

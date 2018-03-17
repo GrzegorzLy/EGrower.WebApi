@@ -15,11 +15,11 @@ namespace EGrower.Core.Domain
         protected Atachment()
         {
         }
-        public Atachment(string name, byte[] data, int emailMessageId)
+        public Atachment(string name, byte[] data)
         {
             Name = name;
             Data = data;
-            EmailMessageId = emailMessageId;
+           
         }
     }
 }

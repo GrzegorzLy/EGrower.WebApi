@@ -12,19 +12,20 @@ namespace EGrower.Core.Domain
         public DateTime Date { get; private set; }
         public string Subject { get; private set; }
         public string TextHTMLBody { get;private set; }
-        public ICollection<Atachment> Attachments { get; protected set; }
+        public ICollection<Atachment> Atachments { get; protected set; }
 
         protected EmailMessage()
         {
         }
 
-        public EmailMessage(int id, string from, string to, DateTimeOffset date, string subject, string textBody)
+        public EmailMessage(string from, string to, DateTimeOffset date, string subject, string textBody)
         {
             From = from;
             To = to;
             Date = date.DateTime;
             Subject = subject;
             TextHTMLBody = textBody;
+            Atachments = new List<Atachment>();
         }
     }
 }

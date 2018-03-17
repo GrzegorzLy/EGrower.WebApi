@@ -11,9 +11,10 @@ using System;
 namespace Egrower.Infrastructure.Migrations
 {
     [DbContext(typeof(EGrowerContext))]
-    partial class EGrowerContextModelSnapshot : ModelSnapshot
+    [Migration("20180317220937_test2")]
+    partial class test2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -35,7 +36,7 @@ namespace Egrower.Infrastructure.Migrations
 
                     b.HasIndex("EmailMessageId");
 
-                    b.ToTable("Atachments");
+                    b.ToTable("Attachments");
                 });
 
             modelBuilder.Entity("EGrower.Core.Domain.EmailMessage", b =>
@@ -61,7 +62,7 @@ namespace Egrower.Infrastructure.Migrations
             modelBuilder.Entity("EGrower.Core.Domain.Atachment", b =>
                 {
                     b.HasOne("EGrower.Core.Domain.EmailMessage", "EmailMessage")
-                        .WithMany("Atachments")
+                        .WithMany("Attachments")
                         .HasForeignKey("EmailMessageId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
