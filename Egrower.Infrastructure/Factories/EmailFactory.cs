@@ -138,7 +138,7 @@ namespace Egrower.Infrastructure.Factories {
         //    }
         //}
 
-        public static byte[] ConvertToByteArrayAsync(MimeEntity attachment)
+        public static byte[] ConvertToByteArray(MimeEntity attachment)
         {
             byte[] bytes;
             using (var memory = new MemoryStream())
