@@ -23,6 +23,8 @@ namespace EGrower.WebApi.Controllers {
         // GET api/values
         [HttpGet]
         public async Task<IActionResult> Get () {
+
+            //Test
             // List<string> datas = Pop3.GetDownloadMessages();
              var mesages = await _emailFactory.GetEmailsIMapAsync();
             foreach (var item in mesages)
