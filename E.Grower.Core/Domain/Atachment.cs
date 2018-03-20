@@ -9,6 +9,7 @@ namespace EGrower.Core.Domain
         public int Id { get; protected set;}
         public string Name { get; protected set; }
         public byte[] Data { get; protected set; }
+        public DateTime AddedAt { get; protected set; }
         public int EmailMessageId { get; protected set; }
         public EmailMessage EmailMessage { get; protected set; }
 
@@ -19,6 +20,7 @@ namespace EGrower.Core.Domain
         {
             Name = name;
             Data = data;
+            AddedAt = DateTime.UtcNow;
            
         }
     }

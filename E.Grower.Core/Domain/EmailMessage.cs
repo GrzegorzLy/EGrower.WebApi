@@ -9,7 +9,8 @@ namespace EGrower.Core.Domain
         public int Id { get; private set; }
         public string From { get; private set; }
         public string To { get; private set; }
-        public DateTime Date { get; private set; }
+        public DateTime CreatedAt { get; private set; }
+        public DateTime DateAddedToTheDataBase { get; private set; }
         public string Subject { get; private set; }
         public string TextHTMLBody { get;private set; }
         public ICollection<Atachment> Atachments { get; protected set; }
@@ -18,11 +19,12 @@ namespace EGrower.Core.Domain
         {
         }
 
-        public EmailMessage(string from, string to, DateTimeOffset date, string subject, string textBody)
+        public EmailMessage(string from, string to, DateTimeOffset createdAt, string subject, string textBody)
         {
             From = from;
             To = to;
-            Date = date.DateTime;
+            CreatedAt = createdAt.DateTime;
+            DateAddedToTheDataBase = DateTime.UtcNow;
             Subject = subject;
             TextHTMLBody = textBody;
             Atachments = new List<Atachment>();
