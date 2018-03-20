@@ -22,13 +22,13 @@ namespace Egrower.Infrastructure.Factories {
 
         public string email { get; private set; }
         public string password { get; private set; }
-        public EmailFactory () {
+        public EmailFactory() {
             PathPop3 = "..\\Egrower.Infrastructure\\EmailsFiles\\Pop3\\";
             PathImap = "..\\Egrower.Infrastructure\\EmailsFiles\\IMap\\";
             PathPop3Log = "..\\Egrower.Infrastructure\\EmailsFiles\\Pop3Logs\\";
             PathImapLog = "..\\Egrower.Infrastructure\\EmailsFiles\\IMapLogs\\";
-            email = "";
-            password = "";
+            email = "ehodowcatest@gmail.com";
+            password = "ehodowca";
             AttachmentPath = "..\\Egrower.Infrastructure\\EmailsFiles\\Attachments\\";
         }
         // public async Task<IEnumerable<EmailMessage>> GetEmailsIMapAsync () {
@@ -55,6 +55,34 @@ namespace Egrower.Infrastructure.Factories {
         //         return messages;
         //     }
         // }
+
+        //}
+        public async Task<IEnumerable<MimeMessage>> GetEmailsIMapAsync()
+        {
+            using (var client = new ImapClient(new ProtocolLogger(string.Format("{0}{1}_imap.log", PathImapLog, email))))
+            {
+                await client.ConnectAsync("imap.gmail.com", 993, SecureSocketOptions.SslOnConnect);
+                await client.AuthenticateAsync(email, password);
+                await client.Inbox.OpenAsync(FolderAccess.ReadOnly);
+                var uids = await client.Inbox.SearchAsync(SearchQuery.All);
+                List<MimeMessage> messages = new List<MimeMessage>();
+                foreach (var uid in uids.Reverse())
+                {
+                    var message = await client.Inbox.GetMessageAsync(uid);
+                    if (message != null && message.Date < DateTime.Now && message.Date > DateTime.Now.AddDays(-30))
+                    {
+                        messages.Add(message);
+                        // write the message to a file
+                        // await message.WriteToAsync(string.Format(@"{0}" + "{1}_{2}.eml", PathImap, email, uid));
+                    }
+                    else
+                        break;
+                }
+                await client.DisconnectAsync(true);
+
+                return messages;
+            }
+        }
 
         // public async Task GetEmailsPop3Async () {
         //     using (var client = new Pop3Client (new ProtocolLogger ("pop3.log"))) {
@@ -87,23 +115,43 @@ namespace Egrower.Infrastructure.Factories {
 
         // }
 
-        // private async Task SaveAttachment (EmailMessage message) {
-        //     foreach (var attachment in message.Attachments) {
-        //         if (attachment is MessagePart) {
-        //             var fileName = attachment.ContentDisposition?.FileName + "attached.eml";
-        //             // (attachment.ContentType.Name ?? "attached.eml");
-        //             var rfc822 = (MessagePart) attachment;
-        //             using (var stream = File.Create (AttachmentPath + email + "_" + fileName))
-        //             await rfc822.Message.WriteToAsync (stream);
-        //         } else {
-        //             var part = (MimePart) attachment;
-        //             var fileName = part.FileName;
+        //private async Task SaveAttachment(EmailMessage message)
+        //{
+        //    foreach (var attachment in message.Attachments)
+        //    {
+        //        if (attachment is MessagePart)
+        //        {
+        //            var fileName = attachment.ContentDisposition?.FileName + "attached.eml";
+        //            // (attachment.ContentType.Name ?? "attached.eml");
+        //            var rfc822 = (MessagePart)attachment;
+        //            using (var stream = File.Create(AttachmentPath + email + "_" + fileName))
+        //                await rfc822.Message.WriteToAsync(stream);
+        //        }
+        //        else
+        //        {
+        //            var part = (MimePart)attachment;
+        //            var fileName = part.FileName;
 
-        //             using (var stream = File.Create (string.Format (AttachmentPath + email + "_" + fileName)))
-        //             await part.Content.DecodeToAsync (stream);
-        //         }
-        //     }
-        // }
+        //            using (var stream = File.Create(string.Format(AttachmentPath + email + "_" + fileName)))
+        //                await part.Content.DecodeToAsync(stream);
+        //        }
+        //    }
+        //}
+
+        public static byte[] ConvertToByteArray(MimeEntity attachment)
+        {
+            byte[] bytes;
+            using (var memory = new MemoryStream())
+            {
+                if (attachment is MimePart)
+                    ((MimePart)attachment).Content.DecodeTo(memory);
+                else
+                    ((MessagePart)attachment).Message.WriteTo(memory);
+
+                bytes = memory.ToArray();
+            }
+            return bytes;
+        }
 
         // public async Task SaveAttachments (IEnumerable<EmailMessage> messages) {
         //     foreach (var message in messages) {
@@ -114,7 +162,7 @@ namespace Egrower.Infrastructure.Factories {
         // public Task DeleteMessageAsync (EmailMessage messages) {
         //     throw new NotImplementedException ();
         // }
-// "imap.gmail.com", 993
+        // "imap.gmail.com", 993
         public async Task<IEnumerable<MimeMessage>> GetAllMimesIMapAsync () {
             // new ProtocolLogger (string.Format ("{0}{1}_imap.log", PathImapLog, email))
             using (var client = new ImapClient ()) {
@@ -157,8 +205,8 @@ namespace Egrower.Infrastructure.Factories {
                         messages.Add (message);
                         // await client.Inbox.AddFlagsAsync(uid,MessageFlags.Seen,false);
                         // write the message to a file
-                        // await message.WriteToAsync (string.Format (@"{0}" + "{1}_{2}.eml", PathImap, email, uid));
-
+                        //await message.WriteToAsync (string.Format (@"{0}" + "{1}_{2}.eml", PathImap, email, uid));
+                        
                     } else
                         break;
                 }
@@ -168,11 +216,11 @@ namespace Egrower.Infrastructure.Factories {
                 return messages;
             }
         }
-        public async Task<IEnumerable<EmailMessage>> ConvertMailMessagesAsync (IEnumerable<MimeMessage> messages) {
-            List<EmailMessage> emailMessages = new List<EmailMessage> ();
+        public async Task<IEnumerable<EmailMessageInfrastructure>> ConvertMailMessagesAsync (IEnumerable<MimeMessage> messages) {
+            List<EmailMessageInfrastructure> emailMessages = new List<EmailMessageInfrastructure> ();
             int i =1;
             foreach (var message in messages) {
-                emailMessages.Add (new EmailMessage (++i,message.From.ToString (), message.To.ToString (), message.Date, message.Subject, message.Body.ToString ()));
+                emailMessages.Add (new EmailMessageInfrastructure (++i,message.From.ToString (), message.To.ToString (), message.Date, message.Subject, message.Body.ToString ()));
             }
             return await Task.FromResult (emailMessages);
         }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using MimeKit;
 
 namespace Egrower.Infrastructure.Factories {
-    public class EmailMessage {
+    public class EmailMessageInfrastructure {
         public int Id { get; private set; }
         public string From { get;private set; }
         public string To { get;private set; }
@@ -17,7 +17,7 @@ namespace Egrower.Infrastructure.Factories {
         // public IEnumerable<MimeEntity> Attachments { get; set; }
 
 
-        public EmailMessage (int id,string from, string to, DateTimeOffset date, string subject, string textBody) {
+        public EmailMessageInfrastructure(int id,string from, string to, DateTimeOffset date, string subject, string textBody) {
             From = from;
             To = to;
             Date = date.DateTime;
@@ -25,7 +25,7 @@ namespace Egrower.Infrastructure.Factories {
             TextBody = "textBody";
             // TextHTMLBody = textBody;
         }
-        public  EmailMessage(MimeMessage message)
+        public EmailMessageInfrastructure(MimeMessage message)
         {
              From = message.From.ToString();
             To = message.To.ToString();

@@ -2,27 +2,49 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Egrower.Infrastructure.DAL;
+using Egrower.Infrastructure.Factories;
 using Egrower.Infrastructure.Factories.Interfaces;
 using Egrower.Infrastructure.Factories.MailKit;
+using EGrower.Core.Domain;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EGrower.WebApi.Controllers {
     [Route ("api/[controller]")]
     public class ValuesController : Controller {
         private readonly IEmailFactory _emailFactory;
-        public ValuesController (IEmailFactory emailFactory) {
+        private readonly EGrowerContext _eGrowerContext;
+        public ValuesController (IEmailFactory emailFactory, EGrowerContext eGrowerContext) {
             _emailFactory = emailFactory;
+            _eGrowerContext = eGrowerContext;
+            
 
         }
         // GET api/values
         [HttpGet]
         public async Task<IActionResult> Get () {
+
+            //Test
             // List<string> datas = Pop3.GetDownloadMessages();
-            // var mesages = await _emailFactory.GetEmailsIMapAsync ();
+             var mesages = await _emailFactory.GetEmailsIMapAsync();
+            foreach (var item in mesages)
+            {
+                EmailMessage emailMessage = new EmailMessage(item.From.ToString(), item.To.ToString(), 
+                    item.Date, item.Subject, item.HtmlBody);
+                foreach (var item1 in item.Attachments)
+                {
+                   
+                    emailMessage.Atachments.Add(new Atachment(item1.ContentType.Name, EmailFactory.ConvertToByteArray(item1)));
+                }
+
+                _eGrowerContext.EmailMessages.Add(emailMessage);
+            }
             // await _emailFactory.SaveAttachments (mesages);
-            var mesages = await _emailFactory.DeleteMessageAsync ();
-            var emails = await _emailFactory.ConvertMailMessagesAsync (mesages);
-            return Json (emails);
+            //var mesages = await _emailFactory.DeleteMessageAsync ();
+            //var emails = await _emailFactory.ConvertMailMessagesAsync (mesages);
+            await _eGrowerContext.SaveChangesAsync();
+
+            return StatusCode(200);
         }
 
         // GET api/values/5
@@ -42,5 +64,7 @@ namespace EGrower.WebApi.Controllers {
         // DELETE api/values/5
         [HttpDelete ("{id}")]
         public void Delete (int id) { }
+
+
     }
 }
