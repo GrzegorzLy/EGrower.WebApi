@@ -57,32 +57,32 @@ namespace Egrower.Infrastructure.Factories {
         // }
 
         //}
-        public async Task<IEnumerable<MimeMessage>> GetEmailsIMapAsync()
-        {
-            using (var client = new ImapClient(new ProtocolLogger(string.Format("{0}{1}_imap.log", PathImapLog, email))))
-            {
-                await client.ConnectAsync("imap.gmail.com", 993, SecureSocketOptions.SslOnConnect);
-                await client.AuthenticateAsync(email, password);
-                await client.Inbox.OpenAsync(FolderAccess.ReadOnly);
-                var uids = await client.Inbox.SearchAsync(SearchQuery.All);
-                List<MimeMessage> messages = new List<MimeMessage>();
-                foreach (var uid in uids.Reverse())
-                {
-                    var message = await client.Inbox.GetMessageAsync(uid);
-                    if (message != null && message.Date < DateTime.Now && message.Date > DateTime.Now.AddDays(-30))
-                    {
-                        messages.Add(message);
-                        // write the message to a file
-                        // await message.WriteToAsync(string.Format(@"{0}" + "{1}_{2}.eml", PathImap, email, uid));
-                    }
-                    else
-                        break;
-                }
-                await client.DisconnectAsync(true);
+        //public async Task<IEnumerable<MimeMessage>> GetEmailsIMapAsync()
+        //{
+        //    using (var client = new ImapClient(new ProtocolLogger(string.Format("{0}{1}_imap.log", PathImapLog, email))))
+        //    {
+        //        await client.ConnectAsync(Uri );
+        //        await client.AuthenticateAsync(email, password);
+        //        await client.Inbox.OpenAsync(FolderAccess.ReadOnly);
+        //        var uids = await client.Inbox.SearchAsync(SearchQuery.All);
+        //        List<MimeMessage> messages = new List<MimeMessage>();
+        //        foreach (var uid in uids.Reverse())
+        //        {
+        //            var message = await client.Inbox.GetMessageAsync(uid);
+        //            if (message != null && message.Date < DateTime.Now && message.Date > DateTime.Now.AddDays(-30))
+        //            {
+        //                messages.Add(message);
+        //                // write the message to a file
+        //                // await message.WriteToAsync(string.Format(@"{0}" + "{1}_{2}.eml", PathImap, email, uid));
+        //            }
+        //            else
+        //                break;
+        //        }
+        //        await client.DisconnectAsync(true);
 
-                return messages;
-            }
-        }
+        //        return messages;
+        //    }
+        //}
 
         // public async Task GetEmailsPop3Async () {
         //     using (var client = new Pop3Client (new ProtocolLogger ("pop3.log"))) {
@@ -249,6 +249,11 @@ namespace Egrower.Infrastructure.Factories {
 
                 return await Task.FromResult (messages);
             }
+        }
+
+        public Task<IEnumerable<MimeMessage>> GetEmailsIMapAsync()
+        {
+            throw new NotImplementedException();
         }
     }
 }

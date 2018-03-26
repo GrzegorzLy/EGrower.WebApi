@@ -1,4 +1,5 @@
-﻿using MailKit;
+﻿using Egrower.Infrastructure.Factories.Interfaces;
+using MailKit;
 using MailKit.Net.Imap;
 using MailKit.Search;
 using MailKit.Security;
@@ -11,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace Egrower.Infrastructure.Factories
 {
-    public class EmailClientFactory
+    public class EmailClientFactory : IEmailClientFactory
     {
         public string PathImap { get; private set; }
         public string PathImapLog { get; private set; }
@@ -58,7 +59,7 @@ namespace Egrower.Infrastructure.Factories
                     if (message != null && message.Date < DateTime.Now && message.Date > DateTime.Now.AddDays(-30))
                     {
                         messages.Add(message);
-                        await message.WriteToAsync(string.Format(@"{0}" + "{1}_{2}.eml", PathImap, Email, uid));
+                        //await message.WriteToAsync(string.Format(@"{0}" + "{1}_{2}.eml", PathImap, Email, uid));
                     }
                     else
                         break;

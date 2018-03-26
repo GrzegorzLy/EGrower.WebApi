@@ -2,56 +2,71 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Egrower.Infrastructure.Aggregates;
 using Egrower.Infrastructure.DAL;
 using Egrower.Infrastructure.Factories;
 using Egrower.Infrastructure.Factories.Interfaces;
 using Egrower.Infrastructure.Factories.MailKit;
 using EGrower.Core.Domain;
+using EGrower.Core.Repositories;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EGrower.WebApi.Controllers {
     [Route ("api/[controller]")]
     public class ValuesController : Controller {
-        private readonly IEmailFactory _emailFactory;
-        private readonly EGrowerContext _eGrowerContext;
-        public ValuesController (IEmailFactory emailFactory, EGrowerContext eGrowerContext) {
+        private readonly IEmailClientFactory _emailFactory;
+        private readonly IEmailClientAggregate _emailAggregate;
+        
+
+        public ValuesController (IEmailClientFactory emailFactory, IEmailClientAggregate emailClientAggregate) {
             _emailFactory = emailFactory;
-            _eGrowerContext = eGrowerContext;
-            
-
+            _emailAggregate = emailClientAggregate;         
         }
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> Get(int id)
+        {
+            var email = await _emailAggregate.GetEmailByEmailID(id);
+            return Json(email);
+        }
+
+        //public async Task<IActionResult> Get()
+        //{
+        //    var mimeEmails = await _emailFactory.GetEmailsIMapAsync();
+        //   await _emailAggregate.AddEmailsToDBAsync(mimeEmails);
+
+        //    return StatusCode(200);
+        //}
+
         // GET api/values
-        [HttpGet]
-        public async Task<IActionResult> Get () {
+        //[HttpGet]
+        //public async Task<IActionResult> Get () {
 
-            //Test
-            // List<string> datas = Pop3.GetDownloadMessages();
-             var mesages = await _emailFactory.GetEmailsIMapAsync();
-            foreach (var item in mesages)
-            {
-                EmailMessage emailMessage = new EmailMessage(item.From.ToString(), item.To.ToString(), 
-                    item.Date, item.Subject, item.HtmlBody);
-                foreach (var item1 in item.Attachments)
-                {
-                   
-                    emailMessage.Atachments.Add(new Atachment(item1.ContentType.Name, EmailFactory.ConvertToByteArray(item1)));
-                }
+        //    //Test
+        //    // List<string> datas = Pop3.GetDownloadMessages();
+        //     var mesages = await _emailFactory.GetEmailsIMapAsync();
+        //    foreach (var item in mesages)
+        //    {
+        //        EmailMessage emailMessage = new EmailMessage(item.From.ToString(), item.To.ToString(), 
+        //            item.Date, item.Subject, item.HtmlBody);
+        //        foreach (var item1 in item.Attachments)
+        //        {
 
-                _eGrowerContext.EmailMessages.Add(emailMessage);
-            }
-            // await _emailFactory.SaveAttachments (mesages);
-            //var mesages = await _emailFactory.DeleteMessageAsync ();
-            //var emails = await _emailFactory.ConvertMailMessagesAsync (mesages);
-            await _eGrowerContext.SaveChangesAsync();
+        //            emailMessage.Atachments.Add(new Atachment(item1.ContentType.Name, EmailFactory.ConvertToByteArray(item1)));
+        //        }
 
-            return StatusCode(200);
-        }
+        //        _eGrowerContext.EmailMessages.Add(emailMessage);
+        //    }
+        //    // await _emailFactory.SaveAttachments (mesages);
+        //    //var mesages = await _emailFactory.DeleteMessageAsync ();
+        //    //var emails = await _emailFactory.ConvertMailMessagesAsync (mesages);
+        //    await _eGrowerContext.SaveChangesAsync();
+
+        //    return StatusCode(200);
+        //}
 
         // GET api/values/5
-        [HttpGet ("{id}")]
-        public string Get (int id) {
-            return "value";
-        }
+       
 
         // POST api/values
         [HttpPost]

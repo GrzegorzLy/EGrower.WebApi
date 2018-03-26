@@ -15,7 +15,8 @@ namespace Egrower.Infrastructure.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    Date = table.Column<DateTime>(nullable: false),
+                    AddedAt = table.Column<DateTime>(nullable: false),
+                    CreatedAt = table.Column<DateTime>(nullable: false),
                     From = table.Column<string>(nullable: true),
                     Subject = table.Column<string>(nullable: true),
                     TextHTMLBody = table.Column<string>(nullable: true),
@@ -27,20 +28,21 @@ namespace Egrower.Infrastructure.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Attachments",
+                name: "Atachments",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    AddedAt = table.Column<DateTime>(nullable: false),
                     Data = table.Column<byte[]>(nullable: true),
                     EmailMessageId = table.Column<int>(nullable: false),
                     Name = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Attachments", x => x.Id);
+                    table.PrimaryKey("PK_Atachments", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Attachments_EmailMessages_EmailMessageId",
+                        name: "FK_Atachments_EmailMessages_EmailMessageId",
                         column: x => x.EmailMessageId,
                         principalTable: "EmailMessages",
                         principalColumn: "Id",
@@ -48,15 +50,15 @@ namespace Egrower.Infrastructure.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Attachments_EmailMessageId",
-                table: "Attachments",
+                name: "IX_Atachments_EmailMessageId",
+                table: "Atachments",
                 column: "EmailMessageId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Attachments");
+                name: "Atachments");
 
             migrationBuilder.DropTable(
                 name: "EmailMessages");

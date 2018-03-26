@@ -19,7 +19,8 @@ namespace Egrower.Infrastructure.DAL
         {
             modelBuilder.Entity<EmailMessage>()
                 .HasMany(em => em.Atachments)
-                .WithOne(a => a.EmailMessage);
+                .WithOne(a => a.EmailMessage)
+                .HasForeignKey(a => a.EmailMessageId);
                
         }
 
