@@ -45,9 +45,9 @@ namespace Egrower.Infrastructure.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<DateTime>("CreatedAt");
+                    b.Property<DateTime>("AddedAt");
 
-                    b.Property<DateTime>("DateAddedToTheDataBase");
+                    b.Property<DateTime>("CreatedAt");
 
                     b.Property<string>("From");
 

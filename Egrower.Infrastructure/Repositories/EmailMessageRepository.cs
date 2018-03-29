@@ -1,6 +1,7 @@
 ﻿using Egrower.Infrastructure.DAL;
 using EGrower.Core.Domain;
 using EGrower.Core.Repositories;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,13 +23,21 @@ namespace Egrower.Infrastructure.Repositories
         }
 
         public async Task<EmailMessage> GetAsync(int id)
-          =>await Task.FromResult(_context.EmailMessages.SingleOrDefault(x => x.Id == id));
+          =>await Task.FromResult(_context.EmailMessages.Include(x => x.Atachments).SingleOrDefault(x => x.Id == id));
 
 
         public async Task AddAsync(EmailMessage emailMessage)
         {
             await _context.EmailMessages.AddAsync(emailMessage);
             await _context.SaveChangesAsync();
+
+            Console.WriteLine(emailMessage.Subject);
+        }
+        public async Task AddRangeAsync(ICollection<EmailMessage> emailMessage)
+        {
+            _context.EmailMessages.AddRange(emailMessage);
+            await _context.SaveChangesAsync();
+            Console.WriteLine("aaaa");
         }
 
 

@@ -11,8 +11,8 @@ using System;
 namespace Egrower.Infrastructure.Migrations
 {
     [DbContext(typeof(EGrowerContext))]
-    [Migration("20180319195702_addedDates")]
-    partial class addedDates
+    [Migration("20180324082946_test")]
+    partial class test
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -46,9 +46,9 @@ namespace Egrower.Infrastructure.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<DateTime>("CreatedAt");
+                    b.Property<DateTime>("AddedAt");
 
-                    b.Property<DateTime>("DateAddedToTheDataBase");
+                    b.Property<DateTime>("CreatedAt");
 
                     b.Property<string>("From");
 
