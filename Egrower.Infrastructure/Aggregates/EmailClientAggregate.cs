@@ -16,35 +16,36 @@ namespace Egrower.Infrastructure.Aggregates
 {
     public class EmailClientAggregate : IEmailClientAggregate
     {
-        IEmailMessageRepository _emailRepository;
-        IAtachmentRepository _atachmentRepository;
+        private readonly IEmailMessageRepository _emailRepository;
+        private readonly IAtachmentRepository _atachmentRepository;
+        private readonly IEmailClientFactory _emailFactory;
 
         protected EmailClientAggregate()
         {               
         }
 
-        public EmailClientAggregate(IEmailMessageRepository emailRepository, IAtachmentRepository atachmentRepository)
+        public EmailClientAggregate(IEmailMessageRepository emailRepository, IAtachmentRepository atachmentRepository,
+                                    IEmailClientFactory emailFactory)
         {
             _emailRepository = emailRepository;
             _atachmentRepository = atachmentRepository;
+            _emailFactory = emailFactory;
         }
 
-        public async Task AddEmailsToDBAsync(IEnumerable<MimeMessage> emailsList)
+        public async Task AddNewEmailsToDBAsync()
         {
-            List<EmailMessage> emails = new List<EmailMessage>();
-            foreach (var item in emailsList)
+            var mimeEmails = await _emailFactory.GetNewEmailsAsync();
+
+            foreach (var item in mimeEmails)
             {
                 EmailMessage emailMessage = new EmailMessage(item.From.ToString(), item.To.ToString(),
                                                               item.Date.UtcDateTime, item.Subject, item.HtmlBody);
 
                 ICollection<Atachment> atachments = GetAttachmentsFromMmimeMessage(item);
                 emailMessage.AddAtachments(atachments);
-                await _emailRepository.AddAsync(emailMessage);
-                //emails.Add(emailMessage);              
+                await _emailRepository.AddAsync(emailMessage);             
             }
-
             await Task.CompletedTask;
-            //await Task.FromResult(_emailRepository.AddRangeAsync(emails));
         }
 
         private ICollection<Atachment> GetAttachmentsFromMmimeMessage(MimeMessage mime)
@@ -61,6 +62,7 @@ namespace Egrower.Infrastructure.Aggregates
 
         private byte[] ConvertToByteArray(MimeEntity attachment)
         {
+           
             byte[] bytes;
             using (var memory = new MemoryStream())
             {
@@ -83,6 +85,13 @@ namespace Egrower.Infrastructure.Aggregates
         public Task<EmailMessageDTO> GetEmailsByUserID(int userId)
         {
             throw new NotImplementedException();
+        }
+
+        public async Task DeleteEmailByEmailID(int emailId)
+        {
+            var email = await  _emailRepository.GetAsync(emailId);
+            await  _emailFactory.DeleteMessageAsync(email.CreatedAt);
+            await _emailRepository.DeleteAsync(email);  
         }
     }
 }

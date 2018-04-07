@@ -19,7 +19,7 @@
     "EGrower.WebApi": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "api/values",
+      "launchUrl": "api/EmailClient",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
