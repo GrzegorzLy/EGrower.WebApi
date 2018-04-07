@@ -8,6 +8,7 @@ namespace Egrower.Infrastructure.Factories.Interfaces
 {
     public interface IEmailClientFactory
     {
-        Task<IEnumerable<MimeMessage>> GetEmailsIMapAsync();
+        Task<IEnumerable<MimeMessage>> GetNewEmailsAsync();
+        Task DeleteMessageAsync(DateTime date);
     }
 }

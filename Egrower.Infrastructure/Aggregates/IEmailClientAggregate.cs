@@ -9,8 +9,9 @@ namespace Egrower.Infrastructure.Aggregates
 {
     public interface IEmailClientAggregate
     {
-        Task AddEmailsToDBAsync(IEnumerable<MimeMessage> emailsList);
+        Task AddNewEmailsToDBAsync();
         Task<EmailMessageDTO> GetEmailByEmailID(int emailId);
         Task<EmailMessageDTO> GetEmailsByUserID(int userId);
+        Task DeleteEmailByEmailID(int emailId);
     }
 }
